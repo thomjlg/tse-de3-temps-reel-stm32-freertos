@@ -1,0 +1,93 @@
+\hypertarget{ls016b8uy_8h_source}{}\doxysection{ls016b8uy.\+h}
+\label{ls016b8uy_8h_source}\index{Drivers/BSP/Components/ls016b8uy/ls016b8uy.h@{Drivers/BSP/Components/ls016b8uy/ls016b8uy.h}}
+\mbox{\hyperlink{ls016b8uy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_LS016B8UY\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_LS016B8UY\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}../Common/lcd.h"{}}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define  LS016B8UY\_ID    0xFFFF}}
+\DoxyCodeLine{78    }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define  LS016B8UY\_LCD\_PIXEL\_WIDTH    ((uint16\_t)180)}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define  LS016B8UY\_LCD\_PIXEL\_HEIGHT   ((uint16\_t)180)}}
+\DoxyCodeLine{84    }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define LCD\_CMD\_SLEEP\_IN           0x10}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define LCD\_CMD\_SLEEP\_OUT          0x11}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define LCD\_CMD\_DISPLAY\_OFF        0x28}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define LCD\_CMD\_DISPLAY\_ON         0x29}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define LCD\_CMD\_WRITE\_RAM          0x2C}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define LCD\_CMD\_READ\_RAM           0x2E}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define LCD\_CMD\_CASET              0x2A}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define LCD\_CMD\_RASET              0x2B}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define LCD\_CMD\_VSYNC\_OUTPUT       0x35}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define LCD\_CMD\_NORMAL\_DISPLAY     0x36}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define LCD\_CMD\_IDLE\_MODE\_OFF      0x38}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define LCD\_CMD\_IDLE\_MODE\_ON       0x39}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define LCD\_CMD\_COLOR\_MODE         0x3A}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_SETTING\_1    0xB0}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_SETTING\_2    0xB1}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define LCD\_CMD\_OSCILLATOR         0xB3}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_SETTING\_LOCK 0xB4}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_V\_PORCH      0xB7}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_IDLE\_V\_PORCH 0xB8}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define LCD\_CMD\_GVDD               0xC0}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define LCD\_CMD\_OPAMP              0xC2}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define LCD\_CMD\_RELOAD\_MTP\_VCOMH   0xC5}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_TIMING\_1     0xC8}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_TIMING\_2     0xC9}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_TIMING\_3     0xCA}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_TIMING\_4     0xCC}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define LCD\_CMD\_PANEL\_POWER        0xD0}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define LCD\_CMD\_TEARING\_EFFECT     0xDD}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{124 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_gac4450be5042c64be807c7b12bf92a3f4}{ls016b8uy\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{125 uint16\_t \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_gadd42077cff1097a6c1539dda3d95eeb1}{ls016b8uy\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{126 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_gadc7e5ad7d59dc403980a2941d05bdaae}{ls016b8uy\_WriteReg}}(uint8\_t Command, uint8\_t *Parameters, uint8\_t NbParameters);}
+\DoxyCodeLine{127 uint8\_t  \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga06f10ba844e64c5edab2d2ea4a46ae98}{ls016b8uy\_ReadReg}}(uint8\_t Command);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga18646621604ca3a2b5f08a984bdc1bfc}{ls016b8uy\_DisplayOn}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{130 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga766056013f51350782e2540fe6108caf}{ls016b8uy\_DisplayOff}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{131 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga2008896a3586252c8873666b5ea4a655}{ls016b8uy\_SetCursor}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{132 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga12986596a5d5b466ced7ee668de668af}{ls016b8uy\_WritePixel}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t RGBCode);}
+\DoxyCodeLine{133 uint16\_t \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga5ffe75dce422a4ecb981505b599d5a77}{ls016b8uy\_ReadPixel}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga7df7ef6159e5652c1f3d80c326a94fdd}{ls016b8uy\_DrawHLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{136 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga07d5e69acf9c9ddcbe9de103fc2fceab}{ls016b8uy\_DrawVLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{137 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_gad95e1aa51db08eca798f866b2e53d234}{ls016b8uy\_DrawBitmap}}(uint16\_t Xpos, uint16\_t Ypos, uint8\_t *pbmp);}
+\DoxyCodeLine{138 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga26144b942876be52d22cf85d9b513e36}{ls016b8uy\_DrawRGBImage}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Xsize, uint16\_t Ysize, uint8\_t *pdata);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga747a6665d219b3ed5675a88c83a39b02}{ls016b8uy\_SetDisplayWindow}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 uint16\_t \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_gac8aa329640b773f9f66b155057bfab27}{ls016b8uy\_GetLcdPixelWidth}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{144 uint16\_t \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga36dc9de467a4245daed7e14319417f57}{ls016b8uy\_GetLcdPixelHeight}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{comment}{/* LCD driver structure */}}
+\DoxyCodeLine{147 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\_DrvTypeDef}}   ls016b8uy\_drv;}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{comment}{/* LCD IO functions */}}
+\DoxyCodeLine{150 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_gaccf0a45e037a886f9b1a849bedd63735}{LCD\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{151 \textcolor{keywordtype}{void}     LCD\_IO\_WriteMultipleData(uint16\_t *pData, uint32\_t Size);}
+\DoxyCodeLine{152 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_ga435f47c3f7c327325ea17f71fae7cebc}{LCD\_IO\_WriteReg}}(uint8\_t Reg);}
+\DoxyCodeLine{153 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___l_s016_b8_u_y___exported___functions_gaae6ab499c7ca32f026708cbfb5153c97}{LCD\_IO\_WriteData}}(uint16\_t RegValue);}
+\DoxyCodeLine{154 uint16\_t LCD\_IO\_ReadData(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{155 \textcolor{keywordtype}{void}     LCD\_IO\_Delay(uint32\_t delay);}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{162 \}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_LS016B8UY\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{179 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

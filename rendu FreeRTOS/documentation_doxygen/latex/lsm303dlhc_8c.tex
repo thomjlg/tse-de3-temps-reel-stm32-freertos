@@ -1,0 +1,81 @@
+\hypertarget{lsm303dlhc_8c}{}\doxysection{Drivers/\+BSP/\+Components/lsm303dlhc/lsm303dlhc.c File Reference}
+\label{lsm303dlhc_8c}\index{Drivers/BSP/Components/lsm303dlhc/lsm303dlhc.c@{Drivers/BSP/Components/lsm303dlhc/lsm303dlhc.c}}
+
+
+This file provides a set of functions needed to manage the lsm303dlhc MEMS accelerometer.  
+
+
+{\ttfamily \#include \char`\"{}lsm303dlhc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_gadb5d7b7ad8a49f81e8127a4a9e929d1b}{LSM303\+DLHC\+\_\+\+Acc\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LSM303\+DLHC Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga9ba93fab3683286b6c5f2dcc3753fac4}{LSM303\+DLHC\+\_\+\+Acc\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em LSM303\+DLHC De-\/initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga2f52cf87dda0dc94110cec78ea86290b}{LSM303\+DLHC\+\_\+\+Acc\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read LSM303\+DLHC ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga0f0d2b0ecc181ff2b13a6702a4f5ce78}{LSM303\+DLHC\+\_\+\+Acc\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of LSM303\+DLHC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_gad0e47974f46c7349dbf14d97b31b73ae}{LSM303\+DLHC\+\_\+\+Acc\+Filter\+Config}} (uint8\+\_\+t Filter\+Struct)
+\begin{DoxyCompactList}\small\item\em Set High Pass Filter Modality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_gaf5b88b344967a356fc0331363958bb52}{LSM303\+DLHC\+\_\+\+Acc\+Filter\+Cmd}} (uint8\+\_\+t High\+Pass\+Filter\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable High Pass Filter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga92493f59ac96b55ab50b5bb1b8381f05}{LSM303\+DLHC\+\_\+\+Acc\+Read\+XYZ}} (int16\+\_\+t $\ast$p\+Data)
+\begin{DoxyCompactList}\small\item\em Read X, Y \& Z Acceleration values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga205af9af3b60979cd15830294dece641}{LSM303\+DLHC\+\_\+\+Acc\+Filter\+Click\+Cmd}} (uint8\+\_\+t High\+Pass\+Filter\+Click\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable High Pass Filter on CLick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga3c1418e60efa20676474f3c5aef02dc2}{LSM303\+DLHC\+\_\+\+Acc\+IT1\+Enable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Enable LSM303\+DLHC Interrupt1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga4f0364990e29afc218519f149cc0a172}{LSM303\+DLHC\+\_\+\+Acc\+IT1\+Disable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Disable LSM303\+DLHC Interrupt1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_gac295264a325f8dca177c78ec1b55f805}{LSM303\+DLHC\+\_\+\+Acc\+IT2\+Enable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Enable LSM303\+DLHC Interrupt2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga05c851c88bdee43afdfeb2c7644300d7}{LSM303\+DLHC\+\_\+\+Acc\+IT2\+Disable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Disable LSM303\+DLHC Interrupt2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_gaf87f4b26ef5c974f25716d5db700ad69}{LSM303\+DLHC\+\_\+\+Acc\+INT1\+Interrupt\+Enable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT1 interrupt enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga48d144c0c2acec85c5fe431d99abe53e}{LSM303\+DLHC\+\_\+\+Acc\+INT1\+Interrupt\+Disable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT1 interrupt disable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga78a2ac98179587e0448dd73fc9679800}{LSM303\+DLHC\+\_\+\+Acc\+INT2\+Interrupt\+Enable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT2 interrupt enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga3e93711f84e156006105f7f2045628cc}{LSM303\+DLHC\+\_\+\+Acc\+INT2\+Interrupt\+Disable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT2 interrupt config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga04e2e850e426f774936a493344593916}{LSM303\+DLHC\+\_\+\+Acc\+Click\+ITEnable}} (uint8\+\_\+t ITClick)
+\begin{DoxyCompactList}\small\item\em Click interrupt enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga73c390b150fb1d11577f771113441db1}{LSM303\+DLHC\+\_\+\+Acc\+Click\+ITDisable}} (uint8\+\_\+t ITClick)
+\begin{DoxyCompactList}\small\item\em Click interrupt disable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___functions_ga203cd77b3cc9ab2486f422381afa5a65}{LSM303\+DLHC\+\_\+\+Acc\+ZClick\+ITConfig}} (void)
+\begin{DoxyCompactList}\small\item\em Click on Z axis interrupt config. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___l_s_m303_d_l_h_c___private___variables_ga6580174db7115647144eac9156123f76}{Lsm303dlhc\+Drv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage the lsm303dlhc MEMS accelerometer. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/June-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

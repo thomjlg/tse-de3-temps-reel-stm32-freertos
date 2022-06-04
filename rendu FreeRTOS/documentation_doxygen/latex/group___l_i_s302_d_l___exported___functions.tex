@@ -1,0 +1,302 @@
+\hypertarget{group___l_i_s302_d_l___exported___functions}{}\doxysection{LIS302\+DL\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___l_i_s302_d_l___exported___functions}\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gab33f9dfb94fea1368094bd9e5ae305a7}{LIS302\+DL\+\_\+\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gad025fe40fee8e518b4c1f3c730719bec}{LIS302\+DL\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em LIS302\+DL De-\/\+Initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gad66ca1c16146bce7a25b1a0f2a7c5336}{LIS302\+DL\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read LIS302\+DL device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gae1fed348eea54a73aa3c571573f54b5b}{LIS302\+DL\+\_\+\+Filter\+Config}} (uint8\+\_\+t Filter\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Internal High Pass Filter configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga0c6ea80d35be5abeb3bd1d06355481e8}{LIS302\+DL\+\_\+\+Interrupt\+Config}} (\mbox{\hyperlink{struct_l_i_s302_d_l___interrupt_config_type_def}{LIS302\+DL\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$LIS302\+DL\+\_\+\+Int\+Config\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga1e614ad06137c27a10e7ef6bfcd933ac}{LIS302\+DL\+\_\+\+Click\+\_\+\+Int\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gabb1c78925d79459c2e4b5baf28da70d5}{LIS302\+DL\+\_\+\+Click\+\_\+\+Int\+Clear}} (void)
+\begin{DoxyCompactList}\small\item\em Clear LIS302\+DL click Interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga445e78cca4cd65f59e0ffaa3575db8ae}{LIS302\+DL\+\_\+\+Lowpower\+Cmd}} (uint8\+\_\+t Low\+Power\+Mode)
+\begin{DoxyCompactList}\small\item\em Change the lowpower mode for LIS302\+DL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gadb44926aefe4fc8e6cdff256077c0bf4}{LIS302\+DL\+\_\+\+Full\+Scale\+Cmd}} (uint8\+\_\+t FS\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Change the Full Scale of LIS302\+DL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga8542910cb1e71d7031fab7a462c768bd}{LIS302\+DL\+\_\+\+Data\+Rate\+Cmd}} (uint8\+\_\+t Data\+Rate\+Value)
+\begin{DoxyCompactList}\small\item\em Data Rate command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga34234db89f7d653fea3085007d3d9e0e}{LIS302\+DL\+\_\+\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of LIS302\+DL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga7c1ecf966ebe0f60069e06099c93cad5}{LIS302\+DL\+\_\+\+Read\+ACC}} (int16\+\_\+t $\ast$p\+Data)
+\begin{DoxyCompactList}\small\item\em Read LIS302\+DL output register, and calculate the acceleration ACC\mbox{[}mg\mbox{]}=SENSITIVITY$\ast$ (out\+\_\+h$\ast$256+out\+\_\+l)/16 (12 bit rappresentation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gaeb312e0ba50244c3008de6441167f181}\label{group___l_i_s302_d_l___exported___functions_gaeb312e0ba50244c3008de6441167f181}} 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gacb0cf2419ee11c6c47c694e80f1e217b}\label{group___l_i_s302_d_l___exported___functions_gacb0cf2419ee11c6c47c694e80f1e217b}} 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+ITConfig} (void)
+\item 
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gaeedea8061d4abde8cd304b454334ae42}\label{group___l_i_s302_d_l___exported___functions_gaeedea8061d4abde8cd304b454334ae42}} 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Write\+Addr, uint16\+\_\+t Num\+Byte\+To\+Write)
+\item 
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga78371d00a01f2a0cdd613306e4c4e58f}\label{group___l_i_s302_d_l___exported___functions_ga78371d00a01f2a0cdd613306e4c4e58f}} 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Read\+Addr, uint16\+\_\+t Num\+Byte\+To\+Read)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga9ec1d5346344ee5a451596c8a940dac5}\label{group___l_i_s302_d_l___exported___functions_ga9ec1d5346344ee5a451596c8a940dac5}} 
+\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\+\_\+\+Drv\+Type\+Def}} {\bfseries Lis302dl\+Drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gabb1c78925d79459c2e4b5baf28da70d5}\label{group___l_i_s302_d_l___exported___functions_gabb1c78925d79459c2e4b5baf28da70d5}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_Click\_IntClear@{LIS302DL\_Click\_IntClear}}
+\index{LIS302DL\_Click\_IntClear@{LIS302DL\_Click\_IntClear}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_Click\_IntClear()}{LIS302DL\_Click\_IntClear()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Click\+\_\+\+Int\+Clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clear LIS302\+DL click Interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga1e614ad06137c27a10e7ef6bfcd933ac}\label{group___l_i_s302_d_l___exported___functions_ga1e614ad06137c27a10e7ef6bfcd933ac}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_Click\_IntConfig@{LIS302DL\_Click\_IntConfig}}
+\index{LIS302DL\_Click\_IntConfig@{LIS302DL\_Click\_IntConfig}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_Click\_IntConfig()}{LIS302DL\_Click\_IntConfig()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Click\+\_\+\+Int\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set LIS302\+DL Interrupt configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga8542910cb1e71d7031fab7a462c768bd}\label{group___l_i_s302_d_l___exported___functions_ga8542910cb1e71d7031fab7a462c768bd}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_DataRateCmd@{LIS302DL\_DataRateCmd}}
+\index{LIS302DL\_DataRateCmd@{LIS302DL\_DataRateCmd}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_DataRateCmd()}{LIS302DL\_DataRateCmd()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Data\+Rate\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Data\+Rate\+Value }\end{DoxyParamCaption})}
+
+
+
+Data Rate command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data\+Rate\+Value} & Data rate value This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item LIS302\+DL\+\_\+\+DATARATE\+\_\+100\+: 100 Hz output data rate \item LIS302\+DL\+\_\+\+DATARATE\+\_\+400\+: 400 Hz output data rate ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gad025fe40fee8e518b4c1f3c730719bec}\label{group___l_i_s302_d_l___exported___functions_gad025fe40fee8e518b4c1f3c730719bec}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_DeInit@{LIS302DL\_DeInit}}
+\index{LIS302DL\_DeInit@{LIS302DL\_DeInit}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_DeInit()}{LIS302DL\_DeInit()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+LIS302\+DL De-\/\+Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gae1fed348eea54a73aa3c571573f54b5b}\label{group___l_i_s302_d_l___exported___functions_gae1fed348eea54a73aa3c571573f54b5b}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_FilterConfig@{LIS302DL\_FilterConfig}}
+\index{LIS302DL\_FilterConfig@{LIS302DL\_FilterConfig}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_FilterConfig()}{LIS302DL\_FilterConfig()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Filter\+Config (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Filter\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set LIS302\+DL Internal High Pass Filter configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Filter\+Struct} & contains data for filter config \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gadb44926aefe4fc8e6cdff256077c0bf4}\label{group___l_i_s302_d_l___exported___functions_gadb44926aefe4fc8e6cdff256077c0bf4}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_FullScaleCmd@{LIS302DL\_FullScaleCmd}}
+\index{LIS302DL\_FullScaleCmd@{LIS302DL\_FullScaleCmd}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_FullScaleCmd()}{LIS302DL\_FullScaleCmd()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Full\+Scale\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FS\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Change the Full Scale of LIS302\+DL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FS\+\_\+value} & new full scale value. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item LIS302\+DL\+\_\+\+FULLSCALE\+\_\+2\+\_\+3\+: +-\/2.\+3g \item LIS302\+DL\+\_\+\+FULLSCALE\+\_\+9\+\_\+2\+: +-\/9.\+2g ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gab33f9dfb94fea1368094bd9e5ae305a7}\label{group___l_i_s302_d_l___exported___functions_gab33f9dfb94fea1368094bd9e5ae305a7}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_Init@{LIS302DL\_Init}}
+\index{LIS302DL\_Init@{LIS302DL\_Init}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_Init()}{LIS302DL\_Init()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set LIS302\+DL Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Init\+Struct} & contains mask of different init parameters \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga0c6ea80d35be5abeb3bd1d06355481e8}\label{group___l_i_s302_d_l___exported___functions_ga0c6ea80d35be5abeb3bd1d06355481e8}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_InterruptConfig@{LIS302DL\_InterruptConfig}}
+\index{LIS302DL\_InterruptConfig@{LIS302DL\_InterruptConfig}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_InterruptConfig()}{LIS302DL\_InterruptConfig()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Interrupt\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_i_s302_d_l___interrupt_config_type_def}{LIS302\+DL\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$}]{LIS302\+DL\+\_\+\+Int\+Config\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set LIS302\+DL Interrupt configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LIS302\+DL\+\_\+\+Interrupt\+Config\+\_\+\+Type\+Def} & pointer to a LIS302\+DL\+\_\+\+Interrupt\+Config\+\_\+\+Type\+Def structure that contains the configuration setting for the LIS302\+DL Interrupt. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga445e78cca4cd65f59e0ffaa3575db8ae}\label{group___l_i_s302_d_l___exported___functions_ga445e78cca4cd65f59e0ffaa3575db8ae}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_LowpowerCmd@{LIS302DL\_LowpowerCmd}}
+\index{LIS302DL\_LowpowerCmd@{LIS302DL\_LowpowerCmd}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_LowpowerCmd()}{LIS302DL\_LowpowerCmd()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Lowpower\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Low\+Power\+Mode }\end{DoxyParamCaption})}
+
+
+
+Change the lowpower mode for LIS302\+DL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Low\+Power\+Mode} & New state for the low power mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item LIS302\+DL\+\_\+\+LOWPOWERMODE\+\_\+\+POWERDOWN\+: Power down mode \item LIS302\+DL\+\_\+\+LOWPOWERMODE\+\_\+\+ACTIVE\+: Active mode ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga7c1ecf966ebe0f60069e06099c93cad5}\label{group___l_i_s302_d_l___exported___functions_ga7c1ecf966ebe0f60069e06099c93cad5}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_ReadACC@{LIS302DL\_ReadACC}}
+\index{LIS302DL\_ReadACC@{LIS302DL\_ReadACC}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_ReadACC()}{LIS302DL\_ReadACC()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Read\+ACC (\begin{DoxyParamCaption}\item[{int16\+\_\+t $\ast$}]{p\+Data }\end{DoxyParamCaption})}
+
+
+
+Read LIS302\+DL output register, and calculate the acceleration ACC\mbox{[}mg\mbox{]}=SENSITIVITY$\ast$ (out\+\_\+h$\ast$256+out\+\_\+l)/16 (12 bit rappresentation) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pf\+Data} & Data out pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_gad66ca1c16146bce7a25b1a0f2a7c5336}\label{group___l_i_s302_d_l___exported___functions_gad66ca1c16146bce7a25b1a0f2a7c5336}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_ReadID@{LIS302DL\_ReadID}}
+\index{LIS302DL\_ReadID@{LIS302DL\_ReadID}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_ReadID()}{LIS302DL\_ReadID()}}
+{\footnotesize\ttfamily uint8\+\_\+t LIS302\+DL\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read LIS302\+DL device ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device ID (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s302_d_l___exported___functions_ga34234db89f7d653fea3085007d3d9e0e}\label{group___l_i_s302_d_l___exported___functions_ga34234db89f7d653fea3085007d3d9e0e}} 
+\index{LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}!LIS302DL\_RebootCmd@{LIS302DL\_RebootCmd}}
+\index{LIS302DL\_RebootCmd@{LIS302DL\_RebootCmd}!LIS302DL\_Exported\_Functions@{LIS302DL\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS302DL\_RebootCmd()}{LIS302DL\_RebootCmd()}}
+{\footnotesize\ttfamily void LIS302\+DL\+\_\+\+Reboot\+Cmd (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reboot memory content of LIS302\+DL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,408 @@
+\hypertarget{group___i_l_i9325___private___functions}{}\doxysection{ILI9325\+\_\+\+Private\+\_\+\+Functions}
+\label{group___i_l_i9325___private___functions}\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gac2dad7aeb7315082ba82dd2ff3b3f912}{ili9325\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the ILI9325 LCD Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga45dbdb5ee31500eadf6fa0887d9d9159}{ili9325\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga2c5329f1c16c401a79c8f1927dee2897}{ili9325\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga1fdb88f871b6d7037e62066ff0a03b4c}{ili9325\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga25a6b2c24b435cf2f434836b224bd2ad}{ili9325\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Height. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga0d1bfb1436c67f911f952cf7259cda34}{ili9325\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Get the ILI9325 ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga080a128498e3867ed3dabe3fd74e1a5d}{ili9325\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Set Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga79acefaa65edb44310fc055a287e4054}{ili9325\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Write pixel. ~\newline
+ \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga6ea873dd731a4daa5411937d9430709f}{ili9325\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Read pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gab89b9cfe67618cf258b5659deab1adfa}{ili9325\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCDReg, uint16\+\_\+t LCDReg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga33a9d41f9d1d5cf4034f20c03d0c4765}{ili9325\+\_\+\+Read\+Reg}} (uint8\+\_\+t LCDReg)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gac5ef79f40ad604b9d2ca7ccd05be89f7}{ili9325\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gaecd849c1baa9601768ea3f648c8c8e3c}{ili9325\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga6f174cbeab5e2ef6233d885c3bec14ff}{ili9325\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gaf263299af0fc74980cbce6105ee7215e}{ili9325\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga9e85aeafcbeb67436ff3eeb8ac53fbb2}{ili9325\+\_\+\+Draw\+RGBImage}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint8\+\_\+t $\ast$pdata)
+\begin{DoxyCompactList}\small\item\em Displays picture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga2c5329f1c16c401a79c8f1927dee2897}\label{group___i_l_i9325___private___functions_ga2c5329f1c16c401a79c8f1927dee2897}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_DisplayOff@{ili9325\_DisplayOff}}
+\index{ili9325\_DisplayOff@{ili9325\_DisplayOff}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_DisplayOff()}{ili9325\_DisplayOff()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Display\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga45dbdb5ee31500eadf6fa0887d9d9159}\label{group___i_l_i9325___private___functions_ga45dbdb5ee31500eadf6fa0887d9d9159}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_DisplayOn@{ili9325\_DisplayOn}}
+\index{ili9325\_DisplayOn@{ili9325\_DisplayOn}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_DisplayOn()}{ili9325\_DisplayOn()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Display\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_gaf263299af0fc74980cbce6105ee7215e}\label{group___i_l_i9325___private___functions_gaf263299af0fc74980cbce6105ee7215e}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_DrawBitmap@{ili9325\_DrawBitmap}}
+\index{ili9325\_DrawBitmap@{ili9325\_DrawBitmap}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_DrawBitmap()}{ili9325\_DrawBitmap()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t $\ast$}]{pbmp }\end{DoxyParamCaption})}
+
+
+
+Displays a bitmap picture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Bmp\+Address} & Bmp picture address. \\
+\hline
+{\em Xpos} & Bmp X position in the LCD \\
+\hline
+{\em Ypos} & Bmp Y position in the LCD ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_gaecd849c1baa9601768ea3f648c8c8e3c}\label{group___i_l_i9325___private___functions_gaecd849c1baa9601768ea3f648c8c8e3c}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_DrawHLine@{ili9325\_DrawHLine}}
+\index{ili9325\_DrawHLine@{ili9325\_DrawHLine}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_DrawHLine()}{ili9325\_DrawHLine()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Draw\+HLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draw vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color ~\newline
+ \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the Line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga9e85aeafcbeb67436ff3eeb8ac53fbb2}\label{group___i_l_i9325___private___functions_ga9e85aeafcbeb67436ff3eeb8ac53fbb2}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_DrawRGBImage@{ili9325\_DrawRGBImage}}
+\index{ili9325\_DrawRGBImage@{ili9325\_DrawRGBImage}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_DrawRGBImage()}{ili9325\_DrawRGBImage()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Draw\+RGBImage (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Xsize,  }\item[{uint16\+\_\+t}]{Ysize,  }\item[{uint8\+\_\+t $\ast$}]{pdata }\end{DoxyParamCaption})}
+
+
+
+Displays picture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pdata} & picture address. \\
+\hline
+{\em Xpos} & Image X position in the LCD \\
+\hline
+{\em Ypos} & Image Y position in the LCD \\
+\hline
+{\em Xsize} & Image X size in the LCD \\
+\hline
+{\em Ysize} & Image Y size in the LCD \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga6f174cbeab5e2ef6233d885c3bec14ff}\label{group___i_l_i9325___private___functions_ga6f174cbeab5e2ef6233d885c3bec14ff}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_DrawVLine@{ili9325\_DrawVLine}}
+\index{ili9325\_DrawVLine@{ili9325\_DrawVLine}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_DrawVLine()}{ili9325\_DrawVLine()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Draw\+VLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draw vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color ~\newline
+ \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the Line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga25a6b2c24b435cf2f434836b224bd2ad}\label{group___i_l_i9325___private___functions_ga25a6b2c24b435cf2f434836b224bd2ad}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_GetLcdPixelHeight@{ili9325\_GetLcdPixelHeight}}
+\index{ili9325\_GetLcdPixelHeight@{ili9325\_GetLcdPixelHeight}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_GetLcdPixelHeight()}{ili9325\_GetLcdPixelHeight()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9325\+\_\+\+Get\+Lcd\+Pixel\+Height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the LCD pixel Height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Height \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga1fdb88f871b6d7037e62066ff0a03b4c}\label{group___i_l_i9325___private___functions_ga1fdb88f871b6d7037e62066ff0a03b4c}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_GetLcdPixelWidth@{ili9325\_GetLcdPixelWidth}}
+\index{ili9325\_GetLcdPixelWidth@{ili9325\_GetLcdPixelWidth}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_GetLcdPixelWidth()}{ili9325\_GetLcdPixelWidth()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9325\+\_\+\+Get\+Lcd\+Pixel\+Width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the LCD pixel Width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Width \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_gac2dad7aeb7315082ba82dd2ff3b3f912}\label{group___i_l_i9325___private___functions_gac2dad7aeb7315082ba82dd2ff3b3f912}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_Init@{ili9325\_Init}}
+\index{ili9325\_Init@{ili9325\_Init}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_Init()}{ili9325\_Init()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the ILI9325 LCD Component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga0d1bfb1436c67f911f952cf7259cda34}\label{group___i_l_i9325___private___functions_ga0d1bfb1436c67f911f952cf7259cda34}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_ReadID@{ili9325\_ReadID}}
+\index{ili9325\_ReadID@{ili9325\_ReadID}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_ReadID()}{ili9325\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9325\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the ILI9325 ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & ILI9325 ID \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga6ea873dd731a4daa5411937d9430709f}\label{group___i_l_i9325___private___functions_ga6ea873dd731a4daa5411937d9430709f}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_ReadPixel@{ili9325\_ReadPixel}}
+\index{ili9325\_ReadPixel@{ili9325\_ReadPixel}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_ReadPixel()}{ili9325\_ReadPixel()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9325\+\_\+\+Read\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Read pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & RGB pixel color \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga33a9d41f9d1d5cf4034f20c03d0c4765}\label{group___i_l_i9325___private___functions_ga33a9d41f9d1d5cf4034f20c03d0c4765}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_ReadReg@{ili9325\_ReadReg}}
+\index{ili9325\_ReadReg@{ili9325\_ReadReg}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_ReadReg()}{ili9325\_ReadReg()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9325\+\_\+\+Read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{LCDReg }\end{DoxyParamCaption})}
+
+
+
+Reads the selected LCD Register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LCDReg} & address of the selected register. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em LCD} & Register Value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga080a128498e3867ed3dabe3fd74e1a5d}\label{group___i_l_i9325___private___functions_ga080a128498e3867ed3dabe3fd74e1a5d}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_SetCursor@{ili9325\_SetCursor}}
+\index{ili9325\_SetCursor@{ili9325\_SetCursor}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_SetCursor()}{ili9325\_SetCursor()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Set Cursor position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_gac5ef79f40ad604b9d2ca7ccd05be89f7}\label{group___i_l_i9325___private___functions_gac5ef79f40ad604b9d2ca7ccd05be89f7}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_SetDisplayWindow@{ili9325\_SetDisplayWindow}}
+\index{ili9325\_SetDisplayWindow@{ili9325\_SetDisplayWindow}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_SetDisplayWindow()}{ili9325\_SetDisplayWindow()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Set\+Display\+Window (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Sets a display window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X bottom left position. \\
+\hline
+{\em Ypos} & specifies the Y bottom left position. \\
+\hline
+{\em Height} & display window height. \\
+\hline
+{\em Width} & display window width. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_ga79acefaa65edb44310fc055a287e4054}\label{group___i_l_i9325___private___functions_ga79acefaa65edb44310fc055a287e4054}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_WritePixel@{ili9325\_WritePixel}}
+\index{ili9325\_WritePixel@{ili9325\_WritePixel}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_WritePixel()}{ili9325\_WritePixel()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Write\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{RGBCode }\end{DoxyParamCaption})}
+
+
+
+Write pixel. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em RGBCode} & the RGB pixel color \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9325___private___functions_gab89b9cfe67618cf258b5659deab1adfa}\label{group___i_l_i9325___private___functions_gab89b9cfe67618cf258b5659deab1adfa}} 
+\index{ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}!ili9325\_WriteReg@{ili9325\_WriteReg}}
+\index{ili9325\_WriteReg@{ili9325\_WriteReg}!ILI9325\_Private\_Functions@{ILI9325\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9325\_WriteReg()}{ili9325\_WriteReg()}}
+{\footnotesize\ttfamily void ili9325\+\_\+\+Write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{LCDReg,  }\item[{uint16\+\_\+t}]{LCDReg\+Value }\end{DoxyParamCaption})}
+
+
+
+Writes to the selected LCD register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LCDReg} & Address of the selected register. \\
+\hline
+{\em LCDReg\+Value} & Value to write to the selected register. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

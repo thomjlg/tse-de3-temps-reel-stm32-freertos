@@ -1,0 +1,168 @@
+\hypertarget{cpu__utils_8c}{}\doxysection{Utilities/\+CPU/cpu\+\_\+utils.c File Reference}
+\label{cpu__utils_8c}\index{Utilities/CPU/cpu\_utils.c@{Utilities/CPU/cpu\_utils.c}}
+
+
+Utilities for CPU Load calculation.  
+
+
+{\ttfamily \#include \char`\"{}cpu\+\_\+utils.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cpu__utils_8c_a97fd430f36f8b065226e2bff9bad1de5}{v\+Application\+Idle\+Hook}} (void)
+\begin{DoxyCompactList}\small\item\em Application Idle Hook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cpu__utils_8c_a9ca051aa77e17583aa5a85d5de5c199a}{v\+Application\+Tick\+Hook}} (void)
+\begin{DoxyCompactList}\small\item\em Application Idle Hook. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cpu__utils_8c_a548d68f75a60a045dc36202ddddb2d05}{Start\+Idle\+Monitor}} (void)
+\begin{DoxyCompactList}\small\item\em Start Idle monitor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cpu__utils_8c_a18add1285e6e9019fd7c630397f261bd}{End\+Idle\+Monitor}} (void)
+\begin{DoxyCompactList}\small\item\em Stop Idle monitor. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{cpu__utils_8c_a6186b6878372ab13621bc65d07db4897}{os\+Get\+CPUUsage}} (void)
+\begin{DoxyCompactList}\small\item\em Stop Idle monitor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cpu__utils_8c_aa7b28ee4e31845805183d8f65deb88c1}\label{cpu__utils_8c_aa7b28ee4e31845805183d8f65deb88c1}} 
+x\+Task\+Handle {\bfseries x\+Idle\+Handle} = NULL
+\item 
+\mbox{\Hypertarget{cpu__utils_8c_a622babdd9e700f219f2f42dcd222632d}\label{cpu__utils_8c_a622babdd9e700f219f2f42dcd222632d}} 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t {\bfseries os\+CPU\+\_\+\+Usage} = 0
+\item 
+\mbox{\Hypertarget{cpu__utils_8c_a9eb90b9f7c2fc44ca23d6616fde73a53}\label{cpu__utils_8c_a9eb90b9f7c2fc44ca23d6616fde73a53}} 
+uint32\+\_\+t {\bfseries os\+CPU\+\_\+\+Idle\+Start\+Time} = 0
+\item 
+\mbox{\Hypertarget{cpu__utils_8c_aaa72d3b94a162b4a180182b2d6eb357b}\label{cpu__utils_8c_aaa72d3b94a162b4a180182b2d6eb357b}} 
+uint32\+\_\+t {\bfseries os\+CPU\+\_\+\+Idle\+Spent\+Time} = 0
+\item 
+\mbox{\Hypertarget{cpu__utils_8c_a85b6441734097c2955082d58a60c4d0b}\label{cpu__utils_8c_a85b6441734097c2955082d58a60c4d0b}} 
+uint32\+\_\+t {\bfseries os\+CPU\+\_\+\+Total\+Idle\+Time} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utilities for CPU Load calculation. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20-\/November-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cpu__utils_8c_a18add1285e6e9019fd7c630397f261bd}\label{cpu__utils_8c_a18add1285e6e9019fd7c630397f261bd}} 
+\index{cpu\_utils.c@{cpu\_utils.c}!EndIdleMonitor@{EndIdleMonitor}}
+\index{EndIdleMonitor@{EndIdleMonitor}!cpu\_utils.c@{cpu\_utils.c}}
+\doxysubsubsection{\texorpdfstring{EndIdleMonitor()}{EndIdleMonitor()}}
+{\footnotesize\ttfamily void End\+Idle\+Monitor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop Idle monitor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{cpu__utils_8c_a6186b6878372ab13621bc65d07db4897}\label{cpu__utils_8c_a6186b6878372ab13621bc65d07db4897}} 
+\index{cpu\_utils.c@{cpu\_utils.c}!osGetCPUUsage@{osGetCPUUsage}}
+\index{osGetCPUUsage@{osGetCPUUsage}!cpu\_utils.c@{cpu\_utils.c}}
+\doxysubsubsection{\texorpdfstring{osGetCPUUsage()}{osGetCPUUsage()}}
+{\footnotesize\ttfamily uint16\+\_\+t os\+Get\+CPUUsage (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop Idle monitor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{cpu__utils_8c_a548d68f75a60a045dc36202ddddb2d05}\label{cpu__utils_8c_a548d68f75a60a045dc36202ddddb2d05}} 
+\index{cpu\_utils.c@{cpu\_utils.c}!StartIdleMonitor@{StartIdleMonitor}}
+\index{StartIdleMonitor@{StartIdleMonitor}!cpu\_utils.c@{cpu\_utils.c}}
+\doxysubsubsection{\texorpdfstring{StartIdleMonitor()}{StartIdleMonitor()}}
+{\footnotesize\ttfamily void Start\+Idle\+Monitor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Start Idle monitor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{cpu__utils_8c_a97fd430f36f8b065226e2bff9bad1de5}\label{cpu__utils_8c_a97fd430f36f8b065226e2bff9bad1de5}} 
+\index{cpu\_utils.c@{cpu\_utils.c}!vApplicationIdleHook@{vApplicationIdleHook}}
+\index{vApplicationIdleHook@{vApplicationIdleHook}!cpu\_utils.c@{cpu\_utils.c}}
+\doxysubsubsection{\texorpdfstring{vApplicationIdleHook()}{vApplicationIdleHook()}}
+{\footnotesize\ttfamily void v\+Application\+Idle\+Hook (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Application Idle Hook. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{cpu__utils_8c_a9ca051aa77e17583aa5a85d5de5c199a}\label{cpu__utils_8c_a9ca051aa77e17583aa5a85d5de5c199a}} 
+\index{cpu\_utils.c@{cpu\_utils.c}!vApplicationTickHook@{vApplicationTickHook}}
+\index{vApplicationTickHook@{vApplicationTickHook}!cpu\_utils.c@{cpu\_utils.c}}
+\doxysubsubsection{\texorpdfstring{vApplicationTickHook()}{vApplicationTickHook()}}
+{\footnotesize\ttfamily void v\+Application\+Tick\+Hook (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Application Idle Hook. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

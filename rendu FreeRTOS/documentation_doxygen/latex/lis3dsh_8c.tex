@@ -1,0 +1,63 @@
+\hypertarget{lis3dsh_8c}{}\doxysection{Drivers/\+BSP/\+Components/lis3dsh/lis3dsh.c File Reference}
+\label{lis3dsh_8c}\index{Drivers/BSP/Components/lis3dsh/lis3dsh.c@{Drivers/BSP/Components/lis3dsh/lis3dsh.c}}
+
+
+This file provides a set of functions needed to manage the LIS3\+DSH MEMS Accelerometer.  
+
+
+{\ttfamily \#include \char`\"{}lis3dsh.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga39a50faf3ec718fd4782fd951e6db26b}{LIS3\+DSH\+\_\+\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS3\+DSH Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga9f6206ac458928caba2bf83120a71daf}{LIS3\+DSH\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em LIS3\+DSH De-\/\+Initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga47e1a458eddb3143569fe0e995f0513f}{LIS3\+DSH\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read LIS3\+DSH device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaf1053e873f761ba33cdefd61ddba03eb}{LIS3\+DSH\+\_\+\+Interrupt\+Config}} (\mbox{\hyperlink{struct_l_i_s3_d_s_h___interrupt_config_type_def}{LIS3\+DSH\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$LIS3\+DSH\+\_\+\+Int\+Config\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS3\+DSH Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga0bf34901c622846b07db03299bb9a3a1}{LIS3\+DSH\+\_\+\+Click\+\_\+\+Int\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Set LIS3\+DSH for click detection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaee0eec1d1444f4da48efeec019481270}{LIS3\+DSH\+\_\+\+ODR\+\_\+\+Lowpower\+Cmd}} (uint8\+\_\+t ODR\+\_\+\+Low\+Power\+Mode)
+\begin{DoxyCompactList}\small\item\em Change the lowpower mode for LIS3\+DSH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaae93269b63a9b48c433998121680ac81}{LIS3\+DSH\+\_\+\+Data\+Rate\+Cmd}} (uint8\+\_\+t Data\+Rate\+Value)
+\begin{DoxyCompactList}\small\item\em Data Rate command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gadd43f8eeb1cf176968daea8b60f19224}{LIS3\+DSH\+\_\+\+Full\+Scale\+Cmd}} (uint8\+\_\+t FS\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Change the Full Scale of LIS3\+DSH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaf404d817cf34093ac2cb46dcffcab4ed}{LIS3\+DSH\+\_\+\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of LIS3\+DSH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga8e33fb97929654753950b3799ed9b5f5}{LIS3\+DSH\+\_\+\+Read\+ACC}} (int16\+\_\+t $\ast$p\+Data)
+\begin{DoxyCompactList}\small\item\em Read LIS3\+DSH output register, and calculate the acceleration ACC\mbox{[}mg\mbox{]}=SENSITIVITY$\ast$ (out\+\_\+h$\ast$256+out\+\_\+l)/16 (12 bit representation). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___l_i_s3_d_s_h___private___variables_ga9725b9d7aae272a4e7287db82161818e}{Lis3dsh\+Drv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage the LIS3\+DSH MEMS Accelerometer. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03-\/August-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

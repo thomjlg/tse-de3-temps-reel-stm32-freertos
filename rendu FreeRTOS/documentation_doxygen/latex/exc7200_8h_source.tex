@@ -1,0 +1,56 @@
+\hypertarget{exc7200_8h_source}{}\doxysection{exc7200.\+h}
+\label{exc7200_8h_source}\index{Drivers/BSP/Components/exc7200/exc7200.h@{Drivers/BSP/Components/exc7200/exc7200.h}}
+\mbox{\hyperlink{exc7200_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_EXC7200\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_EXC7200\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif   }}
+\DoxyCodeLine{46    }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/ts.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{62 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{68 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{69   }
+\DoxyCodeLine{74 \textcolor{comment}{/*  */}   }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define EXC7200\_READ\_CMD                             0x09  }}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{82    }
+\DoxyCodeLine{87 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{88   }
+\DoxyCodeLine{96 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_gabadb779916c9556b7d551f49adff9c91}{exc7200\_Init}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{97 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_gabb681a209a3b4c03250c048e40bca981}{exc7200\_Reset}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{98 uint16\_t \mbox{\hyperlink{group__exc7200___exported___functions_gab5040b4cd4242e8219b5c29467ce7355}{exc7200\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{99 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_ga0f25130dc8a630ab00f357393204a7fe}{exc7200\_TS\_Start}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{100 uint8\_t  \mbox{\hyperlink{group__exc7200___exported___functions_ga72d3990d296645f98d70638a5db159be}{exc7200\_TS\_DetectTouch}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{101 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_ga139dc7e18908726d0e2234af366b8ac5}{exc7200\_TS\_GetXY}}(uint16\_t DeviceAddr, uint16\_t *X, uint16\_t *Y);}
+\DoxyCodeLine{102 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_ga5fdea5c7b6cfb98e37b37925d449dd32}{exc7200\_TS\_EnableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{103 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_gaece194c7667d5d766cda6d226d10b1f4}{exc7200\_TS\_DisableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{104 uint8\_t  \mbox{\hyperlink{group__exc7200___exported___functions_ga1dc8fb39040cf4bc8983b6e28ff3bb4c}{exc7200\_TS\_ITStatus}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{105 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_ga5ef58a23db01fcd4ee2a20de0da54ed0}{exc7200\_TS\_ClearIT}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__exc7200___exported___functions_ga20cd09e59bac7284d1342b6741733593}{IOE\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{108 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\_Delay}}(uint32\_t delay);}
+\DoxyCodeLine{109 uint8\_t  \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\_Read}}(uint8\_t addr, uint8\_t reg);}
+\DoxyCodeLine{110 uint16\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\_ReadMultiple}}(uint8\_t addr, uint8\_t reg, uint8\_t *buffer, uint16\_t length);}
+\DoxyCodeLine{111 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}{IOE\_WriteMultiple}}(uint8\_t addr, uint8\_t reg, uint8\_t *buffer, uint16\_t length);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{comment}{/* Touch screen driver structure */}}
+\DoxyCodeLine{114 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_t_s___drv_type_def}{TS\_DrvTypeDef}} exc7200\_ts\_drv;}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{117 \}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_EXC7200\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 }
+\DoxyCodeLine{137 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

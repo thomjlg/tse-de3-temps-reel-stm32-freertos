@@ -1,0 +1,420 @@
+\hypertarget{lsm303dlhc_8h}{}\doxysection{Drivers/\+BSP/\+Components/lsm303dlhc/lsm303dlhc.h File Reference}
+\label{lsm303dlhc_8h}\index{Drivers/BSP/Components/lsm303dlhc/lsm303dlhc.h@{Drivers/BSP/Components/lsm303dlhc/lsm303dlhc.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{lsm303dlhc_8c}{lsm303dlhc.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/accelero.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries ACC\+\_\+\+I2\+C\+\_\+\+ADDRESS}~0x32
+\item 
+\#define {\bfseries MAG\+\_\+\+I2\+C\+\_\+\+ADDRESS}~0x3C
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+WHO\+\_\+\+AM\+\_\+\+I\+\_\+\+ADDR}~0x0F  /$\ast$ device identification register $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CTRL\+\_\+\+REG1\+\_\+A}~0x20  /$\ast$ Control register 1 acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CTRL\+\_\+\+REG2\+\_\+A}~0x21  /$\ast$ Control register 2 acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CTRL\+\_\+\+REG3\+\_\+A}~0x22  /$\ast$ Control register 3 acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CTRL\+\_\+\+REG4\+\_\+A}~0x23  /$\ast$ Control register 4 acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CTRL\+\_\+\+REG5\+\_\+A}~0x24  /$\ast$ Control register 5 acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CTRL\+\_\+\+REG6\+\_\+A}~0x25  /$\ast$ Control register 6 acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+REFERENCE\+\_\+A}~0x26  /$\ast$ Reference register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+STATUS\+\_\+\+REG\+\_\+A}~0x27  /$\ast$ Status register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+A}~0x28  /$\ast$ Output Register X acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+A}~0x29  /$\ast$ Output Register X acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+A}~0x2A  /$\ast$ Output Register Y acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+A}~0x2B  /$\ast$ Output Register Y acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+A}~0x2C  /$\ast$ Output Register Z acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+A}~0x2D  /$\ast$ Output Register Z acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+FIFO\+\_\+\+CTRL\+\_\+\+REG\+\_\+A}~0x2E  /$\ast$ Fifo control Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+FIFO\+\_\+\+SRC\+\_\+\+REG\+\_\+A}~0x2F  /$\ast$ Fifo src Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+\_\+\+CFG\+\_\+A}~0x30  /$\ast$ Interrupt 1 configuration Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+\_\+\+SOURCE\+\_\+A}~0x31  /$\ast$ Interrupt 1 source Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+\_\+\+THS\+\_\+A}~0x32  /$\ast$ Interrupt 1 Threshold register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+\_\+\+DURATION\+\_\+A}~0x33  /$\ast$ Interrupt 1 DURATION register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT2\+\_\+\+CFG\+\_\+A}~0x34  /$\ast$ Interrupt 2 configuration Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT2\+\_\+\+SOURCE\+\_\+A}~0x35  /$\ast$ Interrupt 2 source Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT2\+\_\+\+THS\+\_\+A}~0x36  /$\ast$ Interrupt 2 Threshold register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT2\+\_\+\+DURATION\+\_\+A}~0x37  /$\ast$ Interrupt 2 DURATION register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CLICK\+\_\+\+CFG\+\_\+A}~0x38  /$\ast$ Click configuration Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CLICK\+\_\+\+SOURCE\+\_\+A}~0x39  /$\ast$ Click 2 source Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CLICK\+\_\+\+THS\+\_\+A}~0x3A  /$\ast$ Click 2 Threshold register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+TIME\+\_\+\+LIMIT\+\_\+A}~0x3B  /$\ast$ Time Limit Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+TIME\+\_\+\+LATENCY\+\_\+A}~0x3C  /$\ast$ Time Latency Register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+TIME\+\_\+\+WINDOW\+\_\+A}~0x3D  /$\ast$ Time window register acceleration $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CRA\+\_\+\+REG\+\_\+M}~0x00  /$\ast$ Control register A magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+CRB\+\_\+\+REG\+\_\+M}~0x01  /$\ast$ Control register B magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+MR\+\_\+\+REG\+\_\+M}~0x02  /$\ast$ Control register MR magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+M}~0x03  /$\ast$ Output Register X magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M}~0x04  /$\ast$ Output Register X magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+M}~0x05  /$\ast$ Output Register Z magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+M}~0x06  /$\ast$ Output Register Z magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+M}~0x07  /$\ast$ Output Register Y magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+M}~0x08  /$\ast$ Output Register Y magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+SR\+\_\+\+REG\+\_\+M}~0x09  /$\ast$ Status Register magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IRA\+\_\+\+REG\+\_\+M}~0x0A  /$\ast$ IRA Register magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IRB\+\_\+\+REG\+\_\+M}~0x0B  /$\ast$ IRB Register magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IRC\+\_\+\+REG\+\_\+M}~0x0C  /$\ast$ IRC Register magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+TEMP\+\_\+\+OUT\+\_\+\+H\+\_\+M}~0x31  /$\ast$ Temperature Register magnetic field $\ast$/
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+TEMP\+\_\+\+OUT\+\_\+\+L\+\_\+M}~0x32  /$\ast$ Temperature Register magnetic field $\ast$/
+\item 
+\#define {\bfseries I\+\_\+\+AM\+\_\+\+LMS303\+DLHC}~((uint8\+\_\+t)0x33)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+NORMAL\+\_\+\+MODE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+LOWPOWER\+\_\+\+MODE}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_gaf267016ce4c6d30d43d348d34b41dd73}{LSM303\+DLHC\+\_\+\+ODR\+\_\+1\+\_\+\+HZ}}~((uint8\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_ga725bcabb8e090e509645813bb275d2b6}{LSM303\+DLHC\+\_\+\+ODR\+\_\+10\+\_\+\+HZ}}~((uint8\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_gac14c515af9b27e40043ad4a70817d904}{LSM303\+DLHC\+\_\+\+ODR\+\_\+25\+\_\+\+HZ}}~((uint8\+\_\+t)0x30)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_gaf03995ebfe297ae90fb1d190773b1efc}{LSM303\+DLHC\+\_\+\+ODR\+\_\+50\+\_\+\+HZ}}~((uint8\+\_\+t)0x40)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_ga42b9a17cb4fd9b2013a48382cae63fa6}{LSM303\+DLHC\+\_\+\+ODR\+\_\+100\+\_\+\+HZ}}~((uint8\+\_\+t)0x50)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_gae6bf4fcd9f6cc8fc92ff12bebdb9c3ef}{LSM303\+DLHC\+\_\+\+ODR\+\_\+200\+\_\+\+HZ}}~((uint8\+\_\+t)0x60)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_gafe0b7aa7e56a0dfbcd1458c9cb6fb078}{LSM303\+DLHC\+\_\+\+ODR\+\_\+400\+\_\+\+HZ}}~((uint8\+\_\+t)0x70)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_gaf74333a59e36106c5bd2d4ab84a95519}{LSM303\+DLHC\+\_\+\+ODR\+\_\+1620\+\_\+\+HZ\+\_\+\+LP}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{group___acc___out_put___data_rate___selection_gab91b27f43bae77ded54f89d1d9d827f4}{LSM303\+DLHC\+\_\+\+ODR\+\_\+1344\+\_\+\+HZ}}~((uint8\+\_\+t)0x90)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+X\+\_\+\+ENABLE}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+Y\+\_\+\+ENABLE}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+Z\+\_\+\+ENABLE}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+AXES\+\_\+\+ENABLE}~((uint8\+\_\+t)0x07)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+AXES\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HR\+\_\+\+ENABLE}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HR\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_ga05b173bde58b24c3a116d4c0323232a2}{LSM303\+DLHC\+\_\+\+FULLSCALE\+\_\+2G}}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_gad3d61f310ccbc29a7e4888c86d3f42b0}{LSM303\+DLHC\+\_\+\+FULLSCALE\+\_\+4G}}~((uint8\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_gaa5f30a12ebd077c950b8565dc80d6fd7}{LSM303\+DLHC\+\_\+\+FULLSCALE\+\_\+8G}}~((uint8\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_gacb110be6402feb0ccebb8b087d6a8d86}{LSM303\+DLHC\+\_\+\+FULLSCALE\+\_\+16G}}~((uint8\+\_\+t)0x30)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_ga0f618697301ae9ff2c88e3b3806a50ed}{LSM303\+DLHC\+\_\+\+ACC\+\_\+\+SENSITIVITY\+\_\+2G}}~((uint8\+\_\+t)1)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_gafccdf943a7e6663f527268aaf0703c8d}{LSM303\+DLHC\+\_\+\+ACC\+\_\+\+SENSITIVITY\+\_\+4G}}~((uint8\+\_\+t)2)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_ga849baacfba78cfb6dd1e546c50a5536a}{LSM303\+DLHC\+\_\+\+ACC\+\_\+\+SENSITIVITY\+\_\+8G}}~((uint8\+\_\+t)4)
+\item 
+\#define \mbox{\hyperlink{group___acc___full___scale___selection_gaa656b23e4c36190655792be7bec2cb57}{LSM303\+DLHC\+\_\+\+ACC\+\_\+\+SENSITIVITY\+\_\+16G}}~((uint8\+\_\+t)12)
+\item 
+\#define \mbox{\hyperlink{group___acc___block___data___update_ga475b67ab49339eabab2d1e317a1cd439}{LSM303\+DLHC\+\_\+\+Block\+Update\+\_\+\+Continous}}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group___acc___block___data___update_gaac053cfddd26dede2fb898e357c5c0aa}{LSM303\+DLHC\+\_\+\+Block\+Update\+\_\+\+Single}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{group___acc___endian___data__selection_ga69f7833726fe44bdbef9fe76f954878b}{LSM303\+DLHC\+\_\+\+BLE\+\_\+\+LSB}}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group___acc___endian___data__selection_ga124f8843208a39b5e1467fc119f7be51}{LSM303\+DLHC\+\_\+\+BLE\+\_\+\+MSB}}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+BOOT\+\_\+\+NORMALMODE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+BOOT\+\_\+\+REBOOTMEMORY}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPM\+\_\+\+NORMAL\+\_\+\+MODE\+\_\+\+RES}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPM\+\_\+\+REF\+\_\+\+SIGNAL}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPM\+\_\+\+NORMAL\+\_\+\+MODE}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPM\+\_\+\+AUTORESET\+\_\+\+INT}~((uint8\+\_\+t)0x\+C0)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPFCF\+\_\+8}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPFCF\+\_\+16}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPFCF\+\_\+32}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPFCF\+\_\+64}~((uint8\+\_\+t)0x30)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HIGHPASSFILTER\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HIGHPASSFILTER\+\_\+\+ENABLE}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPF\+\_\+\+CLICK\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPF\+\_\+\+CLICK\+\_\+\+ENABLE}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPF\+\_\+\+AOI1\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPF\+\_\+\+AOI1\+\_\+\+ENABLE}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPF\+\_\+\+AOI2\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+HPF\+\_\+\+AOI2\+\_\+\+ENABLE}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT1\+\_\+\+CLICK}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT1\+\_\+\+AOI1}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT1\+\_\+\+AOI2}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT1\+\_\+\+DRY1}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT1\+\_\+\+DRY2}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT1\+\_\+\+WTM}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT1\+\_\+\+OVERRUN}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT2\+\_\+\+CLICK}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT2\+\_\+\+INT1}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT2\+\_\+\+INT2}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT2\+\_\+\+BOOT}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT2\+\_\+\+ACT}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+IT2\+\_\+\+HLACTIVE}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___combination___status_ga5665bd354dd1fd9606e93f3f02d5526e}{LSM303\+DLHC\+\_\+\+OR\+\_\+\+COMBINATION}}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___combination___status_gaa57f58878b230f281cdf31d76f99ef22}{LSM303\+DLHC\+\_\+\+AND\+\_\+\+COMBINATION}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___combination___status_ga40a387f95e7169ca1f7aac9b9cef5f34}{LSM303\+DLHC\+\_\+\+MOV\+\_\+\+RECOGNITION}}~((uint8\+\_\+t)0x40)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___combination___status_gaaa50f702e13016f9167a5932a4a748f5}{LSM303\+DLHC\+\_\+\+POS\+\_\+\+RECOGNITION}}~((uint8\+\_\+t)0x\+C0)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___axes_ga1ed5cf5c88223590c7b36228d02e9107}{LSM303\+DLHC\+\_\+\+Z\+\_\+\+HIGH}}~((uint8\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___axes_ga28f3cfcc82d142aa1e1bc38fa2979460}{LSM303\+DLHC\+\_\+\+Z\+\_\+\+LOW}}~((uint8\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___axes_gad9b4dad344ef3ac932412a890493f2b0}{LSM303\+DLHC\+\_\+\+Y\+\_\+\+HIGH}}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___axes_ga8ae7ce73627a8bff6e3da43439742ffa}{LSM303\+DLHC\+\_\+\+Y\+\_\+\+LOW}}~((uint8\+\_\+t)0x04)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___axes_ga6b8727ebd43c2664e9a6a4452f3cc69b}{LSM303\+DLHC\+\_\+\+X\+\_\+\+HIGH}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___axes_gac1f393e15aff0608dc358f736ffacaea}{LSM303\+DLHC\+\_\+\+X\+\_\+\+LOW}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___click_ga57f89e32a0796fcaeabcf56dc76c045d}{LSM303\+DLHC\+\_\+\+Z\+\_\+\+DOUBLE\+\_\+\+CLICK}}~((uint8\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___click_gadb2bfc2af08d486302a5fae904bf9ee4}{LSM303\+DLHC\+\_\+\+Z\+\_\+\+SINGLE\+\_\+\+CLICK}}~((uint8\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___click_ga5e418b2648de257703be30b52f9cda6d}{LSM303\+DLHC\+\_\+\+Y\+\_\+\+DOUBLE\+\_\+\+CLICK}}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___click_gad443192ec1dda1da2db1bc6a5d54c400}{LSM303\+DLHC\+\_\+\+Y\+\_\+\+SINGLE\+\_\+\+CLICK}}~((uint8\+\_\+t)0x04)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___click_gac0eb0c3156b15d3785768b558e1b03db}{LSM303\+DLHC\+\_\+\+X\+\_\+\+DOUBLE\+\_\+\+CLICK}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group___acc___i_n_t___click_gaf6a40b940a61d88b747e7212584dfe66}{LSM303\+DLHC\+\_\+\+X\+\_\+\+SINGLE\+\_\+\+CLICK}}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+INTERRUPT\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+INTERRUPT\+\_\+\+ENABLE}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+INTERRUPT\+\_\+\+LOW\+\_\+\+EDGE}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries LSM303\+DLHC\+\_\+\+INT1\+INTERRUPT\+\_\+\+HIGH\+\_\+\+EDGE}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_ga9e1976d14bac2cdb35de4e33e748a7fd}{LSM303\+DLHC\+\_\+\+ODR\+\_\+0\+\_\+75\+\_\+\+HZ}}~((uint8\+\_\+t) 0x00)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_ga3c942b97148bcc2cbc963ef1548d5a4d}{LSM303\+DLHC\+\_\+\+ODR\+\_\+1\+\_\+5\+\_\+\+HZ}}~((uint8\+\_\+t) 0x04)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_gad5af1cfa722c9b7bff007783f46e0b92}{LSM303\+DLHC\+\_\+\+ODR\+\_\+3\+\_\+0\+\_\+\+HZ}}~((uint8\+\_\+t) 0x08)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_gafcc36dcf2fc82bda40fe76482177a28c}{LSM303\+DLHC\+\_\+\+ODR\+\_\+7\+\_\+5\+\_\+\+HZ}}~((uint8\+\_\+t) 0x0C)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_gabd5845e4ee7f820d7195f55aee504c0e}{LSM303\+DLHC\+\_\+\+ODR\+\_\+15\+\_\+\+HZ}}~((uint8\+\_\+t) 0x10)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_gaeec8f8bf3df3f686d8894624cf8a5448}{LSM303\+DLHC\+\_\+\+ODR\+\_\+30\+\_\+\+HZ}}~((uint8\+\_\+t) 0x14)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_ga5baba0fd2fd46994f12635b4a331eda7}{LSM303\+DLHC\+\_\+\+ODR\+\_\+75\+\_\+\+HZ}}~((uint8\+\_\+t) 0x18)
+\item 
+\#define \mbox{\hyperlink{group___mag___data___rate_ga26082ffb8d5da442a9e5167de6c029d1}{LSM303\+DLHC\+\_\+\+ODR\+\_\+220\+\_\+\+HZ}}~((uint8\+\_\+t) 0x1C)
+\item 
+\#define \mbox{\hyperlink{group___mag___full___scale_ga051bced4dbd032548159521bd2cc22d5}{LSM303\+DLHC\+\_\+\+FS\+\_\+1\+\_\+3\+\_\+\+GA}}~((uint8\+\_\+t) 0x20)
+\item 
+\#define \mbox{\hyperlink{group___mag___full___scale_ga5d7224da7a1f93304d6800e93fd6c1be}{LSM303\+DLHC\+\_\+\+FS\+\_\+1\+\_\+9\+\_\+\+GA}}~((uint8\+\_\+t) 0x40)
+\item 
+\#define \mbox{\hyperlink{group___mag___full___scale_gae6b964aa0b0f4d05ff1618e245917c1a}{LSM303\+DLHC\+\_\+\+FS\+\_\+2\+\_\+5\+\_\+\+GA}}~((uint8\+\_\+t) 0x60)
+\item 
+\#define \mbox{\hyperlink{group___mag___full___scale_gaa35c19f1e72bc7118fa90eda5d2a0536}{LSM303\+DLHC\+\_\+\+FS\+\_\+4\+\_\+0\+\_\+\+GA}}~((uint8\+\_\+t) 0x80)
+\item 
+\#define \mbox{\hyperlink{group___mag___full___scale_gac6193221844fdc58591a8e93da0d192a}{LSM303\+DLHC\+\_\+\+FS\+\_\+4\+\_\+7\+\_\+\+GA}}~((uint8\+\_\+t) 0x\+A0)
+\item 
+\#define \mbox{\hyperlink{group___mag___full___scale_gaeefb339e9855cd9ed6886f82491f8fda}{LSM303\+DLHC\+\_\+\+FS\+\_\+5\+\_\+6\+\_\+\+GA}}~((uint8\+\_\+t) 0x\+C0)
+\item 
+\#define \mbox{\hyperlink{group___mag___full___scale_gae08549a0d07ad66d6764e2058fd1daf3}{LSM303\+DLHC\+\_\+\+FS\+\_\+8\+\_\+1\+\_\+\+GA}}~((uint8\+\_\+t) 0x\+E0)
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga26db3d6eb4046c0f7b2f6df539165043}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+XY\+\_\+1\+\_\+3\+Ga}}~1100
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga55be5ae37451e7ffb94184d76340cba0}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+XY\+\_\+1\+\_\+9\+Ga}}~855
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga55a81c3b9f322d35791be50b4948384a}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+XY\+\_\+2\+\_\+5\+Ga}}~670
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga2a4190d7be4fc05fb5f0c36337db9639}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+XY\+\_\+4\+Ga}}~450
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_gad542b929022f73b23ca5a58598d6d6e8}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+XY\+\_\+4\+\_\+7\+Ga}}~400
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga90b1eead9a87a33c05d16f16e00d8205}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+XY\+\_\+5\+\_\+6\+Ga}}~330
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_gac743e08abd43c3d9cf62029c7836402d}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+XY\+\_\+8\+\_\+1\+Ga}}~230
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga65298a8e4a12800afa79235116b23d21}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+Z\+\_\+1\+\_\+3\+Ga}}~980
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga0abf207cd0b811f933a6dafee20fd9ec}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+Z\+\_\+1\+\_\+9\+Ga}}~760
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga0018387b0dd96751b2cc57b719323677}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+Z\+\_\+2\+\_\+5\+Ga}}~600
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_gab0b56e470d5b68ecf4f0eb6fc9c7ec66}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+Z\+\_\+4\+Ga}}~400
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga2445ecaa95fca04f93a76bbdd3d98d18}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+Z\+\_\+4\+\_\+7\+Ga}}~355
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_ga60849454e83e2bf9657583c92cbde733}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+Z\+\_\+5\+\_\+6\+Ga}}~295
+\item 
+\#define \mbox{\hyperlink{group___magnetometer___sensitivity_gaea207edfed985ab3f23d3ca3cdda85ae}{LSM303\+DLHC\+\_\+\+M\+\_\+\+SENSITIVITY\+\_\+\+Z\+\_\+8\+\_\+1\+Ga}}~205
+\item 
+\#define \mbox{\hyperlink{group___mag___working___mode_gafda925d9affd406dcff329602ef406be}{LSM303\+DLHC\+\_\+\+CONTINUOS\+\_\+\+CONVERSION}}~((uint8\+\_\+t) 0x00)
+\item 
+\#define \mbox{\hyperlink{group___mag___working___mode_gadc9734508e2ead31b94948d08cc684b8}{LSM303\+DLHC\+\_\+\+SINGLE\+\_\+\+CONVERSION}}~((uint8\+\_\+t) 0x01)
+\item 
+\#define \mbox{\hyperlink{group___mag___working___mode_gaa893038c7e3b6343b2a3378a561906da}{LSM303\+DLHC\+\_\+\+SLEEP}}~((uint8\+\_\+t) 0x02)
+\item 
+\#define \mbox{\hyperlink{group___mag___temperature___sensor_ga4764f8f4ed709f63c6832bc1646a4e91}{LSM303\+DLHC\+\_\+\+TEMPSENSOR\+\_\+\+ENABLE}}~((uint8\+\_\+t) 0x80)
+\item 
+\#define \mbox{\hyperlink{group___mag___temperature___sensor_gab273db73f96360b9b7539ecd0942a96d}{LSM303\+DLHC\+\_\+\+TEMPSENSOR\+\_\+\+DISABLE}}~((uint8\+\_\+t) 0x00)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gadb5d7b7ad8a49f81e8127a4a9e929d1b}{LSM303\+DLHC\+\_\+\+Acc\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LSM303\+DLHC Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga9ba93fab3683286b6c5f2dcc3753fac4}{LSM303\+DLHC\+\_\+\+Acc\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em LSM303\+DLHC De-\/initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga2f52cf87dda0dc94110cec78ea86290b}{LSM303\+DLHC\+\_\+\+Acc\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read LSM303\+DLHC ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga0f0d2b0ecc181ff2b13a6702a4f5ce78}{LSM303\+DLHC\+\_\+\+Acc\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of LSM303\+DLHC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gad0e47974f46c7349dbf14d97b31b73ae}{LSM303\+DLHC\+\_\+\+Acc\+Filter\+Config}} (uint8\+\_\+t Filter\+Struct)
+\begin{DoxyCompactList}\small\item\em Set High Pass Filter Modality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gaf5b88b344967a356fc0331363958bb52}{LSM303\+DLHC\+\_\+\+Acc\+Filter\+Cmd}} (uint8\+\_\+t High\+Pass\+Filter\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable High Pass Filter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga92493f59ac96b55ab50b5bb1b8381f05}{LSM303\+DLHC\+\_\+\+Acc\+Read\+XYZ}} (int16\+\_\+t $\ast$p\+Data)
+\begin{DoxyCompactList}\small\item\em Read X, Y \& Z Acceleration values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga205af9af3b60979cd15830294dece641}{LSM303\+DLHC\+\_\+\+Acc\+Filter\+Click\+Cmd}} (uint8\+\_\+t High\+Pass\+Filter\+Click\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable High Pass Filter on CLick. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga3c1418e60efa20676474f3c5aef02dc2}{LSM303\+DLHC\+\_\+\+Acc\+IT1\+Enable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Enable LSM303\+DLHC Interrupt1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga4f0364990e29afc218519f149cc0a172}{LSM303\+DLHC\+\_\+\+Acc\+IT1\+Disable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Disable LSM303\+DLHC Interrupt1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gac295264a325f8dca177c78ec1b55f805}{LSM303\+DLHC\+\_\+\+Acc\+IT2\+Enable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Enable LSM303\+DLHC Interrupt2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga05c851c88bdee43afdfeb2c7644300d7}{LSM303\+DLHC\+\_\+\+Acc\+IT2\+Disable}} (uint8\+\_\+t LSM303\+DLHC\+\_\+\+IT)
+\begin{DoxyCompactList}\small\item\em Disable LSM303\+DLHC Interrupt2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gaf87f4b26ef5c974f25716d5db700ad69}{LSM303\+DLHC\+\_\+\+Acc\+INT1\+Interrupt\+Enable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT1 interrupt enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga48d144c0c2acec85c5fe431d99abe53e}{LSM303\+DLHC\+\_\+\+Acc\+INT1\+Interrupt\+Disable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT1 interrupt disable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga78a2ac98179587e0448dd73fc9679800}{LSM303\+DLHC\+\_\+\+Acc\+INT2\+Interrupt\+Enable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT2 interrupt enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga3e93711f84e156006105f7f2045628cc}{LSM303\+DLHC\+\_\+\+Acc\+INT2\+Interrupt\+Disable}} (uint8\+\_\+t ITCombination, uint8\+\_\+t ITAxes)
+\begin{DoxyCompactList}\small\item\em INT2 interrupt config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga04e2e850e426f774936a493344593916}{LSM303\+DLHC\+\_\+\+Acc\+Click\+ITEnable}} (uint8\+\_\+t ITClick)
+\begin{DoxyCompactList}\small\item\em Click interrupt enable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga73c390b150fb1d11577f771113441db1}{LSM303\+DLHC\+\_\+\+Acc\+Click\+ITDisable}} (uint8\+\_\+t ITClick)
+\begin{DoxyCompactList}\small\item\em Click interrupt disable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga203cd77b3cc9ab2486f422381afa5a65}{LSM303\+DLHC\+\_\+\+Acc\+ZClick\+ITConfig}} (void)
+\begin{DoxyCompactList}\small\item\em Click on Z axis interrupt config. \end{DoxyCompactList}\item 
+void {\bfseries COMPASSACCELERO\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+void {\bfseries COMPASSACCELERO\+\_\+\+IO\+\_\+\+ITConfig} (void)
+\item 
+void {\bfseries COMPASSACCELERO\+\_\+\+IO\+\_\+\+Write} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Register\+Addr, uint8\+\_\+t Value)
+\item 
+uint8\+\_\+t {\bfseries COMPASSACCELERO\+\_\+\+IO\+\_\+\+Read} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Register\+Addr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\+\_\+\+Drv\+Type\+Def}} {\bfseries Lsm303dlhc\+Drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{lsm303dlhc_8c}{lsm303dlhc.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/June-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

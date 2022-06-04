@@ -1,0 +1,76 @@
+\hypertarget{ili9325_8c}{}\doxysection{Drivers/\+BSP/\+Components/ili9325/ili9325.c File Reference}
+\label{ili9325_8c}\index{Drivers/BSP/Components/ili9325/ili9325.c@{Drivers/BSP/Components/ili9325/ili9325.c}}
+
+
+This file includes the LCD driver for ILI9325 LCD.  
+
+
+{\ttfamily \#include \char`\"{}ili9325.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gac2dad7aeb7315082ba82dd2ff3b3f912}{ili9325\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the ILI9325 LCD Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga45dbdb5ee31500eadf6fa0887d9d9159}{ili9325\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga2c5329f1c16c401a79c8f1927dee2897}{ili9325\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga1fdb88f871b6d7037e62066ff0a03b4c}{ili9325\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga25a6b2c24b435cf2f434836b224bd2ad}{ili9325\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Height. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga0d1bfb1436c67f911f952cf7259cda34}{ili9325\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Get the ILI9325 ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga080a128498e3867ed3dabe3fd74e1a5d}{ili9325\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Set Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga79acefaa65edb44310fc055a287e4054}{ili9325\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Write pixel. ~\newline
+ \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga6ea873dd731a4daa5411937d9430709f}{ili9325\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Read pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gab89b9cfe67618cf258b5659deab1adfa}{ili9325\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCDReg, uint16\+\_\+t LCDReg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___private___functions_ga33a9d41f9d1d5cf4034f20c03d0c4765}{ili9325\+\_\+\+Read\+Reg}} (uint8\+\_\+t LCDReg)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gac5ef79f40ad604b9d2ca7ccd05be89f7}{ili9325\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gaecd849c1baa9601768ea3f648c8c8e3c}{ili9325\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga6f174cbeab5e2ef6233d885c3bec14ff}{ili9325\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_gaf263299af0fc74980cbce6105ee7215e}{ili9325\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___private___functions_ga9e85aeafcbeb67436ff3eeb8ac53fbb2}{ili9325\+\_\+\+Draw\+RGBImage}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint8\+\_\+t $\ast$pdata)
+\begin{DoxyCompactList}\small\item\em Displays picture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___i_l_i9325___private___variables_ga811a123ab950202efea7bdde54a6c352}{ili9325\+\_\+drv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file includes the LCD driver for ILI9325 LCD. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+2.\+3 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

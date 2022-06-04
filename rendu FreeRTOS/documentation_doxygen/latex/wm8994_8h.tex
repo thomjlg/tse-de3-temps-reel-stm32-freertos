@@ -1,0 +1,143 @@
+\hypertarget{wm8994_8h}{}\doxysection{Drivers/\+BSP/\+Components/wm8994/wm8994.h File Reference}
+\label{wm8994_8h}\index{Drivers/BSP/Components/wm8994/wm8994.h@{Drivers/BSP/Components/wm8994/wm8994.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{wm8994_8c}{wm8994.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/audio.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries OUTPUT\+\_\+\+DEVICE\+\_\+\+SPEAKER}~((uint16\+\_\+t)0x0001)
+\item 
+\#define {\bfseries OUTPUT\+\_\+\+DEVICE\+\_\+\+HEADPHONE}~((uint16\+\_\+t)0x0002)
+\item 
+\#define {\bfseries OUTPUT\+\_\+\+DEVICE\+\_\+\+BOTH}~((uint16\+\_\+t)0x0003)
+\item 
+\#define {\bfseries OUTPUT\+\_\+\+DEVICE\+\_\+\+AUTO}~((uint16\+\_\+t)0x0004)
+\item 
+\#define {\bfseries INPUT\+\_\+\+DEVICE\+\_\+\+DIGITAL\+\_\+\+MICROPHONE\+\_\+1}~((uint16\+\_\+t)0x0100)
+\item 
+\#define {\bfseries INPUT\+\_\+\+DEVICE\+\_\+\+DIGITAL\+\_\+\+MICROPHONE\+\_\+2}~((uint16\+\_\+t)0x0200)
+\item 
+\#define {\bfseries INPUT\+\_\+\+DEVICE\+\_\+\+INPUT\+\_\+\+LINE\+\_\+1}~((uint16\+\_\+t)0x0300)
+\item 
+\#define {\bfseries INPUT\+\_\+\+DEVICE\+\_\+\+INPUT\+\_\+\+LINE\+\_\+2}~((uint16\+\_\+t)0x0400)
+\item 
+\#define {\bfseries INPUT\+\_\+\+DEVICE\+\_\+\+DIGITAL\+\_\+\+MIC1\+\_\+\+MIC2}~((uint16\+\_\+t)0x0800)
+\item 
+\#define {\bfseries DEFAULT\+\_\+\+VOLMIN}~0x00
+\item 
+\#define {\bfseries DEFAULT\+\_\+\+VOLMAX}~0x\+FF
+\item 
+\#define {\bfseries DEFAULT\+\_\+\+VOLSTEP}~0x04
+\item 
+\#define {\bfseries AUDIO\+\_\+\+PAUSE}~0
+\item 
+\#define {\bfseries AUDIO\+\_\+\+RESUME}~1
+\item 
+\#define {\bfseries CODEC\+\_\+\+PDWN\+\_\+\+HW}~1
+\item 
+\#define {\bfseries CODEC\+\_\+\+PDWN\+\_\+\+SW}~2
+\item 
+\#define {\bfseries AUDIO\+\_\+\+MUTE\+\_\+\+ON}~1
+\item 
+\#define {\bfseries AUDIO\+\_\+\+MUTE\+\_\+\+OFF}~0
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+192K}~((uint32\+\_\+t)192000)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+96K}~((uint32\+\_\+t)96000)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+48K}~((uint32\+\_\+t)48000)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+44K}~((uint32\+\_\+t)44100)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+32K}~((uint32\+\_\+t)32000)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+22K}~((uint32\+\_\+t)22050)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+16K}~((uint32\+\_\+t)16000)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+11K}~((uint32\+\_\+t)11025)
+\item 
+\#define {\bfseries AUDIO\+\_\+\+FREQUENCY\+\_\+8K}~((uint32\+\_\+t)8000)
+\item 
+\#define {\bfseries VOLUME\+\_\+\+CONVERT}(Volume)~(((Volume) $>$ 100)? 100\+:((uint8\+\_\+t)(((Volume) $\ast$ 63) / 100)))
+\item 
+\#define {\bfseries VOLUME\+\_\+\+IN\+\_\+\+CONVERT}(Volume)~(((Volume) $>$= 100)? 239\+:((uint8\+\_\+t)(((Volume) $\ast$ 240) / 100)))
+\item 
+\#define {\bfseries WM8994\+\_\+\+ID}~0x8994
+\begin{DoxyCompactList}\small\item\em WM8994 ID ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries WM8994\+\_\+\+CHIPID\+\_\+\+ADDR}~0x00
+\begin{DoxyCompactList}\small\item\em Device ID Register\+: Reading from this register will indicate device family ID 8994h. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga3480b4e36772987950257bde02653721}{wm8994\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t Output\+Input\+Device, uint8\+\_\+t Volume, uint32\+\_\+t Audio\+Freq)
+\begin{DoxyCompactList}\small\item\em Initializes the audio codec and the control interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___w_m8994___exported___functions_ga4b75806a89e7ce5dd5643b1815ab657d}{wm8994\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitializes the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga95f7d0e82e6f6678e1c9533a40d9410a}{wm8994\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Get the WM8994 ID. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_gad1233e28686f9bf6e0c1eab0487b6811}{wm8994\+\_\+\+Play}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$p\+Buffer, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Start the audio Codec play feature. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga7dc61f1e194ac0dddfd2433aad18ffbd}{wm8994\+\_\+\+Pause}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Pauses playing on the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga4ff0d65bb8394b7307482d8292d9d1bf}{wm8994\+\_\+\+Resume}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Resumes playing on the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_gabf8add07192650e9d187753199fc78e0}{wm8994\+\_\+\+Stop}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t Cmd)
+\begin{DoxyCompactList}\small\item\em Stops audio Codec playing. It powers down the codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga3f3e2ff73924bcb5de7ed9d1de056b3a}{wm8994\+\_\+\+Set\+Volume}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Volume)
+\begin{DoxyCompactList}\small\item\em Sets higher or lower the codec volume level. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga2f3d8a46806eb63a023bf6bb4f7821e3}{wm8994\+\_\+\+Set\+Mute}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t Cmd)
+\begin{DoxyCompactList}\small\item\em Enables or disables the mute feature on the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga74e3c3342bce3e9bb871ca13125a263c}{wm8994\+\_\+\+Set\+Output\+Mode}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Output)
+\begin{DoxyCompactList}\small\item\em Switch dynamically (while audio file is played) the output target (speaker or headphone). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga11da6d32fb9b17e8f10e6e466116d416}{wm8994\+\_\+\+Set\+Frequency}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t Audio\+Freq)
+\begin{DoxyCompactList}\small\item\em Sets new frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga5cce7c53a68c7643ed1316868ec4edef}{wm8994\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Resets wm8994 registers. \end{DoxyCompactList}\item 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+De\+Init} (void)
+\item 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t Addr, uint16\+\_\+t Reg, uint16\+\_\+t Value)
+\item 
+uint8\+\_\+t {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t Addr, uint16\+\_\+t Reg)
+\item 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_a_u_d_i_o___drv_type_def}{AUDIO\+\_\+\+Drv\+Type\+Def}} {\bfseries wm8994\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{wm8994_8c}{wm8994.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+22-\/February-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

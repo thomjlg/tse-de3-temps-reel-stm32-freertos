@@ -1,0 +1,42 @@
+\hypertarget{stm32f429i__discovery__gyroscope_8h_source}{}\doxysection{stm32f429i\+\_\+discovery\+\_\+gyroscope.\+h}
+\label{stm32f429i__discovery__gyroscope_8h_source}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_gyroscope.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_gyroscope.h}}
+\mbox{\hyperlink{stm32f429i__discovery__gyroscope_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_\_STM32F429I\_DISCOVERY\_GYROSCOPE\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_\_STM32F429I\_DISCOVERY\_GYROSCOPE\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{42  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f429i__discovery_8h}{stm32f429i\_discovery.h}}"{}}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Include Gyroscope component driver */}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Components/l3gd20/l3gd20.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{65 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67   GYRO\_OK = 0,}
+\DoxyCodeLine{68   GYRO\_ERROR = 1,}
+\DoxyCodeLine{69   GYRO\_TIMEOUT = 2}
+\DoxyCodeLine{70 \}GYRO\_StatusTypeDef;}
+\DoxyCodeLine{92 \textcolor{comment}{/* Gyroscope Functions */} }
+\DoxyCodeLine{93 uint8\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___exported___functions_ga1bae84f8c5b00b9831738929bbb468c3}{BSP\_GYRO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{94 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___exported___functions_ga8b564741668239cbf12b819bd3f5a460}{BSP\_GYRO\_Reset}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{95 uint8\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___exported___functions_ga540e8d9406a92a3c70e55adb15a7a57b}{BSP\_GYRO\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{96 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___exported___functions_gadf2a266a472a63485930da5008372a1b}{BSP\_GYRO\_ITConfig}}(\mbox{\hyperlink{struct_g_y_r_o___interrupt_config_type_def}{GYRO\_InterruptConfigTypeDef}} *pIntConfigStruct);}
+\DoxyCodeLine{97 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___exported___functions_gaba9a68c9c3a6b38527487fe7c7946558}{BSP\_GYRO\_EnableIT}}(uint8\_t IntPin);}
+\DoxyCodeLine{98 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___exported___functions_ga1da85d0c8bfc8eeedcaa93fe2e7c2a95}{BSP\_GYRO\_DisableIT}}(uint8\_t IntPin);}
+\DoxyCodeLine{99 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___exported___functions_ga2b8498c5824e766e1a48dc107562b7de}{BSP\_GYRO\_GetXYZ}}(\textcolor{keywordtype}{float}* pfData);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{118 \}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F429I\_DISCOVERY\_GYROSCOPE\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/} }
+
+\end{DoxyCode}

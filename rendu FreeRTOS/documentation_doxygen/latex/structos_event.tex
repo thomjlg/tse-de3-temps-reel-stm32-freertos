@@ -1,0 +1,47 @@
+\hypertarget{structos_event}{}\doxysection{os\+Event Struct Reference}
+\label{structos_event}\index{osEvent@{osEvent}}
+
+
+{\ttfamily \#include $<$cmsis\+\_\+os.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structos_event_aafcd2cedd08e033f9df25fd9875caaf2}\label{structos_event_aafcd2cedd08e033f9df25fd9875caaf2}} 
+os\+Status {\bfseries status}
+\begin{DoxyCompactList}\small\item\em status code\+: event or error information \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structos_event_ab39d8a7807fad367a3d2ee377ea6925c}\label{structos_event_ab39d8a7807fad367a3d2ee377ea6925c}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t {\bfseries v}\\
+\>\>{\em message as 32-\/bit value }\\
+\>void $\ast$ {\bfseries p}\\
+\>\>{\em message or mail as void pointer }\\
+\>int32\_t {\bfseries signals}\\
+\>\>{\em signal flags }\\
+\} {\bfseries value}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em event value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structos_event_a7d930865c821197a23337aa64513624f}\label{structos_event_a7d930865c821197a23337aa64513624f}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structos__mail_q__cb}{osMailQId}} {\bfseries mail\_id}\\
+\>\>{\em mail id obtained by osMailCreate }\\
+\>\mbox{\hyperlink{struct_queue_definition}{osMessageQId}} {\bfseries message\_id}\\
+\>\>{\em message id obtained by osMessageCreate }\\
+\} {\bfseries def}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em event definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Event structure contains detailed information about an event. \begin{DoxyNote}{Note}
+MUST REMAIN UNCHANGED\+: {\bfseries{os\+\_\+event}} shall be consistent in every CMSIS-\/\+RTOS. However the struct may be extended at the end. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Middlewares/\+Third\+\_\+\+Party/\+Free\+RTOS/\+Source/\+CMSIS\+\_\+\+RTOS/cmsis\+\_\+os.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,168 @@
+\hypertarget{stmpe1600_8h}{}\doxysection{Drivers/\+BSP/\+Components/stmpe1600/stmpe1600.h File Reference}
+\label{stmpe1600_8h}\index{Drivers/BSP/Components/stmpe1600/stmpe1600.h@{Drivers/BSP/Components/stmpe1600/stmpe1600.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{stmpe1600_8c}{stmpe1600.\+c}} IO expander driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/io.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+ID}~0x1600
+\begin{DoxyCompactList}\small\item\em STMPE1600 chip IDs ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+IT\+\_\+\+ENABLE}~0x04
+\begin{DoxyCompactList}\small\item\em Interrupt enable ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+CHP\+\_\+\+ID}~0x00
+\begin{DoxyCompactList}\small\item\em Identification registers \& System Control ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+ID\+\_\+\+VERSION}~0x02
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+SYS\+\_\+\+CTRL}~0x03
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+GPMR}~0x10
+\begin{DoxyCompactList}\small\item\em IO Registers ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+GPSR}~0x12
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+GPDR}~0x14
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+GPPIR}~0x16
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+IEGPIOR}~0x08
+\begin{DoxyCompactList}\small\item\em Interrupt Control registers ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+REG\+\_\+\+ISGPIOR}~0x0A
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+DIRECTION\+\_\+\+IN}~0x00
+\begin{DoxyCompactList}\small\item\em IO Pins direction ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+DIRECTION\+\_\+\+OUT}~0x01
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+POLARITY\+\_\+\+LOW}~0x00
+\begin{DoxyCompactList}\small\item\em IO IT polarity ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+POLARITY\+\_\+\+HIGH}~0x01
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+0}~0x0001
+\begin{DoxyCompactList}\small\item\em IO Pins ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+1}~0x0002
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+2}~0x0004
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+3}~0x0008
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+4}~0x0010
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+5}~0x0020
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+6}~0x0040
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+7}~0x0080
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+8}~0x0100
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+9}~0x0200
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+10}~0x0400
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+11}~0x0800
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+12}~0x1000
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+13}~0x2000
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+14}~0x4000
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+15}~0x8000
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+PIN\+\_\+\+ALL}~0x\+FFFF
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga9b768b7b2d2c807b1409b4f4a4f260aa}{stmpe1600\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em STMPE1600 Control functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga8f4ee2c5985686991e614cb342440cad}{stmpe1600\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the stmpe1600 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga17e28fa9ec45bf992bad397b234b761f}{stmpe1600\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the stmpe1600 device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gae0f4986cb9fcedd86d41cc0129c32852}{stmpe1600\+\_\+\+Set\+ITPolarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga97d6ef755d80e712612464b9da15e2bf}{stmpe1600\+\_\+\+Enable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga99fbc9e46fe603c4e4e8d9f6c06b1efe}{stmpe1600\+\_\+\+Disable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gad52ca935e0600f12d74fa314b1a3343e}{stmpe1600\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em STMPE1600 IO functionalities functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga2e9e58286bf9057562f8d4395b800f22}{stmpe1600\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configure the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga3b1fd40626d44f219d9fb64b1650e8f9}{stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Enable}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable polarity inversion of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga8651f238f33d4e77466d27bcb33b6cb5}{stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Disable}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable polarity inversion of the selected IO pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga4040072bed64a28716e460b89c3d1133}{stmpe1600\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Set the value of the selected IO pins. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaaeab906ac67064a1913922d7cbcdce0d}{stmpe1600\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Read the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaf1a8860c52c4f6a68d7e0e71494b2616}{stmpe1600\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaaafc0fdfc7921ea9a1d4aef8c356b537}{stmpe1600\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaf477372738df470912c525985c60f2bf}{stmpe1600\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Read the IT status of the selected IO pin(s) (clears all the pending bits if any). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga41e42cf6b16c16aa0758d34fabb4b7bf}{stmpe1600\+\_\+\+IO\+\_\+\+Read\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Detect an IT pending bit from the selected IO pin(s). (clears all the pending bits if any). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga00dc4debeba8a3b7ca091f389b2f8ccd}{stmpe1600\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear all the IT pending bits if any. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga7dc8419129c1e4278da219a79c4a5dbb}{stmpe1600\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen Controller (Single point detection) \end{DoxyCompactList}\item 
+void {\bfseries IOE\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Initialization. \end{DoxyCompactList}\item 
+void {\bfseries IOE\+\_\+\+ITConfig} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em IOE Delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga6804257e10475b06cafd813afce0cf49}{IOE\+\_\+\+Write}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em IOE Writes single data operation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\+\_\+\+Read}} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em IOE Reads single data. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\+\_\+\+Read\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Reads multiple data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}{IOE\+\_\+\+Write\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Writes multiple data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_i_o___drv_type_def}{IO\+\_\+\+Drv\+Type\+Def}} {\bfseries stmpe1600\+\_\+io\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{stmpe1600_8c}{stmpe1600.\+c}} IO expander driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10-\/February-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

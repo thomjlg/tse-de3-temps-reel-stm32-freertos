@@ -1,0 +1,40 @@
+\hypertarget{fonts_8h_source}{}\doxysection{fonts.\+h}
+\label{fonts_8h_source}\index{Utilities/Fonts/fonts.h@{Utilities/Fonts/fonts.h}}
+\mbox{\hyperlink{fonts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_FONTS\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_FONTS\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct__t_font}{\_tFont}}}
+\DoxyCodeLine{69 \{    }
+\DoxyCodeLine{70   \textcolor{keyword}{const} uint8\_t *table;}
+\DoxyCodeLine{71   uint16\_t Width;}
+\DoxyCodeLine{72   uint16\_t Height;}
+\DoxyCodeLine{73   }
+\DoxyCodeLine{74 \} \mbox{\hyperlink{struct__t_font}{sFONT}};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{keyword}{extern} \mbox{\hyperlink{struct__t_font}{sFONT}} Font24;}
+\DoxyCodeLine{77 \textcolor{keyword}{extern} \mbox{\hyperlink{struct__t_font}{sFONT}} Font20;}
+\DoxyCodeLine{78 \textcolor{keyword}{extern} \mbox{\hyperlink{struct__t_font}{sFONT}} Font16;}
+\DoxyCodeLine{79 \textcolor{keyword}{extern} \mbox{\hyperlink{struct__t_font}{sFONT}} Font12;}
+\DoxyCodeLine{80 \textcolor{keyword}{extern} \mbox{\hyperlink{struct__t_font}{sFONT}} Font8;}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define LINE(x) ((x) * (((sFONT *)BSP\_LCD\_GetFont())-\/>Height))}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{109 \}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{111   }
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_FONTS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{113  }
+\DoxyCodeLine{134 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,165 @@
+\hypertarget{stm32f4xx__hal_8h_source}{}\doxysection{stm32f4xx\+\_\+hal.\+h}
+\label{stm32f4xx__hal_8h_source}\index{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal.h@{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal.h}}
+\mbox{\hyperlink{stm32f4xx__hal_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{21 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_H}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_H}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{26  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}stm32f4xx\_hal\_conf.h"{}}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{40 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{41 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{50 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52   HAL\_TICK\_FREQ\_10HZ         = 100U,}
+\DoxyCodeLine{53   HAL\_TICK\_FREQ\_100HZ        = 10U,}
+\DoxyCodeLine{54   HAL\_TICK\_FREQ\_1KHZ         = 1U,}
+\DoxyCodeLine{55   HAL\_TICK\_FREQ\_DEFAULT      = HAL\_TICK\_FREQ\_1KHZ}
+\DoxyCodeLine{56 \} HAL\_TickFreqTypeDef;}
+\DoxyCodeLine{65 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM2()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM2\_STOP))}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM3()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM3\_STOP))}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM4()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM4\_STOP))}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM5()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM5\_STOP))}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM6()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM6\_STOP))}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM7()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM7\_STOP))}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM12()          (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM12\_STOP))}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM13()          (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM13\_STOP))}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM14()          (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_TIM14\_STOP))}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_RTC()            (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_RTC\_STOP))}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_WWDG()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_WWDG\_STOP))}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_IWDG()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_IWDG\_STOP))}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_I2C1\_TIMEOUT()   (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_I2C1\_SMBUS\_TIMEOUT))}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_I2C2\_TIMEOUT()   (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_I2C2\_SMBUS\_TIMEOUT))}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_I2C3\_TIMEOUT()   (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_I2C3\_SMBUS\_TIMEOUT))}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_CAN1()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_CAN1\_STOP))}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_CAN2()           (DBGMCU-\/>APB1FZ |= (DBGMCU\_APB1\_FZ\_DBG\_CAN2\_STOP))}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM1()           (DBGMCU-\/>APB2FZ |= (DBGMCU\_APB2\_FZ\_DBG\_TIM1\_STOP))}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM8()           (DBGMCU-\/>APB2FZ |= (DBGMCU\_APB2\_FZ\_DBG\_TIM8\_STOP))}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM9()           (DBGMCU-\/>APB2FZ |= (DBGMCU\_APB2\_FZ\_DBG\_TIM9\_STOP))}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM10()          (DBGMCU-\/>APB2FZ |= (DBGMCU\_APB2\_FZ\_DBG\_TIM10\_STOP))}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_FREEZE\_TIM11()          (DBGMCU-\/>APB2FZ |= (DBGMCU\_APB2\_FZ\_DBG\_TIM11\_STOP))}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM2()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM2\_STOP))}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM3()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM3\_STOP))}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM4()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM4\_STOP))}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM5()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM5\_STOP))}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM6()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM6\_STOP))}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM7()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM7\_STOP))}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM12()          (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM12\_STOP))}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM13()          (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM13\_STOP))}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM14()          (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_TIM14\_STOP))}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_RTC()            (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_RTC\_STOP))}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_WWDG()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_WWDG\_STOP))}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_IWDG()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_IWDG\_STOP))}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_I2C1\_TIMEOUT()   (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_I2C1\_SMBUS\_TIMEOUT))}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_I2C2\_TIMEOUT()   (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_I2C2\_SMBUS\_TIMEOUT))}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_I2C3\_TIMEOUT()   (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_I2C3\_SMBUS\_TIMEOUT))}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_CAN1()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_CAN1\_STOP))}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_CAN2()           (DBGMCU-\/>APB1FZ \&= \string~(DBGMCU\_APB1\_FZ\_DBG\_CAN2\_STOP))}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM1()           (DBGMCU-\/>APB2FZ \&= \string~(DBGMCU\_APB2\_FZ\_DBG\_TIM1\_STOP))}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM8()           (DBGMCU-\/>APB2FZ \&= \string~(DBGMCU\_APB2\_FZ\_DBG\_TIM8\_STOP))}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM9()           (DBGMCU-\/>APB2FZ \&= \string~(DBGMCU\_APB2\_FZ\_DBG\_TIM9\_STOP))}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM10()          (DBGMCU-\/>APB2FZ \&= \string~(DBGMCU\_APB2\_FZ\_DBG\_TIM10\_STOP))}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define \_\_HAL\_DBGMCU\_UNFREEZE\_TIM11()          (DBGMCU-\/>APB2FZ \&= \string~(DBGMCU\_APB2\_FZ\_DBG\_TIM11\_STOP))}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_REMAPMEMORY\_FLASH()             (SYSCFG-\/>MEMRMP \&= \string~(SYSCFG\_MEMRMP\_MEM\_MODE))}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_REMAPMEMORY\_SYSTEMFLASH()       do \{SYSCFG-\/>MEMRMP \&= \string~(SYSCFG\_MEMRMP\_MEM\_MODE);\(\backslash\)}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{                                                         SYSCFG-\/>MEMRMP |= SYSCFG\_MEMRMP\_MEM\_MODE\_0;\(\backslash\)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{                                                        \}while(0);}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_REMAPMEMORY\_SRAM()       do \{SYSCFG-\/>MEMRMP \&= \string~(SYSCFG\_MEMRMP\_MEM\_MODE);\(\backslash\)}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{                                                  SYSCFG-\/>MEMRMP |= (SYSCFG\_MEMRMP\_MEM\_MODE\_0 | SYSCFG\_MEMRMP\_MEM\_MODE\_1);\(\backslash\)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{                                                 \}while(0);}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_REMAPMEMORY\_FSMC()       do \{SYSCFG-\/>MEMRMP \&= \string~(SYSCFG\_MEMRMP\_MEM\_MODE);\(\backslash\)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{                                                  SYSCFG-\/>MEMRMP |= (SYSCFG\_MEMRMP\_MEM\_MODE\_1);\(\backslash\)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{                                                 \}while(0);}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) ||\(\backslash\)}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{    defined(STM32F469xx) || defined(STM32F479xx)}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_REMAPMEMORY\_FMC()       do \{SYSCFG-\/>MEMRMP \&= \string~(SYSCFG\_MEMRMP\_MEM\_MODE);\(\backslash\)}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{                                                 SYSCFG-\/>MEMRMP |= (SYSCFG\_MEMRMP\_MEM\_MODE\_1);\(\backslash\)}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{                                                \}while(0);}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_REMAPMEMORY\_FMC\_SDRAM()       do \{SYSCFG-\/>MEMRMP \&= \string~(SYSCFG\_MEMRMP\_MEM\_MODE);\(\backslash\)}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{                                                       SYSCFG-\/>MEMRMP |= (SYSCFG\_MEMRMP\_MEM\_MODE\_2);\(\backslash\)}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{                                                      \}while(0);}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F413xx) || defined(STM32F423xx)}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_BREAK\_PVD\_LOCK()      do \{SYSCFG-\/>CFGR2 \&= \string~(SYSCFG\_CFGR2\_PVD\_LOCK); \(\backslash\)}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{                                               SYSCFG-\/>CFGR2 |= SYSCFG\_CFGR2\_PVD\_LOCK;    \(\backslash\)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{                                              \}while(0)}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define \_\_HAL\_SYSCFG\_BREAK\_LOCKUP\_LOCK()     do \{SYSCFG-\/>CFGR2 \&= \string~(SYSCFG\_CFGR2\_LOCKUP\_LOCK); \(\backslash\)}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{                                                 SYSCFG-\/>CFGR2 |= SYSCFG\_CFGR2\_LOCKUP\_LOCK;    \(\backslash\)}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{                                                \}while(0)}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F410Tx || STM32F410Cx || STM32F410Rx || STM32F413xx || STM32F423xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define IS\_TICKFREQ(FREQ) (((FREQ) == HAL\_TICK\_FREQ\_10HZ)  || \(\backslash\)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{                           ((FREQ) == HAL\_TICK\_FREQ\_100HZ) || \(\backslash\)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{                           ((FREQ) == HAL\_TICK\_FREQ\_1KHZ))}}
+\DoxyCodeLine{200 \textcolor{comment}{/* Exported variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{205 \textcolor{keyword}{extern} \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t uwTick;}
+\DoxyCodeLine{206 \textcolor{keyword}{extern} uint32\_t uwTickPrio;}
+\DoxyCodeLine{207 \textcolor{keyword}{extern} HAL\_TickFreqTypeDef uwTickFreq;}
+\DoxyCodeLine{212 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{219 \textcolor{comment}{/* Initialization and Configuration functions  ******************************/}}
+\DoxyCodeLine{220 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}{HAL\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{221 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}{HAL\_DeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{222 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{HAL\_MspInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{223 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gaa2d4540edcb9dacec34edb77f3455bf0}{HAL\_MspDeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{224 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}{HAL\_InitTick}} (uint32\_t TickPriority);}
+\DoxyCodeLine{232 \textcolor{comment}{/* Peripheral Control functions  ************************************************/}}
+\DoxyCodeLine{233 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188}{HAL\_IncTick}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{234 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gab1dc1e6b438daacfe38a312a90221330}{HAL\_Delay}}(uint32\_t Delay);}
+\DoxyCodeLine{235 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gac9b3a85a73735ac840d0dcb59bc0fdd6}{HAL\_GetTick}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{236 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gacdcc8b5d33b9f97fe1b0abd6a86a3d4b}{HAL\_GetTickPrio}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{237 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga47f2dd240b2aed823a76b11496f37690}{HAL\_SetTickFreq}}(HAL\_TickFreqTypeDef Freq);}
+\DoxyCodeLine{238 HAL\_TickFreqTypeDef \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga803cdbcc0883bcf5f5c98c50024c97e6}{HAL\_GetTickFreq}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{239 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}{HAL\_SuspendTick}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{240 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}{HAL\_ResumeTick}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{241 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gafb139b375512ad2a234e4619b129b966}{HAL\_GetHalVersion}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{242 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gae051ef9e932404b21f5877c7186406b8}{HAL\_GetREVID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{243 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaff785f069ed650de77ff82ac407f7c84}{HAL\_GetDEVID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{244 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaf031bcc71ebad9b7edf405547efd762b}{HAL\_DBGMCU\_EnableDBGSleepMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{245 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gac7820d0561f19999a68d714655b901b5}{HAL\_DBGMCU\_DisableDBGSleepMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{246 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gadf25043b17de4bef38a95a75fd03e5c4}{HAL\_DBGMCU\_EnableDBGStopMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{247 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga2c93dcee35e5983d74f1000de7c042d5}{HAL\_DBGMCU\_DisableDBGStopMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{248 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga28a1323b2eeb0a408c1cfdbfa0db5ead}{HAL\_DBGMCU\_EnableDBGStandbyMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{249 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga7faa58d8508ea3123b9f247a70379779}{HAL\_DBGMCU\_DisableDBGStandbyMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{250 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga20b6ca07582e10aec5e15ad2fda7dfc1}{HAL\_EnableCompensationCell}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{251 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga653f1166b0e37afd40372550d806e667}{HAL\_DisableCompensationCell}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{252 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaf982aa0a575eef3758c0840a24077506}{HAL\_GetUIDw0}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{253 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga52720dd92ed2bd4314a2a129855d766c}{HAL\_GetUIDw1}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{254 uint32\_t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga5785ae5ec8d4c5a7dadb1359f0778700}{HAL\_GetUIDw2}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) ||\(\backslash\)}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{    defined(STM32F469xx) || defined(STM32F479xx)}}
+\DoxyCodeLine{257 \textcolor{keywordtype}{void} HAL\_EnableMemorySwappingBank(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{258 \textcolor{keywordtype}{void} HAL\_DisableMemorySwappingBank(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F469xx || STM32F479xx */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{267 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{268 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{275 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{282 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{283 \textcolor{comment}{/* Private functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{293 \}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

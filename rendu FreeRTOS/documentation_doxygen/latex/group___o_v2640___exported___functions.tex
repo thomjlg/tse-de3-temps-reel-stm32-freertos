@@ -1,0 +1,103 @@
+\hypertarget{group___o_v2640___exported___functions}{}\doxysection{OV2640\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___o_v2640___exported___functions}\index{OV2640\_Exported\_Functions@{OV2640\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___o_v2640___exported___functions_ga4f4e3d4382932ad47f2c30e2461a8355}{ov2640\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em Initializes the OV2640 CAMERA component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___o_v2640___exported___functions_ga942828d9066961933f178394521e95cf}{ov2640\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t feature, uint32\+\_\+t value, uint32\+\_\+t BR\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the OV2640 camera feature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___o_v2640___exported___functions_ga9e355ae413c34af76e774adca3c9985e}{ov2640\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the OV2640 Camera identity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___o_v2640___exported___functions_gab66d84fc34650e14be3b2f729fb6f7f7}\label{group___o_v2640___exported___functions_gab66d84fc34650e14be3b2f729fb6f7f7}} 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___o_v2640___exported___functions_gad928314826e6f418f2c240a832886b24}\label{group___o_v2640___exported___functions_gad928314826e6f418f2c240a832886b24}} 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+\mbox{\Hypertarget{group___o_v2640___exported___functions_ga52ce50d086ed873680d9ff8d8e72b9ec}\label{group___o_v2640___exported___functions_ga52ce50d086ed873680d9ff8d8e72b9ec}} 
+uint8\+\_\+t {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+\item 
+\mbox{\Hypertarget{group___o_v2640___exported___functions_gae9e8bc10e46dab684245893476d44efa}\label{group___o_v2640___exported___functions_gae9e8bc10e46dab684245893476d44efa}} 
+void {\bfseries CAMERA\+\_\+\+Delay} (uint32\+\_\+t delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___o_v2640___exported___functions_ga37a5ba704e6d17aaf0b33611d385a4d9}\label{group___o_v2640___exported___functions_ga37a5ba704e6d17aaf0b33611d385a4d9}} 
+\mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\+\_\+\+Drv\+Type\+Def}} {\bfseries ov2640\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___o_v2640___exported___functions_ga942828d9066961933f178394521e95cf}\label{group___o_v2640___exported___functions_ga942828d9066961933f178394521e95cf}} 
+\index{OV2640\_Exported\_Functions@{OV2640\_Exported\_Functions}!ov2640\_Config@{ov2640\_Config}}
+\index{ov2640\_Config@{ov2640\_Config}!OV2640\_Exported\_Functions@{OV2640\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ov2640\_Config()}{ov2640\_Config()}}
+{\footnotesize\ttfamily void ov2640\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{feature,  }\item[{uint32\+\_\+t}]{value,  }\item[{uint32\+\_\+t}]{brightness\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Configures the OV2640 camera feature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em feature} & Camera feature to be configured \\
+\hline
+{\em value} & Value to be configured \\
+\hline
+{\em brightness\+\_\+value} & Brightness value to be configured \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___o_v2640___exported___functions_ga4f4e3d4382932ad47f2c30e2461a8355}\label{group___o_v2640___exported___functions_ga4f4e3d4382932ad47f2c30e2461a8355}} 
+\index{OV2640\_Exported\_Functions@{OV2640\_Exported\_Functions}!ov2640\_Init@{ov2640\_Init}}
+\index{ov2640\_Init@{ov2640\_Init}!OV2640\_Exported\_Functions@{OV2640\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ov2640\_Init()}{ov2640\_Init()}}
+{\footnotesize\ttfamily void ov2640\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{resolution }\end{DoxyParamCaption})}
+
+
+
+Initializes the OV2640 CAMERA component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em resolution} & Camera resolution \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___o_v2640___exported___functions_ga9e355ae413c34af76e774adca3c9985e}\label{group___o_v2640___exported___functions_ga9e355ae413c34af76e774adca3c9985e}} 
+\index{OV2640\_Exported\_Functions@{OV2640\_Exported\_Functions}!ov2640\_ReadID@{ov2640\_ReadID}}
+\index{ov2640\_ReadID@{ov2640\_ReadID}!OV2640\_Exported\_Functions@{OV2640\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ov2640\_ReadID()}{ov2640\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t ov2640\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the OV2640 Camera identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em the} & OV2640 ID \\
+\hline
+\end{DoxyRetVals}

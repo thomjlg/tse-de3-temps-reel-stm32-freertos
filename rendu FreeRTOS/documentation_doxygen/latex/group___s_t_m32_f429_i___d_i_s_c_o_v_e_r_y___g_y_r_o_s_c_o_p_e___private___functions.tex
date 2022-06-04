@@ -1,0 +1,121 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions}{}\doxysection{STM32\+F429I DISCOVERY GYROSCOPE Private Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions}\index{STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1bae84f8c5b00b9831738929bbb468c3}{BSP\+\_\+\+GYRO\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Set Gyroscope Initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga540e8d9406a92a3c70e55adb15a7a57b}{BSP\+\_\+\+GYRO\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read ID of Gyroscope component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga8b564741668239cbf12b819bd3f5a460}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga8b564741668239cbf12b819bd3f5a460}} 
+void {\bfseries BSP\+\_\+\+GYRO\+\_\+\+Reset} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of Gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1769691d7719a45032a1bb2eed5e6a59}{BSP\+\_\+\+GYRO\+\_\+\+ITConfig}} (\mbox{\hyperlink{struct_g_y_r_o___interrupt_config_type_def}{GYRO\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$p\+Int\+Config)
+\begin{DoxyCompactList}\small\item\em Configures INT1 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_gaba9a68c9c3a6b38527487fe7c7946558}{BSP\+\_\+\+GYRO\+\_\+\+Enable\+IT}} (uint8\+\_\+t Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enables INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1da85d0c8bfc8eeedcaa93fe2e7c2a95}{BSP\+\_\+\+GYRO\+\_\+\+Disable\+IT}} (uint8\+\_\+t Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Disables INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga2b8498c5824e766e1a48dc107562b7de}{BSP\+\_\+\+GYRO\+\_\+\+Get\+XYZ}} (float $\ast$pf\+Data)
+\begin{DoxyCompactList}\small\item\em Gets XYZ angular acceleration/. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1da85d0c8bfc8eeedcaa93fe2e7c2a95}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1da85d0c8bfc8eeedcaa93fe2e7c2a95}} 
+\index{STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}!BSP\_GYRO\_DisableIT@{BSP\_GYRO\_DisableIT}}
+\index{BSP\_GYRO\_DisableIT@{BSP\_GYRO\_DisableIT}!STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GYRO\_DisableIT()}{BSP\_GYRO\_DisableIT()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+GYRO\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Disables INT1 or INT2 interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Int\+Pin} & Interrupt pin This parameter can be\+: \begin{DoxyItemize}
+\item L3\+GD20\+\_\+\+INT1 \item L3\+GD20\+\_\+\+INT2 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_gaba9a68c9c3a6b38527487fe7c7946558}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_gaba9a68c9c3a6b38527487fe7c7946558}} 
+\index{STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}!BSP\_GYRO\_EnableIT@{BSP\_GYRO\_EnableIT}}
+\index{BSP\_GYRO\_EnableIT@{BSP\_GYRO\_EnableIT}!STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GYRO\_EnableIT()}{BSP\_GYRO\_EnableIT()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+GYRO\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Int\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enables INT1 or INT2 interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Int\+Pin} & Interrupt pin This parameter can be\+: \begin{DoxyItemize}
+\item L3\+GD20\+\_\+\+INT1 \item L3\+GD20\+\_\+\+INT2 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga2b8498c5824e766e1a48dc107562b7de}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga2b8498c5824e766e1a48dc107562b7de}} 
+\index{STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}!BSP\_GYRO\_GetXYZ@{BSP\_GYRO\_GetXYZ}}
+\index{BSP\_GYRO\_GetXYZ@{BSP\_GYRO\_GetXYZ}!STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GYRO\_GetXYZ()}{BSP\_GYRO\_GetXYZ()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+GYRO\+\_\+\+Get\+XYZ (\begin{DoxyParamCaption}\item[{float $\ast$}]{pf\+Data }\end{DoxyParamCaption})}
+
+
+
+Gets XYZ angular acceleration/. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pf\+Data} & pointer on floating array ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1bae84f8c5b00b9831738929bbb468c3}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1bae84f8c5b00b9831738929bbb468c3}} 
+\index{STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}!BSP\_GYRO\_Init@{BSP\_GYRO\_Init}}
+\index{BSP\_GYRO\_Init@{BSP\_GYRO\_Init}!STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GYRO\_Init()}{BSP\_GYRO\_Init()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+GYRO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set Gyroscope Initialization. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em GYRO\+\_\+\+OK} & if no problem during initialization \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1769691d7719a45032a1bb2eed5e6a59}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1769691d7719a45032a1bb2eed5e6a59}} 
+\index{STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}!BSP\_GYRO\_ITConfig@{BSP\_GYRO\_ITConfig}}
+\index{BSP\_GYRO\_ITConfig@{BSP\_GYRO\_ITConfig}!STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GYRO\_ITConfig()}{BSP\_GYRO\_ITConfig()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+GYRO\+\_\+\+ITConfig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_y_r_o___interrupt_config_type_def}{GYRO\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$}]{p\+Int\+Config }\end{DoxyParamCaption})}
+
+
+
+Configures INT1 interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Int\+Config} & pointer to a L3\+GD20\+\_\+\+Interrupt\+Config\+\_\+\+Type\+Def structure that contains the configuration setting for the L3\+GD20 Interrupt. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga540e8d9406a92a3c70e55adb15a7a57b}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga540e8d9406a92a3c70e55adb15a7a57b}} 
+\index{STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}!BSP\_GYRO\_ReadID@{BSP\_GYRO\_ReadID}}
+\index{BSP\_GYRO\_ReadID@{BSP\_GYRO\_ReadID}!STM32F429I DISCOVERY GYROSCOPE Private Functions@{STM32F429I DISCOVERY GYROSCOPE Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GYRO\_ReadID()}{BSP\_GYRO\_ReadID()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+GYRO\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read ID of Gyroscope component. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em ID} & \\
+\hline
+\end{DoxyRetVals}

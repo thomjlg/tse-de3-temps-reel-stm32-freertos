@@ -1,0 +1,57 @@
+\hypertarget{ov2640_8c}{}\doxysection{Drivers/\+BSP/\+Components/ov2640/ov2640.c File Reference}
+\label{ov2640_8c}\index{Drivers/BSP/Components/ov2640/ov2640.c@{Drivers/BSP/Components/ov2640/ov2640.c}}
+
+
+This file provides the OV2640 camera driver.  
+
+
+{\ttfamily \#include \char`\"{}ov2640.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___o_v2640___private___functions_ga4f4e3d4382932ad47f2c30e2461a8355}{ov2640\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em Initializes the OV2640 CAMERA component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___o_v2640___private___functions_gaa4d731059fa3e32b4097520ed26971bd}{ov2640\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t feature, uint32\+\_\+t value, uint32\+\_\+t brightness\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the OV2640 camera feature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___o_v2640___private___functions_ga9e355ae413c34af76e774adca3c9985e}{ov2640\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the OV2640 Camera identity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___o_v2640___private___variables_ga37a5ba704e6d17aaf0b33611d385a4d9}{ov2640\+\_\+drv}}
+\item 
+const unsigned char {\bfseries OV2640\+\_\+480x272} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const unsigned char {\bfseries OV2640\+\_\+\+VGA} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const unsigned char {\bfseries OV2640\+\_\+\+QVGA} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const char {\bfseries OV2640\+\_\+\+QQVGA} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides the OV2640 camera driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02-\/December-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

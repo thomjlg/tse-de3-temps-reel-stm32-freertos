@@ -1,0 +1,163 @@
+\hypertarget{mpu__prototypes_8h_source}{}\doxysection{mpu\+\_\+prototypes.\+h}
+\label{mpu__prototypes_8h_source}\index{Middlewares/Third\_Party/FreeRTOS/Source/include/mpu\_prototypes.h@{Middlewares/Third\_Party/FreeRTOS/Source/include/mpu\_prototypes.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * FreeRTOS Kernel V10.2.1}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Copyright (C) 2019 Amazon.com, Inc. or its affiliates.  All Rights Reserved.}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Permission is hereby granted, free of charge, to any person obtaining a copy of}}
+\DoxyCodeLine{6 \textcolor{comment}{ * this software and associated documentation files (the "{}Software"{}), to deal in}}
+\DoxyCodeLine{7 \textcolor{comment}{ * the Software without restriction, including without limitation the rights to}}
+\DoxyCodeLine{8 \textcolor{comment}{ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of}}
+\DoxyCodeLine{9 \textcolor{comment}{ * the Software, and to permit persons to whom the Software is furnished to do so,}}
+\DoxyCodeLine{10 \textcolor{comment}{ * subject to the following conditions:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ * The above copyright notice and this permission notice shall be included in all}}
+\DoxyCodeLine{13 \textcolor{comment}{ * copies or substantial portions of the Software.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *}}
+\DoxyCodeLine{15 \textcolor{comment}{ * THE SOFTWARE IS PROVIDED "{}AS IS"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR}}
+\DoxyCodeLine{16 \textcolor{comment}{ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS}}
+\DoxyCodeLine{17 \textcolor{comment}{ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR}}
+\DoxyCodeLine{18 \textcolor{comment}{ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER}}
+\DoxyCodeLine{19 \textcolor{comment}{ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN}}
+\DoxyCodeLine{20 \textcolor{comment}{ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ * http://www.FreeRTOS.org}}
+\DoxyCodeLine{23 \textcolor{comment}{ * http://aws.amazon.com/freertos}}
+\DoxyCodeLine{24 \textcolor{comment}{ *}}
+\DoxyCodeLine{25 \textcolor{comment}{ * 1 tab == 4 spaces!}}
+\DoxyCodeLine{26 \textcolor{comment}{ */}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{comment}{/*}}
+\DoxyCodeLine{29 \textcolor{comment}{ * When the MPU is used the standard (non MPU) API functions are mapped to}}
+\DoxyCodeLine{30 \textcolor{comment}{ * equivalents that start "{}MPU\_"{}, the prototypes for which are defined in this}}
+\DoxyCodeLine{31 \textcolor{comment}{ * header files.  This will cause the application code to call the MPU\_ version}}
+\DoxyCodeLine{32 \textcolor{comment}{ * which wraps the non-\/MPU version with privilege promoting then demoting code,}}
+\DoxyCodeLine{33 \textcolor{comment}{ * so the kernel code always runs will full privileges.}}
+\DoxyCodeLine{34 \textcolor{comment}{ */}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef MPU\_PROTOTYPES\_H}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define MPU\_PROTOTYPES\_H}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{/* MPU versions of tasks.h API functions. */}}
+\DoxyCodeLine{41 BaseType\_t MPU\_xTaskCreate( TaskFunction\_t pxTaskCode, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * \textcolor{keyword}{const} pcName, \textcolor{keyword}{const} uint16\_t usStackDepth, \textcolor{keywordtype}{void} * \textcolor{keyword}{const} pvParameters, UBaseType\_t uxPriority, \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} * \textcolor{keyword}{const} pxCreatedTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{42 \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} MPU\_xTaskCreateStatic( TaskFunction\_t pxTaskCode, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * \textcolor{keyword}{const} pcName, \textcolor{keyword}{const} uint32\_t ulStackDepth, \textcolor{keywordtype}{void} * \textcolor{keyword}{const} pvParameters, UBaseType\_t uxPriority, StackType\_t * \textcolor{keyword}{const} puxStackBuffer, \mbox{\hyperlink{structx_s_t_a_t_i_c___t_c_b}{StaticTask\_t}} * \textcolor{keyword}{const} pxTaskBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{43 BaseType\_t MPU\_xTaskCreateRestricted( \textcolor{keyword}{const} \mbox{\hyperlink{structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s}{TaskParameters\_t}} * \textcolor{keyword}{const} pxTaskDefinition, \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} *pxCreatedTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{44 BaseType\_t MPU\_xTaskCreateRestrictedStatic( \textcolor{keyword}{const} \mbox{\hyperlink{structx_t_a_s_k___p_a_r_a_m_e_t_e_r_s}{TaskParameters\_t}} * \textcolor{keyword}{const} pxTaskDefinition, \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} *pxCreatedTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} MPU\_vTaskAllocateMPURegions( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask, \textcolor{keyword}{const} \mbox{\hyperlink{structx_m_e_m_o_r_y___r_e_g_i_o_n}{MemoryRegion\_t}} * \textcolor{keyword}{const} pxRegions ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} MPU\_vTaskDelete( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTaskToDelete ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{47 \textcolor{keywordtype}{void} MPU\_vTaskDelay( \textcolor{keyword}{const} TickType\_t xTicksToDelay ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{48 \textcolor{keywordtype}{void} MPU\_vTaskDelayUntil( TickType\_t * \textcolor{keyword}{const} pxPreviousWakeTime, \textcolor{keyword}{const} TickType\_t xTimeIncrement ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{49 BaseType\_t MPU\_xTaskAbortDelay( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{50 UBaseType\_t MPU\_uxTaskPriorityGet( \textcolor{keyword}{const} \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{51 eTaskState MPU\_eTaskGetState( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} MPU\_vTaskGetInfo( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask, \mbox{\hyperlink{structx_t_a_s_k___s_t_a_t_u_s}{TaskStatus\_t}} *pxTaskStatus, BaseType\_t xGetFreeStackSpace, eTaskState eState ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{53 \textcolor{keywordtype}{void} MPU\_vTaskPrioritySet( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask, UBaseType\_t uxNewPriority ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} MPU\_vTaskSuspend( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTaskToSuspend ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{55 \textcolor{keywordtype}{void} MPU\_vTaskResume( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTaskToResume ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} MPU\_vTaskStartScheduler( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{57 \textcolor{keywordtype}{void} MPU\_vTaskSuspendAll( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{58 BaseType\_t MPU\_xTaskResumeAll( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{59 TickType\_t MPU\_xTaskGetTickCount( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{60 UBaseType\_t MPU\_uxTaskGetNumberOfTasks( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{61 \textcolor{keywordtype}{char} * MPU\_pcTaskGetName( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTaskToQuery ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{62 \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} MPU\_xTaskGetHandle( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *pcNameToQuery ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{63 UBaseType\_t MPU\_uxTaskGetStackHighWaterMark( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{64 configSTACK\_DEPTH\_TYPE MPU\_uxTaskGetStackHighWaterMark2( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{65 \textcolor{keywordtype}{void} MPU\_vTaskSetApplicationTaskTag( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask, TaskHookFunction\_t pxHookFunction ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{66 TaskHookFunction\_t MPU\_xTaskGetApplicationTaskTag( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} MPU\_vTaskSetThreadLocalStoragePointer( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTaskToSet, BaseType\_t xIndex, \textcolor{keywordtype}{void} *pvValue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{68 \textcolor{keywordtype}{void} * MPU\_pvTaskGetThreadLocalStoragePointer( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTaskToQuery, BaseType\_t xIndex ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{69 BaseType\_t MPU\_xTaskCallApplicationTaskHook( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask, \textcolor{keywordtype}{void} *pvParameter ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{70 \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} MPU\_xTaskGetIdleTaskHandle( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{71 UBaseType\_t MPU\_uxTaskGetSystemState( \mbox{\hyperlink{structx_t_a_s_k___s_t_a_t_u_s}{TaskStatus\_t}} * \textcolor{keyword}{const} pxTaskStatusArray, \textcolor{keyword}{const} UBaseType\_t uxArraySize, uint32\_t * \textcolor{keyword}{const} pulTotalRunTime ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{72 TickType\_t MPU\_xTaskGetIdleRunTimeCounter( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{73 \textcolor{keywordtype}{void} MPU\_vTaskList( \textcolor{keywordtype}{char} * pcWriteBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{74 \textcolor{keywordtype}{void} MPU\_vTaskGetRunTimeStats( \textcolor{keywordtype}{char} *pcWriteBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{75 BaseType\_t MPU\_xTaskGenericNotify( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTaskToNotify, uint32\_t ulValue, eNotifyAction eAction, uint32\_t *pulPreviousNotificationValue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{76 BaseType\_t MPU\_xTaskNotifyWait( uint32\_t ulBitsToClearOnEntry, uint32\_t ulBitsToClearOnExit, uint32\_t *pulNotificationValue, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{77 uint32\_t MPU\_ulTaskNotifyTake( BaseType\_t xClearCountOnExit, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{78 BaseType\_t MPU\_xTaskNotifyStateClear( \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} xTask ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{79 BaseType\_t MPU\_xTaskIncrementTick( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{80 \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} MPU\_xTaskGetCurrentTaskHandle( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{81 \textcolor{keywordtype}{void} MPU\_vTaskSetTimeOutState( \mbox{\hyperlink{structx_t_i_m_e___o_u_t}{TimeOut\_t}} * \textcolor{keyword}{const} pxTimeOut ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{82 BaseType\_t MPU\_xTaskCheckForTimeOut( \mbox{\hyperlink{structx_t_i_m_e___o_u_t}{TimeOut\_t}} * \textcolor{keyword}{const} pxTimeOut, TickType\_t * \textcolor{keyword}{const} pxTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{83 \textcolor{keywordtype}{void} MPU\_vTaskMissedYield( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{84 BaseType\_t MPU\_xTaskGetSchedulerState( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{/* MPU versions of queue.h API functions. */}}
+\DoxyCodeLine{87 BaseType\_t MPU\_xQueueGenericSend( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue, \textcolor{keyword}{const} \textcolor{keywordtype}{void} * \textcolor{keyword}{const} pvItemToQueue, TickType\_t xTicksToWait, \textcolor{keyword}{const} BaseType\_t xCopyPosition ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{88 BaseType\_t MPU\_xQueueReceive( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue, \textcolor{keywordtype}{void} * \textcolor{keyword}{const} pvBuffer, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{89 BaseType\_t MPU\_xQueuePeek( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue, \textcolor{keywordtype}{void} * \textcolor{keyword}{const} pvBuffer, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{90 BaseType\_t MPU\_xQueueSemaphoreTake( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{91 UBaseType\_t MPU\_uxQueueMessagesWaiting( \textcolor{keyword}{const} \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{92 UBaseType\_t MPU\_uxQueueSpacesAvailable( \textcolor{keyword}{const} \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{93 \textcolor{keywordtype}{void} MPU\_vQueueDelete( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{94 \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} MPU\_xQueueCreateMutex( \textcolor{keyword}{const} uint8\_t ucQueueType ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{95 \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} MPU\_xQueueCreateMutexStatic( \textcolor{keyword}{const} uint8\_t ucQueueType, \mbox{\hyperlink{structx_s_t_a_t_i_c___q_u_e_u_e}{StaticQueue\_t}} *pxStaticQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{96 \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} MPU\_xQueueCreateCountingSemaphore( \textcolor{keyword}{const} UBaseType\_t uxMaxCount, \textcolor{keyword}{const} UBaseType\_t uxInitialCount ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{97 \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} MPU\_xQueueCreateCountingSemaphoreStatic( \textcolor{keyword}{const} UBaseType\_t uxMaxCount, \textcolor{keyword}{const} UBaseType\_t uxInitialCount, \mbox{\hyperlink{structx_s_t_a_t_i_c___q_u_e_u_e}{StaticQueue\_t}} *pxStaticQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{98 \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} MPU\_xQueueGetMutexHolder( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xSemaphore ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{99 BaseType\_t MPU\_xQueueTakeMutexRecursive( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xMutex, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{100 BaseType\_t MPU\_xQueueGiveMutexRecursive( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} pxMutex ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{101 \textcolor{keywordtype}{void} MPU\_vQueueAddToRegistry( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *pcName ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{102 \textcolor{keywordtype}{void} MPU\_vQueueUnregisterQueue( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{103 \textcolor{keyword}{const} \textcolor{keywordtype}{char} * MPU\_pcQueueGetName( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{104 \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} MPU\_xQueueGenericCreate( \textcolor{keyword}{const} UBaseType\_t uxQueueLength, \textcolor{keyword}{const} UBaseType\_t uxItemSize, \textcolor{keyword}{const} uint8\_t ucQueueType ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{105 \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} MPU\_xQueueGenericCreateStatic( \textcolor{keyword}{const} UBaseType\_t uxQueueLength, \textcolor{keyword}{const} UBaseType\_t uxItemSize, uint8\_t *pucQueueStorage, \mbox{\hyperlink{structx_s_t_a_t_i_c___q_u_e_u_e}{StaticQueue\_t}} *pxStaticQueue, \textcolor{keyword}{const} uint8\_t ucQueueType ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{106 \mbox{\hyperlink{struct_queue_definition}{QueueSetHandle\_t}} MPU\_xQueueCreateSet( \textcolor{keyword}{const} UBaseType\_t uxEventQueueLength ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{107 BaseType\_t MPU\_xQueueAddToSet( \mbox{\hyperlink{struct_queue_definition}{QueueSetMemberHandle\_t}} xQueueOrSemaphore, \mbox{\hyperlink{struct_queue_definition}{QueueSetHandle\_t}} xQueueSet ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{108 BaseType\_t MPU\_xQueueRemoveFromSet( \mbox{\hyperlink{struct_queue_definition}{QueueSetMemberHandle\_t}} xQueueOrSemaphore, \mbox{\hyperlink{struct_queue_definition}{QueueSetHandle\_t}} xQueueSet ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{109 \mbox{\hyperlink{struct_queue_definition}{QueueSetMemberHandle\_t}} MPU\_xQueueSelectFromSet( \mbox{\hyperlink{struct_queue_definition}{QueueSetHandle\_t}} xQueueSet, \textcolor{keyword}{const} TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{110 BaseType\_t MPU\_xQueueGenericReset( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue, BaseType\_t xNewQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{111 \textcolor{keywordtype}{void} MPU\_vQueueSetQueueNumber( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue, UBaseType\_t uxQueueNumber ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{112 UBaseType\_t MPU\_uxQueueGetQueueNumber( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{113 uint8\_t MPU\_ucQueueGetQueueType( \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}} xQueue ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{comment}{/* MPU versions of timers.h API functions. */}}
+\DoxyCodeLine{116 TimerHandle\_t MPU\_xTimerCreate( \textcolor{keyword}{const} \textcolor{keywordtype}{char} * \textcolor{keyword}{const} pcTimerName, \textcolor{keyword}{const} TickType\_t xTimerPeriodInTicks, \textcolor{keyword}{const} UBaseType\_t uxAutoReload, \textcolor{keywordtype}{void} * \textcolor{keyword}{const} pvTimerID, TimerCallbackFunction\_t pxCallbackFunction ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{117 TimerHandle\_t MPU\_xTimerCreateStatic( \textcolor{keyword}{const} \textcolor{keywordtype}{char} * \textcolor{keyword}{const} pcTimerName, \textcolor{keyword}{const} TickType\_t xTimerPeriodInTicks, \textcolor{keyword}{const} UBaseType\_t uxAutoReload, \textcolor{keywordtype}{void} * \textcolor{keyword}{const} pvTimerID, TimerCallbackFunction\_t pxCallbackFunction, \mbox{\hyperlink{structx_s_t_a_t_i_c___t_i_m_e_r}{StaticTimer\_t}} *pxTimerBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{118 \textcolor{keywordtype}{void} * MPU\_pvTimerGetTimerID( \textcolor{keyword}{const} TimerHandle\_t xTimer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{119 \textcolor{keywordtype}{void} MPU\_vTimerSetTimerID( TimerHandle\_t xTimer, \textcolor{keywordtype}{void} *pvNewID ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{120 BaseType\_t MPU\_xTimerIsTimerActive( TimerHandle\_t xTimer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{121 \mbox{\hyperlink{structtsk_task_control_block}{TaskHandle\_t}} MPU\_xTimerGetTimerDaemonTaskHandle( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{122 BaseType\_t MPU\_xTimerPendFunctionCall( PendedFunction\_t xFunctionToPend, \textcolor{keywordtype}{void} *pvParameter1, uint32\_t ulParameter2, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{123 \textcolor{keyword}{const} \textcolor{keywordtype}{char} * MPU\_pcTimerGetName( TimerHandle\_t xTimer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{124 \textcolor{keywordtype}{void} MPU\_vTimerSetReloadMode( TimerHandle\_t xTimer, \textcolor{keyword}{const} UBaseType\_t uxAutoReload ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{125 TickType\_t MPU\_xTimerGetPeriod( TimerHandle\_t xTimer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{126 TickType\_t MPU\_xTimerGetExpiryTime( TimerHandle\_t xTimer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{127 BaseType\_t MPU\_xTimerCreateTimerTask( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{128 BaseType\_t MPU\_xTimerGenericCommand( TimerHandle\_t xTimer, \textcolor{keyword}{const} BaseType\_t xCommandID, \textcolor{keyword}{const} TickType\_t xOptionalValue, BaseType\_t * \textcolor{keyword}{const} pxHigherPriorityTaskWoken, \textcolor{keyword}{const} TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{comment}{/* MPU versions of event\_group.h API functions. */}}
+\DoxyCodeLine{131 \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}} MPU\_xEventGroupCreate( \textcolor{keywordtype}{void} ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{132 \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}} MPU\_xEventGroupCreateStatic( \mbox{\hyperlink{structx_s_t_a_t_i_c___e_v_e_n_t___g_r_o_u_p}{StaticEventGroup\_t}} *pxEventGroupBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{133 EventBits\_t MPU\_xEventGroupWaitBits( \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}} xEventGroup, \textcolor{keyword}{const} EventBits\_t uxBitsToWaitFor, \textcolor{keyword}{const} BaseType\_t xClearOnExit, \textcolor{keyword}{const} BaseType\_t xWaitForAllBits, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{134 EventBits\_t MPU\_xEventGroupClearBits( \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}} xEventGroup, \textcolor{keyword}{const} EventBits\_t uxBitsToClear ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{135 EventBits\_t MPU\_xEventGroupSetBits( \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}} xEventGroup, \textcolor{keyword}{const} EventBits\_t uxBitsToSet ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{136 EventBits\_t MPU\_xEventGroupSync( \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}} xEventGroup, \textcolor{keyword}{const} EventBits\_t uxBitsToSet, \textcolor{keyword}{const} EventBits\_t uxBitsToWaitFor, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{137 \textcolor{keywordtype}{void} MPU\_vEventGroupDelete( \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}} xEventGroup ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{138 UBaseType\_t MPU\_uxEventGroupGetNumber( \textcolor{keywordtype}{void}* xEventGroup ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{comment}{/* MPU versions of message/stream\_buffer.h API functions. */}}
+\DoxyCodeLine{141 \textcolor{keywordtype}{size\_t} MPU\_xStreamBufferSend( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer, \textcolor{keyword}{const} \textcolor{keywordtype}{void} *pvTxData, \textcolor{keywordtype}{size\_t} xDataLengthBytes, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{142 \textcolor{keywordtype}{size\_t} MPU\_xStreamBufferReceive( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer, \textcolor{keywordtype}{void} *pvRxData, \textcolor{keywordtype}{size\_t} xBufferLengthBytes, TickType\_t xTicksToWait ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{143 \textcolor{keywordtype}{size\_t} MPU\_xStreamBufferNextMessageLengthBytes( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{144 \textcolor{keywordtype}{void} MPU\_vStreamBufferDelete( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{145 BaseType\_t MPU\_xStreamBufferIsFull( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{146 BaseType\_t MPU\_xStreamBufferIsEmpty( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{147 BaseType\_t MPU\_xStreamBufferReset( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{148 \textcolor{keywordtype}{size\_t} MPU\_xStreamBufferSpacesAvailable( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{149 \textcolor{keywordtype}{size\_t} MPU\_xStreamBufferBytesAvailable( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{150 BaseType\_t MPU\_xStreamBufferSetTriggerLevel( \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} xStreamBuffer, \textcolor{keywordtype}{size\_t} xTriggerLevel ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{151 \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} MPU\_xStreamBufferGenericCreate( \textcolor{keywordtype}{size\_t} xBufferSizeBytes, \textcolor{keywordtype}{size\_t} xTriggerLevelBytes, BaseType\_t xIsMessageBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{152 \mbox{\hyperlink{struct_stream_buffer_def__t}{StreamBufferHandle\_t}} MPU\_xStreamBufferGenericCreateStatic( \textcolor{keywordtype}{size\_t} xBufferSizeBytes, \textcolor{keywordtype}{size\_t} xTriggerLevelBytes, BaseType\_t xIsMessageBuffer, uint8\_t * \textcolor{keyword}{const} pucStreamBufferStorageArea, \mbox{\hyperlink{structx_s_t_a_t_i_c___s_t_r_e_a_m___b_u_f_f_e_r}{StaticStreamBuffer\_t}} * \textcolor{keyword}{const} pxStaticStreamBuffer ) FREERTOS\_SYSTEM\_CALL;}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* MPU\_PROTOTYPES\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{157 }
+
+\end{DoxyCode}

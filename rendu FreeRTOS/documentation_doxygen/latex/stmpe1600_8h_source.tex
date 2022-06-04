@@ -1,0 +1,104 @@
+\hypertarget{stmpe1600_8h_source}{}\doxysection{stmpe1600.\+h}
+\label{stmpe1600_8h_source}\index{Drivers/BSP/Components/stmpe1600/stmpe1600.h@{Drivers/BSP/Components/stmpe1600/stmpe1600.h}}
+\mbox{\hyperlink{stmpe1600_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_STMPE1600\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_STMPE1600\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif   }}
+\DoxyCodeLine{46    }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/io.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{62 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{68 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{69   }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define STMPE1600\_ID                     0x1600}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define STMPE1600\_IT\_ENABLE              0x04}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define STMPE1600\_REG\_CHP\_ID             0x00}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define STMPE1600\_REG\_ID\_VERSION         0x02}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define STMPE1600\_REG\_SYS\_CTRL           0x03}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define STMPE1600\_REG\_GPMR               0x10}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define STMPE1600\_REG\_GPSR               0x12}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define STMPE1600\_REG\_GPDR               0x14}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define STMPE1600\_REG\_GPPIR              0x16}}
+\DoxyCodeLine{99    }
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define STMPE1600\_REG\_IEGPIOR            0x08}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define STMPE1600\_REG\_ISGPIOR            0x0A}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define STMPE1600\_DIRECTION\_IN           0x00}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define STMPE1600\_DIRECTION\_OUT          0x01}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define STMPE1600\_POLARITY\_LOW           0x00}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define STMPE1600\_POLARITY\_HIGH          0x01}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_0                  0x0001}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_1                  0x0002}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_2                  0x0004}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_3                  0x0008}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_4                  0x0010}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_5                  0x0020}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_6                  0x0040}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_7                  0x0080}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_8                  0x0100}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_9                  0x0200}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_10                 0x0400}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_11                 0x0800}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_12                 0x1000}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_13                 0x2000}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_14                 0x4000}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_15                 0x8000}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define STMPE1600\_PIN\_ALL                0xFFFF    }}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{143 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{144   }
+\DoxyCodeLine{149 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{150   }
+\DoxyCodeLine{158 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga9b768b7b2d2c807b1409b4f4a4f260aa}{stmpe1600\_Init}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{159 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga8f4ee2c5985686991e614cb342440cad}{stmpe1600\_Reset}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{160 uint16\_t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga17e28fa9ec45bf992bad397b234b761f}{stmpe1600\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{161 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gae0f4986cb9fcedd86d41cc0129c32852}{stmpe1600\_SetITPolarity}}(uint16\_t DeviceAddr, uint8\_t Polarity);}
+\DoxyCodeLine{162 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga97d6ef755d80e712612464b9da15e2bf}{stmpe1600\_EnableGlobalIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{163 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga99fbc9e46fe603c4e4e8d9f6c06b1efe}{stmpe1600\_DisableGlobalIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{168 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gad52ca935e0600f12d74fa314b1a3343e}{stmpe1600\_IO\_InitPin}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, uint8\_t Direction);}
+\DoxyCodeLine{169 uint8\_t  \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga2e9e58286bf9057562f8d4395b800f22}{stmpe1600\_IO\_Config}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, IO\_ModeTypedef IO\_Mode);}
+\DoxyCodeLine{170 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga3b1fd40626d44f219d9fb64b1650e8f9}{stmpe1600\_IO\_PolarityInv\_Enable}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{171 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga8651f238f33d4e77466d27bcb33b6cb5}{stmpe1600\_IO\_PolarityInv\_Disable}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{172 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga4040072bed64a28716e460b89c3d1133}{stmpe1600\_IO\_WritePin}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, uint8\_t PinState);}
+\DoxyCodeLine{173 uint32\_t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaaeab906ac67064a1913922d7cbcdce0d}{stmpe1600\_IO\_ReadPin}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{174 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaf1a8860c52c4f6a68d7e0e71494b2616}{stmpe1600\_IO\_EnablePinIT}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{175 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaaafc0fdfc7921ea9a1d4aef8c356b537}{stmpe1600\_IO\_DisablePinIT}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{176 uint32\_t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaf477372738df470912c525985c60f2bf}{stmpe1600\_IO\_ITStatus}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{177 uint8\_t  \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga41e42cf6b16c16aa0758d34fabb4b7bf}{stmpe1600\_IO\_ReadIT}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{178 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga00dc4debeba8a3b7ca091f389b2f8ccd}{stmpe1600\_IO\_ClearIT}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{179 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga7dc8419129c1e4278da219a79c4a5dbb}{stmpe1600\_Start}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga20cd09e59bac7284d1342b6741733593}{IOE\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{182 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gac33b368855363c8f6b05b7218bad4f7c}{IOE\_ITConfig}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{183 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\_Delay}}(uint32\_t delay);}
+\DoxyCodeLine{184 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga6804257e10475b06cafd813afce0cf49}{IOE\_Write}}(uint8\_t addr, uint8\_t reg, uint8\_t value);}
+\DoxyCodeLine{185 uint8\_t  \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\_Read}}(uint8\_t addr, uint8\_t reg);}
+\DoxyCodeLine{186 uint16\_t \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\_ReadMultiple}}(uint8\_t addr, uint8\_t reg, uint8\_t *buffer, uint16\_t length);}
+\DoxyCodeLine{187 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m_p_e1600___exported___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}{IOE\_WriteMultiple}}(uint8\_t addr, uint8\_t reg, uint8\_t *buffer, uint16\_t length);}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 \textcolor{comment}{/* STMPE1600 driver structure */}}
+\DoxyCodeLine{190 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_i_o___drv_type_def}{IO\_DrvTypeDef}} stmpe1600\_io\_drv;}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{194 \}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STMPE1600\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{213 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

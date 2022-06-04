@@ -1,0 +1,39 @@
+\hypertarget{stm32f4xx__hal__dma__ex_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+dma\+\_\+ex.\+h}
+\label{stm32f4xx__hal__dma__ex_8h_source}\index{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal\_dma\_ex.h@{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal\_dma\_ex.h}}
+\mbox{\hyperlink{stm32f4xx__hal__dma__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{20 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_DMA\_EX\_H}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_DMA\_EX\_H}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{25  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50   \mbox{\hyperlink{group___d_m_a_ex___exported___types_gga9cec283a461e47eda968838c35fd6eeda2dec05a318eee29371114f1a8f6fe3f4}{MEMORY0}}      = 0x00U,    }
+\DoxyCodeLine{51   \mbox{\hyperlink{group___d_m_a_ex___exported___types_gga9cec283a461e47eda968838c35fd6eeda06080dfa68716b5bbf425d9232b144c3}{MEMORY1}}      = 0x01U     }
+\DoxyCodeLine{52 \}\mbox{\hyperlink{group___d_m_a_ex___exported___types_ga9cec283a461e47eda968838c35fd6eed}{HAL\_DMA\_MemoryTypeDef}};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{58 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{69 \textcolor{comment}{/* IO operation functions *******************************************************/}}
+\DoxyCodeLine{70 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMAEx\_MultiBufferStart(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma, uint32\_t SrcAddress, uint32\_t DstAddress, uint32\_t SecondMemAddress, uint32\_t DataLength);}
+\DoxyCodeLine{71 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMAEx\_MultiBufferStart\_IT(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma, uint32\_t SrcAddress, uint32\_t DstAddress, uint32\_t SecondMemAddress, uint32\_t DataLength);}
+\DoxyCodeLine{72 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMAEx\_ChangeMemory(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma, uint32\_t Address, \mbox{\hyperlink{group___d_m_a_ex___exported___types_ga9cec283a461e47eda968838c35fd6eed}{HAL\_DMA\_MemoryTypeDef}} memory);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{81 \textcolor{comment}{/* Private functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{99 \}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*\_\_STM32F4xx\_HAL\_DMA\_EX\_H*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

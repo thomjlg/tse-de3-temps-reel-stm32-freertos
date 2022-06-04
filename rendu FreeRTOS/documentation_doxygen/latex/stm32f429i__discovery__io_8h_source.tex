@@ -1,0 +1,50 @@
+\hypertarget{stm32f429i__discovery__io_8h_source}{}\doxysection{stm32f429i\+\_\+discovery\+\_\+io.\+h}
+\label{stm32f429i__discovery__io_8h_source}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_io.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_io.h}}
+\mbox{\hyperlink{stm32f429i__discovery__io_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_\_STM32F429I\_DISCOVERY\_IO\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_\_STM32F429I\_DISCOVERY\_IO\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{42  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f429i__discovery_8h}{stm32f429i\_discovery.h}}"{}}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Include IO component driver */}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Components/stmpe811/stmpe811.h"{}}   }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{65 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67   IO\_OK       = 0,}
+\DoxyCodeLine{68   IO\_ERROR    = 1,}
+\DoxyCodeLine{69   IO\_TIMEOUT  = 2}
+\DoxyCodeLine{70 \}IO\_StatusTypeDef;}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define IO\_PIN\_0                     0x01}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define IO\_PIN\_1                     0x02}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define IO\_PIN\_2                     0x04}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define IO\_PIN\_3                     0x08}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define IO\_PIN\_4                     0x10}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define IO\_PIN\_5                     0x20}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define IO\_PIN\_6                     0x40}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define IO\_PIN\_7                     0x80}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define IO\_PIN\_ALL                   0xFF}}
+\DoxyCodeLine{101 uint8\_t  \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___exported___functions_gae4e304c8bb916593090032174df20eab}{BSP\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{102 uint8\_t  \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___exported___functions_ga18f9350f5b8881e14dd1468ecd0ee884}{BSP\_IO\_ITGetStatus}}(uint16\_t IoPin);}
+\DoxyCodeLine{103 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___exported___functions_ga9f2179148f4cc0ba414ead6762d38394}{BSP\_IO\_ITClear}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{104 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___exported___functions_gacb4773c9efcce643d6d7702101065355}{BSP\_IO\_ConfigPin}}(uint16\_t IoPin, IO\_ModeTypedef IoMode);}
+\DoxyCodeLine{105 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___exported___functions_ga8e0b2bdf134de3065fac7dfd22a48b59}{BSP\_IO\_WritePin}}(uint16\_t IoPin, uint8\_t PinState);}
+\DoxyCodeLine{106 uint16\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___exported___functions_gade7ee45f1b155cf537bd165f14eb7c2e}{BSP\_IO\_ReadPin}}(uint16\_t IoPin);}
+\DoxyCodeLine{107 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___exported___functions_ga6f07e2f71c698142eadcf5d3b538472a}{BSP\_IO\_TogglePin}}(uint16\_t IoPin);}
+\DoxyCodeLine{108   }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{126 \}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F429I\_DISCOVERY\_IO\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,142 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions}{}\doxysection{STM32\+F429I DISCOVERY IO Private Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions}\index{STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gae4e304c8bb916593090032174df20eab}{BSP\+\_\+\+IO\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes and configures the IO functionalities and configures all necessary hardware resources (GPIOs, clocks..). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga18f9350f5b8881e14dd1468ecd0ee884}{BSP\+\_\+\+IO\+\_\+\+ITGet\+Status}} (uint16\+\_\+t Io\+Pin)
+\begin{DoxyCompactList}\small\item\em Gets the selected pins IT status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga9f2179148f4cc0ba414ead6762d38394}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga9f2179148f4cc0ba414ead6762d38394}} 
+void {\bfseries BSP\+\_\+\+IO\+\_\+\+ITClear} (void)
+\begin{DoxyCompactList}\small\item\em Clears all the IO IT pending bits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gacb4773c9efcce643d6d7702101065355}{BSP\+\_\+\+IO\+\_\+\+Config\+Pin}} (uint16\+\_\+t Io\+Pin, IO\+\_\+\+Mode\+Typedef Io\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga8e0b2bdf134de3065fac7dfd22a48b59}{BSP\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Io\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Sets the selected pins state. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gade7ee45f1b155cf537bd165f14eb7c2e}{BSP\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Io\+Pin)
+\begin{DoxyCompactList}\small\item\em Gets the selected pins current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga6f07e2f71c698142eadcf5d3b538472a}{BSP\+\_\+\+IO\+\_\+\+Toggle\+Pin}} (uint16\+\_\+t Io\+Pin)
+\begin{DoxyCompactList}\small\item\em Toggles the selected pins state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gacb4773c9efcce643d6d7702101065355}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gacb4773c9efcce643d6d7702101065355}} 
+\index{STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}!BSP\_IO\_ConfigPin@{BSP\_IO\_ConfigPin}}
+\index{BSP\_IO\_ConfigPin@{BSP\_IO\_ConfigPin}!STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_IO\_ConfigPin()}{BSP\_IO\_ConfigPin()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+IO\+\_\+\+Config\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Io\+Pin,  }\item[{IO\+\_\+\+Mode\+Typedef}]{Io\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configures the IO pin(s) according to IO mode structure value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Io\+Pin} & IO pin(s) to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+{\em Io\+Mode} & The IO pin mode to configure, could be one of the following values\+: \begin{DoxyItemize}
+\item IO\+\_\+\+MODE\+\_\+\+INPUT \item IO\+\_\+\+MODE\+\_\+\+OUTPUT \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gae4e304c8bb916593090032174df20eab}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gae4e304c8bb916593090032174df20eab}} 
+\index{STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}!BSP\_IO\_Init@{BSP\_IO\_Init}}
+\index{BSP\_IO\_Init@{BSP\_IO\_Init}!STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_IO\_Init()}{BSP\_IO\_Init()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+IO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes and configures the IO functionalities and configures all necessary hardware resources (GPIOs, clocks..). 
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gae4e304c8bb916593090032174df20eab}{BSP\+\_\+\+IO\+\_\+\+Init()}} is using \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gab1dc1e6b438daacfe38a312a90221330}{HAL\+\_\+\+Delay()}} function to ensure that stmpe811 IO Expander is correctly reset. \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gab1dc1e6b438daacfe38a312a90221330}{HAL\+\_\+\+Delay()}} function provides accurate delay (in milliseconds) based on variable incremented in Sys\+Tick ISR. This implies that if \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gae4e304c8bb916593090032174df20eab}{BSP\+\_\+\+IO\+\_\+\+Init()}} is called from a peripheral ISR process, then the Sys\+Tick interrupt must have higher priority (numerically lower) than the peripheral interrupt. Otherwise the caller ISR process will be blocked. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em IO\+\_\+\+OK} & if all initializations done correctly. Other value if error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga18f9350f5b8881e14dd1468ecd0ee884}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga18f9350f5b8881e14dd1468ecd0ee884}} 
+\index{STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}!BSP\_IO\_ITGetStatus@{BSP\_IO\_ITGetStatus}}
+\index{BSP\_IO\_ITGetStatus@{BSP\_IO\_ITGetStatus}!STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_IO\_ITGetStatus()}{BSP\_IO\_ITGetStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+IO\+\_\+\+ITGet\+Status (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Io\+Pin }\end{DoxyParamCaption})}
+
+
+
+Gets the selected pins IT status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Io\+Pin} & The selected pins to check the status. This parameter could be any combination of the IO pins. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & of IO Pin checked. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gade7ee45f1b155cf537bd165f14eb7c2e}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gade7ee45f1b155cf537bd165f14eb7c2e}} 
+\index{STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}!BSP\_IO\_ReadPin@{BSP\_IO\_ReadPin}}
+\index{BSP\_IO\_ReadPin@{BSP\_IO\_ReadPin}!STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_IO\_ReadPin()}{BSP\_IO\_ReadPin()}}
+{\footnotesize\ttfamily uint16\+\_\+t BSP\+\_\+\+IO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Io\+Pin }\end{DoxyParamCaption})}
+
+
+
+Gets the selected pins current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Io\+Pin} & The selected pins to read. This parameter could be any combination of the IO pins. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & current pins state \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga6f07e2f71c698142eadcf5d3b538472a}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga6f07e2f71c698142eadcf5d3b538472a}} 
+\index{STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}!BSP\_IO\_TogglePin@{BSP\_IO\_TogglePin}}
+\index{BSP\_IO\_TogglePin@{BSP\_IO\_TogglePin}!STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_IO\_TogglePin()}{BSP\_IO\_TogglePin()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+IO\+\_\+\+Toggle\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Io\+Pin }\end{DoxyParamCaption})}
+
+
+
+Toggles the selected pins state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Io\+Pin} & The selected pins to toggle. This parameter could be any combination of the IO pins. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga8e0b2bdf134de3065fac7dfd22a48b59}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga8e0b2bdf134de3065fac7dfd22a48b59}} 
+\index{STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}!BSP\_IO\_WritePin@{BSP\_IO\_WritePin}}
+\index{BSP\_IO\_WritePin@{BSP\_IO\_WritePin}!STM32F429I DISCOVERY IO Private Functions@{STM32F429I DISCOVERY IO Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_IO\_WritePin()}{BSP\_IO\_WritePin()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+IO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Io\+Pin,  }\item[{uint8\+\_\+t}]{Pin\+State }\end{DoxyParamCaption})}
+
+
+
+Sets the selected pins state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Io\+Pin} & The selected pins to write. This parameter could be any combination of the IO pins. \\
+\hline
+{\em Pin\+State} & the new pins state to write ~\newline
+ \\
+\hline
+\end{DoxyParams}

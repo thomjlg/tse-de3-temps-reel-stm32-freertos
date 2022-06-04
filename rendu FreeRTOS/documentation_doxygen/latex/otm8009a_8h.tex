@@ -1,0 +1,157 @@
+\hypertarget{otm8009a_8h}{}\doxysection{Drivers/\+BSP/\+Components/otm8009a/otm8009a.h File Reference}
+\label{otm8009a_8h}\index{Drivers/BSP/Components/otm8009a/otm8009a.h@{Drivers/BSP/Components/otm8009a/otm8009a.h}}
+
+
+This file contains all the constants parameters for the OTM8009A which is the LCD Driver for KoD KM-\/040\+TMP-\/02-\/0621 (WVGA) DSI LCD Display.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+ORIENTATION\+\_\+\+PORTRAIT}~((uint32\+\_\+t)0x00) /$\ast$ Portrait orientation choice of LCD screen  $\ast$/
+\begin{DoxyCompactList}\small\item\em LCD\+\_\+\+Orientation\+Type\+Def Possible values of Display Orientation. \end{DoxyCompactList}\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+ORIENTATION\+\_\+\+LANDSCAPE}~((uint32\+\_\+t)0x01) /$\ast$ Landscape orientation choice of LCD screen $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+FORMAT\+\_\+\+RGB888}~((uint32\+\_\+t)0x00) /$\ast$ Pixel format chosen is RGB888 \+: 24 bpp $\ast$/
+\begin{DoxyCompactList}\small\item\em Possible values of pixel data format (ie color coding) transmitted on DSI Data lane in DSI packets. \end{DoxyCompactList}\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+FORMAT\+\_\+\+RBG565}~((uint32\+\_\+t)0x02) /$\ast$ Pixel format chosen is RGB565 \+: 16 bpp $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+WIDTH}~((uint16\+\_\+t)480)     /$\ast$ LCD PIXEL WIDTH   $\ast$/
+\begin{DoxyCompactList}\small\item\em otm8009a\+\_\+480x800 Size \end{DoxyCompactList}\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+HEIGHT}~((uint16\+\_\+t)800)     /$\ast$ LCD PIXEL HEIGHT  $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+WIDTH}~((uint16\+\_\+t)800)     /$\ast$ LCD PIXEL WIDTH   $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+HEIGHT}~((uint16\+\_\+t)480)     /$\ast$ LCD PIXEL HEIGHT  $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+HSYNC}~((uint16\+\_\+t)2)      /$\ast$ Horizontal synchronization $\ast$/
+\begin{DoxyCompactList}\small\item\em OTM8009\+A\+\_\+480\+X800 Timing parameters for Portrait orientation mode. \end{DoxyCompactList}\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+HBP}~((uint16\+\_\+t)34)     /$\ast$ Horizontal back porch      $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+HFP}~((uint16\+\_\+t)34)     /$\ast$ Horizontal front porch     $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+VSYNC}~((uint16\+\_\+t)1)      /$\ast$ Vertical synchronization   $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+VBP}~((uint16\+\_\+t)15)      /$\ast$ Vertical back porch        $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+VFP}~((uint16\+\_\+t)16)      /$\ast$ Vertical front porch       $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+HSYNC}~OTM8009\+A\+\_\+480\+X800\+\_\+\+VSYNC  /$\ast$ Horizontal synchronization $\ast$/
+\begin{DoxyCompactList}\small\item\em OTM8009\+A\+\_\+800\+X480 Timing parameters for Landscape orientation mode Same values as for Portrait mode in fact. \end{DoxyCompactList}\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+HBP}~OTM8009\+A\+\_\+480\+X800\+\_\+\+VBP    /$\ast$ Horizontal back porch      $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+HFP}~OTM8009\+A\+\_\+480\+X800\+\_\+\+VFP    /$\ast$ Horizontal front porch     $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+VSYNC}~\mbox{\hyperlink{group___o_t_m8009_a___exported___variables_ga588f7ed652225e13a93a79f3b917a620}{OTM8009\+A\+\_\+480\+X800\+\_\+\+HSYNC}}  /$\ast$ Vertical synchronization   $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+VBP}~OTM8009\+A\+\_\+480\+X800\+\_\+\+HBP    /$\ast$ Vertical back porch        $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+800\+X480\+\_\+\+VFP}~OTM8009\+A\+\_\+480\+X800\+\_\+\+HFP    /$\ast$ Vertical front porch       $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP}~0x00  /$\ast$ NOP command      $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+SWRESET}~0x01  /$\ast$ Sw reset command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+RDDMADCTL}~0x0B  /$\ast$ Read Display MADCTR command \+: read memory display access ctrl $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+RDDCOLMOD}~0x0C  /$\ast$ Read Display pixel format $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+SLPIN}~0x10  /$\ast$ Sleep In command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+SLPOUT}~0x11  /$\ast$ Sleep Out command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+PTLON}~0x12  /$\ast$ Partial mode On command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+DISPOFF}~0x28  /$\ast$ Display Off command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+DISPON}~0x29  /$\ast$ Display On command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+CASET}~0x2A  /$\ast$ Column address set command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+PASET}~0x2B  /$\ast$ Page address set command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+RAMWR}~0x2C  /$\ast$ Memory (GRAM) write command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+RAMRD}~0x2E  /$\ast$ Memory (GRAM) read command  $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+PLTAR}~0x30  /$\ast$ Partial area command (4 parameters) $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+TEOFF}~0x34  /$\ast$ Tearing Effect Line Off command \+: command with no parameter $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+TEEON}~0x35  /$\ast$ Tearing Effect Line On command \+: command with 1 parameter \textquotesingle{}TELOM\textquotesingle{} $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+TEEON\+\_\+\+TELOM\+\_\+\+VBLANKING\+\_\+\+INFO\+\_\+\+ONLY}~0x00
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+TEEON\+\_\+\+TELOM\+\_\+\+VBLANKING\+\_\+\+AND\+\_\+\+HBLANKING\+\_\+\+INFO}~0x01
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+MADCTR}~0x36  /$\ast$ Memory Access write control command  $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+MADCTR\+\_\+\+MODE\+\_\+\+PORTRAIT}~0x00
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+MADCTR\+\_\+\+MODE\+\_\+\+LANDSCAPE}~0x60  /$\ast$ MY = 0, MX = 1, MV = 1, ML = 0, RGB = 0 $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+IDMOFF}~0x38  /$\ast$ Idle mode Off command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+IDMON}~0x39  /$\ast$ Idle mode On command  $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+COLMOD}~0x3A  /$\ast$ Interface Pixel format command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+COLMOD\+\_\+\+RGB565}~0x55
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+COLMOD\+\_\+\+RGB888}~0x77
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+RAMWRC}~0x3C  /$\ast$ Memory write continue command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+RAMRDC}~0x3E  /$\ast$ Memory read continue command  $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+WRTESCN}~0x44  /$\ast$ Write Tearing Effect Scan line command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+RDSCNL}~0x45  /$\ast$ Read  Tearing Effect Scan line command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+WRDISBV}~0x51  /$\ast$ Write Display Brightness command          $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+WRCTRLD}~0x53  /$\ast$ Write CTRL Display command                $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+WRCABC}~0x55  /$\ast$ Write Content Adaptive Brightness command $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+\+CMD\+\_\+\+WRCABCMB}~0x5E  /$\ast$ Write CABC Minimum Brightness command     $\ast$/
+\item 
+\#define {\bfseries OTM8009\+A\+\_\+480\+X800\+\_\+\+FREQUENCY\+\_\+\+DIVIDER}~2   /$\ast$ LCD Frequency divider      $\ast$/
+\begin{DoxyCompactList}\small\item\em OTM8009\+A\+\_\+480\+X800 frequency divider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___o_t_m8009_a___exported___functions_gae663d792047526399ce1e4a8362f471e}{DSI\+\_\+\+IO\+\_\+\+Write\+Cmd}} (uint32\+\_\+t Nbr\+Params, uint8\+\_\+t $\ast$p\+Params)
+\begin{DoxyCompactList}\small\item\em DSI IO write short/long command. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___o_t_m8009_a___exported___functions_gac8d6505d6bf82df6d41a091c074c5b53}{OTM8009\+A\+\_\+\+Init}} (uint32\+\_\+t Color\+Coding, uint32\+\_\+t orientation)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD KoD display part by communication in DSI mode in Video Mode with IC Display Driver OTM8009A (see IC Driver specification for more information). \end{DoxyCompactList}\item 
+void {\bfseries OTM8009\+A\+\_\+\+IO\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the constants parameters for the OTM8009A which is the LCD Driver for KoD KM-\/040\+TMP-\/02-\/0621 (WVGA) DSI LCD Display. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27-\/January-\/2017
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

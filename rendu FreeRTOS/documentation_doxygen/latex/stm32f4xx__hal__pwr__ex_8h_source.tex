@@ -1,0 +1,175 @@
+\hypertarget{stm32f4xx__hal__pwr__ex_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h}
+\label{stm32f4xx__hal__pwr__ex_8h_source}\index{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal\_pwr\_ex.h@{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal\_pwr\_ex.h}}
+\mbox{\hyperlink{stm32f4xx__hal__pwr__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{20 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_PWR\_EX\_H}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_PWR\_EX\_H}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{25  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{40 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) ||\(\backslash\)}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{    defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)}}
+\DoxyCodeLine{46    }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define PWR\_MAINREGULATOR\_UNDERDRIVE\_ON                       PWR\_CR\_MRUDS}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define PWR\_LOWPOWERREGULATOR\_UNDERDRIVE\_ON                   ((uint32\_t)(PWR\_CR\_LPDS | PWR\_CR\_LPUDS))}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define PWR\_FLAG\_ODRDY                  PWR\_CSR\_ODRDY}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define PWR\_FLAG\_ODSWRDY                PWR\_CSR\_ODSWRDY}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define PWR\_FLAG\_UDRDY                  PWR\_CSR\_UDSWRDY}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx || STM32F479xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F407xx) || defined(STM32F415xx) || defined(STM32F417xx)   }}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE1         PWR\_CR\_VOS             }\textcolor{comment}{/* Scale 1 mode(default value at reset): the maximum value of fHCLK = 168 MHz. */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE2         0x00000000U            }\textcolor{comment}{/* Scale 2 mode: the maximum value of fHCLK = 144 MHz. */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE1         PWR\_CR\_VOS             }\textcolor{comment}{/* Scale 1 mode(default value at reset): the maximum value of fHCLK is 168 MHz. It can be extended to}}
+\DoxyCodeLine{75 \textcolor{comment}{                                                                       180 MHz by activating the over-\/drive mode. */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE2         PWR\_CR\_VOS\_1           }\textcolor{comment}{/* Scale 2 mode: the maximum value of fHCLK is 144 MHz. It can be extended to}}
+\DoxyCodeLine{77 \textcolor{comment}{                                                                       168 MHz by activating the over-\/drive mode. */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE3         PWR\_CR\_VOS\_0           }\textcolor{comment}{/* Scale 3 mode: the maximum value of fHCLK is 120 MHz. */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F407xx || STM32F415xx || STM32F417xx */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F446xx) || defined(STM32F412Zx) || defined(STM32F412Vx) || \(\backslash\)}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{    defined(STM32F412Rx) || defined(STM32F412Cx) || defined(STM32F413xx) || defined(STM32F423xx)}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN2                 0x00000080U}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F412Zx) || defined(STM32F412Vx) || \(\backslash\)}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{    defined(STM32F412Rx) || defined(STM32F412Cx) || defined(STM32F413xx) || defined(STM32F423xx) }}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN3                 0x00000040U}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F410xx || STM32F412Zx || STM32F412Vx || STM32F412Rx || STM32F412Zx || STM32F412Vx || \(\backslash\)}}
+\DoxyCodeLine{93 \textcolor{comment}{          STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F410xx || STM32F446xx || STM32F412Zx || STM32F412Vx || STM32F412Rx || STM32F412Cx ||}}
+\DoxyCodeLine{98 \textcolor{comment}{          STM32F413xx || STM32F423xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{104 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F407xx) || defined(STM32F415xx) || defined(STM32F417xx)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG(\_\_REGULATOR\_\_) do \{                                                     \(\backslash\)}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{                                                            \_\_IO uint32\_t tmpreg = 0x00U;                        \(\backslash\)}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{                                                            MODIFY\_REG(PWR-\/>CR, PWR\_CR\_VOS, (\_\_REGULATOR\_\_));   \(\backslash\)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{                                                            }\textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}\textcolor{preprocessor}{  \(\backslash\)}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{                                                            tmpreg = READ\_BIT(PWR-\/>CR, PWR\_CR\_VOS);             \(\backslash\)}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{                                                            UNUSED(tmpreg);                                     \(\backslash\)}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{                                                          \} while(0U)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG(\_\_REGULATOR\_\_) do \{                                                     \(\backslash\)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{                                                            \_\_IO uint32\_t tmpreg = 0x00U;                        \(\backslash\)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{                                                            MODIFY\_REG(PWR-\/>CR, PWR\_CR\_VOS, (\_\_REGULATOR\_\_));   \(\backslash\)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{                                                            }\textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}\textcolor{preprocessor}{  \(\backslash\)}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{                                                            tmpreg = READ\_BIT(PWR-\/>CR, PWR\_CR\_VOS);             \(\backslash\)}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{                                                            UNUSED(tmpreg);                                     \(\backslash\)}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{                                                          \} while(0U)}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F407xx || STM32F415xx || STM32F417xx */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) ||\(\backslash\)}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{    defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVE\_ENABLE() (*(\_\_IO uint32\_t *) CR\_ODEN\_BB = ENABLE)}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVE\_DISABLE() (*(\_\_IO uint32\_t *) CR\_ODEN\_BB = DISABLE)}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVESWITCHING\_ENABLE() (*(\_\_IO uint32\_t *) CR\_ODSWEN\_BB = ENABLE)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVESWITCHING\_DISABLE() (*(\_\_IO uint32\_t *) CR\_ODSWEN\_BB = DISABLE)}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_UNDERDRIVE\_ENABLE() (PWR-\/>CR |= (uint32\_t)PWR\_CR\_UDEN)}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_UNDERDRIVE\_DISABLE() (PWR-\/>CR \&= (uint32\_t)(\string~PWR\_CR\_UDEN))}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_GET\_ODRUDR\_FLAG(\_\_FLAG\_\_) ((PWR-\/>CSR \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_CLEAR\_ODRUDR\_FLAG() (PWR-\/>CSR |= PWR\_FLAG\_UDRDY)}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx || STM32F479xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{197 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{205 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableFlashPowerDown(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{206 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableFlashPowerDown(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{207 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_EnableBkUpReg(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{208 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_DisableBkUpReg(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{209 uint32\_t HAL\_PWREx\_GetVoltageRange(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{210 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_ControlVoltageScaling(uint32\_t VoltageScaling);}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F401xC) ||\(\backslash\)}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{    defined(STM32F401xE) || defined(STM32F411xE) || defined(STM32F412Zx) || defined(STM32F412Vx) ||\(\backslash\)}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{    defined(STM32F412Rx) || defined(STM32F412Cx) || defined(STM32F413xx) || defined(STM32F423xx)}}
+\DoxyCodeLine{215 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableMainRegulatorLowVoltage(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{216 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableMainRegulatorLowVoltage(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{217 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableLowRegulatorLowVoltage(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{218 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableLowRegulatorLowVoltage(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F410xx || STM32F401xC || STM32F401xE || STM32F411xE || STM32F412Zx || STM32F412Vx ||\(\backslash\)}}
+\DoxyCodeLine{220 \textcolor{comment}{          STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) || defined(STM32F446xx) ||\(\backslash\)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{    defined(STM32F469xx) || defined(STM32F479xx)}}
+\DoxyCodeLine{224 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_EnableOverDrive(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{225 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_DisableOverDrive(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{226 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_EnterUnderDriveSTOPMode(uint32\_t Regulator, uint8\_t STOPEntry);}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx || STM32F479xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{236 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{237 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{238 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{246 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ PWR registers bit address in the alias region -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{247 \textcolor{comment}{/* -\/-\/-\/ CR Register -\/-\/-\/*/}}
+\DoxyCodeLine{248 \textcolor{comment}{/* Alias word address of FPDS bit */}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define FPDS\_BIT\_NUMBER          PWR\_CR\_FPDS\_Pos}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define CR\_FPDS\_BB               (uint32\_t)(PERIPH\_BB\_BASE + (PWR\_CR\_OFFSET\_BB * 32U) + (FPDS\_BIT\_NUMBER * 4U))}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{comment}{/* Alias word address of ODEN bit   */}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#define ODEN\_BIT\_NUMBER          PWR\_CR\_ODEN\_Pos}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define CR\_ODEN\_BB               (uint32\_t)(PERIPH\_BB\_BASE + (PWR\_CR\_OFFSET\_BB * 32U) + (ODEN\_BIT\_NUMBER * 4U))}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256 \textcolor{comment}{/* Alias word address of ODSWEN bit */}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#define ODSWEN\_BIT\_NUMBER        PWR\_CR\_ODSWEN\_Pos}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define CR\_ODSWEN\_BB             (uint32\_t)(PERIPH\_BB\_BASE + (PWR\_CR\_OFFSET\_BB * 32U) + (ODSWEN\_BIT\_NUMBER * 4U))}}
+\DoxyCodeLine{259     }
+\DoxyCodeLine{260 \textcolor{comment}{/* Alias word address of MRLVDS bit */}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define MRLVDS\_BIT\_NUMBER        PWR\_CR\_MRLVDS\_Pos}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define CR\_MRLVDS\_BB             (uint32\_t)(PERIPH\_BB\_BASE + (PWR\_CR\_OFFSET\_BB * 32U) + (MRLVDS\_BIT\_NUMBER * 4U))}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 \textcolor{comment}{/* Alias word address of LPLVDS bit */}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define LPLVDS\_BIT\_NUMBER        PWR\_CR\_LPLVDS\_Pos}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#define CR\_LPLVDS\_BB             (uint32\_t)(PERIPH\_BB\_BASE + (PWR\_CR\_OFFSET\_BB * 32U) + (LPLVDS\_BIT\_NUMBER * 4U))}}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{275 \textcolor{comment}{/* -\/-\/-\/ CSR Register -\/-\/-\/*/}}
+\DoxyCodeLine{276 \textcolor{comment}{/* Alias word address of BRE bit */}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define BRE\_BIT\_NUMBER   PWR\_CSR\_BRE\_Pos}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define CSR\_BRE\_BB      (uint32\_t)(PERIPH\_BB\_BASE + (PWR\_CSR\_OFFSET\_BB * 32U) + (BRE\_BIT\_NUMBER * 4U))}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{288 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) ||\(\backslash\)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{    defined(STM32F446xx) || defined(STM32F469xx) || defined(STM32F479xx)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define IS\_PWR\_REGULATOR\_UNDERDRIVE(REGULATOR) (((REGULATOR) == PWR\_MAINREGULATOR\_UNDERDRIVE\_ON) || \(\backslash\)}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{                                                ((REGULATOR) == PWR\_LOWPOWERREGULATOR\_UNDERDRIVE\_ON))}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F446xx || STM32F469xx || STM32F479xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F407xx) || defined(STM32F415xx) || defined(STM32F417xx)}}
+\DoxyCodeLine{303 \textcolor{preprocessor}{\#define IS\_PWR\_VOLTAGE\_SCALING\_RANGE(VOLTAGE) (((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE1) || \(\backslash\)}}
+\DoxyCodeLine{304 \textcolor{preprocessor}{                                               ((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE2))}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#define IS\_PWR\_VOLTAGE\_SCALING\_RANGE(VOLTAGE) (((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE1) || \(\backslash\)}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{                                               ((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE2) || \(\backslash\)}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{                                               ((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE3))}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F407xx || STM32F415xx || STM32F417xx */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#if defined(STM32F446xx)}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define IS\_PWR\_WAKEUP\_PIN(PIN) (((PIN) == PWR\_WAKEUP\_PIN1) || ((PIN) == PWR\_WAKEUP\_PIN2))}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{\#elif defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F412Zx) ||\(\backslash\)}}
+\DoxyCodeLine{314 \textcolor{preprocessor}{      defined(STM32F412Vx) || defined(STM32F412Rx) || defined(STM32F412Cx) || defined(STM32F413xx) ||\(\backslash\)}}
+\DoxyCodeLine{315 \textcolor{preprocessor}{      defined(STM32F423xx)}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#define IS\_PWR\_WAKEUP\_PIN(PIN) (((PIN) == PWR\_WAKEUP\_PIN1) || ((PIN) == PWR\_WAKEUP\_PIN2) || \(\backslash\)}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN3))}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define IS\_PWR\_WAKEUP\_PIN(PIN) ((PIN) == PWR\_WAKEUP\_PIN1)}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F446xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{338 \}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_PWR\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

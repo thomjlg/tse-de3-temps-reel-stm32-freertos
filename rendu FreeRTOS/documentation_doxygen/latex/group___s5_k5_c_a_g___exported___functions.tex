@@ -1,0 +1,103 @@
+\hypertarget{group___s5_k5_c_a_g___exported___functions}{}\doxysection{S5\+K5\+CAG\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___s5_k5_c_a_g___exported___functions}\index{S5K5CAG\_Exported\_Functions@{S5K5CAG\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_ga22ad9c0eccce35104808245ab8cb6c1e}{s5k5cag\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em Initializes the S5\+K5\+CAG CAMERA component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_gaf46514f154f85f55bc422d624a129985}{s5k5cag\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t feature, uint32\+\_\+t value, uint32\+\_\+t BR\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the S5\+K5\+CAG camera feature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}{s5k5cag\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the S5\+K5\+CAG Camera identity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_gab66d84fc34650e14be3b2f729fb6f7f7}\label{group___s5_k5_c_a_g___exported___functions_gab66d84fc34650e14be3b2f729fb6f7f7}} 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_ga91647f7ac190d9f387c4ae43e8db63ff}\label{group___s5_k5_c_a_g___exported___functions_ga91647f7ac190d9f387c4ae43e8db63ff}} 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t addr, uint16\+\_\+t reg, uint16\+\_\+t value)
+\item 
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_ga6b781df1817d3301ffc683aaf21a8083}\label{group___s5_k5_c_a_g___exported___functions_ga6b781df1817d3301ffc683aaf21a8083}} 
+uint16\+\_\+t {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t addr, uint16\+\_\+t reg)
+\item 
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_gae9e8bc10e46dab684245893476d44efa}\label{group___s5_k5_c_a_g___exported___functions_gae9e8bc10e46dab684245893476d44efa}} 
+void {\bfseries CAMERA\+\_\+\+Delay} (uint32\+\_\+t delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_ga954f3687fd62aea271826b9e540fe68a}\label{group___s5_k5_c_a_g___exported___functions_ga954f3687fd62aea271826b9e540fe68a}} 
+\mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\+\_\+\+Drv\+Type\+Def}} {\bfseries s5k5cag\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_gaf46514f154f85f55bc422d624a129985}\label{group___s5_k5_c_a_g___exported___functions_gaf46514f154f85f55bc422d624a129985}} 
+\index{S5K5CAG\_Exported\_Functions@{S5K5CAG\_Exported\_Functions}!s5k5cag\_Config@{s5k5cag\_Config}}
+\index{s5k5cag\_Config@{s5k5cag\_Config}!S5K5CAG\_Exported\_Functions@{S5K5CAG\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{s5k5cag\_Config()}{s5k5cag\_Config()}}
+{\footnotesize\ttfamily void s5k5cag\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{feature,  }\item[{uint32\+\_\+t}]{value,  }\item[{uint32\+\_\+t}]{brightness\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Configures the S5\+K5\+CAG camera feature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em feature} & Camera feature to be configured \\
+\hline
+{\em value} & Value to be configured \\
+\hline
+{\em brightness\+\_\+value} & Brightness value to be configured \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_ga22ad9c0eccce35104808245ab8cb6c1e}\label{group___s5_k5_c_a_g___exported___functions_ga22ad9c0eccce35104808245ab8cb6c1e}} 
+\index{S5K5CAG\_Exported\_Functions@{S5K5CAG\_Exported\_Functions}!s5k5cag\_Init@{s5k5cag\_Init}}
+\index{s5k5cag\_Init@{s5k5cag\_Init}!S5K5CAG\_Exported\_Functions@{S5K5CAG\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{s5k5cag\_Init()}{s5k5cag\_Init()}}
+{\footnotesize\ttfamily void s5k5cag\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{resolution }\end{DoxyParamCaption})}
+
+
+
+Initializes the S5\+K5\+CAG CAMERA component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em resolution} & Camera resolution \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s5_k5_c_a_g___exported___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}\label{group___s5_k5_c_a_g___exported___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}} 
+\index{S5K5CAG\_Exported\_Functions@{S5K5CAG\_Exported\_Functions}!s5k5cag\_ReadID@{s5k5cag\_ReadID}}
+\index{s5k5cag\_ReadID@{s5k5cag\_ReadID}!S5K5CAG\_Exported\_Functions@{S5K5CAG\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{s5k5cag\_ReadID()}{s5k5cag\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t s5k5cag\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the S5\+K5\+CAG Camera identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em the} & S5\+K5\+CAG ID \\
+\hline
+\end{DoxyRetVals}

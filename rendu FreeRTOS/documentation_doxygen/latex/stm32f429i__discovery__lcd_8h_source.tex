@@ -1,0 +1,162 @@
+\hypertarget{stm32f429i__discovery__lcd_8h_source}{}\doxysection{stm32f429i\+\_\+discovery\+\_\+lcd.\+h}
+\label{stm32f429i__discovery__lcd_8h_source}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_lcd.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_lcd.h}}
+\mbox{\hyperlink{stm32f429i__discovery__lcd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_\_STM32F429I\_DISCOVERY\_LCD\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_\_STM32F429I\_DISCOVERY\_LCD\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{42  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f429i__discovery_8h}{stm32f429i\_discovery.h}}"{}}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Include SDRAM Driver */}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f429i__discovery__sdram_8h}{stm32f429i\_discovery\_sdram.h}}"{}}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}../../../Utilities/Fonts/fonts.h"{}}}
+\DoxyCodeLine{50 \textcolor{comment}{/* Include LCD component driver */}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include "{}../Components/ili9341/ili9341.h"{}}   }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70   LCD\_OK = 0,}
+\DoxyCodeLine{71   LCD\_ERROR = 1,}
+\DoxyCodeLine{72   LCD\_TIMEOUT = 2}
+\DoxyCodeLine{73 \}LCD\_StatusTypeDef;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }}
+\DoxyCodeLine{76 \{ }
+\DoxyCodeLine{77   uint32\_t  TextColor; }
+\DoxyCodeLine{78   uint32\_t  BackColor;  }
+\DoxyCodeLine{79   \mbox{\hyperlink{struct__t_font}{sFONT}}     *pFont;}
+\DoxyCodeLine{80 \}\mbox{\hyperlink{struct_l_c_d___draw_prop_type_def}{LCD\_DrawPropTypeDef}};}
+\DoxyCodeLine{81    }
+\DoxyCodeLine{82 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }}
+\DoxyCodeLine{83 \{}
+\DoxyCodeLine{84   int16\_t X;}
+\DoxyCodeLine{85   int16\_t Y;}
+\DoxyCodeLine{86 \} \mbox{\hyperlink{struct_point}{Point}}, * \mbox{\hyperlink{struct_point}{pPoint}};    }
+\DoxyCodeLine{87      }
+\DoxyCodeLine{91 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{92 \{}
+\DoxyCodeLine{93   CENTER\_MODE             = 0x01,    \textcolor{comment}{/* center mode */}}
+\DoxyCodeLine{94   RIGHT\_MODE              = 0x02,    \textcolor{comment}{/* right mode  */}     }
+\DoxyCodeLine{95   LEFT\_MODE               = 0x03,    \textcolor{comment}{/* left mode   */}                                                                               }
+\DoxyCodeLine{96 \}\mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}{Text\_AlignModeTypdef}};}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define LCD\_LayerCfgTypeDef    LTDC\_LayerCfgTypeDef}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define MAX\_LAYER\_NUMBER       2}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define LCD\_FRAME\_BUFFER       ((uint32\_t)0xD0000000)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define BUFFER\_OFFSET          ((uint32\_t)0x50000) }}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define LCD\_COLOR\_BLUE          0xFF0000FF}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define LCD\_COLOR\_GREEN         0xFF00FF00}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define LCD\_COLOR\_RED           0xFFFF0000}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define LCD\_COLOR\_CYAN          0xFF00FFFF}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define LCD\_COLOR\_MAGENTA       0xFFFF00FF}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define LCD\_COLOR\_YELLOW        0xFFFFFF00}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define LCD\_COLOR\_LIGHTBLUE     0xFF8080FF}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define LCD\_COLOR\_LIGHTGREEN    0xFF80FF80}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define LCD\_COLOR\_LIGHTRED      0xFFFF8080}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define LCD\_COLOR\_LIGHTCYAN     0xFF80FFFF}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define LCD\_COLOR\_LIGHTMAGENTA  0xFFFF80FF}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define LCD\_COLOR\_LIGHTYELLOW   0xFFFFFF80}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define LCD\_COLOR\_DARKBLUE      0xFF000080}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define LCD\_COLOR\_DARKGREEN     0xFF008000}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define LCD\_COLOR\_DARKRED       0xFF800000}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define LCD\_COLOR\_DARKCYAN      0xFF008080}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define LCD\_COLOR\_DARKMAGENTA   0xFF800080}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define LCD\_COLOR\_DARKYELLOW    0xFF808000}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define LCD\_COLOR\_WHITE         0xFFFFFFFF}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define LCD\_COLOR\_LIGHTGRAY     0xFFD3D3D3}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define LCD\_COLOR\_GRAY          0xFF808080}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define LCD\_COLOR\_DARKGRAY      0xFF404040}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define LCD\_COLOR\_BLACK         0xFF000000}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define LCD\_COLOR\_BROWN         0xFFA52A2A}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define LCD\_COLOR\_ORANGE        0xFFFFA500}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define LCD\_COLOR\_TRANSPARENT   0xFF000000}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define LCD\_DEFAULT\_FONT         Font24}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define LCD\_RELOAD\_IMMEDIATE               ((uint32\_t)LTDC\_SRCR\_IMR)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define LCD\_RELOAD\_VERTICAL\_BLANKING       ((uint32\_t)LTDC\_SRCR\_VBR)}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define LCD\_BACKGROUND\_LAYER     0x0000}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define LCD\_FOREGROUND\_LAYER     0x0001}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_ARGB8888         LTDC\_PIXEL\_FORMAT\_ARGB8888}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_RGB888           LTDC\_PIXEL\_FORMAT\_RGB888        }}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_RGB565           LTDC\_PIXEL\_FORMAT\_RGB565                }}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_ARGB1555         LTDC\_PIXEL\_FORMAT\_ARGB1555        }}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_ARGB4444         LTDC\_PIXEL\_FORMAT\_ARGB4444        }}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_L8               LTDC\_PIXEL\_FORMAT\_L8        }}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_AL44             LTDC\_PIXEL\_FORMAT\_AL44        }}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT\_AL88             LTDC\_PIXEL\_FORMAT\_AL88}}
+\DoxyCodeLine{184 uint8\_t  \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga5955111784d5c5a7b9a7492b30afd7cf}{BSP\_LCD\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{185 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gafbc7d2bdd56283a761e21998ddbf89e8}{BSP\_LCD\_GetXSize}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{186 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga77de959b7b712a5cb4a1c8515253a905}{BSP\_LCD\_GetYSize}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{comment}{/* functions using the LTDC controller */}}
+\DoxyCodeLine{189 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga4ae4d69b4af282c1ad3637b8d4f8958b}{BSP\_LCD\_LayerDefaultInit}}(uint16\_t LayerIndex, uint32\_t FrameBuffer);}
+\DoxyCodeLine{190 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaada127d31caacc3c2245524a9b403db7}{BSP\_LCD\_SetTransparency}}(uint32\_t LayerIndex, uint8\_t Transparency);}
+\DoxyCodeLine{191 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga422bf84f008ab5e259459354a7dea779}{BSP\_LCD\_SetTransparency\_NoReload}}(uint32\_t LayerIndex, uint8\_t Transparency);}
+\DoxyCodeLine{192 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga0947392e8ac5a64cf810fb6c58fdcaa2}{BSP\_LCD\_SetLayerAddress}}(uint32\_t LayerIndex, uint32\_t Address);}
+\DoxyCodeLine{193 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gafc42384bbed08690b13cc9ed62035508}{BSP\_LCD\_SetLayerAddress\_NoReload}}(uint32\_t LayerIndex, uint32\_t Address);}
+\DoxyCodeLine{194 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad056ed10c1e33a95a4d78b7f899e5e01}{BSP\_LCD\_SetColorKeying}}(uint32\_t LayerIndex, uint32\_t RGBValue);}
+\DoxyCodeLine{195 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga09005a2a087a2f7790fd444f97477d78}{BSP\_LCD\_SetColorKeying\_NoReload}}(uint32\_t LayerIndex, uint32\_t RGBValue);}
+\DoxyCodeLine{196 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad1cd9f1072b2d4d5e489143011cfffcc}{BSP\_LCD\_ResetColorKeying}}(uint32\_t LayerIndex);}
+\DoxyCodeLine{197 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga9335343479b1e095c1a5817d9a6585c6}{BSP\_LCD\_ResetColorKeying\_NoReload}}(uint32\_t LayerIndex);}
+\DoxyCodeLine{198 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga57fcb4ebed22256672cee760add01de8}{BSP\_LCD\_SetLayerWindow}}(uint16\_t LayerIndex, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{199 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaa07e41d601e249c8d2c508b2944c3cfb}{BSP\_LCD\_SetLayerWindow\_NoReload}}(uint16\_t LayerIndex, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{200 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga1e62c9ab7d6185402e831ab6c7e6307e}{BSP\_LCD\_SelectLayer}}(uint32\_t LayerIndex);}
+\DoxyCodeLine{201 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga2fcd0d9567ee86c448ed65689278f6f5}{BSP\_LCD\_SetLayerVisible}}(uint32\_t LayerIndex, FunctionalState state);}
+\DoxyCodeLine{202 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gac9c3b946bb03ab825306a9a48ee123da}{BSP\_LCD\_SetLayerVisible\_NoReload}}(uint32\_t LayerIndex, FunctionalState State);}
+\DoxyCodeLine{203 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gabf5c8e45b272d103e4eea7432002dc2c}{BSP\_LCD\_Relaod}}(uint32\_t ReloadType);}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga675c034d5e34eecdd9b821d29fc57905}{BSP\_LCD\_SetTextColor}}(uint32\_t Color);}
+\DoxyCodeLine{206 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga54560381fbf64e3f70a0c253c8b740e3}{BSP\_LCD\_SetBackColor}}(uint32\_t Color);}
+\DoxyCodeLine{207 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga89b0d4a3af19d42df7396770972f23d8}{BSP\_LCD\_GetTextColor}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{208 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga5fe219c225b7db9a424ba7c54ae15cd5}{BSP\_LCD\_GetBackColor}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{209 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga66d4af4f0eb6563410f0ff942369ffc0}{BSP\_LCD\_SetFont}}(\mbox{\hyperlink{struct__t_font}{sFONT}} *pFonts);}
+\DoxyCodeLine{210 \mbox{\hyperlink{struct__t_font}{sFONT}}    *\mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga8f0e25c8df95159043d070cd3d2af01b}{BSP\_LCD\_GetFont}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaf524b8c43042bbc40348e88e28f4fbe8}{BSP\_LCD\_ReadPixel}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{213 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaf9782938b0d199c8627716942b5b5ebd}{BSP\_LCD\_DrawPixel}}(uint16\_t Xpos, uint16\_t Ypos, uint32\_t pixel);}
+\DoxyCodeLine{214 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga508bafe763db5befc3c8c3ea0e40e9d5}{BSP\_LCD\_Clear}}(uint32\_t Color);}
+\DoxyCodeLine{215 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga9d495a1983997618c113f11f3d600c05}{BSP\_LCD\_ClearStringLine}}(uint32\_t Line);}
+\DoxyCodeLine{216 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga9c7c6b012bd14c2206135fd1136da7e0}{BSP\_LCD\_DisplayStringAtLine}}(uint16\_t Line, uint8\_t *ptr);}
+\DoxyCodeLine{217 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad06a065ae88887f98d81046cdb3e8fc3}{BSP\_LCD\_DisplayStringAt}}(uint16\_t X, uint16\_t Y, uint8\_t *pText, \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}{Text\_AlignModeTypdef}} mode);}
+\DoxyCodeLine{218 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga8388f1a9dd9f46d0ed98942e5af68c84}{BSP\_LCD\_DisplayChar}}(uint16\_t Xpos, uint16\_t Ypos, uint8\_t Ascii);}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga2a28ebabf188e1dd208bcfebe28b48b4}{BSP\_LCD\_DrawHLine}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{221 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga7bd3b8d8dd28ef48c03fe31f1d6920d2}{BSP\_LCD\_DrawVLine}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{222 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga14c8ea16ad96418b0bcae6475b83b5c2}{BSP\_LCD\_DrawLine}}(uint16\_t X1, uint16\_t Y1, uint16\_t X2, uint16\_t Y2);}
+\DoxyCodeLine{223 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga278d2524d94b30ed1d1b3cafd48a7d30}{BSP\_LCD\_DrawRect}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{224 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga944dac20e80e4bb39f697b1d79ee5c88}{BSP\_LCD\_DrawCircle}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Radius);}
+\DoxyCodeLine{225 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad5b57cb65d1733b16b75ade3ff613bec}{BSP\_LCD\_DrawPolygon}}(\mbox{\hyperlink{struct_point}{pPoint}} Points, uint16\_t PointCount);}
+\DoxyCodeLine{226 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga93de8990b2794426293de65e7166a781}{BSP\_LCD\_DrawEllipse}}(\textcolor{keywordtype}{int} Xpos, \textcolor{keywordtype}{int} Ypos, \textcolor{keywordtype}{int} XRadius, \textcolor{keywordtype}{int} YRadius);}
+\DoxyCodeLine{227 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga2cfa6a5c911050467563569eebc74a1f}{BSP\_LCD\_DrawBitmap}}(uint32\_t X, uint32\_t Y, uint8\_t *pBmp);}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga685f6469561442556dbb22f7057a54ef}{BSP\_LCD\_FillRect}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{230 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga8e526424d1abb3364b50d920b3ee2bcf}{BSP\_LCD\_FillCircle}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Radius);}
+\DoxyCodeLine{231 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaf24ee486acd14871a276a2f2fa0e71f4}{BSP\_LCD\_FillTriangle}}(uint16\_t X1, uint16\_t X2, uint16\_t X3, uint16\_t Y1, uint16\_t Y2, uint16\_t Y3);}
+\DoxyCodeLine{232 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaaa15c0355599580e563a09afd32d7f6f}{BSP\_LCD\_FillPolygon}}(\mbox{\hyperlink{struct_point}{pPoint}} Points, uint16\_t PointCount);}
+\DoxyCodeLine{233 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga4e95c2c6dafd026663a335c989e8732f}{BSP\_LCD\_FillEllipse}}(\textcolor{keywordtype}{int} Xpos, \textcolor{keywordtype}{int} Ypos, \textcolor{keywordtype}{int} XRadius, \textcolor{keywordtype}{int} YRadius);}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga8cf3da6f4c592b58ff5f6b7d6b789369}{BSP\_LCD\_DisplayOff}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{236 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga13f49563bf69e54227b5f4eef9a08d4b}{BSP\_LCD\_DisplayOn}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 \textcolor{comment}{/* This function can be modified in case the current settings need to be changed }}
+\DoxyCodeLine{239 \textcolor{comment}{   for specific application needs */}}
+\DoxyCodeLine{240 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gae0700a070e6a7a666180a886346b47e3}{BSP\_LCD\_MspInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{259 \}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F429I\_DISCOVERY\_LCD\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

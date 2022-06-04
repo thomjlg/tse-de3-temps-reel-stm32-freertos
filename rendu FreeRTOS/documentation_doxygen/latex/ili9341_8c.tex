@@ -1,0 +1,61 @@
+\hypertarget{ili9341_8c}{}\doxysection{Drivers/\+BSP/\+Components/ili9341/ili9341.c File Reference}
+\label{ili9341_8c}\index{Drivers/BSP/Components/ili9341/ili9341.c@{Drivers/BSP/Components/ili9341/ili9341.c}}
+
+
+This file includes the LCD driver for ILI9341 LCD.  
+
+
+{\ttfamily \#include \char`\"{}ili9341.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga9f53af6ab5b6427655c61ef71fa4a442}{ili9341\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Power on the LCD. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_gaf22c926ba633bcfa144bd68d1cc438d0}{ili9341\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_gac3489560fb954b6e4bf5ac24ef99988d}{ili9341\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga3c09dd822d1d76312b6143b8adcb00fa}{ili9341\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga7ca01b0c09af1a51ccbfb929e6ee1275}{ili9341\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCD\+\_\+\+Reg)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga94c1249a02f21b0a1acd31e985b9cf50}{ili9341\+\_\+\+Write\+Data}} (uint16\+\_\+t Reg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes data to the selected LCD register. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_ga8a2a8f4eb728128a111362c7e552634f}{ili9341\+\_\+\+Read\+Data}} (uint16\+\_\+t Reg\+Value, uint8\+\_\+t Read\+Size)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_ga9c56b9515b050d26659353ecb6cf2a14}{ili9341\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get LCD PIXEL WIDTH. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_ga67359a0ad0d4d272473ed43360306a28}{ili9341\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get LCD PIXEL HEIGHT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___i_l_i9341___private___variables_ga1f33444c7f2a54fe50f42bc215a84650}{ili9341\+\_\+drv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file includes the LCD driver for ILI9341 LCD. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02-\/December-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

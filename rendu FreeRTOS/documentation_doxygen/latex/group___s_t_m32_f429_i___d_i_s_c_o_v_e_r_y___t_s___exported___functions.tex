@@ -1,0 +1,90 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions}{}\doxysection{STM32\+F429I DISCOVERY TS Exported Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions}\index{STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga18d2df11ce4364958d3a83b66d975421}{BSP\+\_\+\+TS\+\_\+\+Init}} (uint16\+\_\+t XSize, uint16\+\_\+t YSize)
+\begin{DoxyCompactList}\small\item\em Initializes and configures the touch screen functionalities and configures all necessary hardware resources (GPIOs, clocks..). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga292d406e66b589cfb5e4d52557bd5855}{BSP\+\_\+\+TS\+\_\+\+Get\+State}} (\mbox{\hyperlink{struct_t_s___state_type_def}{TS\+\_\+\+State\+Type\+Def}} $\ast$Ts\+State)
+\begin{DoxyCompactList}\small\item\em Returns status and positions of the touch screen. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga9ee5e7f25f303d41fab3a0e078225168}{BSP\+\_\+\+TS\+\_\+\+ITConfig}} (void)
+\begin{DoxyCompactList}\small\item\em Configures and enables the touch screen interrupts. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga3da0a8dcaa653c2ffee4231da98ea7ee}{BSP\+\_\+\+TS\+\_\+\+ITGet\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the TS IT status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga6bfa5cb59aa0c338ee31eb7d7c418530}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga6bfa5cb59aa0c338ee31eb7d7c418530}} 
+void {\bfseries BSP\+\_\+\+TS\+\_\+\+ITClear} (void)
+\begin{DoxyCompactList}\small\item\em Clears all touch screen interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga292d406e66b589cfb5e4d52557bd5855}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga292d406e66b589cfb5e4d52557bd5855}} 
+\index{STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}!BSP\_TS\_GetState@{BSP\_TS\_GetState}}
+\index{BSP\_TS\_GetState@{BSP\_TS\_GetState}!STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_TS\_GetState()}{BSP\_TS\_GetState()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+TS\+\_\+\+Get\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_s___state_type_def}{TS\+\_\+\+State\+Type\+Def}} $\ast$}]{Ts\+State }\end{DoxyParamCaption})}
+
+
+
+Returns status and positions of the touch screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ts\+State} & Pointer to touch screen current state structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga18d2df11ce4364958d3a83b66d975421}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga18d2df11ce4364958d3a83b66d975421}} 
+\index{STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}!BSP\_TS\_Init@{BSP\_TS\_Init}}
+\index{BSP\_TS\_Init@{BSP\_TS\_Init}!STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_TS\_Init()}{BSP\_TS\_Init()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+TS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{XSize,  }\item[{uint16\+\_\+t}]{YSize }\end{DoxyParamCaption})}
+
+
+
+Initializes and configures the touch screen functionalities and configures all necessary hardware resources (GPIOs, clocks..). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em XSize} & The maximum X size of the TS area on LCD \\
+\hline
+{\em YSize} & The maximum Y size of the TS area on LCD ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TS\+\_\+\+OK} & if all initializations are OK. Other value if error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga9ee5e7f25f303d41fab3a0e078225168}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga9ee5e7f25f303d41fab3a0e078225168}} 
+\index{STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}!BSP\_TS\_ITConfig@{BSP\_TS\_ITConfig}}
+\index{BSP\_TS\_ITConfig@{BSP\_TS\_ITConfig}!STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_TS\_ITConfig()}{BSP\_TS\_ITConfig()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+TS\+\_\+\+ITConfig (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures and enables the touch screen interrupts. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em TS\+\_\+\+OK} & if ITconfig is OK. Other value if error. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga3da0a8dcaa653c2ffee4231da98ea7ee}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga3da0a8dcaa653c2ffee4231da98ea7ee}} 
+\index{STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}!BSP\_TS\_ITGetStatus@{BSP\_TS\_ITGetStatus}}
+\index{BSP\_TS\_ITGetStatus@{BSP\_TS\_ITGetStatus}!STM32F429I DISCOVERY TS Exported Functions@{STM32F429I DISCOVERY TS Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_TS\_ITGetStatus()}{BSP\_TS\_ITGetStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+TS\+\_\+\+ITGet\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the TS IT status. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Interrupt} & status. \\
+\hline
+\end{DoxyRetVals}

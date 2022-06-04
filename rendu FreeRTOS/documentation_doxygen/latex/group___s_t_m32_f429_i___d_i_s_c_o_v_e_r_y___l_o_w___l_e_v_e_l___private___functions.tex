@@ -1,0 +1,347 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions}{}\doxysection{STM32\+F429I DISCOVERY LOW LEVEL Private Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions}\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga65d13608f7010a8068614154cb142cd6}{BSP\+\_\+\+Get\+Version}} (void)
+\begin{DoxyCompactList}\small\item\em This method returns the STM32\+F429I DISCO BSP Driver revision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gab58a4f16a476a53653c5c400e3bed158}{BSP\+\_\+\+LED\+\_\+\+Init}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Configures LED GPIO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaee9c16b16384834c69efabf58f423d6f}{BSP\+\_\+\+LED\+\_\+\+On}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED On. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaef268680154ca15c45066d64d41f9467}{BSP\+\_\+\+LED\+\_\+\+Off}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED Off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga1b9eabba7d498f41d6f16587ec0f9732}{BSP\+\_\+\+LED\+\_\+\+Toggle}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Toggles the selected LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}{BSP\+\_\+\+PB\+\_\+\+Init}} (Button\+\_\+\+Type\+Def Button, Button\+Mode\+\_\+\+Type\+Def Button\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures Button GPIO and EXTI Line. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}{BSP\+\_\+\+PB\+\_\+\+Get\+State}} (Button\+\_\+\+Type\+Def Button)
+\begin{DoxyCompactList}\small\item\em Returns the selected Button state. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga10fd152b0ec2326173d80e922d8635fc}{LCD\+\_\+\+IO\+\_\+\+Read\+Data}} (uint16\+\_\+t Reg\+Value, uint8\+\_\+t Read\+Size)
+\begin{DoxyCompactList}\small\item\em Reads register value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga0b45e37ff42910b44d218393ed479e12}{LCD\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Wait for loop in ms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga6804257e10475b06cafd813afce0cf49}{IOE\+\_\+\+Write}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em IOE Writes single data operation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\+\_\+\+Read}} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em IOE Reads single data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}{IOE\+\_\+\+Write\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Writes multiple data. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\+\_\+\+Read\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Reads multiple data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em IOE Delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga91f7211b833b9428166a7b4389fdba2e}{GYRO\+\_\+\+IO\+\_\+\+Write}} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Write\+Addr, uint16\+\_\+t Num\+Byte\+To\+Write)
+\begin{DoxyCompactList}\small\item\em Writes one byte to the Gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gae80f89593d6107eaf24fd82e38d75f85}{GYRO\+\_\+\+IO\+\_\+\+Read}} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Read\+Addr, uint16\+\_\+t Num\+Byte\+To\+Read)
+\begin{DoxyCompactList}\small\item\em Reads a block of data from the Gyroscope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga65d13608f7010a8068614154cb142cd6}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga65d13608f7010a8068614154cb142cd6}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!BSP\_GetVersion@{BSP\_GetVersion}}
+\index{BSP\_GetVersion@{BSP\_GetVersion}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GetVersion()}{BSP\_GetVersion()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+Get\+Version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This method returns the STM32\+F429I DISCO BSP Driver revision. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em version} & 0x\+XYZR (8bits for each decimal, R for RC) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gab58a4f16a476a53653c5c400e3bed158}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gab58a4f16a476a53653c5c400e3bed158}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!BSP\_LED\_Init@{BSP\_LED\_Init}}
+\index{BSP\_LED\_Init@{BSP\_LED\_Init}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_Init()}{BSP\_LED\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+Init (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Configures LED GPIO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be configured. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaef268680154ca15c45066d64d41f9467}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaef268680154ca15c45066d64d41f9467}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!BSP\_LED\_Off@{BSP\_LED\_Off}}
+\index{BSP\_LED\_Off@{BSP\_LED\_Off}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_Off()}{BSP\_LED\_Off()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+Off (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Turns selected LED Off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be set off. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaee9c16b16384834c69efabf58f423d6f}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaee9c16b16384834c69efabf58f423d6f}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!BSP\_LED\_On@{BSP\_LED\_On}}
+\index{BSP\_LED\_On@{BSP\_LED\_On}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_On()}{BSP\_LED\_On()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+On (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Turns selected LED On. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be set on. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga1b9eabba7d498f41d6f16587ec0f9732}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga1b9eabba7d498f41d6f16587ec0f9732}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!BSP\_LED\_Toggle@{BSP\_LED\_Toggle}}
+\index{BSP\_LED\_Toggle@{BSP\_LED\_Toggle}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_Toggle()}{BSP\_LED\_Toggle()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+Toggle (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Toggles the selected LED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be toggled. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!BSP\_PB\_GetState@{BSP\_PB\_GetState}}
+\index{BSP\_PB\_GetState@{BSP\_PB\_GetState}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_PB\_GetState()}{BSP\_PB\_GetState()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+PB\+\_\+\+Get\+State (\begin{DoxyParamCaption}\item[{Button\+\_\+\+Type\+Def}]{Button }\end{DoxyParamCaption})}
+
+
+
+Returns the selected Button state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Button} & Specifies the Button to be checked. This parameter should be\+: BUTTON\+\_\+\+KEY ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Button GPIO pin value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!BSP\_PB\_Init@{BSP\_PB\_Init}}
+\index{BSP\_PB\_Init@{BSP\_PB\_Init}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_PB\_Init()}{BSP\_PB\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+PB\+\_\+\+Init (\begin{DoxyParamCaption}\item[{Button\+\_\+\+Type\+Def}]{Button,  }\item[{Button\+Mode\+\_\+\+Type\+Def}]{Button\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configures Button GPIO and EXTI Line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Button} & Specifies the Button to be configured. This parameter should be\+: BUTTON\+\_\+\+KEY \\
+\hline
+{\em Button\+Mode} & Specifies Button mode. This parameter can be one of following parameters\+: ~\newline
+ \begin{DoxyItemize}
+\item BUTTON\+\_\+\+MODE\+\_\+\+GPIO\+: Button will be used as simple IO \item BUTTON\+\_\+\+MODE\+\_\+\+EXTI\+: Button will be connected to EXTI line with interrupt generation capability ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gae80f89593d6107eaf24fd82e38d75f85}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gae80f89593d6107eaf24fd82e38d75f85}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!GYRO\_IO\_Read@{GYRO\_IO\_Read}}
+\index{GYRO\_IO\_Read@{GYRO\_IO\_Read}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{GYRO\_IO\_Read()}{GYRO\_IO\_Read()}}
+{\footnotesize\ttfamily void GYRO\+\_\+\+IO\+\_\+\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint8\+\_\+t}]{Read\+Addr,  }\item[{uint16\+\_\+t}]{Num\+Byte\+To\+Read }\end{DoxyParamCaption})}
+
+
+
+Reads a block of data from the Gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Buffer} & Pointer to the buffer that receives the data read from the Gyroscope. \\
+\hline
+{\em Read\+Addr} & Gyroscope\textquotesingle{}s internal address to read from. \\
+\hline
+{\em Num\+Byte\+To\+Read} & Number of bytes to read from the Gyroscope. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga91f7211b833b9428166a7b4389fdba2e}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga91f7211b833b9428166a7b4389fdba2e}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!GYRO\_IO\_Write@{GYRO\_IO\_Write}}
+\index{GYRO\_IO\_Write@{GYRO\_IO\_Write}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{GYRO\_IO\_Write()}{GYRO\_IO\_Write()}}
+{\footnotesize\ttfamily void GYRO\+\_\+\+IO\+\_\+\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint8\+\_\+t}]{Write\+Addr,  }\item[{uint16\+\_\+t}]{Num\+Byte\+To\+Write }\end{DoxyParamCaption})}
+
+
+
+Writes one byte to the Gyroscope. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Buffer} & Pointer to the buffer containing the data to be written to the Gyroscope. \\
+\hline
+{\em Write\+Addr} & Gyroscope\textquotesingle{}s internal address to write to. \\
+\hline
+{\em Num\+Byte\+To\+Write} & Number of bytes to write. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gace5ebb1b3b098cb036585c47842bf935}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gace5ebb1b3b098cb036585c47842bf935}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!IOE\_Delay@{IOE\_Delay}}
+\index{IOE\_Delay@{IOE\_Delay}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Delay()}{IOE\_Delay()}}
+{\footnotesize\ttfamily void IOE\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+IOE Delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & in ms \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad5545897cdcf52846d4e5125ca08ba02}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad5545897cdcf52846d4e5125ca08ba02}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!IOE\_Read@{IOE\_Read}}
+\index{IOE\_Read@{IOE\_Read}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Read()}{IOE\_Read()}}
+{\footnotesize\ttfamily uint8\+\_\+t IOE\+\_\+\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg }\end{DoxyParamCaption})}
+
+
+
+IOE Reads single data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & read data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaaf62da44c5f3ba524033cb3e34a434fc}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaaf62da44c5f3ba524033cb3e34a434fc}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!IOE\_ReadMultiple@{IOE\_ReadMultiple}}
+\index{IOE\_ReadMultiple@{IOE\_ReadMultiple}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_ReadMultiple()}{IOE\_ReadMultiple()}}
+{\footnotesize\ttfamily uint16\+\_\+t IOE\+\_\+\+Read\+Multiple (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+IOE Reads multiple data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+{\em p\+Buffer} & pointer to data buffer \\
+\hline
+{\em Length} & length of the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if no problems to read multiple data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga6804257e10475b06cafd813afce0cf49}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga6804257e10475b06cafd813afce0cf49}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!IOE\_Write@{IOE\_Write}}
+\index{IOE\_Write@{IOE\_Write}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Write()}{IOE\_Write()}}
+{\footnotesize\ttfamily void IOE\+\_\+\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Value }\end{DoxyParamCaption})}
+
+
+
+IOE Writes single data operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+{\em Value} & Data to be written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!IOE\_WriteMultiple@{IOE\_WriteMultiple}}
+\index{IOE\_WriteMultiple@{IOE\_WriteMultiple}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_WriteMultiple()}{IOE\_WriteMultiple()}}
+{\footnotesize\ttfamily void IOE\+\_\+\+Write\+Multiple (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+IOE Writes multiple data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+{\em p\+Buffer} & pointer to data buffer \\
+\hline
+{\em Length} & length of the data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga0b45e37ff42910b44d218393ed479e12}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga0b45e37ff42910b44d218393ed479e12}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!LCD\_Delay@{LCD\_Delay}}
+\index{LCD\_Delay@{LCD\_Delay}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_Delay()}{LCD\_Delay()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+Wait for loop in ms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & in ms. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga10fd152b0ec2326173d80e922d8635fc}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga10fd152b0ec2326173d80e922d8635fc}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}!LCD\_IO\_ReadData@{LCD\_IO\_ReadData}}
+\index{LCD\_IO\_ReadData@{LCD\_IO\_ReadData}!STM32F429I DISCOVERY LOW LEVEL Private Functions@{STM32F429I DISCOVERY LOW LEVEL Private Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_IO\_ReadData()}{LCD\_IO\_ReadData()}}
+{\footnotesize\ttfamily uint32\+\_\+t LCD\+\_\+\+IO\+\_\+\+Read\+Data (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Reg\+Value,  }\item[{uint8\+\_\+t}]{Read\+Size }\end{DoxyParamCaption})}
+
+
+
+Reads register value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg\+Value} & Address of the register to read \\
+\hline
+{\em Read\+Size} & Number of bytes to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Content} & of the register value \\
+\hline
+\end{DoxyRetVals}

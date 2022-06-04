@@ -1,0 +1,170 @@
+\hypertarget{ili9325_8h_source}{}\doxysection{ili9325.\+h}
+\label{ili9325_8h_source}\index{Drivers/BSP/Components/ili9325/ili9325.h@{Drivers/BSP/Components/ili9325/ili9325.h}}
+\mbox{\hyperlink{ili9325_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_ILI9325\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_ILI9325\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/lcd.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define  ILI9325\_ID    0x9325}}
+\DoxyCodeLine{77    }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define  ILI9325\_LCD\_PIXEL\_WIDTH    ((uint16\_t)320)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define  ILI9325\_LCD\_PIXEL\_HEIGHT   ((uint16\_t)240)}}
+\DoxyCodeLine{83    }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define LCD\_REG\_0             0x00}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define LCD\_REG\_1             0x01}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define LCD\_REG\_2             0x02}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define LCD\_REG\_3             0x03}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define LCD\_REG\_4             0x04}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define LCD\_REG\_5             0x05}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define LCD\_REG\_6             0x06}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define LCD\_REG\_7             0x07}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define LCD\_REG\_8             0x08}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define LCD\_REG\_9             0x09}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define LCD\_REG\_10            0x0A}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define LCD\_REG\_12            0x0C}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define LCD\_REG\_13            0x0D}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define LCD\_REG\_14            0x0E}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define LCD\_REG\_15            0x0F}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define LCD\_REG\_16            0x10}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define LCD\_REG\_17            0x11}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define LCD\_REG\_18            0x12}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define LCD\_REG\_19            0x13}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define LCD\_REG\_20            0x14}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define LCD\_REG\_21            0x15}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define LCD\_REG\_22            0x16}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define LCD\_REG\_23            0x17}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define LCD\_REG\_24            0x18}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define LCD\_REG\_25            0x19}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define LCD\_REG\_26            0x1A}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define LCD\_REG\_27            0x1B}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define LCD\_REG\_28            0x1C}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define LCD\_REG\_29            0x1D}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define LCD\_REG\_30            0x1E}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define LCD\_REG\_31            0x1F}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define LCD\_REG\_32            0x20}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define LCD\_REG\_33            0x21}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define LCD\_REG\_34            0x22}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define LCD\_REG\_36            0x24}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define LCD\_REG\_37            0x25}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define LCD\_REG\_40            0x28}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define LCD\_REG\_41            0x29}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define LCD\_REG\_43            0x2B}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define LCD\_REG\_45            0x2D}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define LCD\_REG\_48            0x30}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define LCD\_REG\_49            0x31}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define LCD\_REG\_50            0x32}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define LCD\_REG\_51            0x33}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define LCD\_REG\_52            0x34}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define LCD\_REG\_53            0x35}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define LCD\_REG\_54            0x36}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define LCD\_REG\_55            0x37}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define LCD\_REG\_56            0x38}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define LCD\_REG\_57            0x39}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define LCD\_REG\_58            0x3A}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define LCD\_REG\_59            0x3B}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define LCD\_REG\_60            0x3C}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define LCD\_REG\_61            0x3D}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define LCD\_REG\_62            0x3E}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define LCD\_REG\_63            0x3F}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define LCD\_REG\_64            0x40}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define LCD\_REG\_65            0x41}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define LCD\_REG\_66            0x42}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define LCD\_REG\_67            0x43}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define LCD\_REG\_68            0x44}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define LCD\_REG\_69            0x45}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define LCD\_REG\_70            0x46}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define LCD\_REG\_71            0x47}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define LCD\_REG\_72            0x48}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define LCD\_REG\_73            0x49}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define LCD\_REG\_74            0x4A}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define LCD\_REG\_75            0x4B}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define LCD\_REG\_76            0x4C}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define LCD\_REG\_77            0x4D}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define LCD\_REG\_78            0x4E}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define LCD\_REG\_79            0x4F}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define LCD\_REG\_80            0x50}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define LCD\_REG\_81            0x51}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define LCD\_REG\_82            0x52}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define LCD\_REG\_83            0x53}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define LCD\_REG\_96            0x60}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define LCD\_REG\_97            0x61}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define LCD\_REG\_106           0x6A}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define LCD\_REG\_118           0x76}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define LCD\_REG\_128           0x80}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define LCD\_REG\_129           0x81}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define LCD\_REG\_130           0x82}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define LCD\_REG\_131           0x83}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define LCD\_REG\_132           0x84}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define LCD\_REG\_133           0x85}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define LCD\_REG\_134           0x86}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define LCD\_REG\_135           0x87}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define LCD\_REG\_136           0x88}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define LCD\_REG\_137           0x89}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define LCD\_REG\_139           0x8B}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define LCD\_REG\_140           0x8C}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define LCD\_REG\_141           0x8D}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define LCD\_REG\_143           0x8F}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define LCD\_REG\_144           0x90}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define LCD\_REG\_145           0x91}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define LCD\_REG\_146           0x92}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define LCD\_REG\_147           0x93}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define LCD\_REG\_148           0x94}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define LCD\_REG\_149           0x95}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define LCD\_REG\_150           0x96}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define LCD\_REG\_151           0x97}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define LCD\_REG\_152           0x98}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define LCD\_REG\_153           0x99}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define LCD\_REG\_154           0x9A}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define LCD\_REG\_157           0x9D}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define LCD\_REG\_192           0xC0}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define LCD\_REG\_193           0xC1}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define LCD\_REG\_229           0xE5}}
+\DoxyCodeLine{203 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_gac2dad7aeb7315082ba82dd2ff3b3f912}{ili9325\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{204 uint16\_t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga0d1bfb1436c67f911f952cf7259cda34}{ili9325\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{205 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_gab89b9cfe67618cf258b5659deab1adfa}{ili9325\_WriteReg}}(uint8\_t LCDReg, uint16\_t LCDRegValue);}
+\DoxyCodeLine{206 uint16\_t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga33a9d41f9d1d5cf4034f20c03d0c4765}{ili9325\_ReadReg}}(uint8\_t LCDReg);}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga45dbdb5ee31500eadf6fa0887d9d9159}{ili9325\_DisplayOn}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{209 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga2c5329f1c16c401a79c8f1927dee2897}{ili9325\_DisplayOff}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{210 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga080a128498e3867ed3dabe3fd74e1a5d}{ili9325\_SetCursor}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{211 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga79acefaa65edb44310fc055a287e4054}{ili9325\_WritePixel}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t RGBCode);}
+\DoxyCodeLine{212 uint16\_t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga6ea873dd731a4daa5411937d9430709f}{ili9325\_ReadPixel}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_gaecd849c1baa9601768ea3f648c8c8e3c}{ili9325\_DrawHLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{215 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga6f174cbeab5e2ef6233d885c3bec14ff}{ili9325\_DrawVLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{216 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_gaf263299af0fc74980cbce6105ee7215e}{ili9325\_DrawBitmap}}(uint16\_t Xpos, uint16\_t Ypos, uint8\_t *pbmp);}
+\DoxyCodeLine{217 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga9e85aeafcbeb67436ff3eeb8ac53fbb2}{ili9325\_DrawRGBImage}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Xsize, uint16\_t Ysize, uint8\_t *pdata);}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_gac5ef79f40ad604b9d2ca7ccd05be89f7}{ili9325\_SetDisplayWindow}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 uint16\_t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga1fdb88f871b6d7037e62066ff0a03b4c}{ili9325\_GetLcdPixelWidth}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{223 uint16\_t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga25a6b2c24b435cf2f434836b224bd2ad}{ili9325\_GetLcdPixelHeight}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 \textcolor{comment}{/* LCD driver structure */}}
+\DoxyCodeLine{226 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\_DrvTypeDef}}   ili9325\_drv;}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228 \textcolor{comment}{/* LCD IO functions */}}
+\DoxyCodeLine{229 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_gaccf0a45e037a886f9b1a849bedd63735}{LCD\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{230 \textcolor{keywordtype}{void}     LCD\_IO\_WriteMultipleData(uint8\_t *pData, uint32\_t Size);}
+\DoxyCodeLine{231 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga435f47c3f7c327325ea17f71fae7cebc}{LCD\_IO\_WriteReg}}(uint8\_t Reg);}
+\DoxyCodeLine{232 uint16\_t LCD\_IO\_ReadData(uint16\_t Reg);}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{239 \}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ILI9325\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{256 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

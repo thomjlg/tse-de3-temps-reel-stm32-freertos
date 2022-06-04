@@ -1,0 +1,38 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions}{}\doxysection{STM32\+F429I DISCOVERY EEPROM Exported Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions}\index{STM32F429I DISCOVERY EEPROM Exported Functions@{STM32F429I DISCOVERY EEPROM Exported Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga6d717b5f6afc3cdb99b13e9b7d7eed1e}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga6d717b5f6afc3cdb99b13e9b7d7eed1e}} 
+uint32\+\_\+t {\bfseries BSP\+\_\+\+EEPROM\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga1c1abade8bdf1d7be30c1549d1182b5e}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga1c1abade8bdf1d7be30c1549d1182b5e}} 
+uint32\+\_\+t {\bfseries BSP\+\_\+\+EEPROM\+\_\+\+Read\+Buffer} (uint8\+\_\+t $\ast$p\+Buffer, uint16\+\_\+t Read\+Addr, uint16\+\_\+t $\ast$Num\+Byte\+To\+Read)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga334dd1833afbd3790d096cc8c50d18b2}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga334dd1833afbd3790d096cc8c50d18b2}} 
+uint32\+\_\+t {\bfseries BSP\+\_\+\+EEPROM\+\_\+\+Write\+Page} (uint8\+\_\+t $\ast$p\+Buffer, uint16\+\_\+t Write\+Addr, uint8\+\_\+t $\ast$Num\+Byte\+To\+Write)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gade25f53f83972dcff20d9fbbf158054b}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gade25f53f83972dcff20d9fbbf158054b}} 
+uint32\+\_\+t {\bfseries BSP\+\_\+\+EEPROM\+\_\+\+Write\+Buffer} (uint8\+\_\+t $\ast$p\+Buffer, uint16\+\_\+t Write\+Addr, uint16\+\_\+t Num\+Byte\+To\+Write)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga8bc040164311e30678bea1339be60560}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga8bc040164311e30678bea1339be60560}} 
+uint32\+\_\+t {\bfseries BSP\+\_\+\+EEPROM\+\_\+\+Wait\+Eeprom\+Standby\+State} (void)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gaf6af0c34d2420078914fd5504e087d37}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gaf6af0c34d2420078914fd5504e087d37}} 
+void {\bfseries BSP\+\_\+\+EEPROM\+\_\+\+TIMEOUT\+\_\+\+User\+Callback} (void)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gaede36baff975b658c44252c7475e1f1d}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gaede36baff975b658c44252c7475e1f1d}} 
+void {\bfseries EEPROM\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gacec8bd8e70225f66180661c1c2542cc0}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gacec8bd8e70225f66180661c1c2542cc0}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries EEPROM\+\_\+\+IO\+\_\+\+Write\+Data} (uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Buffer\+Size)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gaa5103cc0e83e161ebe898b9014076c9b}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_gaa5103cc0e83e161ebe898b9014076c9b}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries EEPROM\+\_\+\+IO\+\_\+\+Read\+Data} (uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint8\+\_\+t $\ast$p\+Buffer, uint32\+\_\+t Buffer\+Size)
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga91c7e6644ddb30821b25a0edd61efc40}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___e_e_p_r_o_m___exported___functions_ga91c7e6644ddb30821b25a0edd61efc40}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries EEPROM\+\_\+\+IO\+\_\+\+Is\+Device\+Ready} (uint16\+\_\+t Dev\+Address, uint32\+\_\+t Trials)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

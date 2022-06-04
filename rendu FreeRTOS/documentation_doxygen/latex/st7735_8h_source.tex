@@ -1,0 +1,127 @@
+\hypertarget{st7735_8h_source}{}\doxysection{st7735.\+h}
+\label{st7735_8h_source}\index{Drivers/BSP/Components/st7735/st7735.h@{Drivers/BSP/Components/st7735/st7735.h}}
+\mbox{\hyperlink{st7735_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_ST7735\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_ST7735\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/lcd.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define  ST7735\_LCD\_PIXEL\_WIDTH    ((uint16\_t)128)}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define  ST7735\_LCD\_PIXEL\_HEIGHT   ((uint16\_t)160)}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define  LCD\_REG\_0               0x00 }\textcolor{comment}{/* No Operation: NOP */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define  LCD\_REG\_1               0x01 }\textcolor{comment}{/* Software reset: SWRESET */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define  LCD\_REG\_4               0x04 }\textcolor{comment}{/* Read Display ID: RDDID */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define  LCD\_REG\_9               0x09 }\textcolor{comment}{/* Read Display Statu: RDDST */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define  LCD\_REG\_10              0x0A }\textcolor{comment}{/* Read Display Power: RDDPM */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define  LCD\_REG\_11              0x0B }\textcolor{comment}{/* Read Display: RDDMADCTL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define  LCD\_REG\_12              0x0C }\textcolor{comment}{/* Read Display Pixel: RDDCOLMOD */}\textcolor{preprocessor}{  }}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define  LCD\_REG\_13              0x0D }\textcolor{comment}{/* Read Display Image: RDDIM */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define  LCD\_REG\_14              0x0E }\textcolor{comment}{/* Read Display Signal: RDDSM */}\textcolor{preprocessor}{                           }}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define  LCD\_REG\_16              0x10 }\textcolor{comment}{/* Sleep in \& booster off: SLPIN */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define  LCD\_REG\_17              0x11 }\textcolor{comment}{/* Sleep out \& booster on: SLPOUT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define  LCD\_REG\_18              0x12 }\textcolor{comment}{/* Partial mode on: PTLON */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define  LCD\_REG\_19              0x13 }\textcolor{comment}{/* Partial off (Normal): NORON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define  LCD\_REG\_32              0x20 }\textcolor{comment}{/* Display inversion off: INVOFF */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define  LCD\_REG\_33              0x21 }\textcolor{comment}{/* Display inversion on: INVON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define  LCD\_REG\_38              0x26 }\textcolor{comment}{/* Gamma curve select: GAMSET */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define  LCD\_REG\_40              0x28 }\textcolor{comment}{/* Display off: DISPOFF */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define  LCD\_REG\_41              0x29 }\textcolor{comment}{/* Display on: DISPON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define  LCD\_REG\_42              0x2A }\textcolor{comment}{/* Column address set: CASET */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define  LCD\_REG\_43              0x2B }\textcolor{comment}{/* Row address set: RASET */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define  LCD\_REG\_44              0x2C }\textcolor{comment}{/* Memory write: RAMWR */}\textcolor{preprocessor}{  }}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define  LCD\_REG\_45              0x2D }\textcolor{comment}{/* LUT for 4k,65k,262k color: RGBSET */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define  LCD\_REG\_46              0x2E }\textcolor{comment}{/* Memory read: RAMRD*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define  LCD\_REG\_48              0x30 }\textcolor{comment}{/* Partial start/end address set: PTLAR */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define  LCD\_REG\_52              0x34 }\textcolor{comment}{/* Tearing effect line off: TEOFF */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define  LCD\_REG\_53              0x35 }\textcolor{comment}{/* Tearing effect mode set \& on: TEON */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define  LCD\_REG\_54              0x36 }\textcolor{comment}{/* Memory data access control: MADCTL */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define  LCD\_REG\_56              0x38 }\textcolor{comment}{/* Idle mode off: IDMOFF */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define  LCD\_REG\_57              0x39 }\textcolor{comment}{/* Idle mode on: IDMON */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define  LCD\_REG\_58              0x3A }\textcolor{comment}{/* Interface pixel format: COLMOD */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define  LCD\_REG\_177             0xB1 }\textcolor{comment}{/* In normal mode (Full colors): FRMCTR1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define  LCD\_REG\_178             0xB2 }\textcolor{comment}{/* In Idle mode (8-\/colors): FRMCTR2 */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define  LCD\_REG\_179             0xB3 }\textcolor{comment}{/* In partial mode + Full colors: FRMCTR3 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define  LCD\_REG\_180             0xB4 }\textcolor{comment}{/* Display inversion control: INVCTR */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define  LCD\_REG\_192             0xC0 }\textcolor{comment}{/* Power control setting: PWCTR1 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define  LCD\_REG\_193             0xC1 }\textcolor{comment}{/* Power control setting: PWCTR2 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define  LCD\_REG\_194             0xC2 }\textcolor{comment}{/* In normal mode (Full colors): PWCTR3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define  LCD\_REG\_195             0xC3 }\textcolor{comment}{/* In Idle mode (8-\/colors): PWCTR4 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define  LCD\_REG\_196             0xC4 }\textcolor{comment}{/* In partial mode + Full colors: PWCTR5 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define  LCD\_REG\_197             0xC5 }\textcolor{comment}{/* VCOM control 1: VMCTR1 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define  LCD\_REG\_199             0xC7 }\textcolor{comment}{/* Set VCOM offset control: VMOFCTR */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define  LCD\_REG\_209             0xD1 }\textcolor{comment}{/* Set LCM version code: WRID2 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define  LCD\_REG\_210             0xD2 }\textcolor{comment}{/* Customer Project code: WRID3 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define  LCD\_REG\_217             0xD9 }\textcolor{comment}{/* NVM control status: NVCTR1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define  LCD\_REG\_218             0xDA }\textcolor{comment}{/* Read ID1: RDID1 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define  LCD\_REG\_219             0xDB }\textcolor{comment}{/* Read ID2: RDID2 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define  LCD\_REG\_220             0xDC }\textcolor{comment}{/* Read ID3: RDID3 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define  LCD\_REG\_222             0xDE }\textcolor{comment}{/* NVM Read Command: NVCTR2 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define  LCD\_REG\_223             0xDF }\textcolor{comment}{/* NVM Write Command: NVCTR3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define  LCD\_REG\_224             0xE0 }\textcolor{comment}{/* Set Gamma adjustment (+ polarity): GAMCTRP1 */}\textcolor{preprocessor}{                          }}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define  LCD\_REG\_225             0xE1 }\textcolor{comment}{/* Set Gamma adjustment (-\/ polarity): GAMCTRN1 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define LCD\_LINE\_0               LINE(0)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define LCD\_LINE\_1               LINE(1)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define LCD\_LINE\_2               LINE(2)}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define LCD\_LINE\_3               LINE(3)}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define LCD\_LINE\_4               LINE(4)}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define LCD\_LINE\_5               LINE(5)}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define LCD\_LINE\_6               LINE(6)}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define LCD\_LINE\_7               LINE(7)}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define LCD\_LINE\_8               LINE(8)}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define LCD\_LINE\_9               LINE(9)}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define LCD\_LINE\_10              LINE(10)}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define LCD\_LINE\_11              LINE(11)}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define LCD\_LINE\_12              LINE(12)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define LCD\_LINE\_13              LINE(13)}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define LCD\_LINE\_14              LINE(14)}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define LCD\_LINE\_15              LINE(15)}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define LCD\_LINE\_16              LINE(16)}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define LCD\_LINE\_17              LINE(17)}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define LCD\_LINE\_18              LINE(18)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define LCD\_LINE\_19              LINE(19) }}
+\DoxyCodeLine{158    }
+\DoxyCodeLine{166 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga61c27397b8896665126e6275349afc9d}{st7735\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{167 uint16\_t st7735\_ReadID(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga11f384ec5794a2e3ba2ed40d33248c98}{st7735\_DisplayOn}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{170 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga465ce5514c62c49a77be9c156ab5c56e}{st7735\_DisplayOff}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{171 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga73daff348d93e7cfe665cbee3f415186}{st7735\_SetCursor}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{172 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga7b96512c4fa885f9ad0c4873e9999b2a}{st7735\_WritePixel}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t RGBCode);}
+\DoxyCodeLine{173 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga8be4e6fdac7ae4d1f300d515efbbcb95}{st7735\_WriteReg}}(uint8\_t LCDReg, uint8\_t LCDRegValue);}
+\DoxyCodeLine{174 uint8\_t  st7735\_ReadReg(uint8\_t LCDReg);}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga6e774267d4d8bf517b3ff0e383342ea3}{st7735\_SetDisplayWindow}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{177 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gacb8d75e41d9b4a1d539040df211c6247}{st7735\_DrawHLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{178 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gae268609486ae0404017a43a62300850a}{st7735\_DrawVLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 uint16\_t \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaefe86718c82713c7c15a5ae6f8ed4214}{st7735\_GetLcdPixelWidth}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{181 uint16\_t \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gad918a3ad4e088a957e4e86a3f766b12f}{st7735\_GetLcdPixelHeight}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{182 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaeb135ea157d424b976ae241157080e98}{st7735\_DrawBitmap}}(uint16\_t Xpos, uint16\_t Ypos, uint8\_t *pbmp);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{comment}{/* LCD driver structure */}}
+\DoxyCodeLine{185 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\_DrvTypeDef}}   st7735\_drv;}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{comment}{/* LCD IO functions */}}
+\DoxyCodeLine{188 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaccf0a45e037a886f9b1a849bedd63735}{LCD\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{189 \textcolor{keywordtype}{void}     LCD\_IO\_WriteMultipleData(uint8\_t *pData, uint32\_t Size);}
+\DoxyCodeLine{190 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga435f47c3f7c327325ea17f71fae7cebc}{LCD\_IO\_WriteReg}}(uint8\_t Reg);}
+\DoxyCodeLine{191 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga0b45e37ff42910b44d218393ed479e12}{LCD\_Delay}}(uint32\_t delay);}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{197 \}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ST7735\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{214 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

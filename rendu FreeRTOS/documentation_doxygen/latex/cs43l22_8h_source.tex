@@ -1,0 +1,125 @@
+\hypertarget{cs43l22_8h_source}{}\doxysection{cs43l22.\+h}
+\label{cs43l22_8h_source}\index{Drivers/BSP/Components/cs43l22/cs43l22.h@{Drivers/BSP/Components/cs43l22/cs43l22.h}}
+\mbox{\hyperlink{cs43l22_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{36 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef \_\_CS43L22\_H}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define \_\_CS43L22\_H}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include "{}../Common/audio.h"{}}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{67 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{68 \textcolor{comment}{/***************************  Codec User defines ******************************/}}
+\DoxyCodeLine{69 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{70 \textcolor{comment}{/* Codec output DEVICE */}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_SPEAKER         1}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_HEADPHONE       2}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_BOTH            3}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_AUTO            4}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{comment}{/* Volume Levels values */}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define DEFAULT\_VOLMIN                0x00}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define DEFAULT\_VOLMAX                0xFF}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define DEFAULT\_VOLSTEP               0x04}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define AUDIO\_PAUSE                   0}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define AUDIO\_RESUME                  1}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{/* Codec POWER DOWN modes */}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define CODEC\_PDWN\_HW                 1}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define CODEC\_PDWN\_SW                 2}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{comment}{/* MUTE commands */}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define AUDIO\_MUTE\_ON                 1}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define AUDIO\_MUTE\_OFF                0}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{/* AUDIO FREQUENCY */}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_192K          ((uint32\_t)192000)}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_96K           ((uint32\_t)96000)}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_48K           ((uint32\_t)48000)}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_44K           ((uint32\_t)44100)}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_32K           ((uint32\_t)32000)}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_22K           ((uint32\_t)22050)}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_16K           ((uint32\_t)16000)}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_11K           ((uint32\_t)11025)}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_8K            ((uint32\_t)8000)  }}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define   CS43L22\_REG\_ID                  0x01}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define   CS43L22\_REG\_POWER\_CTL1          0x02}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define   CS43L22\_REG\_POWER\_CTL2          0x04}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define   CS43L22\_REG\_CLOCKING\_CTL        0x05}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define   CS43L22\_REG\_INTERFACE\_CTL1      0x06}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define   CS43L22\_REG\_INTERFACE\_CTL2      0x07}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PASSTHR\_A\_SELECT    0x08}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PASSTHR\_B\_SELECT    0x09}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define   CS43L22\_REG\_ANALOG\_ZC\_SR\_SETT   0x0A}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PASSTHR\_GANG\_CTL    0x0C}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PLAYBACK\_CTL1       0x0D}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define   CS43L22\_REG\_MISC\_CTL            0x0E}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PLAYBACK\_CTL2       0x0F}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PASSTHR\_A\_VOL       0x14}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PASSTHR\_B\_VOL       0x15}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PCMA\_VOL            0x1A}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define   CS43L22\_REG\_PCMB\_VOL            0x1B}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define   CS43L22\_REG\_BEEP\_FREQ\_ON\_TIME   0x1C}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define   CS43L22\_REG\_BEEP\_VOL\_OFF\_TIME   0x1D}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define   CS43L22\_REG\_BEEP\_TONE\_CFG       0x1E}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define   CS43L22\_REG\_TONE\_CTL            0x1F}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define   CS43L22\_REG\_MASTER\_A\_VOL        0x20}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define   CS43L22\_REG\_MASTER\_B\_VOL        0x21}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define   CS43L22\_REG\_HEADPHONE\_A\_VOL     0x22}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define   CS43L22\_REG\_HEADPHONE\_B\_VOL     0x23}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define   CS43L22\_REG\_SPEAKER\_A\_VOL       0x24}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define   CS43L22\_REG\_SPEAKER\_B\_VOL       0x25}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define   CS43L22\_REG\_CH\_MIXER\_SWAP       0x26}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define   CS43L22\_REG\_LIMIT\_CTL1          0x27}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define   CS43L22\_REG\_LIMIT\_CTL2          0x28}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define   CS43L22\_REG\_LIMIT\_ATTACK\_RATE   0x29}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define   CS43L22\_REG\_OVF\_CLK\_STATUS      0x2E}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define   CS43L22\_REG\_BATT\_COMPENSATION   0x2F}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define   CS43L22\_REG\_VP\_BATTERY\_LEVEL    0x30}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define   CS43L22\_REG\_SPEAKER\_STATUS      0x31}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define   CS43L22\_REG\_TEMPMONITOR\_CTL     0x32}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define   CS43L22\_REG\_THERMAL\_FOLDBACK    0x33}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define   CS43L22\_REG\_CHARGE\_PUMP\_FREQ    0x34}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{144 \textcolor{comment}{/****************************** REGISTER MAPPING ******************************/}}
+\DoxyCodeLine{145 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define  CS43L22\_ID            0xE0}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define  CS43L22\_ID\_MASK       0xF8}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define CS43L22\_CHIPID\_ADDR    0x01}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{182 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{183 \textcolor{comment}{                           Audio Codec functions }}
+\DoxyCodeLine{184 \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{185 \textcolor{comment}{/* High Layer codec functions */}}
+\DoxyCodeLine{186 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_ga47b373a281c7ba0ea0fac752f3d0a903}{cs43l22\_Init}}(uint16\_t DeviceAddr, uint16\_t OutputDevice, uint8\_t Volume, uint32\_t AudioFreq);}
+\DoxyCodeLine{187 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___c_s43_l22___exported___functions_gaeba1251bafcbeacb591dfe8cb8175447}{cs43l22\_DeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{188 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_gad4e4e8b889500f0e64c546a31d4b6dca}{cs43l22\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{189 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_ga1a210c3782b3d56db00565d4699f4c89}{cs43l22\_Play}}(uint16\_t DeviceAddr, uint16\_t* pBuffer, uint16\_t Size);}
+\DoxyCodeLine{190 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_gafc49ea6a76539430cd303849b60ae38d}{cs43l22\_Pause}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{191 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_ga579c0ef6455060e9117632f8d83d606a}{cs43l22\_Resume}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{192 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_ga8e551ac489dbd2b701f0ac6ed54c143b}{cs43l22\_Stop}}(uint16\_t DeviceAddr, uint32\_t Cmd);}
+\DoxyCodeLine{193 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_ga9cd060bb226e44065ec50c7803041114}{cs43l22\_SetVolume}}(uint16\_t DeviceAddr, uint8\_t Volume);}
+\DoxyCodeLine{194 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_ga1ea4920e35f5e5f903870a50b53bc719}{cs43l22\_SetFrequency}}(uint16\_t DeviceAddr, uint32\_t AudioFreq);}
+\DoxyCodeLine{195 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_gaed17c2b64d79830afa43b5a45b159286}{cs43l22\_SetMute}}(uint16\_t DeviceAddr, uint32\_t Cmd);}
+\DoxyCodeLine{196 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_gaad55b2ed28b599b34f4bfe50df745f0d}{cs43l22\_SetOutputMode}}(uint16\_t DeviceAddr, uint8\_t Output);}
+\DoxyCodeLine{197 uint32\_t \mbox{\hyperlink{group___c_s43_l22___exported___functions_ga647488feb466972a5557a2fe2e9350e7}{cs43l22\_Reset}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 \textcolor{comment}{/* AUDIO IO functions */}}
+\DoxyCodeLine{200 \textcolor{keywordtype}{void}      AUDIO\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{201 \textcolor{keywordtype}{void}      AUDIO\_IO\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{202 \textcolor{keywordtype}{void}      AUDIO\_IO\_Write(uint8\_t Addr, uint8\_t Reg, uint8\_t Value);}
+\DoxyCodeLine{203 uint8\_t   AUDIO\_IO\_Read(uint8\_t Addr, uint8\_t Reg);}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205 \textcolor{comment}{/* Audio driver structure */}}
+\DoxyCodeLine{206 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_a_u_d_i_o___drv_type_def}{AUDIO\_DrvTypeDef}}   cs43l22\_drv;}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CS43L22\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{226 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

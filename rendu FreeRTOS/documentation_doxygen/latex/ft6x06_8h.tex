@@ -1,0 +1,249 @@
+\hypertarget{ft6x06_8h}{}\doxysection{Drivers/\+BSP/\+Components/ft6x06/ft6x06.h File Reference}
+\label{ft6x06_8h}\index{Drivers/BSP/Components/ft6x06/ft6x06.h@{Drivers/BSP/Components/ft6x06/ft6x06.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{ft6x06_8c}{ft6x06.\+c}} IO expander driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/ts.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structft6x06__handle___type_def}{ft6x06\+\_\+handle\+\_\+\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ft6x06_8h_a86e3923c6c37631a3c68b5d20c106466}\label{ft6x06_8h_a86e3923c6c37631a3c68b5d20c106466}} 
+\#define {\bfseries TS\+\_\+\+MULTI\+\_\+\+TOUCH\+\_\+\+SUPPORTED}~0
+\item 
+\mbox{\Hypertarget{ft6x06_8h_aeae2a55d192ad87434e82d7ffe022ceb}\label{ft6x06_8h_aeae2a55d192ad87434e82d7ffe022ceb}} 
+\#define {\bfseries TS\+\_\+\+AUTO\+\_\+\+CALIBRATION\+\_\+\+SUPPORTED}~0
+\item 
+\#define {\bfseries FT\+\_\+6206\+\_\+\+MAX\+\_\+\+WIDTH}~((uint16\+\_\+t)800)     /$\ast$ Touchscreen pad max width   $\ast$/
+\item 
+\#define {\bfseries FT\+\_\+6206\+\_\+\+MAX\+\_\+\+HEIGHT}~((uint16\+\_\+t)480)     /$\ast$ Touchscreen pad max height  $\ast$/
+\item 
+\#define {\bfseries FT\+\_\+6206\+\_\+\+MAX\+\_\+\+WIDTH\+\_\+\+HEIGHT}~((uint16\+\_\+t)240)
+\item 
+\#define {\bfseries FT6206\+\_\+\+STATUS\+\_\+\+OK}~0
+\item 
+\#define {\bfseries FT6206\+\_\+\+STATUS\+\_\+\+NOT\+\_\+\+OK}~1
+\item 
+\#define {\bfseries FT6206\+\_\+\+I2\+C\+\_\+\+NOT\+\_\+\+INITIALIZED}~0
+\item 
+\#define {\bfseries FT6206\+\_\+\+I2\+C\+\_\+\+INITIALIZED}~1
+\item 
+\#define {\bfseries FT6206\+\_\+\+MAX\+\_\+\+DETECTABLE\+\_\+\+TOUCH}~2
+\item 
+\#define {\bfseries FT6206\+\_\+\+DEV\+\_\+\+MODE\+\_\+\+REG}~0x00
+\begin{DoxyCompactList}\small\item\em \+: Definitions for FT6206 I2C register addresses on 8 bit \end{DoxyCompactList}\item 
+\#define {\bfseries FT6206\+\_\+\+DEV\+\_\+\+MODE\+\_\+\+WORKING}~0x00
+\item 
+\#define {\bfseries FT6206\+\_\+\+DEV\+\_\+\+MODE\+\_\+\+FACTORY}~0x04
+\item 
+\#define {\bfseries FT6206\+\_\+\+DEV\+\_\+\+MODE\+\_\+\+MASK}~0x7
+\item 
+\#define {\bfseries FT6206\+\_\+\+DEV\+\_\+\+MODE\+\_\+\+SHIFT}~4
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+REG}~0x01
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+NO\+\_\+\+GESTURE}~0x00
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+MOVE\+\_\+\+UP}~0x10
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+MOVE\+\_\+\+RIGHT}~0x14
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+MOVE\+\_\+\+DOWN}~0x18
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+MOVE\+\_\+\+LEFT}~0x1C
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+ZOOM\+\_\+\+IN}~0x48
+\item 
+\#define {\bfseries FT6206\+\_\+\+GEST\+\_\+\+ID\+\_\+\+ZOOM\+\_\+\+OUT}~0x49
+\item 
+\#define {\bfseries FT6206\+\_\+\+TD\+\_\+\+STAT\+\_\+\+REG}~0x02
+\item 
+\#define {\bfseries FT6206\+\_\+\+TD\+\_\+\+STAT\+\_\+\+MASK}~0x0F
+\item 
+\#define {\bfseries FT6206\+\_\+\+TD\+\_\+\+STAT\+\_\+\+SHIFT}~0x00
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+EVT\+\_\+\+FLAG\+\_\+\+PRESS\+\_\+\+DOWN}~0x00
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+EVT\+\_\+\+FLAG\+\_\+\+LIFT\+\_\+\+UP}~0x01
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+EVT\+\_\+\+FLAG\+\_\+\+CONTACT}~0x02
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+EVT\+\_\+\+FLAG\+\_\+\+NO\+\_\+\+EVENT}~0x03
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+EVT\+\_\+\+FLAG\+\_\+\+SHIFT}~6
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+EVT\+\_\+\+FLAG\+\_\+\+MASK}~(3 $<$$<$ FT6206\+\_\+\+TOUCH\+\_\+\+EVT\+\_\+\+FLAG\+\_\+\+SHIFT)
+\item 
+\#define {\bfseries FT6206\+\_\+\+MSB\+\_\+\+MASK}~0x0F
+\item 
+\#define {\bfseries FT6206\+\_\+\+MSB\+\_\+\+SHIFT}~0
+\item 
+\#define {\bfseries FT6206\+\_\+\+LSB\+\_\+\+MASK}~0x\+FF
+\item 
+\#define {\bfseries FT6206\+\_\+\+LSB\+\_\+\+SHIFT}~0
+\item 
+\#define {\bfseries FT6206\+\_\+\+P1\+\_\+\+XH\+\_\+\+REG}~0x03
+\item 
+\#define {\bfseries FT6206\+\_\+\+P1\+\_\+\+XL\+\_\+\+REG}~0x04
+\item 
+\#define {\bfseries FT6206\+\_\+\+P1\+\_\+\+YH\+\_\+\+REG}~0x05
+\item 
+\#define {\bfseries FT6206\+\_\+\+P1\+\_\+\+YL\+\_\+\+REG}~0x06
+\item 
+\#define {\bfseries FT6206\+\_\+\+P1\+\_\+\+WEIGHT\+\_\+\+REG}~0x07
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+WEIGHT\+\_\+\+MASK}~0x\+FF
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+WEIGHT\+\_\+\+SHIFT}~0
+\item 
+\#define {\bfseries FT6206\+\_\+\+P1\+\_\+\+MISC\+\_\+\+REG}~0x08
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+AREA\+\_\+\+MASK}~(0x04 $<$$<$ 4)
+\item 
+\#define {\bfseries FT6206\+\_\+\+TOUCH\+\_\+\+AREA\+\_\+\+SHIFT}~0x04
+\item 
+\#define {\bfseries FT6206\+\_\+\+P2\+\_\+\+XH\+\_\+\+REG}~0x09
+\item 
+\#define {\bfseries FT6206\+\_\+\+P2\+\_\+\+XL\+\_\+\+REG}~0x0A
+\item 
+\#define {\bfseries FT6206\+\_\+\+P2\+\_\+\+YH\+\_\+\+REG}~0x0B
+\item 
+\#define {\bfseries FT6206\+\_\+\+P2\+\_\+\+YL\+\_\+\+REG}~0x0C
+\item 
+\#define {\bfseries FT6206\+\_\+\+P2\+\_\+\+WEIGHT\+\_\+\+REG}~0x0D
+\item 
+\#define {\bfseries FT6206\+\_\+\+P2\+\_\+\+MISC\+\_\+\+REG}~0x0E
+\item 
+\#define {\bfseries FT6206\+\_\+\+TH\+\_\+\+GROUP\+\_\+\+REG}~0x80
+\item 
+\#define {\bfseries FT6206\+\_\+\+THRESHOLD\+\_\+\+MASK}~0x\+FF
+\item 
+\#define {\bfseries FT6206\+\_\+\+THRESHOLD\+\_\+\+SHIFT}~0
+\item 
+\#define {\bfseries FT6206\+\_\+\+TH\+\_\+\+DIFF\+\_\+\+REG}~0x85
+\item 
+\#define {\bfseries FT6206\+\_\+\+CTRL\+\_\+\+REG}~0x86
+\item 
+\#define {\bfseries FT6206\+\_\+\+CTRL\+\_\+\+KEEP\+\_\+\+ACTIVE\+\_\+\+MODE}~0x00
+\item 
+\#define {\bfseries FT6206\+\_\+\+CTRL\+\_\+\+KEEP\+\_\+\+AUTO\+\_\+\+SWITCH\+\_\+\+MONITOR\+\_\+\+MODE}~0x01
+\item 
+\#define {\bfseries FT6206\+\_\+\+TIMEENTERMONITOR\+\_\+\+REG}~0x87
+\item 
+\#define {\bfseries FT6206\+\_\+\+PERIODACTIVE\+\_\+\+REG}~0x88
+\item 
+\#define {\bfseries FT6206\+\_\+\+PERIODMONITOR\+\_\+\+REG}~0x89
+\item 
+\#define {\bfseries FT6206\+\_\+\+RADIAN\+\_\+\+VALUE\+\_\+\+REG}~0x91
+\item 
+\#define {\bfseries FT6206\+\_\+\+OFFSET\+\_\+\+LEFT\+\_\+\+RIGHT\+\_\+\+REG}~0x92
+\item 
+\#define {\bfseries FT6206\+\_\+\+OFFSET\+\_\+\+UP\+\_\+\+DOWN\+\_\+\+REG}~0x93
+\item 
+\#define {\bfseries FT6206\+\_\+\+DISTANCE\+\_\+\+LEFT\+\_\+\+RIGHT\+\_\+\+REG}~0x94
+\item 
+\#define {\bfseries FT6206\+\_\+\+DISTANCE\+\_\+\+UP\+\_\+\+DOWN\+\_\+\+REG}~0x95
+\item 
+\#define {\bfseries FT6206\+\_\+\+DISTANCE\+\_\+\+ZOOM\+\_\+\+REG}~0x96
+\item 
+\#define {\bfseries FT6206\+\_\+\+LIB\+\_\+\+VER\+\_\+\+H\+\_\+\+REG}~0x\+A1
+\item 
+\#define {\bfseries FT6206\+\_\+\+LIB\+\_\+\+VER\+\_\+\+L\+\_\+\+REG}~0x\+A2
+\item 
+\#define {\bfseries FT6206\+\_\+\+CIPHER\+\_\+\+REG}~0x\+A3
+\item 
+\#define {\bfseries FT6206\+\_\+\+GMODE\+\_\+\+REG}~0x\+A4
+\item 
+\#define {\bfseries FT6206\+\_\+\+G\+\_\+\+MODE\+\_\+\+INTERRUPT\+\_\+\+MASK}~0x03
+\item 
+\#define {\bfseries FT6206\+\_\+\+G\+\_\+\+MODE\+\_\+\+INTERRUPT\+\_\+\+SHIFT}~0x00
+\item 
+\#define {\bfseries FT6206\+\_\+\+G\+\_\+\+MODE\+\_\+\+INTERRUPT\+\_\+\+POLLING}~0x00
+\item 
+\#define {\bfseries FT6206\+\_\+\+G\+\_\+\+MODE\+\_\+\+INTERRUPT\+\_\+\+TRIGGER}~0x01
+\item 
+\#define {\bfseries FT6206\+\_\+\+PWR\+\_\+\+MODE\+\_\+\+REG}~0x\+A5
+\item 
+\#define {\bfseries FT6206\+\_\+\+FIRMID\+\_\+\+REG}~0x\+A6
+\item 
+\#define {\bfseries FT6206\+\_\+\+CHIP\+\_\+\+ID\+\_\+\+REG}~0x\+A8
+\item 
+\#define {\bfseries FT6206\+\_\+\+ID\+\_\+\+VALUE}~0x11
+\item 
+\#define {\bfseries FT6x36\+\_\+\+ID\+\_\+\+VALUE}~0x\+CD
+\item 
+\#define {\bfseries FT6206\+\_\+\+RELEASE\+\_\+\+CODE\+\_\+\+ID\+\_\+\+REG}~0x\+AF
+\item 
+\#define {\bfseries FT6206\+\_\+\+STATE\+\_\+\+REG}~0x\+BC
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ft6x06___exported___functions_gafe7ac293c9d9896c47f08cf8bc3443df}{ft6x06\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em ft6x06 Control functions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___exported___functions_gad2d626c5c5d733efd83833d52450dab1}{ft6x06\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Software Reset the ft6x06. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__ft6x06___exported___functions_ga714520adcf3d75394a2f08cf428d3c40}{ft6x06\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the ft6x06 device ID, pre intitalize I2C in case of need to be able to read the FT6206 device ID, and verify this is a FT6206. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___exported___functions_ga0b3b8a00d8eaa2c7897faa510c6be8e6}{ft6x06\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen IC device to start detecting touches. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ft6x06___exported___functions_ga3e9239483436ee60bee91078004b446f}{ft6x06\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touches detected or not. Try to detect new touches and forget the old ones (reset internal global variables). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___exported___functions_ga9617cc523a8f1817698200a35b1bf45d}{ft6x06\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values Manage multi touch thanks to touch Index global variable \textquotesingle{}ft6x06\+\_\+handle.\+curr\+Active\+Touch\+Idx\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___exported___functions_ga55dc85a22e1cf328f4375a2399a1f552}{ft6x06\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the FT6206 device to generate IT on given INT pin connected to MCU as EXTI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___exported___functions_gac9a37ec0615a1d509fe23b155fb54645}{ft6x06\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the FT6206 device to stop generating IT on the given INT pin connected to MCU as EXTI. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ft6x06___exported___functions_ga877eeda8f858e0c17aeefe412f1192cf}{ft6x06\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Get IT status from FT6206 interrupt status registers Should be called Following an EXTI coming to the MCU to know the detailed reason of the interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___exported___functions_gac63b3b4e1b2ce96d72356b7ea1d8f1c8}{ft6x06\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Clear IT status in FT6206 interrupt status clear registers Should be called Following an EXTI coming to the MCU. \end{DoxyCompactList}\item 
+void {\bfseries TS\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+void {\bfseries TS\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t Addr, uint8\+\_\+t Reg, uint8\+\_\+t Value)
+\item 
+uint8\+\_\+t {\bfseries TS\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t Addr, uint8\+\_\+t Reg)
+\item 
+uint16\+\_\+t {\bfseries TS\+\_\+\+IO\+\_\+\+Read\+Multiple} (uint8\+\_\+t Addr, uint8\+\_\+t Reg, uint8\+\_\+t $\ast$Buffer, uint16\+\_\+t Length)
+\item 
+void {\bfseries TS\+\_\+\+IO\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} {\bfseries ft6x06\+\_\+ts\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{ft6x06_8c}{ft6x06.\+c}} IO expander driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

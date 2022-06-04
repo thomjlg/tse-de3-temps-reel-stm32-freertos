@@ -1,0 +1,43 @@
+\hypertarget{stm32f429i__discovery__ts_8c}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery\+\_\+ts.c File Reference}
+\label{stm32f429i__discovery__ts_8c}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_ts.c@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_ts.c}}
+
+
+This file provides a set of functions needed to manage Touch screen available with STMPE811 IO Expander device mounted on STM32\+F429\+I-\/\+Discovery Kit.  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+ts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+io.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___private___functions_ga18d2df11ce4364958d3a83b66d975421}{BSP\+\_\+\+TS\+\_\+\+Init}} (uint16\+\_\+t XSize, uint16\+\_\+t YSize)
+\begin{DoxyCompactList}\small\item\em Initializes and configures the touch screen functionalities and configures all necessary hardware resources (GPIOs, clocks..). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___private___functions_ga9ee5e7f25f303d41fab3a0e078225168}{BSP\+\_\+\+TS\+\_\+\+ITConfig}} (void)
+\begin{DoxyCompactList}\small\item\em Configures and enables the touch screen interrupts. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___private___functions_ga3da0a8dcaa653c2ffee4231da98ea7ee}{BSP\+\_\+\+TS\+\_\+\+ITGet\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the TS IT status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___private___functions_ga292d406e66b589cfb5e4d52557bd5855}{BSP\+\_\+\+TS\+\_\+\+Get\+State}} (\mbox{\hyperlink{struct_t_s___state_type_def}{TS\+\_\+\+State\+Type\+Def}} $\ast$Ts\+State)
+\begin{DoxyCompactList}\small\item\em Returns status and positions of the touch screen. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+TS\+\_\+\+ITClear} (void)
+\begin{DoxyCompactList}\small\item\em Clears all touch screen interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage Touch screen available with STMPE811 IO Expander device mounted on STM32\+F429\+I-\/\+Discovery Kit. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,118 @@
+\hypertarget{stmpe811_8c}{}\doxysection{Drivers/\+BSP/\+Components/stmpe811/stmpe811.c File Reference}
+\label{stmpe811_8c}\index{Drivers/BSP/Components/stmpe811/stmpe811.c@{Drivers/BSP/Components/stmpe811/stmpe811.c}}
+
+
+This file provides a set of functions needed to manage the STMPE811 IO Expander devices.  
+
+
+{\ttfamily \#include \char`\"{}stmpe811.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries STMPE811\+\_\+\+MAX\+\_\+\+INSTANCE}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga5feafdd84c8af0d2384509425422d9b1}{stmpe811\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Initialize the stmpe811 and configure the needed hardware resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga40d34415bd52b78096fa6c9b9bb92126}{stmpe811\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the stmpe811 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gabb9c2cd405cc42c773d04de65862bc2c}{stmpe811\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the stmpe811 IO Expander device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga39df0fdc87be8229ddd44e4c7297a774}{stmpe811\+\_\+\+Enable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga54bdd8669c2d73fde1939fd15d28c3a2}{stmpe811\+\_\+\+Disable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga82f479a7684adf9c8f32972b3ccb8daf}{stmpe811\+\_\+\+Enable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gaa72900e194641921649229f22ad349ec}{stmpe811\+\_\+\+Disable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga5a70edb897af292cf1b64db901f09fbc}{stmpe811\+\_\+\+Set\+ITPolarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga346c425ef8c88c868591eb97f97aa298}{stmpe811\+\_\+\+Set\+ITType}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Type)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Type. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga586f13e10186147660e8b09ca0574a17}{stmpe811\+\_\+\+Global\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Check the selected Global interrupt source pending bit. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gac3b8ba5f65a98bdd9e9344a5c6d80589}{stmpe811\+\_\+\+Read\+GITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Return the Global interrupts status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gadf6fcaf4bcd765c0e5c9f96781cbbbf9}{stmpe811\+\_\+\+Clear\+Global\+IT}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Clear the selected Global interrupt pending bit(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga60a6a887200a980d09b703c627c8f5f9}{stmpe811\+\_\+\+IO\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Start the IO functionality use and disable the AF for selected IO pin(s). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga40c9ce3dd13c6b0e657de662fb35d9ce}{stmpe811\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gaaa0cf2f844c6d262b9fce9a2cc6fd902}{stmpe811\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em Initialize the selected IO pin direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga1529e270bd11bca071743a260741500f}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+AF}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable the AF for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gabc0ce22f7579972aa15251a20ec7e3cc}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+AF}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the AF for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga8f7f014edbe93fe0b95597ba42bfb928}{stmpe811\+\_\+\+IO\+\_\+\+Set\+Edge\+Mode}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Edge)
+\begin{DoxyCompactList}\small\item\em Configure the Edge for which a transition is detectable for the selected pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga4b75f623e16115387ca332c8e6a23378}{stmpe811\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Write a new IO pin state. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga1f838b67ba27809406633ca90f0ef6bb}{stmpe811\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Return the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gabca64e4661421c71506e17dedd52ba65}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga022afc5cec314919ae18e18b19ed6236}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga95f1f39fa2edd3d5b6ed32ec777a73da}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga8b7fcc635c1677d87dc2fbc71932b588}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga641547eeeb366b88eaa00cc25b984025}{stmpe811\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Check the status of the selected IO interrupt pending bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga6ab7ad96a8c53b799c893925471e3811}{stmpe811\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear the selected IO interrupt pending bit(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga6c2784b727e123850d09a884027d1521}{stmpe811\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen Controller (Single point detection) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga4e475a85fca0c46acdce3fc310dec86c}{stmpe811\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touch detected or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gab242655d3918e03e289140fcd49e9776}{stmpe811\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gafd18353ba1e835324c98b7f7c03244f8}{stmpe811\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gafba8e0baf0b89f5ea9b4cc1940468383}{stmpe811\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_gad34fc9bbe11dca105a81374145155448}{stmpe811\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___private___functions_ga974ece91b797f5fb28e76d2d192932a5}{stmpe811\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___s_t_m_p_e811___private___variables_ga8a8c3b1d0c9b85335bdb74c1cfc6a041}{stmpe811\+\_\+ts\+\_\+drv}}
+\item 
+\mbox{\hyperlink{struct_i_o___drv_type_def}{IO\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___s_t_m_p_e811___private___variables_ga01a31abe80ee484688566c0be1504d5b}{stmpe811\+\_\+io\+\_\+drv}}
+\item 
+uint8\+\_\+t {\bfseries stmpe811} \mbox{[}STMPE811\+\_\+\+MAX\+\_\+\+INSTANCE\mbox{]} = \{0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage the STMPE811 IO Expander devices. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15-\/December-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,132 @@
+\hypertarget{freertos__tasks__c__additions_8h_source}{}\doxysection{freertos\+\_\+tasks\+\_\+c\+\_\+additions.\+h}
+\label{freertos__tasks__c__additions_8h_source}\index{Core/Inc/freertos\_tasks\_c\_additions.h@{Core/Inc/freertos\_tasks\_c\_additions.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright 2017 NXP}}
+\DoxyCodeLine{3 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without modification,}}
+\DoxyCodeLine{6 \textcolor{comment}{ * are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ * o Redistributions of source code must retain the above copyright notice, this list}}
+\DoxyCodeLine{9 \textcolor{comment}{ *   of conditions and the following disclaimer.}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ * o Redistributions in binary form must reproduce the above copyright notice, this}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   list of conditions and the following disclaimer in the documentation and/or}}
+\DoxyCodeLine{13 \textcolor{comment}{ *   other materials provided with the distribution.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *}}
+\DoxyCodeLine{15 \textcolor{comment}{ * o Neither the name of the copyright holder nor the names of its}}
+\DoxyCodeLine{16 \textcolor{comment}{ *   contributors may be used to endorse or promote products derived from this}}
+\DoxyCodeLine{17 \textcolor{comment}{ *   software without specific prior written permission.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *}}
+\DoxyCodeLine{19 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{} AND}}
+\DoxyCodeLine{20 \textcolor{comment}{ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED}}
+\DoxyCodeLine{21 \textcolor{comment}{ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE}}
+\DoxyCodeLine{22 \textcolor{comment}{ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR}}
+\DoxyCodeLine{23 \textcolor{comment}{ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES}}
+\DoxyCodeLine{24 \textcolor{comment}{ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{25 \textcolor{comment}{ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON}}
+\DoxyCodeLine{26 \textcolor{comment}{ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}}
+\DoxyCodeLine{27 \textcolor{comment}{ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS}}
+\DoxyCodeLine{28 \textcolor{comment}{ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{29 \textcolor{comment}{ */}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{/* freertos\_tasks\_c\_additions.h Rev. 1.2 */}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#ifndef FREERTOS\_TASKS\_C\_ADDITIONS\_H}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define FREERTOS\_TASKS\_C\_ADDITIONS\_H}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#if (configUSE\_TRACE\_FACILITY == 0)}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#error "{}configUSE\_TRACE\_FACILITY must be enabled"{}}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define FREERTOS\_DEBUG\_CONFIG\_MAJOR\_VERSION 1}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define FREERTOS\_DEBUG\_CONFIG\_MINOR\_VERSION 1}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{comment}{/* NOTE!!}}
+\DoxyCodeLine{45 \textcolor{comment}{ * Default to a FreeRTOS version which didn't include these macros. FreeRTOS}}
+\DoxyCodeLine{46 \textcolor{comment}{ * v7.5.3 is used here.}}
+\DoxyCodeLine{47 \textcolor{comment}{ */}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#ifndef tskKERNEL\_VERSION\_BUILD}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define tskKERNEL\_VERSION\_BUILD 3}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#ifndef tskKERNEL\_VERSION\_MINOR}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define tskKERNEL\_VERSION\_MINOR 5}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#ifndef tskKERNEL\_VERSION\_MAJOR}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define tskKERNEL\_VERSION\_MAJOR 7}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{comment}{/* NOTE!!}}
+\DoxyCodeLine{59 \textcolor{comment}{ * The configFRTOS\_MEMORY\_SCHEME macro describes the heap scheme using a value}}
+\DoxyCodeLine{60 \textcolor{comment}{ * 1 -\/ 5 which corresponds to the following schemes:}}
+\DoxyCodeLine{61 \textcolor{comment}{ *}}
+\DoxyCodeLine{62 \textcolor{comment}{ * heap\_1 -\/ the very simplest, does not permit memory to be freed}}
+\DoxyCodeLine{63 \textcolor{comment}{ * heap\_2 -\/ permits memory to be freed, but not does coalescence adjacent free}}
+\DoxyCodeLine{64 \textcolor{comment}{ *          blocks.}}
+\DoxyCodeLine{65 \textcolor{comment}{ * heap\_3 -\/ simply wraps the standard malloc() and free() for thread safety}}
+\DoxyCodeLine{66 \textcolor{comment}{ * heap\_4 -\/ coalesces adjacent free blocks to avoid fragmentation. Includes}}
+\DoxyCodeLine{67 \textcolor{comment}{ *          absolute address placement option}}
+\DoxyCodeLine{68 \textcolor{comment}{ * heap\_5 -\/ as per heap\_4, with the ability to span the heap across}}
+\DoxyCodeLine{69 \textcolor{comment}{ *          multiple nonOadjacent memory areas}}
+\DoxyCodeLine{70 \textcolor{comment}{ */}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#ifndef configFRTOS\_MEMORY\_SCHEME}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define configFRTOS\_MEMORY\_SCHEME 4 }\textcolor{comment}{/* thread safe malloc */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#if ((configFRTOS\_MEMORY\_SCHEME > 5) || (configFRTOS\_MEMORY\_SCHEME < 1))}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#error "{}Invalid configFRTOS\_MEMORY\_SCHEME setting!"{}}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{80 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{keyword}{extern} \textcolor{keyword}{const} uint8\_t FreeRTOSDebugConfig[];}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{comment}{/* NOTES!!}}
+\DoxyCodeLine{86 \textcolor{comment}{ * IAR documentation is confusing. It suggests the data must be statically}}
+\DoxyCodeLine{87 \textcolor{comment}{ * linked, and the \#pragma placed immediately before the symbol definition.}}
+\DoxyCodeLine{88 \textcolor{comment}{ * The IAR supplied examples violate both "{}rules"{}, so this is a best guess.}}
+\DoxyCodeLine{89 \textcolor{comment}{ */}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#if defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{91 \textcolor{keyword}{const} uint8\_t FreeRTOSDebugConfig[] \_\_attribute\_\_((section(\textcolor{stringliteral}{"{}.rodata"{}}))) =}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#elif defined(\_\_CC\_ARM)}}
+\DoxyCodeLine{93 \textcolor{keyword}{const} uint8\_t FreeRTOSDebugConfig[] \_\_attribute\_\_((used)) =}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#elif defined(\_\_IAR\_SYSTEMS\_ICC\_\_)}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#pragma required=FreeRTOSDebugConfig}}
+\DoxyCodeLine{96 \textcolor{keyword}{const} uint8\_t FreeRTOSDebugConfig[] =}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{98 \{}
+\DoxyCodeLine{99     FREERTOS\_DEBUG\_CONFIG\_MAJOR\_VERSION,}
+\DoxyCodeLine{100     FREERTOS\_DEBUG\_CONFIG\_MINOR\_VERSION,}
+\DoxyCodeLine{101     tskKERNEL\_VERSION\_MAJOR,}
+\DoxyCodeLine{102     tskKERNEL\_VERSION\_MINOR,}
+\DoxyCodeLine{103     tskKERNEL\_VERSION\_BUILD,}
+\DoxyCodeLine{104     configFRTOS\_MEMORY\_SCHEME,}
+\DoxyCodeLine{105     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, pxTopOfStack),}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#if (tskKERNEL\_VERSION\_MAJOR > 8)}}
+\DoxyCodeLine{107     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, xStateListItem),}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{109     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, xGenericListItem),}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{111     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, xEventListItem),}
+\DoxyCodeLine{112     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, pxStack),}
+\DoxyCodeLine{113     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, pcTaskName),}
+\DoxyCodeLine{114     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, uxTCBNumber),}
+\DoxyCodeLine{115     offsetof(\textcolor{keyword}{struct} \mbox{\hyperlink{structtsk_task_control_block}{tskTaskControlBlock}}, uxTaskNumber),}
+\DoxyCodeLine{116     configMAX\_TASK\_NAME\_LEN,}
+\DoxyCodeLine{117     configMAX\_PRIORITIES,}
+\DoxyCodeLine{118     0 \textcolor{comment}{/* pad to 32-\/bit boundary */}}
+\DoxyCodeLine{119 \};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{122 \}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FREERTOS\_TASKS\_C\_ADDITIONS\_H}}
+\DoxyCodeLine{126 }
+
+\end{DoxyCode}

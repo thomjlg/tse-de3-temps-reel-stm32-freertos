@@ -1,0 +1,85 @@
+\hypertarget{group___s5_k5_c_a_g___private___functions}{}\doxysection{S5\+K5\+CAG\+\_\+\+Private\+\_\+\+Functions}
+\label{group___s5_k5_c_a_g___private___functions}\index{S5K5CAG\_Private\_Functions@{S5K5CAG\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s5_k5_c_a_g___private___functions_ga22ad9c0eccce35104808245ab8cb6c1e}{s5k5cag\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em Initializes the S5\+K5\+CAG CAMERA component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s5_k5_c_a_g___private___functions_ga24c04fdcc805bf88b879e8216138f85d}{s5k5cag\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t feature, uint32\+\_\+t value, uint32\+\_\+t brightness\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the S5\+K5\+CAG camera feature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s5_k5_c_a_g___private___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}{s5k5cag\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the S5\+K5\+CAG Camera identity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s5_k5_c_a_g___private___functions_ga24c04fdcc805bf88b879e8216138f85d}\label{group___s5_k5_c_a_g___private___functions_ga24c04fdcc805bf88b879e8216138f85d}} 
+\index{S5K5CAG\_Private\_Functions@{S5K5CAG\_Private\_Functions}!s5k5cag\_Config@{s5k5cag\_Config}}
+\index{s5k5cag\_Config@{s5k5cag\_Config}!S5K5CAG\_Private\_Functions@{S5K5CAG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{s5k5cag\_Config()}{s5k5cag\_Config()}}
+{\footnotesize\ttfamily void s5k5cag\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{feature,  }\item[{uint32\+\_\+t}]{value,  }\item[{uint32\+\_\+t}]{brightness\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Configures the S5\+K5\+CAG camera feature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em feature} & Camera feature to be configured \\
+\hline
+{\em value} & Value to be configured \\
+\hline
+{\em brightness\+\_\+value} & Brightness value to be configured \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s5_k5_c_a_g___private___functions_ga22ad9c0eccce35104808245ab8cb6c1e}\label{group___s5_k5_c_a_g___private___functions_ga22ad9c0eccce35104808245ab8cb6c1e}} 
+\index{S5K5CAG\_Private\_Functions@{S5K5CAG\_Private\_Functions}!s5k5cag\_Init@{s5k5cag\_Init}}
+\index{s5k5cag\_Init@{s5k5cag\_Init}!S5K5CAG\_Private\_Functions@{S5K5CAG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{s5k5cag\_Init()}{s5k5cag\_Init()}}
+{\footnotesize\ttfamily void s5k5cag\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{resolution }\end{DoxyParamCaption})}
+
+
+
+Initializes the S5\+K5\+CAG CAMERA component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em resolution} & Camera resolution \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s5_k5_c_a_g___private___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}\label{group___s5_k5_c_a_g___private___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}} 
+\index{S5K5CAG\_Private\_Functions@{S5K5CAG\_Private\_Functions}!s5k5cag\_ReadID@{s5k5cag\_ReadID}}
+\index{s5k5cag\_ReadID@{s5k5cag\_ReadID}!S5K5CAG\_Private\_Functions@{S5K5CAG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{s5k5cag\_ReadID()}{s5k5cag\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t s5k5cag\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the S5\+K5\+CAG Camera identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em the} & S5\+K5\+CAG ID \\
+\hline
+\end{DoxyRetVals}

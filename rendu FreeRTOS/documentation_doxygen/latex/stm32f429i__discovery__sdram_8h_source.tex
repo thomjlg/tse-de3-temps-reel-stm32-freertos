@@ -1,0 +1,82 @@
+\hypertarget{stm32f429i__discovery__sdram_8h_source}{}\doxysection{stm32f429i\+\_\+discovery\+\_\+sdram.\+h}
+\label{stm32f429i__discovery__sdram_8h_source}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_sdram.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_sdram.h}}
+\mbox{\hyperlink{stm32f429i__discovery__sdram_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_\_STM32F429I\_DISCOVERY\_SDRAM\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_\_STM32F429I\_DISCOVERY\_SDRAM\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{42  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f429i__discovery_8h}{stm32f429i\_discovery.h}}"{}}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define   SDRAM\_OK         ((uint8\_t)0x00)}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define   SDRAM\_ERROR      ((uint8\_t)0x01)}}
+\DoxyCodeLine{76   }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define SDRAM\_DEVICE\_ADDR         ((uint32\_t)0xD0000000)}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define SDRAM\_DEVICE\_SIZE         ((uint32\_t)0x800000)  }\textcolor{comment}{/* SDRAM device size in Bytes */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{82   }
+\DoxyCodeLine{86 \textcolor{comment}{/* \#define SDRAM\_MEMORY\_WIDTH   FMC\_SDRAM\_MEM\_BUS\_WIDTH\_8 */}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define SDRAM\_MEMORY\_WIDTH      FMC\_SDRAM\_MEM\_BUS\_WIDTH\_16}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{92 \textcolor{comment}{/* \#define SDRAM\_CAS\_LATENCY    FMC\_SDRAM\_CAS\_LATENCY\_2 */}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define SDRAM\_CAS\_LATENCY       FMC\_SDRAM\_CAS\_LATENCY\_3 }}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define SDCLOCK\_PERIOD          FMC\_SDRAM\_CLOCK\_PERIOD\_2    }\textcolor{comment}{/* Default configuration used with LCD */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{99 \textcolor{comment}{/* \#define SDCLOCK\_PERIOD       FMC\_SDRAM\_CLOCK\_PERIOD\_3 */}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define SDRAM\_READBURST         FMC\_SDRAM\_RBURST\_DISABLE    }\textcolor{comment}{/* Default configuration used with LCD */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{105 \textcolor{comment}{/* \#define SDRAM\_READBURST      FMC\_SDRAM\_RBURST\_ENABLE */}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{110 \textcolor{comment}{/* \#define SDRAM\_BANK\_REMAP */}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{comment}{/* Set the refresh rate counter */}}
+\DoxyCodeLine{113 \textcolor{comment}{/* (15.62 us x Freq) -\/ 20 */}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define REFRESH\_COUNT           ((uint32\_t)1386)   }\textcolor{comment}{/* SDRAM refresh counter */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define SDRAM\_TIMEOUT           ((uint32\_t)0xFFFF)}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{comment}{/* DMA definitions for SDRAM DMA transfer */}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define \_\_DMAx\_CLK\_ENABLE       \_\_HAL\_RCC\_DMA2\_CLK\_ENABLE}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define SDRAM\_DMAx\_CHANNEL      DMA\_CHANNEL\_0}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define SDRAM\_DMAx\_STREAM       DMA2\_Stream0}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define SDRAM\_DMAx\_IRQn         DMA2\_Stream0\_IRQn}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define SDRAM\_DMAx\_IRQHandler   DMA2\_Stream0\_IRQHandler}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_BURST\_LENGTH\_1             ((uint16\_t)0x0000)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_BURST\_LENGTH\_2             ((uint16\_t)0x0001)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_BURST\_LENGTH\_4             ((uint16\_t)0x0002)}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_BURST\_LENGTH\_8             ((uint16\_t)0x0004)}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_BURST\_TYPE\_SEQUENTIAL      ((uint16\_t)0x0000)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_BURST\_TYPE\_INTERLEAVED     ((uint16\_t)0x0008)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_CAS\_LATENCY\_2              ((uint16\_t)0x0020)}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_CAS\_LATENCY\_3              ((uint16\_t)0x0030)}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_OPERATING\_MODE\_STANDARD    ((uint16\_t)0x0000)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_WRITEBURST\_MODE\_PROGRAMMED ((uint16\_t)0x0000)}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define SDRAM\_MODEREG\_WRITEBURST\_MODE\_SINGLE     ((uint16\_t)0x0200)}}
+\DoxyCodeLine{152 uint8\_t           \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_ga17e7bff008bda70c640acdac7de80a83}{BSP\_SDRAM\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{153 \textcolor{keywordtype}{void}              \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gac8bdaf00734e741a8c7a79f255d8751f}{BSP\_SDRAM\_Initialization\_sequence}}(uint32\_t RefreshCount);}
+\DoxyCodeLine{154 uint8\_t           \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gaf5a58e9e8a87ca35ff51031cc6df81f9}{BSP\_SDRAM\_ReadData}}(uint32\_t uwStartAddress, uint32\_t* pData, uint32\_t uwDataSize);}
+\DoxyCodeLine{155 uint8\_t           \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gae0d1b2d92c12aec8ade4bf00077111b3}{BSP\_SDRAM\_ReadData\_DMA}}(uint32\_t uwStartAddress, uint32\_t* pData, uint32\_t uwDataSize);}
+\DoxyCodeLine{156 uint8\_t           \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gaaa29379faee00c5c6b63458537d5be50}{BSP\_SDRAM\_WriteData}}(uint32\_t uwStartAddress, uint32\_t* pData, uint32\_t uwDataSize);}
+\DoxyCodeLine{157 uint8\_t           \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_ga2b8d264ab912c422b25da4af9c9ea726}{BSP\_SDRAM\_WriteData\_DMA}}(uint32\_t uwStartAddress, uint32\_t* pData, uint32\_t uwDataSize);}
+\DoxyCodeLine{158 uint8\_t           \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gaaba572903e8d423697b1a1c3fc914897}{BSP\_SDRAM\_Sendcmd}}(FMC\_SDRAM\_CommandTypeDef *SdramCmd);}
+\DoxyCodeLine{159 \textcolor{keywordtype}{void}              \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gaeae30cc28f1155fa7eaf9c0d49c6ec70}{BSP\_SDRAM\_DMA\_IRQHandler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 \textcolor{comment}{/* These function can be modified in case the current settings (e.g. DMA stream)}}
+\DoxyCodeLine{162 \textcolor{comment}{   need to be changed for specific application needs */}}
+\DoxyCodeLine{163 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_ga02aac286aef85b5f5f67f4f32ba17f4a}{BSP\_SDRAM\_MspInit}}(SDRAM\_HandleTypeDef  *hsdram, \textcolor{keywordtype}{void} *Params);}
+\DoxyCodeLine{164 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_ga86b29a5e33c1e3fcc9b338f01b2ecf23}{BSP\_SDRAM\_MspDeInit}}(SDRAM\_HandleTypeDef  *hsdram, \textcolor{keywordtype}{void} *Params);}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{183 \}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F429I\_DISCOVERY\_SDRAM\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

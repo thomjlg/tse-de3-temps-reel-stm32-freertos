@@ -1,0 +1,188 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions}{}\doxysection{STM32\+F429I DISCOVERY SDRAM Private Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions}\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_ga17e7bff008bda70c640acdac7de80a83}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_ga17e7bff008bda70c640acdac7de80a83}} 
+uint8\+\_\+t {\bfseries BSP\+\_\+\+SDRAM\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SDRAM device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gac8bdaf00734e741a8c7a79f255d8751f}{BSP\+\_\+\+SDRAM\+\_\+\+Initialization\+\_\+sequence}} (uint32\+\_\+t Refresh\+Count)
+\begin{DoxyCompactList}\small\item\em Programs the SDRAM device. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaf5a58e9e8a87ca35ff51031cc6df81f9}{BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Reads an mount of data from the SDRAM memory in polling mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae0d1b2d92c12aec8ade4bf00077111b3}{BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data\+\_\+\+DMA}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Reads an mount of data from the SDRAM memory in DMA mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaa29379faee00c5c6b63458537d5be50}{BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Writes an mount of data to the SDRAM memory in polling mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_ga2b8d264ab912c422b25da4af9c9ea726}{BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data\+\_\+\+DMA}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Writes an mount of data to the SDRAM memory in DMA mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaba572903e8d423697b1a1c3fc914897}{BSP\+\_\+\+SDRAM\+\_\+\+Sendcmd}} (FMC\+\_\+\+SDRAM\+\_\+\+Command\+Type\+Def $\ast$Sdram\+Cmd)
+\begin{DoxyCompactList}\small\item\em Sends command to the SDRAM bank. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaeae30cc28f1155fa7eaf9c0d49c6ec70}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaeae30cc28f1155fa7eaf9c0d49c6ec70}} 
+void {\bfseries BSP\+\_\+\+SDRAM\+\_\+\+DMA\+\_\+\+IRQHandler} (void)
+\begin{DoxyCompactList}\small\item\em Handles SDRAM DMA transfer interrupt request. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae6fe4f887c9c9c8a37a49f55ccfd3e4b}{BSP\+\_\+\+SDRAM\+\_\+\+Msp\+Init}} (SDRAM\+\_\+\+Handle\+Type\+Def $\ast$hsdram, void $\ast$Params)
+\begin{DoxyCompactList}\small\item\em Initializes SDRAM MSP. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gadfa6b08e2cd58b607acb5a47fd964083}{BSP\+\_\+\+SDRAM\+\_\+\+Msp\+De\+Init}} (SDRAM\+\_\+\+Handle\+Type\+Def $\ast$hsdram, void $\ast$Params)
+\begin{DoxyCompactList}\small\item\em De\+Initializes SDRAM MSP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gac8bdaf00734e741a8c7a79f255d8751f}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gac8bdaf00734e741a8c7a79f255d8751f}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_Initialization\_sequence@{BSP\_SDRAM\_Initialization\_sequence}}
+\index{BSP\_SDRAM\_Initialization\_sequence@{BSP\_SDRAM\_Initialization\_sequence}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_Initialization\_sequence()}{BSP\_SDRAM\_Initialization\_sequence()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+SDRAM\+\_\+\+Initialization\+\_\+sequence (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Refresh\+Count }\end{DoxyParamCaption})}
+
+
+
+Programs the SDRAM device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Refresh\+Count} & SDRAM refresh counter value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gadfa6b08e2cd58b607acb5a47fd964083}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gadfa6b08e2cd58b607acb5a47fd964083}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_MspDeInit@{BSP\_SDRAM\_MspDeInit}}
+\index{BSP\_SDRAM\_MspDeInit@{BSP\_SDRAM\_MspDeInit}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_MspDeInit()}{BSP\_SDRAM\_MspDeInit()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void BSP\+\_\+\+SDRAM\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{SDRAM\+\_\+\+Handle\+Type\+Def $\ast$}]{hsdram,  }\item[{void $\ast$}]{Params }\end{DoxyParamCaption})}
+
+
+
+De\+Initializes SDRAM MSP. 
+
+\begin{DoxyNote}{Note}
+This function can be surcharged by application code. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em hsdram} & pointer on SDRAM handle \\
+\hline
+{\em Params} & pointer on additional configuration parameters, can be NULL. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae6fe4f887c9c9c8a37a49f55ccfd3e4b}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae6fe4f887c9c9c8a37a49f55ccfd3e4b}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_MspInit@{BSP\_SDRAM\_MspInit}}
+\index{BSP\_SDRAM\_MspInit@{BSP\_SDRAM\_MspInit}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_MspInit()}{BSP\_SDRAM\_MspInit()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void BSP\+\_\+\+SDRAM\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{SDRAM\+\_\+\+Handle\+Type\+Def $\ast$}]{hsdram,  }\item[{void $\ast$}]{Params }\end{DoxyParamCaption})}
+
+
+
+Initializes SDRAM MSP. 
+
+\begin{DoxyNote}{Note}
+This function can be surcharged by application code. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em hsdram} & pointer on SDRAM handle \\
+\hline
+{\em Params} & pointer on additional configuration parameters, can be NULL. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaf5a58e9e8a87ca35ff51031cc6df81f9}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaf5a58e9e8a87ca35ff51031cc6df81f9}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_ReadData@{BSP\_SDRAM\_ReadData}}
+\index{BSP\_SDRAM\_ReadData@{BSP\_SDRAM\_ReadData}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_ReadData()}{BSP\_SDRAM\_ReadData()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{uw\+Start\+Address,  }\item[{uint32\+\_\+t $\ast$}]{p\+Data,  }\item[{uint32\+\_\+t}]{uw\+Data\+Size }\end{DoxyParamCaption})}
+
+
+
+Reads an mount of data from the SDRAM memory in polling mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uw\+Start\+Address} & \+: Read start address \\
+\hline
+{\em p\+Data} & \+: Pointer to data to be read ~\newline
+ \\
+\hline
+{\em uw\+Data\+Size} & Size of read data from the memory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae0d1b2d92c12aec8ade4bf00077111b3}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae0d1b2d92c12aec8ade4bf00077111b3}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_ReadData\_DMA@{BSP\_SDRAM\_ReadData\_DMA}}
+\index{BSP\_SDRAM\_ReadData\_DMA@{BSP\_SDRAM\_ReadData\_DMA}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_ReadData\_DMA()}{BSP\_SDRAM\_ReadData\_DMA()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{uw\+Start\+Address,  }\item[{uint32\+\_\+t $\ast$}]{p\+Data,  }\item[{uint32\+\_\+t}]{uw\+Data\+Size }\end{DoxyParamCaption})}
+
+
+
+Reads an mount of data from the SDRAM memory in DMA mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uw\+Start\+Address} & \+: Read start address \\
+\hline
+{\em p\+Data} & \+: Pointer to data to be read ~\newline
+ \\
+\hline
+{\em uw\+Data\+Size} & Size of read data from the memory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaba572903e8d423697b1a1c3fc914897}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaba572903e8d423697b1a1c3fc914897}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_Sendcmd@{BSP\_SDRAM\_Sendcmd}}
+\index{BSP\_SDRAM\_Sendcmd@{BSP\_SDRAM\_Sendcmd}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_Sendcmd()}{BSP\_SDRAM\_Sendcmd()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+SDRAM\+\_\+\+Sendcmd (\begin{DoxyParamCaption}\item[{FMC\+\_\+\+SDRAM\+\_\+\+Command\+Type\+Def $\ast$}]{Sdram\+Cmd }\end{DoxyParamCaption})}
+
+
+
+Sends command to the SDRAM bank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sdram\+Cmd} & Pointer to SDRAM command structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaa29379faee00c5c6b63458537d5be50}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaa29379faee00c5c6b63458537d5be50}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_WriteData@{BSP\_SDRAM\_WriteData}}
+\index{BSP\_SDRAM\_WriteData@{BSP\_SDRAM\_WriteData}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_WriteData()}{BSP\_SDRAM\_WriteData()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{uw\+Start\+Address,  }\item[{uint32\+\_\+t $\ast$}]{p\+Data,  }\item[{uint32\+\_\+t}]{uw\+Data\+Size }\end{DoxyParamCaption})}
+
+
+
+Writes an mount of data to the SDRAM memory in polling mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uw\+Start\+Address} & \+: Write start address \\
+\hline
+{\em p\+Data} & \+: Pointer to data to be written ~\newline
+ \\
+\hline
+{\em uw\+Data\+Size} & Size of written data from the memory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_ga2b8d264ab912c422b25da4af9c9ea726}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_ga2b8d264ab912c422b25da4af9c9ea726}} 
+\index{STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}!BSP\_SDRAM\_WriteData\_DMA@{BSP\_SDRAM\_WriteData\_DMA}}
+\index{BSP\_SDRAM\_WriteData\_DMA@{BSP\_SDRAM\_WriteData\_DMA}!STM32F429I DISCOVERY SDRAM Private Functions@{STM32F429I DISCOVERY SDRAM Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_SDRAM\_WriteData\_DMA()}{BSP\_SDRAM\_WriteData\_DMA()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{uw\+Start\+Address,  }\item[{uint32\+\_\+t $\ast$}]{p\+Data,  }\item[{uint32\+\_\+t}]{uw\+Data\+Size }\end{DoxyParamCaption})}
+
+
+
+Writes an mount of data to the SDRAM memory in DMA mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uw\+Start\+Address} & \+: Write start address \\
+\hline
+{\em p\+Data} & \+: Pointer to data to be written ~\newline
+ \\
+\hline
+{\em uw\+Data\+Size} & Size of written data from the memory \\
+\hline
+\end{DoxyParams}

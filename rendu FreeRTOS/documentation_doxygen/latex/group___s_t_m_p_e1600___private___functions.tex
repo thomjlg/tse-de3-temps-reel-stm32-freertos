@@ -1,0 +1,493 @@
+\hypertarget{group___s_t_m_p_e1600___private___functions}{}\doxysection{STMPE1600\+\_\+\+Private\+\_\+\+Functions}
+\label{group___s_t_m_p_e1600___private___functions}\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga9b768b7b2d2c807b1409b4f4a4f260aa}{stmpe1600\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Initialize the stmpe1600 and configure the needed hardware resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga7dc8419129c1e4278da219a79c4a5dbb}{stmpe1600\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen Controller (Single point detection) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga8f4ee2c5985686991e614cb342440cad}{stmpe1600\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the stmpe1600 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga17e28fa9ec45bf992bad397b234b761f}{stmpe1600\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the stmpe1600 device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gae0f4986cb9fcedd86d41cc0129c32852}{stmpe1600\+\_\+\+Set\+ITPolarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga97d6ef755d80e712612464b9da15e2bf}{stmpe1600\+\_\+\+Enable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga99fbc9e46fe603c4e4e8d9f6c06b1efe}{stmpe1600\+\_\+\+Disable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gad52ca935e0600f12d74fa314b1a3343e}{stmpe1600\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em Initialize the selected pin(s) direction. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga2e9e58286bf9057562f8d4395b800f22}{stmpe1600\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configure the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga3b1fd40626d44f219d9fb64b1650e8f9}{stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Enable}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable polarity inversion of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga8651f238f33d4e77466d27bcb33b6cb5}{stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Disable}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable polarity inversion of the selected IO pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga4040072bed64a28716e460b89c3d1133}{stmpe1600\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Set the value of the selected IO pins. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaaeab906ac67064a1913922d7cbcdce0d}{stmpe1600\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Read the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaf1a8860c52c4f6a68d7e0e71494b2616}{stmpe1600\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaaafc0fdfc7921ea9a1d4aef8c356b537}{stmpe1600\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaf477372738df470912c525985c60f2bf}{stmpe1600\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Read the IT status of the selected IO pin(s) (clears all the pending bits if any). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga41e42cf6b16c16aa0758d34fabb4b7bf}{stmpe1600\+\_\+\+IO\+\_\+\+Read\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Detect an IT pending bit from the selected IO pin(s). (clears all the pending bits if any). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga00dc4debeba8a3b7ca091f389b2f8ccd}{stmpe1600\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear all the IT pending bits if any. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga99fbc9e46fe603c4e4e8d9f6c06b1efe}\label{group___s_t_m_p_e1600___private___functions_ga99fbc9e46fe603c4e4e8d9f6c06b1efe}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_DisableGlobalIT@{stmpe1600\_DisableGlobalIT}}
+\index{stmpe1600\_DisableGlobalIT@{stmpe1600\_DisableGlobalIT}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_DisableGlobalIT()}{stmpe1600\_DisableGlobalIT()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+Disable\+Global\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Disable the Global interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga97d6ef755d80e712612464b9da15e2bf}\label{group___s_t_m_p_e1600___private___functions_ga97d6ef755d80e712612464b9da15e2bf}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_EnableGlobalIT@{stmpe1600\_EnableGlobalIT}}
+\index{stmpe1600\_EnableGlobalIT@{stmpe1600\_EnableGlobalIT}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_EnableGlobalIT()}{stmpe1600\_EnableGlobalIT()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+Enable\+Global\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Enable the Global interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga9b768b7b2d2c807b1409b4f4a4f260aa}\label{group___s_t_m_p_e1600___private___functions_ga9b768b7b2d2c807b1409b4f4a4f260aa}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_Init@{stmpe1600\_Init}}
+\index{stmpe1600\_Init@{stmpe1600\_Init}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_Init()}{stmpe1600\_Init()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Initialize the stmpe1600 and configure the needed hardware resources. 
+
+STMPE1600 Control functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga00dc4debeba8a3b7ca091f389b2f8ccd}\label{group___s_t_m_p_e1600___private___functions_ga00dc4debeba8a3b7ca091f389b2f8ccd}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_ClearIT@{stmpe1600\_IO\_ClearIT}}
+\index{stmpe1600\_IO\_ClearIT@{stmpe1600\_IO\_ClearIT}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_ClearIT()}{stmpe1600\_IO\_ClearIT()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+IO\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Clear all the IT pending bits if any. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga2e9e58286bf9057562f8d4395b800f22}\label{group___s_t_m_p_e1600___private___functions_ga2e9e58286bf9057562f8d4395b800f22}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_Config@{stmpe1600\_IO\_Config}}
+\index{stmpe1600\_IO\_Config@{stmpe1600\_IO\_Config}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_Config()}{stmpe1600\_IO\_Config()}}
+{\footnotesize\ttfamily uint8\+\_\+t stmpe1600\+\_\+\+IO\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{IO\+\_\+\+Mode\+Typedef}]{IO\+\_\+\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configure the IO pin(s) according to IO mode structure value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The output pin to be set or reset. This parameter can be one of the following values\+: ~\newline
+ \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+{\em IO\+\_\+\+Mode} & The IO pin mode to configure, could be one of the following values\+: \begin{DoxyItemize}
+\item IO\+\_\+\+MODE\+\_\+\+INPUT \item IO\+\_\+\+MODE\+\_\+\+OUTPUT \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if no error, IO\+\_\+\+Mode if error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_gaaafc0fdfc7921ea9a1d4aef8c356b537}\label{group___s_t_m_p_e1600___private___functions_gaaafc0fdfc7921ea9a1d4aef8c356b537}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_DisablePinIT@{stmpe1600\_IO\_DisablePinIT}}
+\index{stmpe1600\_IO\_DisablePinIT@{stmpe1600\_IO\_DisablePinIT}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_DisablePinIT()}{stmpe1600\_IO\_DisablePinIT()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Disable the interrupt mode for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be configured. ~\newline
+ This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_gaf1a8860c52c4f6a68d7e0e71494b2616}\label{group___s_t_m_p_e1600___private___functions_gaf1a8860c52c4f6a68d7e0e71494b2616}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_EnablePinIT@{stmpe1600\_IO\_EnablePinIT}}
+\index{stmpe1600\_IO\_EnablePinIT@{stmpe1600\_IO\_EnablePinIT}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_EnablePinIT()}{stmpe1600\_IO\_EnablePinIT()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the interrupt mode for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be configured. ~\newline
+ This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_gad52ca935e0600f12d74fa314b1a3343e}\label{group___s_t_m_p_e1600___private___functions_gad52ca935e0600f12d74fa314b1a3343e}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_InitPin@{stmpe1600\_IO\_InitPin}}
+\index{stmpe1600\_IO\_InitPin@{stmpe1600\_IO\_InitPin}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_InitPin()}{stmpe1600\_IO\_InitPin()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+IO\+\_\+\+Init\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Direction }\end{DoxyParamCaption})}
+
+
+
+Initialize the selected pin(s) direction. 
+
+STMPE1600 IO functionalities functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+{\em Direction} & could be STMPE1600\+\_\+\+DIRECTION\+\_\+\+IN or STMPE1600\+\_\+\+DIRECTION\+\_\+\+OUT. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_gaf477372738df470912c525985c60f2bf}\label{group___s_t_m_p_e1600___private___functions_gaf477372738df470912c525985c60f2bf}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_ITStatus@{stmpe1600\_IO\_ITStatus}}
+\index{stmpe1600\_IO\_ITStatus@{stmpe1600\_IO\_ITStatus}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_ITStatus()}{stmpe1600\_IO\_ITStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t stmpe1600\+\_\+\+IO\+\_\+\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Read the IT status of the selected IO pin(s) (clears all the pending bits if any). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be checked. ~\newline
+ This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em IT} & Status of the selected IO pin(s). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga8651f238f33d4e77466d27bcb33b6cb5}\label{group___s_t_m_p_e1600___private___functions_ga8651f238f33d4e77466d27bcb33b6cb5}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_PolarityInv\_Disable@{stmpe1600\_IO\_PolarityInv\_Disable}}
+\index{stmpe1600\_IO\_PolarityInv\_Disable@{stmpe1600\_IO\_PolarityInv\_Disable}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_PolarityInv\_Disable()}{stmpe1600\_IO\_PolarityInv\_Disable()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Disable polarity inversion of the selected IO pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga3b1fd40626d44f219d9fb64b1650e8f9}\label{group___s_t_m_p_e1600___private___functions_ga3b1fd40626d44f219d9fb64b1650e8f9}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_PolarityInv\_Enable@{stmpe1600\_IO\_PolarityInv\_Enable}}
+\index{stmpe1600\_IO\_PolarityInv\_Enable@{stmpe1600\_IO\_PolarityInv\_Enable}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_PolarityInv\_Enable()}{stmpe1600\_IO\_PolarityInv\_Enable()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable polarity inversion of the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be configured. ~\newline
+ This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga41e42cf6b16c16aa0758d34fabb4b7bf}\label{group___s_t_m_p_e1600___private___functions_ga41e42cf6b16c16aa0758d34fabb4b7bf}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_ReadIT@{stmpe1600\_IO\_ReadIT}}
+\index{stmpe1600\_IO\_ReadIT@{stmpe1600\_IO\_ReadIT}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_ReadIT()}{stmpe1600\_IO\_ReadIT()}}
+{\footnotesize\ttfamily uint8\+\_\+t stmpe1600\+\_\+\+IO\+\_\+\+Read\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Detect an IT pending bit from the selected IO pin(s). (clears all the pending bits if any). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be checked. ~\newline
+ This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em IT} & pending bit detection status. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_gaaeab906ac67064a1913922d7cbcdce0d}\label{group___s_t_m_p_e1600___private___functions_gaaeab906ac67064a1913922d7cbcdce0d}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_ReadPin@{stmpe1600\_IO\_ReadPin}}
+\index{stmpe1600\_IO\_ReadPin@{stmpe1600\_IO\_ReadPin}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_ReadPin()}{stmpe1600\_IO\_ReadPin()}}
+{\footnotesize\ttfamily uint32\+\_\+t stmpe1600\+\_\+\+IO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Read the state of the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be read. ~\newline
+ This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of the selected IO pin(s). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga4040072bed64a28716e460b89c3d1133}\label{group___s_t_m_p_e1600___private___functions_ga4040072bed64a28716e460b89c3d1133}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_IO\_WritePin@{stmpe1600\_IO\_WritePin}}
+\index{stmpe1600\_IO\_WritePin@{stmpe1600\_IO\_WritePin}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_IO\_WritePin()}{stmpe1600\_IO\_WritePin()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+IO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Pin\+State }\end{DoxyParamCaption})}
+
+
+
+Set the value of the selected IO pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & IO pin(s) to be set. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 15. \end{DoxyItemize}
+\\
+\hline
+{\em Pin\+State} & The value to be set. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga17e28fa9ec45bf992bad397b234b761f}\label{group___s_t_m_p_e1600___private___functions_ga17e28fa9ec45bf992bad397b234b761f}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_ReadID@{stmpe1600\_ReadID}}
+\index{stmpe1600\_ReadID@{stmpe1600\_ReadID}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_ReadID()}{stmpe1600\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t stmpe1600\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the stmpe1600 device ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device ID (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga8f4ee2c5985686991e614cb342440cad}\label{group___s_t_m_p_e1600___private___functions_ga8f4ee2c5985686991e614cb342440cad}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_Reset@{stmpe1600\_Reset}}
+\index{stmpe1600\_Reset@{stmpe1600\_Reset}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_Reset()}{stmpe1600\_Reset()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Reset the stmpe1600 by Software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_gae0f4986cb9fcedd86d41cc0129c32852}\label{group___s_t_m_p_e1600___private___functions_gae0f4986cb9fcedd86d41cc0129c32852}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_SetITPolarity@{stmpe1600\_SetITPolarity}}
+\index{stmpe1600\_SetITPolarity@{stmpe1600\_SetITPolarity}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_SetITPolarity()}{stmpe1600\_SetITPolarity()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+Set\+ITPolarity (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Polarity }\end{DoxyParamCaption})}
+
+
+
+Set the global interrupt Polarity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Polarity} & could be one of these values; \begin{DoxyItemize}
+\item STMPE1600\+\_\+\+POLARITY\+\_\+\+LOW\+: Interrupt line is active Low/\+Falling edge ~\newline
+ \item STMPE1600\+\_\+\+POLARITY\+\_\+\+HIGH\+: Interrupt line is active High/\+Rising edge ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e1600___private___functions_ga7dc8419129c1e4278da219a79c4a5dbb}\label{group___s_t_m_p_e1600___private___functions_ga7dc8419129c1e4278da219a79c4a5dbb}} 
+\index{STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}!stmpe1600\_Start@{stmpe1600\_Start}}
+\index{stmpe1600\_Start@{stmpe1600\_Start}!STMPE1600\_Private\_Functions@{STMPE1600\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe1600\_Start()}{stmpe1600\_Start()}}
+{\footnotesize\ttfamily void stmpe1600\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Configures the touch Screen Controller (Single point detection) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

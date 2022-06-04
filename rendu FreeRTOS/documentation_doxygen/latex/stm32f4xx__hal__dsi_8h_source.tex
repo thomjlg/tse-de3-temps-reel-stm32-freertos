@@ -1,0 +1,613 @@
+\hypertarget{stm32f4xx__hal__dsi_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+dsi.\+h}
+\label{stm32f4xx__hal__dsi_8h_source}\index{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal\_dsi.h@{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal\_dsi.h}}
+\mbox{\hyperlink{stm32f4xx__hal__dsi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{20 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifndef STM32F4xx\_HAL\_DSI\_H}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define STM32F4xx\_HAL\_DSI\_H}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{25 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#if defined(DSI)}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{42 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   uint32\_t AutomaticClockLaneControl;    }
+\DoxyCodeLine{51   uint32\_t TXEscapeCkdiv;                }
+\DoxyCodeLine{54   uint32\_t NumberOfLanes;                }
+\DoxyCodeLine{57 \} DSI\_InitTypeDef;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   uint32\_t PLLNDIV;                      }
+\DoxyCodeLine{67   uint32\_t PLLIDF;                       }
+\DoxyCodeLine{70   uint32\_t PLLODF;                       }
+\DoxyCodeLine{73 \} DSI\_PLLInitTypeDef;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{79 \{}
+\DoxyCodeLine{80   uint32\_t VirtualChannelID;             }
+\DoxyCodeLine{82   uint32\_t ColorCoding;                  }
+\DoxyCodeLine{85   uint32\_t LooselyPacked;                }
+\DoxyCodeLine{89   uint32\_t Mode;                         }
+\DoxyCodeLine{92   uint32\_t PacketSize;                   }
+\DoxyCodeLine{94   uint32\_t NumberOfChunks;               }
+\DoxyCodeLine{96   uint32\_t NullPacketSize;               }
+\DoxyCodeLine{98   uint32\_t HSPolarity;                   }
+\DoxyCodeLine{101   uint32\_t VSPolarity;                   }
+\DoxyCodeLine{104   uint32\_t DEPolarity;                   }
+\DoxyCodeLine{107   uint32\_t HorizontalSyncActive;         }
+\DoxyCodeLine{109   uint32\_t HorizontalBackPorch;          }
+\DoxyCodeLine{111   uint32\_t HorizontalLine;               }
+\DoxyCodeLine{113   uint32\_t VerticalSyncActive;           }
+\DoxyCodeLine{115   uint32\_t VerticalBackPorch;            }
+\DoxyCodeLine{117   uint32\_t VerticalFrontPorch;           }
+\DoxyCodeLine{119   uint32\_t VerticalActive;               }
+\DoxyCodeLine{121   uint32\_t LPCommandEnable;              }
+\DoxyCodeLine{124   uint32\_t LPLargestPacketSize;          }
+\DoxyCodeLine{127   uint32\_t LPVACTLargestPacketSize;      }
+\DoxyCodeLine{130   uint32\_t LPHorizontalFrontPorchEnable; }
+\DoxyCodeLine{133   uint32\_t LPHorizontalBackPorchEnable;  }
+\DoxyCodeLine{136   uint32\_t LPVerticalActiveEnable;       }
+\DoxyCodeLine{139   uint32\_t LPVerticalFrontPorchEnable;   }
+\DoxyCodeLine{142   uint32\_t LPVerticalBackPorchEnable;    }
+\DoxyCodeLine{145   uint32\_t LPVerticalSyncActiveEnable;   }
+\DoxyCodeLine{148   uint32\_t FrameBTAAcknowledgeEnable;    }
+\DoxyCodeLine{151 \} DSI\_VidCfgTypeDef;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{156 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158   uint32\_t VirtualChannelID;             }
+\DoxyCodeLine{160   uint32\_t ColorCoding;                  }
+\DoxyCodeLine{163   uint32\_t CommandSize;                  }
+\DoxyCodeLine{166   uint32\_t TearingEffectSource;          }
+\DoxyCodeLine{169   uint32\_t TearingEffectPolarity;        }
+\DoxyCodeLine{172   uint32\_t HSPolarity;                   }
+\DoxyCodeLine{175   uint32\_t VSPolarity;                   }
+\DoxyCodeLine{178   uint32\_t DEPolarity;                   }
+\DoxyCodeLine{181   uint32\_t VSyncPol;                     }
+\DoxyCodeLine{184   uint32\_t AutomaticRefresh;             }
+\DoxyCodeLine{187   uint32\_t TEAcknowledgeRequest;         }
+\DoxyCodeLine{190 \} DSI\_CmdCfgTypeDef;}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{195 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{196 \{}
+\DoxyCodeLine{197   uint32\_t LPGenShortWriteNoP;           }
+\DoxyCodeLine{200   uint32\_t LPGenShortWriteOneP;          }
+\DoxyCodeLine{203   uint32\_t LPGenShortWriteTwoP;          }
+\DoxyCodeLine{206   uint32\_t LPGenShortReadNoP;            }
+\DoxyCodeLine{209   uint32\_t LPGenShortReadOneP;           }
+\DoxyCodeLine{212   uint32\_t LPGenShortReadTwoP;           }
+\DoxyCodeLine{215   uint32\_t LPGenLongWrite;               }
+\DoxyCodeLine{218   uint32\_t LPDcsShortWriteNoP;           }
+\DoxyCodeLine{221   uint32\_t LPDcsShortWriteOneP;          }
+\DoxyCodeLine{224   uint32\_t LPDcsShortReadNoP;            }
+\DoxyCodeLine{227   uint32\_t LPDcsLongWrite;               }
+\DoxyCodeLine{230   uint32\_t LPMaxReadPacket;              }
+\DoxyCodeLine{233   uint32\_t AcknowledgeRequest;           }
+\DoxyCodeLine{236 \} DSI\_LPCmdTypeDef;}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{241 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{242 \{}
+\DoxyCodeLine{243   uint32\_t ClockLaneHS2LPTime;           }
+\DoxyCodeLine{246   uint32\_t ClockLaneLP2HSTime;           }
+\DoxyCodeLine{249   uint32\_t DataLaneHS2LPTime;            }
+\DoxyCodeLine{252   uint32\_t DataLaneLP2HSTime;            }
+\DoxyCodeLine{255   uint32\_t DataLaneMaxReadTime;          }
+\DoxyCodeLine{257   uint32\_t StopWaitTime;                 }
+\DoxyCodeLine{260 \} DSI\_PHY\_TimerTypeDef;}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{265 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{266 \{}
+\DoxyCodeLine{267   uint32\_t TimeoutCkdiv;                 }
+\DoxyCodeLine{269   uint32\_t HighSpeedTransmissionTimeout; }
+\DoxyCodeLine{271   uint32\_t LowPowerReceptionTimeout;     }
+\DoxyCodeLine{273   uint32\_t HighSpeedReadTimeout;         }
+\DoxyCodeLine{275   uint32\_t LowPowerReadTimeout;          }
+\DoxyCodeLine{277   uint32\_t HighSpeedWriteTimeout;        }
+\DoxyCodeLine{279   uint32\_t HighSpeedWritePrespMode;      }
+\DoxyCodeLine{282   uint32\_t LowPowerWriteTimeout;         }
+\DoxyCodeLine{284   uint32\_t BTATimeout;                   }
+\DoxyCodeLine{286 \} DSI\_HOST\_TimeoutTypeDef;}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{291 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{292 \{}
+\DoxyCodeLine{293   HAL\_DSI\_STATE\_RESET   = 0x00U,}
+\DoxyCodeLine{294   HAL\_DSI\_STATE\_READY   = 0x01U,}
+\DoxyCodeLine{295   HAL\_DSI\_STATE\_ERROR   = 0x02U,}
+\DoxyCodeLine{296   HAL\_DSI\_STATE\_BUSY    = 0x03U,}
+\DoxyCodeLine{297   HAL\_DSI\_STATE\_TIMEOUT = 0x04U}
+\DoxyCodeLine{298 \} HAL\_DSI\_StateTypeDef;}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{303 \textcolor{preprocessor}{\#if (USE\_HAL\_DSI\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{304 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\_\_DSI\_HandleTypeDef}
+\DoxyCodeLine{305 \#else}
+\DoxyCodeLine{306 typedef struct}
+\DoxyCodeLine{307 \#endif \textcolor{comment}{/* USE\_HAL\_DSI\_REGISTER\_CALLBACKS */}}
+\DoxyCodeLine{308 \{}
+\DoxyCodeLine{309   DSI\_TypeDef               *Instance;    }
+\DoxyCodeLine{310   DSI\_InitTypeDef           Init;         }
+\DoxyCodeLine{311   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}           Lock;         }
+\DoxyCodeLine{312   \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_DSI\_StateTypeDef State;        }
+\DoxyCodeLine{313   \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t             ErrorCode;    }
+\DoxyCodeLine{314   uint32\_t                  ErrorMsk;     }
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#if (USE\_HAL\_DSI\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{317   void (* TearingEffectCallback)(\textcolor{keyword}{struct }\_\_DSI\_HandleTypeDef *hdsi);   }
+\DoxyCodeLine{318   void (* EndOfRefreshCallback)(\textcolor{keyword}{struct }\_\_DSI\_HandleTypeDef *hdsi);    }
+\DoxyCodeLine{319   void (* ErrorCallback)(\textcolor{keyword}{struct }\_\_DSI\_HandleTypeDef *hdsi);           }
+\DoxyCodeLine{321   void (* MspInitCallback)(\textcolor{keyword}{struct }\_\_DSI\_HandleTypeDef *hdsi);         }
+\DoxyCodeLine{322   void (* MspDeInitCallback)(\textcolor{keyword}{struct }\_\_DSI\_HandleTypeDef *hdsi);       }
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DSI\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \} DSI\_HandleTypeDef;}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#if (USE\_HAL\_DSI\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{332 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{333 \{}
+\DoxyCodeLine{334   HAL\_DSI\_MSPINIT\_CB\_ID            = 0x00U,    }
+\DoxyCodeLine{335   HAL\_DSI\_MSPDEINIT\_CB\_ID          = 0x01U,    }
+\DoxyCodeLine{337   HAL\_DSI\_TEARING\_EFFECT\_CB\_ID     = 0x02U,    }
+\DoxyCodeLine{338   HAL\_DSI\_ENDOF\_REFRESH\_CB\_ID      = 0x03U,    }
+\DoxyCodeLine{339   HAL\_DSI\_ERROR\_CB\_ID              = 0x04U     }
+\DoxyCodeLine{341 \} HAL\_DSI\_CallbackIDTypeDef;}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{346 \textcolor{keyword}{typedef}  void (*pDSI\_CallbackTypeDef)(DSI\_HandleTypeDef *hdsi);  }
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DSI\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{357 \textcolor{preprocessor}{\#define DSI\_ENTER\_IDLE\_MODE       0x39U}}
+\DoxyCodeLine{358 \textcolor{preprocessor}{\#define DSI\_ENTER\_INVERT\_MODE     0x21U}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define DSI\_ENTER\_NORMAL\_MODE     0x13U}}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#define DSI\_ENTER\_PARTIAL\_MODE    0x12U}}
+\DoxyCodeLine{361 \textcolor{preprocessor}{\#define DSI\_ENTER\_SLEEP\_MODE      0x10U}}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#define DSI\_EXIT\_IDLE\_MODE        0x38U}}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#define DSI\_EXIT\_INVERT\_MODE      0x20U}}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#define DSI\_EXIT\_SLEEP\_MODE       0x11U}}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define DSI\_GET\_3D\_CONTROL        0x3FU}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define DSI\_GET\_ADDRESS\_MODE      0x0BU}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define DSI\_GET\_BLUE\_CHANNEL      0x08U}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define DSI\_GET\_DIAGNOSTIC\_RESULT 0x0FU}}
+\DoxyCodeLine{369 \textcolor{preprocessor}{\#define DSI\_GET\_DISPLAY\_MODE      0x0DU}}
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#define DSI\_GET\_GREEN\_CHANNEL     0x07U}}
+\DoxyCodeLine{371 \textcolor{preprocessor}{\#define DSI\_GET\_PIXEL\_FORMAT      0x0CU}}
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#define DSI\_GET\_POWER\_MODE        0x0AU}}
+\DoxyCodeLine{373 \textcolor{preprocessor}{\#define DSI\_GET\_RED\_CHANNEL       0x06U}}
+\DoxyCodeLine{374 \textcolor{preprocessor}{\#define DSI\_GET\_SCANLINE          0x45U}}
+\DoxyCodeLine{375 \textcolor{preprocessor}{\#define DSI\_GET\_SIGNAL\_MODE       0x0EU}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{\#define DSI\_NOP                   0x00U}}
+\DoxyCodeLine{377 \textcolor{preprocessor}{\#define DSI\_READ\_DDB\_CONTINUE     0xA8U}}
+\DoxyCodeLine{378 \textcolor{preprocessor}{\#define DSI\_READ\_DDB\_START        0xA1U}}
+\DoxyCodeLine{379 \textcolor{preprocessor}{\#define DSI\_READ\_MEMORY\_CONTINUE  0x3EU}}
+\DoxyCodeLine{380 \textcolor{preprocessor}{\#define DSI\_READ\_MEMORY\_START     0x2EU}}
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#define DSI\_SET\_3D\_CONTROL        0x3DU}}
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define DSI\_SET\_ADDRESS\_MODE      0x36U}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#define DSI\_SET\_COLUMN\_ADDRESS    0x2AU}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{\#define DSI\_SET\_DISPLAY\_OFF       0x28U}}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#define DSI\_SET\_DISPLAY\_ON        0x29U}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define DSI\_SET\_GAMMA\_CURVE       0x26U}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define DSI\_SET\_PAGE\_ADDRESS      0x2BU}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#define DSI\_SET\_PARTIAL\_COLUMNS   0x31U}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{\#define DSI\_SET\_PARTIAL\_ROWS      0x30U}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#define DSI\_SET\_PIXEL\_FORMAT      0x3AU}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#define DSI\_SET\_SCROLL\_AREA       0x33U}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define DSI\_SET\_SCROLL\_START      0x37U}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#define DSI\_SET\_TEAR\_OFF          0x34U}}
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#define DSI\_SET\_TEAR\_ON           0x35U}}
+\DoxyCodeLine{395 \textcolor{preprocessor}{\#define DSI\_SET\_TEAR\_SCANLINE     0x44U}}
+\DoxyCodeLine{396 \textcolor{preprocessor}{\#define DSI\_SET\_VSYNC\_TIMING      0x40U}}
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#define DSI\_SOFT\_RESET            0x01U}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{\#define DSI\_WRITE\_LUT             0x2DU}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#define DSI\_WRITE\_MEMORY\_CONTINUE 0x3CU}}
+\DoxyCodeLine{400 \textcolor{preprocessor}{\#define DSI\_WRITE\_MEMORY\_START    0x2CU}}
+\DoxyCodeLine{408 \textcolor{preprocessor}{\#define DSI\_VID\_MODE\_NB\_PULSES    0U}}
+\DoxyCodeLine{409 \textcolor{preprocessor}{\#define DSI\_VID\_MODE\_NB\_EVENTS    1U}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{\#define DSI\_VID\_MODE\_BURST        2U}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define DSI\_COLOR\_MODE\_FULL       0x00000000U}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#define DSI\_COLOR\_MODE\_EIGHT      DSI\_WCR\_COLM}}
+\DoxyCodeLine{427 \textcolor{preprocessor}{\#define DSI\_DISPLAY\_ON            0x00000000U}}
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#define DSI\_DISPLAY\_OFF           DSI\_WCR\_SHTDN}}
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#define DSI\_LP\_COMMAND\_DISABLE    0x00000000U}}
+\DoxyCodeLine{437 \textcolor{preprocessor}{\#define DSI\_LP\_COMMAND\_ENABLE     DSI\_VMCR\_LPCE}}
+\DoxyCodeLine{445 \textcolor{preprocessor}{\#define DSI\_LP\_HFP\_DISABLE        0x00000000U}}
+\DoxyCodeLine{446 \textcolor{preprocessor}{\#define DSI\_LP\_HFP\_ENABLE         DSI\_VMCR\_LPHFPE}}
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#define DSI\_LP\_HBP\_DISABLE        0x00000000U}}
+\DoxyCodeLine{455 \textcolor{preprocessor}{\#define DSI\_LP\_HBP\_ENABLE         DSI\_VMCR\_LPHBPE}}
+\DoxyCodeLine{463 \textcolor{preprocessor}{\#define DSI\_LP\_VACT\_DISABLE       0x00000000U}}
+\DoxyCodeLine{464 \textcolor{preprocessor}{\#define DSI\_LP\_VACT\_ENABLE        DSI\_VMCR\_LPVAE}}
+\DoxyCodeLine{472 \textcolor{preprocessor}{\#define DSI\_LP\_VFP\_DISABLE       0x00000000U}}
+\DoxyCodeLine{473 \textcolor{preprocessor}{\#define DSI\_LP\_VFP\_ENABLE        DSI\_VMCR\_LPVFPE}}
+\DoxyCodeLine{481 \textcolor{preprocessor}{\#define DSI\_LP\_VBP\_DISABLE       0x00000000U}}
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#define DSI\_LP\_VBP\_ENABLE        DSI\_VMCR\_LPVBPE}}
+\DoxyCodeLine{490 \textcolor{preprocessor}{\#define DSI\_LP\_VSYNC\_DISABLE     0x00000000U}}
+\DoxyCodeLine{491 \textcolor{preprocessor}{\#define DSI\_LP\_VSYNC\_ENABLE      DSI\_VMCR\_LPVSAE}}
+\DoxyCodeLine{499 \textcolor{preprocessor}{\#define DSI\_FBTAA\_DISABLE        0x00000000U}}
+\DoxyCodeLine{500 \textcolor{preprocessor}{\#define DSI\_FBTAA\_ENABLE         DSI\_VMCR\_FBTAAE}}
+\DoxyCodeLine{508 \textcolor{preprocessor}{\#define DSI\_TE\_DSILINK           0x00000000U}}
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#define DSI\_TE\_EXTERNAL          DSI\_WCFGR\_TESRC}}
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#define DSI\_TE\_RISING\_EDGE       0x00000000U}}
+\DoxyCodeLine{518 \textcolor{preprocessor}{\#define DSI\_TE\_FALLING\_EDGE      DSI\_WCFGR\_TEPOL}}
+\DoxyCodeLine{526 \textcolor{preprocessor}{\#define DSI\_VSYNC\_FALLING        0x00000000U}}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#define DSI\_VSYNC\_RISING         DSI\_WCFGR\_VSPOL}}
+\DoxyCodeLine{535 \textcolor{preprocessor}{\#define DSI\_AR\_DISABLE           0x00000000U}}
+\DoxyCodeLine{536 \textcolor{preprocessor}{\#define DSI\_AR\_ENABLE            DSI\_WCFGR\_AR}}
+\DoxyCodeLine{544 \textcolor{preprocessor}{\#define DSI\_TE\_ACKNOWLEDGE\_DISABLE 0x00000000U}}
+\DoxyCodeLine{545 \textcolor{preprocessor}{\#define DSI\_TE\_ACKNOWLEDGE\_ENABLE  DSI\_CMCR\_TEARE}}
+\DoxyCodeLine{553 \textcolor{preprocessor}{\#define DSI\_ACKNOWLEDGE\_DISABLE   0x00000000U}}
+\DoxyCodeLine{554 \textcolor{preprocessor}{\#define DSI\_ACKNOWLEDGE\_ENABLE    DSI\_CMCR\_ARE}}
+\DoxyCodeLine{562 \textcolor{preprocessor}{\#define DSI\_LP\_GSW0P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{563 \textcolor{preprocessor}{\#define DSI\_LP\_GSW0P\_ENABLE      DSI\_CMCR\_GSW0TX}}
+\DoxyCodeLine{571 \textcolor{preprocessor}{\#define DSI\_LP\_GSW1P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{572 \textcolor{preprocessor}{\#define DSI\_LP\_GSW1P\_ENABLE      DSI\_CMCR\_GSW1TX}}
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#define DSI\_LP\_GSW2P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#define DSI\_LP\_GSW2P\_ENABLE      DSI\_CMCR\_GSW2TX}}
+\DoxyCodeLine{589 \textcolor{preprocessor}{\#define DSI\_LP\_GSR0P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{590 \textcolor{preprocessor}{\#define DSI\_LP\_GSR0P\_ENABLE      DSI\_CMCR\_GSR0TX}}
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#define DSI\_LP\_GSR1P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{599 \textcolor{preprocessor}{\#define DSI\_LP\_GSR1P\_ENABLE      DSI\_CMCR\_GSR1TX}}
+\DoxyCodeLine{607 \textcolor{preprocessor}{\#define DSI\_LP\_GSR2P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{608 \textcolor{preprocessor}{\#define DSI\_LP\_GSR2P\_ENABLE      DSI\_CMCR\_GSR2TX}}
+\DoxyCodeLine{616 \textcolor{preprocessor}{\#define DSI\_LP\_GLW\_DISABLE       0x00000000U}}
+\DoxyCodeLine{617 \textcolor{preprocessor}{\#define DSI\_LP\_GLW\_ENABLE        DSI\_CMCR\_GLWTX}}
+\DoxyCodeLine{625 \textcolor{preprocessor}{\#define DSI\_LP\_DSW0P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{626 \textcolor{preprocessor}{\#define DSI\_LP\_DSW0P\_ENABLE      DSI\_CMCR\_DSW0TX}}
+\DoxyCodeLine{634 \textcolor{preprocessor}{\#define DSI\_LP\_DSW1P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{635 \textcolor{preprocessor}{\#define DSI\_LP\_DSW1P\_ENABLE      DSI\_CMCR\_DSW1TX}}
+\DoxyCodeLine{643 \textcolor{preprocessor}{\#define DSI\_LP\_DSR0P\_DISABLE     0x00000000U}}
+\DoxyCodeLine{644 \textcolor{preprocessor}{\#define DSI\_LP\_DSR0P\_ENABLE      DSI\_CMCR\_DSR0TX}}
+\DoxyCodeLine{652 \textcolor{preprocessor}{\#define DSI\_LP\_DLW\_DISABLE       0x00000000U}}
+\DoxyCodeLine{653 \textcolor{preprocessor}{\#define DSI\_LP\_DLW\_ENABLE        DSI\_CMCR\_DLWTX}}
+\DoxyCodeLine{661 \textcolor{preprocessor}{\#define DSI\_LP\_MRDP\_DISABLE      0x00000000U}}
+\DoxyCodeLine{662 \textcolor{preprocessor}{\#define DSI\_LP\_MRDP\_ENABLE       DSI\_CMCR\_MRDPS}}
+\DoxyCodeLine{670 \textcolor{preprocessor}{\#define DSI\_HS\_PM\_DISABLE        0x00000000U}}
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#define DSI\_HS\_PM\_ENABLE         DSI\_TCCR3\_PM}}
+\DoxyCodeLine{680 \textcolor{preprocessor}{\#define DSI\_AUTO\_CLK\_LANE\_CTRL\_DISABLE 0x00000000U}}
+\DoxyCodeLine{681 \textcolor{preprocessor}{\#define DSI\_AUTO\_CLK\_LANE\_CTRL\_ENABLE  DSI\_CLCR\_ACR}}
+\DoxyCodeLine{689 \textcolor{preprocessor}{\#define DSI\_ONE\_DATA\_LANE          0U}}
+\DoxyCodeLine{690 \textcolor{preprocessor}{\#define DSI\_TWO\_DATA\_LANES         1U}}
+\DoxyCodeLine{698 \textcolor{preprocessor}{\#define DSI\_FLOW\_CONTROL\_CRC\_RX    DSI\_PCR\_CRCRXE}}
+\DoxyCodeLine{699 \textcolor{preprocessor}{\#define DSI\_FLOW\_CONTROL\_ECC\_RX    DSI\_PCR\_ECCRXE}}
+\DoxyCodeLine{700 \textcolor{preprocessor}{\#define DSI\_FLOW\_CONTROL\_BTA       DSI\_PCR\_BTAE}}
+\DoxyCodeLine{701 \textcolor{preprocessor}{\#define DSI\_FLOW\_CONTROL\_EOTP\_RX   DSI\_PCR\_ETRXE}}
+\DoxyCodeLine{702 \textcolor{preprocessor}{\#define DSI\_FLOW\_CONTROL\_EOTP\_TX   DSI\_PCR\_ETTXE}}
+\DoxyCodeLine{703 \textcolor{preprocessor}{\#define DSI\_FLOW\_CONTROL\_ALL       (DSI\_FLOW\_CONTROL\_CRC\_RX | DSI\_FLOW\_CONTROL\_ECC\_RX | \(\backslash\)}}
+\DoxyCodeLine{704 \textcolor{preprocessor}{                                    DSI\_FLOW\_CONTROL\_BTA | DSI\_FLOW\_CONTROL\_EOTP\_RX | \(\backslash\)}}
+\DoxyCodeLine{705 \textcolor{preprocessor}{                                    DSI\_FLOW\_CONTROL\_EOTP\_TX)}}
+\DoxyCodeLine{713 \textcolor{preprocessor}{\#define DSI\_RGB565                 0x00000000U }}
+\DoxyCodeLine{714 \textcolor{preprocessor}{\#define DSI\_RGB666                 0x00000003U }}
+\DoxyCodeLine{715 \textcolor{preprocessor}{\#define DSI\_RGB888                 0x00000005U}}
+\DoxyCodeLine{723 \textcolor{preprocessor}{\#define DSI\_LOOSELY\_PACKED\_ENABLE  DSI\_LCOLCR\_LPE}}
+\DoxyCodeLine{724 \textcolor{preprocessor}{\#define DSI\_LOOSELY\_PACKED\_DISABLE 0x00000000U}}
+\DoxyCodeLine{732 \textcolor{preprocessor}{\#define DSI\_HSYNC\_ACTIVE\_HIGH       0x00000000U}}
+\DoxyCodeLine{733 \textcolor{preprocessor}{\#define DSI\_HSYNC\_ACTIVE\_LOW        DSI\_LPCR\_HSP}}
+\DoxyCodeLine{741 \textcolor{preprocessor}{\#define DSI\_VSYNC\_ACTIVE\_HIGH       0x00000000U}}
+\DoxyCodeLine{742 \textcolor{preprocessor}{\#define DSI\_VSYNC\_ACTIVE\_LOW        DSI\_LPCR\_VSP}}
+\DoxyCodeLine{750 \textcolor{preprocessor}{\#define DSI\_DATA\_ENABLE\_ACTIVE\_HIGH 0x00000000U}}
+\DoxyCodeLine{751 \textcolor{preprocessor}{\#define DSI\_DATA\_ENABLE\_ACTIVE\_LOW  DSI\_LPCR\_DEP}}
+\DoxyCodeLine{759 \textcolor{preprocessor}{\#define DSI\_PLL\_IN\_DIV1             0x00000001U}}
+\DoxyCodeLine{760 \textcolor{preprocessor}{\#define DSI\_PLL\_IN\_DIV2             0x00000002U}}
+\DoxyCodeLine{761 \textcolor{preprocessor}{\#define DSI\_PLL\_IN\_DIV3             0x00000003U}}
+\DoxyCodeLine{762 \textcolor{preprocessor}{\#define DSI\_PLL\_IN\_DIV4             0x00000004U}}
+\DoxyCodeLine{763 \textcolor{preprocessor}{\#define DSI\_PLL\_IN\_DIV5             0x00000005U}}
+\DoxyCodeLine{764 \textcolor{preprocessor}{\#define DSI\_PLL\_IN\_DIV6             0x00000006U}}
+\DoxyCodeLine{765 \textcolor{preprocessor}{\#define DSI\_PLL\_IN\_DIV7             0x00000007U}}
+\DoxyCodeLine{773 \textcolor{preprocessor}{\#define DSI\_PLL\_OUT\_DIV1            0x00000000U}}
+\DoxyCodeLine{774 \textcolor{preprocessor}{\#define DSI\_PLL\_OUT\_DIV2            0x00000001U}}
+\DoxyCodeLine{775 \textcolor{preprocessor}{\#define DSI\_PLL\_OUT\_DIV4            0x00000002U}}
+\DoxyCodeLine{776 \textcolor{preprocessor}{\#define DSI\_PLL\_OUT\_DIV8            0x00000003U}}
+\DoxyCodeLine{784 \textcolor{preprocessor}{\#define DSI\_FLAG\_TE                 DSI\_WISR\_TEIF}}
+\DoxyCodeLine{785 \textcolor{preprocessor}{\#define DSI\_FLAG\_ER                 DSI\_WISR\_ERIF}}
+\DoxyCodeLine{786 \textcolor{preprocessor}{\#define DSI\_FLAG\_BUSY               DSI\_WISR\_BUSY}}
+\DoxyCodeLine{787 \textcolor{preprocessor}{\#define DSI\_FLAG\_PLLLS              DSI\_WISR\_PLLLS}}
+\DoxyCodeLine{788 \textcolor{preprocessor}{\#define DSI\_FLAG\_PLLL               DSI\_WISR\_PLLLIF}}
+\DoxyCodeLine{789 \textcolor{preprocessor}{\#define DSI\_FLAG\_PLLU               DSI\_WISR\_PLLUIF}}
+\DoxyCodeLine{790 \textcolor{preprocessor}{\#define DSI\_FLAG\_RRS                DSI\_WISR\_RRS}}
+\DoxyCodeLine{791 \textcolor{preprocessor}{\#define DSI\_FLAG\_RR                 DSI\_WISR\_RRIF}}
+\DoxyCodeLine{799 \textcolor{preprocessor}{\#define DSI\_IT\_TE                   DSI\_WIER\_TEIE}}
+\DoxyCodeLine{800 \textcolor{preprocessor}{\#define DSI\_IT\_ER                   DSI\_WIER\_ERIE}}
+\DoxyCodeLine{801 \textcolor{preprocessor}{\#define DSI\_IT\_PLLL                 DSI\_WIER\_PLLLIE}}
+\DoxyCodeLine{802 \textcolor{preprocessor}{\#define DSI\_IT\_PLLU                 DSI\_WIER\_PLLUIE}}
+\DoxyCodeLine{803 \textcolor{preprocessor}{\#define DSI\_IT\_RR                   DSI\_WIER\_RRIE}}
+\DoxyCodeLine{811 \textcolor{preprocessor}{\#define DSI\_DCS\_SHORT\_PKT\_WRITE\_P0  0x00000005U }}
+\DoxyCodeLine{812 \textcolor{preprocessor}{\#define DSI\_DCS\_SHORT\_PKT\_WRITE\_P1  0x00000015U }}
+\DoxyCodeLine{813 \textcolor{preprocessor}{\#define DSI\_GEN\_SHORT\_PKT\_WRITE\_P0  0x00000003U }}
+\DoxyCodeLine{814 \textcolor{preprocessor}{\#define DSI\_GEN\_SHORT\_PKT\_WRITE\_P1  0x00000013U }}
+\DoxyCodeLine{815 \textcolor{preprocessor}{\#define DSI\_GEN\_SHORT\_PKT\_WRITE\_P2  0x00000023U }}
+\DoxyCodeLine{823 \textcolor{preprocessor}{\#define DSI\_DCS\_LONG\_PKT\_WRITE      0x00000039U }}
+\DoxyCodeLine{824 \textcolor{preprocessor}{\#define DSI\_GEN\_LONG\_PKT\_WRITE      0x00000029U }}
+\DoxyCodeLine{832 \textcolor{preprocessor}{\#define DSI\_DCS\_SHORT\_PKT\_READ      0x00000006U }}
+\DoxyCodeLine{833 \textcolor{preprocessor}{\#define DSI\_GEN\_SHORT\_PKT\_READ\_P0   0x00000004U }}
+\DoxyCodeLine{834 \textcolor{preprocessor}{\#define DSI\_GEN\_SHORT\_PKT\_READ\_P1   0x00000014U }}
+\DoxyCodeLine{835 \textcolor{preprocessor}{\#define DSI\_GEN\_SHORT\_PKT\_READ\_P2   0x00000024U }}
+\DoxyCodeLine{843 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_NONE              0U}}
+\DoxyCodeLine{844 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_ACK               0x00000001U }}
+\DoxyCodeLine{845 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_PHY               0x00000002U }}
+\DoxyCodeLine{846 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_TX                0x00000004U }}
+\DoxyCodeLine{847 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_RX                0x00000008U }}
+\DoxyCodeLine{848 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_ECC               0x00000010U }}
+\DoxyCodeLine{849 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_CRC               0x00000020U }}
+\DoxyCodeLine{850 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_PSE               0x00000040U }}
+\DoxyCodeLine{851 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_EOT               0x00000080U }}
+\DoxyCodeLine{852 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_OVF               0x00000100U }}
+\DoxyCodeLine{853 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_GEN               0x00000200U }}
+\DoxyCodeLine{854 \textcolor{preprocessor}{\#if (USE\_HAL\_DSI\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{855 \textcolor{preprocessor}{\#define HAL\_DSI\_ERROR\_INVALID\_CALLBACK  0x00000400U }}
+\DoxyCodeLine{856 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DSI\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{864 \textcolor{preprocessor}{\#define DSI\_CLOCK\_LANE              0x00000000U}}
+\DoxyCodeLine{865 \textcolor{preprocessor}{\#define DSI\_DATA\_LANES              0x00000001U}}
+\DoxyCodeLine{873 \textcolor{preprocessor}{\#define DSI\_SLEW\_RATE\_HSTX          0x00000000U}}
+\DoxyCodeLine{874 \textcolor{preprocessor}{\#define DSI\_SLEW\_RATE\_LPTX          0x00000001U}}
+\DoxyCodeLine{875 \textcolor{preprocessor}{\#define DSI\_HS\_DELAY                0x00000002U}}
+\DoxyCodeLine{883 \textcolor{preprocessor}{\#define DSI\_SWAP\_LANE\_PINS          0x00000000U}}
+\DoxyCodeLine{884 \textcolor{preprocessor}{\#define DSI\_INVERT\_HS\_SIGNAL        0x00000001U}}
+\DoxyCodeLine{892 \textcolor{preprocessor}{\#define DSI\_CLK\_LANE                0x00000000U}}
+\DoxyCodeLine{893 \textcolor{preprocessor}{\#define DSI\_DATA\_LANE0              0x00000001U}}
+\DoxyCodeLine{894 \textcolor{preprocessor}{\#define DSI\_DATA\_LANE1              0x00000002U}}
+\DoxyCodeLine{902 \textcolor{preprocessor}{\#define DSI\_TCLK\_POST               0x00000000U}}
+\DoxyCodeLine{903 \textcolor{preprocessor}{\#define DSI\_TLPX\_CLK                0x00000001U}}
+\DoxyCodeLine{904 \textcolor{preprocessor}{\#define DSI\_THS\_EXIT                0x00000002U}}
+\DoxyCodeLine{905 \textcolor{preprocessor}{\#define DSI\_TLPX\_DATA               0x00000003U}}
+\DoxyCodeLine{906 \textcolor{preprocessor}{\#define DSI\_THS\_ZERO                0x00000004U}}
+\DoxyCodeLine{907 \textcolor{preprocessor}{\#define DSI\_THS\_TRAIL               0x00000005U}}
+\DoxyCodeLine{908 \textcolor{preprocessor}{\#define DSI\_THS\_PREPARE             0x00000006U}}
+\DoxyCodeLine{909 \textcolor{preprocessor}{\#define DSI\_TCLK\_ZERO               0x00000007U}}
+\DoxyCodeLine{910 \textcolor{preprocessor}{\#define DSI\_TCLK\_PREPARE            0x00000008U}}
+\DoxyCodeLine{919 \textcolor{comment}{/* Exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{929 \textcolor{preprocessor}{\#if (USE\_HAL\_DSI\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{930 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) do\{                                               \(\backslash\)}}
+\DoxyCodeLine{931 \textcolor{preprocessor}{                                                     (\_\_HANDLE\_\_)-\/>State = HAL\_DSI\_STATE\_RESET;    \(\backslash\)}}
+\DoxyCodeLine{932 \textcolor{preprocessor}{                                                     (\_\_HANDLE\_\_)-\/>MspInitCallback = NULL;         \(\backslash\)}}
+\DoxyCodeLine{933 \textcolor{preprocessor}{                                                     (\_\_HANDLE\_\_)-\/>MspDeInitCallback = NULL;       \(\backslash\)}}
+\DoxyCodeLine{934 \textcolor{preprocessor}{                                                   \} while(0)}}
+\DoxyCodeLine{935 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{936 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_DSI\_STATE\_RESET)}}
+\DoxyCodeLine{937 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*USE\_HAL\_DSI\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{938 }
+\DoxyCodeLine{944 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_ENABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{945 \textcolor{preprocessor}{                                          \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{946 \textcolor{preprocessor}{                                          SET\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>CR, DSI\_CR\_EN);\(\backslash\)}}
+\DoxyCodeLine{947 \textcolor{preprocessor}{                                          }\textcolor{comment}{/* Delay after an DSI Host enabling */}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{948 \textcolor{preprocessor}{                                          tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>CR, DSI\_CR\_EN);\(\backslash\)}}
+\DoxyCodeLine{949 \textcolor{preprocessor}{                                          UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{950 \textcolor{preprocessor}{                                        \} while(0U)}}
+\DoxyCodeLine{951 }
+\DoxyCodeLine{957 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_DISABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{958 \textcolor{preprocessor}{                                          \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{959 \textcolor{preprocessor}{                                          CLEAR\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>CR, DSI\_CR\_EN);\(\backslash\)}}
+\DoxyCodeLine{960 \textcolor{preprocessor}{                                          }\textcolor{comment}{/* Delay after an DSI Host disabling */}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{961 \textcolor{preprocessor}{                                          tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>CR, DSI\_CR\_EN);\(\backslash\)}}
+\DoxyCodeLine{962 \textcolor{preprocessor}{                                          UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{963 \textcolor{preprocessor}{                                         \} while(0U)}}
+\DoxyCodeLine{964 }
+\DoxyCodeLine{970 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_WRAPPER\_ENABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{971 \textcolor{preprocessor}{                                                 \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{972 \textcolor{preprocessor}{                                                 SET\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WCR, DSI\_WCR\_DSIEN);\(\backslash\)}}
+\DoxyCodeLine{973 \textcolor{preprocessor}{                                                 }\textcolor{comment}{/* Delay after an DSI warpper enabling */}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{974 \textcolor{preprocessor}{                                                 tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WCR, DSI\_WCR\_DSIEN);\(\backslash\)}}
+\DoxyCodeLine{975 \textcolor{preprocessor}{                                                 UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{976 \textcolor{preprocessor}{                                                \} while(0U)}}
+\DoxyCodeLine{977 }
+\DoxyCodeLine{983 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_WRAPPER\_DISABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{984 \textcolor{preprocessor}{                                                  \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{985 \textcolor{preprocessor}{                                                  CLEAR\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WCR, DSI\_WCR\_DSIEN);\(\backslash\)}}
+\DoxyCodeLine{986 \textcolor{preprocessor}{                                                  }\textcolor{comment}{/* Delay after an DSI warpper disabling*/}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{987 \textcolor{preprocessor}{                                                  tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WCR, DSI\_WCR\_DSIEN);\(\backslash\)}}
+\DoxyCodeLine{988 \textcolor{preprocessor}{                                                  UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{989 \textcolor{preprocessor}{                                                 \} while(0U)}}
+\DoxyCodeLine{990 }
+\DoxyCodeLine{996 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_PLL\_ENABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{997 \textcolor{preprocessor}{                                             \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{998 \textcolor{preprocessor}{                                             SET\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_PLLEN);\(\backslash\)}}
+\DoxyCodeLine{999 \textcolor{preprocessor}{                                             }\textcolor{comment}{/* Delay after an DSI PLL enabling */}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{1000 \textcolor{preprocessor}{                                             tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_PLLEN);\(\backslash\)}}
+\DoxyCodeLine{1001 \textcolor{preprocessor}{                                             UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{1002 \textcolor{preprocessor}{                                            \} while(0U)}}
+\DoxyCodeLine{1003 }
+\DoxyCodeLine{1009 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_PLL\_DISABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{1010 \textcolor{preprocessor}{                                              \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{1011 \textcolor{preprocessor}{                                              CLEAR\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_PLLEN);\(\backslash\)}}
+\DoxyCodeLine{1012 \textcolor{preprocessor}{                                              }\textcolor{comment}{/* Delay after an DSI PLL disabling */}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{1013 \textcolor{preprocessor}{                                              tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_PLLEN);\(\backslash\)}}
+\DoxyCodeLine{1014 \textcolor{preprocessor}{                                              UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{1015 \textcolor{preprocessor}{                                             \} while(0U)}}
+\DoxyCodeLine{1016 }
+\DoxyCodeLine{1022 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_REG\_ENABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{1023 \textcolor{preprocessor}{                                              \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{1024 \textcolor{preprocessor}{                                              SET\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_REGEN);\(\backslash\)}}
+\DoxyCodeLine{1025 \textcolor{preprocessor}{                                              }\textcolor{comment}{/* Delay after an DSI regulator enabling */}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{1026 \textcolor{preprocessor}{                                              tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_REGEN);\(\backslash\)}}
+\DoxyCodeLine{1027 \textcolor{preprocessor}{                                              UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{1028 \textcolor{preprocessor}{                                            \} while(0U)}}
+\DoxyCodeLine{1029 }
+\DoxyCodeLine{1035 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_REG\_DISABLE(\_\_HANDLE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{1036 \textcolor{preprocessor}{                                              \_\_IO uint32\_t tmpreg = 0x00U; \(\backslash\)}}
+\DoxyCodeLine{1037 \textcolor{preprocessor}{                                              CLEAR\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_REGEN);\(\backslash\)}}
+\DoxyCodeLine{1038 \textcolor{preprocessor}{                                              }\textcolor{comment}{/* Delay after an DSI regulator disabling */}\textcolor{preprocessor}{ \(\backslash\)}}
+\DoxyCodeLine{1039 \textcolor{preprocessor}{                                              tmpreg = READ\_BIT((\_\_HANDLE\_\_)-\/>Instance-\/>WRPCR, DSI\_WRPCR\_REGEN);\(\backslash\)}}
+\DoxyCodeLine{1040 \textcolor{preprocessor}{                                              UNUSED(tmpreg); \(\backslash\)}}
+\DoxyCodeLine{1041 \textcolor{preprocessor}{                                             \} while(0U)}}
+\DoxyCodeLine{1042 }
+\DoxyCodeLine{1058 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>WISR \& (\_\_FLAG\_\_))}}
+\DoxyCodeLine{1059 }
+\DoxyCodeLine{1072 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>WIFCR = (\_\_FLAG\_\_))}}
+\DoxyCodeLine{1073 }
+\DoxyCodeLine{1086 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>WIER |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1087 }
+\DoxyCodeLine{1100 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>WIER \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1101 }
+\DoxyCodeLine{1114 \textcolor{preprocessor}{\#define \_\_HAL\_DSI\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>WIER \& (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1115 }
+\DoxyCodeLine{1120 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1124 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_Init(DSI\_HandleTypeDef *hdsi, DSI\_PLLInitTypeDef *PLLInit);}
+\DoxyCodeLine{1125 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_DeInit(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1126 \textcolor{keywordtype}{void} HAL\_DSI\_MspInit(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1127 \textcolor{keywordtype}{void} HAL\_DSI\_MspDeInit(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1128 }
+\DoxyCodeLine{1129 \textcolor{keywordtype}{void} HAL\_DSI\_IRQHandler(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1130 \textcolor{keywordtype}{void} HAL\_DSI\_TearingEffectCallback(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1131 \textcolor{keywordtype}{void} HAL\_DSI\_EndOfRefreshCallback(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1132 \textcolor{keywordtype}{void} HAL\_DSI\_ErrorCallback(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1133 }
+\DoxyCodeLine{1134 \textcolor{comment}{/* Callbacks Register/UnRegister functions  ***********************************/}}
+\DoxyCodeLine{1135 \textcolor{preprocessor}{\#if (USE\_HAL\_DSI\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{1136 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_RegisterCallback(DSI\_HandleTypeDef *hdsi, HAL\_DSI\_CallbackIDTypeDef CallbackID,}
+\DoxyCodeLine{1137                                            pDSI\_CallbackTypeDef pCallback);}
+\DoxyCodeLine{1138 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_UnRegisterCallback(DSI\_HandleTypeDef *hdsi, HAL\_DSI\_CallbackIDTypeDef CallbackID);}
+\DoxyCodeLine{1139 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DSI\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1140 }
+\DoxyCodeLine{1141 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetGenericVCID(DSI\_HandleTypeDef *hdsi, uint32\_t VirtualChannelID);}
+\DoxyCodeLine{1142 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ConfigVideoMode(DSI\_HandleTypeDef *hdsi, DSI\_VidCfgTypeDef *VidCfg);}
+\DoxyCodeLine{1143 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ConfigAdaptedCommandMode(DSI\_HandleTypeDef *hdsi, DSI\_CmdCfgTypeDef *CmdCfg);}
+\DoxyCodeLine{1144 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ConfigCommand(DSI\_HandleTypeDef *hdsi, DSI\_LPCmdTypeDef *LPCmd);}
+\DoxyCodeLine{1145 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ConfigFlowControl(DSI\_HandleTypeDef *hdsi, uint32\_t FlowControl);}
+\DoxyCodeLine{1146 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ConfigPhyTimer(DSI\_HandleTypeDef *hdsi, DSI\_PHY\_TimerTypeDef *PhyTimers);}
+\DoxyCodeLine{1147 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ConfigHostTimeouts(DSI\_HandleTypeDef *hdsi, DSI\_HOST\_TimeoutTypeDef *HostTimeouts);}
+\DoxyCodeLine{1148 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_Start(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1149 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_Stop(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1150 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_Refresh(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1151 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ColorMode(DSI\_HandleTypeDef *hdsi, uint32\_t ColorMode);}
+\DoxyCodeLine{1152 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_Shutdown(DSI\_HandleTypeDef *hdsi, uint32\_t Shutdown);}
+\DoxyCodeLine{1153 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ShortWrite(DSI\_HandleTypeDef *hdsi,}
+\DoxyCodeLine{1154                                      uint32\_t ChannelID,}
+\DoxyCodeLine{1155                                      uint32\_t Mode,}
+\DoxyCodeLine{1156                                      uint32\_t Param1,}
+\DoxyCodeLine{1157                                      uint32\_t Param2);}
+\DoxyCodeLine{1158 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_LongWrite(DSI\_HandleTypeDef *hdsi,}
+\DoxyCodeLine{1159                                     uint32\_t ChannelID,}
+\DoxyCodeLine{1160                                     uint32\_t Mode,}
+\DoxyCodeLine{1161                                     uint32\_t NbParams,}
+\DoxyCodeLine{1162                                     uint32\_t Param1,}
+\DoxyCodeLine{1163                                     uint8\_t *ParametersTable);}
+\DoxyCodeLine{1164 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_Read(DSI\_HandleTypeDef *hdsi,}
+\DoxyCodeLine{1165                                uint32\_t ChannelNbr,}
+\DoxyCodeLine{1166                                uint8\_t *Array,}
+\DoxyCodeLine{1167                                uint32\_t Size,}
+\DoxyCodeLine{1168                                uint32\_t Mode,}
+\DoxyCodeLine{1169                                uint32\_t DCSCmd,}
+\DoxyCodeLine{1170                                uint8\_t *ParametersTable);}
+\DoxyCodeLine{1171 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_EnterULPMData(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1172 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ExitULPMData(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1173 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_EnterULPM(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1174 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ExitULPM(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1175 }
+\DoxyCodeLine{1176 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_PatternGeneratorStart(DSI\_HandleTypeDef *hdsi, uint32\_t Mode, uint32\_t Orientation);}
+\DoxyCodeLine{1177 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_PatternGeneratorStop(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1178 }
+\DoxyCodeLine{1179 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetSlewRateAndDelayTuning(DSI\_HandleTypeDef *hdsi, uint32\_t CommDelay, uint32\_t Lane,}
+\DoxyCodeLine{1180                                                     uint32\_t Value);}
+\DoxyCodeLine{1181 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetLowPowerRXFilter(DSI\_HandleTypeDef *hdsi, uint32\_t Frequency);}
+\DoxyCodeLine{1182 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetSDD(DSI\_HandleTypeDef *hdsi, FunctionalState State);}
+\DoxyCodeLine{1183 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetLanePinsConfiguration(DSI\_HandleTypeDef *hdsi, uint32\_t CustomLane, uint32\_t Lane,}
+\DoxyCodeLine{1184                                                    FunctionalState State);}
+\DoxyCodeLine{1185 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetPHYTimings(DSI\_HandleTypeDef *hdsi, uint32\_t Timing, FunctionalState State,}
+\DoxyCodeLine{1186                                         uint32\_t Value);}
+\DoxyCodeLine{1187 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ForceTXStopMode(DSI\_HandleTypeDef *hdsi, uint32\_t Lane, FunctionalState State);}
+\DoxyCodeLine{1188 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ForceRXLowPower(DSI\_HandleTypeDef *hdsi, FunctionalState State);}
+\DoxyCodeLine{1189 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ForceDataLanesInRX(DSI\_HandleTypeDef *hdsi, FunctionalState State);}
+\DoxyCodeLine{1190 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetPullDown(DSI\_HandleTypeDef *hdsi, FunctionalState State);}
+\DoxyCodeLine{1191 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_SetContentionDetectionOff(DSI\_HandleTypeDef *hdsi, FunctionalState State);}
+\DoxyCodeLine{1192 }
+\DoxyCodeLine{1193 uint32\_t HAL\_DSI\_GetError(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1194 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DSI\_ConfigErrorMonitor(DSI\_HandleTypeDef *hdsi, uint32\_t ActiveErrors);}
+\DoxyCodeLine{1195 HAL\_DSI\_StateTypeDef HAL\_DSI\_GetState(DSI\_HandleTypeDef *hdsi);}
+\DoxyCodeLine{1200 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1209 \textcolor{comment}{/* Private defines -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1218 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1227 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1231 \textcolor{preprocessor}{\#define DSI\_MAX\_RETURN\_PKT\_SIZE (0x00000037U) }}
+\DoxyCodeLine{1236 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1240 \textcolor{preprocessor}{\#define IS\_DSI\_PLL\_NDIV(NDIV)                       ((10U <= (NDIV)) \&\& ((NDIV) <= 125U))}}
+\DoxyCodeLine{1241 \textcolor{preprocessor}{\#define IS\_DSI\_PLL\_IDF(IDF)                         (((IDF) == DSI\_PLL\_IN\_DIV1) || \(\backslash\)}}
+\DoxyCodeLine{1242 \textcolor{preprocessor}{                                                     ((IDF) == DSI\_PLL\_IN\_DIV2) || \(\backslash\)}}
+\DoxyCodeLine{1243 \textcolor{preprocessor}{                                                     ((IDF) == DSI\_PLL\_IN\_DIV3) || \(\backslash\)}}
+\DoxyCodeLine{1244 \textcolor{preprocessor}{                                                     ((IDF) == DSI\_PLL\_IN\_DIV4) || \(\backslash\)}}
+\DoxyCodeLine{1245 \textcolor{preprocessor}{                                                     ((IDF) == DSI\_PLL\_IN\_DIV5) || \(\backslash\)}}
+\DoxyCodeLine{1246 \textcolor{preprocessor}{                                                     ((IDF) == DSI\_PLL\_IN\_DIV6) || \(\backslash\)}}
+\DoxyCodeLine{1247 \textcolor{preprocessor}{                                                     ((IDF) == DSI\_PLL\_IN\_DIV7))}}
+\DoxyCodeLine{1248 \textcolor{preprocessor}{\#define IS\_DSI\_PLL\_ODF(ODF)                         (((ODF) == DSI\_PLL\_OUT\_DIV1) || \(\backslash\)}}
+\DoxyCodeLine{1249 \textcolor{preprocessor}{                                                     ((ODF) == DSI\_PLL\_OUT\_DIV2) || \(\backslash\)}}
+\DoxyCodeLine{1250 \textcolor{preprocessor}{                                                     ((ODF) == DSI\_PLL\_OUT\_DIV4) || \(\backslash\)}}
+\DoxyCodeLine{1251 \textcolor{preprocessor}{                                                     ((ODF) == DSI\_PLL\_OUT\_DIV8))}}
+\DoxyCodeLine{1252 \textcolor{preprocessor}{\#define IS\_DSI\_AUTO\_CLKLANE\_CONTROL(AutoClkLane)    (((AutoClkLane) == DSI\_AUTO\_CLK\_LANE\_CTRL\_DISABLE) || ((AutoClkLane) == DSI\_AUTO\_CLK\_LANE\_CTRL\_ENABLE))}}
+\DoxyCodeLine{1253 \textcolor{preprocessor}{\#define IS\_DSI\_NUMBER\_OF\_LANES(NumberOfLanes)       (((NumberOfLanes) == DSI\_ONE\_DATA\_LANE) || ((NumberOfLanes) == DSI\_TWO\_DATA\_LANES))}}
+\DoxyCodeLine{1254 \textcolor{preprocessor}{\#define IS\_DSI\_FLOW\_CONTROL(FlowControl)            (((FlowControl) | DSI\_FLOW\_CONTROL\_ALL) == DSI\_FLOW\_CONTROL\_ALL)}}
+\DoxyCodeLine{1255 \textcolor{preprocessor}{\#define IS\_DSI\_COLOR\_CODING(ColorCoding)            ((ColorCoding) <= 5U)}}
+\DoxyCodeLine{1256 \textcolor{preprocessor}{\#define IS\_DSI\_LOOSELY\_PACKED(LooselyPacked)        (((LooselyPacked) == DSI\_LOOSELY\_PACKED\_ENABLE) || ((LooselyPacked) == DSI\_LOOSELY\_PACKED\_DISABLE))}}
+\DoxyCodeLine{1257 \textcolor{preprocessor}{\#define IS\_DSI\_DE\_POLARITY(DataEnable)              (((DataEnable) == DSI\_DATA\_ENABLE\_ACTIVE\_HIGH) || ((DataEnable) == DSI\_DATA\_ENABLE\_ACTIVE\_LOW))}}
+\DoxyCodeLine{1258 \textcolor{preprocessor}{\#define IS\_DSI\_VSYNC\_POLARITY(VSYNC)                (((VSYNC) == DSI\_VSYNC\_ACTIVE\_HIGH) || ((VSYNC) == DSI\_VSYNC\_ACTIVE\_LOW))}}
+\DoxyCodeLine{1259 \textcolor{preprocessor}{\#define IS\_DSI\_HSYNC\_POLARITY(HSYNC)                (((HSYNC) == DSI\_HSYNC\_ACTIVE\_HIGH) || ((HSYNC) == DSI\_HSYNC\_ACTIVE\_LOW))}}
+\DoxyCodeLine{1260 \textcolor{preprocessor}{\#define IS\_DSI\_VIDEO\_MODE\_TYPE(VideoModeType)       (((VideoModeType) == DSI\_VID\_MODE\_NB\_PULSES) || \(\backslash\)}}
+\DoxyCodeLine{1261 \textcolor{preprocessor}{                                                     ((VideoModeType) == DSI\_VID\_MODE\_NB\_EVENTS) || \(\backslash\)}}
+\DoxyCodeLine{1262 \textcolor{preprocessor}{                                                     ((VideoModeType) == DSI\_VID\_MODE\_BURST))}}
+\DoxyCodeLine{1263 \textcolor{preprocessor}{\#define IS\_DSI\_COLOR\_MODE(ColorMode)                (((ColorMode) == DSI\_COLOR\_MODE\_FULL) || ((ColorMode) == DSI\_COLOR\_MODE\_EIGHT))}}
+\DoxyCodeLine{1264 \textcolor{preprocessor}{\#define IS\_DSI\_SHUT\_DOWN(ShutDown)                  (((ShutDown) == DSI\_DISPLAY\_ON) || ((ShutDown) == DSI\_DISPLAY\_OFF))}}
+\DoxyCodeLine{1265 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_COMMAND(LPCommand)                (((LPCommand) == DSI\_LP\_COMMAND\_DISABLE) || ((LPCommand) == DSI\_LP\_COMMAND\_ENABLE))}}
+\DoxyCodeLine{1266 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_HFP(LPHFP)                        (((LPHFP) == DSI\_LP\_HFP\_DISABLE) || ((LPHFP) == DSI\_LP\_HFP\_ENABLE))}}
+\DoxyCodeLine{1267 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_HBP(LPHBP)                        (((LPHBP) == DSI\_LP\_HBP\_DISABLE) || ((LPHBP) == DSI\_LP\_HBP\_ENABLE))}}
+\DoxyCodeLine{1268 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_VACTIVE(LPVActive)                (((LPVActive) == DSI\_LP\_VACT\_DISABLE) || ((LPVActive) == DSI\_LP\_VACT\_ENABLE))}}
+\DoxyCodeLine{1269 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_VFP(LPVFP)                        (((LPVFP) == DSI\_LP\_VFP\_DISABLE) || ((LPVFP) == DSI\_LP\_VFP\_ENABLE))}}
+\DoxyCodeLine{1270 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_VBP(LPVBP)                        (((LPVBP) == DSI\_LP\_VBP\_DISABLE) || ((LPVBP) == DSI\_LP\_VBP\_ENABLE))}}
+\DoxyCodeLine{1271 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_VSYNC(LPVSYNC)                    (((LPVSYNC) == DSI\_LP\_VSYNC\_DISABLE) || ((LPVSYNC) == DSI\_LP\_VSYNC\_ENABLE))}}
+\DoxyCodeLine{1272 \textcolor{preprocessor}{\#define IS\_DSI\_FBTAA(FrameBTAAcknowledge)           (((FrameBTAAcknowledge) == DSI\_FBTAA\_DISABLE) || ((FrameBTAAcknowledge) == DSI\_FBTAA\_ENABLE))}}
+\DoxyCodeLine{1273 \textcolor{preprocessor}{\#define IS\_DSI\_TE\_SOURCE(TESource)                  (((TESource) == DSI\_TE\_DSILINK) || ((TESource) == DSI\_TE\_EXTERNAL))}}
+\DoxyCodeLine{1274 \textcolor{preprocessor}{\#define IS\_DSI\_TE\_POLARITY(TEPolarity)              (((TEPolarity) == DSI\_TE\_RISING\_EDGE) || ((TEPolarity) == DSI\_TE\_FALLING\_EDGE))}}
+\DoxyCodeLine{1275 \textcolor{preprocessor}{\#define IS\_DSI\_AUTOMATIC\_REFRESH(AutomaticRefresh)  (((AutomaticRefresh) == DSI\_AR\_DISABLE) || ((AutomaticRefresh) == DSI\_AR\_ENABLE))}}
+\DoxyCodeLine{1276 \textcolor{preprocessor}{\#define IS\_DSI\_VS\_POLARITY(VSPolarity)              (((VSPolarity) == DSI\_VSYNC\_FALLING) || ((VSPolarity) == DSI\_VSYNC\_RISING))}}
+\DoxyCodeLine{1277 \textcolor{preprocessor}{\#define IS\_DSI\_TE\_ACK\_REQUEST(TEAcknowledgeRequest) (((TEAcknowledgeRequest) == DSI\_TE\_ACKNOWLEDGE\_DISABLE) || ((TEAcknowledgeRequest) == DSI\_TE\_ACKNOWLEDGE\_ENABLE))}}
+\DoxyCodeLine{1278 \textcolor{preprocessor}{\#define IS\_DSI\_ACK\_REQUEST(AcknowledgeRequest)      (((AcknowledgeRequest) == DSI\_ACKNOWLEDGE\_DISABLE) || ((AcknowledgeRequest) == DSI\_ACKNOWLEDGE\_ENABLE))}}
+\DoxyCodeLine{1279 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_GSW0P(LP\_GSW0P)                   (((LP\_GSW0P) == DSI\_LP\_GSW0P\_DISABLE) || ((LP\_GSW0P) == DSI\_LP\_GSW0P\_ENABLE))}}
+\DoxyCodeLine{1280 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_GSW1P(LP\_GSW1P)                   (((LP\_GSW1P) == DSI\_LP\_GSW1P\_DISABLE) || ((LP\_GSW1P) == DSI\_LP\_GSW1P\_ENABLE))}}
+\DoxyCodeLine{1281 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_GSW2P(LP\_GSW2P)                   (((LP\_GSW2P) == DSI\_LP\_GSW2P\_DISABLE) || ((LP\_GSW2P) == DSI\_LP\_GSW2P\_ENABLE))}}
+\DoxyCodeLine{1282 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_GSR0P(LP\_GSR0P)                   (((LP\_GSR0P) == DSI\_LP\_GSR0P\_DISABLE) || ((LP\_GSR0P) == DSI\_LP\_GSR0P\_ENABLE))}}
+\DoxyCodeLine{1283 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_GSR1P(LP\_GSR1P)                   (((LP\_GSR1P) == DSI\_LP\_GSR1P\_DISABLE) || ((LP\_GSR1P) == DSI\_LP\_GSR1P\_ENABLE))}}
+\DoxyCodeLine{1284 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_GSR2P(LP\_GSR2P)                   (((LP\_GSR2P) == DSI\_LP\_GSR2P\_DISABLE) || ((LP\_GSR2P) == DSI\_LP\_GSR2P\_ENABLE))}}
+\DoxyCodeLine{1285 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_GLW(LP\_GLW)                       (((LP\_GLW) == DSI\_LP\_GLW\_DISABLE) || ((LP\_GLW) == DSI\_LP\_GLW\_ENABLE))}}
+\DoxyCodeLine{1286 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_DSW0P(LP\_DSW0P)                   (((LP\_DSW0P) == DSI\_LP\_DSW0P\_DISABLE) || ((LP\_DSW0P) == DSI\_LP\_DSW0P\_ENABLE))}}
+\DoxyCodeLine{1287 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_DSW1P(LP\_DSW1P)                   (((LP\_DSW1P) == DSI\_LP\_DSW1P\_DISABLE) || ((LP\_DSW1P) == DSI\_LP\_DSW1P\_ENABLE))}}
+\DoxyCodeLine{1288 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_DSR0P(LP\_DSR0P)                   (((LP\_DSR0P) == DSI\_LP\_DSR0P\_DISABLE) || ((LP\_DSR0P) == DSI\_LP\_DSR0P\_ENABLE))}}
+\DoxyCodeLine{1289 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_DLW(LP\_DLW)                       (((LP\_DLW) == DSI\_LP\_DLW\_DISABLE) || ((LP\_DLW) == DSI\_LP\_DLW\_ENABLE))}}
+\DoxyCodeLine{1290 \textcolor{preprocessor}{\#define IS\_DSI\_LP\_MRDP(LP\_MRDP)                     (((LP\_MRDP) == DSI\_LP\_MRDP\_DISABLE) || ((LP\_MRDP) == DSI\_LP\_MRDP\_ENABLE))}}
+\DoxyCodeLine{1291 \textcolor{preprocessor}{\#define IS\_DSI\_SHORT\_WRITE\_PACKET\_TYPE(MODE)        (((MODE) == DSI\_DCS\_SHORT\_PKT\_WRITE\_P0) || \(\backslash\)}}
+\DoxyCodeLine{1292 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_DCS\_SHORT\_PKT\_WRITE\_P1) || \(\backslash\)}}
+\DoxyCodeLine{1293 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_GEN\_SHORT\_PKT\_WRITE\_P0) || \(\backslash\)}}
+\DoxyCodeLine{1294 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_GEN\_SHORT\_PKT\_WRITE\_P1) || \(\backslash\)}}
+\DoxyCodeLine{1295 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_GEN\_SHORT\_PKT\_WRITE\_P2))}}
+\DoxyCodeLine{1296 \textcolor{preprocessor}{\#define IS\_DSI\_LONG\_WRITE\_PACKET\_TYPE(MODE)         (((MODE) == DSI\_DCS\_LONG\_PKT\_WRITE) || \(\backslash\)}}
+\DoxyCodeLine{1297 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_GEN\_LONG\_PKT\_WRITE))}}
+\DoxyCodeLine{1298 \textcolor{preprocessor}{\#define IS\_DSI\_READ\_PACKET\_TYPE(MODE)               (((MODE) == DSI\_DCS\_SHORT\_PKT\_READ) || \(\backslash\)}}
+\DoxyCodeLine{1299 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_GEN\_SHORT\_PKT\_READ\_P0) || \(\backslash\)}}
+\DoxyCodeLine{1300 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_GEN\_SHORT\_PKT\_READ\_P1) || \(\backslash\)}}
+\DoxyCodeLine{1301 \textcolor{preprocessor}{                                                     ((MODE) == DSI\_GEN\_SHORT\_PKT\_READ\_P2))}}
+\DoxyCodeLine{1302 \textcolor{preprocessor}{\#define IS\_DSI\_COMMUNICATION\_DELAY(CommDelay)       (((CommDelay) == DSI\_SLEW\_RATE\_HSTX) || ((CommDelay) == DSI\_SLEW\_RATE\_LPTX) || ((CommDelay) == DSI\_HS\_DELAY))}}
+\DoxyCodeLine{1303 \textcolor{preprocessor}{\#define IS\_DSI\_LANE\_GROUP(Lane)                     (((Lane) == DSI\_CLOCK\_LANE) || ((Lane) == DSI\_DATA\_LANES))}}
+\DoxyCodeLine{1304 \textcolor{preprocessor}{\#define IS\_DSI\_CUSTOM\_LANE(CustomLane)              (((CustomLane) == DSI\_SWAP\_LANE\_PINS) || ((CustomLane) == DSI\_INVERT\_HS\_SIGNAL))}}
+\DoxyCodeLine{1305 \textcolor{preprocessor}{\#define IS\_DSI\_LANE(Lane)                           (((Lane) == DSI\_CLOCK\_LANE) || ((Lane) == DSI\_DATA\_LANE0) || ((Lane) == DSI\_DATA\_LANE1))}}
+\DoxyCodeLine{1306 \textcolor{preprocessor}{\#define IS\_DSI\_PHY\_TIMING(Timing)                   (((Timing) == DSI\_TCLK\_POST   ) || \(\backslash\)}}
+\DoxyCodeLine{1307 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_TLPX\_CLK    ) || \(\backslash\)}}
+\DoxyCodeLine{1308 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_THS\_EXIT    ) || \(\backslash\)}}
+\DoxyCodeLine{1309 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_TLPX\_DATA   ) || \(\backslash\)}}
+\DoxyCodeLine{1310 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_THS\_ZERO    ) || \(\backslash\)}}
+\DoxyCodeLine{1311 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_THS\_TRAIL   ) || \(\backslash\)}}
+\DoxyCodeLine{1312 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_THS\_PREPARE ) || \(\backslash\)}}
+\DoxyCodeLine{1313 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_TCLK\_ZERO   ) || \(\backslash\)}}
+\DoxyCodeLine{1314 \textcolor{preprocessor}{                                                     ((Timing) == DSI\_TCLK\_PREPARE))}}
+\DoxyCodeLine{1315 }
+\DoxyCodeLine{1320 \textcolor{comment}{/* Private functions prototypes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1329 \textcolor{comment}{/* Private functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1345 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DSI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1346 }
+\DoxyCodeLine{1347 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{1348 \}}
+\DoxyCodeLine{1349 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1350 }
+\DoxyCodeLine{1351 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F4xx\_HAL\_DSI\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1352 }
+\DoxyCodeLine{1353 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

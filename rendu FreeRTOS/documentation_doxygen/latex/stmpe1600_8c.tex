@@ -1,0 +1,86 @@
+\hypertarget{stmpe1600_8c}{}\doxysection{Drivers/\+BSP/\+Components/stmpe1600/stmpe1600.c File Reference}
+\label{stmpe1600_8c}\index{Drivers/BSP/Components/stmpe1600/stmpe1600.c@{Drivers/BSP/Components/stmpe1600/stmpe1600.c}}
+
+
+This file provides a set of functions needed to manage the STMPE1600 IO Expander devices.  
+
+
+{\ttfamily \#include \char`\"{}stmpe1600.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries STMPE1600\+\_\+\+MAX\+\_\+\+INSTANCE}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga9b768b7b2d2c807b1409b4f4a4f260aa}{stmpe1600\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Initialize the stmpe1600 and configure the needed hardware resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga7dc8419129c1e4278da219a79c4a5dbb}{stmpe1600\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen Controller (Single point detection) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga8f4ee2c5985686991e614cb342440cad}{stmpe1600\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the stmpe1600 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga17e28fa9ec45bf992bad397b234b761f}{stmpe1600\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the stmpe1600 device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gae0f4986cb9fcedd86d41cc0129c32852}{stmpe1600\+\_\+\+Set\+ITPolarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga97d6ef755d80e712612464b9da15e2bf}{stmpe1600\+\_\+\+Enable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga99fbc9e46fe603c4e4e8d9f6c06b1efe}{stmpe1600\+\_\+\+Disable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gad52ca935e0600f12d74fa314b1a3343e}{stmpe1600\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em Initialize the selected pin(s) direction. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga2e9e58286bf9057562f8d4395b800f22}{stmpe1600\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configure the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga3b1fd40626d44f219d9fb64b1650e8f9}{stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Enable}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable polarity inversion of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga8651f238f33d4e77466d27bcb33b6cb5}{stmpe1600\+\_\+\+IO\+\_\+\+Polarity\+Inv\+\_\+\+Disable}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable polarity inversion of the selected IO pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga4040072bed64a28716e460b89c3d1133}{stmpe1600\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Set the value of the selected IO pins. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaaeab906ac67064a1913922d7cbcdce0d}{stmpe1600\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Read the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaf1a8860c52c4f6a68d7e0e71494b2616}{stmpe1600\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaaafc0fdfc7921ea9a1d4aef8c356b537}{stmpe1600\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_gaf477372738df470912c525985c60f2bf}{stmpe1600\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Read the IT status of the selected IO pin(s) (clears all the pending bits if any). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga41e42cf6b16c16aa0758d34fabb4b7bf}{stmpe1600\+\_\+\+IO\+\_\+\+Read\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Detect an IT pending bit from the selected IO pin(s). (clears all the pending bits if any). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e1600___private___functions_ga00dc4debeba8a3b7ca091f389b2f8ccd}{stmpe1600\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear all the IT pending bits if any. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_i_o___drv_type_def}{IO\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___s_t_m_p_e1600___private___variables_gafbb36fa11452e7bb289d18a0a87478c4}{stmpe1600\+\_\+io\+\_\+drv}}
+\item 
+uint8\+\_\+t {\bfseries stmpe1600} \mbox{[}STMPE1600\+\_\+\+MAX\+\_\+\+INSTANCE\mbox{]} = \{0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage the STMPE1600 IO Expander devices. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10-\/February-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

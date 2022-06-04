@@ -1,0 +1,314 @@
+\hypertarget{ili9325_8h}{}\doxysection{Drivers/\+BSP/\+Components/ili9325/ili9325.h File Reference}
+\label{ili9325_8h}\index{Drivers/BSP/Components/ili9325/ili9325.h@{Drivers/BSP/Components/ili9325/ili9325.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{ili9325_8c}{ili9325.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/lcd.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries ILI9325\+\_\+\+ID}~0x9325
+\begin{DoxyCompactList}\small\item\em ILI9325 ID ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ILI9325\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+WIDTH}~((uint16\+\_\+t)320)
+\begin{DoxyCompactList}\small\item\em ILI9325 Size ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ILI9325\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+HEIGHT}~((uint16\+\_\+t)240)
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+0}~0x00
+\begin{DoxyCompactList}\small\item\em ILI9325 Registers ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+1}~0x01
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+2}~0x02
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+3}~0x03
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+4}~0x04
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+5}~0x05
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+6}~0x06
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+7}~0x07
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+8}~0x08
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+9}~0x09
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+10}~0x0A
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+12}~0x0C
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+13}~0x0D
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+14}~0x0E
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+15}~0x0F
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+16}~0x10
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+17}~0x11
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+18}~0x12
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+19}~0x13
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+20}~0x14
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+21}~0x15
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+22}~0x16
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+23}~0x17
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+24}~0x18
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+25}~0x19
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+26}~0x1A
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+27}~0x1B
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+28}~0x1C
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+29}~0x1D
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+30}~0x1E
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+31}~0x1F
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+32}~0x20
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+33}~0x21
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+34}~0x22
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+36}~0x24
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+37}~0x25
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+40}~0x28
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+41}~0x29
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+43}~0x2B
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+45}~0x2D
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+48}~0x30
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+49}~0x31
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+50}~0x32
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+51}~0x33
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+52}~0x34
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+53}~0x35
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+54}~0x36
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+55}~0x37
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+56}~0x38
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+57}~0x39
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+58}~0x3A
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+59}~0x3B
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+60}~0x3C
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+61}~0x3D
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+62}~0x3E
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+63}~0x3F
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+64}~0x40
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+65}~0x41
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+66}~0x42
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+67}~0x43
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+68}~0x44
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+69}~0x45
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+70}~0x46
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+71}~0x47
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+72}~0x48
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+73}~0x49
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+74}~0x4A
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+75}~0x4B
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+76}~0x4C
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+77}~0x4D
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+78}~0x4E
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+79}~0x4F
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+80}~0x50
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+81}~0x51
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+82}~0x52
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+83}~0x53
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+96}~0x60
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+97}~0x61
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+106}~0x6A
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+118}~0x76
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+128}~0x80
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+129}~0x81
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+130}~0x82
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+131}~0x83
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+132}~0x84
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+133}~0x85
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+134}~0x86
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+135}~0x87
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+136}~0x88
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+137}~0x89
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+139}~0x8B
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+140}~0x8C
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+141}~0x8D
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+143}~0x8F
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+144}~0x90
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+145}~0x91
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+146}~0x92
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+147}~0x93
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+148}~0x94
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+149}~0x95
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+150}~0x96
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+151}~0x97
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+152}~0x98
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+153}~0x99
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+154}~0x9A
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+157}~0x9D
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+192}~0x\+C0
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+193}~0x\+C1
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+229}~0x\+E5
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_gac2dad7aeb7315082ba82dd2ff3b3f912}{ili9325\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the ILI9325 LCD Component. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga0d1bfb1436c67f911f952cf7259cda34}{ili9325\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Get the ILI9325 ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_gab89b9cfe67618cf258b5659deab1adfa}{ili9325\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCDReg, uint16\+\_\+t LCDReg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga33a9d41f9d1d5cf4034f20c03d0c4765}{ili9325\+\_\+\+Read\+Reg}} (uint8\+\_\+t LCDReg)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga45dbdb5ee31500eadf6fa0887d9d9159}{ili9325\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga2c5329f1c16c401a79c8f1927dee2897}{ili9325\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga080a128498e3867ed3dabe3fd74e1a5d}{ili9325\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Set Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga79acefaa65edb44310fc055a287e4054}{ili9325\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Write pixel. ~\newline
+ \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga6ea873dd731a4daa5411937d9430709f}{ili9325\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Read pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_gaecd849c1baa9601768ea3f648c8c8e3c}{ili9325\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga6f174cbeab5e2ef6233d885c3bec14ff}{ili9325\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_gaf263299af0fc74980cbce6105ee7215e}{ili9325\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga9e85aeafcbeb67436ff3eeb8ac53fbb2}{ili9325\+\_\+\+Draw\+RGBImage}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint8\+\_\+t $\ast$pdata)
+\begin{DoxyCompactList}\small\item\em Displays picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9325___exported___functions_gac5ef79f40ad604b9d2ca7ccd05be89f7}{ili9325\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga1fdb88f871b6d7037e62066ff0a03b4c}{ili9325\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9325___exported___functions_ga25a6b2c24b435cf2f434836b224bd2ad}{ili9325\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Height. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the LCD\+\_\+\+SPI interface. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Multiple\+Data} (uint8\+\_\+t $\ast$p\+Data, uint32\+\_\+t Size)
+\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Reg} (uint8\+\_\+t Reg)
+\begin{DoxyCompactList}\small\item\em Writes register address. \end{DoxyCompactList}\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+IO\+\_\+\+Read\+Data} (uint16\+\_\+t Reg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} {\bfseries ili9325\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{ili9325_8c}{ili9325.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+2.\+3 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,62 @@
+\hypertarget{group___l_c_d___l_o_g___exported___macros}{}\doxysection{LCD\+\_\+\+LOG\+\_\+\+Exported\+\_\+\+Macros}
+\label{group___l_c_d___l_o_g___exported___macros}\index{LCD\_LOG\_Exported\_Macros@{LCD\_LOG\_Exported\_Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___l_o_g___exported___macros_ga8018dfe1941054a1edcdb88776e1e6ae}{LCD\+\_\+\+Err\+Log}}(...)
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___l_o_g___exported___macros_gac7a6458eceafe11e4f6633415e1163fd}{LCD\+\_\+\+Usr\+Log}}(...)
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___l_o_g___exported___macros_ga1e2a4dd0809ad39606d39a07a63f065b}{LCD\+\_\+\+Dbg\+Log}}(...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___exported___macros_ga1e2a4dd0809ad39606d39a07a63f065b}\label{group___l_c_d___l_o_g___exported___macros_ga1e2a4dd0809ad39606d39a07a63f065b}} 
+\index{LCD\_LOG\_Exported\_Macros@{LCD\_LOG\_Exported\_Macros}!LCD\_DbgLog@{LCD\_DbgLog}}
+\index{LCD\_DbgLog@{LCD\_DbgLog}!LCD\_LOG\_Exported\_Macros@{LCD\_LOG\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{LCD\_DbgLog}{LCD\_DbgLog}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Dbg\+Log(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                 LCD\_LineColor = LCD\_COLOR\_CYAN;\(\backslash\)}
+\DoxyCodeLine{                                 printf(\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                                 LCD\_LineColor = LCD\_LOG\_DEFAULT\_COLOR;\(\backslash\)}
+\DoxyCodeLine{                               \}\textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___exported___macros_ga8018dfe1941054a1edcdb88776e1e6ae}\label{group___l_c_d___l_o_g___exported___macros_ga8018dfe1941054a1edcdb88776e1e6ae}} 
+\index{LCD\_LOG\_Exported\_Macros@{LCD\_LOG\_Exported\_Macros}!LCD\_ErrLog@{LCD\_ErrLog}}
+\index{LCD\_ErrLog@{LCD\_ErrLog}!LCD\_LOG\_Exported\_Macros@{LCD\_LOG\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{LCD\_ErrLog}{LCD\_ErrLog}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Err\+Log(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                 LCD\_LineColor = LCD\_COLOR\_RED;\(\backslash\)}
+\DoxyCodeLine{                                 printf(\textcolor{stringliteral}{"{}ERROR: "{}}) ;\(\backslash\)}
+\DoxyCodeLine{                                 printf(\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                                 LCD\_LineColor = LCD\_LOG\_DEFAULT\_COLOR;\(\backslash\)}
+\DoxyCodeLine{                               \}\textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___exported___macros_gac7a6458eceafe11e4f6633415e1163fd}\label{group___l_c_d___l_o_g___exported___macros_gac7a6458eceafe11e4f6633415e1163fd}} 
+\index{LCD\_LOG\_Exported\_Macros@{LCD\_LOG\_Exported\_Macros}!LCD\_UsrLog@{LCD\_UsrLog}}
+\index{LCD\_UsrLog@{LCD\_UsrLog}!LCD\_LOG\_Exported\_Macros@{LCD\_LOG\_Exported\_Macros}}
+\doxysubsubsection{\texorpdfstring{LCD\_UsrLog}{LCD\_UsrLog}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Usr\+Log(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                                 LCD\_LineColor = LCD\_LOG\_TEXT\_COLOR;\(\backslash\)}
+\DoxyCodeLine{                                 printf(\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                               \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}

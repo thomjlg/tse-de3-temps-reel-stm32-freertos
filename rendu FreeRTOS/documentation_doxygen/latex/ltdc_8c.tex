@@ -1,0 +1,50 @@
+\hypertarget{ltdc_8c}{}\doxysection{Core/\+Src/ltdc.c File Reference}
+\label{ltdc_8c}\index{Core/Src/ltdc.c@{Core/Src/ltdc.c}}
+
+
+This file provides code for the configuration of the LTDC instances.  
+
+
+{\ttfamily \#include \char`\"{}ltdc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ltdc_8c_ab0560fa50fd4d75d51386ed50d4410fb}\label{ltdc_8c_ab0560fa50fd4d75d51386ed50d4410fb}} 
+void {\bfseries MX\+\_\+\+LTDC\+\_\+\+Init} (void)
+\item 
+void \mbox{\hyperlink{ltdc_8c_ad5e272b6baa5c8efbb5920594f0b1d27}{HAL\+\_\+\+LTDC\+\_\+\+Msp\+Init}} (LTDC\+\_\+\+Handle\+Type\+Def $\ast$ltdc\+Handle)
+\item 
+void \mbox{\hyperlink{ltdc_8c_a3e28ef2335eb650d1854f0855e810a5b}{HAL\+\_\+\+LTDC\+\_\+\+Msp\+De\+Init}} (LTDC\+\_\+\+Handle\+Type\+Def $\ast$ltdc\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ltdc_8c_a9ede3a77755ec81a9be03423cb915b05}\label{ltdc_8c_a9ede3a77755ec81a9be03423cb915b05}} 
+LTDC\+\_\+\+Handle\+Type\+Def {\bfseries hltdc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the LTDC instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under Ultimate Liberty license SLA0044, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: www.\+st.\+com/\+SLA0044 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ltdc_8c_a3e28ef2335eb650d1854f0855e810a5b}\label{ltdc_8c_a3e28ef2335eb650d1854f0855e810a5b}} 
+\index{ltdc.c@{ltdc.c}!HAL\_LTDC\_MspDeInit@{HAL\_LTDC\_MspDeInit}}
+\index{HAL\_LTDC\_MspDeInit@{HAL\_LTDC\_MspDeInit}!ltdc.c@{ltdc.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_LTDC\_MspDeInit()}{HAL\_LTDC\_MspDeInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+LTDC\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{LTDC\+\_\+\+Handle\+Type\+Def $\ast$}]{ltdc\+Handle }\end{DoxyParamCaption})}
+
+LTDC GPIO Configuration PF10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+DE PA3 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B5 PA4 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+VSYNC PA6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G2 PB0 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R3 PB1 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R6 PB10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G4 PB11 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G5 PG6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R7 PG7 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+CLK PC6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+HSYNC PC7 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G6 PA11 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R4 PA12 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R5 PC10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R2 PD3 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G7 PD6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B2 PG10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G3 PG11 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B3 PG12 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B4 PB8 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B6 PB9 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B7\mbox{\Hypertarget{ltdc_8c_ad5e272b6baa5c8efbb5920594f0b1d27}\label{ltdc_8c_ad5e272b6baa5c8efbb5920594f0b1d27}} 
+\index{ltdc.c@{ltdc.c}!HAL\_LTDC\_MspInit@{HAL\_LTDC\_MspInit}}
+\index{HAL\_LTDC\_MspInit@{HAL\_LTDC\_MspInit}!ltdc.c@{ltdc.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_LTDC\_MspInit()}{HAL\_LTDC\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+LTDC\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{LTDC\+\_\+\+Handle\+Type\+Def $\ast$}]{ltdc\+Handle }\end{DoxyParamCaption})}
+
+LTDC GPIO Configuration PF10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+DE PA3 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B5 PA4 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+VSYNC PA6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G2 PB0 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R3 PB1 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R6 PB10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G4 PB11 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G5 PG6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R7 PG7 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+CLK PC6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+HSYNC PC7 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G6 PA11 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R4 PA12 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R5 PC10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+R2 PD3 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G7 PD6 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B2 PG10 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+G3 PG11 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B3 PG12 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B4 PB8 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B6 PB9 -\/-\/-\/---\texorpdfstring{$>$}{>} LTDC\+\_\+\+B7

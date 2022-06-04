@@ -1,0 +1,169 @@
+\hypertarget{n25q256a_8h_source}{}\doxysection{n25q256a.\+h}
+\label{n25q256a_8h_source}\index{Drivers/BSP/Components/n25q256a/n25q256a.h@{Drivers/BSP/Components/n25q256a/n25q256a.h}}
+\mbox{\hyperlink{n25q256a_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_N25Q256A\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_N25Q256A\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define N25Q256A\_FLASH\_SIZE                  0x2000000 }\textcolor{comment}{/* 256 MBits => 32MBytes */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define N25Q256A\_SECTOR\_SIZE                 0x10000   }\textcolor{comment}{/* 512 sectors of 64KBytes */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define N25Q256A\_SUBSECTOR\_SIZE              0x1000    }\textcolor{comment}{/* 8192 subsectors of 4kBytes */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define N25Q256A\_PAGE\_SIZE                   0x100     }\textcolor{comment}{/* 131072 pages of 256 bytes */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define N25Q256A\_DUMMY\_CYCLES\_READ           8}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define N25Q256A\_DUMMY\_CYCLES\_READ\_QUAD      10}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define N25Q256A\_DUMMY\_CYCLES\_READ\_DTR       6}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define N25Q256A\_DUMMY\_CYCLES\_READ\_QUAD\_DTR  8}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define N25Q256A\_BULK\_ERASE\_MAX\_TIME         480000}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define N25Q256A\_SECTOR\_ERASE\_MAX\_TIME       3000}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define N25Q256A\_SUBSECTOR\_ERASE\_MAX\_TIME    800}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{92 \textcolor{comment}{/* Reset Operations */}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define RESET\_ENABLE\_CMD                     0x66}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define RESET\_MEMORY\_CMD                     0x99}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{comment}{/* Identification Operations */}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define READ\_ID\_CMD                          0x9E}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define READ\_ID\_CMD2                         0x9F}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define MULTIPLE\_IO\_READ\_ID\_CMD              0xAF}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define READ\_SERIAL\_FLASH\_DISCO\_PARAM\_CMD    0x5A}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{comment}{/* Read Operations */}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define READ\_CMD                             0x03}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define READ\_4\_BYTE\_ADDR\_CMD                 0x13}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define FAST\_READ\_CMD                        0x0B}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define FAST\_READ\_DTR\_CMD                    0x0D}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define FAST\_READ\_4\_BYTE\_ADDR\_CMD            0x0C}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define DUAL\_OUT\_FAST\_READ\_CMD               0x3B}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define DUAL\_OUT\_FAST\_READ\_DTR\_CMD           0x3D}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define DUAL\_OUT\_FAST\_READ\_4\_BYTE\_ADDR\_CMD   0x3C}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define DUAL\_INOUT\_FAST\_READ\_CMD             0xBB}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define DUAL\_INOUT\_FAST\_READ\_DTR\_CMD         0xBD}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define DUAL\_INOUT\_FAST\_READ\_4\_BYTE\_ADDR\_CMD 0xBC}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define QUAD\_OUT\_FAST\_READ\_CMD               0x6B}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define QUAD\_OUT\_FAST\_READ\_DTR\_CMD           0x6D}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define QUAD\_OUT\_FAST\_READ\_4\_BYTE\_ADDR\_CMD   0x6C}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define QUAD\_INOUT\_FAST\_READ\_CMD             0xEB}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define QUAD\_INOUT\_FAST\_READ\_DTR\_CMD         0xED}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define QUAD\_INOUT\_FAST\_READ\_4\_BYTE\_ADDR\_CMD 0xEC}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{comment}{/* Write Operations */}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define WRITE\_ENABLE\_CMD                     0x06}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define WRITE\_DISABLE\_CMD                    0x04}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{comment}{/* Register Operations */}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define READ\_STATUS\_REG\_CMD                  0x05}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define WRITE\_STATUS\_REG\_CMD                 0x01}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define READ\_LOCK\_REG\_CMD                    0xE8}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define WRITE\_LOCK\_REG\_CMD                   0xE5}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define READ\_FLAG\_STATUS\_REG\_CMD             0x70}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define CLEAR\_FLAG\_STATUS\_REG\_CMD            0x50}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define READ\_NONVOL\_CFG\_REG\_CMD              0xB5}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define WRITE\_NONVOL\_CFG\_REG\_CMD             0xB1}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define READ\_VOL\_CFG\_REG\_CMD                 0x85}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define WRITE\_VOL\_CFG\_REG\_CMD                0x81}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define READ\_ENHANCED\_VOL\_CFG\_REG\_CMD        0x65}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define WRITE\_ENHANCED\_VOL\_CFG\_REG\_CMD       0x61}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define READ\_EXT\_ADDR\_REG\_CMD                0xC8}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define WRITE\_EXT\_ADDR\_REG\_CMD               0xC5}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{comment}{/* Program Operations */}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define PAGE\_PROG\_CMD                        0x02}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define PAGE\_PROG\_4\_BYTE\_ADDR\_CMD            0x12}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define DUAL\_IN\_FAST\_PROG\_CMD                0xA2}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define EXT\_DUAL\_IN\_FAST\_PROG\_CMD            0xD2}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define QUAD\_IN\_FAST\_PROG\_CMD                0x32}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define EXT\_QUAD\_IN\_FAST\_PROG\_CMD            0x12 }\textcolor{comment}{/*0x38*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define QUAD\_IN\_FAST\_PROG\_4\_BYTE\_ADDR\_CMD    0x34}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{comment}{/* Erase Operations */}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define SUBSECTOR\_ERASE\_CMD                  0x20}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define SUBSECTOR\_ERASE\_4\_BYTE\_ADDR\_CMD      0x21}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define SECTOR\_ERASE\_CMD                     0xD8}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define SECTOR\_ERASE\_4\_BYTE\_ADDR\_CMD         0xDC}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define BULK\_ERASE\_CMD                       0xC7}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define PROG\_ERASE\_RESUME\_CMD                0x7A}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define PROG\_ERASE\_SUSPEND\_CMD               0x75}}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \textcolor{comment}{/* One-\/Time Programmable Operations */}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define READ\_OTP\_ARRAY\_CMD                   0x4B}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define PROG\_OTP\_ARRAY\_CMD                   0x42}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179 \textcolor{comment}{/* 4-\/byte Address Mode Operations */}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define ENTER\_4\_BYTE\_ADDR\_MODE\_CMD           0xB7}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define EXIT\_4\_BYTE\_ADDR\_MODE\_CMD            0xE9}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{comment}{/* Quad Operations */}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define ENTER\_QUAD\_CMD                       0x35}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define EXIT\_QUAD\_CMD                        0xF5}}
+\DoxyCodeLine{186    }
+\DoxyCodeLine{190 \textcolor{comment}{/* Status Register */}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define N25Q256A\_SR\_WIP                      ((uint8\_t)0x01)    }}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define N25Q256A\_SR\_WREN                     ((uint8\_t)0x02)    }}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define N25Q256A\_SR\_BLOCKPR                  ((uint8\_t)0x5C)    }}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define N25Q256A\_SR\_PRBOTTOM                 ((uint8\_t)0x20)    }}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define N25Q256A\_SR\_SRWREN                   ((uint8\_t)0x80)    }}
+\DoxyCodeLine{197 \textcolor{comment}{/* Nonvolatile Configuration Register */}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_NBADDR                 ((uint16\_t)0x0001) }}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_SEGMENT                ((uint16\_t)0x0002) }}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_DUAL                   ((uint16\_t)0x0004) }}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_QUAB                   ((uint16\_t)0x0008) }}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_RH                     ((uint16\_t)0x0010) }}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_ODS                    ((uint16\_t)0x01C0) }}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_XIP                    ((uint16\_t)0x0E00) }}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define N25Q256A\_NVCR\_NB\_DUMMY               ((uint16\_t)0xF000) }}
+\DoxyCodeLine{207 \textcolor{comment}{/* Volatile Configuration Register */}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define N25Q256A\_VCR\_WRAP                    ((uint8\_t)0x03)    }}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define N25Q256A\_VCR\_XIP                     ((uint8\_t)0x08)    }}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define N25Q256A\_VCR\_NB\_DUMMY                ((uint8\_t)0xF0)    }}
+\DoxyCodeLine{212 \textcolor{comment}{/* Extended Address Register */}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define N25Q256A\_EAR\_A24                     ((uint8\_t)0x01)    }}
+\DoxyCodeLine{215 \textcolor{comment}{/* Enhanced Volatile Configuration Register */}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define N25Q256A\_EVCR\_ODS                    ((uint8\_t)0x07)    }}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define N25Q256A\_EVCR\_VPPA                   ((uint8\_t)0x08)    }}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define N25Q256A\_EVCR\_RH                     ((uint8\_t)0x10)    }}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define N25Q256A\_EVCR\_DUAL                   ((uint8\_t)0x40)    }}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define N25Q256A\_EVCR\_QUAD                   ((uint8\_t)0x80)    }}
+\DoxyCodeLine{222 \textcolor{comment}{/* Flag Status Register */}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_NBADDR                  ((uint8\_t)0x01)    }}
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_PRERR                   ((uint8\_t)0x02)    }}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_PGSUS                   ((uint8\_t)0x04)    }}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_VPPERR                  ((uint8\_t)0x08)    }}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_PGERR                   ((uint8\_t)0x10)    }}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_ERERR                   ((uint8\_t)0x20)    }}
+\DoxyCodeLine{229 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_ERSUS                   ((uint8\_t)0x40)    }}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define N25Q256A\_FSR\_READY                   ((uint8\_t)0x80)    }}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{244 \}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_N25Q256A\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{261 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

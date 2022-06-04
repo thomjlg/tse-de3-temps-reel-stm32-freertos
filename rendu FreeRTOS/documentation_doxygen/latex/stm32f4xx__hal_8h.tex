@@ -1,0 +1,198 @@
+\hypertarget{stm32f4xx__hal_8h}{}\doxysection{Drivers/\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32f4xx\+\_\+hal.h File Reference}
+\label{stm32f4xx__hal_8h}\index{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal.h@{Drivers/STM32F4xx\_HAL\_Driver/Inc/stm32f4xx\_hal.h}}
+
+
+This file contains all the functions prototypes for the HAL module driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+conf.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM2}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM2\+\_\+\+STOP))
+\begin{DoxyCompactList}\small\item\em Freeze/\+Unfreeze Peripherals in Debug mode. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM3}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM3\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM4}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM4\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM5}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM5\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM6}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM6\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM7}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM7\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM12}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM12\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM13}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM13\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM14}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM14\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+RTC}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+RTC\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+WWDG}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+WWDG\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+IWDG}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+IWDG\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+I2\+C1\+\_\+\+TIMEOUT}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+I2\+C1\+\_\+\+SMBUS\+\_\+\+TIMEOUT))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+I2\+C2\+\_\+\+TIMEOUT}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+I2\+C2\+\_\+\+SMBUS\+\_\+\+TIMEOUT))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+I2\+C3\+\_\+\+TIMEOUT}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+I2\+C3\+\_\+\+SMBUS\+\_\+\+TIMEOUT))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+CAN1}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+CAN1\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+CAN2}()~(DBGMCU-\/$>$APB1\+FZ $\vert$= (DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+CAN2\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM1}()~(DBGMCU-\/$>$APB2\+FZ $\vert$= (DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM1\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM8}()~(DBGMCU-\/$>$APB2\+FZ $\vert$= (DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM8\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM9}()~(DBGMCU-\/$>$APB2\+FZ $\vert$= (DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM9\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM10}()~(DBGMCU-\/$>$APB2\+FZ $\vert$= (DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM10\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+FREEZE\+\_\+\+TIM11}()~(DBGMCU-\/$>$APB2\+FZ $\vert$= (DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM11\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM2}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM2\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM3}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM3\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM4}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM4\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM5}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM5\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM6}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM6\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM7}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM7\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM12}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM12\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM13}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM13\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM14}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM14\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+RTC}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+RTC\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+WWDG}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+WWDG\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+IWDG}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+IWDG\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+I2\+C1\+\_\+\+TIMEOUT}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+I2\+C1\+\_\+\+SMBUS\+\_\+\+TIMEOUT))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+I2\+C2\+\_\+\+TIMEOUT}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+I2\+C2\+\_\+\+SMBUS\+\_\+\+TIMEOUT))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+I2\+C3\+\_\+\+TIMEOUT}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+I2\+C3\+\_\+\+SMBUS\+\_\+\+TIMEOUT))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+CAN1}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+CAN1\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+CAN2}()~(DBGMCU-\/$>$APB1\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB1\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+CAN2\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM1}()~(DBGMCU-\/$>$APB2\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM1\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM8}()~(DBGMCU-\/$>$APB2\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM8\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM9}()~(DBGMCU-\/$>$APB2\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM9\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM10}()~(DBGMCU-\/$>$APB2\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM10\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+DBGMCU\+\_\+\+UNFREEZE\+\_\+\+TIM11}()~(DBGMCU-\/$>$APB2\+FZ \&= $\sim$(DBGMCU\+\_\+\+APB2\+\_\+\+FZ\+\_\+\+DBG\+\_\+\+TIM11\+\_\+\+STOP))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+FLASH}()~(SYSCFG-\/$>$MEMRMP \&= $\sim$(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3c05039ec67573c00da29f58b914f258}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE}}))
+\begin{DoxyCompactList}\small\item\em Main Flash memory mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___h_a_l___exported___macros_ga59782d94690fd538b25def536c81c3ed}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+SYSTEMFLASH}}()
+\begin{DoxyCompactList}\small\item\em System Flash memory mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___h_a_l___exported___macros_ga86d36fdb1571fd56ffeecfaed80c6805}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+SRAM}}()
+\begin{DoxyCompactList}\small\item\em Embedded SRAM mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___h_a_l___private___macros_ga2a86bf8a89ad75716cd92e932a8ae71e}{IS\+\_\+\+TICKFREQ}}(FREQ)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}\label{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}} 
+enum {\bfseries HAL\+\_\+\+Tick\+Freq\+Type\+Def} \{ {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+10\+HZ} = 100U
+, {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+100\+HZ} = 10U
+, {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ} = 1U
+, {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+\+DEFAULT} = HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}{HAL\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em This function is used to initialize the HAL Library; it must be the first instruction to be executed in the main program (before to call any other HAL function), it performs the following\+: Configure the Flash prefetch, instruction and Data caches. Configures the Sys\+Tick to generate an interrupt each 1 millisecond, which is clocked by the HSI (at this stage, the clock is not yet configured and thus the system is running from the internal HSI at 16 MHz). Set NVIC Group Priority to 4. Calls the \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init()}} callback function defined in user file \char`\"{}stm32f4xx\+\_\+hal\+\_\+msp.\+c\char`\"{} to do the global low level hardware initialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}{HAL\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em This function de-\/\+Initializes common part of the HAL and stops the systick. This function is optional. ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the MSP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gaa2d4540edcb9dacec34edb77f3455bf0}{HAL\+\_\+\+Msp\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the MSP. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}{HAL\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the source of the time base. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188}{HAL\+\_\+\+Inc\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em This function is called to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gab1dc1e6b438daacfe38a312a90221330}{HAL\+\_\+\+Delay}} (uint32\+\_\+t Delay)
+\begin{DoxyCompactList}\small\item\em This function provides minimum delay (in milliseconds) based on variable incremented. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gac9b3a85a73735ac840d0dcb59bc0fdd6}{HAL\+\_\+\+Get\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Provides a tick value in millisecond. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gacdcc8b5d33b9f97fe1b0abd6a86a3d4b}{HAL\+\_\+\+Get\+Tick\+Prio}} (void)
+\begin{DoxyCompactList}\small\item\em This function returns a tick priority. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga47f2dd240b2aed823a76b11496f37690}{HAL\+\_\+\+Set\+Tick\+Freq}} (HAL\+\_\+\+Tick\+Freq\+Type\+Def Freq)
+\begin{DoxyCompactList}\small\item\em Set new tick Freq. \end{DoxyCompactList}\item 
+HAL\+\_\+\+Tick\+Freq\+Type\+Def \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga803cdbcc0883bcf5f5c98c50024c97e6}{HAL\+\_\+\+Get\+Tick\+Freq}} (void)
+\begin{DoxyCompactList}\small\item\em Return tick frequency. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}{HAL\+\_\+\+Suspend\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}{HAL\+\_\+\+Resume\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gafb139b375512ad2a234e4619b129b966}{HAL\+\_\+\+Get\+Hal\+Version}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the HAL revision. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gae051ef9e932404b21f5877c7186406b8}{HAL\+\_\+\+Get\+REVID}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the device revision identifier. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaff785f069ed650de77ff82ac407f7c84}{HAL\+\_\+\+Get\+DEVID}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the device identifier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaf031bcc71ebad9b7edf405547efd762b}{HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGSleep\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enable the Debug Module during SLEEP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gac7820d0561f19999a68d714655b901b5}{HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGSleep\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Disable the Debug Module during SLEEP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gadf25043b17de4bef38a95a75fd03e5c4}{HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enable the Debug Module during STOP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga2c93dcee35e5983d74f1000de7c042d5}{HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStop\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Disable the Debug Module during STOP mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga28a1323b2eeb0a408c1cfdbfa0db5ead}{HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStandby\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Enable the Debug Module during STANDBY mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga7faa58d8508ea3123b9f247a70379779}{HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStandby\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Disable the Debug Module during STANDBY mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga20b6ca07582e10aec5e15ad2fda7dfc1}{HAL\+\_\+\+Enable\+Compensation\+Cell}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the I/O Compensation Cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga653f1166b0e37afd40372550d806e667}{HAL\+\_\+\+Disable\+Compensation\+Cell}} (void)
+\begin{DoxyCompactList}\small\item\em Power-\/down the I/O Compensation Cell. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaf982aa0a575eef3758c0840a24077506}{HAL\+\_\+\+Get\+UIDw0}} (void)
+\begin{DoxyCompactList}\small\item\em Returns first word of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga52720dd92ed2bd4314a2a129855d766c}{HAL\+\_\+\+Get\+UIDw1}} (void)
+\begin{DoxyCompactList}\small\item\em Returns second word of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga5785ae5ec8d4c5a7dadb1359f0778700}{HAL\+\_\+\+Get\+UIDw2}} (void)
+\begin{DoxyCompactList}\small\item\em Returns third word of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t {\bfseries uw\+Tick}
+\item 
+uint32\+\_\+t {\bfseries uw\+Tick\+Prio}
+\item 
+HAL\+\_\+\+Tick\+Freq\+Type\+Def {\bfseries uw\+Tick\+Freq}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the HAL module driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 

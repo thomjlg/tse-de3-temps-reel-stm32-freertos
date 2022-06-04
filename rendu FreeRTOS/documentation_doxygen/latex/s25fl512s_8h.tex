@@ -1,0 +1,235 @@
+\hypertarget{s25fl512s_8h}{}\doxysection{Drivers/\+BSP/\+Components/s25fl512s/s25fl512s.h File Reference}
+\label{s25fl512s_8h}\index{Drivers/BSP/Components/s25fl512s/s25fl512s.h@{Drivers/BSP/Components/s25fl512s/s25fl512s.h}}
+
+
+This file contains all the description of the S25\+FL512S QSPI memory.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+FLASH\+\_\+\+SIZE}~0x4000000 /$\ast$ 512 MBits =$>$ 64MBytes $\ast$/
+\begin{DoxyCompactList}\small\item\em S25\+FL512S Configuration. \end{DoxyCompactList}\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+SECTOR\+\_\+\+SIZE}~0x40000   /$\ast$ 256 sectors of 256KBytes $\ast$/
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PAGE\+\_\+\+SIZE}~0x200     /$\ast$ 131072 pages of 512 bytes $\ast$/
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+BULK\+\_\+\+ERASE\+\_\+\+MAX\+\_\+\+TIME}~460000
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+SECTOR\+\_\+\+ERASE\+\_\+\+MAX\+\_\+\+TIME}~2600
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+SOFTWARE\+\_\+\+RESET\+\_\+\+CMD}~0x\+F0
+\begin{DoxyCompactList}\small\item\em S25\+FL512S Commands. \end{DoxyCompactList}\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+MODE\+\_\+\+BIT\+\_\+\+RESET\+\_\+\+CMD}~0x\+FF
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+ID\+\_\+\+CMD}~0x90
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+ID\+\_\+\+CMD2}~0x9F
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+ELECTRONIC\+\_\+\+SIGNATURE}~0x\+AB
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+SERIAL\+\_\+\+FLASH\+\_\+\+DISCO\+\_\+\+PARAM\+\_\+\+CMD}~0x5A
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+STATUS\+\_\+\+REG1\+\_\+\+CMD}~0x05
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+STATUS\+\_\+\+REG2\+\_\+\+CMD}~0x07
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+CONFIGURATION\+\_\+\+REG1\+\_\+\+CMD}~0x35
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+STATUS\+\_\+\+CMD\+\_\+\+REG\+\_\+\+CMD}~0x01
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+DISABLE\+\_\+\+CMD}~0x04
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+ENABLE\+\_\+\+CMD}~0x06
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+CLEAR\+\_\+\+STATUS\+\_\+\+REG1\+\_\+\+CMD}~0x30
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+AUTOBOOT\+\_\+\+REG\+\_\+\+CMD}~0x14
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+AUTOBOOT\+\_\+\+REG\+\_\+\+CMD}~0x15
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+BANK\+\_\+\+REG\+\_\+\+CMD}~0x16
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+BANK\+\_\+\+REG\+\_\+\+CMD}~0x17
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+ACCESS\+\_\+\+BANK\+\_\+\+REG\+\_\+\+CMD}~0x\+B9
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+DATA\+\_\+\+LEARNING\+\_\+\+PATTERN\+\_\+\+CMD}~0x41
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PGM\+\_\+\+NV\+\_\+\+DATA\+\_\+\+LEARNING\+\_\+\+REG\+\_\+\+CMD}~0x43
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+VOL\+\_\+\+DATA\+\_\+\+LEARNING\+\_\+\+REG\+\_\+\+CMD}~0x4A
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+CMD}~0x03
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x13
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+FAST\+\_\+\+READ\+\_\+\+CMD}~0x0B
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+FAST\+\_\+\+READ\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x0C
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+FAST\+\_\+\+READ\+\_\+\+DDR\+\_\+\+CMD}~0x0D
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+FAST\+\_\+\+READ\+\_\+\+\_\+\+DDR\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x0E
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+DUAL\+\_\+\+OUT\+\_\+\+FAST\+\_\+\+READ\+\_\+\+CMD}~0x3B
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+DUAL\+\_\+\+OUT\+\_\+\+FAST\+\_\+\+READ\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x3C
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+OUT\+\_\+\+FAST\+\_\+\+READ\+\_\+\+CMD}~0x6B
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+OUT\+\_\+\+FAST\+\_\+\+READ\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x6C
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+DUAL\+\_\+\+INOUT\+\_\+\+FAST\+\_\+\+READ\+\_\+\+CMD}~0x\+BB
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+DUAL\+\_\+\+INOUT\+\_\+\+FAST\+\_\+\+READ\+\_\+\+DTR\+\_\+\+CMD}~0x\+BD
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+DUAL\+\_\+\+INOUT\+\_\+\+FAST\+\_\+\+READ\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x\+BC
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+DDR\+\_\+\+DUAL\+\_\+\+INOUT\+\_\+\+READ\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x\+BE
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+INOUT\+\_\+\+FAST\+\_\+\+READ\+\_\+\+CMD}~0x\+EB
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+INOUT\+\_\+\+FAST\+\_\+\+READ\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x\+EC
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+INOUT\+\_\+\+FAST\+\_\+\+READ\+\_\+\+DDR\+\_\+\+CMD}~0x\+ED
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+INOUT\+\_\+\+READ\+\_\+\+DDR\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x\+EE
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PAGE\+\_\+\+PROG\+\_\+\+CMD}~0x02
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PAGE\+\_\+\+PROG\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x12
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+IN\+\_\+\+FAST\+\_\+\+PROG\+\_\+\+CMD}~0x32
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+IN\+\_\+\+FAST\+\_\+\+PROG\+\_\+\+ALTERNATE\+\_\+\+CMD}~0x38
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+QUAD\+\_\+\+IN\+\_\+\+FAST\+\_\+\+PROG\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x34
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROGRAM\+\_\+\+SUSPEND\+\_\+\+CMD}~0x85
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROGRAM\+\_\+\+RESUME\+\_\+\+CMD}~0x8A
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+SECTOR\+\_\+\+ERASE\+\_\+\+CMD}~0x\+D8
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+SECTOR\+\_\+\+ERASE\+\_\+4\+\_\+\+BYTE\+\_\+\+ADDR\+\_\+\+CMD}~0x\+DC
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+BULK\+\_\+\+ERASE\+\_\+\+CMD}~0x60
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+BULK\+\_\+\+ERASE\+\_\+\+ALTERNATE\+\_\+\+CMD}~0x\+C7
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROG\+\_\+\+ERASE\+\_\+\+SUSPEND\+\_\+\+CMD}~0x75
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROG\+\_\+\+ERASE\+\_\+\+RESUME\+\_\+\+CMD}~0x7A
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROG\+\_\+\+OTP\+\_\+\+ARRAY\+\_\+\+CMD}~0x42
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+OTP\+\_\+\+ARRAY\+\_\+\+CMD}~0x4B
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+DYB\+\_\+\+CMD}~0x\+E0
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+DYB\+\_\+\+CMD}~0x\+E1
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+PPB\+\_\+\+CMD}~0x\+E2
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROGRAM\+\_\+\+PPB\+\_\+\+CMD}~0x\+E3
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+ERASE\+\_\+\+PPB\+\_\+\+CMD}~0x\+E4
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+ASP\+\_\+\+CMD}~0x2B
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROGRAM\+\_\+\+ASP\+\_\+\+CMD}~0x2F
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+PPB\+\_\+\+LOCKBIT\+\_\+\+CMD}~0x\+A7
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+WRITE\+\_\+\+PPB\+\_\+\+LOCKBIT\+\_\+\+CMD}~0x\+A6
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+READ\+\_\+\+PASSWORD\+\_\+\+CMD}~0x\+E7
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+PROGRAM\+\_\+\+PASSWORD\+\_\+\+CMD}~0x\+E8
+\item 
+\#define {\bfseries S25\+FL512\+S\+\_\+\+UNLOCK\+\_\+\+PASSWORD\+\_\+\+CMD}~0x\+E9
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga48fec6c8d5e3b1135525f3e65035d9da}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+WIP}}~((uint8\+\_\+t)0x01)
+\begin{DoxyCompactList}\small\item\em S25\+FL512S Registers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga901a392c71163447e751056e8d9ef87b}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+WREN}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gae0698e494b4ca75fd87d9a9410853d52}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+BP0}}~((uint8\+\_\+t)0x04)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga6a141c4f0dfd235097221894a3065286}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+BP1}}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gaf12aa70b9a807efbed5e79a01e134f73}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+BP2}}~((uint8\+\_\+t)0x10)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gad2999f22d2bc58274c50ea7fe2d72576}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+ERERR}}~((uint8\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga914f9f8330a93bee641053c6eb823a05}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+PGERR}}~((uint8\+\_\+t)0x40)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gaffe32e3c8903e1c3a4e7a3d39a7b5a60}{S25\+FL512\+S\+\_\+\+SR1\+\_\+\+SRWD}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga487c78785be2fd17676efe327c452a4a}{S25\+FL512\+S\+\_\+\+SR2\+\_\+\+PS}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gabcae86708d8829effc9a698ec30efea0}{S25\+FL512\+S\+\_\+\+SR2\+\_\+\+ES}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga0c7c5791e0e245e92d31ef3a9334b23f}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+FREEZE}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gab0d9a96730ca4b2b79969d0488bab5de}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+QUAD}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga823d3e91d22aa3695282c2d0c60a7023}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+BPNV}}~((uint8\+\_\+t)0x08)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga964ea7562243632d4918bc8395d28206}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+TBPROT}}~((uint8\+\_\+t)0x20)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga46cf6bf08dc1eab1ca57d43a3b1cda2b}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+LC\+\_\+\+MASK}}~((uint8\+\_\+t)0x\+C0)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gad6c548947df8ef146e41daac36d532fc}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+LC0}}~((uint8\+\_\+t)0x00)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gad9d4acd3f775841cfc3c8c50f3f58820}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+LC1}}~((uint8\+\_\+t)0x40)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gad09718d9b715f8cec1d487a08d5c3061}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+LC2}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga769650157d9fb7039fccf55a09d95946}{S25\+FL512\+S\+\_\+\+CR1\+\_\+\+LC3}}~((uint8\+\_\+t)0x\+C0)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gad17bb4cc7ccb847130241bbde2903d6f}{S25\+FL512\+S\+\_\+\+AB\+\_\+\+EN}}~((uint32\+\_\+t)0x00000001)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga3bbdd03ae9af882c324a3d6cb6ed20fd}{S25\+FL512\+S\+\_\+\+AB\+\_\+\+SD\+\_\+\+MASK}}~((uint32\+\_\+t)0x000001\+FE)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga14b95a4ef3dd2849fb86655e01e6e5c6}{S25\+FL512\+S\+\_\+\+AB\+\_\+\+SA\+\_\+\+MASK}}~((uint32\+\_\+t)0x\+FFFFFE00)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gaa592837e764d1a9af2cb8bdebf0549f8}{S25\+FL512\+S\+\_\+\+BA\+\_\+\+BA24}}~((uint8\+\_\+t)0x01)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga13fd444d200ca5ebfdd5572e0634b8ea}{S25\+FL512\+S\+\_\+\+BA\+\_\+\+BA25}}~((uint8\+\_\+t)0x02)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gaec009df7bd8cd26694c1ac4d6a4f5eaa}{S25\+FL512\+S\+\_\+\+BA\+\_\+\+EXTADD}}~((uint8\+\_\+t)0x80)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga51465f70589eb3703f3596ec04e259d6}{S25\+FL512\+S\+\_\+\+ASP\+\_\+\+PSTMLB}}~((uint16\+\_\+t)0x0002)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_gabd533ba33a88cdc27cd9cf99acf2dc33}{S25\+FL512\+S\+\_\+\+ASP\+\_\+\+PWSMLB}}~((uint16\+\_\+t)0x0003)
+\item 
+\#define \mbox{\hyperlink{group___s25_f_l512_s___exported___constants_ga8e329ec7d42ca725e22b6a525ef86dfe}{S25\+FL512\+S\+\_\+\+PPBLOCK}}~((uint8\+\_\+t)0x01)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the description of the S25\+FL512S QSPI memory. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03-\/August-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

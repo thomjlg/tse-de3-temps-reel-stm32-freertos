@@ -1,0 +1,41 @@
+\hypertarget{tsensor_8h_source}{}\doxysection{tsensor.\+h}
+\label{tsensor_8h_source}\index{Drivers/BSP/Components/Common/tsensor.h@{Drivers/BSP/Components/Common/tsensor.h}}
+\mbox{\hyperlink{tsensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_TSENSOR\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_TSENSOR\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{69 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71   uint8\_t AlertMode;            \textcolor{comment}{/* Alert Mode Temperature out of range*/}}
+\DoxyCodeLine{72   uint8\_t ConversionMode;       \textcolor{comment}{/* Continuous/One Shot Mode */}}
+\DoxyCodeLine{73   uint8\_t ConversionResolution; \textcolor{comment}{/* Temperature Resolution */}}
+\DoxyCodeLine{74   uint8\_t ConversionRate;       \textcolor{comment}{/* Number of measure per second */}}
+\DoxyCodeLine{75   uint8\_t TemperatureLimitHigh; \textcolor{comment}{/* High Temperature Limit Range */}}
+\DoxyCodeLine{76   uint8\_t TemperatureLimitLow;  \textcolor{comment}{/* Low Temperature Limit Range */}}
+\DoxyCodeLine{77 \}\mbox{\hyperlink{struct_t_s_e_n_s_o_r___init_type_def}{TSENSOR\_InitTypeDef}};}
+\DoxyCodeLine{85 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{86 \{  }
+\DoxyCodeLine{87   void       (*Init)(uint16\_t, \mbox{\hyperlink{struct_t_s_e_n_s_o_r___init_type_def}{TSENSOR\_InitTypeDef}} *);}
+\DoxyCodeLine{88   uint8\_t    (*IsReady)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{89   uint8\_t    (*ReadStatus)(uint16\_t);}
+\DoxyCodeLine{90   uint16\_t   (*ReadTemp)(uint16\_t); }
+\DoxyCodeLine{91 \}\mbox{\hyperlink{struct_t_s_e_n_s_o_r___drv_type_def}{TSENSOR\_DrvTypeDef}};}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{113 \}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_TSENSOR\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

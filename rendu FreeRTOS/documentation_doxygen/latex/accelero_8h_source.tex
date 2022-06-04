@@ -1,0 +1,65 @@
+\hypertarget{accelero_8h_source}{}\doxysection{accelero.\+h}
+\label{accelero_8h_source}\index{Drivers/BSP/Components/Common/accelero.h@{Drivers/BSP/Components/Common/accelero.h}}
+\mbox{\hyperlink{accelero_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_ACCELERO\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_ACCELERO\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{69 \{  }
+\DoxyCodeLine{70   void      (*Init)(uint16\_t);}
+\DoxyCodeLine{71   void      (*DeInit)(void); }
+\DoxyCodeLine{72   uint8\_t   (*ReadID)(void);}
+\DoxyCodeLine{73   void      (*Reset)(void);}
+\DoxyCodeLine{74   void      (*LowPower)(void);}
+\DoxyCodeLine{75   void      (*ConfigIT)(void);}
+\DoxyCodeLine{76   void      (*EnableIT)(uint8\_t);}
+\DoxyCodeLine{77   void      (*DisableIT)(uint8\_t);}
+\DoxyCodeLine{78   uint8\_t   (*ITStatus)(uint16\_t);}
+\DoxyCodeLine{79   void      (*ClearIT)(void);}
+\DoxyCodeLine{80   void      (*FilterConfig)(uint8\_t);}
+\DoxyCodeLine{81   void      (*FilterCmd)(uint8\_t);}
+\DoxyCodeLine{82   void      (*GetXYZ)(int16\_t *);}
+\DoxyCodeLine{83 \}\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\_DrvTypeDef}};}
+\DoxyCodeLine{92 \textcolor{comment}{/* ACCELERO struct */}}
+\DoxyCodeLine{93 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{94 \{}
+\DoxyCodeLine{95   uint8\_t Power\_Mode;                         \textcolor{comment}{/* Power-\/down/Normal Mode */}}
+\DoxyCodeLine{96   uint8\_t AccOutput\_DataRate;                 \textcolor{comment}{/* OUT data rate */}}
+\DoxyCodeLine{97   uint8\_t Axes\_Enable;                        \textcolor{comment}{/* Axes enable */}}
+\DoxyCodeLine{98   uint8\_t High\_Resolution;                    \textcolor{comment}{/* High Resolution enabling/disabling */}}
+\DoxyCodeLine{99   uint8\_t BlockData\_Update;                   \textcolor{comment}{/* Block Data Update */}}
+\DoxyCodeLine{100   uint8\_t Endianness;                         \textcolor{comment}{/* Endian Data selection */}}
+\DoxyCodeLine{101   uint8\_t AccFull\_Scale;                      \textcolor{comment}{/* Full Scale selection */}}
+\DoxyCodeLine{102   uint8\_t Communication\_Mode;}
+\DoxyCodeLine{103 \}\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___init_type_def}{ACCELERO\_InitTypeDef}};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{comment}{/* ACCELERO High Pass Filter struct */}}
+\DoxyCodeLine{106 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{107 \{}
+\DoxyCodeLine{108   uint8\_t HighPassFilter\_Mode\_Selection;      \textcolor{comment}{/* Internal filter mode */}}
+\DoxyCodeLine{109   uint8\_t HighPassFilter\_CutOff\_Frequency;    \textcolor{comment}{/* High pass filter cut-\/off frequency */}}
+\DoxyCodeLine{110   uint8\_t HighPassFilter\_AOI1;                \textcolor{comment}{/* HPF\_enabling/disabling for AOI function on interrupt 1 */}}
+\DoxyCodeLine{111   uint8\_t HighPassFilter\_AOI2;                \textcolor{comment}{/* HPF\_enabling/disabling for AOI function on interrupt 2 */}}
+\DoxyCodeLine{112   uint8\_t HighPassFilter\_Data\_Sel;}
+\DoxyCodeLine{113   uint8\_t HighPassFilter\_Stat;}
+\DoxyCodeLine{114 \}\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___filter_config_type_def}{ACCELERO\_FilterConfigTypeDef}};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{138 \}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ACCELERO\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

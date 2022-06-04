@@ -1,0 +1,62 @@
+\hypertarget{stm32f429i__discovery__eeprom_8h_source}{}\doxysection{stm32f429i\+\_\+discovery\+\_\+eeprom.\+h}
+\label{stm32f429i__discovery__eeprom_8h_source}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_eeprom.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_eeprom.h}}
+\mbox{\hyperlink{stm32f429i__discovery__eeprom_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_\_STM32F429I\_DISCOVERY\_EEPROM\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_\_STM32F429I\_DISCOVERY\_EEPROM\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{42  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f429i__discovery_8h}{stm32f429i\_discovery.h}}"{}}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{70 \textcolor{comment}{/* EEPROM hardware address and page size */} }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define EEPROM\_PAGESIZE             4}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define EEPROM\_MAX\_SIZE             0x2000 }\textcolor{comment}{/* 64Kbit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{73                                 }
+\DoxyCodeLine{74 \textcolor{comment}{/* Maximum Timeout values for flags and events waiting loops. }}
+\DoxyCodeLine{75 \textcolor{comment}{This timeout is based on systick set to 1ms*/}   }
+\DoxyCodeLine{76 \textcolor{comment}{/* Timeout for read based if read all the EEPROM : EEPROM\_MAX\_SIZE * BSP\_I2C\_SPEED (640ms)*/}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define EEPROM\_READ\_TIMEOUT         ((uint32\_t)(1000))}}
+\DoxyCodeLine{78 \textcolor{comment}{/* Timeout for write based on max write which is EEPROM\_PAGESIZE bytes: EEPROM\_PAGESIZE * BSP\_I2C\_SPEED (320us)*/}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define EEPROM\_WRITE\_TIMEOUT         ((uint32\_t)(1))}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{comment}{/* Maximum number of trials for EEPROM\_WaitEepromStandbyState() function */}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define EEPROM\_MAX\_TRIALS           300}}
+\DoxyCodeLine{83       }
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define EEPROM\_OK                   0}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define EEPROM\_FAIL                 1}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define EEPROM\_TIMEOUT              2}}
+\DoxyCodeLine{101 uint32\_t BSP\_EEPROM\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{102 uint32\_t BSP\_EEPROM\_ReadBuffer(uint8\_t *pBuffer, uint16\_t ReadAddr, uint16\_t *NumByteToRead);}
+\DoxyCodeLine{103 uint32\_t BSP\_EEPROM\_WritePage(uint8\_t *pBuffer, uint16\_t WriteAddr, uint8\_t *NumByteToWrite);}
+\DoxyCodeLine{104 uint32\_t BSP\_EEPROM\_WriteBuffer(uint8\_t *pBuffer, uint16\_t WriteAddr, uint16\_t NumByteToWrite);}
+\DoxyCodeLine{105 uint32\_t BSP\_EEPROM\_WaitEepromStandbyState(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{comment}{/* USER Callbacks: This function is declared as \_\_weak in EEPROM driver and }}
+\DoxyCodeLine{108 \textcolor{comment}{   should be implemented into user application.  }}
+\DoxyCodeLine{109 \textcolor{comment}{   BSP\_EEPROM\_TIMEOUT\_UserCallback() function is called whenever a timeout condition }}
+\DoxyCodeLine{110 \textcolor{comment}{   occurs during communication (waiting on an event that doesn't occur, bus }}
+\DoxyCodeLine{111 \textcolor{comment}{   errors, busy devices ...). */}}
+\DoxyCodeLine{112 \textcolor{keywordtype}{void}     BSP\_EEPROM\_TIMEOUT\_UserCallback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{comment}{/* Link function for I2C EEPROM peripheral */}}
+\DoxyCodeLine{116 \textcolor{keywordtype}{void}              EEPROM\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{117 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} EEPROM\_IO\_WriteData(uint16\_t DevAddress, uint16\_t MemAddress, uint8\_t *pBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{118 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} EEPROM\_IO\_ReadData(uint16\_t DevAddress, uint16\_t MemAddress, uint8\_t *pBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{119 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} EEPROM\_IO\_IsDeviceReady(uint16\_t DevAddress, uint32\_t Trials);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{122 \}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F429I\_DISCOVERY\_EEPROM\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{143 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

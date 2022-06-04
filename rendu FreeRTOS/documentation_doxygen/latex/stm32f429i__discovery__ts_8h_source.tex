@@ -1,0 +1,51 @@
+\hypertarget{stm32f429i__discovery__ts_8h_source}{}\doxysection{stm32f429i\+\_\+discovery\+\_\+ts.\+h}
+\label{stm32f429i__discovery__ts_8h_source}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_ts.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_ts.h}}
+\mbox{\hyperlink{stm32f429i__discovery__ts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_\_STM32F429I\_DISCOVERY\_TS\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_\_STM32F429I\_DISCOVERY\_TS\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{42  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif   }}
+\DoxyCodeLine{44    }
+\DoxyCodeLine{45 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f429i__discovery_8h}{stm32f429i\_discovery.h}}"{}}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Include TouchScreen component driver */}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Components/stmpe811/stmpe811.h"{}}   }
+\DoxyCodeLine{49    }
+\DoxyCodeLine{65 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67   uint16\_t TouchDetected;}
+\DoxyCodeLine{68   uint16\_t X;}
+\DoxyCodeLine{69   uint16\_t Y;}
+\DoxyCodeLine{70   uint16\_t Z;}
+\DoxyCodeLine{71 \}\mbox{\hyperlink{struct_t_s___state_type_def}{TS\_StateTypeDef}};}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define TS\_SWAP\_NONE                    0x00}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define TS\_SWAP\_X                       0x01}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define TS\_SWAP\_Y                       0x02}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define TS\_SWAP\_XY                      0x04}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86   TS\_OK       = 0x00,}
+\DoxyCodeLine{87   TS\_ERROR    = 0x01,}
+\DoxyCodeLine{88   TS\_TIMEOUT  = 0x02}
+\DoxyCodeLine{89 \}TS\_StatusTypeDef;}
+\DoxyCodeLine{104 uint8\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga18d2df11ce4364958d3a83b66d975421}{BSP\_TS\_Init}}(uint16\_t XSize, uint16\_t YSize);}
+\DoxyCodeLine{105 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga292d406e66b589cfb5e4d52557bd5855}{BSP\_TS\_GetState}}(\mbox{\hyperlink{struct_t_s___state_type_def}{TS\_StateTypeDef}} *TsState);}
+\DoxyCodeLine{106 uint8\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga9ee5e7f25f303d41fab3a0e078225168}{BSP\_TS\_ITConfig}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{107 uint8\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga3da0a8dcaa653c2ffee4231da98ea7ee}{BSP\_TS\_ITGetStatus}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{108 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___t_s___exported___functions_ga6bfa5cb59aa0c338ee31eb7d7c418530}{BSP\_TS\_ITClear}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{127 \}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F429I\_DISCOVERY\_TS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

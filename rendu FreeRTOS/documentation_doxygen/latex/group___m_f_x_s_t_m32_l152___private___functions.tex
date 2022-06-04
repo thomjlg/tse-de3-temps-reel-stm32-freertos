@@ -1,0 +1,1283 @@
+\hypertarget{group___m_f_x_s_t_m32_l152___private___functions}{}\doxysection{MFXSTM32\+L152\+\_\+\+Private\+\_\+\+Functions}
+\label{group___m_f_x_s_t_m32_l152___private___functions}\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga525fbfe19575da71fd6041447e0e88c2}{mfxstm32l152\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Initialize the mfxstm32l152 and configure the needed hardware resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga8ec4549b6719a15bcfd3a1444d35bfc3}{mfxstm32l152\+\_\+\+De\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em De\+Initialize the mfxstm32l152 and unconfigure the needed hardware resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga247f71e5f9bf1f72f1fa61da16fd8257}{mfxstm32l152\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the mfxstm32l152 by Software. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gab75943cd3afccb7265937dbe539fbf6a}{mfxstm32l152\+\_\+\+Low\+Power}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Put mfxstm32l152 Device in Low Power standby mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gaec837b686eb2cbe600b497a23f5a6044}{mfxstm32l152\+\_\+\+Wake\+Up}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Wake\+Up mfxstm32l152 from standby mode. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga5898eb7b6c9055f9b49d0ef229c7ae31}{mfxstm32l152\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the MFXSTM32\+L152 IO Expander device ID. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga433ddd2452d8651e0864faf5812e015f}{mfxstm32l152\+\_\+\+Read\+Fw\+Version}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the MFXSTM32\+L152 device firmware version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga2c044cc76865cdde5ddd54692019cf69}{mfxstm32l152\+\_\+\+Enable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga6166a6e8cf485bc44f601595a6c3cfe8}{mfxstm32l152\+\_\+\+Disable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gae4cc7464b17a55c211bf8326ebae493e}{mfxstm32l152\+\_\+\+Global\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Returns the selected Global interrupt source pending bit value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gab4cea459b91b04fac04b1d24aa4896e2}{mfxstm32l152\+\_\+\+Clear\+Global\+IT}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Clear the selected Global interrupt pending bit(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gae6add7ca850468cf2aacf7655bb3eee7}{mfxstm32l152\+\_\+\+Set\+Irq\+Out\+Pin\+Polarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity of IRQ\+\_\+\+OUT\+\_\+\+PIN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gac82b572d0a78ac3f80915398cd45c594}{mfxstm32l152\+\_\+\+Set\+Irq\+Out\+Pin\+Type}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Type)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Type of IRQ\+\_\+\+OUT\+\_\+\+PIN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga91f7be0b99f1ab6953284146d69d2d11}{mfxstm32l152\+\_\+\+IO\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Start the IO functionality used and enable the AF for selected IO pin(s). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga500bc17877baa128a8de08abc9638343}{mfxstm32l152\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gae4283dcc919e306ef39c6cea11eb55b2}{mfxstm32l152\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em Initialize the selected IO pin direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga95cf3e3c0a1722123610ef2a1c201b92}{mfxstm32l152\+\_\+\+IO\+\_\+\+Set\+Irq\+Evt\+Mode}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Evt)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga8ba47456428aaf264ba8ed8134d7de7b}{mfxstm32l152\+\_\+\+IO\+\_\+\+Set\+Irq\+Type\+Mode}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Type)
+\begin{DoxyCompactList}\small\item\em Configure the Edge for which a transition is detectable for the selected pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga6c5c6a5781be15e8c6e8161e89367111}{mfxstm32l152\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em When GPIO is in output mode, puts the corresponding GPO in High (1) or Low (0) level. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga155b7aff488b8e5cbea967987c691d8d}{mfxstm32l152\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Return the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gaffdc8f05d123db28f86a91985e426687}{mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga94b7f0383fbf2da34991e62bd9804422}{mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga268d9ea28decd06d2c33f74073812521}{mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga4d47f023dc68021dc0cd77d2110f091f}{mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga498c1ab9235ce7bd07e2674f57072bd6}{mfxstm32l152\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Check the status of the selected IO interrupt pending bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga637fddd3454b48f27db0484f8831cfe2}{mfxstm32l152\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear the selected IO interrupt pending bit(s). It clear automatically also the general MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+PENDING. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga18bb2a6789595ace1bbc45fb48b40f6f}{mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+AF}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the AF for a\+GPIO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga82c0a6c46aba013f5eabeeb29327cbe6}{mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+AF}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the AF for a\+GPIO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga1f311d23036ffeb40b5f7d1889c73ab6}{mfxstm32l152\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen Controller (Single point detection) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga726c59f85e53f6737927055e135a03f7}{mfxstm32l152\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touch detected or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gaba9c65eca11cceea87fb0c47578147bf}{mfxstm32l152\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gaba38e23391f8685b395aff1129e532de}{mfxstm32l152\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gaa78ac90676c880fdff3bbbd0ce7f3565}{mfxstm32l152\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gab71fdfbf6e3f308290a7a95468e84ddc}{mfxstm32l152\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga40f7d6f7af32bac4699fba8acbbc9e6a}{mfxstm32l152\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga00b09319e7428ee5389bcdaed8e06397}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Launch IDD current measurement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga5292153e66fcc3d2cb155e1ab5be765d}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, \mbox{\hyperlink{struct_i_d_d___config_type_def}{IDD\+\_\+\+Config\+Type\+Def}} Mfx\+Idd\+Config)
+\begin{DoxyCompactList}\small\item\em Configures the IDD current measurement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gabb510fb13e21eba41d255e8600bfc1d6}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Config\+Shunt\+Nb\+Limit}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Shunt\+Nb\+Limit)
+\begin{DoxyCompactList}\small\item\em This function allows to modify number of shunt used for a measurement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga8c920b5f255b095c96896eb26c6e5039}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+Value}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t $\ast$Read\+Value)
+\begin{DoxyCompactList}\small\item\em Get Idd current value. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga68309036e6346514d97f2d662526c571}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+Shunt\+Used}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Get Last shunt used for measurement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga65ca645a8d1a4180675560099ae51531}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure mfx to enable Idd interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga852c4eaf9f8b8946e897fa414d258f39}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Clear Idd global interrupt. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga409a5778007807ef66b40acac7d24db2}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em get Idd interrupt status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga7b2791d0ace86653c6319ac91fa26204}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em disable Idd interrupt \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga68d8340ffc8efe2975379cb5651a52e0}{mfxstm32l152\+\_\+\+Error\+\_\+\+Read\+Src}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read Error Source. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga7fe6bf98367e42f5423311857145b1b4}{mfxstm32l152\+\_\+\+Error\+\_\+\+Read\+Msg}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read Error Message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga47d33708ef596df83031b58bb544b54e}{mfxstm32l152\+\_\+\+Error\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable Error global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_gabb9cfbd9b00d94e1c8c75e7384ff40ea}{mfxstm32l152\+\_\+\+Error\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Clear Error global interrupt. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga9e95f3f4f8128306351dd3edaea04d21}{mfxstm32l152\+\_\+\+Error\+\_\+\+Get\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em get Error interrupt status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___private___functions_ga1fbfab805e88c9892efc656590c02973}{mfxstm32l152\+\_\+\+Error\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em disable Error interrupt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gada1e05c6a4169a8bf6ca495e911524ed}\label{group___m_f_x_s_t_m32_l152___private___functions_gada1e05c6a4169a8bf6ca495e911524ed}} 
+uint8\+\_\+t {\bfseries mfxstm32l152\+\_\+\+Read\+Reg} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Reg\+Addr)
+\begin{DoxyCompactList}\small\item\em FOR DEBUG ONLY. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gadbbdf61dd803d364468ef9f699b3065d}\label{group___m_f_x_s_t_m32_l152___private___functions_gadbbdf61dd803d364468ef9f699b3065d}} 
+void {\bfseries mfxstm32l152\+\_\+\+Write\+Reg} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Reg\+Addr, uint8\+\_\+t Value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gab4cea459b91b04fac04b1d24aa4896e2}\label{group___m_f_x_s_t_m32_l152___private___functions_gab4cea459b91b04fac04b1d24aa4896e2}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_ClearGlobalIT@{mfxstm32l152\_ClearGlobalIT}}
+\index{mfxstm32l152\_ClearGlobalIT@{mfxstm32l152\_ClearGlobalIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_ClearGlobalIT()}{mfxstm32l152\_ClearGlobalIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Clear\+Global\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Clear the selected Global interrupt pending bit(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Source} & the Global interrupt source to be cleared, could be any combination of the below values. The acknowledge signal for MFXSTM32\+L152\+\_\+\+GPIOs configured in input with interrupt is not on this register but in IRQ\+\_\+\+GPI\+\_\+\+ACK1, IRQ\+\_\+\+GPI\+\_\+\+ACK2 registers. ~\newline
+ \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+IDD \+: IDD interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+ERROR \+: Error interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+DET \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+NE \+: Touch Screen FIFO Not Empty ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+TH \+: Touch Screen FIFO threshold triggered ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+FULL \+: Touch Screen FIFO Full ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+OVF \+: Touch Screen FIFO Overflow ~\newline
+ /\textbackslash{}/\textbackslash{} IMPORTANT NOTE /\textbackslash{}/\textbackslash{} must not use MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPIO as argument, see IRQ\+\_\+\+GPI\+\_\+\+ACK1 and IRQ\+\_\+\+GPI\+\_\+\+ACK2 registers \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga8ec4549b6719a15bcfd3a1444d35bfc3}\label{group___m_f_x_s_t_m32_l152___private___functions_ga8ec4549b6719a15bcfd3a1444d35bfc3}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_DeInit@{mfxstm32l152\_DeInit}}
+\index{mfxstm32l152\_DeInit@{mfxstm32l152\_DeInit}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_DeInit()}{mfxstm32l152\_DeInit()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+De\+Initialize the mfxstm32l152 and unconfigure the needed hardware resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga6166a6e8cf485bc44f601595a6c3cfe8}\label{group___m_f_x_s_t_m32_l152___private___functions_ga6166a6e8cf485bc44f601595a6c3cfe8}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_DisableITSource@{mfxstm32l152\_DisableITSource}}
+\index{mfxstm32l152\_DisableITSource@{mfxstm32l152\_DisableITSource}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_DisableITSource()}{mfxstm32l152\_DisableITSource()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Disable\+ITSource (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Disable the interrupt mode for the selected IT source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Source} & The interrupt source to be configured, could be\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPIO\+: IO interrupt \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+IDD \+: IDD interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+ERROR \+: Error interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+DET \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+NE \+: Touch Screen FIFO Not Empty ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+TH \+: Touch Screen FIFO threshold triggered ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+FULL \+: Touch Screen FIFO Full ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+OVF \+: Touch Screen FIFO Overflow ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga2c044cc76865cdde5ddd54692019cf69}\label{group___m_f_x_s_t_m32_l152___private___functions_ga2c044cc76865cdde5ddd54692019cf69}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_EnableITSource@{mfxstm32l152\_EnableITSource}}
+\index{mfxstm32l152\_EnableITSource@{mfxstm32l152\_EnableITSource}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_EnableITSource()}{mfxstm32l152\_EnableITSource()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Enable\+ITSource (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Enable the interrupt mode for the selected IT source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Source} & The interrupt source to be configured, could be\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPIO\+: IO interrupt \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+IDD \+: IDD interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+ERROR \+: Error interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+DET \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+NE \+: Touch Screen FIFO Not Empty ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+TH \+: Touch Screen FIFO threshold triggered ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+FULL \+: Touch Screen FIFO Full ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+OVF \+: Touch Screen FIFO Overflow ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gabb9cfbd9b00d94e1c8c75e7384ff40ea}\label{group___m_f_x_s_t_m32_l152___private___functions_gabb9cfbd9b00d94e1c8c75e7384ff40ea}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Error\_ClearIT@{mfxstm32l152\_Error\_ClearIT}}
+\index{mfxstm32l152\_Error\_ClearIT@{mfxstm32l152\_Error\_ClearIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Error\_ClearIT()}{mfxstm32l152\_Error\_ClearIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Error\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Clear Error global interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga1fbfab805e88c9892efc656590c02973}\label{group___m_f_x_s_t_m32_l152___private___functions_ga1fbfab805e88c9892efc656590c02973}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Error\_DisableIT@{mfxstm32l152\_Error\_DisableIT}}
+\index{mfxstm32l152\_Error\_DisableIT@{mfxstm32l152\_Error\_DisableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Error\_DisableIT()}{mfxstm32l152\_Error\_DisableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Error\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+disable Error interrupt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga47d33708ef596df83031b58bb544b54e}\label{group___m_f_x_s_t_m32_l152___private___functions_ga47d33708ef596df83031b58bb544b54e}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Error\_EnableIT@{mfxstm32l152\_Error\_EnableIT}}
+\index{mfxstm32l152\_Error\_EnableIT@{mfxstm32l152\_Error\_EnableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Error\_EnableIT()}{mfxstm32l152\_Error\_EnableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Error\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Enable Error global interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga9e95f3f4f8128306351dd3edaea04d21}\label{group___m_f_x_s_t_m32_l152___private___functions_ga9e95f3f4f8128306351dd3edaea04d21}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Error\_GetITStatus@{mfxstm32l152\_Error\_GetITStatus}}
+\index{mfxstm32l152\_Error\_GetITStatus@{mfxstm32l152\_Error\_GetITStatus}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Error\_GetITStatus()}{mfxstm32l152\_Error\_GetITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+Error\+\_\+\+Get\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+get Error interrupt status 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error} & interrupts status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga7fe6bf98367e42f5423311857145b1b4}\label{group___m_f_x_s_t_m32_l152___private___functions_ga7fe6bf98367e42f5423311857145b1b4}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Error\_ReadMsg@{mfxstm32l152\_Error\_ReadMsg}}
+\index{mfxstm32l152\_Error\_ReadMsg@{mfxstm32l152\_Error\_ReadMsg}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Error\_ReadMsg()}{mfxstm32l152\_Error\_ReadMsg()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+Error\+\_\+\+Read\+Msg (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read Error Message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error} & message code with error source \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga68d8340ffc8efe2975379cb5651a52e0}\label{group___m_f_x_s_t_m32_l152___private___functions_ga68d8340ffc8efe2975379cb5651a52e0}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Error\_ReadSrc@{mfxstm32l152\_Error\_ReadSrc}}
+\index{mfxstm32l152\_Error\_ReadSrc@{mfxstm32l152\_Error\_ReadSrc}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Error\_ReadSrc()}{mfxstm32l152\_Error\_ReadSrc()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+Error\+\_\+\+Read\+Src (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read Error Source. 
+
+MFXSTM32\+L152 Error management functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error} & message code with error source \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gae4cc7464b17a55c211bf8326ebae493e}\label{group___m_f_x_s_t_m32_l152___private___functions_gae4cc7464b17a55c211bf8326ebae493e}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_GlobalITStatus@{mfxstm32l152\_GlobalITStatus}}
+\index{mfxstm32l152\_GlobalITStatus@{mfxstm32l152\_GlobalITStatus}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_GlobalITStatus()}{mfxstm32l152\_GlobalITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+Global\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Returns the selected Global interrupt source pending bit value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Source} & the Global interrupt source to be checked, could be\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPIO\+: IO interrupt \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+IDD \+: IDD interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+ERROR \+: Error interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+DET \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+NE \+: Touch Screen FIFO Not Empty ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+TH \+: Touch Screen FIFO threshold triggered ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+FULL \+: Touch Screen FIFO Full ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+OVF \+: Touch Screen FIFO Overflow ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & value of the checked Global interrupt source status. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga852c4eaf9f8b8946e897fa414d258f39}\label{group___m_f_x_s_t_m32_l152___private___functions_ga852c4eaf9f8b8946e897fa414d258f39}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_ClearIT@{mfxstm32l152\_IDD\_ClearIT}}
+\index{mfxstm32l152\_IDD\_ClearIT@{mfxstm32l152\_IDD\_ClearIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_ClearIT()}{mfxstm32l152\_IDD\_ClearIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IDD\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Clear Idd global interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga5292153e66fcc3d2cb155e1ab5be765d}\label{group___m_f_x_s_t_m32_l152___private___functions_ga5292153e66fcc3d2cb155e1ab5be765d}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_Config@{mfxstm32l152\_IDD\_Config}}
+\index{mfxstm32l152\_IDD\_Config@{mfxstm32l152\_IDD\_Config}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_Config()}{mfxstm32l152\_IDD\_Config()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IDD\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{\mbox{\hyperlink{struct_i_d_d___config_type_def}{IDD\+\_\+\+Config\+Type\+Def}}}]{Mfx\+Idd\+Config }\end{DoxyParamCaption})}
+
+
+
+Configures the IDD current measurement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Mfx\+Idd\+Config} & Parameters depending on hardware config. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gabb510fb13e21eba41d255e8600bfc1d6}\label{group___m_f_x_s_t_m32_l152___private___functions_gabb510fb13e21eba41d255e8600bfc1d6}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_ConfigShuntNbLimit@{mfxstm32l152\_IDD\_ConfigShuntNbLimit}}
+\index{mfxstm32l152\_IDD\_ConfigShuntNbLimit@{mfxstm32l152\_IDD\_ConfigShuntNbLimit}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_ConfigShuntNbLimit()}{mfxstm32l152\_IDD\_ConfigShuntNbLimit()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IDD\+\_\+\+Config\+Shunt\+Nb\+Limit (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Shunt\+Nb\+Limit }\end{DoxyParamCaption})}
+
+
+
+This function allows to modify number of shunt used for a measurement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga7b2791d0ace86653c6319ac91fa26204}\label{group___m_f_x_s_t_m32_l152___private___functions_ga7b2791d0ace86653c6319ac91fa26204}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_DisableIT@{mfxstm32l152\_IDD\_DisableIT}}
+\index{mfxstm32l152\_IDD\_DisableIT@{mfxstm32l152\_IDD\_DisableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_DisableIT()}{mfxstm32l152\_IDD\_DisableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IDD\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+disable Idd interrupt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga65ca645a8d1a4180675560099ae51531}\label{group___m_f_x_s_t_m32_l152___private___functions_ga65ca645a8d1a4180675560099ae51531}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_EnableIT@{mfxstm32l152\_IDD\_EnableIT}}
+\index{mfxstm32l152\_IDD\_EnableIT@{mfxstm32l152\_IDD\_EnableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_EnableIT()}{mfxstm32l152\_IDD\_EnableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IDD\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure mfx to enable Idd interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga409a5778007807ef66b40acac7d24db2}\label{group___m_f_x_s_t_m32_l152___private___functions_ga409a5778007807ef66b40acac7d24db2}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_GetITStatus@{mfxstm32l152\_IDD\_GetITStatus}}
+\index{mfxstm32l152\_IDD\_GetITStatus@{mfxstm32l152\_IDD\_GetITStatus}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_GetITStatus()}{mfxstm32l152\_IDD\_GetITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+get Idd interrupt status 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em IDD} & interrupts status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga68309036e6346514d97f2d662526c571}\label{group___m_f_x_s_t_m32_l152___private___functions_ga68309036e6346514d97f2d662526c571}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_GetShuntUsed@{mfxstm32l152\_IDD\_GetShuntUsed}}
+\index{mfxstm32l152\_IDD\_GetShuntUsed@{mfxstm32l152\_IDD\_GetShuntUsed}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_GetShuntUsed()}{mfxstm32l152\_IDD\_GetShuntUsed()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+Shunt\+Used (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Get Last shunt used for measurement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Last} & shunt used \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga8c920b5f255b095c96896eb26c6e5039}\label{group___m_f_x_s_t_m32_l152___private___functions_ga8c920b5f255b095c96896eb26c6e5039}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_GetValue@{mfxstm32l152\_IDD\_GetValue}}
+\index{mfxstm32l152\_IDD\_GetValue@{mfxstm32l152\_IDD\_GetValue}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_GetValue()}{mfxstm32l152\_IDD\_GetValue()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+Value (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t $\ast$}]{Read\+Value }\end{DoxyParamCaption})}
+
+
+
+Get Idd current value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus \\
+\hline
+{\em Read\+Value} & Pointer on value to be read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Idd} & value in 10 nA. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga00b09319e7428ee5389bcdaed8e06397}\label{group___m_f_x_s_t_m32_l152___private___functions_ga00b09319e7428ee5389bcdaed8e06397}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IDD\_Start@{mfxstm32l152\_IDD\_Start}}
+\index{mfxstm32l152\_IDD\_Start@{mfxstm32l152\_IDD\_Start}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IDD\_Start()}{mfxstm32l152\_IDD\_Start()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IDD\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Launch IDD current measurement. 
+
+MFXSTM32\+L152 IDD current measurement functionalities functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga525fbfe19575da71fd6041447e0e88c2}\label{group___m_f_x_s_t_m32_l152___private___functions_ga525fbfe19575da71fd6041447e0e88c2}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Init@{mfxstm32l152\_Init}}
+\index{mfxstm32l152\_Init@{mfxstm32l152\_Init}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Init()}{mfxstm32l152\_Init()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Initialize the mfxstm32l152 and configure the needed hardware resources. 
+
+MFXSTM32\+L152 Control functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga637fddd3454b48f27db0484f8831cfe2}\label{group___m_f_x_s_t_m32_l152___private___functions_ga637fddd3454b48f27db0484f8831cfe2}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_ClearIT@{mfxstm32l152\_IO\_ClearIT}}
+\index{mfxstm32l152\_IO\_ClearIT@{mfxstm32l152\_IO\_ClearIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_ClearIT()}{mfxstm32l152\_IO\_ClearIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Clear the selected IO interrupt pending bit(s). It clear automatically also the general MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+PENDING. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & the IO interrupt to be cleared, could be\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 23. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga500bc17877baa128a8de08abc9638343}\label{group___m_f_x_s_t_m32_l152___private___functions_ga500bc17877baa128a8de08abc9638343}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_Config@{mfxstm32l152\_IO\_Config}}
+\index{mfxstm32l152\_IO\_Config@{mfxstm32l152\_IO\_Config}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_Config()}{mfxstm32l152\_IO\_Config()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+IO\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{IO\+\_\+\+Mode\+Typedef}]{IO\+\_\+\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configures the IO pin(s) according to IO mode structure value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The output pin to be set or reset. This parameter can be one of the following values\+: ~\newline
+ \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 23. \end{DoxyItemize}
+\\
+\hline
+{\em IO\+\_\+\+Mode} & The IO pin mode to configure, could be one of the following values\+: \begin{DoxyItemize}
+\item IO\+\_\+\+MODE\+\_\+\+INPUT \item IO\+\_\+\+MODE\+\_\+\+OUTPUT \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL ~\newline
+ \item IO\+\_\+\+MODE\+\_\+\+INPUT\+\_\+\+PU, \item IO\+\_\+\+MODE\+\_\+\+INPUT\+\_\+\+PD, \item IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+OD\+\_\+\+PU, \item IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+OD\+\_\+\+PD, \item IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP\+\_\+\+PU, \item IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP\+\_\+\+PD, \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE\+\_\+\+PU \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE\+\_\+\+PU \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL\+\_\+\+PU \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL\+\_\+\+PU \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE\+\_\+\+PD \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE\+\_\+\+PD \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL\+\_\+\+PD \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL\+\_\+\+PD \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga82c0a6c46aba013f5eabeeb29327cbe6}\label{group___m_f_x_s_t_m32_l152___private___functions_ga82c0a6c46aba013f5eabeeb29327cbe6}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_DisableAF@{mfxstm32l152\_IO\_DisableAF}}
+\index{mfxstm32l152\_IO\_DisableAF@{mfxstm32l152\_IO\_DisableAF}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_DisableAF()}{mfxstm32l152\_IO\_DisableAF()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+AF (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Disable the AF for a\+GPIO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga94b7f0383fbf2da34991e62bd9804422}\label{group___m_f_x_s_t_m32_l152___private___functions_ga94b7f0383fbf2da34991e62bd9804422}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_DisableIT@{mfxstm32l152\_IO\_DisableIT}}
+\index{mfxstm32l152\_IO\_DisableIT@{mfxstm32l152\_IO\_DisableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_DisableIT()}{mfxstm32l152\_IO\_DisableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Disable the global IO interrupt source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga4d47f023dc68021dc0cd77d2110f091f}\label{group___m_f_x_s_t_m32_l152___private___functions_ga4d47f023dc68021dc0cd77d2110f091f}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_DisablePinIT@{mfxstm32l152\_IO\_DisablePinIT}}
+\index{mfxstm32l152\_IO\_DisablePinIT@{mfxstm32l152\_IO\_DisablePinIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_DisablePinIT()}{mfxstm32l152\_IO\_DisablePinIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Disable interrupt mode for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO interrupt to be disabled. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 23. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga18bb2a6789595ace1bbc45fb48b40f6f}\label{group___m_f_x_s_t_m32_l152___private___functions_ga18bb2a6789595ace1bbc45fb48b40f6f}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_EnableAF@{mfxstm32l152\_IO\_EnableAF}}
+\index{mfxstm32l152\_IO\_EnableAF@{mfxstm32l152\_IO\_EnableAF}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_EnableAF()}{mfxstm32l152\_IO\_EnableAF()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+AF (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Enable the AF for a\+GPIO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gaffdc8f05d123db28f86a91985e426687}\label{group___m_f_x_s_t_m32_l152___private___functions_gaffdc8f05d123db28f86a91985e426687}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_EnableIT@{mfxstm32l152\_IO\_EnableIT}}
+\index{mfxstm32l152\_IO\_EnableIT@{mfxstm32l152\_IO\_EnableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_EnableIT()}{mfxstm32l152\_IO\_EnableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Enable the global IO interrupt source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga268d9ea28decd06d2c33f74073812521}\label{group___m_f_x_s_t_m32_l152___private___functions_ga268d9ea28decd06d2c33f74073812521}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_EnablePinIT@{mfxstm32l152\_IO\_EnablePinIT}}
+\index{mfxstm32l152\_IO\_EnablePinIT@{mfxstm32l152\_IO\_EnablePinIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_EnablePinIT()}{mfxstm32l152\_IO\_EnablePinIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable interrupt mode for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO interrupt to be enabled. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 23. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gae4283dcc919e306ef39c6cea11eb55b2}\label{group___m_f_x_s_t_m32_l152___private___functions_gae4283dcc919e306ef39c6cea11eb55b2}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_InitPin@{mfxstm32l152\_IO\_InitPin}}
+\index{mfxstm32l152\_IO\_InitPin@{mfxstm32l152\_IO\_InitPin}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_InitPin()}{mfxstm32l152\_IO\_InitPin()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Init\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Direction }\end{DoxyParamCaption})}
+
+
+
+Initialize the selected IO pin direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 23. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+{\em Direction} & could be MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+DIR\+\_\+\+IN or MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+DIR\+\_\+\+OUT. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga498c1ab9235ce7bd07e2674f57072bd6}\label{group___m_f_x_s_t_m32_l152___private___functions_ga498c1ab9235ce7bd07e2674f57072bd6}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_ITStatus@{mfxstm32l152\_IO\_ITStatus}}
+\index{mfxstm32l152\_IO\_ITStatus@{mfxstm32l152\_IO\_ITStatus}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_ITStatus()}{mfxstm32l152\_IO\_ITStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t mfxstm32l152\+\_\+\+IO\+\_\+\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Check the status of the selected IO interrupt pending bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO interrupt to be checked could be\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x Where x can be from 0 to 23. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & of the checked IO pin(s). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga155b7aff488b8e5cbea967987c691d8d}\label{group___m_f_x_s_t_m32_l152___private___functions_ga155b7aff488b8e5cbea967987c691d8d}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_ReadPin@{mfxstm32l152\_IO\_ReadPin}}
+\index{mfxstm32l152\_IO\_ReadPin@{mfxstm32l152\_IO\_ReadPin}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_ReadPin()}{mfxstm32l152\_IO\_ReadPin()}}
+{\footnotesize\ttfamily uint32\+\_\+t mfxstm32l152\+\_\+\+IO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Return the state of the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The output pin to be set or reset. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 23. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em IO} & pin(s) state. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga95cf3e3c0a1722123610ef2a1c201b92}\label{group___m_f_x_s_t_m32_l152___private___functions_ga95cf3e3c0a1722123610ef2a1c201b92}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_SetIrqEvtMode@{mfxstm32l152\_IO\_SetIrqEvtMode}}
+\index{mfxstm32l152\_IO\_SetIrqEvtMode@{mfxstm32l152\_IO\_SetIrqEvtMode}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_SetIrqEvtMode()}{mfxstm32l152\_IO\_SetIrqEvtMode()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Set\+Irq\+Evt\+Mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Evt }\end{DoxyParamCaption})}
+
+
+
+Set the global interrupt Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 23. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+{\em Evt} & Interrupt line activity type, could be one of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+EVT\+\_\+\+LEVEL\+: Interrupt line is active in level model ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+EVT\+\_\+\+EDGE\+: Interrupt line is active in edge model ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga8ba47456428aaf264ba8ed8134d7de7b}\label{group___m_f_x_s_t_m32_l152___private___functions_ga8ba47456428aaf264ba8ed8134d7de7b}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_SetIrqTypeMode@{mfxstm32l152\_IO\_SetIrqTypeMode}}
+\index{mfxstm32l152\_IO\_SetIrqTypeMode@{mfxstm32l152\_IO\_SetIrqTypeMode}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_SetIrqTypeMode()}{mfxstm32l152\_IO\_SetIrqTypeMode()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Set\+Irq\+Type\+Mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Type }\end{DoxyParamCaption})}
+
+
+
+Configure the Edge for which a transition is detectable for the selected pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 23. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+{\em Evt} & Interrupt line activity type, could be one of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+TYPE\+\_\+\+LLFE\+: Interrupt line is active in Low Level or Falling Edge ~\newline
+ \item MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+TYPE\+\_\+\+HLRE\+: Interrupt line is active in High Level or Rising Edge ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga91f7be0b99f1ab6953284146d69d2d11}\label{group___m_f_x_s_t_m32_l152___private___functions_ga91f7be0b99f1ab6953284146d69d2d11}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_Start@{mfxstm32l152\_IO\_Start}}
+\index{mfxstm32l152\_IO\_Start@{mfxstm32l152\_IO\_Start}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_Start()}{mfxstm32l152\_IO\_Start()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Start the IO functionality used and enable the AF for selected IO pin(s). 
+
+MFXSTM32\+L152 IO functionalities functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em AF\+\_\+en} & 0 to disable, else enabled. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga6c5c6a5781be15e8c6e8161e89367111}\label{group___m_f_x_s_t_m32_l152___private___functions_ga6c5c6a5781be15e8c6e8161e89367111}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_IO\_WritePin@{mfxstm32l152\_IO\_WritePin}}
+\index{mfxstm32l152\_IO\_WritePin@{mfxstm32l152\_IO\_WritePin}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_IO\_WritePin()}{mfxstm32l152\_IO\_WritePin()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+IO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Pin\+State }\end{DoxyParamCaption})}
+
+
+
+When GPIO is in output mode, puts the corresponding GPO in High (1) or Low (0) level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The output pin to be set or reset. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 23. \end{DoxyItemize}
+\\
+\hline
+{\em Pin\+State} & The new IO pin state. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gab75943cd3afccb7265937dbe539fbf6a}\label{group___m_f_x_s_t_m32_l152___private___functions_gab75943cd3afccb7265937dbe539fbf6a}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_LowPower@{mfxstm32l152\_LowPower}}
+\index{mfxstm32l152\_LowPower@{mfxstm32l152\_LowPower}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_LowPower()}{mfxstm32l152\_LowPower()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Low\+Power (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Put mfxstm32l152 Device in Low Power standby mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga433ddd2452d8651e0864faf5812e015f}\label{group___m_f_x_s_t_m32_l152___private___functions_ga433ddd2452d8651e0864faf5812e015f}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_ReadFwVersion@{mfxstm32l152\_ReadFwVersion}}
+\index{mfxstm32l152\_ReadFwVersion@{mfxstm32l152\_ReadFwVersion}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_ReadFwVersion()}{mfxstm32l152\_ReadFwVersion()}}
+{\footnotesize\ttfamily uint16\+\_\+t mfxstm32l152\+\_\+\+Read\+Fw\+Version (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the MFXSTM32\+L152 device firmware version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device FW version (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga5898eb7b6c9055f9b49d0ef229c7ae31}\label{group___m_f_x_s_t_m32_l152___private___functions_ga5898eb7b6c9055f9b49d0ef229c7ae31}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_ReadID@{mfxstm32l152\_ReadID}}
+\index{mfxstm32l152\_ReadID@{mfxstm32l152\_ReadID}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_ReadID()}{mfxstm32l152\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t mfxstm32l152\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the MFXSTM32\+L152 IO Expander device ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device ID (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga247f71e5f9bf1f72f1fa61da16fd8257}\label{group___m_f_x_s_t_m32_l152___private___functions_ga247f71e5f9bf1f72f1fa61da16fd8257}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_Reset@{mfxstm32l152\_Reset}}
+\index{mfxstm32l152\_Reset@{mfxstm32l152\_Reset}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_Reset()}{mfxstm32l152\_Reset()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Reset the mfxstm32l152 by Software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gae6add7ca850468cf2aacf7655bb3eee7}\label{group___m_f_x_s_t_m32_l152___private___functions_gae6add7ca850468cf2aacf7655bb3eee7}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_SetIrqOutPinPolarity@{mfxstm32l152\_SetIrqOutPinPolarity}}
+\index{mfxstm32l152\_SetIrqOutPinPolarity@{mfxstm32l152\_SetIrqOutPinPolarity}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_SetIrqOutPinPolarity()}{mfxstm32l152\_SetIrqOutPinPolarity()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Set\+Irq\+Out\+Pin\+Polarity (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Polarity }\end{DoxyParamCaption})}
+
+
+
+Set the global interrupt Polarity of IRQ\+\_\+\+OUT\+\_\+\+PIN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Polarity} & the IT mode polarity, could be one of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+POLARITY\+\_\+\+LOW\+: Interrupt output line is active Low edge ~\newline
+ \item MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+POLARITY\+\_\+\+HIGH\+: Interrupt line output is active High edge ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gac82b572d0a78ac3f80915398cd45c594}\label{group___m_f_x_s_t_m32_l152___private___functions_gac82b572d0a78ac3f80915398cd45c594}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_SetIrqOutPinType@{mfxstm32l152\_SetIrqOutPinType}}
+\index{mfxstm32l152\_SetIrqOutPinType@{mfxstm32l152\_SetIrqOutPinType}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_SetIrqOutPinType()}{mfxstm32l152\_SetIrqOutPinType()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Set\+Irq\+Out\+Pin\+Type (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Type }\end{DoxyParamCaption})}
+
+
+
+Set the global interrupt Type of IRQ\+\_\+\+OUT\+\_\+\+PIN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Type} & Interrupt line activity type, could be one of the following values\+: \begin{DoxyItemize}
+\item MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+OPENDRAIN\+: Open Drain output Interrupt line ~\newline
+ \item MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+PUSHPULL\+: Push Pull output Interrupt line ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga40f7d6f7af32bac4699fba8acbbc9e6a}\label{group___m_f_x_s_t_m32_l152___private___functions_ga40f7d6f7af32bac4699fba8acbbc9e6a}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_TS\_ClearIT@{mfxstm32l152\_TS\_ClearIT}}
+\index{mfxstm32l152\_TS\_ClearIT@{mfxstm32l152\_TS\_ClearIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_TS\_ClearIT()}{mfxstm32l152\_TS\_ClearIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+TS\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga726c59f85e53f6737927055e135a03f7}\label{group___m_f_x_s_t_m32_l152___private___functions_ga726c59f85e53f6737927055e135a03f7}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_TS\_DetectTouch@{mfxstm32l152\_TS\_DetectTouch}}
+\index{mfxstm32l152\_TS\_DetectTouch@{mfxstm32l152\_TS\_DetectTouch}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_TS\_DetectTouch()}{mfxstm32l152\_TS\_DetectTouch()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+TS\+\_\+\+Detect\+Touch (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Return if there is touch detected or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Touch} & detected state. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gaa78ac90676c880fdff3bbbd0ce7f3565}\label{group___m_f_x_s_t_m32_l152___private___functions_gaa78ac90676c880fdff3bbbd0ce7f3565}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_TS\_DisableIT@{mfxstm32l152\_TS\_DisableIT}}
+\index{mfxstm32l152\_TS\_DisableIT@{mfxstm32l152\_TS\_DisableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_TS\_DisableIT()}{mfxstm32l152\_TS\_DisableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+TS\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gaba38e23391f8685b395aff1129e532de}\label{group___m_f_x_s_t_m32_l152___private___functions_gaba38e23391f8685b395aff1129e532de}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_TS\_EnableIT@{mfxstm32l152\_TS\_EnableIT}}
+\index{mfxstm32l152\_TS\_EnableIT@{mfxstm32l152\_TS\_EnableIT}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_TS\_EnableIT()}{mfxstm32l152\_TS\_EnableIT()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+TS\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gaba9c65eca11cceea87fb0c47578147bf}\label{group___m_f_x_s_t_m32_l152___private___functions_gaba9c65eca11cceea87fb0c47578147bf}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_TS\_GetXY@{mfxstm32l152\_TS\_GetXY}}
+\index{mfxstm32l152\_TS\_GetXY@{mfxstm32l152\_TS\_GetXY}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_TS\_GetXY()}{mfxstm32l152\_TS\_GetXY()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+TS\+\_\+\+Get\+XY (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint16\+\_\+t $\ast$}]{X,  }\item[{uint16\+\_\+t $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Get the touch screen X and Y positions values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em X} & Pointer to X position value \\
+\hline
+{\em Y} & Pointer to Y position value ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gab71fdfbf6e3f308290a7a95468e84ddc}\label{group___m_f_x_s_t_m32_l152___private___functions_gab71fdfbf6e3f308290a7a95468e84ddc}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_TS\_ITStatus@{mfxstm32l152\_TS\_ITStatus}}
+\index{mfxstm32l152\_TS\_ITStatus@{mfxstm32l152\_TS\_ITStatus}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_TS\_ITStatus()}{mfxstm32l152\_TS\_ITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t mfxstm32l152\+\_\+\+TS\+\_\+\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TS} & interrupts status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_ga1f311d23036ffeb40b5f7d1889c73ab6}\label{group___m_f_x_s_t_m32_l152___private___functions_ga1f311d23036ffeb40b5f7d1889c73ab6}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_TS\_Start@{mfxstm32l152\_TS\_Start}}
+\index{mfxstm32l152\_TS\_Start@{mfxstm32l152\_TS\_Start}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_TS\_Start()}{mfxstm32l152\_TS\_Start()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+TS\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configures the touch Screen Controller (Single point detection) 
+
+MFXSTM32\+L152 Touch screen functionalities functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___m_f_x_s_t_m32_l152___private___functions_gaec837b686eb2cbe600b497a23f5a6044}\label{group___m_f_x_s_t_m32_l152___private___functions_gaec837b686eb2cbe600b497a23f5a6044}} 
+\index{MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}!mfxstm32l152\_WakeUp@{mfxstm32l152\_WakeUp}}
+\index{mfxstm32l152\_WakeUp@{mfxstm32l152\_WakeUp}!MFXSTM32L152\_Private\_Functions@{MFXSTM32L152\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{mfxstm32l152\_WakeUp()}{mfxstm32l152\_WakeUp()}}
+{\footnotesize\ttfamily void mfxstm32l152\+\_\+\+Wake\+Up (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Wake\+Up mfxstm32l152 from standby mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

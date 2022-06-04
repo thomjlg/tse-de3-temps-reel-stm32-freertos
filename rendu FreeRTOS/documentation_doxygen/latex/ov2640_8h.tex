@@ -1,0 +1,261 @@
+\hypertarget{ov2640_8h}{}\doxysection{Drivers/\+BSP/\+Components/ov2640/ov2640.h File Reference}
+\label{ov2640_8h}\index{Drivers/BSP/Components/ov2640/ov2640.h@{Drivers/BSP/Components/ov2640/ov2640.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{ov2640_8c}{ov2640.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/camera.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries OV2640\+\_\+\+ID}~0x26
+\begin{DoxyCompactList}\small\item\em OV2640 ID ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+R\+\_\+\+BYPASS}~0x05
+\begin{DoxyCompactList}\small\item\em OV2640 Registers ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+Qs}~0x44
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+CTRL}~0x50
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+HSIZE1}~0x51
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+VSIZE1}~0x52
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+XOFFL}~0x53
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+YOFFL}~0x54
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+VHYX}~0x55
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+DPRP}~0x56
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+TEST}~0x57
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+ZMOW}~0x5A
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+ZMOH}~0x5B
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+ZMHH}~0x5C
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+BPADDR}~0x7C
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+BPDATA}~0x7D
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+CTRL2}~0x86
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+CTRL3}~0x87
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+SIZEL}~0x8C
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+HSIZE2}~0x\+C0
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+VSIZE2}~0x\+C1
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+CTRL0}~0x\+C2
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+CTRL1}~0x\+C3
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+R\+\_\+\+DVP\+\_\+\+SP}~0x\+D3
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+IMAGE\+\_\+\+MODE}~0x\+DA
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+RESET}~0x\+E0
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+MS\+\_\+\+SP}~0x\+F0
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+SS\+\_\+\+ID}~0x7F
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+SS\+\_\+\+CTRL}~0x\+F8
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+MC\+\_\+\+BIST}~0x\+F9
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+MC\+\_\+\+AL}~0x\+FA
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+MC\+\_\+\+AH}~0x\+FB
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+MC\+\_\+D}~0x\+FC
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+P\+\_\+\+STATUS}~0x\+FE
+\item 
+\#define {\bfseries OV2640\+\_\+\+DSP\+\_\+\+RA\+\_\+\+DLMT}~0x\+FF
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+GAIN}~0x00
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM1}~0x03
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG04}~0x04
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG08}~0x08
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM2}~0x09
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+PIDH}~0x0A
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+PIDL}~0x0B
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM3}~0x0C
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM4}~0x0D
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+AEC}~0x10
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+CLKRC}~0x11
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM7}~0x12
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM8}~0x13
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM9}~0x14
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM10}~0x15
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+HREFST}~0x17
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+HREFEND}~0x18
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+VSTART}~0x19
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+VEND}~0x1A
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+MIDH}~0x1C
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+MIDL}~0x1D
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+AEW}~0x24
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+AEB}~0x25
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+W}~0x26
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG2A}~0x2A
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+FRARL}~0x2B
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+ADDVSL}~0x2D
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+ADDVHS}~0x2E
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+YAVG}~0x2F
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG32}~0x32
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+ARCOM2}~0x34
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG45}~0x45
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+FLL}~0x46
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+FLH}~0x47
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM19}~0x48
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+ZOOMS}~0x49
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM22}~0x4B
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+COM25}~0x4E
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+BD50}~0x4F
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+BD60}~0x50
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG5D}~0x5D
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG5E}~0x5E
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG5F}~0x5F
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+REG60}~0x60
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+HISTO\+\_\+\+LOW}~0x61
+\item 
+\#define {\bfseries OV2640\+\_\+\+SENSOR\+\_\+\+HISTO\+\_\+\+HIGH}~0x62
+\item 
+\#define {\bfseries OV2640\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL0}~0x40   /$\ast$ Brightness level -\/2         $\ast$/
+\begin{DoxyCompactList}\small\item\em OV2640 Features Parameters ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries OV2640\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL1}~0x30   /$\ast$ Brightness level -\/1         $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL2}~0x20   /$\ast$ Brightness level 0          $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL3}~0x10   /$\ast$ Brightness level +1         $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL4}~0x00   /$\ast$ Brightness level +2         $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+BW}~0x18   /$\ast$ Black and white effect      $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+NEGATIVE}~0x40   /$\ast$ Negative effect             $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+BW\+\_\+\+NEGATIVE}~0x58   /$\ast$ BW and Negative effect      $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+NORMAL}~0x00   /$\ast$ Normal effect               $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+CONTRAST\+\_\+\+LEVEL0}~0x3418 /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+CONTRAST\+\_\+\+LEVEL1}~0x2\+A1C /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+CONTRAST\+\_\+\+LEVEL2}~0x2020 /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+CONTRAST\+\_\+\+LEVEL3}~0x1624 /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+CONTRAST\+\_\+\+LEVEL4}~0x0\+C28 /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+ANTIQUE}~0x\+A640 /$\ast$ Antique effect              $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+BLUE}~0x40\+A0 /$\ast$ Blue effect                 $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+GREEN}~0x4040 /$\ast$ Green effect                $\ast$/
+\item 
+\#define {\bfseries OV2640\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+RED}~0x\+C040 /$\ast$ Red effect                  $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___o_v2640___exported___functions_ga4f4e3d4382932ad47f2c30e2461a8355}{ov2640\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em Initializes the OV2640 CAMERA component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___o_v2640___exported___functions_ga942828d9066961933f178394521e95cf}{ov2640\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t feature, uint32\+\_\+t value, uint32\+\_\+t BR\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the OV2640 camera feature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___o_v2640___exported___functions_ga9e355ae413c34af76e774adca3c9985e}{ov2640\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the OV2640 Camera identity. \end{DoxyCompactList}\item 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+uint8\+\_\+t {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+\item 
+void {\bfseries CAMERA\+\_\+\+Delay} (uint32\+\_\+t delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\+\_\+\+Drv\+Type\+Def}} {\bfseries ov2640\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{ov2640_8c}{ov2640.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02-\/December-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

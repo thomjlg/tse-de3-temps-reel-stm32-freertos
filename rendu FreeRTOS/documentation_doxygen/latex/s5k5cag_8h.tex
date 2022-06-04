@@ -1,0 +1,108 @@
+\hypertarget{s5k5cag_8h}{}\doxysection{Drivers/\+BSP/\+Components/s5k5cag/s5k5cag.h File Reference}
+\label{s5k5cag_8h}\index{Drivers/BSP/Components/s5k5cag/s5k5cag.h@{Drivers/BSP/Components/s5k5cag/s5k5cag.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{s5k5cag_8c}{s5k5cag.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/camera.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+ID}~((uint16\+\_\+t)0x05\+CA)
+\begin{DoxyCompactList}\small\item\em S5\+K5\+CAG ID. \end{DoxyCompactList}\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+INFO\+\_\+\+CHIPID1}~((uint16\+\_\+t)0x0040)
+\begin{DoxyCompactList}\small\item\em S5\+K5\+CAG Registers. \end{DoxyCompactList}\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+INFO\+\_\+\+CHIPID2}~((uint16\+\_\+t)0x0042)
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+INFO\+\_\+\+SVNVERSION}~((uint16\+\_\+t)0x0048)
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+INFO\+\_\+\+DATE}~((uint16\+\_\+t)0x004E)
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL0}~((uint16\+\_\+t)0x\+FF00)  /$\ast$ Brightness level -\/2         $\ast$/
+\begin{DoxyCompactList}\small\item\em S5\+K5\+CAG Features Parameters. \end{DoxyCompactList}\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL1}~((uint16\+\_\+t)0x\+FFC0)  /$\ast$ Brightness level -\/1         $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL2}~((uint16\+\_\+t)0x0000)  /$\ast$ Brightness level 0          $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL3}~((uint16\+\_\+t)0x0050)  /$\ast$ Brightness level +1         $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL4}~((uint16\+\_\+t)0x0080)  /$\ast$ Brightness level +2         $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+BW}~((uint16\+\_\+t)0x0001)  /$\ast$ Black and white effect      $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+NEGATIVE}~((uint16\+\_\+t)0x0003)  /$\ast$ Negative effect             $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+BW\+\_\+\+NEGATIVE}~((uint16\+\_\+t)0x0002)  /$\ast$ BW and Negative effect      $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+NORMAL}~((uint16\+\_\+t)0x0000)  /$\ast$ Normal effect               $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+CONTRAST\+\_\+\+LEVEL0}~((uint16\+\_\+t)0x\+FF80)  /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+CONTRAST\+\_\+\+LEVEL1}~((uint16\+\_\+t)0x\+FFC0)  /$\ast$ Contrast level -\/1           $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+CONTRAST\+\_\+\+LEVEL2}~((uint16\+\_\+t)0x0000)  /$\ast$ Contrast level 0            $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+CONTRAST\+\_\+\+LEVEL3}~((uint16\+\_\+t)0x0050)  /$\ast$ Contrast level -\/1           $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+CONTRAST\+\_\+\+LEVEL4}~((uint16\+\_\+t)0x0080)  /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+NONE}~((uint16\+\_\+t)0x0000)  /$\ast$ No color effect             $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+ANTIQUE}~((uint16\+\_\+t)0x0004)  /$\ast$ Antique effect              $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+BLUE}~((uint16\+\_\+t)0x0001)  /$\ast$ Blue effect                 $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+GREEN}~((uint16\+\_\+t)0x0002)  /$\ast$ Green effect                $\ast$/
+\item 
+\#define {\bfseries S5\+K5\+CAG\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+RED}~((uint16\+\_\+t)0x0003)  /$\ast$ Red effect                  $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_ga22ad9c0eccce35104808245ab8cb6c1e}{s5k5cag\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em Initializes the S5\+K5\+CAG CAMERA component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_gaf46514f154f85f55bc422d624a129985}{s5k5cag\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t feature, uint32\+\_\+t value, uint32\+\_\+t BR\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the S5\+K5\+CAG camera feature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}{s5k5cag\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the S5\+K5\+CAG Camera identity. \end{DoxyCompactList}\item 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+void {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t addr, uint16\+\_\+t reg, uint16\+\_\+t value)
+\item 
+uint16\+\_\+t {\bfseries CAMERA\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t addr, uint16\+\_\+t reg)
+\item 
+void {\bfseries CAMERA\+\_\+\+Delay} (uint32\+\_\+t delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\+\_\+\+Drv\+Type\+Def}} {\bfseries s5k5cag\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{s5k5cag_8c}{s5k5cag.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05-\/March-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

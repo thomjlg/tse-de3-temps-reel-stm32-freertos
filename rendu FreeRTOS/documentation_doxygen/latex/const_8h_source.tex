@@ -1,0 +1,169 @@
+\hypertarget{const_8h_source}{}\doxysection{const.\+h}
+\label{const_8h_source}\index{Core/Inc/const.h@{Core/Inc/const.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * cont.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Feb 16, 2021}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: florentgoutailler}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef INC\_CONST\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define INC\_CONST\_H\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{/**************************************************}}
+\DoxyCodeLine{12 \textcolor{comment}{ *      REGISTER MAP MPU9250}}
+\DoxyCodeLine{13 \textcolor{comment}{ **************************************************/}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define SELF\_TEST\_X\_GYRO 0x00}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define SELF\_TEST\_Y\_GYRO 0x01}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define SELF\_TEST\_Z\_GYRO 0x02}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SELF\_TEST\_X\_ACCEL 0x0D}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SELF\_TEST\_Y\_ACCEL 0x0E}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define SELF\_TEST\_Z\_ACCEL 0x0F}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define XG\_OFFSET\_H      0x13}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define XG\_OFFSET\_L      0x14}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define YG\_OFFSET\_H      0x15}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define YG\_OFFSET\_L      0x16}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define ZG\_OFFSET\_H      0x17}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define ZG\_OFFSET\_L      0x18}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define SMPLRT\_DIV       0x19}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define CONFIG           0x1A}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define GYRO\_CONFIG      0x1B}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define ACCEL\_CONFIG     0x1C}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define ACCEL\_CONFIG2    0x1D}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define LP\_ACCEL\_ODR     0x1E}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define WOM\_THR          0x1F}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define MOT\_DUR          0x20}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define ZMOT\_THR         0x21}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define ZRMOT\_DUR        0x22}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define FIFO\_EN          0x23}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define I2C\_MST\_CTRL     0x24}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define I2C\_SLV0\_ADDR    0x25}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define I2C\_SLV0\_REG     0x26}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define I2C\_SLV0\_CTRL    0x27}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define I2C\_SLV1\_ADDR    0x28}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define I2C\_SLV1\_REG     0x29}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define I2C\_SLV1\_CTRL    0x2A}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define I2C\_SLV2\_ADDR    0x2B}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define I2C\_SLV2\_REG     0x2C}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define I2C\_SLV2\_CTRL    0x2D}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define I2C\_SLV3\_ADDR    0x2E}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define I2C\_SLV3\_REG     0x2F}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define I2C\_SLV3\_CTRL    0x30}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define I2C\_SLV4\_ADDR    0x31}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define I2C\_SLV4\_REG     0x32}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define I2C\_SLV4\_DO      0x33}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define I2C\_SLV4\_CTRL    0x34}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define I2C\_SLV4\_DI      0x35}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define I2C\_MST\_STATUS   0x36}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define INT\_PIN\_CFG      0x37}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define INT\_ENABLE       0x38}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define DMP\_INT\_STATUS   0x39  }\textcolor{comment}{// Check DMP interrupt}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define INT\_STATUS       0x3A}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define ACCEL\_XOUT\_H     0x3B}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define ACCEL\_XOUT\_L     0x3C}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define ACCEL\_YOUT\_H     0x3D}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define ACCEL\_YOUT\_L     0x3E}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define ACCEL\_ZOUT\_H     0x3F}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define ACCEL\_ZOUT\_L     0x40}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define TEMP\_OUT\_H       0x41}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define TEMP\_OUT\_L       0x42}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define GYRO\_XOUT\_H      0x43}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define GYRO\_XOUT\_L      0x44}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define GYRO\_YOUT\_H      0x45}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define GYRO\_YOUT\_L      0x46}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define GYRO\_ZOUT\_H      0x47}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define GYRO\_ZOUT\_L      0x48}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_00 0x49}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_01 0x4A}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_02 0x4B}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_03 0x4C}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_04 0x4D}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_05 0x4E}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_06 0x4F}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_07 0x50}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_08 0x51}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_09 0x52}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_10 0x53}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_11 0x54}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_12 0x55}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_13 0x56}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_14 0x57}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_15 0x58}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_16 0x59}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_17 0x5A}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_18 0x5B}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_19 0x5C}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_20 0x5D}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_21 0x5E}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_22 0x5F}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define EXT\_SENS\_DATA\_23 0x60}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define MOT\_DETECT\_STATUS 0x61}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define I2C\_SLV0\_DO      0x63}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define I2C\_SLV1\_DO      0x64}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define I2C\_SLV2\_DO      0x65}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define I2C\_SLV3\_DO      0x66}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define I2C\_MST\_DELAY\_CTRL 0x67}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define SIGNAL\_PATH\_RESET  0x68}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define MOT\_DETECT\_CTRL  0x69}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define USER\_CTRL        0x6A}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define PWR\_MGMT\_1       0x6B}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define PWR\_MGMT\_2       0x6C}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define DMP\_BANK         0x6D}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define DMP\_RW\_PNT       0x6E}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define DMP\_REG          0x6F}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define DMP\_REG\_1        0x70}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define DMP\_REG\_2        0x71}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define FIFO\_COUNTH      0x72}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define FIFO\_COUNTL      0x73}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define FIFO\_R\_W         0x74}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define WHO\_AM\_I\_MPU9250 0x75}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define XA\_OFFSET\_H      0x77}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define XA\_OFFSET\_L      0x78}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define YA\_OFFSET\_H      0x7A}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define YA\_OFFSET\_L      0x7B}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define ZA\_OFFSET\_H      0x7D}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define ZA\_OFFSET\_L      0x7E}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{comment}{/***************************************************}}
+\DoxyCodeLine{130 \textcolor{comment}{ *      REGISTER MAP MAGNETOMETER AK8963}}
+\DoxyCodeLine{131 \textcolor{comment}{ **************************************************/}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define WHO\_AM\_I\_AK8963  0x00 }\textcolor{comment}{// should return 0x48}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define INFO             0x01}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define AK8963\_ST1       0x02  }\textcolor{comment}{// data ready status bit 0}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define AK8963\_XOUT\_L    0x03  }\textcolor{comment}{// data}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define AK8963\_XOUT\_H    0x04}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define AK8963\_YOUT\_L    0x05}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define AK8963\_YOUT\_H    0x06}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define AK8963\_ZOUT\_L    0x07}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define AK8963\_ZOUT\_H    0x08}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define AK8963\_ST2       0x09  }\textcolor{comment}{// Data overflow bit 3 and data read error status bit 2}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define AK8963\_CNTL      0x0A  }\textcolor{comment}{// Power down (0000), single-\/measurement (0001), self-\/test (1000) and Fuse ROM (1111) modes on bits 3:0}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define AK8963\_ASTC      0x0C  }\textcolor{comment}{// Self test control}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define AK8963\_I2CDIS    0x0F  }\textcolor{comment}{// I2C disable}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define AK8963\_ASAX      0x10  }\textcolor{comment}{// Fuse ROM x-\/axis sensitivity adjustment value}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define AK8963\_ASAY      0x11  }\textcolor{comment}{// Fuse ROM y-\/axis sensitivity adjustment value}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define AK8963\_ASAZ      0x12  }\textcolor{comment}{// Fuse ROM z-\/axis sensitivity adjustment value}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{comment}{/***************************************************}}
+\DoxyCodeLine{151 \textcolor{comment}{ *      CONSTANTS DEFINITION}}
+\DoxyCodeLine{152 \textcolor{comment}{ **************************************************/}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define MPU\_ADD 0xD0}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define MAGNETO\_ADD 0x18}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define TIMEOUT 50}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define ROOM\_TEMP\_OFFSET 21}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define TEMP\_SENS 333.87}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define PI 3.1415926536}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define NB\_TIMES 250}}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* INC\_CONST\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,56 @@
+\hypertarget{group___o_t_m8009_a___exported___functions}{}\doxysection{OTM8009A Exported Functions}
+\label{group___o_t_m8009_a___exported___functions}\index{OTM8009A Exported Functions@{OTM8009A Exported Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___o_t_m8009_a___exported___functions_gae663d792047526399ce1e4a8362f471e}{DSI\+\_\+\+IO\+\_\+\+Write\+Cmd}} (uint32\+\_\+t Nbr\+Params, uint8\+\_\+t $\ast$p\+Params)
+\begin{DoxyCompactList}\small\item\em DSI IO write short/long command. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___o_t_m8009_a___exported___functions_gac8d6505d6bf82df6d41a091c074c5b53}{OTM8009\+A\+\_\+\+Init}} (uint32\+\_\+t Color\+Coding, uint32\+\_\+t orientation)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD KoD display part by communication in DSI mode in Video Mode with IC Display Driver OTM8009A (see IC Driver specification for more information). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___o_t_m8009_a___exported___functions_gaf5940b6ab55f6f0d166e81196816bce3}\label{group___o_t_m8009_a___exported___functions_gaf5940b6ab55f6f0d166e81196816bce3}} 
+void {\bfseries OTM8009\+A\+\_\+\+IO\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___o_t_m8009_a___exported___functions_gae663d792047526399ce1e4a8362f471e}\label{group___o_t_m8009_a___exported___functions_gae663d792047526399ce1e4a8362f471e}} 
+\index{OTM8009A Exported Functions@{OTM8009A Exported Functions}!DSI\_IO\_WriteCmd@{DSI\_IO\_WriteCmd}}
+\index{DSI\_IO\_WriteCmd@{DSI\_IO\_WriteCmd}!OTM8009A Exported Functions@{OTM8009A Exported Functions}}
+\doxysubsubsection{\texorpdfstring{DSI\_IO\_WriteCmd()}{DSI\_IO\_WriteCmd()}}
+{\footnotesize\ttfamily void DSI\+\_\+\+IO\+\_\+\+Write\+Cmd (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Nbr\+Params,  }\item[{uint8\+\_\+t $\ast$}]{p\+Params }\end{DoxyParamCaption})}
+
+
+
+DSI IO write short/long command. 
+
+\begin{DoxyNote}{Note}
+\+: Can be surcharged by application code implementation of the function. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group___o_t_m8009_a___exported___functions_gac8d6505d6bf82df6d41a091c074c5b53}\label{group___o_t_m8009_a___exported___functions_gac8d6505d6bf82df6d41a091c074c5b53}} 
+\index{OTM8009A Exported Functions@{OTM8009A Exported Functions}!OTM8009A\_Init@{OTM8009A\_Init}}
+\index{OTM8009A\_Init@{OTM8009A\_Init}!OTM8009A Exported Functions@{OTM8009A Exported Functions}}
+\doxysubsubsection{\texorpdfstring{OTM8009A\_Init()}{OTM8009A\_Init()}}
+{\footnotesize\ttfamily uint8\+\_\+t OTM8009\+A\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color\+Coding,  }\item[{uint32\+\_\+t}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Initializes the LCD KoD display part by communication in DSI mode in Video Mode with IC Display Driver OTM8009A (see IC Driver specification for more information). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hdsi\+\_\+eval} & \+: pointer on DSI configuration structure \\
+\hline
+{\em hdsivideo\+\_\+handle} & \+: pointer on DSI video mode configuration structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & \\
+\hline
+\end{DoxyRetVals}
+CABC \+: Content Adaptive Backlight Control section start \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}
+
+CABC \+: Content Adaptive Backlight Control section end \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}

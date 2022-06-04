@@ -1,0 +1,307 @@
+\hypertarget{stmpe811_8h}{}\doxysection{Drivers/\+BSP/\+Components/stmpe811/stmpe811.h File Reference}
+\label{stmpe811_8h}\index{Drivers/BSP/Components/stmpe811/stmpe811.h@{Drivers/BSP/Components/stmpe811/stmpe811.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{stmpe811_8c}{stmpe811.\+c}} IO expander driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/ts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Common/io.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries STMPE811\+\_\+\+ID}~0x0811
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+CHP\+\_\+\+ID\+\_\+\+LSB}~0x00
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+CHP\+\_\+\+ID\+\_\+\+MSB}~0x01
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ID\+\_\+\+VER}~0x02
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+EN}~0x01
+\item 
+\#define {\bfseries STMPE811\+\_\+\+ADC\+\_\+\+FCT}~0x01
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TS\+\_\+\+FCT}~0x02
+\item 
+\#define {\bfseries STMPE811\+\_\+\+IO\+\_\+\+FCT}~0x04
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TEMPSENS\+\_\+\+FCT}~0x08
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+IO}~0x80  /$\ast$ IO interrupt                   $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+ADC}~0x40  /$\ast$ ADC interrupt                  $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+TEMP}~0x20  /$\ast$ Not implemented                $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+FE}~0x10  /$\ast$ FIFO empty interrupt           $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+FF}~0x08  /$\ast$ FIFO full interrupt            $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+FOV}~0x04  /$\ast$ FIFO overflowed interrupt      $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+FTH}~0x02  /$\ast$ FIFO above threshold interrupt $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+GIT\+\_\+\+TOUCH}~0x01  /$\ast$ Touch is detected interrupt    $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+ALL\+\_\+\+GIT}~0x1F  /$\ast$ All global interrupts          $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TS\+\_\+\+IT}~(STMPE811\+\_\+\+GIT\+\_\+\+TOUCH $\vert$ STMPE811\+\_\+\+GIT\+\_\+\+FTH $\vert$  STMPE811\+\_\+\+GIT\+\_\+\+FOV $\vert$ STMPE811\+\_\+\+GIT\+\_\+\+FF $\vert$ STMPE811\+\_\+\+GIT\+\_\+\+FE) /$\ast$ Touch screen interrupts $\ast$/
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+SYS\+\_\+\+CTRL1}~0x03
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+SYS\+\_\+\+CTRL2}~0x04
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+SPI\+\_\+\+CFG}~0x08
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+INT\+\_\+\+CTRL}~0x09
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+INT\+\_\+\+EN}~0x0A
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+INT\+\_\+\+STA}~0x0B
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+INT\+\_\+\+EN}~0x0C
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+INT\+\_\+\+STA}~0x0D
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+SET\+\_\+\+PIN}~0x10
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+CLR\+\_\+\+PIN}~0x11
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+MP\+\_\+\+STA}~0x12
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+DIR}~0x13
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+ED}~0x14
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+RE}~0x15
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+FE}~0x16
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+IO\+\_\+\+AF}~0x17
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+INT\+\_\+\+EN}~0x0E
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+INT\+\_\+\+STA}~0x0F
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+CTRL1}~0x20
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+CTRL2}~0x21
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+CAPT}~0x22
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH0}~0x30
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH1}~0x32
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH2}~0x34
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH3}~0x36
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH4}~0x38
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH5}~0x3A
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH6}~0x3B
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+CH7}~0x3C
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+CTRL}~0x40
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+CFG}~0x41
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+WDM\+\_\+\+TR\+\_\+X}~0x42
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+WDM\+\_\+\+TR\+\_\+Y}~0x44
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+WDM\+\_\+\+BL\+\_\+X}~0x46
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+WDM\+\_\+\+BL\+\_\+Y}~0x48
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+FIFO\+\_\+\+TH}~0x4A
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+FIFO\+\_\+\+STA}~0x4B
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+FIFO\+\_\+\+SIZE}~0x4C
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+DATA\+\_\+X}~0x4D
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+DATA\+\_\+Y}~0x4F
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+DATA\+\_\+Z}~0x51
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+DATA\+\_\+\+XYZ}~0x52
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+FRACT\+\_\+\+XYZ}~0x56
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+DATA\+\_\+\+INC}~0x57
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+DATA\+\_\+\+NON\+\_\+\+INC}~0x\+D7
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+I\+\_\+\+DRIVE}~0x58
+\item 
+\#define {\bfseries STMPE811\+\_\+\+REG\+\_\+\+TSC\+\_\+\+SHIELD}~0x59
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TOUCH\+\_\+\+YD}~STMPE811\+\_\+\+PIN\+\_\+7
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TOUCH\+\_\+\+XD}~STMPE811\+\_\+\+PIN\+\_\+6
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TOUCH\+\_\+\+YU}~STMPE811\+\_\+\+PIN\+\_\+5
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TOUCH\+\_\+\+XU}~STMPE811\+\_\+\+PIN\+\_\+4
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TOUCH\+\_\+\+IO\+\_\+\+ALL}~(uint32\+\_\+t)(STMPE811\+\_\+\+TOUCH\+\_\+\+YD $\vert$ STMPE811\+\_\+\+TOUCH\+\_\+\+XD $\vert$ STMPE811\+\_\+\+TOUCH\+\_\+\+YU $\vert$ STMPE811\+\_\+\+TOUCH\+\_\+\+XU)
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+0}~0x01
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+1}~0x02
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+2}~0x04
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+3}~0x08
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+4}~0x10
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+5}~0x20
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+6}~0x40
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+7}~0x80
+\item 
+\#define {\bfseries STMPE811\+\_\+\+PIN\+\_\+\+ALL}~0x\+FF
+\item 
+\#define {\bfseries STMPE811\+\_\+\+DIRECTION\+\_\+\+IN}~0x00
+\item 
+\#define {\bfseries STMPE811\+\_\+\+DIRECTION\+\_\+\+OUT}~0x01
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TYPE\+\_\+\+LEVEL}~0x00
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TYPE\+\_\+\+EDGE}~0x02
+\item 
+\#define {\bfseries STMPE811\+\_\+\+POLARITY\+\_\+\+LOW}~0x00
+\item 
+\#define {\bfseries STMPE811\+\_\+\+POLARITY\+\_\+\+HIGH}~0x04
+\item 
+\#define {\bfseries STMPE811\+\_\+\+EDGE\+\_\+\+FALLING}~0x01
+\item 
+\#define {\bfseries STMPE811\+\_\+\+EDGE\+\_\+\+RISING}~0x02
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TS\+\_\+\+CTRL\+\_\+\+ENABLE}~0x01
+\item 
+\#define {\bfseries STMPE811\+\_\+\+TS\+\_\+\+CTRL\+\_\+\+STATUS}~0x80
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga5feafdd84c8af0d2384509425422d9b1}{stmpe811\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em STMPE811 Control functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga40d34415bd52b78096fa6c9b9bb92126}{stmpe811\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the stmpe811 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gabb9c2cd405cc42c773d04de65862bc2c}{stmpe811\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the stmpe811 IO Expander device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga39df0fdc87be8229ddd44e4c7297a774}{stmpe811\+\_\+\+Enable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga54bdd8669c2d73fde1939fd15d28c3a2}{stmpe811\+\_\+\+Disable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga82f479a7684adf9c8f32972b3ccb8daf}{stmpe811\+\_\+\+Enable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gaa72900e194641921649229f22ad349ec}{stmpe811\+\_\+\+Disable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga5a70edb897af292cf1b64db901f09fbc}{stmpe811\+\_\+\+Set\+ITPolarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga346c425ef8c88c868591eb97f97aa298}{stmpe811\+\_\+\+Set\+ITType}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Type)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Type. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga586f13e10186147660e8b09ca0574a17}{stmpe811\+\_\+\+Global\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Check the selected Global interrupt source pending bit. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gac3b8ba5f65a98bdd9e9344a5c6d80589}{stmpe811\+\_\+\+Read\+GITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Return the Global interrupts status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gadf6fcaf4bcd765c0e5c9f96781cbbbf9}{stmpe811\+\_\+\+Clear\+Global\+IT}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Clear the selected Global interrupt pending bit(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga60a6a887200a980d09b703c627c8f5f9}{stmpe811\+\_\+\+IO\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em STMPE811 IO functionalities functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga40c9ce3dd13c6b0e657de662fb35d9ce}{stmpe811\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gaaa0cf2f844c6d262b9fce9a2cc6fd902}{stmpe811\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em Initialize the selected IO pin direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gabc0ce22f7579972aa15251a20ec7e3cc}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+AF}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the AF for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga1529e270bd11bca071743a260741500f}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+AF}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable the AF for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga8f7f014edbe93fe0b95597ba42bfb928}{stmpe811\+\_\+\+IO\+\_\+\+Set\+Edge\+Mode}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Edge)
+\begin{DoxyCompactList}\small\item\em Configure the Edge for which a transition is detectable for the selected pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga4b75f623e16115387ca332c8e6a23378}{stmpe811\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Write a new IO pin state. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga1f838b67ba27809406633ca90f0ef6bb}{stmpe811\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Return the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gabca64e4661421c71506e17dedd52ba65}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga022afc5cec314919ae18e18b19ed6236}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga95f1f39fa2edd3d5b6ed32ec777a73da}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga8b7fcc635c1677d87dc2fbc71932b588}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga641547eeeb366b88eaa00cc25b984025}{stmpe811\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Check the status of the selected IO interrupt pending bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga6ab7ad96a8c53b799c893925471e3811}{stmpe811\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear the selected IO interrupt pending bit(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga6c2784b727e123850d09a884027d1521}{stmpe811\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em STMPE811 Touch screen functionalities functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga4e475a85fca0c46acdce3fc310dec86c}{stmpe811\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touch detected or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gab242655d3918e03e289140fcd49e9776}{stmpe811\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gafd18353ba1e835324c98b7f7c03244f8}{stmpe811\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gafba8e0baf0b89f5ea9b4cc1940468383}{stmpe811\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gad34fc9bbe11dca105a81374145155448}{stmpe811\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga974ece91b797f5fb28e76d2d192932a5}{stmpe811\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void {\bfseries IOE\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Initialization. \end{DoxyCompactList}\item 
+void {\bfseries IOE\+\_\+\+ITConfig} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em IOE Delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga6804257e10475b06cafd813afce0cf49}{IOE\+\_\+\+Write}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em IOE Writes single data operation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\+\_\+\+Read}} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em IOE Reads single data. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\+\_\+\+Read\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Reads multiple data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} {\bfseries stmpe811\+\_\+ts\+\_\+drv}
+\item 
+\mbox{\hyperlink{struct_i_o___drv_type_def}{IO\+\_\+\+Drv\+Type\+Def}} {\bfseries stmpe811\+\_\+io\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{stmpe811_8c}{stmpe811.\+c}} IO expander driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15-\/December-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

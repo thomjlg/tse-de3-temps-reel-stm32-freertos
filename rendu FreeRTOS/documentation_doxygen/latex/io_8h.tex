@@ -1,0 +1,81 @@
+\hypertarget{io_8h}{}\doxysection{Drivers/\+BSP/\+Components/\+Common/io.h File Reference}
+\label{io_8h}\index{Drivers/BSP/Components/Common/io.h@{Drivers/BSP/Components/Common/io.h}}
+
+
+This file contains all the functions prototypes for the IO driver.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_o___drv_type_def}{IO\+\_\+\+Drv\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___i_o___exported___types_ga7cbb1ccba2efb11afab1152c15d9c4a8}\label{group___i_o___exported___types_ga7cbb1ccba2efb11afab1152c15d9c4a8}} 
+enum \mbox{\hyperlink{group___i_o___exported___types_ga7cbb1ccba2efb11afab1152c15d9c4a8}{IO\+\_\+\+Pin\+State}} \{ {\bfseries IO\+\_\+\+PIN\+\_\+\+RESET} = 0
+, {\bfseries IO\+\_\+\+PIN\+\_\+\+SET}
+ \}
+\begin{DoxyCompactList}\small\item\em IO Bit SET and Bit RESET enumeration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___i_o___exported___types_ga24235ace1c8ec7472d83811fd1c83874}\label{group___i_o___exported___types_ga24235ace1c8ec7472d83811fd1c83874}} 
+enum {\bfseries IO\+\_\+\+Mode\+Typedef} \{ \newline
+{\bfseries IO\+\_\+\+MODE\+\_\+\+INPUT} = 0
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+OUTPUT}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE}
+, \newline
+{\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+ANALOG}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+OFF}
+, \newline
+{\bfseries IO\+\_\+\+MODE\+\_\+\+INPUT\+\_\+\+PU}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+INPUT\+\_\+\+PD}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+OD}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+OD\+\_\+\+PU}
+, \newline
+{\bfseries IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+OD\+\_\+\+PD}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP\+\_\+\+PU}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP\+\_\+\+PD}
+, \newline
+{\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE\+\_\+\+PU}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE\+\_\+\+PD}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE\+\_\+\+PU}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE\+\_\+\+PD}
+, \newline
+{\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL\+\_\+\+PU}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL\+\_\+\+PD}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL\+\_\+\+PU}
+, {\bfseries IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL\+\_\+\+PD}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the IO driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V4.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+21-\/July-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

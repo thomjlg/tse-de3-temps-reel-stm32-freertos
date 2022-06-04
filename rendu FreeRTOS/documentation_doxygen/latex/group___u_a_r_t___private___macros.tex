@@ -1,0 +1,189 @@
+\hypertarget{group___u_a_r_t___private___macros}{}\doxysection{UART Private Macros}
+\label{group___u_a_r_t___private___macros}\index{UART Private Macros@{UART Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_ga4fb6c975f14bd141ec282820823a2fff}{IS\+\_\+\+UART\+\_\+\+WORD\+\_\+\+LENGTH}}(LENGTH)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga12e732e82119829947fb0c97da82bd69}\label{group___u_a_r_t___private___macros_ga12e732e82119829947fb0c97da82bd69}} 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+LIN\+\_\+\+WORD\+\_\+\+LENGTH}(LENGTH)~(((LENGTH) == UART\+\_\+\+WORDLENGTH\+\_\+8B))
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_ga2c61795ef4affdddf3854c8f59568e41}{IS\+\_\+\+UART\+\_\+\+STOPBITS}}(STOPBITS)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_gaf2f542d273738ee3cb4a93d169827744}{IS\+\_\+\+UART\+\_\+\+PARITY}}(PARITY)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_ga4da792d3bbb8e04d97dd45b963ac2464}{IS\+\_\+\+UART\+\_\+\+HARDWARE\+\_\+\+FLOW\+\_\+\+CONTROL}}(CONTROL)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga748d45fbdc96c743bee170b749f961ba}\label{group___u_a_r_t___private___macros_ga748d45fbdc96c743bee170b749f961ba}} 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+MODE}(MODE)~((((MODE) \& 0x0000\+FFF3U) == 0x00U) \&\& ((MODE) != 0x00U))
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_ga202315393e18f29b20eb49ad9f8934dd}{IS\+\_\+\+UART\+\_\+\+STATE}}(STATE)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_ga8486e4a622ab62a11d82389d4aa0305d}{IS\+\_\+\+UART\+\_\+\+OVERSAMPLING}}(SAMPLING)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_gacd5577cca731f8ef51badd665f6aa5e6}\label{group___u_a_r_t___private___macros_gacd5577cca731f8ef51badd665f6aa5e6}} 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+LIN\+\_\+\+OVERSAMPLING}(SAMPLING)~(((SAMPLING) == UART\+\_\+\+OVERSAMPLING\+\_\+16))
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_ga5f09f62c88629a872d9b6ebf1d068950}{IS\+\_\+\+UART\+\_\+\+LIN\+\_\+\+BREAK\+\_\+\+DETECT\+\_\+\+LENGTH}}(LENGTH)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_ga6fea268c66482e36fb38844b808cf695}{IS\+\_\+\+UART\+\_\+\+WAKEUPMETHOD}}(WAKEUP)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga5d657d5c8e47b147a834e0018e9407c2}\label{group___u_a_r_t___private___macros_ga5d657d5c8e47b147a834e0018e9407c2}} 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+BAUDRATE}(BAUDRATE)~((BAUDRATE) $<$= 10500000U)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga2c4dce8c60f202455e6f1481fc441f98}\label{group___u_a_r_t___private___macros_ga2c4dce8c60f202455e6f1481fc441f98}} 
+\#define {\bfseries IS\+\_\+\+UART\+\_\+\+ADDRESS}(ADDRESS)~((ADDRESS) $<$= 0x0\+FU)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_gabd6dd99fff6cd5c0374780fd72a61e6e}\label{group___u_a_r_t___private___macros_gabd6dd99fff6cd5c0374780fd72a61e6e}} 
+\#define {\bfseries UART\+\_\+\+DIV\+\_\+\+SAMPLING16}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~((uint32\+\_\+t)((((uint64\+\_\+t)(\+\_\+\+PCLK\+\_\+))$\ast$25U)/(4U$\ast$((uint64\+\_\+t)(\+\_\+\+BAUD\+\_\+)))))
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga9cd479aff25c454d9d4f3c1c20517c86}\label{group___u_a_r_t___private___macros_ga9cd479aff25c454d9d4f3c1c20517c86}} 
+\#define {\bfseries UART\+\_\+\+DIVMANT\+\_\+\+SAMPLING16}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(UART\+\_\+\+DIV\+\_\+\+SAMPLING16((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+))/100U)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_gade99ebfd7502df11b366c48fac5417d7}\label{group___u_a_r_t___private___macros_gade99ebfd7502df11b366c48fac5417d7}} 
+\#define {\bfseries UART\+\_\+\+DIVFRAQ\+\_\+\+SAMPLING16}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~((((UART\+\_\+\+DIV\+\_\+\+SAMPLING16((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) -\/ (UART\+\_\+\+DIVMANT\+\_\+\+SAMPLING16((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $\ast$ 100U)) $\ast$ 16U) + 50U) / 100U)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_gaed98b14acfc939985cc9909a6fa64d71}{UART\+\_\+\+BRR\+\_\+\+SAMPLING16}}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga97075bc06a62c182b0b9a00bbf04b170}\label{group___u_a_r_t___private___macros_ga97075bc06a62c182b0b9a00bbf04b170}} 
+\#define {\bfseries UART\+\_\+\+DIV\+\_\+\+SAMPLING8}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~((uint32\+\_\+t)((((uint64\+\_\+t)(\+\_\+\+PCLK\+\_\+))$\ast$25U)/(2U$\ast$((uint64\+\_\+t)(\+\_\+\+BAUD\+\_\+)))))
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga3dafeed17fc4cf319b0dd88d7d0fb614}\label{group___u_a_r_t___private___macros_ga3dafeed17fc4cf319b0dd88d7d0fb614}} 
+\#define {\bfseries UART\+\_\+\+DIVMANT\+\_\+\+SAMPLING8}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(UART\+\_\+\+DIV\+\_\+\+SAMPLING8((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+))/100U)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_gae0c8a28dbc006a93dd8e90e8ff8a37a0}\label{group___u_a_r_t___private___macros_gae0c8a28dbc006a93dd8e90e8ff8a37a0}} 
+\#define {\bfseries UART\+\_\+\+DIVFRAQ\+\_\+\+SAMPLING8}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~((((UART\+\_\+\+DIV\+\_\+\+SAMPLING8((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) -\/ (UART\+\_\+\+DIVMANT\+\_\+\+SAMPLING8((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $\ast$ 100U)) $\ast$ 8U) + 50U) / 100U)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___private___macros_gae36ed9e94681494a31a9d8a7bbcc1a2c}{UART\+\_\+\+BRR\+\_\+\+SAMPLING8}}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga4da792d3bbb8e04d97dd45b963ac2464}\label{group___u_a_r_t___private___macros_ga4da792d3bbb8e04d97dd45b963ac2464}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_HARDWARE\_FLOW\_CONTROL@{IS\_UART\_HARDWARE\_FLOW\_CONTROL}}
+\index{IS\_UART\_HARDWARE\_FLOW\_CONTROL@{IS\_UART\_HARDWARE\_FLOW\_CONTROL}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_HARDWARE\_FLOW\_CONTROL}{IS\_UART\_HARDWARE\_FLOW\_CONTROL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+HARDWARE\+\_\+\+FLOW\+\_\+\+CONTROL(\begin{DoxyParamCaption}\item[{}]{CONTROL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                              (((CONTROL) == UART\_HWCONTROL\_NONE) || \(\backslash\)}
+\DoxyCodeLine{                               ((CONTROL) == UART\_HWCONTROL\_RTS) || \(\backslash\)}
+\DoxyCodeLine{                               ((CONTROL) == UART\_HWCONTROL\_CTS) || \(\backslash\)}
+\DoxyCodeLine{                               ((CONTROL) == UART\_HWCONTROL\_RTS\_CTS))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga5f09f62c88629a872d9b6ebf1d068950}\label{group___u_a_r_t___private___macros_ga5f09f62c88629a872d9b6ebf1d068950}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_LIN\_BREAK\_DETECT\_LENGTH@{IS\_UART\_LIN\_BREAK\_DETECT\_LENGTH}}
+\index{IS\_UART\_LIN\_BREAK\_DETECT\_LENGTH@{IS\_UART\_LIN\_BREAK\_DETECT\_LENGTH}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_LIN\_BREAK\_DETECT\_LENGTH}{IS\_UART\_LIN\_BREAK\_DETECT\_LENGTH}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+LIN\+\_\+\+BREAK\+\_\+\+DETECT\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{LENGTH }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                 (((LENGTH) == UART\_LINBREAKDETECTLENGTH\_10B) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((LENGTH) == UART\_LINBREAKDETECTLENGTH\_11B))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga8486e4a622ab62a11d82389d4aa0305d}\label{group___u_a_r_t___private___macros_ga8486e4a622ab62a11d82389d4aa0305d}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_OVERSAMPLING@{IS\_UART\_OVERSAMPLING}}
+\index{IS\_UART\_OVERSAMPLING@{IS\_UART\_OVERSAMPLING}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_OVERSAMPLING}{IS\_UART\_OVERSAMPLING}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+OVERSAMPLING(\begin{DoxyParamCaption}\item[{}]{SAMPLING }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((SAMPLING) == UART\_OVERSAMPLING\_16) || \(\backslash\)}
+\DoxyCodeLine{                                        ((SAMPLING) == UART\_OVERSAMPLING\_8))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_gaf2f542d273738ee3cb4a93d169827744}\label{group___u_a_r_t___private___macros_gaf2f542d273738ee3cb4a93d169827744}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_PARITY@{IS\_UART\_PARITY}}
+\index{IS\_UART\_PARITY@{IS\_UART\_PARITY}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_PARITY}{IS\_UART\_PARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((PARITY) == UART\_PARITY\_NONE) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == UART\_PARITY\_EVEN) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == UART\_PARITY\_ODD))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga202315393e18f29b20eb49ad9f8934dd}\label{group___u_a_r_t___private___macros_ga202315393e18f29b20eb49ad9f8934dd}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_STATE@{IS\_UART\_STATE}}
+\index{IS\_UART\_STATE@{IS\_UART\_STATE}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_STATE}{IS\_UART\_STATE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{STATE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                              (((STATE) == UART\_STATE\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                              ((STATE) == UART\_STATE\_ENABLE))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga2c61795ef4affdddf3854c8f59568e41}\label{group___u_a_r_t___private___macros_ga2c61795ef4affdddf3854c8f59568e41}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_STOPBITS@{IS\_UART\_STOPBITS}}
+\index{IS\_UART\_STOPBITS@{IS\_UART\_STOPBITS}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_STOPBITS}{IS\_UART\_STOPBITS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+STOPBITS(\begin{DoxyParamCaption}\item[{}]{STOPBITS }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    (((STOPBITS) == UART\_STOPBITS\_1) || \(\backslash\)}
+\DoxyCodeLine{                                    ((STOPBITS) == UART\_STOPBITS\_2))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga6fea268c66482e36fb38844b808cf695}\label{group___u_a_r_t___private___macros_ga6fea268c66482e36fb38844b808cf695}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_WAKEUPMETHOD@{IS\_UART\_WAKEUPMETHOD}}
+\index{IS\_UART\_WAKEUPMETHOD@{IS\_UART\_WAKEUPMETHOD}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_WAKEUPMETHOD}{IS\_UART\_WAKEUPMETHOD}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+WAKEUPMETHOD(\begin{DoxyParamCaption}\item[{}]{WAKEUP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((WAKEUP) == UART\_WAKEUPMETHOD\_IDLELINE) || \(\backslash\)}
+\DoxyCodeLine{                                      ((WAKEUP) == UART\_WAKEUPMETHOD\_ADDRESSMARK))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_ga4fb6c975f14bd141ec282820823a2fff}\label{group___u_a_r_t___private___macros_ga4fb6c975f14bd141ec282820823a2fff}} 
+\index{UART Private Macros@{UART Private Macros}!IS\_UART\_WORD\_LENGTH@{IS\_UART\_WORD\_LENGTH}}
+\index{IS\_UART\_WORD\_LENGTH@{IS\_UART\_WORD\_LENGTH}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_WORD\_LENGTH}{IS\_UART\_WORD\_LENGTH}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+WORD\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{LENGTH }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((LENGTH) == UART\_WORDLENGTH\_8B) || \(\backslash\)}
+\DoxyCodeLine{                                     ((LENGTH) == UART\_WORDLENGTH\_9B))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_gaed98b14acfc939985cc9909a6fa64d71}\label{group___u_a_r_t___private___macros_gaed98b14acfc939985cc9909a6fa64d71}} 
+\index{UART Private Macros@{UART Private Macros}!UART\_BRR\_SAMPLING16@{UART\_BRR\_SAMPLING16}}
+\index{UART\_BRR\_SAMPLING16@{UART\_BRR\_SAMPLING16}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{UART\_BRR\_SAMPLING16}{UART\_BRR\_SAMPLING16}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+BRR\+\_\+\+SAMPLING16(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                        ((UART\_DIVMANT\_SAMPLING16((\_PCLK\_), (\_BAUD\_)) << 4U) + \(\backslash\)}
+\DoxyCodeLine{                                                        (UART\_DIVFRAQ\_SAMPLING16((\_PCLK\_), (\_BAUD\_)) \& 0xF0U) + \(\backslash\)}
+\DoxyCodeLine{                                                        (UART\_DIVFRAQ\_SAMPLING16((\_PCLK\_), (\_BAUD\_)) \& 0x0FU))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___u_a_r_t___private___macros_gae36ed9e94681494a31a9d8a7bbcc1a2c}\label{group___u_a_r_t___private___macros_gae36ed9e94681494a31a9d8a7bbcc1a2c}} 
+\index{UART Private Macros@{UART Private Macros}!UART\_BRR\_SAMPLING8@{UART\_BRR\_SAMPLING8}}
+\index{UART\_BRR\_SAMPLING8@{UART\_BRR\_SAMPLING8}!UART Private Macros@{UART Private Macros}}
+\doxysubsubsection{\texorpdfstring{UART\_BRR\_SAMPLING8}{UART\_BRR\_SAMPLING8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+BRR\+\_\+\+SAMPLING8(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                        ((UART\_DIVMANT\_SAMPLING8((\_PCLK\_), (\_BAUD\_)) << 4U) + \(\backslash\)}
+\DoxyCodeLine{                                                        ((UART\_DIVFRAQ\_SAMPLING8((\_PCLK\_), (\_BAUD\_)) \& 0xF8U) << 1U) + \(\backslash\)}
+\DoxyCodeLine{                                                        (UART\_DIVFRAQ\_SAMPLING8((\_PCLK\_), (\_BAUD\_)) \& 0x07U))}
+
+\end{DoxyCode}

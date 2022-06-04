@@ -1,0 +1,49 @@
+\hypertarget{magneto_8h_source}{}\doxysection{magneto.\+h}
+\label{magneto_8h_source}\index{Drivers/BSP/Components/Common/magneto.h@{Drivers/BSP/Components/Common/magneto.h}}
+\mbox{\hyperlink{magneto_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_MAGNETO\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_MAGNETO\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70   uint8\_t Register1;}
+\DoxyCodeLine{71   uint8\_t Register2;}
+\DoxyCodeLine{72   uint8\_t Register3;}
+\DoxyCodeLine{73   uint8\_t Register4;}
+\DoxyCodeLine{74   uint8\_t Register5;}
+\DoxyCodeLine{75 \}\mbox{\hyperlink{struct_m_a_g_n_e_t_o___init_type_def}{MAGNETO\_InitTypeDef}};}
+\DoxyCodeLine{83 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{84 \{  }
+\DoxyCodeLine{85   void      (*Init)(\mbox{\hyperlink{struct_m_a_g_n_e_t_o___init_type_def}{MAGNETO\_InitTypeDef}});}
+\DoxyCodeLine{86   void      (*DeInit)(void); }
+\DoxyCodeLine{87   uint8\_t   (*ReadID)(void);}
+\DoxyCodeLine{88   void      (*Reset)(void);}
+\DoxyCodeLine{89   void      (*LowPower)(void);}
+\DoxyCodeLine{90   void      (*ConfigIT)(void);}
+\DoxyCodeLine{91   void      (*EnableIT)(uint8\_t);}
+\DoxyCodeLine{92   void      (*DisableIT)(uint8\_t);}
+\DoxyCodeLine{93   uint8\_t   (*ITStatus)(uint16\_t);}
+\DoxyCodeLine{94   void      (*ClearIT)(void);}
+\DoxyCodeLine{95   void      (*FilterConfig)(uint8\_t);}
+\DoxyCodeLine{96   void      (*FilterCmd)(uint8\_t);}
+\DoxyCodeLine{97   void      (*GetXYZ)(int16\_t *);}
+\DoxyCodeLine{98 \}\mbox{\hyperlink{struct_m_a_g_n_e_t_o___drv_type_def}{MAGNETO\_DrvTypeDef}};}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{120 \}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MAGNETO\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

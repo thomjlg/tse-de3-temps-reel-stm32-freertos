@@ -1,0 +1,251 @@
+\hypertarget{stm32f429i__discovery__lcd_8h}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery\+\_\+lcd.h File Reference}
+\label{stm32f429i__discovery__lcd_8h}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_lcd.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_lcd.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{stm32f429i__discovery__lcd_8c}{stm32f429i\+\_\+discovery\+\_\+lcd.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+sdram.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../../\+Utilities/\+Fonts/fonts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Components/ili9341/ili9341.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_c_d___draw_prop_type_def}{LCD\+\_\+\+Draw\+Prop\+Type\+Def}}
+\item 
+struct \mbox{\hyperlink{struct_point}{Point}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries LCD\+\_\+\+Layer\+Cfg\+Type\+Def}~LTDC\+\_\+\+Layer\+Cfg\+Type\+Def
+\item 
+\#define {\bfseries MAX\+\_\+\+LAYER\+\_\+\+NUMBER}~2
+\begin{DoxyCompactList}\small\item\em LCD status structure definition ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+FRAME\+\_\+\+BUFFER}~((uint32\+\_\+t)0x\+D0000000)
+\item 
+\#define {\bfseries BUFFER\+\_\+\+OFFSET}~((uint32\+\_\+t)0x50000)
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+BLUE}~0x\+FF0000\+FF
+\begin{DoxyCompactList}\small\item\em LCD color ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+GREEN}~0x\+FF00\+FF00
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+RED}~0x\+FFFF0000
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+CYAN}~0x\+FF00\+FFFF
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+MAGENTA}~0x\+FFFF00\+FF
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+YELLOW}~0x\+FFFFFF00
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+LIGHTBLUE}~0x\+FF8080\+FF
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+LIGHTGREEN}~0x\+FF80\+FF80
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+LIGHTRED}~0x\+FFFF8080
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+LIGHTCYAN}~0x\+FF80\+FFFF
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+LIGHTMAGENTA}~0x\+FFFF80\+FF
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+LIGHTYELLOW}~0x\+FFFFFF80
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+DARKBLUE}~0x\+FF000080
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+DARKGREEN}~0x\+FF008000
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+DARKRED}~0x\+FF800000
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+DARKCYAN}~0x\+FF008080
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+DARKMAGENTA}~0x\+FF800080
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+DARKYELLOW}~0x\+FF808000
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+WHITE}~0x\+FFFFFFFF
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+LIGHTGRAY}~0x\+FFD3\+D3\+D3
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+GRAY}~0x\+FF808080
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+DARKGRAY}~0x\+FF404040
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+BLACK}~0x\+FF000000
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+BROWN}~0x\+FFA52\+A2A
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+ORANGE}~0x\+FFFFA500
+\item 
+\#define {\bfseries LCD\+\_\+\+COLOR\+\_\+\+TRANSPARENT}~0x\+FF000000
+\item 
+\#define {\bfseries LCD\+\_\+\+DEFAULT\+\_\+\+FONT}~Font24
+\begin{DoxyCompactList}\small\item\em LCD default font. \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+RELOAD\+\_\+\+IMMEDIATE}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2bee9f0d3252c465422ad42a3e748c33}{LTDC\+\_\+\+SRCR\+\_\+\+IMR}})
+\begin{DoxyCompactList}\small\item\em LCD Reload Types. \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+RELOAD\+\_\+\+VERTICAL\+\_\+\+BLANKING}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6a469ec4989f09bd45c0fa1bcd8fbb0a}{LTDC\+\_\+\+SRCR\+\_\+\+VBR}})
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKGROUND\+\_\+\+LAYER}~0x0000
+\begin{DoxyCompactList}\small\item\em LCD Layer ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+FOREGROUND\+\_\+\+LAYER}~0x0001
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+ARGB8888}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+ARGB8888
+\begin{DoxyCompactList}\small\item\em LCD Pixel format. \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+RGB888}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+RGB888
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+RGB565}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+RGB565
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+ARGB1555}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+ARGB1555
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+ARGB4444}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+ARGB4444
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+L8}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+L8
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+AL44}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+AL44
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+AL88}~LTDC\+\_\+\+PIXEL\+\_\+\+FORMAT\+\_\+\+AL88
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_point}{Point}} $\ast$ {\bfseries p\+Point}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga11dbf262cdebdf2ca4f7f8883b40b2b9}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga11dbf262cdebdf2ca4f7f8883b40b2b9}} 
+enum {\bfseries LCD\+\_\+\+Status\+Type\+Def} \{ {\bfseries LCD\+\_\+\+OK} = 0
+, {\bfseries LCD\+\_\+\+ERROR} = 1
+, {\bfseries LCD\+\_\+\+TIMEOUT} = 2
+ \}
+\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}} 
+enum \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}{Text\+\_\+\+Align\+Mode\+Typdef}} \{ {\bfseries CENTER\+\_\+\+MODE} = 0x01
+, {\bfseries RIGHT\+\_\+\+MODE} = 0x02
+, {\bfseries LEFT\+\_\+\+MODE} = 0x03
+ \}
+\begin{DoxyCompactList}\small\item\em Line mode structures definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga5955111784d5c5a7b9a7492b30afd7cf}{BSP\+\_\+\+LCD\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gafbc7d2bdd56283a761e21998ddbf89e8}{BSP\+\_\+\+LCD\+\_\+\+Get\+XSize}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD X size. ~\newline
+ \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga77de959b7b712a5cb4a1c8515253a905}{BSP\+\_\+\+LCD\+\_\+\+Get\+YSize}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD Y size. ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga4ae4d69b4af282c1ad3637b8d4f8958b}{BSP\+\_\+\+LCD\+\_\+\+Layer\+Default\+Init}} (uint16\+\_\+t Layer\+Index, uint32\+\_\+t Frame\+Buffer)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD layers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaada127d31caacc3c2245524a9b403db7}{BSP\+\_\+\+LCD\+\_\+\+Set\+Transparency}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em Configures the Transparency. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga422bf84f008ab5e259459354a7dea779}{BSP\+\_\+\+LCD\+\_\+\+Set\+Transparency\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em Configures the transparency without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga0947392e8ac5a64cf810fb6c58fdcaa2}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Address}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t Address)
+\begin{DoxyCompactList}\small\item\em Sets a LCD layer frame buffer address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gafc42384bbed08690b13cc9ed62035508}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Address\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t Address)
+\begin{DoxyCompactList}\small\item\em Sets an LCD layer frame buffer address without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad056ed10c1e33a95a4d78b7f899e5e01}{BSP\+\_\+\+LCD\+\_\+\+Set\+Color\+Keying}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t RGBValue)
+\begin{DoxyCompactList}\small\item\em Configures and sets the color Keying. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga09005a2a087a2f7790fd444f97477d78}{BSP\+\_\+\+LCD\+\_\+\+Set\+Color\+Keying\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t RGBValue)
+\begin{DoxyCompactList}\small\item\em Configures and sets the color keying without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad1cd9f1072b2d4d5e489143011cfffcc}{BSP\+\_\+\+LCD\+\_\+\+Reset\+Color\+Keying}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em Disables the color Keying. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga9335343479b1e095c1a5817d9a6585c6}{BSP\+\_\+\+LCD\+\_\+\+Reset\+Color\+Keying\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em Disables the color keying without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga57fcb4ebed22256672cee760add01de8}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Window}} (uint16\+\_\+t Layer\+Index, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets the Display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaa07e41d601e249c8d2c508b2944c3cfb}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Window\+\_\+\+No\+Reload}} (uint16\+\_\+t Layer\+Index, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets display window without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga1e62c9ab7d6185402e831ab6c7e6307e}{BSP\+\_\+\+LCD\+\_\+\+Select\+Layer}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em Selects the LCD Layer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga2fcd0d9567ee86c448ed65689278f6f5}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Visible}} (uint32\+\_\+t Layer\+Index, Functional\+State state)
+\begin{DoxyCompactList}\small\item\em Sets a LCD Layer visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gac9c3b946bb03ab825306a9a48ee123da}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Visible\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, Functional\+State State)
+\begin{DoxyCompactList}\small\item\em Sets an LCD Layer visible without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gabf5c8e45b272d103e4eea7432002dc2c}{BSP\+\_\+\+LCD\+\_\+\+Relaod}} (uint32\+\_\+t Reload\+Type)
+\begin{DoxyCompactList}\small\item\em Disables the color keying without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga675c034d5e34eecdd9b821d29fc57905}{BSP\+\_\+\+LCD\+\_\+\+Set\+Text\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em Sets the Text color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga54560381fbf64e3f70a0c253c8b740e3}{BSP\+\_\+\+LCD\+\_\+\+Set\+Back\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em Sets the Background color. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga89b0d4a3af19d42df7396770972f23d8}{BSP\+\_\+\+LCD\+\_\+\+Get\+Text\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD Text color. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga5fe219c225b7db9a424ba7c54ae15cd5}{BSP\+\_\+\+LCD\+\_\+\+Get\+Back\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD Background color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga66d4af4f0eb6563410f0ff942369ffc0}{BSP\+\_\+\+LCD\+\_\+\+Set\+Font}} (\mbox{\hyperlink{struct__t_font}{s\+FONT}} $\ast$p\+Fonts)
+\begin{DoxyCompactList}\small\item\em Sets the Text Font. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct__t_font}{s\+FONT}} $\ast$ \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga8f0e25c8df95159043d070cd3d2af01b}{BSP\+\_\+\+LCD\+\_\+\+Get\+Font}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the Text Font. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaf524b8c43042bbc40348e88e28f4fbe8}{BSP\+\_\+\+LCD\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Reads Pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaf9782938b0d199c8627716942b5b5ebd}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint32\+\_\+t pixel)
+\begin{DoxyCompactList}\small\item\em Writes Pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga508bafe763db5befc3c8c3ea0e40e9d5}{BSP\+\_\+\+LCD\+\_\+\+Clear}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em Clears the hole LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga9d495a1983997618c113f11f3d600c05}{BSP\+\_\+\+LCD\+\_\+\+Clear\+String\+Line}} (uint32\+\_\+t Line)
+\begin{DoxyCompactList}\small\item\em Clears the selected line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga9c7c6b012bd14c2206135fd1136da7e0}{BSP\+\_\+\+LCD\+\_\+\+Display\+String\+At\+Line}} (uint16\+\_\+t Line, uint8\+\_\+t $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Displays a maximum of 20 char on the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad06a065ae88887f98d81046cdb3e8fc3}{BSP\+\_\+\+LCD\+\_\+\+Display\+String\+At}} (uint16\+\_\+t X, uint16\+\_\+t Y, uint8\+\_\+t $\ast$p\+Text, \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}{Text\+\_\+\+Align\+Mode\+Typdef}} mode)
+\begin{DoxyCompactList}\small\item\em Displays a maximum of 60 char on the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga8388f1a9dd9f46d0ed98942e5af68c84}{BSP\+\_\+\+LCD\+\_\+\+Display\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Ascii)
+\begin{DoxyCompactList}\small\item\em Displays one character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga2a28ebabf188e1dd208bcfebe28b48b4}{BSP\+\_\+\+LCD\+\_\+\+Draw\+HLine}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Displays an horizontal line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga7bd3b8d8dd28ef48c03fe31f1d6920d2}{BSP\+\_\+\+LCD\+\_\+\+Draw\+VLine}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Displays a vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga14c8ea16ad96418b0bcae6475b83b5c2}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Line}} (uint16\+\_\+t X1, uint16\+\_\+t Y1, uint16\+\_\+t X2, uint16\+\_\+t Y2)
+\begin{DoxyCompactList}\small\item\em Displays an uni-\/line (between two points). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga278d2524d94b30ed1d1b3cafd48a7d30}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Rect}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Displays a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga944dac20e80e4bb39f697b1d79ee5c88}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Circle}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Radius)
+\begin{DoxyCompactList}\small\item\em Displays a circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gad5b57cb65d1733b16b75ade3ff613bec}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Polygon}} (\mbox{\hyperlink{struct_point}{p\+Point}} Points, uint16\+\_\+t Point\+Count)
+\begin{DoxyCompactList}\small\item\em Displays an poly-\/line (between many points). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga93de8990b2794426293de65e7166a781}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Ellipse}} (int Xpos, int Ypos, int XRadius, int YRadius)
+\begin{DoxyCompactList}\small\item\em Displays an Ellipse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga2cfa6a5c911050467563569eebc74a1f}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Bitmap}} (uint32\+\_\+t X, uint32\+\_\+t Y, uint8\+\_\+t $\ast$p\+Bmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture loaded in the internal Flash (32 bpp). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga685f6469561442556dbb22f7057a54ef}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Rect}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Displays a full rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga8e526424d1abb3364b50d920b3ee2bcf}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Circle}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Radius)
+\begin{DoxyCompactList}\small\item\em Displays a full circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaf24ee486acd14871a276a2f2fa0e71f4}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Triangle}} (uint16\+\_\+t X1, uint16\+\_\+t X2, uint16\+\_\+t X3, uint16\+\_\+t Y1, uint16\+\_\+t Y2, uint16\+\_\+t Y3)
+\begin{DoxyCompactList}\small\item\em Fill triangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_gaaa15c0355599580e563a09afd32d7f6f}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Polygon}} (\mbox{\hyperlink{struct_point}{p\+Point}} Points, uint16\+\_\+t Point\+Count)
+\begin{DoxyCompactList}\small\item\em Displays a full poly-\/line (between many points). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___functions_ga4e95c2c6dafd026663a335c989e8732f}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Ellipse}} (int Xpos, int Ypos, int XRadius, int YRadius)
+\begin{DoxyCompactList}\small\item\em Draw a full ellipse. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+LCD\+\_\+\+Display\+Off} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+LCD\+\_\+\+Display\+On} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+LCD\+\_\+\+Msp\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the LTDC MSP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{stm32f429i__discovery__lcd_8c}{stm32f429i\+\_\+discovery\+\_\+lcd.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

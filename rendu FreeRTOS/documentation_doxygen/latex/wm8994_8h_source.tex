@@ -1,0 +1,95 @@
+\hypertarget{wm8994_8h_source}{}\doxysection{wm8994.\+h}
+\label{wm8994_8h_source}\index{Drivers/BSP/Components/wm8994/wm8994.h@{Drivers/BSP/Components/wm8994/wm8994.h}}
+\mbox{\hyperlink{wm8994_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_WM8994\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_WM8994\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include "{}../Common/audio.h"{}}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{70 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{71 \textcolor{comment}{/***************************  Codec User defines ******************************/}}
+\DoxyCodeLine{72 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{73 \textcolor{comment}{/* Codec output DEVICE */}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_SPEAKER                 ((uint16\_t)0x0001)}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_HEADPHONE               ((uint16\_t)0x0002)}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_BOTH                    ((uint16\_t)0x0003)}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define OUTPUT\_DEVICE\_AUTO                    ((uint16\_t)0x0004)}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define INPUT\_DEVICE\_DIGITAL\_MICROPHONE\_1     ((uint16\_t)0x0100)}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define INPUT\_DEVICE\_DIGITAL\_MICROPHONE\_2     ((uint16\_t)0x0200)}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define INPUT\_DEVICE\_INPUT\_LINE\_1             ((uint16\_t)0x0300)}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define INPUT\_DEVICE\_INPUT\_LINE\_2             ((uint16\_t)0x0400)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define INPUT\_DEVICE\_DIGITAL\_MIC1\_MIC2        ((uint16\_t)0x0800)}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{/* Volume Levels values */}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define DEFAULT\_VOLMIN                0x00}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define DEFAULT\_VOLMAX                0xFF}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define DEFAULT\_VOLSTEP               0x04}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define AUDIO\_PAUSE                   0}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define AUDIO\_RESUME                  1}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{/* Codec POWER DOWN modes */}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define CODEC\_PDWN\_HW                 1}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define CODEC\_PDWN\_SW                 2}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{comment}{/* MUTE commands */}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define AUDIO\_MUTE\_ON                 1}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define AUDIO\_MUTE\_OFF                0}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{comment}{/* AUDIO FREQUENCY */}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_192K          ((uint32\_t)192000)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_96K           ((uint32\_t)96000)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_48K           ((uint32\_t)48000)}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_44K           ((uint32\_t)44100)}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_32K           ((uint32\_t)32000)}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_22K           ((uint32\_t)22050)}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_16K           ((uint32\_t)16000)}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_11K           ((uint32\_t)11025)}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define AUDIO\_FREQUENCY\_8K            ((uint32\_t)8000)  }}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define VOLUME\_CONVERT(Volume)        (((Volume) > 100)? 100:((uint8\_t)(((Volume) * 63) / 100)))}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define VOLUME\_IN\_CONVERT(Volume)     (((Volume) >= 100)? 239:((uint8\_t)(((Volume) * 240) / 100)))}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{115 \textcolor{comment}{/****************************** REGISTER MAPPING ******************************/}}
+\DoxyCodeLine{116 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define  WM8994\_ID    0x8994}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define WM8994\_CHIPID\_ADDR                  0x00}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{143 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{144 \textcolor{comment}{                           Audio Codec functions }}
+\DoxyCodeLine{145 \textcolor{comment}{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{146 \textcolor{comment}{/* High Layer codec functions */}}
+\DoxyCodeLine{147 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga3480b4e36772987950257bde02653721}{wm8994\_Init}}(uint16\_t DeviceAddr, uint16\_t OutputInputDevice, uint8\_t Volume, uint32\_t AudioFreq);}
+\DoxyCodeLine{148 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___w_m8994___exported___functions_ga4b75806a89e7ce5dd5643b1815ab657d}{wm8994\_DeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{149 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga95f7d0e82e6f6678e1c9533a40d9410a}{wm8994\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{150 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_gad1233e28686f9bf6e0c1eab0487b6811}{wm8994\_Play}}(uint16\_t DeviceAddr, uint16\_t* pBuffer, uint16\_t Size);}
+\DoxyCodeLine{151 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga7dc61f1e194ac0dddfd2433aad18ffbd}{wm8994\_Pause}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{152 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga4ff0d65bb8394b7307482d8292d9d1bf}{wm8994\_Resume}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{153 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_gabf8add07192650e9d187753199fc78e0}{wm8994\_Stop}}(uint16\_t DeviceAddr, uint32\_t Cmd);}
+\DoxyCodeLine{154 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga3f3e2ff73924bcb5de7ed9d1de056b3a}{wm8994\_SetVolume}}(uint16\_t DeviceAddr, uint8\_t Volume);}
+\DoxyCodeLine{155 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga2f3d8a46806eb63a023bf6bb4f7821e3}{wm8994\_SetMute}}(uint16\_t DeviceAddr, uint32\_t Cmd);}
+\DoxyCodeLine{156 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga74e3c3342bce3e9bb871ca13125a263c}{wm8994\_SetOutputMode}}(uint16\_t DeviceAddr, uint8\_t Output);}
+\DoxyCodeLine{157 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga11da6d32fb9b17e8f10e6e466116d416}{wm8994\_SetFrequency}}(uint16\_t DeviceAddr, uint32\_t AudioFreq);}
+\DoxyCodeLine{158 uint32\_t \mbox{\hyperlink{group___w_m8994___exported___functions_ga5cce7c53a68c7643ed1316868ec4edef}{wm8994\_Reset}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{comment}{/* AUDIO IO functions */}}
+\DoxyCodeLine{161 \textcolor{keywordtype}{void}    AUDIO\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{162 \textcolor{keywordtype}{void}    AUDIO\_IO\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{163 \textcolor{keywordtype}{void}    AUDIO\_IO\_Write(uint8\_t Addr, uint16\_t Reg, uint16\_t Value);}
+\DoxyCodeLine{164 uint8\_t AUDIO\_IO\_Read(uint8\_t Addr, uint16\_t Reg);}
+\DoxyCodeLine{165 \textcolor{keywordtype}{void}    AUDIO\_IO\_Delay(uint32\_t Delay);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \textcolor{comment}{/* Audio driver structure */}}
+\DoxyCodeLine{168 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_a_u_d_i_o___drv_type_def}{AUDIO\_DrvTypeDef}}   wm8994\_drv;}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_WM8994\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{188 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

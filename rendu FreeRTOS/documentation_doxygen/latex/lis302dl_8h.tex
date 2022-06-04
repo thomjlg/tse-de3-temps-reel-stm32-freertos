@@ -1,0 +1,219 @@
+\hypertarget{lis302dl_8h}{}\doxysection{Drivers/\+BSP/\+Components/lis302dl/lis302dl.h File Reference}
+\label{lis302dl_8h}\index{Drivers/BSP/Components/lis302dl/lis302dl.h@{Drivers/BSP/Components/lis302dl/lis302dl.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{lis302dl_8c}{lis302dl.\+c}} firmware driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/accelero.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_i_s302_d_l___init_type_def}{LIS302\+DL\+\_\+\+Init\+Type\+Def}}
+\item 
+struct \mbox{\hyperlink{struct_l_i_s302_d_l___interrupt_config_type_def}{LIS302\+DL\+\_\+\+Interrupt\+Config\+Type\+Def}}
+\item 
+struct \mbox{\hyperlink{struct_l_i_s302_d_l___filter_config_type_def}{LIS302\+DL\+\_\+\+Filter\+Config\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+WHO\+\_\+\+AM\+\_\+\+I\+\_\+\+ADDR}~0x0F
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CTRL\+\_\+\+REG1\+\_\+\+ADDR}~0x20
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CTRL\+\_\+\+REG2\+\_\+\+ADDR}~0x21
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CTRL\+\_\+\+REG3\+\_\+\+ADDR}~0x22
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HP\+\_\+\+FILTER\+\_\+\+RESET\+\_\+\+REG\+\_\+\+ADDR}~0x23
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+STATUS\+\_\+\+REG\+\_\+\+ADDR}~0x27
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+OUT\+\_\+\+X\+\_\+\+ADDR}~0x29
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+OUT\+\_\+\+Y\+\_\+\+ADDR}~0x2B
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+OUT\+\_\+\+Z\+\_\+\+ADDR}~0x2D
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+CFG1\+\_\+\+REG\+\_\+\+ADDR}~0x30
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+SRC1\+\_\+\+REG\+\_\+\+ADDR}~0x31
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+THS1\+\_\+\+REG\+\_\+\+ADDR}~0x32
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+DURATION1\+\_\+\+REG\+\_\+\+ADDR}~0x33
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+CFG2\+\_\+\+REG\+\_\+\+ADDR}~0x34
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+SRC2\+\_\+\+REG\+\_\+\+ADDR}~0x35
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+THS2\+\_\+\+REG\+\_\+\+ADDR}~0x36
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FF\+\_\+\+WU\+\_\+\+DURATION2\+\_\+\+REG\+\_\+\+ADDR}~0x37
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICK\+\_\+\+CFG\+\_\+\+REG\+\_\+\+ADDR}~0x38
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICK\+\_\+\+SRC\+\_\+\+REG\+\_\+\+ADDR}~0x39
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICK\+\_\+\+THSY\+\_\+\+X\+\_\+\+REG\+\_\+\+ADDR}~0x3B
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICK\+\_\+\+THSZ\+\_\+\+REG\+\_\+\+ADDR}~0x3C
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICK\+\_\+\+TIMELIMIT\+\_\+\+REG\+\_\+\+ADDR}~0x3D
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICK\+\_\+\+LATENCY\+\_\+\+REG\+\_\+\+ADDR}~0x3E
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICK\+\_\+\+WINDOW\+\_\+\+REG\+\_\+\+ADDR}~0x3F
+\item 
+\#define {\bfseries I\+\_\+\+AM\+\_\+\+LIS302\+DL}~0x3B
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+SENSITIVITY\+\_\+2\+\_\+3G}~18  /$\ast$ 18 mg/digit$\ast$/
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+SENSITIVITY\+\_\+9\+\_\+2G}~72  /$\ast$ 72 mg/digit$\ast$/
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+DATARATE\+\_\+100}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+DATARATE\+\_\+400}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+LOWPOWERMODE\+\_\+\+POWERDOWN}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+LOWPOWERMODE\+\_\+\+ACTIVE}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FULLSCALE\+\_\+2\+\_\+3}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FULLSCALE\+\_\+9\+\_\+2}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+SELFTEST\+\_\+\+NORMAL}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+SELFTEST\+\_\+P}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+SELFTEST\+\_\+M}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+X\+\_\+\+ENABLE}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+Y\+\_\+\+ENABLE}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+Z\+\_\+\+ENABLE}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+XYZ\+\_\+\+ENABLE}~((uint8\+\_\+t)0x07)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+SERIALINTERFACE\+\_\+4\+WIRE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+SERIALINTERFACE\+\_\+3\+WIRE}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+BOOT\+\_\+\+NORMALMODE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+BOOT\+\_\+\+REBOOTMEMORY}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FILTEREDDATASELECTION\+\_\+\+BYPASSED}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+FILTEREDDATASELECTION\+\_\+\+OUTPUTREGISTER}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTERINTERRUPT\+\_\+\+OFF}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTERINTERRUPT\+\_\+1}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTERINTERRUPT\+\_\+2}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTERINTERRUPT\+\_\+1\+\_\+2}~((uint8\+\_\+t)0x0C)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTER\+\_\+\+LEVEL\+\_\+0}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTER\+\_\+\+LEVEL\+\_\+1}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTER\+\_\+\+LEVEL\+\_\+2}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+HIGHPASSFILTER\+\_\+\+LEVEL\+\_\+3}~((uint8\+\_\+t)0x03)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+INTERRUPTREQUEST\+\_\+\+NOTLATCHED}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+INTERRUPTREQUEST\+\_\+\+LATCHED}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICKINTERRUPT\+\_\+\+XYZ\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICKINTERRUPT\+\_\+\+X\+\_\+\+ENABLE}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICKINTERRUPT\+\_\+\+Y\+\_\+\+ENABLE}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICKINTERRUPT\+\_\+\+Z\+\_\+\+ENABLE}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+CLICKINTERRUPT\+\_\+\+XYZ\+\_\+\+ENABLE}~((uint8\+\_\+t)0x15)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+DOUBLECLICKINTERRUPT\+\_\+\+XYZ\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+DOUBLECLICKINTERRUPT\+\_\+\+X\+\_\+\+ENABLE}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+DOUBLECLICKINTERRUPT\+\_\+\+Y\+\_\+\+ENABLE}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+DOUBLECLICKINTERRUPT\+\_\+\+Z\+\_\+\+ENABLE}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries LIS302\+DL\+\_\+\+DOUBLECLICKINTERRUPT\+\_\+\+XYZ\+\_\+\+ENABLE}~((uint8\+\_\+t)0x2A)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gab33f9dfb94fea1368094bd9e5ae305a7}{LIS302\+DL\+\_\+\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gad025fe40fee8e518b4c1f3c730719bec}{LIS302\+DL\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em LIS302\+DL De-\/\+Initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gad66ca1c16146bce7a25b1a0f2a7c5336}{LIS302\+DL\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read LIS302\+DL device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gae1fed348eea54a73aa3c571573f54b5b}{LIS302\+DL\+\_\+\+Filter\+Config}} (uint8\+\_\+t Filter\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Internal High Pass Filter configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga0c6ea80d35be5abeb3bd1d06355481e8}{LIS302\+DL\+\_\+\+Interrupt\+Config}} (\mbox{\hyperlink{struct_l_i_s302_d_l___interrupt_config_type_def}{LIS302\+DL\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$LIS302\+DL\+\_\+\+Int\+Config\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga1e614ad06137c27a10e7ef6bfcd933ac}{LIS302\+DL\+\_\+\+Click\+\_\+\+Int\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Set LIS302\+DL Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gabb1c78925d79459c2e4b5baf28da70d5}{LIS302\+DL\+\_\+\+Click\+\_\+\+Int\+Clear}} (void)
+\begin{DoxyCompactList}\small\item\em Clear LIS302\+DL click Interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga445e78cca4cd65f59e0ffaa3575db8ae}{LIS302\+DL\+\_\+\+Lowpower\+Cmd}} (uint8\+\_\+t Low\+Power\+Mode)
+\begin{DoxyCompactList}\small\item\em Change the lowpower mode for LIS302\+DL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gadb44926aefe4fc8e6cdff256077c0bf4}{LIS302\+DL\+\_\+\+Full\+Scale\+Cmd}} (uint8\+\_\+t FS\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Change the Full Scale of LIS302\+DL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga8542910cb1e71d7031fab7a462c768bd}{LIS302\+DL\+\_\+\+Data\+Rate\+Cmd}} (uint8\+\_\+t Data\+Rate\+Value)
+\begin{DoxyCompactList}\small\item\em Data Rate command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga34234db89f7d653fea3085007d3d9e0e}{LIS302\+DL\+\_\+\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of LIS302\+DL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga7c1ecf966ebe0f60069e06099c93cad5}{LIS302\+DL\+\_\+\+Read\+ACC}} (int16\+\_\+t $\ast$p\+Data)
+\begin{DoxyCompactList}\small\item\em Read LIS302\+DL output register, and calculate the acceleration ACC\mbox{[}mg\mbox{]}=SENSITIVITY$\ast$ (out\+\_\+h$\ast$256+out\+\_\+l)/16 (12 bit rappresentation) \end{DoxyCompactList}\item 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+ITConfig} (void)
+\item 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Write\+Addr, uint16\+\_\+t Num\+Byte\+To\+Write)
+\item 
+void {\bfseries ACCELERO\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Read\+Addr, uint16\+\_\+t Num\+Byte\+To\+Read)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\+\_\+\+Drv\+Type\+Def}} {\bfseries Lis302dl\+Drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{lis302dl_8c}{lis302dl.\+c}} firmware driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03-\/August-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

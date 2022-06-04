@@ -1,0 +1,54 @@
+\hypertarget{stm32f429i__discovery__sdram_8c}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery\+\_\+sdram.c File Reference}
+\label{stm32f429i__discovery__sdram_8c}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_sdram.c@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_sdram.c}}
+
+
+This file provides a set of functions needed to drive the IS42\+S16400J SDRAM memory mounted on STM32\+F429\+I-\/\+Discovery Kit. ~\newline
+  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+sdram.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t {\bfseries BSP\+\_\+\+SDRAM\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SDRAM device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gac8bdaf00734e741a8c7a79f255d8751f}{BSP\+\_\+\+SDRAM\+\_\+\+Initialization\+\_\+sequence}} (uint32\+\_\+t Refresh\+Count)
+\begin{DoxyCompactList}\small\item\em Programs the SDRAM device. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaf5a58e9e8a87ca35ff51031cc6df81f9}{BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Reads an mount of data from the SDRAM memory in polling mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae0d1b2d92c12aec8ade4bf00077111b3}{BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data\+\_\+\+DMA}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Reads an mount of data from the SDRAM memory in DMA mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaa29379faee00c5c6b63458537d5be50}{BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Writes an mount of data to the SDRAM memory in polling mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_ga2b8d264ab912c422b25da4af9c9ea726}{BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data\+\_\+\+DMA}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Writes an mount of data to the SDRAM memory in DMA mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gaaba572903e8d423697b1a1c3fc914897}{BSP\+\_\+\+SDRAM\+\_\+\+Sendcmd}} (FMC\+\_\+\+SDRAM\+\_\+\+Command\+Type\+Def $\ast$Sdram\+Cmd)
+\begin{DoxyCompactList}\small\item\em Sends command to the SDRAM bank. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+SDRAM\+\_\+\+DMA\+\_\+\+IRQHandler} (void)
+\begin{DoxyCompactList}\small\item\em Handles SDRAM DMA transfer interrupt request. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gae6fe4f887c9c9c8a37a49f55ccfd3e4b}{BSP\+\_\+\+SDRAM\+\_\+\+Msp\+Init}} (SDRAM\+\_\+\+Handle\+Type\+Def $\ast$hsdram, void $\ast$Params)
+\begin{DoxyCompactList}\small\item\em Initializes SDRAM MSP. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___private___functions_gadfa6b08e2cd58b607acb5a47fd964083}{BSP\+\_\+\+SDRAM\+\_\+\+Msp\+De\+Init}} (SDRAM\+\_\+\+Handle\+Type\+Def $\ast$hsdram, void $\ast$Params)
+\begin{DoxyCompactList}\small\item\em De\+Initializes SDRAM MSP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to drive the IS42\+S16400J SDRAM memory mounted on STM32\+F429\+I-\/\+Discovery Kit. ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

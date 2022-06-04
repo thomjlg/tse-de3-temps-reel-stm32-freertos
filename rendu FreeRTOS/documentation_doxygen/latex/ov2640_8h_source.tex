@@ -1,0 +1,141 @@
+\hypertarget{ov2640_8h_source}{}\doxysection{ov2640.\+h}
+\label{ov2640_8h_source}\index{Drivers/BSP/Components/ov2640/ov2640.h@{Drivers/BSP/Components/ov2640/ov2640.h}}
+\mbox{\hyperlink{ov2640_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_OV2640\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_OV2640\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/camera.h"{}}}
+\DoxyCodeLine{49    }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define  OV2640\_ID    0x26}}
+\DoxyCodeLine{80 \textcolor{comment}{/* OV2640 Registers definition when DSP bank selected (0xFF = 0x00) */}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define OV2640\_DSP\_R\_BYPASS             0x05}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define OV2640\_DSP\_Qs                   0x44}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define OV2640\_DSP\_CTRL                 0x50}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define OV2640\_DSP\_HSIZE1               0x51}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define OV2640\_DSP\_VSIZE1               0x52}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define OV2640\_DSP\_XOFFL                0x53}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define OV2640\_DSP\_YOFFL                0x54}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define OV2640\_DSP\_VHYX                 0x55}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define OV2640\_DSP\_DPRP                 0x56}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define OV2640\_DSP\_TEST                 0x57}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define OV2640\_DSP\_ZMOW                 0x5A}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define OV2640\_DSP\_ZMOH                 0x5B}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define OV2640\_DSP\_ZMHH                 0x5C}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define OV2640\_DSP\_BPADDR               0x7C}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define OV2640\_DSP\_BPDATA               0x7D}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define OV2640\_DSP\_CTRL2                0x86}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define OV2640\_DSP\_CTRL3                0x87}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define OV2640\_DSP\_SIZEL                0x8C}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define OV2640\_DSP\_HSIZE2               0xC0}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define OV2640\_DSP\_VSIZE2               0xC1}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define OV2640\_DSP\_CTRL0                0xC2}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define OV2640\_DSP\_CTRL1                0xC3}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define OV2640\_DSP\_R\_DVP\_SP             0xD3}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define OV2640\_DSP\_IMAGE\_MODE           0xDA}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define OV2640\_DSP\_RESET                0xE0}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define OV2640\_DSP\_MS\_SP                0xF0}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define OV2640\_DSP\_SS\_ID                0x7F}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define OV2640\_DSP\_SS\_CTRL              0xF8}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define OV2640\_DSP\_MC\_BIST              0xF9}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define OV2640\_DSP\_MC\_AL                0xFA}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define OV2640\_DSP\_MC\_AH                0xFB}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define OV2640\_DSP\_MC\_D                 0xFC}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define OV2640\_DSP\_P\_STATUS             0xFE}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define OV2640\_DSP\_RA\_DLMT              0xFF}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{comment}{/* OV2640 Registers definition when sensor bank selected (0xFF = 0x01) */}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_GAIN              0x00}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM1              0x03}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG04             0x04}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG08             0x08}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM2              0x09}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_PIDH              0x0A}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_PIDL              0x0B}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM3              0x0C}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM4              0x0D}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_AEC               0x10}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_CLKRC             0x11}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM7              0x12}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM8              0x13}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM9              0x14}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM10             0x15}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_HREFST            0x17}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_HREFEND           0x18}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_VSTART            0x19}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_VEND              0x1A}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_MIDH              0x1C}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_MIDL              0x1D}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_AEW               0x24}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_AEB               0x25}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_W                 0x26}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG2A             0x2A}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_FRARL             0x2B}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_ADDVSL            0x2D}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_ADDVHS            0x2E}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_YAVG              0x2F}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG32             0x32}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_ARCOM2            0x34}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG45             0x45}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_FLL               0x46}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_FLH               0x47}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM19             0x48}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_ZOOMS             0x49}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM22             0x4B}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_COM25             0x4E}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_BD50              0x4F}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_BD60              0x50}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG5D             0x5D}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG5E             0x5E}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG5F             0x5F}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_REG60             0x60}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_HISTO\_LOW         0x61}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define OV2640\_SENSOR\_HISTO\_HIGH        0x62 }}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define OV2640\_BRIGHTNESS\_LEVEL0        0x40   }\textcolor{comment}{/* Brightness level -\/2         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define OV2640\_BRIGHTNESS\_LEVEL1        0x30   }\textcolor{comment}{/* Brightness level -\/1         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define OV2640\_BRIGHTNESS\_LEVEL2        0x20   }\textcolor{comment}{/* Brightness level 0          */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define OV2640\_BRIGHTNESS\_LEVEL3        0x10   }\textcolor{comment}{/* Brightness level +1         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define OV2640\_BRIGHTNESS\_LEVEL4        0x00   }\textcolor{comment}{/* Brightness level +2         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define OV2640\_BLACK\_WHITE\_BW           0x18   }\textcolor{comment}{/* Black and white effect      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define OV2640\_BLACK\_WHITE\_NEGATIVE     0x40   }\textcolor{comment}{/* Negative effect             */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define OV2640\_BLACK\_WHITE\_BW\_NEGATIVE  0x58   }\textcolor{comment}{/* BW and Negative effect      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define OV2640\_BLACK\_WHITE\_NORMAL       0x00   }\textcolor{comment}{/* Normal effect               */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define OV2640\_CONTRAST\_LEVEL0          0x3418 }\textcolor{comment}{/* Contrast level -\/2           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define OV2640\_CONTRAST\_LEVEL1          0x2A1C }\textcolor{comment}{/* Contrast level -\/2           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define OV2640\_CONTRAST\_LEVEL2          0x2020 }\textcolor{comment}{/* Contrast level -\/2           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define OV2640\_CONTRAST\_LEVEL3          0x1624 }\textcolor{comment}{/* Contrast level -\/2           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define OV2640\_CONTRAST\_LEVEL4          0x0C28 }\textcolor{comment}{/* Contrast level -\/2           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define OV2640\_COLOR\_EFFECT\_ANTIQUE     0xA640 }\textcolor{comment}{/* Antique effect              */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define OV2640\_COLOR\_EFFECT\_BLUE        0x40A0 }\textcolor{comment}{/* Blue effect                 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define OV2640\_COLOR\_EFFECT\_GREEN       0x4040 }\textcolor{comment}{/* Green effect                */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define OV2640\_COLOR\_EFFECT\_RED         0xC040 }\textcolor{comment}{/* Red effect                  */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{195 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___o_v2640___exported___functions_ga4f4e3d4382932ad47f2c30e2461a8355}{ov2640\_Init}}(uint16\_t DeviceAddr, uint32\_t resolution);}
+\DoxyCodeLine{196 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___o_v2640___exported___functions_ga942828d9066961933f178394521e95cf}{ov2640\_Config}}(uint16\_t DeviceAddr, uint32\_t feature, uint32\_t value, uint32\_t BR\_value);}
+\DoxyCodeLine{197 uint16\_t \mbox{\hyperlink{group___o_v2640___exported___functions_ga9e355ae413c34af76e774adca3c9985e}{ov2640\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 \textcolor{keywordtype}{void}     CAMERA\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{200 \textcolor{keywordtype}{void}     CAMERA\_IO\_Write(uint8\_t addr, uint8\_t reg, uint8\_t value);}
+\DoxyCodeLine{201 uint8\_t  CAMERA\_IO\_Read(uint8\_t addr, uint8\_t reg);}
+\DoxyCodeLine{202 \textcolor{keywordtype}{void}     CAMERA\_Delay(uint32\_t delay);}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 \textcolor{comment}{/* CAMERA driver structure */}}
+\DoxyCodeLine{205 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\_DrvTypeDef}}   ov2640\_drv;}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{210 \}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_OV2640\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{226 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,142 @@
+\hypertarget{l3gd20_8h_source}{}\doxysection{l3gd20.\+h}
+\label{l3gd20_8h_source}\index{Drivers/BSP/Components/l3gd20/l3gd20.h@{Drivers/BSP/Components/l3gd20/l3gd20.h}}
+\mbox{\hyperlink{l3gd20_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_L3GD20\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_L3GD20\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/gyro.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{66 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{67 \textcolor{comment}{/*************************** START REGISTER MAPPING  **************************/}}
+\DoxyCodeLine{68 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define L3GD20\_WHO\_AM\_I\_ADDR          0x0F  }\textcolor{comment}{/* device identification register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define L3GD20\_CTRL\_REG1\_ADDR         0x20  }\textcolor{comment}{/* Control register 1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define L3GD20\_CTRL\_REG2\_ADDR         0x21  }\textcolor{comment}{/* Control register 2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define L3GD20\_CTRL\_REG3\_ADDR         0x22  }\textcolor{comment}{/* Control register 3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define L3GD20\_CTRL\_REG4\_ADDR         0x23  }\textcolor{comment}{/* Control register 4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define L3GD20\_CTRL\_REG5\_ADDR         0x24  }\textcolor{comment}{/* Control register 5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define L3GD20\_REFERENCE\_REG\_ADDR     0x25  }\textcolor{comment}{/* Reference register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define L3GD20\_OUT\_TEMP\_ADDR          0x26  }\textcolor{comment}{/* Out temp register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define L3GD20\_STATUS\_REG\_ADDR        0x27  }\textcolor{comment}{/* Status register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define L3GD20\_OUT\_X\_L\_ADDR           0x28  }\textcolor{comment}{/* Output Register X */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define L3GD20\_OUT\_X\_H\_ADDR           0x29  }\textcolor{comment}{/* Output Register X */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define L3GD20\_OUT\_Y\_L\_ADDR           0x2A  }\textcolor{comment}{/* Output Register Y */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define L3GD20\_OUT\_Y\_H\_ADDR           0x2B  }\textcolor{comment}{/* Output Register Y */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define L3GD20\_OUT\_Z\_L\_ADDR           0x2C  }\textcolor{comment}{/* Output Register Z */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define L3GD20\_OUT\_Z\_H\_ADDR           0x2D  }\textcolor{comment}{/* Output Register Z */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define L3GD20\_FIFO\_CTRL\_REG\_ADDR     0x2E  }\textcolor{comment}{/* Fifo control Register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define L3GD20\_FIFO\_SRC\_REG\_ADDR      0x2F  }\textcolor{comment}{/* Fifo src Register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define L3GD20\_INT1\_CFG\_ADDR          0x30  }\textcolor{comment}{/* Interrupt 1 configuration Register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define L3GD20\_INT1\_SRC\_ADDR          0x31  }\textcolor{comment}{/* Interrupt 1 source Register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define L3GD20\_INT1\_TSH\_XH\_ADDR       0x32  }\textcolor{comment}{/* Interrupt 1 Threshold X register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define L3GD20\_INT1\_TSH\_XL\_ADDR       0x33  }\textcolor{comment}{/* Interrupt 1 Threshold X register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define L3GD20\_INT1\_TSH\_YH\_ADDR       0x34  }\textcolor{comment}{/* Interrupt 1 Threshold Y register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define L3GD20\_INT1\_TSH\_YL\_ADDR       0x35  }\textcolor{comment}{/* Interrupt 1 Threshold Y register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define L3GD20\_INT1\_TSH\_ZH\_ADDR       0x36  }\textcolor{comment}{/* Interrupt 1 Threshold Z register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define L3GD20\_INT1\_TSH\_ZL\_ADDR       0x37  }\textcolor{comment}{/* Interrupt 1 Threshold Z register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define L3GD20\_INT1\_DURATION\_ADDR     0x38  }\textcolor{comment}{/* Interrupt 1 DURATION register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{98 \textcolor{comment}{/**************************** END REGISTER MAPPING  ***************************/}}
+\DoxyCodeLine{99 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define I\_AM\_L3GD20                 ((uint8\_t)0xD4)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define I\_AM\_L3GD20\_TR              ((uint8\_t)0xD5)}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define L3GD20\_MODE\_POWERDOWN       ((uint8\_t)0x00)}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define L3GD20\_MODE\_ACTIVE          ((uint8\_t)0x08)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define L3GD20\_OUTPUT\_DATARATE\_1    ((uint8\_t)0x00)}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define L3GD20\_OUTPUT\_DATARATE\_2    ((uint8\_t)0x40)}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define L3GD20\_OUTPUT\_DATARATE\_3    ((uint8\_t)0x80)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define L3GD20\_OUTPUT\_DATARATE\_4    ((uint8\_t)0xC0)}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define L3GD20\_X\_ENABLE            ((uint8\_t)0x02)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define L3GD20\_Y\_ENABLE            ((uint8\_t)0x01)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define L3GD20\_Z\_ENABLE            ((uint8\_t)0x04)}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define L3GD20\_AXES\_ENABLE         ((uint8\_t)0x07)}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define L3GD20\_AXES\_DISABLE        ((uint8\_t)0x00)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define L3GD20\_BANDWIDTH\_1         ((uint8\_t)0x00)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define L3GD20\_BANDWIDTH\_2         ((uint8\_t)0x10)}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define L3GD20\_BANDWIDTH\_3         ((uint8\_t)0x20)}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define L3GD20\_BANDWIDTH\_4         ((uint8\_t)0x30)}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define L3GD20\_FULLSCALE\_250       ((uint8\_t)0x00)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define L3GD20\_FULLSCALE\_500       ((uint8\_t)0x10)}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define L3GD20\_FULLSCALE\_2000      ((uint8\_t)0x20) }}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define L3GD20\_FULLSCALE\_SELECTION ((uint8\_t)0x30)}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define L3GD20\_SENSITIVITY\_250DPS  ((float)8.75f)         }}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define L3GD20\_SENSITIVITY\_500DPS  ((float)17.50f)        }}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define L3GD20\_SENSITIVITY\_2000DPS ((float)70.00f)        }}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define L3GD20\_BlockDataUpdate\_Continous   ((uint8\_t)0x00)}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define L3GD20\_BlockDataUpdate\_Single      ((uint8\_t)0x80)}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define L3GD20\_BLE\_LSB                     ((uint8\_t)0x00)}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define L3GD20\_BLE\_MSB                     ((uint8\_t)0x40)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define L3GD20\_HIGHPASSFILTER\_DISABLE      ((uint8\_t)0x00)}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define L3GD20\_HIGHPASSFILTER\_ENABLE         ((uint8\_t)0x10)}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define L3GD20\_INT1                        ((uint8\_t)0x00)}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define L3GD20\_INT2                        ((uint8\_t)0x01)}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define L3GD20\_INT1INTERRUPT\_DISABLE       ((uint8\_t)0x00)}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define L3GD20\_INT1INTERRUPT\_ENABLE        ((uint8\_t)0x80)}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define L3GD20\_INT2INTERRUPT\_DISABLE       ((uint8\_t)0x00)}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define L3GD20\_INT2INTERRUPT\_ENABLE        ((uint8\_t)0x08)}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define L3GD20\_INT1INTERRUPT\_LOW\_EDGE      ((uint8\_t)0x20)}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define L3GD20\_INT1INTERRUPT\_HIGH\_EDGE     ((uint8\_t)0x00)}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define L3GD20\_BOOT\_NORMALMODE             ((uint8\_t)0x00)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define L3GD20\_BOOT\_REBOOTMEMORY           ((uint8\_t)0x80)}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define L3GD20\_HPM\_NORMAL\_MODE\_RES         ((uint8\_t)0x00)}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#define L3GD20\_HPM\_REF\_SIGNAL              ((uint8\_t)0x10)}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define L3GD20\_HPM\_NORMAL\_MODE             ((uint8\_t)0x20)}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define L3GD20\_HPM\_AUTORESET\_INT           ((uint8\_t)0x30)}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_0              0x00}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_1              0x01}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_2              0x02}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_3              0x03}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_4              0x04}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_5              0x05}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_6              0x06}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_7              0x07}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_8              0x08}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define L3GD20\_HPFCF\_9              0x09}}
+\DoxyCodeLine{275 \textcolor{comment}{/* Sensor Configuration Functions */} }
+\DoxyCodeLine{276 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga5a10b60a0792acf699a453c30d32d0ca}{L3GD20\_Init}}(uint16\_t InitStruct);}
+\DoxyCodeLine{277 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_gacf1c9cc25f77fd1a7a07c6b77c938214}{L3GD20\_DeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{278 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_gabefeeace5d270cca5c601d15091b5917}{L3GD20\_LowPower}}(uint16\_t InitStruct);}
+\DoxyCodeLine{279 uint8\_t \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga43b1b3bd96148e3ac6ace37eb2771e09}{L3GD20\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{280 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_gab6f3c47bfc8bb79e1a8a888ea8400836}{L3GD20\_RebootCmd}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{282 \textcolor{comment}{/* Interrupt Configuration Functions */}}
+\DoxyCodeLine{283 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga533b417edb447229edf00c93e76771d5}{L3GD20\_INT1InterruptConfig}}(uint16\_t Int1Config);}
+\DoxyCodeLine{284 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga73b25a609baa8830b6cee82bcff192fd}{L3GD20\_EnableIT}}(uint8\_t IntSel);}
+\DoxyCodeLine{285 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga485319a1048bae6cf207f4ee4a23df0f}{L3GD20\_DisableIT}}(uint8\_t IntSel);}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287 \textcolor{comment}{/* High Pass Filter Configuration Functions */}}
+\DoxyCodeLine{288 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga33868677ad167482d66db18cfc4bf412}{L3GD20\_FilterConfig}}(uint8\_t FilterStruct);}
+\DoxyCodeLine{289 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga9845f29a2574d93eeb258c8db14aba3d}{L3GD20\_FilterCmd}}(uint8\_t HighPassFilterState);}
+\DoxyCodeLine{290 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_gadf5d9d3d6ac7848f144f8988da81a6e9}{L3GD20\_ReadXYZAngRate}}(\textcolor{keywordtype}{float} *pfData);}
+\DoxyCodeLine{291 uint8\_t \mbox{\hyperlink{group___l3_g_d20___exported___functions_gac434618a7381e68e5966f1309ffeba8d}{L3GD20\_GetDataStatus}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293 \textcolor{comment}{/* Gyroscope IO functions */}}
+\DoxyCodeLine{294 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga3bd44afb6dbbc38ef41b38387f291613}{GYRO\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{295 \textcolor{keywordtype}{void}    GYRO\_IO\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{296 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga91f7211b833b9428166a7b4389fdba2e}{GYRO\_IO\_Write}}(uint8\_t *pBuffer, uint8\_t WriteAddr, uint16\_t NumByteToWrite);}
+\DoxyCodeLine{297 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gae80f89593d6107eaf24fd82e38d75f85}{GYRO\_IO\_Read}}(uint8\_t *pBuffer, uint8\_t ReadAddr, uint16\_t NumByteToRead);}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299 \textcolor{comment}{/* Gyroscope driver structure */}}
+\DoxyCodeLine{300 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_g_y_r_o___drv_type_def}{GYRO\_DrvTypeDef}} L3gd20Drv;}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{319   \}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{321   }
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_L3GD20\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/} }
+
+\end{DoxyCode}

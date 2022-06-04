@@ -1,0 +1,322 @@
+\hypertarget{group___w_m8994___exported___functions}{}\doxysection{WM8994\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___w_m8994___exported___functions}\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga3480b4e36772987950257bde02653721}{wm8994\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t Output\+Input\+Device, uint8\+\_\+t Volume, uint32\+\_\+t Audio\+Freq)
+\begin{DoxyCompactList}\small\item\em Initializes the audio codec and the control interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___w_m8994___exported___functions_ga4b75806a89e7ce5dd5643b1815ab657d}{wm8994\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Deinitializes the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga95f7d0e82e6f6678e1c9533a40d9410a}{wm8994\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Get the WM8994 ID. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_gad1233e28686f9bf6e0c1eab0487b6811}{wm8994\+\_\+\+Play}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$p\+Buffer, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Start the audio Codec play feature. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga7dc61f1e194ac0dddfd2433aad18ffbd}{wm8994\+\_\+\+Pause}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Pauses playing on the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga4ff0d65bb8394b7307482d8292d9d1bf}{wm8994\+\_\+\+Resume}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Resumes playing on the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_gabf8add07192650e9d187753199fc78e0}{wm8994\+\_\+\+Stop}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t Cmd)
+\begin{DoxyCompactList}\small\item\em Stops audio Codec playing. It powers down the codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga3f3e2ff73924bcb5de7ed9d1de056b3a}{wm8994\+\_\+\+Set\+Volume}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Volume)
+\begin{DoxyCompactList}\small\item\em Sets higher or lower the codec volume level. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga2f3d8a46806eb63a023bf6bb4f7821e3}{wm8994\+\_\+\+Set\+Mute}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t Cmd)
+\begin{DoxyCompactList}\small\item\em Enables or disables the mute feature on the audio codec. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga74e3c3342bce3e9bb871ca13125a263c}{wm8994\+\_\+\+Set\+Output\+Mode}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Output)
+\begin{DoxyCompactList}\small\item\em Switch dynamically (while audio file is played) the output target (speaker or headphone). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga11da6d32fb9b17e8f10e6e466116d416}{wm8994\+\_\+\+Set\+Frequency}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t Audio\+Freq)
+\begin{DoxyCompactList}\small\item\em Sets new frequency. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___w_m8994___exported___functions_ga5cce7c53a68c7643ed1316868ec4edef}{wm8994\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Resets wm8994 registers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___w_m8994___exported___functions_gace44c34a627a0fb28c61366b9ca80b78}\label{group___w_m8994___exported___functions_gace44c34a627a0fb28c61366b9ca80b78}} 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga06ed3f7f32df17d8b5099754dd81d6b3}\label{group___w_m8994___exported___functions_ga06ed3f7f32df17d8b5099754dd81d6b3}} 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+De\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___w_m8994___exported___functions_gabd465ebcb314c8dba97102702b6b8518}\label{group___w_m8994___exported___functions_gabd465ebcb314c8dba97102702b6b8518}} 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Write} (uint8\+\_\+t Addr, uint16\+\_\+t Reg, uint16\+\_\+t Value)
+\item 
+\mbox{\Hypertarget{group___w_m8994___exported___functions_gabf6348f7a95184d2868b9c15fc7375d2}\label{group___w_m8994___exported___functions_gabf6348f7a95184d2868b9c15fc7375d2}} 
+uint8\+\_\+t {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Read} (uint8\+\_\+t Addr, uint16\+\_\+t Reg)
+\item 
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga4e980e10c63db804c3226e0af44715b2}\label{group___w_m8994___exported___functions_ga4e980e10c63db804c3226e0af44715b2}} 
+void {\bfseries AUDIO\+\_\+\+IO\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga02cdf3607d911abf01bb66af3f0d8a35}\label{group___w_m8994___exported___functions_ga02cdf3607d911abf01bb66af3f0d8a35}} 
+\mbox{\hyperlink{struct_a_u_d_i_o___drv_type_def}{AUDIO\+\_\+\+Drv\+Type\+Def}} {\bfseries wm8994\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga4b75806a89e7ce5dd5643b1815ab657d}\label{group___w_m8994___exported___functions_ga4b75806a89e7ce5dd5643b1815ab657d}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_DeInit@{wm8994\_DeInit}}
+\index{wm8994\_DeInit@{wm8994\_DeInit}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_DeInit()}{wm8994\_DeInit()}}
+{\footnotesize\ttfamily void wm8994\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Deinitializes the audio codec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga3480b4e36772987950257bde02653721}\label{group___w_m8994___exported___functions_ga3480b4e36772987950257bde02653721}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_Init@{wm8994\_Init}}
+\index{wm8994\_Init@{wm8994\_Init}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_Init()}{wm8994\_Init()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint16\+\_\+t}]{Output\+Input\+Device,  }\item[{uint8\+\_\+t}]{Volume,  }\item[{uint32\+\_\+t}]{Audio\+Freq }\end{DoxyParamCaption})}
+
+
+
+Initializes the audio codec and the control interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Output\+Input\+Device} & can be OUTPUT\+\_\+\+DEVICE\+\_\+\+SPEAKER, OUTPUT\+\_\+\+DEVICE\+\_\+\+HEADPHONE, OUTPUT\+\_\+\+DEVICE\+\_\+\+BOTH, OUTPUT\+\_\+\+DEVICE\+\_\+\+AUTO, INPUT\+\_\+\+DEVICE\+\_\+\+DIGITAL\+\_\+\+MICROPHONE\+\_\+1, INPUT\+\_\+\+DEVICE\+\_\+\+DIGITAL\+\_\+\+MICROPHONE\+\_\+2, INPUT\+\_\+\+DEVICE\+\_\+\+DIGITAL\+\_\+\+MIC1\+\_\+\+MIC2, INPUT\+\_\+\+DEVICE\+\_\+\+INPUT\+\_\+\+LINE\+\_\+1 or INPUT\+\_\+\+DEVICE\+\_\+\+INPUT\+\_\+\+LINE\+\_\+2. \\
+\hline
+{\em Volume} & Initial volume level (from 0 (Mute) to 100 (Max)) \\
+\hline
+{\em Audio\+Freq} & Audio Frequency \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga7dc61f1e194ac0dddfd2433aad18ffbd}\label{group___w_m8994___exported___functions_ga7dc61f1e194ac0dddfd2433aad18ffbd}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_Pause@{wm8994\_Pause}}
+\index{wm8994\_Pause@{wm8994\_Pause}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_Pause()}{wm8994\_Pause()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Pause (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Pauses playing on the audio codec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_gad1233e28686f9bf6e0c1eab0487b6811}\label{group___w_m8994___exported___functions_gad1233e28686f9bf6e0c1eab0487b6811}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_Play@{wm8994\_Play}}
+\index{wm8994\_Play@{wm8994\_Play}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_Play()}{wm8994\_Play()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Play (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint16\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+
+
+Start the audio Codec play feature. 
+
+\begin{DoxyNote}{Note}
+For this codec no Play options are required. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga95f7d0e82e6f6678e1c9533a40d9410a}\label{group___w_m8994___exported___functions_ga95f7d0e82e6f6678e1c9533a40d9410a}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_ReadID@{wm8994\_ReadID}}
+\index{wm8994\_ReadID@{wm8994\_ReadID}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_ReadID()}{wm8994\_ReadID()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Get the WM8994 ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & WM8994 ID \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga5cce7c53a68c7643ed1316868ec4edef}\label{group___w_m8994___exported___functions_ga5cce7c53a68c7643ed1316868ec4edef}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_Reset@{wm8994\_Reset}}
+\index{wm8994\_Reset@{wm8994\_Reset}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_Reset()}{wm8994\_Reset()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Resets wm8994 registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga4ff0d65bb8394b7307482d8292d9d1bf}\label{group___w_m8994___exported___functions_ga4ff0d65bb8394b7307482d8292d9d1bf}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_Resume@{wm8994\_Resume}}
+\index{wm8994\_Resume@{wm8994\_Resume}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_Resume()}{wm8994\_Resume()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Resume (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Resumes playing on the audio codec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga11da6d32fb9b17e8f10e6e466116d416}\label{group___w_m8994___exported___functions_ga11da6d32fb9b17e8f10e6e466116d416}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_SetFrequency@{wm8994\_SetFrequency}}
+\index{wm8994\_SetFrequency@{wm8994\_SetFrequency}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_SetFrequency()}{wm8994\_SetFrequency()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Set\+Frequency (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{Audio\+Freq }\end{DoxyParamCaption})}
+
+
+
+Sets new frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Audio\+Freq} & Audio frequency used to play the audio stream. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga2f3d8a46806eb63a023bf6bb4f7821e3}\label{group___w_m8994___exported___functions_ga2f3d8a46806eb63a023bf6bb4f7821e3}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_SetMute@{wm8994\_SetMute}}
+\index{wm8994\_SetMute@{wm8994\_SetMute}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_SetMute()}{wm8994\_SetMute()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Set\+Mute (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{Cmd }\end{DoxyParamCaption})}
+
+
+
+Enables or disables the mute feature on the audio codec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Cmd} & AUDIO\+\_\+\+MUTE\+\_\+\+ON to enable the mute or AUDIO\+\_\+\+MUTE\+\_\+\+OFF to disable the mute mode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga74e3c3342bce3e9bb871ca13125a263c}\label{group___w_m8994___exported___functions_ga74e3c3342bce3e9bb871ca13125a263c}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_SetOutputMode@{wm8994\_SetOutputMode}}
+\index{wm8994\_SetOutputMode@{wm8994\_SetOutputMode}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_SetOutputMode()}{wm8994\_SetOutputMode()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Set\+Output\+Mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Output }\end{DoxyParamCaption})}
+
+
+
+Switch dynamically (while audio file is played) the output target (speaker or headphone). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Output} & specifies the audio output target\+: OUTPUT\+\_\+\+DEVICE\+\_\+\+SPEAKER, OUTPUT\+\_\+\+DEVICE\+\_\+\+HEADPHONE, OUTPUT\+\_\+\+DEVICE\+\_\+\+BOTH or OUTPUT\+\_\+\+DEVICE\+\_\+\+AUTO \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_ga3f3e2ff73924bcb5de7ed9d1de056b3a}\label{group___w_m8994___exported___functions_ga3f3e2ff73924bcb5de7ed9d1de056b3a}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_SetVolume@{wm8994\_SetVolume}}
+\index{wm8994\_SetVolume@{wm8994\_SetVolume}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_SetVolume()}{wm8994\_SetVolume()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Set\+Volume (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Volume }\end{DoxyParamCaption})}
+
+
+
+Sets higher or lower the codec volume level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Volume} & a byte value from 0 to 255 (refer to codec registers description for more details). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_m8994___exported___functions_gabf8add07192650e9d187753199fc78e0}\label{group___w_m8994___exported___functions_gabf8add07192650e9d187753199fc78e0}} 
+\index{WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}!wm8994\_Stop@{wm8994\_Stop}}
+\index{wm8994\_Stop@{wm8994\_Stop}!WM8994\_Exported\_Functions@{WM8994\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{wm8994\_Stop()}{wm8994\_Stop()}}
+{\footnotesize\ttfamily uint32\+\_\+t wm8994\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{Codec\+Pdwn\+Mode }\end{DoxyParamCaption})}
+
+
+
+Stops audio Codec playing. It powers down the codec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Codec\+Pdwn\+Mode} & selects the power down mode.
+\begin{DoxyItemize}
+\item CODEC\+\_\+\+PDWN\+\_\+\+SW\+: only mutes the audio codec. When resuming from this mode the codec keeps the previous initialization (no need to re-\/\+Initialize the codec registers).
+\item CODEC\+\_\+\+PDWN\+\_\+\+HW\+: Physically power down the codec. When resuming from this mode, the codec is set to default configuration (user should re-\/\+Initialize the codec in order to play again the audio stream). 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if correct communication, else wrong communication \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,108 @@
+\hypertarget{stm32f429i__discovery_8c}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery.c File Reference}
+\label{stm32f429i__discovery_8c}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery.c@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery.c}}
+
+
+This file provides set of firmware functions to manage Leds and push-\/button available on STM32\+F429\+I-\/\+Discovery Kit from STMicroelectronics.  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___defines_ga46da4f9bfb6e2659496c2663d2c170a0}{\+\_\+\+\_\+\+STM32\+F429\+I\+\_\+\+DISCO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+MAIN}}~(0x02)
+\begin{DoxyCompactList}\small\item\em STM32\+F429I DISCO BSP Driver version number V2.\+1.\+6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___defines_gaba54acd70e1c3ec32bc9a75c37449e4e}{\+\_\+\+\_\+\+STM32\+F429\+I\+\_\+\+DISCO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+SUB1}}~(0x01)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___defines_ga8b6077fef9f799f4447f09f21be6e35b}{\+\_\+\+\_\+\+STM32\+F429\+I\+\_\+\+DISCO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+SUB2}}~(0x06)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___defines_ga85cf260a11607754f35cc43ab1647844}{\+\_\+\+\_\+\+STM32\+F429\+I\+\_\+\+DISCO\+\_\+\+BSP\+\_\+\+VERSION\+\_\+\+RC}}~(0x00)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___defines_ga373a8c6bd30d3b87c313e05bf5ae98a1}{\+\_\+\+\_\+\+STM32\+F429\+I\+\_\+\+DISCO\+\_\+\+BSP\+\_\+\+VERSION}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the LCD\+\_\+\+SPI interface. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Data} (uint16\+\_\+t Reg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes register value. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Reg} (uint8\+\_\+t Reg)
+\begin{DoxyCompactList}\small\item\em Writes register address. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_ga10fd152b0ec2326173d80e922d8635fc}{LCD\+\_\+\+IO\+\_\+\+Read\+Data}} (uint16\+\_\+t Reg\+Value, uint8\+\_\+t Read\+Size)
+\begin{DoxyCompactList}\small\item\em Reads register value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_ga884a2c8fc8d4239acadc649cb60c0a15}{LCD\+\_\+\+Delay}} (uint32\+\_\+t Delay)
+\begin{DoxyCompactList}\small\item\em Wait for loop in ms. \end{DoxyCompactList}\item 
+void {\bfseries IOE\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Initialization. \end{DoxyCompactList}\item 
+void {\bfseries IOE\+\_\+\+ITConfig} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_gafe6384ff1973503e54b8daa35470b0ec}{IOE\+\_\+\+Delay}} (uint32\+\_\+t Delay)
+\begin{DoxyCompactList}\small\item\em IOE Delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_gac9aaccafd33dc8ce45ee7bce22ff361e}{IOE\+\_\+\+Write}} (uint8\+\_\+t Addr, uint8\+\_\+t Reg, uint8\+\_\+t Value)
+\begin{DoxyCompactList}\small\item\em IOE Writes single data operation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_ga1fb4704e1fedb443110f4a68d75c6150}{IOE\+\_\+\+Read}} (uint8\+\_\+t Addr, uint8\+\_\+t Reg)
+\begin{DoxyCompactList}\small\item\em IOE Reads single data. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_ga8c1a6f29316f73b7f067e815f7ccca36}{IOE\+\_\+\+Read\+Multiple}} (uint8\+\_\+t Addr, uint8\+\_\+t Reg, uint8\+\_\+t $\ast$p\+Buffer, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em IOE Reads multiple data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_ga146810f6a1637674f01dcae99bb7cb82}{IOE\+\_\+\+Write\+Multiple}} (uint8\+\_\+t Addr, uint8\+\_\+t Reg, uint8\+\_\+t $\ast$p\+Buffer, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em IOE Writes multiple data. \end{DoxyCompactList}\item 
+void {\bfseries GYRO\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the Gyroscope SPI interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_ga91f7211b833b9428166a7b4389fdba2e}{GYRO\+\_\+\+IO\+\_\+\+Write}} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Write\+Addr, uint16\+\_\+t Num\+Byte\+To\+Write)
+\begin{DoxyCompactList}\small\item\em Writes one byte to the Gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___function_prototypes_gae80f89593d6107eaf24fd82e38d75f85}{GYRO\+\_\+\+IO\+\_\+\+Read}} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Read\+Addr, uint16\+\_\+t Num\+Byte\+To\+Read)
+\begin{DoxyCompactList}\small\item\em Reads a block of data from the Gyroscope. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga65d13608f7010a8068614154cb142cd6}{BSP\+\_\+\+Get\+Version}} (void)
+\begin{DoxyCompactList}\small\item\em This method returns the STM32\+F429I DISCO BSP Driver revision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gab58a4f16a476a53653c5c400e3bed158}{BSP\+\_\+\+LED\+\_\+\+Init}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Configures LED GPIO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaee9c16b16384834c69efabf58f423d6f}{BSP\+\_\+\+LED\+\_\+\+On}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED On. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gaef268680154ca15c45066d64d41f9467}{BSP\+\_\+\+LED\+\_\+\+Off}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED Off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga1b9eabba7d498f41d6f16587ec0f9732}{BSP\+\_\+\+LED\+\_\+\+Toggle}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Toggles the selected LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}{BSP\+\_\+\+PB\+\_\+\+Init}} (Button\+\_\+\+Type\+Def Button, Button\+Mode\+\_\+\+Type\+Def Button\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures Button GPIO and EXTI Line. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}{BSP\+\_\+\+PB\+\_\+\+Get\+State}} (Button\+\_\+\+Type\+Def Button)
+\begin{DoxyCompactList}\small\item\em Returns the selected Button state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_g_p_i_o___type_def}{GPIO\+\_\+\+Type\+Def}} $\ast$ \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___variables_gadfddcc182c40163aaa7b3c7f36e42ed9}{GPIO\+\_\+\+PORT}} \mbox{[}LEDn\mbox{]}
+\item 
+const uint16\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___variables_ga7f675ed2b6edb74e2d8406f8a4a677f5}{GPIO\+\_\+\+PIN}} \mbox{[}LEDn\mbox{]}
+\item 
+\mbox{\hyperlink{struct_g_p_i_o___type_def}{GPIO\+\_\+\+Type\+Def}} $\ast$ {\bfseries BUTTON\+\_\+\+PORT} \mbox{[}BUTTONn\mbox{]} = \{KEY\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+PORT\}
+\item 
+const uint16\+\_\+t {\bfseries BUTTON\+\_\+\+PIN} \mbox{[}BUTTONn\mbox{]} = \{\mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___b_u_t_t_o_n_ga5c260a4b4e26836dc3a9b6f15d317421}{KEY\+\_\+\+BUTTON\+\_\+\+PIN}}\}
+\item 
+const uint8\+\_\+t {\bfseries BUTTON\+\_\+\+IRQn} \mbox{[}BUTTONn\mbox{]} = \{KEY\+\_\+\+BUTTON\+\_\+\+EXTI\+\_\+\+IRQn\}
+\item 
+uint32\+\_\+t {\bfseries I2cx\+Timeout} = I2\+Cx\+\_\+\+TIMEOUT\+\_\+\+MAX
+\item 
+uint32\+\_\+t {\bfseries Spix\+Timeout} = SPIx\+\_\+\+TIMEOUT\+\_\+\+MAX
+\item 
+\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} {\bfseries I2c\+Handle}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides set of firmware functions to manage Leds and push-\/button available on STM32\+F429\+I-\/\+Discovery Kit from STMicroelectronics. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

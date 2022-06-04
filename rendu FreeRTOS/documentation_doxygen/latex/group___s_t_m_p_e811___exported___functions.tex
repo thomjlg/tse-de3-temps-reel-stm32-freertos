@@ -1,0 +1,997 @@
+\hypertarget{group___s_t_m_p_e811___exported___functions}{}\doxysection{STMPE811\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___s_t_m_p_e811___exported___functions}\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga5feafdd84c8af0d2384509425422d9b1}{stmpe811\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em STMPE811 Control functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga40d34415bd52b78096fa6c9b9bb92126}{stmpe811\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the stmpe811 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gabb9c2cd405cc42c773d04de65862bc2c}{stmpe811\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the stmpe811 IO Expander device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga39df0fdc87be8229ddd44e4c7297a774}{stmpe811\+\_\+\+Enable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga54bdd8669c2d73fde1939fd15d28c3a2}{stmpe811\+\_\+\+Disable\+Global\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the Global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga82f479a7684adf9c8f32972b3ccb8daf}{stmpe811\+\_\+\+Enable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gaa72900e194641921649229f22ad349ec}{stmpe811\+\_\+\+Disable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga5a70edb897af292cf1b64db901f09fbc}{stmpe811\+\_\+\+Set\+ITPolarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga346c425ef8c88c868591eb97f97aa298}{stmpe811\+\_\+\+Set\+ITType}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Type)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Type. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga586f13e10186147660e8b09ca0574a17}{stmpe811\+\_\+\+Global\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Check the selected Global interrupt source pending bit. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gac3b8ba5f65a98bdd9e9344a5c6d80589}{stmpe811\+\_\+\+Read\+GITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Return the Global interrupts status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gadf6fcaf4bcd765c0e5c9f96781cbbbf9}{stmpe811\+\_\+\+Clear\+Global\+IT}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Clear the selected Global interrupt pending bit(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga60a6a887200a980d09b703c627c8f5f9}{stmpe811\+\_\+\+IO\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em STMPE811 IO functionalities functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga40c9ce3dd13c6b0e657de662fb35d9ce}{stmpe811\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gaaa0cf2f844c6d262b9fce9a2cc6fd902}{stmpe811\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em Initialize the selected IO pin direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gabc0ce22f7579972aa15251a20ec7e3cc}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+AF}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable the AF for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga1529e270bd11bca071743a260741500f}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+AF}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable the AF for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga8f7f014edbe93fe0b95597ba42bfb928}{stmpe811\+\_\+\+IO\+\_\+\+Set\+Edge\+Mode}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Edge)
+\begin{DoxyCompactList}\small\item\em Configure the Edge for which a transition is detectable for the selected pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga4b75f623e16115387ca332c8e6a23378}{stmpe811\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Write a new IO pin state. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga1f838b67ba27809406633ca90f0ef6bb}{stmpe811\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Return the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gabca64e4661421c71506e17dedd52ba65}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga022afc5cec314919ae18e18b19ed6236}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga95f1f39fa2edd3d5b6ed32ec777a73da}{stmpe811\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga8b7fcc635c1677d87dc2fbc71932b588}{stmpe811\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga641547eeeb366b88eaa00cc25b984025}{stmpe811\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Check the status of the selected IO interrupt pending bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga6ab7ad96a8c53b799c893925471e3811}{stmpe811\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear the selected IO interrupt pending bit(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga6c2784b727e123850d09a884027d1521}{stmpe811\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em STMPE811 Touch screen functionalities functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga4e475a85fca0c46acdce3fc310dec86c}{stmpe811\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touch detected or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gab242655d3918e03e289140fcd49e9776}{stmpe811\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gafd18353ba1e835324c98b7f7c03244f8}{stmpe811\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gafba8e0baf0b89f5ea9b4cc1940468383}{stmpe811\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gad34fc9bbe11dca105a81374145155448}{stmpe811\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga974ece91b797f5fb28e76d2d192932a5}{stmpe811\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga20cd09e59bac7284d1342b6741733593}\label{group___s_t_m_p_e811___exported___functions_ga20cd09e59bac7284d1342b6741733593}} 
+void {\bfseries IOE\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gac33b368855363c8f6b05b7218bad4f7c}\label{group___s_t_m_p_e811___exported___functions_gac33b368855363c8f6b05b7218bad4f7c}} 
+void {\bfseries IOE\+\_\+\+ITConfig} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em IOE Delay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_ga6804257e10475b06cafd813afce0cf49}{IOE\+\_\+\+Write}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em IOE Writes single data operation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\+\_\+\+Read}} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em IOE Reads single data. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m_p_e811___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\+\_\+\+Read\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Reads multiple data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga8a8c3b1d0c9b85335bdb74c1cfc6a041}\label{group___s_t_m_p_e811___exported___functions_ga8a8c3b1d0c9b85335bdb74c1cfc6a041}} 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} {\bfseries stmpe811\+\_\+ts\+\_\+drv}
+\item 
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga01a31abe80ee484688566c0be1504d5b}\label{group___s_t_m_p_e811___exported___functions_ga01a31abe80ee484688566c0be1504d5b}} 
+\mbox{\hyperlink{struct_i_o___drv_type_def}{IO\+\_\+\+Drv\+Type\+Def}} {\bfseries stmpe811\+\_\+io\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gace5ebb1b3b098cb036585c47842bf935}\label{group___s_t_m_p_e811___exported___functions_gace5ebb1b3b098cb036585c47842bf935}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!IOE\_Delay@{IOE\_Delay}}
+\index{IOE\_Delay@{IOE\_Delay}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Delay()}{IOE\_Delay()}}
+{\footnotesize\ttfamily void IOE\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+IOE Delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & in ms \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}\label{group___s_t_m_p_e811___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!IOE\_Read@{IOE\_Read}}
+\index{IOE\_Read@{IOE\_Read}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Read()}{IOE\_Read()}}
+{\footnotesize\ttfamily uint8\+\_\+t IOE\+\_\+\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg }\end{DoxyParamCaption})}
+
+
+
+IOE Reads single data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & read data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}\label{group___s_t_m_p_e811___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!IOE\_ReadMultiple@{IOE\_ReadMultiple}}
+\index{IOE\_ReadMultiple@{IOE\_ReadMultiple}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_ReadMultiple()}{IOE\_ReadMultiple()}}
+{\footnotesize\ttfamily uint16\+\_\+t IOE\+\_\+\+Read\+Multiple (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+IOE Reads multiple data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+{\em p\+Buffer} & pointer to data buffer \\
+\hline
+{\em Length} & length of the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if no problems to read multiple data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga6804257e10475b06cafd813afce0cf49}\label{group___s_t_m_p_e811___exported___functions_ga6804257e10475b06cafd813afce0cf49}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!IOE\_Write@{IOE\_Write}}
+\index{IOE\_Write@{IOE\_Write}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Write()}{IOE\_Write()}}
+{\footnotesize\ttfamily void IOE\+\_\+\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t}]{Value }\end{DoxyParamCaption})}
+
+
+
+IOE Writes single data operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+{\em Value} & Data to be written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gadf6fcaf4bcd765c0e5c9f96781cbbbf9}\label{group___s_t_m_p_e811___exported___functions_gadf6fcaf4bcd765c0e5c9f96781cbbbf9}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_ClearGlobalIT@{stmpe811\_ClearGlobalIT}}
+\index{stmpe811\_ClearGlobalIT@{stmpe811\_ClearGlobalIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_ClearGlobalIT()}{stmpe811\_ClearGlobalIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Clear\+Global\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Clear the selected Global interrupt pending bit(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Source} & the Global interrupt source to be cleared, could be any combination of the following values\+: ~\newline
+ \begin{DoxyItemize}
+\item STMPE811\+\_\+\+GIT\+\_\+\+IO\+: IO interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+ADC \+: ADC interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FE \+: Touch Screen Controller FIFO Error interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+FF \+: Touch Screen Controller FIFO Full interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FOV \+: Touch Screen Controller FIFO Overrun interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FTH \+: Touch Screen Controller FIFO Threshold interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+TOUCH \+: Touch Screen Controller Touch Detected interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga54bdd8669c2d73fde1939fd15d28c3a2}\label{group___s_t_m_p_e811___exported___functions_ga54bdd8669c2d73fde1939fd15d28c3a2}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_DisableGlobalIT@{stmpe811\_DisableGlobalIT}}
+\index{stmpe811\_DisableGlobalIT@{stmpe811\_DisableGlobalIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_DisableGlobalIT()}{stmpe811\_DisableGlobalIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Disable\+Global\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Disable the Global interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gaa72900e194641921649229f22ad349ec}\label{group___s_t_m_p_e811___exported___functions_gaa72900e194641921649229f22ad349ec}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_DisableITSource@{stmpe811\_DisableITSource}}
+\index{stmpe811\_DisableITSource@{stmpe811\_DisableITSource}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_DisableITSource()}{stmpe811\_DisableITSource()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Disable\+ITSource (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Disable the interrupt mode for the selected IT source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Source} & The interrupt source to be configured, could be\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+GIT\+\_\+\+IO\+: IO interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+ADC \+: ADC interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FE \+: Touch Screen Controller FIFO Error interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+FF \+: Touch Screen Controller FIFO Full interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FOV \+: Touch Screen Controller FIFO Overrun interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FTH \+: Touch Screen Controller FIFO Threshold interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+TOUCH \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga39df0fdc87be8229ddd44e4c7297a774}\label{group___s_t_m_p_e811___exported___functions_ga39df0fdc87be8229ddd44e4c7297a774}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_EnableGlobalIT@{stmpe811\_EnableGlobalIT}}
+\index{stmpe811\_EnableGlobalIT@{stmpe811\_EnableGlobalIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_EnableGlobalIT()}{stmpe811\_EnableGlobalIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Enable\+Global\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Enable the Global interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga82f479a7684adf9c8f32972b3ccb8daf}\label{group___s_t_m_p_e811___exported___functions_ga82f479a7684adf9c8f32972b3ccb8daf}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_EnableITSource@{stmpe811\_EnableITSource}}
+\index{stmpe811\_EnableITSource@{stmpe811\_EnableITSource}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_EnableITSource()}{stmpe811\_EnableITSource()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Enable\+ITSource (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Enable the interrupt mode for the selected IT source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Source} & The interrupt source to be configured, could be\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+GIT\+\_\+\+IO\+: IO interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+ADC \+: ADC interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FE \+: Touch Screen Controller FIFO Error interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+FF \+: Touch Screen Controller FIFO Full interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FOV \+: Touch Screen Controller FIFO Overrun interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FTH \+: Touch Screen Controller FIFO Threshold interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+TOUCH \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga586f13e10186147660e8b09ca0574a17}\label{group___s_t_m_p_e811___exported___functions_ga586f13e10186147660e8b09ca0574a17}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_GlobalITStatus@{stmpe811\_GlobalITStatus}}
+\index{stmpe811\_GlobalITStatus@{stmpe811\_GlobalITStatus}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_GlobalITStatus()}{stmpe811\_GlobalITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t stmpe811\+\_\+\+Global\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Check the selected Global interrupt source pending bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Source} & the Global interrupt source to be checked, could be\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+GIT\+\_\+\+IO\+: IO interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+ADC \+: ADC interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FE \+: Touch Screen Controller FIFO Error interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+FF \+: Touch Screen Controller FIFO Full interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FOV \+: Touch Screen Controller FIFO Overrun interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FTH \+: Touch Screen Controller FIFO Threshold interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+TOUCH \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & checked Global interrupt source status. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga5feafdd84c8af0d2384509425422d9b1}\label{group___s_t_m_p_e811___exported___functions_ga5feafdd84c8af0d2384509425422d9b1}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_Init@{stmpe811\_Init}}
+\index{stmpe811\_Init@{stmpe811\_Init}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_Init()}{stmpe811\_Init()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+STMPE811 Control functions. 
+
+STMPE811 Control functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga6ab7ad96a8c53b799c893925471e3811}\label{group___s_t_m_p_e811___exported___functions_ga6ab7ad96a8c53b799c893925471e3811}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_ClearIT@{stmpe811\_IO\_ClearIT}}
+\index{stmpe811\_IO\_ClearIT@{stmpe811\_IO\_ClearIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_ClearIT()}{stmpe811\_IO\_ClearIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Clear the selected IO interrupt pending bit(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & the IO interrupt to be cleared, could be\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 7. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga40c9ce3dd13c6b0e657de662fb35d9ce}\label{group___s_t_m_p_e811___exported___functions_ga40c9ce3dd13c6b0e657de662fb35d9ce}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_Config@{stmpe811\_IO\_Config}}
+\index{stmpe811\_IO\_Config@{stmpe811\_IO\_Config}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_Config()}{stmpe811\_IO\_Config()}}
+{\footnotesize\ttfamily uint8\+\_\+t stmpe811\+\_\+\+IO\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{IO\+\_\+\+Mode\+Typedef}]{IO\+\_\+\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configures the IO pin(s) according to IO mode structure value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The output pin to be set or reset. This parameter can be one of the following values\+: ~\newline
+ \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+{\em IO\+\_\+\+Mode} & The IO pin mode to configure, could be one of the following values\+: \begin{DoxyItemize}
+\item IO\+\_\+\+MODE\+\_\+\+INPUT \item IO\+\_\+\+MODE\+\_\+\+OUTPUT \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+EDGE \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING\+\_\+\+EDGE \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+LOW\+\_\+\+LEVEL \item IO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+HIGH\+\_\+\+LEVEL ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if no error, IO\+\_\+\+Mode if error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga1529e270bd11bca071743a260741500f}\label{group___s_t_m_p_e811___exported___functions_ga1529e270bd11bca071743a260741500f}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_DisableAF@{stmpe811\_IO\_DisableAF}}
+\index{stmpe811\_IO\_DisableAF@{stmpe811\_IO\_DisableAF}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_DisableAF()}{stmpe811\_IO\_DisableAF()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Disable\+AF (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Disable the AF for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 7. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga022afc5cec314919ae18e18b19ed6236}\label{group___s_t_m_p_e811___exported___functions_ga022afc5cec314919ae18e18b19ed6236}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_DisableIT@{stmpe811\_IO\_DisableIT}}
+\index{stmpe811\_IO\_DisableIT@{stmpe811\_IO\_DisableIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_DisableIT()}{stmpe811\_IO\_DisableIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Disable the global IO interrupt source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga8b7fcc635c1677d87dc2fbc71932b588}\label{group___s_t_m_p_e811___exported___functions_ga8b7fcc635c1677d87dc2fbc71932b588}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_DisablePinIT@{stmpe811\_IO\_DisablePinIT}}
+\index{stmpe811\_IO\_DisablePinIT@{stmpe811\_IO\_DisablePinIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_DisablePinIT()}{stmpe811\_IO\_DisablePinIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Disable interrupt mode for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO interrupt to be disabled. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gabc0ce22f7579972aa15251a20ec7e3cc}\label{group___s_t_m_p_e811___exported___functions_gabc0ce22f7579972aa15251a20ec7e3cc}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_EnableAF@{stmpe811\_IO\_EnableAF}}
+\index{stmpe811\_IO\_EnableAF@{stmpe811\_IO\_EnableAF}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_EnableAF()}{stmpe811\_IO\_EnableAF()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Enable\+AF (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable the AF for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 7. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gabca64e4661421c71506e17dedd52ba65}\label{group___s_t_m_p_e811___exported___functions_gabca64e4661421c71506e17dedd52ba65}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_EnableIT@{stmpe811\_IO\_EnableIT}}
+\index{stmpe811\_IO\_EnableIT@{stmpe811\_IO\_EnableIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_EnableIT()}{stmpe811\_IO\_EnableIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Enable the global IO interrupt source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga95f1f39fa2edd3d5b6ed32ec777a73da}\label{group___s_t_m_p_e811___exported___functions_ga95f1f39fa2edd3d5b6ed32ec777a73da}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_EnablePinIT@{stmpe811\_IO\_EnablePinIT}}
+\index{stmpe811\_IO\_EnablePinIT@{stmpe811\_IO\_EnablePinIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_EnablePinIT()}{stmpe811\_IO\_EnablePinIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Enable interrupt mode for the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO interrupt to be enabled. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gaaa0cf2f844c6d262b9fce9a2cc6fd902}\label{group___s_t_m_p_e811___exported___functions_gaaa0cf2f844c6d262b9fce9a2cc6fd902}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_InitPin@{stmpe811\_IO\_InitPin}}
+\index{stmpe811\_IO\_InitPin@{stmpe811\_IO\_InitPin}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_InitPin()}{stmpe811\_IO\_InitPin()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Init\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Direction }\end{DoxyParamCaption})}
+
+
+
+Initialize the selected IO pin direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 7. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+{\em Direction} & could be STMPE811\+\_\+\+DIRECTION\+\_\+\+IN or STMPE811\+\_\+\+DIRECTION\+\_\+\+OUT. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga641547eeeb366b88eaa00cc25b984025}\label{group___s_t_m_p_e811___exported___functions_ga641547eeeb366b88eaa00cc25b984025}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_ITStatus@{stmpe811\_IO\_ITStatus}}
+\index{stmpe811\_IO\_ITStatus@{stmpe811\_IO\_ITStatus}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_ITStatus()}{stmpe811\_IO\_ITStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t stmpe811\+\_\+\+IO\+\_\+\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Check the status of the selected IO interrupt pending bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO interrupt to be checked could be\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x Where x can be from 0 to 7. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Status} & of the checked IO pin(s). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga1f838b67ba27809406633ca90f0ef6bb}\label{group___s_t_m_p_e811___exported___functions_ga1f838b67ba27809406633ca90f0ef6bb}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_ReadPin@{stmpe811\_IO\_ReadPin}}
+\index{stmpe811\_IO\_ReadPin@{stmpe811\_IO\_ReadPin}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_ReadPin()}{stmpe811\_IO\_ReadPin()}}
+{\footnotesize\ttfamily uint32\+\_\+t stmpe811\+\_\+\+IO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Return the state of the selected IO pin(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The output pin to be set or reset. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em IO} & pin(s) state. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga8f7f014edbe93fe0b95597ba42bfb928}\label{group___s_t_m_p_e811___exported___functions_ga8f7f014edbe93fe0b95597ba42bfb928}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_SetEdgeMode@{stmpe811\_IO\_SetEdgeMode}}
+\index{stmpe811\_IO\_SetEdgeMode@{stmpe811\_IO\_SetEdgeMode}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_SetEdgeMode()}{stmpe811\_IO\_SetEdgeMode()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Set\+Edge\+Mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Edge }\end{DoxyParamCaption})}
+
+
+
+Configure the Edge for which a transition is detectable for the selected pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin to be configured. This parameter could be any combination of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: Where x can be from 0 to 7. ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+{\em Edge} & The edge which will be detected. This parameter can be one or a combination of following values\+: STMPE811\+\_\+\+EDGE\+\_\+\+FALLING and STMPE811\+\_\+\+EDGE\+\_\+\+RISING . \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga60a6a887200a980d09b703c627c8f5f9}\label{group___s_t_m_p_e811___exported___functions_ga60a6a887200a980d09b703c627c8f5f9}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_Start@{stmpe811\_IO\_Start}}
+\index{stmpe811\_IO\_Start@{stmpe811\_IO\_Start}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_Start()}{stmpe811\_IO\_Start()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+STMPE811 IO functionalities functions. 
+
+STMPE811 IO functionalities functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The IO pin(s) to put in AF. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga4b75f623e16115387ca332c8e6a23378}\label{group___s_t_m_p_e811___exported___functions_ga4b75f623e16115387ca332c8e6a23378}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_IO\_WritePin@{stmpe811\_IO\_WritePin}}
+\index{stmpe811\_IO\_WritePin@{stmpe811\_IO\_WritePin}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_IO\_WritePin()}{stmpe811\_IO\_WritePin()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+IO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{IO\+\_\+\+Pin,  }\item[{uint8\+\_\+t}]{Pin\+State }\end{DoxyParamCaption})}
+
+
+
+Write a new IO pin state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em IO\+\_\+\+Pin} & The output pin to be set or reset. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+PIN\+\_\+x\+: where x can be from 0 to 7. \end{DoxyItemize}
+\\
+\hline
+{\em Pin\+State} & The new IO pin state. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gac3b8ba5f65a98bdd9e9344a5c6d80589}\label{group___s_t_m_p_e811___exported___functions_gac3b8ba5f65a98bdd9e9344a5c6d80589}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_ReadGITStatus@{stmpe811\_ReadGITStatus}}
+\index{stmpe811\_ReadGITStatus@{stmpe811\_ReadGITStatus}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_ReadGITStatus()}{stmpe811\_ReadGITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t stmpe811\+\_\+\+Read\+GITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Return the Global interrupts status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em Source} & the Global interrupt source to be checked, could be\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+GIT\+\_\+\+IO\+: IO interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+ADC \+: ADC interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FE \+: Touch Screen Controller FIFO Error interrupt \item STMPE811\+\_\+\+GIT\+\_\+\+FF \+: Touch Screen Controller FIFO Full interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FOV \+: Touch Screen Controller FIFO Overrun interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+FTH \+: Touch Screen Controller FIFO Threshold interrupt ~\newline
+ \item STMPE811\+\_\+\+GIT\+\_\+\+TOUCH \+: Touch Screen Controller Touch Detected interrupt ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & checked Global interrupt source status. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gabb9c2cd405cc42c773d04de65862bc2c}\label{group___s_t_m_p_e811___exported___functions_gabb9c2cd405cc42c773d04de65862bc2c}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_ReadID@{stmpe811\_ReadID}}
+\index{stmpe811\_ReadID@{stmpe811\_ReadID}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_ReadID()}{stmpe811\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t stmpe811\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the stmpe811 IO Expander device ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device ID (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga40d34415bd52b78096fa6c9b9bb92126}\label{group___s_t_m_p_e811___exported___functions_ga40d34415bd52b78096fa6c9b9bb92126}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_Reset@{stmpe811\_Reset}}
+\index{stmpe811\_Reset@{stmpe811\_Reset}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_Reset()}{stmpe811\_Reset()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Reset the stmpe811 by Software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga5a70edb897af292cf1b64db901f09fbc}\label{group___s_t_m_p_e811___exported___functions_ga5a70edb897af292cf1b64db901f09fbc}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_SetITPolarity@{stmpe811\_SetITPolarity}}
+\index{stmpe811\_SetITPolarity@{stmpe811\_SetITPolarity}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_SetITPolarity()}{stmpe811\_SetITPolarity()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Set\+ITPolarity (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Polarity }\end{DoxyParamCaption})}
+
+
+
+Set the global interrupt Polarity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Polarity} & the IT mode polarity, could be one of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+POLARITY\+\_\+\+LOW\+: Interrupt line is active Low/\+Falling edge ~\newline
+ \item STMPE811\+\_\+\+POLARITY\+\_\+\+HIGH\+: Interrupt line is active High/\+Rising edge ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga346c425ef8c88c868591eb97f97aa298}\label{group___s_t_m_p_e811___exported___functions_ga346c425ef8c88c868591eb97f97aa298}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_SetITType@{stmpe811\_SetITType}}
+\index{stmpe811\_SetITType@{stmpe811\_SetITType}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_SetITType()}{stmpe811\_SetITType()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+Set\+ITType (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint8\+\_\+t}]{Type }\end{DoxyParamCaption})}
+
+
+
+Set the global interrupt Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+{\em Type} & Interrupt line activity type, could be one of the following values\+: \begin{DoxyItemize}
+\item STMPE811\+\_\+\+TYPE\+\_\+\+LEVEL\+: Interrupt line is active in level model ~\newline
+ \item STMPE811\+\_\+\+TYPE\+\_\+\+EDGE\+: Interrupt line is active in edge model ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga974ece91b797f5fb28e76d2d192932a5}\label{group___s_t_m_p_e811___exported___functions_ga974ece91b797f5fb28e76d2d192932a5}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_TS\_ClearIT@{stmpe811\_TS\_ClearIT}}
+\index{stmpe811\_TS\_ClearIT@{stmpe811\_TS\_ClearIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_TS\_ClearIT()}{stmpe811\_TS\_ClearIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+TS\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga4e475a85fca0c46acdce3fc310dec86c}\label{group___s_t_m_p_e811___exported___functions_ga4e475a85fca0c46acdce3fc310dec86c}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_TS\_DetectTouch@{stmpe811\_TS\_DetectTouch}}
+\index{stmpe811\_TS\_DetectTouch@{stmpe811\_TS\_DetectTouch}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_TS\_DetectTouch()}{stmpe811\_TS\_DetectTouch()}}
+{\footnotesize\ttfamily uint8\+\_\+t stmpe811\+\_\+\+TS\+\_\+\+Detect\+Touch (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Return if there is touch detected or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Touch} & detected state. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gafba8e0baf0b89f5ea9b4cc1940468383}\label{group___s_t_m_p_e811___exported___functions_gafba8e0baf0b89f5ea9b4cc1940468383}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_TS\_DisableIT@{stmpe811\_TS\_DisableIT}}
+\index{stmpe811\_TS\_DisableIT@{stmpe811\_TS\_DisableIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_TS\_DisableIT()}{stmpe811\_TS\_DisableIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+TS\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gafd18353ba1e835324c98b7f7c03244f8}\label{group___s_t_m_p_e811___exported___functions_gafd18353ba1e835324c98b7f7c03244f8}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_TS\_EnableIT@{stmpe811\_TS\_EnableIT}}
+\index{stmpe811\_TS\_EnableIT@{stmpe811\_TS\_EnableIT}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_TS\_EnableIT()}{stmpe811\_TS\_EnableIT()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+TS\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gab242655d3918e03e289140fcd49e9776}\label{group___s_t_m_p_e811___exported___functions_gab242655d3918e03e289140fcd49e9776}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_TS\_GetXY@{stmpe811\_TS\_GetXY}}
+\index{stmpe811\_TS\_GetXY@{stmpe811\_TS\_GetXY}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_TS\_GetXY()}{stmpe811\_TS\_GetXY()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+TS\+\_\+\+Get\+XY (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint16\+\_\+t $\ast$}]{X,  }\item[{uint16\+\_\+t $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Get the touch screen X and Y positions values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em X} & Pointer to X position value \\
+\hline
+{\em Y} & Pointer to Y position value ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_gad34fc9bbe11dca105a81374145155448}\label{group___s_t_m_p_e811___exported___functions_gad34fc9bbe11dca105a81374145155448}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_TS\_ITStatus@{stmpe811\_TS\_ITStatus}}
+\index{stmpe811\_TS\_ITStatus@{stmpe811\_TS\_ITStatus}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_TS\_ITStatus()}{stmpe811\_TS\_ITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t stmpe811\+\_\+\+TS\+\_\+\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TS} & interrupts status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m_p_e811___exported___functions_ga6c2784b727e123850d09a884027d1521}\label{group___s_t_m_p_e811___exported___functions_ga6c2784b727e123850d09a884027d1521}} 
+\index{STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}!stmpe811\_TS\_Start@{stmpe811\_TS\_Start}}
+\index{stmpe811\_TS\_Start@{stmpe811\_TS\_Start}!STMPE811\_Exported\_Functions@{STMPE811\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{stmpe811\_TS\_Start()}{stmpe811\_TS\_Start()}}
+{\footnotesize\ttfamily void stmpe811\+\_\+\+TS\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+STMPE811 Touch screen functionalities functions. 
+
+STMPE811 Touch screen functionalities functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

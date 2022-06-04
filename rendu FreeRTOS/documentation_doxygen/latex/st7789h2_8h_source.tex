@@ -1,0 +1,99 @@
+\hypertarget{st7789h2_8h_source}{}\doxysection{st7789h2.\+h}
+\label{st7789h2_8h_source}\index{Drivers/BSP/Components/st7789h2/st7789h2.h@{Drivers/BSP/Components/st7789h2/st7789h2.h}}
+\mbox{\hyperlink{st7789h2_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_ST7789H2\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_ST7789H2\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}../Common/lcd.h"{}}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define  ST7789H2\_ID    0x85}}
+\DoxyCodeLine{77    }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define  ST7789H2\_LCD\_PIXEL\_WIDTH    ((uint16\_t)240)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define  ST7789H2\_LCD\_PIXEL\_HEIGHT   ((uint16\_t)240)}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define ST7789H2\_ORIENTATION\_PORTRAIT         ((uint32\_t)0x00) }\textcolor{comment}{/* Portrait orientation choice of LCD screen  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define ST7789H2\_ORIENTATION\_LANDSCAPE        ((uint32\_t)0x01) }\textcolor{comment}{/* Landscape orientation choice of LCD screen */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define ST7789H2\_ORIENTATION\_LANDSCAPE\_ROT180 ((uint32\_t)0x02) }\textcolor{comment}{/* Landscape rotated 180° orientation choice of LCD screen */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{91     }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define ST7789H2\_LCD\_ID             0x04   }}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define ST7789H2\_SLEEP\_IN           0x10}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define ST7789H2\_SLEEP\_OUT          0x11}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define ST7789H2\_PARTIAL\_DISPLAY    0x12    }}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define ST7789H2\_DISPLAY\_INVERSION  0x21}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define ST7789H2\_DISPLAY\_ON         0x29}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define ST7789H2\_WRITE\_RAM          0x2C}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define ST7789H2\_READ\_RAM           0x2E}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define ST7789H2\_CASET              0x2A}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define ST7789H2\_RASET              0x2B}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define ST7789H2\_VSCRDEF            0x33 }\textcolor{comment}{/* Vertical Scroll Definition */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define ST7789H2\_VSCSAD             0x37 }\textcolor{comment}{/* Vertical Scroll Start Address of RAM */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define ST7789H2\_TEARING\_EFFECT     0x35}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define ST7789H2\_NORMAL\_DISPLAY     0x36}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define ST7789H2\_IDLE\_MODE\_OFF      0x38}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define ST7789H2\_IDLE\_MODE\_ON       0x39}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define ST7789H2\_COLOR\_MODE         0x3A}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define ST7789H2\_PORCH\_CTRL         0xB2}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define ST7789H2\_GATE\_CTRL          0xB7}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define ST7789H2\_VCOM\_SET           0xBB}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define ST7789H2\_DISPLAY\_OFF        0xBD    }}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define ST7789H2\_LCM\_CTRL           0xC0}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define ST7789H2\_VDV\_VRH\_EN         0xC2}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define ST7789H2\_VDV\_SET            0xC4    }}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define ST7789H2\_VCOMH\_OFFSET\_SET   0xC5}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define ST7789H2\_FR\_CTRL            0xC6}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define ST7789H2\_POWER\_CTRL         0xD0}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define ST7789H2\_PV\_GAMMA\_CTRL      0xE0}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define ST7789H2\_NV\_GAMMA\_CTRL      0xE1 }}
+\DoxyCodeLine{124   }
+\DoxyCodeLine{132 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga79b03c4d621768b2edf01fe0300779a1}{ST7789H2\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{133 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga1bcf4ea47a4e1f8d3298b78727c5e5c2}{ST7789H2\_SetOrientation}}(uint32\_t orientation);    }
+\DoxyCodeLine{134 uint16\_t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga2bb4b27b8a1b997030f8ecf2b7efd824}{ST7789H2\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{135 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga88e28d2b7833475c12420bbbc8071a36}{ST7789H2\_WriteReg}}(uint8\_t Command, uint8\_t *Parameters, uint8\_t NbParameters);}
+\DoxyCodeLine{136 uint8\_t  \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gaddd260d6608ed9f4817b691fad210de6}{ST7789H2\_ReadReg}}(uint8\_t Command);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gaafb6fbc09b3a6fb4a163c59eefed12a2}{ST7789H2\_DisplayOn}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{139 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga19a9f41ab437e6d0d0310b535f84a08c}{ST7789H2\_DisplayOff}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{140 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga9e240ee0a5131b4b1c99f9804a51055d}{ST7789H2\_SetCursor}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{141 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gab0ada921c8c4886a56114035b4496edf}{ST7789H2\_WritePixel}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t RGBCode);}
+\DoxyCodeLine{142 uint16\_t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gad35fbfe45d9c0a5740d65f2597af02c2}{ST7789H2\_ReadPixel}}(uint16\_t Xpos, uint16\_t Ypos);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga072637724e314afd2ff3400d81026e4d}{ST7789H2\_DrawHLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{145 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga1855278f79146c88b0d0bb7e3b44fe36}{ST7789H2\_DrawVLine}}(uint16\_t RGBCode, uint16\_t Xpos, uint16\_t Ypos, uint16\_t Length);}
+\DoxyCodeLine{146 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga146ade032342938424edf997e79e9672}{ST7789H2\_DrawBitmap}}(uint16\_t Xpos, uint16\_t Ypos, uint8\_t *pbmp);}
+\DoxyCodeLine{147 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gad939fb4b0afad19759072b8932061ec7}{ST7789H2\_DrawRGBImage}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Xsize, uint16\_t Ysize, uint8\_t *pdata);}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga5c3d3168b881708cdc4174500d24d190}{ST7789H2\_SetDisplayWindow}}(uint16\_t Xpos, uint16\_t Ypos, uint16\_t Width, uint16\_t Height);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 uint16\_t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga4971d96cf2b39b046f234d6e5b380b07}{ST7789H2\_GetLcdPixelWidth}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{153 uint16\_t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga10c728adb4ca43b08a29f45a61226014}{ST7789H2\_GetLcdPixelHeight}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 \textcolor{comment}{/* LCD driver structure */}}
+\DoxyCodeLine{156 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\_DrvTypeDef}}   ST7789H2\_drv;}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 \textcolor{comment}{/* LCD IO functions */}}
+\DoxyCodeLine{159 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gaccf0a45e037a886f9b1a849bedd63735}{LCD\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{160 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     LCD\_IO\_WriteMultipleData(uint16\_t *pData, uint32\_t Size);}
+\DoxyCodeLine{161 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga435f47c3f7c327325ea17f71fae7cebc}{LCD\_IO\_WriteReg}}(uint8\_t Reg);}
+\DoxyCodeLine{162 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gaae6ab499c7ca32f026708cbfb5153c97}{LCD\_IO\_WriteData}}(uint16\_t RegValue);}
+\DoxyCodeLine{163 \textcolor{keyword}{extern} uint16\_t LCD\_IO\_ReadData(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{164 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     LCD\_IO\_Delay(uint32\_t delay);}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{171 \}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ST7789H2\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{188 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

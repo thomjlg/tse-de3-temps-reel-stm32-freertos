@@ -1,0 +1,60 @@
+\hypertarget{ts3510_8h_source}{}\doxysection{ts3510.\+h}
+\label{ts3510_8h_source}\index{Drivers/BSP/Components/ts3510/ts3510.h@{Drivers/BSP/Components/ts3510/ts3510.h}}
+\mbox{\hyperlink{ts3510_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_TS3510\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_TS3510\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif   }}
+\DoxyCodeLine{46    }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/ts.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{62 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{68 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{69   }
+\DoxyCodeLine{74 \textcolor{comment}{/*  */}   }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define TS3510\_READ\_BLOCK\_REG                     0x8A}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define TS3510\_SEND\_CMD\_REG                       0x00}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define TS3510\_READ\_CMD                           0x81  }}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define TS3510\_WRITE\_CMD                          0x08     }}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{86    }
+\DoxyCodeLine{91 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{92   }
+\DoxyCodeLine{100 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga73c1226046389de4ff75a2e908a18dd6}{ts3510\_Init}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{101 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga47a4d9a5812d18d71542111c12d275ca}{ts3510\_Reset}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{102 uint16\_t \mbox{\hyperlink{group__ts3510___exported___functions_ga2efe70212fb686dd46ec2250954bfef9}{ts3510\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{103 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga11e0c31073a5106868d486f857cb7fb6}{ts3510\_TS\_Start}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{104 uint8\_t  \mbox{\hyperlink{group__ts3510___exported___functions_ga34dccfd38359b0a5fdc57607c742267c}{ts3510\_TS\_DetectTouch}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{105 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_gab4f36dc3c8a0cbe843bdb44f9da6ed22}{ts3510\_TS\_GetXY}}(uint16\_t DeviceAddr, uint16\_t *X, uint16\_t *Y);}
+\DoxyCodeLine{106 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga5fe7cfd4186184111114f8b298c3a7a3}{ts3510\_TS\_EnableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{107 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga6c8ad8d98d01976e227b45c346428531}{ts3510\_TS\_DisableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{108 uint8\_t  \mbox{\hyperlink{group__ts3510___exported___functions_ga64befc1365a5ecf06b9b226516243d3a}{ts3510\_TS\_ITStatus}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{109 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga7e34d248f9576cbf2f2c18620ff2d124}{ts3510\_TS\_ClearIT}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga20cd09e59bac7284d1342b6741733593}{IOE\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{112 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\_Delay}}(uint32\_t delay);}
+\DoxyCodeLine{113 uint8\_t  \mbox{\hyperlink{group__ts3510___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\_Read}}(uint8\_t addr, uint8\_t reg);}
+\DoxyCodeLine{114 uint16\_t \mbox{\hyperlink{group__ts3510___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\_ReadMultiple}}(uint8\_t addr, uint8\_t reg, uint8\_t *buffer, uint16\_t length);}
+\DoxyCodeLine{115 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group__ts3510___exported___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}{IOE\_WriteMultiple}}(uint8\_t addr, uint8\_t reg, uint8\_t *buffer, uint16\_t length);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{comment}{/* Touch screen driver structure */}}
+\DoxyCodeLine{118 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_t_s___drv_type_def}{TS\_DrvTypeDef}} ts3510\_ts\_drv;}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{121 \}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_TS3510\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 }
+\DoxyCodeLine{141 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

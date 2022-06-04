@@ -1,0 +1,151 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions}{}\doxysection{STM32\+F429I DISCOVERY LOW LEVEL Exported Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions}\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga65d13608f7010a8068614154cb142cd6}{BSP\+\_\+\+Get\+Version}} (void)
+\begin{DoxyCompactList}\small\item\em This method returns the STM32\+F429I DISCO BSP Driver revision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gab58a4f16a476a53653c5c400e3bed158}{BSP\+\_\+\+LED\+\_\+\+Init}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Configures LED GPIO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaee9c16b16384834c69efabf58f423d6f}{BSP\+\_\+\+LED\+\_\+\+On}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED On. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaef268680154ca15c45066d64d41f9467}{BSP\+\_\+\+LED\+\_\+\+Off}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Turns selected LED Off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga1b9eabba7d498f41d6f16587ec0f9732}{BSP\+\_\+\+LED\+\_\+\+Toggle}} (Led\+\_\+\+Type\+Def Led)
+\begin{DoxyCompactList}\small\item\em Toggles the selected LED. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}{BSP\+\_\+\+PB\+\_\+\+Init}} (Button\+\_\+\+Type\+Def Button, Button\+Mode\+\_\+\+Type\+Def Button\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures Button GPIO and EXTI Line. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}{BSP\+\_\+\+PB\+\_\+\+Get\+State}} (Button\+\_\+\+Type\+Def Button)
+\begin{DoxyCompactList}\small\item\em Returns the selected Button state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga65d13608f7010a8068614154cb142cd6}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga65d13608f7010a8068614154cb142cd6}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}!BSP\_GetVersion@{BSP\_GetVersion}}
+\index{BSP\_GetVersion@{BSP\_GetVersion}!STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_GetVersion()}{BSP\_GetVersion()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+Get\+Version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This method returns the STM32\+F429I DISCO BSP Driver revision. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em version} & 0x\+XYZR (8bits for each decimal, R for RC) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gab58a4f16a476a53653c5c400e3bed158}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gab58a4f16a476a53653c5c400e3bed158}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}!BSP\_LED\_Init@{BSP\_LED\_Init}}
+\index{BSP\_LED\_Init@{BSP\_LED\_Init}!STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_Init()}{BSP\_LED\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+Init (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Configures LED GPIO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be configured. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaef268680154ca15c45066d64d41f9467}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaef268680154ca15c45066d64d41f9467}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}!BSP\_LED\_Off@{BSP\_LED\_Off}}
+\index{BSP\_LED\_Off@{BSP\_LED\_Off}!STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_Off()}{BSP\_LED\_Off()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+Off (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Turns selected LED Off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be set off. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaee9c16b16384834c69efabf58f423d6f}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaee9c16b16384834c69efabf58f423d6f}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}!BSP\_LED\_On@{BSP\_LED\_On}}
+\index{BSP\_LED\_On@{BSP\_LED\_On}!STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_On()}{BSP\_LED\_On()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+On (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Turns selected LED On. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be set on. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga1b9eabba7d498f41d6f16587ec0f9732}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga1b9eabba7d498f41d6f16587ec0f9732}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}!BSP\_LED\_Toggle@{BSP\_LED\_Toggle}}
+\index{BSP\_LED\_Toggle@{BSP\_LED\_Toggle}!STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LED\_Toggle()}{BSP\_LED\_Toggle()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LED\+\_\+\+Toggle (\begin{DoxyParamCaption}\item[{Led\+\_\+\+Type\+Def}]{Led }\end{DoxyParamCaption})}
+
+
+
+Toggles the selected LED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led} & Specifies the Led to be toggled. This parameter can be one of following parameters\+: \begin{DoxyItemize}
+\item LED3 \item LED4 ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}!BSP\_PB\_GetState@{BSP\_PB\_GetState}}
+\index{BSP\_PB\_GetState@{BSP\_PB\_GetState}!STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_PB\_GetState()}{BSP\_PB\_GetState()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+PB\+\_\+\+Get\+State (\begin{DoxyParamCaption}\item[{Button\+\_\+\+Type\+Def}]{Button }\end{DoxyParamCaption})}
+
+
+
+Returns the selected Button state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Button} & Specifies the Button to be checked. This parameter should be\+: BUTTON\+\_\+\+KEY ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Button GPIO pin value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}} 
+\index{STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}!BSP\_PB\_Init@{BSP\_PB\_Init}}
+\index{BSP\_PB\_Init@{BSP\_PB\_Init}!STM32F429I DISCOVERY LOW LEVEL Exported Functions@{STM32F429I DISCOVERY LOW LEVEL Exported Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_PB\_Init()}{BSP\_PB\_Init()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+PB\+\_\+\+Init (\begin{DoxyParamCaption}\item[{Button\+\_\+\+Type\+Def}]{Button,  }\item[{Button\+Mode\+\_\+\+Type\+Def}]{Button\+Mode }\end{DoxyParamCaption})}
+
+
+
+Configures Button GPIO and EXTI Line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Button} & Specifies the Button to be configured. This parameter should be\+: BUTTON\+\_\+\+KEY \\
+\hline
+{\em Button\+Mode} & Specifies Button mode. This parameter can be one of following parameters\+: ~\newline
+ \begin{DoxyItemize}
+\item BUTTON\+\_\+\+MODE\+\_\+\+GPIO\+: Button will be used as simple IO \item BUTTON\+\_\+\+MODE\+\_\+\+EXTI\+: Button will be connected to EXTI line with interrupt generation capability ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}

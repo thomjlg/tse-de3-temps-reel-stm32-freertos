@@ -1,0 +1,217 @@
+\hypertarget{stm32f429i__discovery_8h_source}{}\doxysection{stm32f429i\+\_\+discovery.\+h}
+\label{stm32f429i__discovery_8h_source}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery.h}}
+\mbox{\hyperlink{stm32f429i__discovery_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_\_STM32F429I\_DISCOVERY\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_\_STM32F429I\_DISCOVERY\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{42  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44                                               }
+\DoxyCodeLine{45 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal_8h}{stm32f4xx\_hal.h}}"{}}}
+\DoxyCodeLine{47    }
+\DoxyCodeLine{63 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65   LED3 = 0,}
+\DoxyCodeLine{66   LED4 = 1}
+\DoxyCodeLine{67 \}Led\_TypeDef;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{70 \{  }
+\DoxyCodeLine{71   BUTTON\_KEY = 0,}
+\DoxyCodeLine{72 \}Button\_TypeDef;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{75 \{  }
+\DoxyCodeLine{76   BUTTON\_MODE\_GPIO = 0,}
+\DoxyCodeLine{77   BUTTON\_MODE\_EXTI = 1}
+\DoxyCodeLine{78 \}ButtonMode\_TypeDef;     }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#if !defined (USE\_STM32F429I\_DISCO)}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{ \#define USE\_STM32F429I\_DISCO}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define LEDn                                    2}}
+\DoxyCodeLine{99   }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define LED3\_PIN                                GPIO\_PIN\_13}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define LED3\_GPIO\_PORT                          GPIOG}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define LED3\_GPIO\_CLK\_ENABLE()                  \_\_HAL\_RCC\_GPIOG\_CLK\_ENABLE()  }}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define LED3\_GPIO\_CLK\_DISABLE()                 \_\_HAL\_RCC\_GPIOG\_CLK\_DISABLE()  }}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define LED4\_PIN                                GPIO\_PIN\_14}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define LED4\_GPIO\_PORT                          GPIOG}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define LED4\_GPIO\_CLK\_ENABLE()                  \_\_HAL\_RCC\_GPIOG\_CLK\_ENABLE()  }}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define LED4\_GPIO\_CLK\_DISABLE()                 \_\_HAL\_RCC\_GPIOG\_CLK\_DISABLE()  }}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define LEDx\_GPIO\_CLK\_ENABLE(\_\_INDEX\_\_)  do\{if((\_\_INDEX\_\_) == 0) LED3\_GPIO\_CLK\_ENABLE(); else \(\backslash\)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{                                            if((\_\_INDEX\_\_) == 1) LED4\_GPIO\_CLK\_ENABLE(); \(\backslash\)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{                                            \}while(0)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define LEDx\_GPIO\_CLK\_DISABLE(\_\_INDEX\_\_) do\{if((\_\_INDEX\_\_) == 0) LED3\_GPIO\_CLK\_DISABLE(); else \(\backslash\)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{                                            if((\_\_INDEX\_\_) == 1) LED4\_GPIO\_CLK\_DISABLE(); \(\backslash\)}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{                                            \}while(0)}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define BUTTONn                                1}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define KEY\_BUTTON\_PIN                         GPIO\_PIN\_0}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define KEY\_BUTTON\_GPIO\_PORT                   GPIOA}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define KEY\_BUTTON\_GPIO\_CLK\_ENABLE()           \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE()}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define KEY\_BUTTON\_GPIO\_CLK\_DISABLE()          \_\_HAL\_RCC\_GPIOA\_CLK\_DISABLE()}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define KEY\_BUTTON\_EXTI\_IRQn                   EXTI0\_IRQn}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define BUTTONx\_GPIO\_CLK\_ENABLE(\_\_INDEX\_\_)     do\{if((\_\_INDEX\_\_) == 0) KEY\_BUTTON\_GPIO\_CLK\_ENABLE(); \(\backslash\)}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{                                                 \}while(0)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define BUTTONx\_GPIO\_CLK\_DISABLE(\_\_INDEX\_\_)    do\{if((\_\_INDEX\_\_) == 0) KEY\_BUTTON\_GPIO\_CLK\_DISABLE(); \(\backslash\)}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{                                                 \}while(0)}}
+\DoxyCodeLine{145 \textcolor{comment}{/* Exported constanIO -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define IO\_I2C\_ADDRESS                      0x82 }}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define TS\_I2C\_ADDRESS                      0x82}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#ifdef EE\_M24LR64}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define EEPROM\_I2C\_ADDRESS\_A01              0xA0}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define EEPROM\_I2C\_ADDRESS\_A02              0xA6}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* EE\_M24LR64 */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{comment}{/*\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# I2Cx \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#*/}}
+\DoxyCodeLine{155 \textcolor{comment}{/* User can use this section to tailor I2Cx instance used and associated }}
+\DoxyCodeLine{156 \textcolor{comment}{   resources */}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx                          I2C3}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_CLOCK\_ENABLE()           \_\_HAL\_RCC\_I2C3\_CLK\_ENABLE()}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_FORCE\_RESET()            \_\_HAL\_RCC\_I2C3\_FORCE\_RESET()}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_RELEASE\_RESET()          \_\_HAL\_RCC\_I2C3\_RELEASE\_RESET()}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SDA\_GPIO\_CLK\_ENABLE()    \_\_HAL\_RCC\_GPIOC\_CLK\_ENABLE()}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SCL\_GPIO\_CLK\_ENABLE()    \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE() }}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SDA\_GPIO\_CLK\_DISABLE()   \_\_HAL\_RCC\_GPIOC\_CLK\_DISABLE()}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \textcolor{comment}{/* Definition for DISCO I2Cx Pins */}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SCL\_PIN                  GPIO\_PIN\_8}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SCL\_GPIO\_PORT            GPIOA}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SCL\_SDA\_AF               GPIO\_AF4\_I2C3}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SDA\_PIN                  GPIO\_PIN\_9}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_SDA\_GPIO\_PORT            GPIOC}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \textcolor{comment}{/* Definition for IOE I2Cx's NVIC */}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_EV\_IRQn                  I2C3\_EV\_IRQn}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define DISCOVERY\_I2Cx\_ER\_IRQn                  I2C3\_ER\_IRQn}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \textcolor{comment}{/* I2C clock speed configuration (in Hz) }}
+\DoxyCodeLine{177 \textcolor{comment}{  WARNING: }}
+\DoxyCodeLine{178 \textcolor{comment}{   Make sure that this define is not already declared in other files.}}
+\DoxyCodeLine{179 \textcolor{comment}{   It can be used in parallel by other modules. */}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#ifndef BSP\_I2C\_SPEED}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{ \#define BSP\_I2C\_SPEED                          100000}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* BSP\_I2C\_SPEED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define I2Cx\_TIMEOUT\_MAX                    0x3000 }\textcolor{comment}{/*<! The value of the maximal timeout for I2C waiting loops */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \textcolor{comment}{/*\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# SPIx \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#*/}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx                          SPI5}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_CLK\_ENABLE()             \_\_HAL\_RCC\_SPI5\_CLK\_ENABLE()}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_GPIO\_PORT                GPIOF                      }\textcolor{comment}{/* GPIOF */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_AF                       GPIO\_AF5\_SPI5}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_GPIO\_CLK\_ENABLE()        \_\_HAL\_RCC\_GPIOF\_CLK\_ENABLE()}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_GPIO\_CLK\_DISABLE()       \_\_HAL\_RCC\_GPIOF\_CLK\_DISABLE()}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_SCK\_PIN                  GPIO\_PIN\_7                 }\textcolor{comment}{/* PF.07 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_MISO\_PIN                 GPIO\_PIN\_8                 }\textcolor{comment}{/* PF.08 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define DISCOVERY\_SPIx\_MOSI\_PIN                 GPIO\_PIN\_9                 }\textcolor{comment}{/* PF.09 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{196 \textcolor{comment}{/* Maximum Timeout values for flags waiting loops. These timeouts are not based}}
+\DoxyCodeLine{197 \textcolor{comment}{   on accurate values, they just guarantee that the application will not remain}}
+\DoxyCodeLine{198 \textcolor{comment}{   stuck if the SPI communication is corrupted.}}
+\DoxyCodeLine{199 \textcolor{comment}{   You may modify these timeout values depending on CPU frequency and application}}
+\DoxyCodeLine{200 \textcolor{comment}{   conditions (interrupts routines ...). */}   }
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define SPIx\_TIMEOUT\_MAX              ((uint32\_t)0x1000)}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 \textcolor{comment}{/*\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# IOE \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#*/}}
+\DoxyCodeLine{208 \textcolor{comment}{/* Definition for external IT for STMPE811 */}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define STMPE811\_INT\_PIN                        GPIO\_PIN\_15}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define STMPE811\_INT\_GPIO\_PORT                  GPIOA}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#define STMPE811\_INT\_CLK\_ENABLE()               \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE()}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#define STMPE811\_INT\_CLK\_DISABLE()              \_\_HAL\_RCC\_GPIOA\_CLK\_DISABLE()}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define STMPE811\_INT\_EXTI                       EXTI15\_10\_IRQn}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#define STMPE811\_INT\_EXTIHandler                EXTI15\_10\_IRQHandler}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216 \textcolor{comment}{/*\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# LCD \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#*/}}
+\DoxyCodeLine{217 \textcolor{comment}{/* Chip Select macro definition */}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define LCD\_CS\_LOW()       HAL\_GPIO\_WritePin(LCD\_NCS\_GPIO\_PORT, LCD\_NCS\_PIN, GPIO\_PIN\_RESET)}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define LCD\_CS\_HIGH()      HAL\_GPIO\_WritePin(LCD\_NCS\_GPIO\_PORT, LCD\_NCS\_PIN, GPIO\_PIN\_SET)}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 \textcolor{comment}{/* Set WRX High to send data */}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define LCD\_WRX\_LOW()      HAL\_GPIO\_WritePin(LCD\_WRX\_GPIO\_PORT, LCD\_WRX\_PIN, GPIO\_PIN\_RESET)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define LCD\_WRX\_HIGH()     HAL\_GPIO\_WritePin(LCD\_WRX\_GPIO\_PORT, LCD\_WRX\_PIN, GPIO\_PIN\_SET)}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 \textcolor{comment}{/* Set WRX High to send data */}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define LCD\_RDX\_LOW()      HAL\_GPIO\_WritePin(LCD\_RDX\_GPIO\_PORT, LCD\_RDX\_PIN, GPIO\_PIN\_RESET)}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define LCD\_RDX\_HIGH()     HAL\_GPIO\_WritePin(LCD\_RDX\_GPIO\_PORT, LCD\_RDX\_PIN, GPIO\_PIN\_SET)}}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define LCD\_NCS\_PIN                             GPIO\_PIN\_2}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#define LCD\_NCS\_GPIO\_PORT                       GPIOC}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define LCD\_NCS\_GPIO\_CLK\_ENABLE()               \_\_HAL\_RCC\_GPIOC\_CLK\_ENABLE()}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define LCD\_NCS\_GPIO\_CLK\_DISABLE()              \_\_HAL\_RCC\_GPIOC\_CLK\_DISABLE()}}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define LCD\_WRX\_PIN                             GPIO\_PIN\_13}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define LCD\_WRX\_GPIO\_PORT                       GPIOD}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define LCD\_WRX\_GPIO\_CLK\_ENABLE()               \_\_HAL\_RCC\_GPIOD\_CLK\_ENABLE()}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#define LCD\_WRX\_GPIO\_CLK\_DISABLE()              \_\_HAL\_RCC\_GPIOD\_CLK\_DISABLE()}}
+\DoxyCodeLine{246   }
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define LCD\_RDX\_PIN                             GPIO\_PIN\_12}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define LCD\_RDX\_GPIO\_PORT                       GPIOD}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define LCD\_RDX\_GPIO\_CLK\_ENABLE()               \_\_HAL\_RCC\_GPIOD\_CLK\_ENABLE()}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define LCD\_RDX\_GPIO\_CLK\_DISABLE()              \_\_HAL\_RCC\_GPIOD\_CLK\_DISABLE()}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{comment}{/*\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# GYROSCOPE \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#*/}}
+\DoxyCodeLine{253 \textcolor{comment}{/* Read/Write command */}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define READWRITE\_CMD              ((uint8\_t)0x80) }}
+\DoxyCodeLine{255 \textcolor{comment}{/* Multiple byte read/write command */} }
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define MULTIPLEBYTE\_CMD           ((uint8\_t)0x40)}}
+\DoxyCodeLine{257 \textcolor{comment}{/* Dummy Byte Send by the SPI Master device in order to generate the Clock to the Slave device */}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define DUMMY\_BYTE                 ((uint8\_t)0x00)}}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260 \textcolor{comment}{/* Chip Select macro definition */}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define GYRO\_CS\_LOW()       HAL\_GPIO\_WritePin(GYRO\_CS\_GPIO\_PORT, GYRO\_CS\_PIN, GPIO\_PIN\_RESET)}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define GYRO\_CS\_HIGH()      HAL\_GPIO\_WritePin(GYRO\_CS\_GPIO\_PORT, GYRO\_CS\_PIN, GPIO\_PIN\_SET)}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define GYRO\_CS\_PIN                             GPIO\_PIN\_1                  }\textcolor{comment}{/* PC.01 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define GYRO\_CS\_GPIO\_PORT                       GPIOC                       }\textcolor{comment}{/* GPIOC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#define GYRO\_CS\_GPIO\_CLK\_ENABLE()               \_\_HAL\_RCC\_GPIOC\_CLK\_ENABLE()}}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#define GYRO\_CS\_GPIO\_CLK\_DISABLE()              \_\_HAL\_RCC\_GPIOC\_CLK\_DISABLE()}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#define GYRO\_INT\_GPIO\_CLK\_ENABLE()              \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE()}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define GYRO\_INT\_GPIO\_CLK\_DISABLE()             \_\_HAL\_RCC\_GPIOA\_CLK\_DISABLE()}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define GYRO\_INT\_GPIO\_PORT                      GPIOA                       }\textcolor{comment}{/* GPIOA */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define GYRO\_INT1\_PIN                           GPIO\_PIN\_1                  }\textcolor{comment}{/* PA.01 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define GYRO\_INT1\_EXTI\_IRQn                     EXTI1\_IRQn }}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define GYRO\_INT2\_PIN                           GPIO\_PIN\_2                  }\textcolor{comment}{/* PA.02 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define GYRO\_INT2\_EXTI\_IRQn                     EXTI2\_IRQn }}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#ifdef EE\_M24LR64}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA                          DMA1   }}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_CHANNEL                  DMA\_CHANNEL\_3}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_STREAM\_TX                DMA1\_Stream4}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_STREAM\_RX                DMA1\_Stream2}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_CLK\_ENABLE()             \_\_HAL\_RCC\_DMA1\_CLK\_ENABLE()}}
+\DoxyCodeLine{295    }
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_TX\_IRQn                  DMA1\_Stream4\_IRQn}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_RX\_IRQn                  DMA1\_Stream2\_IRQn}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_TX\_IRQHandler            DMA1\_Stream4\_IRQHandler}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_RX\_IRQHandler            DMA1\_Stream2\_IRQHandler}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#define EEPROM\_I2C\_DMA\_PREPRIO                  0x0F}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* EE\_M24LR64 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{317 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga65d13608f7010a8068614154cb142cd6}{BSP\_GetVersion}}(\textcolor{keywordtype}{void});  }
+\DoxyCodeLine{318 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gab58a4f16a476a53653c5c400e3bed158}{BSP\_LED\_Init}}(Led\_TypeDef Led);}
+\DoxyCodeLine{319 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaee9c16b16384834c69efabf58f423d6f}{BSP\_LED\_On}}(Led\_TypeDef Led);}
+\DoxyCodeLine{320 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gaef268680154ca15c45066d64d41f9467}{BSP\_LED\_Off}}(Led\_TypeDef Led);}
+\DoxyCodeLine{321 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga1b9eabba7d498f41d6f16587ec0f9732}{BSP\_LED\_Toggle}}(Led\_TypeDef Led);}
+\DoxyCodeLine{322 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_gad31c8db50a71c1f6dbfe132d72ba0bc6}{BSP\_PB\_Init}}(Button\_TypeDef Button, ButtonMode\_TypeDef ButtonMode);}
+\DoxyCodeLine{323 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___exported___functions_ga8f0978b6cffda9c67266ddfdb3a0abf7}{BSP\_PB\_GetState}}(Button\_TypeDef Button);}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{341 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{342 \}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F429I\_DISCOVERY\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

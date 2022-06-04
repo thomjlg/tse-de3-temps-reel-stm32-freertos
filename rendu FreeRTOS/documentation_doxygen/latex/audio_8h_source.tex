@@ -1,0 +1,44 @@
+\hypertarget{audio_8h_source}{}\doxysection{audio.\+h}
+\label{audio_8h_source}\index{Drivers/BSP/Components/Common/audio.h@{Drivers/BSP/Components/Common/audio.h}}
+\mbox{\hyperlink{audio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_AUDIO\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_AUDIO\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{66 \textcolor{comment}{/* Codec audio Standards */}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define CODEC\_STANDARD                0x04}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define I2S\_STANDARD                  I2S\_STANDARD\_PHILIPS}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{81 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83   uint32\_t  (*Init)(uint16\_t, uint16\_t, uint8\_t, uint32\_t);}
+\DoxyCodeLine{84   void      (*DeInit)(void);}
+\DoxyCodeLine{85   uint32\_t  (*ReadID)(uint16\_t);}
+\DoxyCodeLine{86   uint32\_t  (*Play)(uint16\_t, uint16\_t*, uint16\_t);}
+\DoxyCodeLine{87   uint32\_t  (*Pause)(uint16\_t);}
+\DoxyCodeLine{88   uint32\_t  (*Resume)(uint16\_t);}
+\DoxyCodeLine{89   uint32\_t  (*Stop)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{90   uint32\_t  (*SetFrequency)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{91   uint32\_t  (*SetVolume)(uint16\_t, uint8\_t);}
+\DoxyCodeLine{92   uint32\_t  (*SetMute)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{93   uint32\_t  (*SetOutputMode)(uint16\_t, uint8\_t);}
+\DoxyCodeLine{94   uint32\_t  (*Reset)(uint16\_t);}
+\DoxyCodeLine{95 \}\mbox{\hyperlink{struct_a_u_d_i_o___drv_type_def}{AUDIO\_DrvTypeDef}};}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{117 \}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_AUDIO\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+taskdef.c:24:6:vInitTask	24	static
+taskdef.c:65:6:vTask1a	112	static
+taskdef.c:95:6:vTask1b	160	static
+taskdef.c:130:6:vTask2a	120	static
+taskdef.c:149:6:vTask2b	32	static
+taskdef.c:166:6:vTask3	48	static
+taskdef.c:183:6:vTask4	56	static

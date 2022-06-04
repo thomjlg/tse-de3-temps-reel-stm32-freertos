@@ -1,0 +1,53 @@
+\hypertarget{lcd__log__conf__template_8h_source}{}\doxysection{lcd\+\_\+log\+\_\+conf\+\_\+template.\+h}
+\label{lcd__log__conf__template_8h_source}\index{Utilities/Log/lcd\_log\_conf\_template.h@{Utilities/Log/lcd\_log\_conf\_template.h}}
+\mbox{\hyperlink{lcd__log__conf__template_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{44 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#ifndef  \_\_LCD\_LOG\_CONF\_H\_\_}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define  \_\_LCD\_LOG\_CONF\_H\_\_}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include "{}stm32xxx\_eval\_lcd.h"{}} \textcolor{comment}{/* replace 'stm32xxx' with your EVAL board name, ex: stm324x9i\_eval\_lcd.h */}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{69 \textcolor{comment}{/* Comment the line below to disable the scroll back and forward features */}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define     LCD\_SCROLL\_ENABLED      1 }}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{/* Define the Fonts  */}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define     LCD\_LOG\_HEADER\_FONT                   Font16}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define     LCD\_LOG\_FOOTER\_FONT                   Font12}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define     LCD\_LOG\_TEXT\_FONT                     Font12}}
+\DoxyCodeLine{76             }
+\DoxyCodeLine{77 \textcolor{comment}{/* Define the LCD LOG Color  */}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define     LCD\_LOG\_BACKGROUND\_COLOR              LCD\_COLOR\_WHITE}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define     LCD\_LOG\_TEXT\_COLOR                    LCD\_COLOR\_DARKBLUE}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define     LCD\_LOG\_SOLID\_BACKGROUND\_COLOR        LCD\_COLOR\_BLUE}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define     LCD\_LOG\_SOLID\_TEXT\_COLOR              LCD\_COLOR\_WHITE}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{/* Define the cache depth */}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define     CACHE\_SIZE              100}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define     YWINDOW\_SIZE            17}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#if (YWINDOW\_SIZE > 17)}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{  \#error "{}Wrong YWINDOW SIZE"{}}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{/* Redirect the printf to the LCD */}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#ifdef \_\_GNUC\_\_}}
+\DoxyCodeLine{94 \textcolor{comment}{/* With GCC/RAISONANCE, small printf (option LD Linker-\/>Libraries-\/>Small printf}}
+\DoxyCodeLine{95 \textcolor{comment}{   set to 'Yes') calls \_\_io\_putchar() */}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define LCD\_LOG\_PUTCHAR int \_\_io\_putchar(int ch)}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define LCD\_LOG\_PUTCHAR int fputc(int ch, FILE *f)}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_GNUC\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//\_\_LCD\_LOG\_CONF\_H\_\_}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{146 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

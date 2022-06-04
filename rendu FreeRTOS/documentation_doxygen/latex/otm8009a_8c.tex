@@ -1,0 +1,203 @@
+\hypertarget{otm8009a_8c}{}\doxysection{Drivers/\+BSP/\+Components/otm8009a/otm8009a.c File Reference}
+\label{otm8009a_8c}\index{Drivers/BSP/Components/otm8009a/otm8009a.c@{Drivers/BSP/Components/otm8009a/otm8009a.c}}
+
+
+This file provides the LCD Driver for KoD KM-\/040\+TMP-\/02-\/0621 (WVGA) DSI LCD Display OTM8009A. ~\newline
+  
+
+
+{\ttfamily \#include \char`\"{}otm8009a.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{group___o_t_m8009_a___exported___functions_gae663d792047526399ce1e4a8362f471e}{DSI\+\_\+\+IO\+\_\+\+Write\+Cmd}} (uint32\+\_\+t Nbr\+Params, uint8\+\_\+t $\ast$p\+Params)
+\begin{DoxyCompactList}\small\item\em DSI IO write short/long command. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___o_t_m8009_a___exported___functions_gac8d6505d6bf82df6d41a091c074c5b53}{OTM8009\+A\+\_\+\+Init}} (uint32\+\_\+t Color\+Coding, uint32\+\_\+t orientation)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD KoD display part by communication in DSI mode in Video Mode with IC Display Driver OTM8009A (see IC Driver specification for more information). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data1} \mbox{[}$\,$\mbox{]} = \{0x80,0x09,0x01,0x\+FF\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data2} \mbox{[}$\,$\mbox{]} = \{0x80,0x09,0x\+FF\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data3} \mbox{[}$\,$\mbox{]} = \{0x00,0x09,0x0F,0x0E,0x07,0x10,0x0B,0x0A,0x04,0x07,0x0B,0x08,0x0F,0x10,0x0A,0x01,0x\+E1\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data4} \mbox{[}$\,$\mbox{]} = \{0x00,0x09,0x0F,0x0E,0x07,0x10,0x0B,0x0A,0x04,0x07,0x0B,0x08,0x0F,0x10,0x0A,0x01,0x\+E2\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data5} \mbox{[}$\,$\mbox{]} = \{0x79,0x79,0x\+D8\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data6} \mbox{[}$\,$\mbox{]} = \{0x00,0x01,0x\+B3\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data7} \mbox{[}$\,$\mbox{]} = \{0x85,0x01,0x00,0x84,0x01,0x00,0x\+CE\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data8} \mbox{[}$\,$\mbox{]} = \{0x18,0x04,0x03,0x39,0x00,0x00,0x00,0x18,0x03,0x03,0x3A,0x00,0x00,0x00,0x\+CE\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data9} \mbox{[}$\,$\mbox{]} = \{0x18,0x02,0x03,0x3B,0x00,0x00,0x00,0x18,0x01,0x03,0x3C,0x00,0x00,0x00,0x\+CE\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data10} \mbox{[}$\,$\mbox{]} = \{0x01,0x01,0x20,0x20,0x00,0x00,0x01,0x02,0x00,0x00,0x\+CF\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data11} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data12} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data13} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data14} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data15} \mbox{[}$\,$\mbox{]} = \{0x00,0x04,0x04,0x04,0x04,0x04,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data16} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x04,0x04,0x04,0x04,0x04,0x00,0x00,0x00,0x00,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data17} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data18} \mbox{[}$\,$\mbox{]} = \{0x\+FF,0x\+FF,0x\+FF,0x\+FF,0x\+FF,0x\+FF,0x\+FF,0x\+FF,0x\+FF,0x\+FF,0x\+CB\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data19} \mbox{[}$\,$\mbox{]} = \{0x00,0x26,0x09,0x0B,0x01,0x25,0x00,0x00,0x00,0x00,0x\+CC\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data20} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x26,0x0A,0x0C,0x02,0x\+CC\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data21} \mbox{[}$\,$\mbox{]} = \{0x25,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CC\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data22} \mbox{[}$\,$\mbox{]} = \{0x00,0x25,0x0C,0x0A,0x02,0x26,0x00,0x00,0x00,0x00,0x\+CC\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data23} \mbox{[}$\,$\mbox{]} = \{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x25,0x0B,0x09,0x01,0x\+CC\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data24} \mbox{[}$\,$\mbox{]} = \{0x26,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x\+CC\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data25} \mbox{[}$\,$\mbox{]} = \{0x\+FF,0x\+FF,0x\+FF,0x\+FF\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data27} \mbox{[}$\,$\mbox{]} = \{0x00, 0x00, 0x03, 0x1F, OTM8009\+A\+\_\+\+CMD\+\_\+\+CASET\}
+\item 
+const uint8\+\_\+t {\bfseries lcd\+Reg\+Data28} \mbox{[}$\,$\mbox{]} = \{0x00, 0x00, 0x01, 0x\+DF, OTM8009\+A\+\_\+\+CMD\+\_\+\+PASET\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data1} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x00\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data2} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x80\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data3} \mbox{[}$\,$\mbox{]} = \{0x\+C4, 0x30\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data4} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x8A\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data5} \mbox{[}$\,$\mbox{]} = \{0x\+C4, 0x40\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data6} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+B1\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data7} \mbox{[}$\,$\mbox{]} = \{0x\+C5, 0x\+A9\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data8} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x91\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data9} \mbox{[}$\,$\mbox{]} = \{0x\+C5, 0x34\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data10} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+B4\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data11} \mbox{[}$\,$\mbox{]} = \{0x\+C0, 0x50\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data12} \mbox{[}$\,$\mbox{]} = \{0x\+D9, 0x4E\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data13} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x81\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data14} \mbox{[}$\,$\mbox{]} = \{0x\+C1, 0x66\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data15} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+A1\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data16} \mbox{[}$\,$\mbox{]} = \{0x\+C1, 0x08\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data17} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x92\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data18} \mbox{[}$\,$\mbox{]} = \{0x\+C5, 0x01\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data19} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x95\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data20} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x94\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data21} \mbox{[}$\,$\mbox{]} = \{0x\+C5, 0x33\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data22} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+A3\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data23} \mbox{[}$\,$\mbox{]} = \{0x\+C0, 0x1B\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data24} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x82\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data25} \mbox{[}$\,$\mbox{]} = \{0x\+C5, 0x83\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data26} \mbox{[}$\,$\mbox{]} = \{0x\+C4, 0x83\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data27} \mbox{[}$\,$\mbox{]} = \{0x\+C1, 0x0E\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data28} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+A6\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data29} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+A0\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data30} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+B0\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data31} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+C0\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data32} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+D0\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data33} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x90\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data34} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+E0\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data35} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+F0\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data36} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+SLPOUT, 0x00\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data37} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+COLMOD, OTM8009\+A\+\_\+\+COLMOD\+\_\+\+RGB565\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data38} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+COLMOD, OTM8009\+A\+\_\+\+COLMOD\+\_\+\+RGB888\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data39} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+MADCTR, OTM8009\+A\+\_\+\+MADCTR\+\_\+\+MODE\+\_\+\+LANDSCAPE\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data40} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+WRDISBV, 0x7F\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data41} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+WRCTRLD, 0x2C\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data42} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+WRCABC, 0x02\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data43} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+WRCABCMB, 0x\+FF\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data44} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+DISPON, 0x00\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data45} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+RAMWR, 0x00\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data46} \mbox{[}$\,$\mbox{]} = \{0x\+CF, 0x00\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data47} \mbox{[}$\,$\mbox{]} = \{0x\+C5, 0x66\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data48} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+B6\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data49} \mbox{[}$\,$\mbox{]} = \{0x\+F5, 0x06\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data50} \mbox{[}$\,$\mbox{]} = \{OTM8009\+A\+\_\+\+CMD\+\_\+\+NOP, 0x\+B1\}
+\item 
+const uint8\+\_\+t {\bfseries Short\+Reg\+Data51} \mbox{[}$\,$\mbox{]} = \{0x\+C6, 0x06\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides the LCD Driver for KoD KM-\/040\+TMP-\/02-\/0621 (WVGA) DSI LCD Display OTM8009A. ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27-\/January-\/2017
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

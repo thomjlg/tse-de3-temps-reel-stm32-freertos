@@ -1,0 +1,1071 @@
+\hypertarget{lis3dsh_8h_source}{}\doxysection{lis3dsh.\+h}
+\label{lis3dsh_8h_source}\index{Drivers/BSP/Components/lis3dsh/lis3dsh.h@{Drivers/BSP/Components/lis3dsh/lis3dsh.h}}
+\mbox{\hyperlink{lis3dsh_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_LIS3DSH\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_LIS3DSH\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/accelero.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{65 \textcolor{comment}{/* LIS3DSH struct */}}
+\DoxyCodeLine{66 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{67 \{}
+\DoxyCodeLine{68   uint8\_t Output\_DataRate;              \textcolor{comment}{/* Output Data Rate into CTRL\_REG4 register */}}
+\DoxyCodeLine{69   uint8\_t Axes\_Enable;                  \textcolor{comment}{/* Axes enable into CTRL\_REG4 register */}}
+\DoxyCodeLine{70   uint8\_t SPI\_Wire;                     \textcolor{comment}{/* SPI Wire into CTRL\_REG5 register */}}
+\DoxyCodeLine{71   uint8\_t Self\_Test;                    \textcolor{comment}{/* Self test into CTRL\_REG5 register */}  }
+\DoxyCodeLine{72   uint8\_t Full\_Scale;                   \textcolor{comment}{/* Full scale into CTRL\_REG5 register */}}
+\DoxyCodeLine{73   uint8\_t Filter\_BW;                    \textcolor{comment}{/* Filter BW into CTRL\_REG5 register */}}
+\DoxyCodeLine{74 \}\mbox{\hyperlink{struct_l_i_s3_d_s_h___init_type_def}{LIS3DSH\_InitTypeDef}};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{comment}{/* LIS3DSH Interrupt struct */}}
+\DoxyCodeLine{77 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{78 \{}
+\DoxyCodeLine{79   uint8\_t Interrupt\_Request;            \textcolor{comment}{/* Latch/Pulse Interrupt request into CTRL\_REG3 register */}}
+\DoxyCodeLine{80   uint8\_t Interrupt\_Selection\_Enable;   \textcolor{comment}{/* Interrupt1/2 selection enable into CTRL\_REG3 register */}}
+\DoxyCodeLine{81   uint8\_t Interrupt\_Signal;             \textcolor{comment}{/* Interrupt signal active Low/High into CTRL\_REG3 register */}  }
+\DoxyCodeLine{82   uint8\_t State\_Machine1\_Enable;        \textcolor{comment}{/* State Machine 1 enable/disable into CTRL\_REG1 register */} }
+\DoxyCodeLine{83   uint8\_t State\_Machine1\_Interrupt;     \textcolor{comment}{/* State Machine 1 routed Interrupt into CTRL\_REG1 register */}}
+\DoxyCodeLine{84   uint8\_t State\_Machine2\_Enable;        \textcolor{comment}{/* State Machine 2 enable/disable into CTRL\_REG2 register */}  }
+\DoxyCodeLine{85   uint8\_t State\_Machine2\_Interrupt;     \textcolor{comment}{/* State Machine 2 routed Interrupt into CTRL\_REG1 register */}}
+\DoxyCodeLine{86 \}\mbox{\hyperlink{struct_l_i_s3_d_s_h___interrupt_config_type_def}{LIS3DSH\_InterruptConfigTypeDef}};  }
+\DoxyCodeLine{95 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{96 \textcolor{comment}{/*************************** START REGISTER MAPPING  **************************/}}
+\DoxyCodeLine{97 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{100 \textcolor{comment}{*  OUT\_T Register: Temperature Output Register}}
+\DoxyCodeLine{101 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{102 \textcolor{comment}{*  Default value: 0x21}}
+\DoxyCodeLine{103 \textcolor{comment}{*  7:0 Temp7-\/Temp0: Temperature output Data}}
+\DoxyCodeLine{104 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define LIS3DSH\_OUT\_T\_ADDR                   0x0C}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{108 \textcolor{comment}{*  INFO1 Register: Information Register 1}}
+\DoxyCodeLine{109 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{110 \textcolor{comment}{*  Default value: 0x21}}
+\DoxyCodeLine{111 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define LIS3DSH\_INFO1\_ADDR                   0x0D}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{115 \textcolor{comment}{*  INFO2 Register: Information Register 2}}
+\DoxyCodeLine{116 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{117 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{118 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define LIS3DSH\_INFO2\_ADDR                   0x0E}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{122 \textcolor{comment}{*  WHO\_AM\_I Register: Device Identification Register}}
+\DoxyCodeLine{123 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{124 \textcolor{comment}{*  Default value: 0x3F}}
+\DoxyCodeLine{125 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define LIS3DSH\_WHO\_AM\_I\_ADDR                0x0F}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{129 \textcolor{comment}{*  OFF\_X Register: X-\/axis Offset Compensation Register}}
+\DoxyCodeLine{130 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{131 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{132 \textcolor{comment}{*  7:0 OFFx\_7-\/OFFx\_0: X-\/axis Offset Compensation Value}}
+\DoxyCodeLine{133 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define LIS3DSH\_OFF\_X\_ADDR                   0x10}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{137 \textcolor{comment}{*  OFF\_Y Register: Y-\/axis Offset Compensation Register}}
+\DoxyCodeLine{138 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{139 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{140 \textcolor{comment}{*  7:0 OFFy\_7-\/OFFy\_0: Y-\/axis Offset Compensation Value}}
+\DoxyCodeLine{141 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define LIS3DSH\_OFF\_Y\_ADDR                   0x11}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{145 \textcolor{comment}{*  OFF\_Z Register: Z-\/axis Offset Compensation Register}}
+\DoxyCodeLine{146 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{147 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{148 \textcolor{comment}{*  7:0 OFFz\_7-\/OFFz\_0: Z-\/axis Offset Compensation Value}}
+\DoxyCodeLine{149 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define LIS3DSH\_OFF\_Z\_ADDR                   0x12}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{153 \textcolor{comment}{*  CS\_X Register: X-\/axis Constant Shift Register}}
+\DoxyCodeLine{154 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{155 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{156 \textcolor{comment}{*  7:0 CS\_7-\/CS\_0: X-\/axis Constant Shift Value}}
+\DoxyCodeLine{157 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define LIS3DSH\_CS\_X\_ADDR                    0x13}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{161 \textcolor{comment}{*  CS\_Y Register: Y-\/axis Constant Shift Register}}
+\DoxyCodeLine{162 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{163 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{164 \textcolor{comment}{*  7:0 CS\_7-\/CS\_0: Y-\/axis Constant Shift Value}}
+\DoxyCodeLine{165 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define LIS3DSH\_CS\_Y\_ADDR                    0x14}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{169 \textcolor{comment}{*  CS\_Z Register: Z-\/axis Constant Shift Value Register}}
+\DoxyCodeLine{170 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{171 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{172 \textcolor{comment}{*  7:0 CS\_7-\/CS\_0: Z-\/axis Constant Shift Value}}
+\DoxyCodeLine{173 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define LIS3DSH\_CS\_Z\_ADDR                    0x15}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{177 \textcolor{comment}{*  LC\_L Register: Long Counter Low Register}}
+\DoxyCodeLine{178 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{179 \textcolor{comment}{*  Default value: 0x01}}
+\DoxyCodeLine{180 \textcolor{comment}{*  7:0 LC\_L\_7-\/LC\_L\_0: Long Counter Low Value}}
+\DoxyCodeLine{181 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define LIS3DSH\_LC\_L\_ADDR                    0x16}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{185 \textcolor{comment}{*  LC\_H Register: Long Counter High Register}}
+\DoxyCodeLine{186 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{187 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{188 \textcolor{comment}{*  7:0 LC\_H\_7-\/LC\_H\_0: Long Counter Low Value}}
+\DoxyCodeLine{189 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define LIS3DSH\_LC\_H\_ADDR                    0x17}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{193 \textcolor{comment}{*  STAT Register: State Machine Register}}
+\DoxyCodeLine{194 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{195 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{196 \textcolor{comment}{*  7 LONG: LONG flag common to both State Machines}}
+\DoxyCodeLine{197 \textcolor{comment}{*          0 -\/ no interrupt}}
+\DoxyCodeLine{198 \textcolor{comment}{*          1 -\/ LongCounter interrupt flag}}
+\DoxyCodeLine{199 \textcolor{comment}{*  6 SYNCW: Common information for OUTW host action waiting}}
+\DoxyCodeLine{200 \textcolor{comment}{*           0 -\/ no action waiting from Host}}
+\DoxyCodeLine{201 \textcolor{comment}{*           1 -\/ Host action is waiting after OUTW command}}
+\DoxyCodeLine{202 \textcolor{comment}{*  5 SYNC1: }}
+\DoxyCodeLine{203 \textcolor{comment}{*           0 -\/ State Machine 1 running normally}}
+\DoxyCodeLine{204 \textcolor{comment}{*           1 -\/ SM1 stopped and waiting for restart request from SM2}}
+\DoxyCodeLine{205 \textcolor{comment}{*  4 SYNC2: }}
+\DoxyCodeLine{206 \textcolor{comment}{*           0 -\/ State Machine 2 running normally}}
+\DoxyCodeLine{207 \textcolor{comment}{*           1 -\/ SM2 stopped and waiting for restart request from SM1}}
+\DoxyCodeLine{208 \textcolor{comment}{*  3 INT\_SM1: Interrupt signal on SM1 is reset when OUTS1 register is read  }}
+\DoxyCodeLine{209 \textcolor{comment}{*             0 -\/ no interrupt on State Machine 1 }}
+\DoxyCodeLine{210 \textcolor{comment}{*             1 -\/ State Machine 1 interrupt happened       }}
+\DoxyCodeLine{211 \textcolor{comment}{*  2 INT\_SM2: Interrupt signal on SM2 is reset when OUTS2 register is read  }}
+\DoxyCodeLine{212 \textcolor{comment}{*             0 -\/ no interrupt on State Machine 2 }}
+\DoxyCodeLine{213 \textcolor{comment}{*             1 -\/ State Machine 2 interrupt happened}}
+\DoxyCodeLine{214 \textcolor{comment}{*  1 DOR: Data OverRun bit }}
+\DoxyCodeLine{215 \textcolor{comment}{*         0 -\/ no overrun }}
+\DoxyCodeLine{216 \textcolor{comment}{*         1 -\/ data overrun}}
+\DoxyCodeLine{217 \textcolor{comment}{*  0 DRDY: New data are ready in output registers}}
+\DoxyCodeLine{218 \textcolor{comment}{*         0 -\/ data not ready}}
+\DoxyCodeLine{219 \textcolor{comment}{*         1 -\/ data ready}}
+\DoxyCodeLine{220 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define LIS3DSH\_STAT\_ADDR                    0x18}}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{224 \textcolor{comment}{*  PEAK1 Register: Peak 1 Register}}
+\DoxyCodeLine{225 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{226 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{227 \textcolor{comment}{*  7:0 PKx\_7-\/PKx\_0: Peak 1 Value for SM1}}
+\DoxyCodeLine{228 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{229 \textcolor{preprocessor}{\#define LIS3DSH\_PEAK1\_ADDR                   0x19}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{232 \textcolor{comment}{*  PEAK2 Register: Peak 2 Register}}
+\DoxyCodeLine{233 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{234 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{235 \textcolor{comment}{*  7:0 PKx\_7-\/PKx\_0: Peak 2 value for SM2}}
+\DoxyCodeLine{236 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define LIS3DSH\_PEAK2\_ADDR                   0x1A}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{240 \textcolor{comment}{*  VFC\_1 Register: Vector Filter Coefficient 1 Register}}
+\DoxyCodeLine{241 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{242 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{243 \textcolor{comment}{*  7:0 VFC1\_7-\/VFC1\_0: Vector Filter Coefficient 1 Value}}
+\DoxyCodeLine{244 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#define LIS3DSH\_VFC\_1\_ADDR                   0x1B}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{248 \textcolor{comment}{*  VFC\_2 Register: Vector Filter Coefficient 2 Register}}
+\DoxyCodeLine{249 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{250 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{251 \textcolor{comment}{*  7:0 VFC2\_7-\/VFC2\_0: Vector Filter Coefficient 2 Value}}
+\DoxyCodeLine{252 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#define LIS3DSH\_VFC\_2\_ADDR                   0x1C}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{256 \textcolor{comment}{*  VFC\_3 Register: Vector Filter Coefficient 3 Register}}
+\DoxyCodeLine{257 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{258 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{259 \textcolor{comment}{*  7:0 VFC3\_7-\/VFC3\_0: Vector Filter Coefficient 3 Value}}
+\DoxyCodeLine{260 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define LIS3DSH\_VFC\_3\_ADDR                   0x1D}}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{264 \textcolor{comment}{*  VFC\_4 Register: Vector Filter Coefficient 4 Register}}
+\DoxyCodeLine{265 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{266 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{267 \textcolor{comment}{*  7:0 VFC4\_7-\/VFC4\_0: Vector Filter Coefficient 4 Value}}
+\DoxyCodeLine{268 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#define LIS3DSH\_VFC\_4\_ADDR                   0x1E}}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{271 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{272 \textcolor{comment}{*  THRS3 Register: Threshold Value 3 Register}}
+\DoxyCodeLine{273 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{274 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{275 \textcolor{comment}{*  7:0 THRS3\_7-\/THRS3\_0: Common Threshold for Overrun Detection Value}}
+\DoxyCodeLine{276 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define LIS3DSH\_THRS3\_ADDR                   0x1F}}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{280 \textcolor{comment}{*  CTRL\_REG4 Register: Control Register 4}}
+\DoxyCodeLine{281 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{282 \textcolor{comment}{*  Default value: 0x07}}
+\DoxyCodeLine{283 \textcolor{comment}{*  7:4 ODR3-\/ODR0: Data rate selection}}
+\DoxyCodeLine{284 \textcolor{comment}{*            ODR3 | ODR2 | ODR1 | ORD0 | ORD Selection}}
+\DoxyCodeLine{285 \textcolor{comment}{*            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{286 \textcolor{comment}{*              0  |  0   |  0   |  0   | Power Down (Default)}}
+\DoxyCodeLine{287 \textcolor{comment}{*              0  |  0   |  0   |  1   | 3.125 Hz}}
+\DoxyCodeLine{288 \textcolor{comment}{*              0  |  0   |  1   |  0   | 6.25 Hz}}
+\DoxyCodeLine{289 \textcolor{comment}{*              0  |  0   |  1   |  1   | 12.5 Hz}}
+\DoxyCodeLine{290 \textcolor{comment}{*              0  |  1   |  0   |  0   | 25 Hz}}
+\DoxyCodeLine{291 \textcolor{comment}{*              0  |  1   |  0   |  1   | 50 Hz}}
+\DoxyCodeLine{292 \textcolor{comment}{*              0  |  1   |  1   |  0   | 100 Hz}}
+\DoxyCodeLine{293 \textcolor{comment}{*              0  |  1   |  1   |  1   | 400 Hz}}
+\DoxyCodeLine{294 \textcolor{comment}{*              1  |  0   |  0   |  0   | 800 Hz}}
+\DoxyCodeLine{295 \textcolor{comment}{*              1  |  0   |  0   |  1   | 1600 Hz}}
+\DoxyCodeLine{296 \textcolor{comment}{*}}
+\DoxyCodeLine{297 \textcolor{comment}{*  3 BDU: Block data update}}
+\DoxyCodeLine{298 \textcolor{comment}{*         0: Output register not updated until High and Low reading (Default)}}
+\DoxyCodeLine{299 \textcolor{comment}{*         1: Continuous update}}
+\DoxyCodeLine{300 \textcolor{comment}{*  2 ZEN: }}
+\DoxyCodeLine{301 \textcolor{comment}{*         0: Z-\/axis disable (Default)}}
+\DoxyCodeLine{302 \textcolor{comment}{*         1: Z-\/axis enable}}
+\DoxyCodeLine{303 \textcolor{comment}{*  1 YEN:  }}
+\DoxyCodeLine{304 \textcolor{comment}{*         0: Y-\/axis disable (Default)}}
+\DoxyCodeLine{305 \textcolor{comment}{*         1: Y-\/axis enable}}
+\DoxyCodeLine{306 \textcolor{comment}{*  0 XEN:  }}
+\DoxyCodeLine{307 \textcolor{comment}{*         0: Y-\/axis disable (Default)}}
+\DoxyCodeLine{308 \textcolor{comment}{*         1: Y-\/axis enable}}
+\DoxyCodeLine{309 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define LIS3DSH\_CTRL\_REG4\_ADDR               0x20}}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{313 \textcolor{comment}{*  CTRL\_REG1 Register: Control Register 1 (SM1 interrupt configuration register)}}
+\DoxyCodeLine{314 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{315 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{316 \textcolor{comment}{*  7:5 HYST1\_2-\/HYST1\_0: Hysteresis which is added or subtracted from the  }}
+\DoxyCodeLine{317 \textcolor{comment}{*                       threshold values (THRS1\_1 and THRS2\_1) of SM1.}}
+\DoxyCodeLine{318 \textcolor{comment}{*                       000 = 0 (Default)}}
+\DoxyCodeLine{319 \textcolor{comment}{*                       111 = 7 (maximum Hysteresis)}}
+\DoxyCodeLine{320 \textcolor{comment}{*  4 Reserved}}
+\DoxyCodeLine{321 \textcolor{comment}{*  3 SM1\_INT: }}
+\DoxyCodeLine{322 \textcolor{comment}{*            0: State Machine 1 interrupt routed to INT1 (Default)}}
+\DoxyCodeLine{323 \textcolor{comment}{*            1: State Machine 1 interrupt routed to INT2}}
+\DoxyCodeLine{324 \textcolor{comment}{*  2 Reserved}}
+\DoxyCodeLine{325 \textcolor{comment}{*  1 Reserved}}
+\DoxyCodeLine{326 \textcolor{comment}{*  0 SM1\_EN: }}
+\DoxyCodeLine{327 \textcolor{comment}{*           0: State Machine 1 disabled. Temporary memories and registers }}
+\DoxyCodeLine{328 \textcolor{comment}{*              related to this State Machine are left intact. (Default)}}
+\DoxyCodeLine{329 \textcolor{comment}{*           1: State Machine 1 enabled. }}
+\DoxyCodeLine{330 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define LIS3DSH\_CTRL\_REG1\_ADDR               0x21}}
+\DoxyCodeLine{332 }
+\DoxyCodeLine{333 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{334 \textcolor{comment}{*  CTRL\_REG2 Register: Control Register 2 (SM2 interrupt configuration register)}}
+\DoxyCodeLine{335 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{336 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{337 \textcolor{comment}{*  7:5 HYST2\_2-\/HYST2\_0: Hysteresis which is added or subtracted from the  }}
+\DoxyCodeLine{338 \textcolor{comment}{*                       threshold values (THRS1\_2 and THRS2\_2) of SM1.}}
+\DoxyCodeLine{339 \textcolor{comment}{*                       000 = 0 (Default)}}
+\DoxyCodeLine{340 \textcolor{comment}{*                       111 = 7 (maximum Hysteresis)}}
+\DoxyCodeLine{341 \textcolor{comment}{*  4 Reserved}}
+\DoxyCodeLine{342 \textcolor{comment}{*  3 SM2\_INT: }}
+\DoxyCodeLine{343 \textcolor{comment}{*            0: State Machine 2 interrupt routed to INT1 (Default)}}
+\DoxyCodeLine{344 \textcolor{comment}{*            1: State Machine 2 interrupt routed to INT2}}
+\DoxyCodeLine{345 \textcolor{comment}{*  2 Reserved}}
+\DoxyCodeLine{346 \textcolor{comment}{*  1 Reserved}}
+\DoxyCodeLine{347 \textcolor{comment}{*  0 SM2\_EN: }}
+\DoxyCodeLine{348 \textcolor{comment}{*           0: State Machine 2 disabled. Temporary memories and registers }}
+\DoxyCodeLine{349 \textcolor{comment}{*              related to this State Machine are left intact. (Default)}}
+\DoxyCodeLine{350 \textcolor{comment}{*           1: State Machine 2 enabled. }}
+\DoxyCodeLine{351 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#define LIS3DSH\_CTRL\_REG2\_ADDR               0x22}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{355 \textcolor{comment}{*  CTRL\_REG3 Register: Control Register 3}}
+\DoxyCodeLine{356 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{357 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{358 \textcolor{comment}{*  7 DR\_EN: Data-\/ready interrupt}}
+\DoxyCodeLine{359 \textcolor{comment}{*          0 -\/ Data-\/ready interrupt disabled (Default)}}
+\DoxyCodeLine{360 \textcolor{comment}{*          1 -\/ Data-\/ready interrupt enabled and routed to INT1}}
+\DoxyCodeLine{361 \textcolor{comment}{*  6 IEA:  }}
+\DoxyCodeLine{362 \textcolor{comment}{*         0 -\/ Interrupt signal active LOW (Default)}}
+\DoxyCodeLine{363 \textcolor{comment}{*         1 -\/ Interrupt signal active HIGH}}
+\DoxyCodeLine{364 \textcolor{comment}{*  5 IEL: }}
+\DoxyCodeLine{365 \textcolor{comment}{*         0 -\/ Interrupt latched (Default)}}
+\DoxyCodeLine{366 \textcolor{comment}{*         1 -\/ Interrupt pulsed}}
+\DoxyCodeLine{367 \textcolor{comment}{*  4 INT2\_EN: }}
+\DoxyCodeLine{368 \textcolor{comment}{*             0 -\/ INT2 signal disabled (High-\/Z state) (Default)}}
+\DoxyCodeLine{369 \textcolor{comment}{*             1 -\/ INT2 signal enabled (signal pin fully functional)}}
+\DoxyCodeLine{370 \textcolor{comment}{*  3 INT1\_EN:  }}
+\DoxyCodeLine{371 \textcolor{comment}{*             0 -\/ INT1 (DRDY) signal disabled (High-\/Z state) (Default)}}
+\DoxyCodeLine{372 \textcolor{comment}{*             1 -\/ INT1 (DRDY) signal enabled (signal pin fully functional) DR\_EN bit in CTRL\_REG3 register should be taken into account too}}
+\DoxyCodeLine{373 \textcolor{comment}{*  2 VLIFT:  }}
+\DoxyCodeLine{374 \textcolor{comment}{*           0 -\/ Vector filter disabled (Default)}}
+\DoxyCodeLine{375 \textcolor{comment}{*           1 -\/ Vector filter enabled}}
+\DoxyCodeLine{376 \textcolor{comment}{*  1 Reserved  }}
+\DoxyCodeLine{377 \textcolor{comment}{*  0 STRT: Soft Reset  }}
+\DoxyCodeLine{378 \textcolor{comment}{*          0 -\/ (Default)}}
+\DoxyCodeLine{379 \textcolor{comment}{*          1 -\/ it resets the whole internal logic circuitry. It automatically returns to 0.}}
+\DoxyCodeLine{380 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#define LIS3DSH\_CTRL\_REG3\_ADDR               0x23              }}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{384 \textcolor{comment}{*  CTRL\_REG5 Register: Control Register 5}}
+\DoxyCodeLine{385 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{386 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{387 \textcolor{comment}{*  7:6 BW2-\/BW1: Anti aliasing filter bandwidth}}
+\DoxyCodeLine{388 \textcolor{comment}{*            BW2 | BW1 | BW Selection}}
+\DoxyCodeLine{389 \textcolor{comment}{*            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{390 \textcolor{comment}{*             0  |  0  | 800 Hz (Default)}}
+\DoxyCodeLine{391 \textcolor{comment}{*             0  |  1  | 40 Hz}}
+\DoxyCodeLine{392 \textcolor{comment}{*             1  |  0  | 200 Hz}}
+\DoxyCodeLine{393 \textcolor{comment}{*             1  |  1  | 50 Hz}}
+\DoxyCodeLine{394 \textcolor{comment}{*}}
+\DoxyCodeLine{395 \textcolor{comment}{*  5:3 FSCALE2-\/FSCALE0: Full scale selection}}
+\DoxyCodeLine{396 \textcolor{comment}{*            FSCALE2 | FSCALE1 | FSCALE0 | Full scale selection}}
+\DoxyCodeLine{397 \textcolor{comment}{*            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{398 \textcolor{comment}{*               0    |    0    |    0    | +/-\/2g (Default)}}
+\DoxyCodeLine{399 \textcolor{comment}{*               0    |    0    |    1    | +/-\/4g}}
+\DoxyCodeLine{400 \textcolor{comment}{*               0    |    1    |    0    | +/-\/6g}}
+\DoxyCodeLine{401 \textcolor{comment}{*               0    |    1    |    1    | +/-\/8g}}
+\DoxyCodeLine{402 \textcolor{comment}{*               1    |    0    |    0    | +/-\/16g}}
+\DoxyCodeLine{403 \textcolor{comment}{*}}
+\DoxyCodeLine{404 \textcolor{comment}{*  2:1 ST2\_ST1: Self-\/test Enable}}
+\DoxyCodeLine{405 \textcolor{comment}{*            ST2 | ST1 | ST Selection}}
+\DoxyCodeLine{406 \textcolor{comment}{*            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{407 \textcolor{comment}{*             0  |  0  | Normal Mode (Default)}}
+\DoxyCodeLine{408 \textcolor{comment}{*             0  |  1  | Positive sign self-\/test}}
+\DoxyCodeLine{409 \textcolor{comment}{*             1  |  0  | Negative sign-\/test}}
+\DoxyCodeLine{410 \textcolor{comment}{*             1  |  1  | Not Allowed}}
+\DoxyCodeLine{411 \textcolor{comment}{*}}
+\DoxyCodeLine{412 \textcolor{comment}{*  0 SIM: SPI serial internal interface mode selection  }}
+\DoxyCodeLine{413 \textcolor{comment}{*         0: 4-\/wire interface (Default)}}
+\DoxyCodeLine{414 \textcolor{comment}{*         1: 3-\/wire interface}}
+\DoxyCodeLine{415 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{\#define LIS3DSH\_CTRL\_REG5\_ADDR               0x24}}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{419 \textcolor{comment}{*  CTRL\_REG6 Register: Control Register 6}}
+\DoxyCodeLine{420 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{421 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{422 \textcolor{comment}{*  7 BOOT: Force reboot, cleared as soon as the reboot is finished. Active High. }}
+\DoxyCodeLine{423 \textcolor{comment}{*  6 FIFO\_EN: FIFO Enable }}
+\DoxyCodeLine{424 \textcolor{comment}{*             0: disable (Default)}}
+\DoxyCodeLine{425 \textcolor{comment}{*             1: enable}}
+\DoxyCodeLine{426 \textcolor{comment}{*  5 STP\_WTM: Stop on Watermark -\/ FIFO depth can be limited at the Watermark value, by setting to “1” the STP\_WTM bit. }}
+\DoxyCodeLine{427 \textcolor{comment}{*             0: disable (Default)}}
+\DoxyCodeLine{428 \textcolor{comment}{*             1: enable}}
+\DoxyCodeLine{429 \textcolor{comment}{*  4 IF\_ADD\_INC: Register address automatically increased during a multiple byte access with a serial interface (I2C or SPI)}}
+\DoxyCodeLine{430 \textcolor{comment}{*                0: disable (Default)}}
+\DoxyCodeLine{431 \textcolor{comment}{*                1: enable}}
+\DoxyCodeLine{432 \textcolor{comment}{*  3 I1\_EMPTY: Enable FIFO Empty indication on INT1 pin.}}
+\DoxyCodeLine{433 \textcolor{comment}{*              0: disable (Default)}}
+\DoxyCodeLine{434 \textcolor{comment}{*              1: enable}}
+\DoxyCodeLine{435 \textcolor{comment}{*  2 I1\_WTM: FIFO Watermark interrupt on INT1 pin.}}
+\DoxyCodeLine{436 \textcolor{comment}{*            0: disable (Default)}}
+\DoxyCodeLine{437 \textcolor{comment}{*            1: enable}}
+\DoxyCodeLine{438 \textcolor{comment}{*  1 I1\_OVERRUN: FIFO Overrun interrupt on INT1 pin.}}
+\DoxyCodeLine{439 \textcolor{comment}{*                0: disable (Default)}}
+\DoxyCodeLine{440 \textcolor{comment}{*                1: enable}}
+\DoxyCodeLine{441 \textcolor{comment}{*  0 I2\_BOOT: BOOT interrupt on INT2 pin. }}
+\DoxyCodeLine{442 \textcolor{comment}{*                0: disable (Default)}}
+\DoxyCodeLine{443 \textcolor{comment}{*                1: enable}}
+\DoxyCodeLine{444 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{445 \textcolor{preprocessor}{\#define LIS3DSH\_CTRL\_REG6\_ADDR               0x25}}
+\DoxyCodeLine{446 }
+\DoxyCodeLine{447 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{448 \textcolor{comment}{*  STATUS Register: Status Data Register}}
+\DoxyCodeLine{449 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{450 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{451 \textcolor{comment}{*  7 ZYXOR: X, Y and Z-\/axis Data Overrun.  }}
+\DoxyCodeLine{452 \textcolor{comment}{*           0: no Overrun has occurred (Default)}}
+\DoxyCodeLine{453 \textcolor{comment}{*           1: a new set of data has overwritten the previous ones}}
+\DoxyCodeLine{454 \textcolor{comment}{*  6 ZOR: Z-\/axis Data Overrun.  }}
+\DoxyCodeLine{455 \textcolor{comment}{*         0: no Overrun has occurred (Default)}}
+\DoxyCodeLine{456 \textcolor{comment}{*         1: a new data for the Z-\/axis has overwritten the previous ones}}
+\DoxyCodeLine{457 \textcolor{comment}{*  5 YOR: Y-\/axis Data Overrun.  }}
+\DoxyCodeLine{458 \textcolor{comment}{*         0: no Overrun has occurred (Default)}}
+\DoxyCodeLine{459 \textcolor{comment}{*         1: a new data for the Y-\/axis has overwritten the previous ones}}
+\DoxyCodeLine{460 \textcolor{comment}{*  4 XOR: X-\/axis Data Overrun.  }}
+\DoxyCodeLine{461 \textcolor{comment}{*         0: no Overrun has occurred (Default)}}
+\DoxyCodeLine{462 \textcolor{comment}{*         1: a new data for the X-\/axis has overwritten the previous ones}}
+\DoxyCodeLine{463 \textcolor{comment}{*  3 ZYXDA: X, Y and Z-\/axis new Data Available.  }}
+\DoxyCodeLine{464 \textcolor{comment}{*           0: a new set of data is not yet available (Default)}}
+\DoxyCodeLine{465 \textcolor{comment}{*           1: a new set of data is available}}
+\DoxyCodeLine{466 \textcolor{comment}{*  2 ZDA: Z-\/axis new data available.  }}
+\DoxyCodeLine{467 \textcolor{comment}{*         0: a new data for the Z-\/axis is not yet available (Default)}}
+\DoxyCodeLine{468 \textcolor{comment}{*         1: a new data for Z-\/axis is available}}
+\DoxyCodeLine{469 \textcolor{comment}{*  1 YDA: Y-\/axis new data available.  }}
+\DoxyCodeLine{470 \textcolor{comment}{*         0: a new data for the Y-\/axis is not yet available (Default)}}
+\DoxyCodeLine{471 \textcolor{comment}{*         1: a new data for Y-\/axis is available}}
+\DoxyCodeLine{472 \textcolor{comment}{*  0 XDA: X-\/axis new data available.  }}
+\DoxyCodeLine{473 \textcolor{comment}{*         0: a new data for the X-\/axis is not yet available (Default)}}
+\DoxyCodeLine{474 \textcolor{comment}{*         1: a new data for X-\/axis is available}}
+\DoxyCodeLine{475 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#define LIS3DSH\_STATUS\_ADDR                  0x27}}
+\DoxyCodeLine{477 }
+\DoxyCodeLine{478 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{479 \textcolor{comment}{*  OUT\_X\_L Register: X-\/axis Output Acceleration Low Data}}
+\DoxyCodeLine{480 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{481 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{482 \textcolor{comment}{*  7:0 XD7-\/XD0: X-\/axis output Data}}
+\DoxyCodeLine{483 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{484 \textcolor{preprocessor}{\#define LIS3DSH\_OUT\_X\_L\_ADDR                 0x28}}
+\DoxyCodeLine{485 }
+\DoxyCodeLine{486 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{487 \textcolor{comment}{*  OUT\_X\_H Register: X-\/axis Output Acceleration High Data}}
+\DoxyCodeLine{488 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{489 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{490 \textcolor{comment}{*  15:8 XD15-\/XD8: X-\/axis output Data}}
+\DoxyCodeLine{491 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{492 \textcolor{preprocessor}{\#define LIS3DSH\_OUT\_X\_H\_ADDR                 0x29}}
+\DoxyCodeLine{493 }
+\DoxyCodeLine{494 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{495 \textcolor{comment}{*  OUT\_Y\_L Register: Y-\/axis Output Acceleration Low Data}}
+\DoxyCodeLine{496 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{497 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{498 \textcolor{comment}{*  7:0 YD7-\/YD0: Y-\/axis output Data}}
+\DoxyCodeLine{499 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{500 \textcolor{preprocessor}{\#define LIS3DSH\_OUT\_Y\_L\_ADDR                 0x2A}}
+\DoxyCodeLine{501 }
+\DoxyCodeLine{502 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{503 \textcolor{comment}{*  OUT\_Y\_H Register: Y-\/axis Output Acceleration High Data}}
+\DoxyCodeLine{504 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{505 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{506 \textcolor{comment}{*  15:8 YD15-\/YD8: Y-\/axis output Data}}
+\DoxyCodeLine{507 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{508 \textcolor{preprocessor}{\#define LIS3DSH\_OUT\_Y\_H\_ADDR                 0x2B}}
+\DoxyCodeLine{509 }
+\DoxyCodeLine{510 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{511 \textcolor{comment}{*  OUT\_Z\_L Register: Z-\/axis Output Acceleration Low Data}}
+\DoxyCodeLine{512 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{513 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{514 \textcolor{comment}{*  7:0 ZD7-\/ZD0: Z-\/axis output Data}}
+\DoxyCodeLine{515 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{516 \textcolor{preprocessor}{\#define LIS3DSH\_OUT\_Z\_L\_ADDR                 0x2C}}
+\DoxyCodeLine{517 }
+\DoxyCodeLine{518 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{519 \textcolor{comment}{*  OUT\_Z\_H Register: Z-\/axis Output Acceleration High Data}}
+\DoxyCodeLine{520 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{521 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{522 \textcolor{comment}{*  15:8 ZD15-\/ZD8: Z-\/axis output Data}}
+\DoxyCodeLine{523 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{524 \textcolor{preprocessor}{\#define LIS3DSH\_OUT\_Z\_H\_ADDR                 0x2D}}
+\DoxyCodeLine{525 }
+\DoxyCodeLine{526 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{527 \textcolor{comment}{*  FIFO\_CTRL Register: FIFO Control Register}}
+\DoxyCodeLine{528 \textcolor{comment}{*  Read/Write register}}
+\DoxyCodeLine{529 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{530 \textcolor{comment}{*  7:5 FMODE2-\/FMODE0: FIFO mode}}
+\DoxyCodeLine{531 \textcolor{comment}{*        FMODE2 | FMODE1 | FMODE0 | Mode description}}
+\DoxyCodeLine{532 \textcolor{comment}{*        -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{533 \textcolor{comment}{*          0    |    0   |    0   | Bypass mode. FIFO turned off. (Default)}}
+\DoxyCodeLine{534 \textcolor{comment}{*          0    |    0   |    1   | FIFO mode. Stop collecting data when FIFO is full.}}
+\DoxyCodeLine{535 \textcolor{comment}{*          0    |    1   |    0   | Stream mode. If the FIFO is full, the new sample overwrites the older one (circular buffer). }}
+\DoxyCodeLine{536 \textcolor{comment}{*          0    |    1   |    1   | Stream mode until trigger is de-\/asserted, then FIFO mode.}}
+\DoxyCodeLine{537 \textcolor{comment}{*          1    |    0   |    0   | Bypass mode until trigger is de-\/asserted, then Stream mode.}}
+\DoxyCodeLine{538 \textcolor{comment}{*          1    |    0   |    1   | Not to use.}}
+\DoxyCodeLine{539 \textcolor{comment}{*          1    |    1   |    0   | Not to use. }}
+\DoxyCodeLine{540 \textcolor{comment}{*          1    |    1   |    1   | Bypass mode until trigger is de-\/asserted, then FIFO mode.}}
+\DoxyCodeLine{541 \textcolor{comment}{*}}
+\DoxyCodeLine{542 \textcolor{comment}{*  4:0 WTMP4-\/WTMP0: FIFO Watermark pointer. It is the FIFO depth when the Watermark is enabled}}
+\DoxyCodeLine{543 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{544 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_CTRL\_ADDR               0x2E}}
+\DoxyCodeLine{545 }
+\DoxyCodeLine{546 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{547 \textcolor{comment}{*  FIFO\_SRC Register: FIFO Source Register}}
+\DoxyCodeLine{548 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{549 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{550 \textcolor{comment}{*  7 WTM: Watermark status.  }}
+\DoxyCodeLine{551 \textcolor{comment}{*         0: FIFO filling is lower than WTM level (Default)}}
+\DoxyCodeLine{552 \textcolor{comment}{*         1: FIFO filling is equal or higher than WTM level }}
+\DoxyCodeLine{553 \textcolor{comment}{*  6 OVRN\_FIFO: Overrun bit status.  }}
+\DoxyCodeLine{554 \textcolor{comment}{*               0: FIFO is not completely filled (Default)}}
+\DoxyCodeLine{555 \textcolor{comment}{*               1: FIFO is completely filled}}
+\DoxyCodeLine{556 \textcolor{comment}{*  5 EMPTY: Overrun bit status.  }}
+\DoxyCodeLine{557 \textcolor{comment}{*           0: FIFO not empty (Default)}}
+\DoxyCodeLine{558 \textcolor{comment}{*           1: FIFO empty}}
+\DoxyCodeLine{559 \textcolor{comment}{*  4:0 FSS: Number of samples stored in the FIFO -\/ 1}}
+\DoxyCodeLine{560 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{561 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_SRC\_ADDR                0x2F}}
+\DoxyCodeLine{562 }
+\DoxyCodeLine{563 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{564 \textcolor{comment}{*  ST1\_X Register: State Machine 1 Code Registers}}
+\DoxyCodeLine{565 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{566 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{567 \textcolor{comment}{*  7:0 ST1\_7-\/ST1\_0: State Machine 1 Code Registers}}
+\DoxyCodeLine{568 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{569 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_1\_ADDR                   0x40}}
+\DoxyCodeLine{570 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_2\_ADDR                   0x41}}
+\DoxyCodeLine{571 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_3\_ADDR                   0x42}}
+\DoxyCodeLine{572 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_4\_ADDR                   0x43}}
+\DoxyCodeLine{573 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_5\_ADDR                   0x44}}
+\DoxyCodeLine{574 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_6\_ADDR                   0x45}}
+\DoxyCodeLine{575 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_7\_ADDR                   0x46}}
+\DoxyCodeLine{576 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_8\_ADDR                   0x47}}
+\DoxyCodeLine{577 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_9\_ADDR                   0x48}}
+\DoxyCodeLine{578 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_10\_ADDR                  0x49}}
+\DoxyCodeLine{579 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_11\_ADDR                  0x4A}}
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_12\_ADDR                  0x4B}}
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_13\_ADDR                  0x4C}}
+\DoxyCodeLine{582 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_14\_ADDR                  0x4D}}
+\DoxyCodeLine{583 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_15\_ADDR                  0x4E}}
+\DoxyCodeLine{584 \textcolor{preprocessor}{\#define LIS3DSH\_ST1\_16\_ADDR                  0x4F}}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{586 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{587 \textcolor{comment}{*  TIM4\_1 Register: SM1 General Timer 4 Register}}
+\DoxyCodeLine{588 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{589 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{590 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM1 Timer 4 Counter 1 Value}}
+\DoxyCodeLine{591 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{592 \textcolor{preprocessor}{\#define LIS3DSH\_TIM4\_1\_ADDR                  0x50}}
+\DoxyCodeLine{593 }
+\DoxyCodeLine{594 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{595 \textcolor{comment}{*  TIM3\_1 Register: SM1 General Timer 3 Register}}
+\DoxyCodeLine{596 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{597 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{598 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM1 Timer 3 Counter 1 Value}}
+\DoxyCodeLine{599 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{600 \textcolor{preprocessor}{\#define LIS3DSH\_TIM3\_1\_ADDR                  0x51 }}
+\DoxyCodeLine{601 }
+\DoxyCodeLine{602 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{603 \textcolor{comment}{*  TIM2\_1\_L Register: SM1 General Timer 2 Low Register}}
+\DoxyCodeLine{604 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{605 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{606 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM1 Timer 2 Counter 1 Low Value}}
+\DoxyCodeLine{607 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{608 \textcolor{preprocessor}{\#define LIS3DSH\_TIM2\_1\_L\_ADDR                0x52 }}
+\DoxyCodeLine{609 }
+\DoxyCodeLine{610 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{611 \textcolor{comment}{*  TIM2\_1\_H Register: SM1 General Timer 2 High Register}}
+\DoxyCodeLine{612 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{613 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{614 \textcolor{comment}{*  15:8 TM\_15-\/TM\_8: SM1 Timer 2 Counter 1 High Value}}
+\DoxyCodeLine{615 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{616 \textcolor{preprocessor}{\#define LIS3DSH\_TIM2\_1\_H\_ADDR                0x53 }}
+\DoxyCodeLine{617 }
+\DoxyCodeLine{618 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{619 \textcolor{comment}{*  TIM1\_1\_L Register: SM1 General Timer 1 Low Register}}
+\DoxyCodeLine{620 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{621 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{622 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM1 Timer 1 Counter 1 Low Value}}
+\DoxyCodeLine{623 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{624 \textcolor{preprocessor}{\#define LIS3DSH\_TIM1\_1\_L\_ADDR                0x54}}
+\DoxyCodeLine{625 }
+\DoxyCodeLine{626 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{627 \textcolor{comment}{*  TIM1\_1\_H Register: SM1 General Timer 1 High Register}}
+\DoxyCodeLine{628 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{629 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{630 \textcolor{comment}{*  15:8 TM\_15-\/TM\_8: SM1 Timer 1 Counter 1 High Value}}
+\DoxyCodeLine{631 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{632 \textcolor{preprocessor}{\#define LIS3DSH\_TIM1\_1\_H\_ADDR                0x55}}
+\DoxyCodeLine{633 }
+\DoxyCodeLine{634 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{635 \textcolor{comment}{*  THRS2\_1 Register: SM1 Threshold Value 1 Register}}
+\DoxyCodeLine{636 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{637 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{638 \textcolor{comment}{*  7:0 THS7-\/THS0: SM1 Threshold Value 1}}
+\DoxyCodeLine{639 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{640 \textcolor{preprocessor}{\#define LIS3DSH\_THRS2\_1\_ADDR                 0x56}}
+\DoxyCodeLine{641 }
+\DoxyCodeLine{642 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{643 \textcolor{comment}{*  THRS1\_1 Register: SM1 Threshold Value 2 Register}}
+\DoxyCodeLine{644 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{645 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{646 \textcolor{comment}{*  7:0 THS7-\/THS0: SM1 Threshold Value 2}}
+\DoxyCodeLine{647 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{648 \textcolor{preprocessor}{\#define LIS3DSH\_THRS1\_1\_ADDR                 0x57}}
+\DoxyCodeLine{649 }
+\DoxyCodeLine{650 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{651 \textcolor{comment}{*  MASK1\_B Register: SM1 Swap Axis and Sign Mask Register}}
+\DoxyCodeLine{652 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{653 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{654 \textcolor{comment}{*  7 P\_X: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{655 \textcolor{comment}{*         0: X+ disabled }}
+\DoxyCodeLine{656 \textcolor{comment}{*         1: X+ enabled}}
+\DoxyCodeLine{657 \textcolor{comment}{*  6 N\_X: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{658 \textcolor{comment}{*         0: X-\/ disabled }}
+\DoxyCodeLine{659 \textcolor{comment}{*         1: X-\/ enabled}}
+\DoxyCodeLine{660 \textcolor{comment}{*  5 P\_Y: Y-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{661 \textcolor{comment}{*         0: Y+ disabled }}
+\DoxyCodeLine{662 \textcolor{comment}{*         1: Y+ enabled}}
+\DoxyCodeLine{663 \textcolor{comment}{*  4 N\_Y: Y-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{664 \textcolor{comment}{*         0: Y-\/ disabled }}
+\DoxyCodeLine{665 \textcolor{comment}{*         1: Y-\/ enabled}}
+\DoxyCodeLine{666 \textcolor{comment}{*  3 P\_Z: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{667 \textcolor{comment}{*         0: Z+ disabled }}
+\DoxyCodeLine{668 \textcolor{comment}{*         1: Z+ enabled}}
+\DoxyCodeLine{669 \textcolor{comment}{*  2 N\_Z: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{670 \textcolor{comment}{*         0: Z-\/ disabled }}
+\DoxyCodeLine{671 \textcolor{comment}{*         1: Z-\/ enabled}}
+\DoxyCodeLine{672 \textcolor{comment}{*  1 P\_V: }}
+\DoxyCodeLine{673 \textcolor{comment}{*         0: V+ disabled }}
+\DoxyCodeLine{674 \textcolor{comment}{*         1: V+ enabled}}
+\DoxyCodeLine{675 \textcolor{comment}{*  0 N\_V:  }}
+\DoxyCodeLine{676 \textcolor{comment}{*         0: V-\/ disabled }}
+\DoxyCodeLine{677 \textcolor{comment}{*         1: V-\/ enabled}}
+\DoxyCodeLine{678 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{679 \textcolor{preprocessor}{\#define LIS3DSH\_MASK1\_B\_ADDR                 0x59}}
+\DoxyCodeLine{680 }
+\DoxyCodeLine{681 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{682 \textcolor{comment}{*  MASK1\_A Register: SM1 Default Axis and Sign Mask Register}}
+\DoxyCodeLine{683 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{684 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{685 \textcolor{comment}{*  7 P\_X: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{686 \textcolor{comment}{*         0: X+ disabled }}
+\DoxyCodeLine{687 \textcolor{comment}{*         1: X+ enabled}}
+\DoxyCodeLine{688 \textcolor{comment}{*  6 N\_X: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{689 \textcolor{comment}{*         0: X-\/ disabled }}
+\DoxyCodeLine{690 \textcolor{comment}{*         1: X-\/ enabled}}
+\DoxyCodeLine{691 \textcolor{comment}{*  5 P\_Y: Y-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{692 \textcolor{comment}{*         0: Y+ disabled }}
+\DoxyCodeLine{693 \textcolor{comment}{*         1: Y+ enabled}}
+\DoxyCodeLine{694 \textcolor{comment}{*  4 N\_Y: Y-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{695 \textcolor{comment}{*         0: Y-\/ disabled }}
+\DoxyCodeLine{696 \textcolor{comment}{*         1: Y-\/ enabled}}
+\DoxyCodeLine{697 \textcolor{comment}{*  3 P\_Z: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{698 \textcolor{comment}{*         0: Z+ disabled }}
+\DoxyCodeLine{699 \textcolor{comment}{*         1: Z+ enabled}}
+\DoxyCodeLine{700 \textcolor{comment}{*  2 N\_Z: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{701 \textcolor{comment}{*         0: Z-\/ disabled }}
+\DoxyCodeLine{702 \textcolor{comment}{*         1: Z-\/ enabled}}
+\DoxyCodeLine{703 \textcolor{comment}{*  1 P\_V: }}
+\DoxyCodeLine{704 \textcolor{comment}{*         0: V+ disabled }}
+\DoxyCodeLine{705 \textcolor{comment}{*         1: V+ enabled}}
+\DoxyCodeLine{706 \textcolor{comment}{*  0 N\_V:  }}
+\DoxyCodeLine{707 \textcolor{comment}{*         0: V-\/ disabled }}
+\DoxyCodeLine{708 \textcolor{comment}{*         1: V-\/ enabled}}
+\DoxyCodeLine{709 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{710 \textcolor{preprocessor}{\#define LIS3DSH\_MASK1\_A\_ADDR                 0x5A}}
+\DoxyCodeLine{711 }
+\DoxyCodeLine{712 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{713 \textcolor{comment}{*  SETT1 Register: SM1 Detection Settings Register}}
+\DoxyCodeLine{714 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{715 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{716 \textcolor{comment}{*  7 P\_DET: SM1 peak detection bit }}
+\DoxyCodeLine{717 \textcolor{comment}{*           0: peak detection disabled (Default) }}
+\DoxyCodeLine{718 \textcolor{comment}{*           1: peak detection enabled}}
+\DoxyCodeLine{719 \textcolor{comment}{*  6 THR3\_SA:  }}
+\DoxyCodeLine{720 \textcolor{comment}{*             0: no action (Default)}}
+\DoxyCodeLine{721 \textcolor{comment}{*             1: threshold 3 enabled for axis and sign mask reset (MASK1\_B)}}
+\DoxyCodeLine{722 \textcolor{comment}{*  5 ABS:  }}
+\DoxyCodeLine{723 \textcolor{comment}{*         0: unsigned thresholds THRSx (Default)}}
+\DoxyCodeLine{724 \textcolor{comment}{*         1: signed thresholds THRSx}}
+\DoxyCodeLine{725 \textcolor{comment}{*  4 Reserved}}
+\DoxyCodeLine{726 \textcolor{comment}{*  3 Reserved}}
+\DoxyCodeLine{727 \textcolor{comment}{*  2 THR3\_MA:  }}
+\DoxyCodeLine{728 \textcolor{comment}{*             0: no action (Default)}}
+\DoxyCodeLine{729 \textcolor{comment}{*             1: threshold 3 enabled for axis and sign mask reset (MASK1\_A)}}
+\DoxyCodeLine{730 \textcolor{comment}{*  1 R\_TAM: Next condition validation flag}}
+\DoxyCodeLine{731 \textcolor{comment}{*           0: mask frozen on the axis that triggers the condition (Default)}}
+\DoxyCodeLine{732 \textcolor{comment}{*           1: standard mask always evaluated}}
+\DoxyCodeLine{733 \textcolor{comment}{*  0 SITR:  }}
+\DoxyCodeLine{734 \textcolor{comment}{*          0: no actions (Default) }}
+\DoxyCodeLine{735 \textcolor{comment}{*          1: STOP and CONT commands generate an interrupt and perform output }}
+\DoxyCodeLine{736 \textcolor{comment}{*             actions as OUTC command.}}
+\DoxyCodeLine{737 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{738 \textcolor{preprocessor}{\#define LIS3DSH\_SETT1\_ADDR                   0x5B}}
+\DoxyCodeLine{739 }
+\DoxyCodeLine{740 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{741 \textcolor{comment}{*  PR1 Register: SM1 Program and Reset Pointers Register}}
+\DoxyCodeLine{742 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{743 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{744 \textcolor{comment}{*  7:4 PP3-\/PP0: SM1 program pointer address}}
+\DoxyCodeLine{745 \textcolor{comment}{*  3:0 RP3-\/RP0: SM1 reset pointer address}}
+\DoxyCodeLine{746 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{747 \textcolor{preprocessor}{\#define LIS3DSH\_PR1\_ADDR                     0x5C}}
+\DoxyCodeLine{748 }
+\DoxyCodeLine{749 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{750 \textcolor{comment}{*  TC1\_L Register: SM1 General Timer Counter Low Register}}
+\DoxyCodeLine{751 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{752 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{753 \textcolor{comment}{*  7:0 TC1\_7-\/TC1\_0: SM1 General Timer Counter Low Value}}
+\DoxyCodeLine{754 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{755 \textcolor{preprocessor}{\#define LIS3DSH\_TC1\_L\_ADDR                   0x5D}}
+\DoxyCodeLine{756 }
+\DoxyCodeLine{757 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{758 \textcolor{comment}{*  TC1\_H Register: SM1 General Timer Counter High Register}}
+\DoxyCodeLine{759 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{760 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{761 \textcolor{comment}{*  15:8 TC1\_15-\/TC1\_8: SM1 General Timer Counter High Value}}
+\DoxyCodeLine{762 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{763 \textcolor{preprocessor}{\#define LIS3DSH\_TC1\_H\_ADDR                   0x5E}}
+\DoxyCodeLine{764 }
+\DoxyCodeLine{765 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{766 \textcolor{comment}{*  OUTS1 Register: SM1 Output Set Flag Register}}
+\DoxyCodeLine{767 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{768 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{769 \textcolor{comment}{*  7 P\_X: }}
+\DoxyCodeLine{770 \textcolor{comment}{*         0: X+ noshow }}
+\DoxyCodeLine{771 \textcolor{comment}{*         1: X+ show}}
+\DoxyCodeLine{772 \textcolor{comment}{*  6 N\_X: }}
+\DoxyCodeLine{773 \textcolor{comment}{*         0: X-\/ noshow}}
+\DoxyCodeLine{774 \textcolor{comment}{*         1: X-\/ show}}
+\DoxyCodeLine{775 \textcolor{comment}{*  5 P\_Y:  }}
+\DoxyCodeLine{776 \textcolor{comment}{*         0: Y+ noshow }}
+\DoxyCodeLine{777 \textcolor{comment}{*         1: Y+ show}}
+\DoxyCodeLine{778 \textcolor{comment}{*  4 N\_Y:  }}
+\DoxyCodeLine{779 \textcolor{comment}{*         0: Y-\/ noshow}}
+\DoxyCodeLine{780 \textcolor{comment}{*         1: Y-\/ show}}
+\DoxyCodeLine{781 \textcolor{comment}{*  3 P\_Z:  }}
+\DoxyCodeLine{782 \textcolor{comment}{*         0: Z+ noshow }}
+\DoxyCodeLine{783 \textcolor{comment}{*         1: Z+ show}}
+\DoxyCodeLine{784 \textcolor{comment}{*  2 N\_Z:  }}
+\DoxyCodeLine{785 \textcolor{comment}{*         0: Z-\/ noshow}}
+\DoxyCodeLine{786 \textcolor{comment}{*         1: Z-\/ show}}
+\DoxyCodeLine{787 \textcolor{comment}{*  1 P\_V: }}
+\DoxyCodeLine{788 \textcolor{comment}{*         0: V+ noshow}}
+\DoxyCodeLine{789 \textcolor{comment}{*         1: V+ show}}
+\DoxyCodeLine{790 \textcolor{comment}{*  0 N\_V:  }}
+\DoxyCodeLine{791 \textcolor{comment}{*         0: V-\/ noshow}}
+\DoxyCodeLine{792 \textcolor{comment}{*         1: V-\/ show}}
+\DoxyCodeLine{793 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{794 \textcolor{preprocessor}{\#define LIS3DSH\_OUTS1\_ADDR                   0x5F}}
+\DoxyCodeLine{795 }
+\DoxyCodeLine{796 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{797 \textcolor{comment}{*  ST2\_X Register: State Machine 2 Code Registers}}
+\DoxyCodeLine{798 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{799 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{800 \textcolor{comment}{*  7:0 ST2\_7-\/ST2\_0: State Machine 2 Code Registers}}
+\DoxyCodeLine{801 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{802 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_1\_ADDR                   0x60}}
+\DoxyCodeLine{803 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_2\_ADDR                   0x61}}
+\DoxyCodeLine{804 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_3\_ADDR                   0x62}}
+\DoxyCodeLine{805 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_4\_ADDR                   0x63}}
+\DoxyCodeLine{806 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_5\_ADDR                   0x64}}
+\DoxyCodeLine{807 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_6\_ADDR                   0x65}}
+\DoxyCodeLine{808 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_7\_ADDR                   0x66}}
+\DoxyCodeLine{809 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_8\_ADDR                   0x67}}
+\DoxyCodeLine{810 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_9\_ADDR                   0x68}}
+\DoxyCodeLine{811 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_10\_ADDR                  0x69}}
+\DoxyCodeLine{812 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_11\_ADDR                  0x6A}}
+\DoxyCodeLine{813 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_12\_ADDR                  0x6B}}
+\DoxyCodeLine{814 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_13\_ADDR                  0x6C}}
+\DoxyCodeLine{815 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_14\_ADDR                  0x6D}}
+\DoxyCodeLine{816 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_15\_ADDR                  0x6E}}
+\DoxyCodeLine{817 \textcolor{preprocessor}{\#define LIS3DSH\_ST2\_16\_ADDR                  0x6F}}
+\DoxyCodeLine{818 }
+\DoxyCodeLine{819 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{820 \textcolor{comment}{*  TIM4\_2 Register: SM2 General Timer 4 Register}}
+\DoxyCodeLine{821 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{822 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{823 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM2 Timer 4 Counter 1 Value}}
+\DoxyCodeLine{824 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{825 \textcolor{preprocessor}{\#define LIS3DSH\_TIM4\_2\_ADDR                  0x70 }}
+\DoxyCodeLine{826 }
+\DoxyCodeLine{827 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{828 \textcolor{comment}{*  TIM3\_2 Register: SM2 General Timer 3 Register}}
+\DoxyCodeLine{829 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{830 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{831 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM2 Timer 3 Counter 2 Value}}
+\DoxyCodeLine{832 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{833 \textcolor{preprocessor}{\#define LIS3DSH\_TIM3\_2\_ADDR                  0x71}}
+\DoxyCodeLine{834 }
+\DoxyCodeLine{835 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{836 \textcolor{comment}{*  TIM2\_2\_L Register: SM2 General Timer 2 Low Register}}
+\DoxyCodeLine{837 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{838 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{839 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM2 Timer 2 Counter 2 Low Value}}
+\DoxyCodeLine{840 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{841 \textcolor{preprocessor}{\#define LIS3DSH\_TIM2\_2\_L\_ADDR                0x72}}
+\DoxyCodeLine{842 }
+\DoxyCodeLine{843 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{844 \textcolor{comment}{*  TIM2\_2\_H Register: SM2 General Timer 2 High Register}}
+\DoxyCodeLine{845 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{846 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{847 \textcolor{comment}{*  15:8 TM\_15-\/TM\_8: SM2 Timer 2 Counter 2 High Value}}
+\DoxyCodeLine{848 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{849 \textcolor{preprocessor}{\#define LIS3DSH\_TIM2\_2\_H\_ADDR                0x73}}
+\DoxyCodeLine{850 }
+\DoxyCodeLine{851 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{852 \textcolor{comment}{*  TIM1\_2\_L Register: SM2 General Timer 1 Low Register}}
+\DoxyCodeLine{853 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{854 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{855 \textcolor{comment}{*  7:0 TM\_7-\/TM\_0: SM2 Timer 1 Counter 2 Low Value}}
+\DoxyCodeLine{856 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{857 \textcolor{preprocessor}{\#define LIS3DSH\_TIM1\_2\_L\_ADDR                0x74}}
+\DoxyCodeLine{858 }
+\DoxyCodeLine{859 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{860 \textcolor{comment}{*  TIM1\_2\_H Register: SM2 General Timer 1 High Register}}
+\DoxyCodeLine{861 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{862 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{863 \textcolor{comment}{*  15:8 TM\_15-\/TM\_8: SM2 Timer 1 Counter 2 High Value}}
+\DoxyCodeLine{864 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{865 \textcolor{preprocessor}{\#define LIS3DSH\_TIM1\_2\_H\_ADDR                0x75}}
+\DoxyCodeLine{866 }
+\DoxyCodeLine{867 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{868 \textcolor{comment}{*  THRS2\_2 Register: SM2 Threshold Value 1 Register}}
+\DoxyCodeLine{869 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{870 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{871 \textcolor{comment}{*  7:0 THS7-\/THS0: SM2 Threshold Value}}
+\DoxyCodeLine{872 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{873 \textcolor{preprocessor}{\#define LIS3DSH\_THRS2\_2\_ADDR                 0x76}}
+\DoxyCodeLine{874 }
+\DoxyCodeLine{875 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{876 \textcolor{comment}{*  THRS1\_2 Register: SM2 Threshold Value 2 Register}}
+\DoxyCodeLine{877 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{878 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{879 \textcolor{comment}{*  7:0 THS7-\/THS0: SM2 Threshold Value}}
+\DoxyCodeLine{880 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{881 \textcolor{preprocessor}{\#define LIS3DSH\_THRS1\_2\_ADDR                 0x77}}
+\DoxyCodeLine{882 }
+\DoxyCodeLine{883 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{884 \textcolor{comment}{*  DES2 Register: SM2 Decimation Counter Value Register}}
+\DoxyCodeLine{885 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{886 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{887 \textcolor{comment}{*  7:0 D7-\/D0: SM2 Decimation Counter Value}}
+\DoxyCodeLine{888 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{889 \textcolor{preprocessor}{\#define LIS3DSH\_DES2\_ADDR                    0x78}}
+\DoxyCodeLine{890 }
+\DoxyCodeLine{891 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{892 \textcolor{comment}{*  MASK2\_B Register: SM2 Axis and Sign Mask Register}}
+\DoxyCodeLine{893 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{894 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{895 \textcolor{comment}{*  7 P\_X: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{896 \textcolor{comment}{*         0: X+ disabled }}
+\DoxyCodeLine{897 \textcolor{comment}{*         1: X+ enabled}}
+\DoxyCodeLine{898 \textcolor{comment}{*  6 N\_X: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{899 \textcolor{comment}{*         0: X-\/ disabled }}
+\DoxyCodeLine{900 \textcolor{comment}{*         1: X-\/ enabled}}
+\DoxyCodeLine{901 \textcolor{comment}{*  5 P\_Y: Y-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{902 \textcolor{comment}{*         0: Y+ disabled }}
+\DoxyCodeLine{903 \textcolor{comment}{*         1: Y+ enabled}}
+\DoxyCodeLine{904 \textcolor{comment}{*  4 N\_Y: Y-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{905 \textcolor{comment}{*         0: Y-\/ disabled }}
+\DoxyCodeLine{906 \textcolor{comment}{*         1: Y-\/ enabled}}
+\DoxyCodeLine{907 \textcolor{comment}{*  3 P\_Z: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{908 \textcolor{comment}{*         0: Z+ disabled }}
+\DoxyCodeLine{909 \textcolor{comment}{*         1: Z+ enabled}}
+\DoxyCodeLine{910 \textcolor{comment}{*  2 N\_Z: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{911 \textcolor{comment}{*         0: Z-\/ disabled }}
+\DoxyCodeLine{912 \textcolor{comment}{*         1: Z-\/ enabled}}
+\DoxyCodeLine{913 \textcolor{comment}{*  1 P\_V: }}
+\DoxyCodeLine{914 \textcolor{comment}{*         0: V+ disabled }}
+\DoxyCodeLine{915 \textcolor{comment}{*         1: V+ enabled}}
+\DoxyCodeLine{916 \textcolor{comment}{*  0 N\_V:  }}
+\DoxyCodeLine{917 \textcolor{comment}{*         0: V-\/ disabled }}
+\DoxyCodeLine{918 \textcolor{comment}{*         1: V-\/ enabled}}
+\DoxyCodeLine{919 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{920 \textcolor{preprocessor}{\#define LIS3DSH\_MASK2\_B\_ADDR                 0x79}}
+\DoxyCodeLine{921 }
+\DoxyCodeLine{922 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{923 \textcolor{comment}{*  MASK2\_A Register: SM2 Axis and Sign Mask Register}}
+\DoxyCodeLine{924 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{925 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{926 \textcolor{comment}{*  7 P\_X: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{927 \textcolor{comment}{*         0: X+ disabled }}
+\DoxyCodeLine{928 \textcolor{comment}{*         1: X+ enabled}}
+\DoxyCodeLine{929 \textcolor{comment}{*  6 N\_X: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{930 \textcolor{comment}{*         0: X-\/ disabled }}
+\DoxyCodeLine{931 \textcolor{comment}{*         1: X-\/ enabled}}
+\DoxyCodeLine{932 \textcolor{comment}{*  5 P\_Y: Y-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{933 \textcolor{comment}{*         0: Y+ disabled }}
+\DoxyCodeLine{934 \textcolor{comment}{*         1: Y+ enabled}}
+\DoxyCodeLine{935 \textcolor{comment}{*  4 N\_Y: Y-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{936 \textcolor{comment}{*         0: Y-\/ disabled }}
+\DoxyCodeLine{937 \textcolor{comment}{*         1: Y-\/ enabled}}
+\DoxyCodeLine{938 \textcolor{comment}{*  3 P\_Z: X-\/Axis Positive Motion Detection }}
+\DoxyCodeLine{939 \textcolor{comment}{*         0: Z+ disabled }}
+\DoxyCodeLine{940 \textcolor{comment}{*         1: Z+ enabled}}
+\DoxyCodeLine{941 \textcolor{comment}{*  2 N\_Z: X-\/Axis Negative Motion Detection }}
+\DoxyCodeLine{942 \textcolor{comment}{*         0: Z-\/ disabled }}
+\DoxyCodeLine{943 \textcolor{comment}{*         1: Z-\/ enabled}}
+\DoxyCodeLine{944 \textcolor{comment}{*  1 P\_V: }}
+\DoxyCodeLine{945 \textcolor{comment}{*         0: V+ disabled }}
+\DoxyCodeLine{946 \textcolor{comment}{*         1: V+ enabled}}
+\DoxyCodeLine{947 \textcolor{comment}{*  0 N\_V:  }}
+\DoxyCodeLine{948 \textcolor{comment}{*         0: V-\/ disabled }}
+\DoxyCodeLine{949 \textcolor{comment}{*         1: V-\/ enabled}}
+\DoxyCodeLine{950 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{951 \textcolor{preprocessor}{\#define LIS3DSH\_MASK2\_A\_ADDR                 0x7A}}
+\DoxyCodeLine{952 }
+\DoxyCodeLine{953 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{954 \textcolor{comment}{*  SETT2 Register: SM2 Detection Settings Register}}
+\DoxyCodeLine{955 \textcolor{comment}{*  Write only register}}
+\DoxyCodeLine{956 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{957 \textcolor{comment}{*  7 P\_DET: SM2 peak detection }}
+\DoxyCodeLine{958 \textcolor{comment}{*           0: peak detection disabled (Default) }}
+\DoxyCodeLine{959 \textcolor{comment}{*           1: peak detection enabled}}
+\DoxyCodeLine{960 \textcolor{comment}{*  6 THR3\_SA:  }}
+\DoxyCodeLine{961 \textcolor{comment}{*             0: no action (Default)}}
+\DoxyCodeLine{962 \textcolor{comment}{*             1: threshold 3 limit value for axis and sign mask reset (MASK2\_B)}}
+\DoxyCodeLine{963 \textcolor{comment}{*  5 ABS:  }}
+\DoxyCodeLine{964 \textcolor{comment}{*         0: unsigned thresholds (Default)}}
+\DoxyCodeLine{965 \textcolor{comment}{*         1: signed thresholds}}
+\DoxyCodeLine{966 \textcolor{comment}{*  4 RADI:  }}
+\DoxyCodeLine{967 \textcolor{comment}{*          0: raw data }}
+\DoxyCodeLine{968 \textcolor{comment}{*          1: diff data for State Machine 2 }}
+\DoxyCodeLine{969 \textcolor{comment}{*  3 D\_CS:  }}
+\DoxyCodeLine{970 \textcolor{comment}{*          0: DIFF2 enabled (difference between current data and previous data)}}
+\DoxyCodeLine{971 \textcolor{comment}{*          1: constant shift enabled (difference between current data and constant values)     }}
+\DoxyCodeLine{972 \textcolor{comment}{*  2 THR3\_MA:  }}
+\DoxyCodeLine{973 \textcolor{comment}{*             0: no action (Default)}}
+\DoxyCodeLine{974 \textcolor{comment}{*             1: threshold 3 enabled for axis and sign mask reset (MASK2\_A)}}
+\DoxyCodeLine{975 \textcolor{comment}{*  1 R\_TAM: Next condition validation flag}}
+\DoxyCodeLine{976 \textcolor{comment}{*           0: mask frozen on the axis that triggers the condition (Default)}}
+\DoxyCodeLine{977 \textcolor{comment}{*           1: standard mask always evaluated}}
+\DoxyCodeLine{978 \textcolor{comment}{*  0 SITR:  }}
+\DoxyCodeLine{979 \textcolor{comment}{*          0: no actions (Default) }}
+\DoxyCodeLine{980 \textcolor{comment}{*          1: STOP and CONT commands generate an interrupt and perform output }}
+\DoxyCodeLine{981 \textcolor{comment}{*             actions as OUTC command.}}
+\DoxyCodeLine{982 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{983 \textcolor{preprocessor}{\#define LIS3DSH\_SETT2\_ADDR                   0x7B}}
+\DoxyCodeLine{984 }
+\DoxyCodeLine{985 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{986 \textcolor{comment}{*  PR2 Register: SM2 Program and Reset Pointers Register}}
+\DoxyCodeLine{987 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{988 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{989 \textcolor{comment}{*  7:4 PP3-\/PP0: SM1 program pointer address}}
+\DoxyCodeLine{990 \textcolor{comment}{*  3:0 RP3-\/RP0: SM1 reset pointer address}}
+\DoxyCodeLine{991 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{992 \textcolor{preprocessor}{\#define LIS3DSH\_PR2\_ADDR                     0x7C}}
+\DoxyCodeLine{993 }
+\DoxyCodeLine{994 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{995 \textcolor{comment}{*  TC2\_L Register: SM2 General Timer Counter Low Register}}
+\DoxyCodeLine{996 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{997 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{998 \textcolor{comment}{*  7:0 TC2\_7-\/TC2\_0: SM2 General Timer Counter Low Value}}
+\DoxyCodeLine{999 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{1000 \textcolor{preprocessor}{\#define LIS3DSH\_TC2\_L\_ADDR                   0x7D}}
+\DoxyCodeLine{1001 }
+\DoxyCodeLine{1002 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{1003 \textcolor{comment}{*  TC2\_H Register: SM2 General Timer Counter High Register}}
+\DoxyCodeLine{1004 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{1005 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{1006 \textcolor{comment}{*  15:8 TC2\_15-\/TC2\_8: SM2 General Timer Counter High Value}}
+\DoxyCodeLine{1007 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{1008 \textcolor{preprocessor}{\#define LIS3DSH\_TC2\_H\_ADDR                   0x7E}}
+\DoxyCodeLine{1009 }
+\DoxyCodeLine{1010 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{1011 \textcolor{comment}{*  OUTS2 Register: SM2 Output Set Flag Register}}
+\DoxyCodeLine{1012 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{1013 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{1014 \textcolor{comment}{*  7 P\_X: }}
+\DoxyCodeLine{1015 \textcolor{comment}{*         0: X+ noshow }}
+\DoxyCodeLine{1016 \textcolor{comment}{*         1: X+ show}}
+\DoxyCodeLine{1017 \textcolor{comment}{*  6 N\_X: }}
+\DoxyCodeLine{1018 \textcolor{comment}{*         0: X-\/ noshow}}
+\DoxyCodeLine{1019 \textcolor{comment}{*         1: X-\/ show}}
+\DoxyCodeLine{1020 \textcolor{comment}{*  5 P\_Y:  }}
+\DoxyCodeLine{1021 \textcolor{comment}{*         0: Y+ noshow }}
+\DoxyCodeLine{1022 \textcolor{comment}{*         1: Y+ show}}
+\DoxyCodeLine{1023 \textcolor{comment}{*  4 N\_Y:  }}
+\DoxyCodeLine{1024 \textcolor{comment}{*         0: Y-\/ noshow}}
+\DoxyCodeLine{1025 \textcolor{comment}{*         1: Y-\/ show}}
+\DoxyCodeLine{1026 \textcolor{comment}{*  3 P\_Z:  }}
+\DoxyCodeLine{1027 \textcolor{comment}{*         0: Z+ noshow }}
+\DoxyCodeLine{1028 \textcolor{comment}{*         1: Z+ show}}
+\DoxyCodeLine{1029 \textcolor{comment}{*  2 N\_Z:  }}
+\DoxyCodeLine{1030 \textcolor{comment}{*         0: Z-\/ noshow}}
+\DoxyCodeLine{1031 \textcolor{comment}{*         1: Z-\/ show}}
+\DoxyCodeLine{1032 \textcolor{comment}{*  1 P\_V: }}
+\DoxyCodeLine{1033 \textcolor{comment}{*         0: V+ noshow}}
+\DoxyCodeLine{1034 \textcolor{comment}{*         1: V+ show}}
+\DoxyCodeLine{1035 \textcolor{comment}{*  0 N\_V:  }}
+\DoxyCodeLine{1036 \textcolor{comment}{*         0: V-\/ noshow}}
+\DoxyCodeLine{1037 \textcolor{comment}{*         1: V-\/ show}}
+\DoxyCodeLine{1038 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{1039 \textcolor{preprocessor}{\#define LIS3DSH\_OUTS2\_ADDR                   0x7F}}
+\DoxyCodeLine{1040 }
+\DoxyCodeLine{1041 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{1042 \textcolor{comment}{/**************************** END REGISTER MAPPING  ***************************/}}
+\DoxyCodeLine{1043 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{1044 \textcolor{preprocessor}{\#define I\_AM\_LIS3DSH                         0x3F}}
+\DoxyCodeLine{1045 }
+\DoxyCodeLine{1049 \textcolor{preprocessor}{\#define LIS3DSH\_SENSITIVITY\_0\_06G            0.06  }\textcolor{comment}{/* 0.06 mg/digit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1050 \textcolor{preprocessor}{\#define LIS3DSH\_SENSITIVITY\_0\_12G            0.12  }\textcolor{comment}{/* 0.12 mg/digit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1051 \textcolor{preprocessor}{\#define LIS3DSH\_SENSITIVITY\_0\_18G            0.18  }\textcolor{comment}{/* 0.18 mg/digit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1052 \textcolor{preprocessor}{\#define LIS3DSH\_SENSITIVITY\_0\_24G            0.24  }\textcolor{comment}{/* 0.24 mg/digit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1053 \textcolor{preprocessor}{\#define LIS3DSH\_SENSITIVITY\_0\_73G            0.73  }\textcolor{comment}{/* 0.73 mg/digit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1061 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_POWERDOWN           ((uint8\_t)0x00)  }\textcolor{comment}{/* Power Down Mode*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1062 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_3\_125               ((uint8\_t)0x10)  }\textcolor{comment}{/* 3.125 Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1063 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_6\_25                ((uint8\_t)0x20)  }\textcolor{comment}{/* 6.25  Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1064 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_12\_5                ((uint8\_t)0x30)  }\textcolor{comment}{/* 12.5  Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1065 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_25                  ((uint8\_t)0x40)  }\textcolor{comment}{/* 25    Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1066 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_50                  ((uint8\_t)0x50)  }\textcolor{comment}{/* 50    Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1067 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_100                 ((uint8\_t)0x60)  }\textcolor{comment}{/* 100   Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1068 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_400                 ((uint8\_t)0x70)  }\textcolor{comment}{/* 400   Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1069 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_800                 ((uint8\_t)0x80)  }\textcolor{comment}{/* 800   Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1070 \textcolor{preprocessor}{\#define LIS3DSH\_DATARATE\_1600                ((uint8\_t)0x90)  }\textcolor{comment}{/* 1600  Hz Normal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1078 \textcolor{preprocessor}{\#define LIS3DSH\_FULLSCALE\_2                  ((uint8\_t)0x00)  }\textcolor{comment}{/* 2 g  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1079 \textcolor{preprocessor}{\#define LIS3DSH\_FULLSCALE\_4                  ((uint8\_t)0x08)  }\textcolor{comment}{/* 4 g  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1080 \textcolor{preprocessor}{\#define LIS3DSH\_FULLSCALE\_6                  ((uint8\_t)0x10)  }\textcolor{comment}{/* 6 g  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1081 \textcolor{preprocessor}{\#define LIS3DSH\_FULLSCALE\_8                  ((uint8\_t)0x18)  }\textcolor{comment}{/* 8 g  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1082 \textcolor{preprocessor}{\#define LIS3DSH\_FULLSCALE\_16                 ((uint8\_t)0x20)  }\textcolor{comment}{/* 16 g */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1083 \textcolor{preprocessor}{\#define LIS3DSH\_\_FULLSCALE\_SELECTION         ((uint8\_t)0x38)}}
+\DoxyCodeLine{1091 \textcolor{preprocessor}{\#define LIS3DSH\_FILTER\_BW\_800                ((uint8\_t)0x00)  }\textcolor{comment}{/* 800 Hz */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1092 \textcolor{preprocessor}{\#define LIS3DSH\_FILTER\_BW\_40                 ((uint8\_t)0x08)  }\textcolor{comment}{/* 40 Hz  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1093 \textcolor{preprocessor}{\#define LIS3DSH\_FILTER\_BW\_200                ((uint8\_t)0x10)  }\textcolor{comment}{/* 200 Hz */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1094 \textcolor{preprocessor}{\#define LIS3DSH\_FILTER\_BW\_50                 ((uint8\_t)0x18)  }\textcolor{comment}{/* 50 Hz  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1102 \textcolor{preprocessor}{\#define LIS3DSH\_SELFTEST\_NORMAL              ((uint8\_t)0x00)}}
+\DoxyCodeLine{1103 \textcolor{preprocessor}{\#define LIS3DSH\_SELFTEST\_P                   ((uint8\_t)0x02)}}
+\DoxyCodeLine{1104 \textcolor{preprocessor}{\#define LIS3DSH\_SELFTEST\_M                   ((uint8\_t)0x04)}}
+\DoxyCodeLine{1112 \textcolor{preprocessor}{\#define LIS3DSH\_X\_ENABLE                     ((uint8\_t)0x01)}}
+\DoxyCodeLine{1113 \textcolor{preprocessor}{\#define LIS3DSH\_Y\_ENABLE                     ((uint8\_t)0x02)}}
+\DoxyCodeLine{1114 \textcolor{preprocessor}{\#define LIS3DSH\_Z\_ENABLE                     ((uint8\_t)0x04)}}
+\DoxyCodeLine{1115 \textcolor{preprocessor}{\#define LIS3DSH\_XYZ\_ENABLE                   ((uint8\_t)0x07)}}
+\DoxyCodeLine{1123 \textcolor{preprocessor}{\#define LIS3DSH\_SERIALINTERFACE\_4WIRE        ((uint8\_t)0x00)}}
+\DoxyCodeLine{1124 \textcolor{preprocessor}{\#define LIS3DSH\_SERIALINTERFACE\_3WIRE        ((uint8\_t)0x01)}}
+\DoxyCodeLine{1132 \textcolor{preprocessor}{\#define LIS3DSH\_INTERRUPT\_REQUEST\_LATCHED    ((uint8\_t)0x00)}}
+\DoxyCodeLine{1133 \textcolor{preprocessor}{\#define LIS3DSH\_INTERRUPT\_REQUEST\_PULSED     ((uint8\_t)0x20)}}
+\DoxyCodeLine{1141 \textcolor{preprocessor}{\#define LIS3DSH\_INTERRUPT\_1\_ENABLE           ((uint8\_t)0x88)}}
+\DoxyCodeLine{1142 \textcolor{preprocessor}{\#define LIS3DSH\_INTERRUPT\_2\_ENABLE           ((uint8\_t)0x00)}}
+\DoxyCodeLine{1143 \textcolor{preprocessor}{\#define LIS3DSH\_INTERRUPT\_1\_2\_ENABLE         ((uint8\_t)0x88)}}
+\DoxyCodeLine{1151 \textcolor{preprocessor}{\#define LIS3DSH\_INTERRUPT\_SIGNAL\_LOW         ((uint8\_t)0x00)}}
+\DoxyCodeLine{1152 \textcolor{preprocessor}{\#define LIS3DSH\_INTERRUPT\_SIGNAL\_HIGH        ((uint8\_t)0x40)}}
+\DoxyCodeLine{1160 \textcolor{preprocessor}{\#define LIS3DSH\_SM\_ENABLE                   ((uint8\_t)0x01)}}
+\DoxyCodeLine{1161 \textcolor{preprocessor}{\#define LIS3DSH\_SM\_DISABLE                  ((uint8\_t)0x00)}}
+\DoxyCodeLine{1169 \textcolor{preprocessor}{\#define LIS3DSH\_SM\_INT1                     ((uint8\_t)0x00)}}
+\DoxyCodeLine{1170 \textcolor{preprocessor}{\#define LIS3DSH\_SM\_INT2                     ((uint8\_t)0x08)}}
+\DoxyCodeLine{1178 \textcolor{preprocessor}{\#define LIS3DSH\_BOOT\_NORMALMODE              ((uint8\_t)0x00)}}
+\DoxyCodeLine{1179 \textcolor{preprocessor}{\#define LIS3DSH\_BOOT\_FORCED                  ((uint8\_t)0x80)}}
+\DoxyCodeLine{1188 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_BYPASS\_MODE             ((uint8\_t)0x00)}}
+\DoxyCodeLine{1189 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_MODE                    ((uint8\_t)0x20)}}
+\DoxyCodeLine{1190 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_STREAM\_MODE             ((uint8\_t)0x40)}}
+\DoxyCodeLine{1191 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_SF\_TRIGGER\_MODE         ((uint8\_t)0x60)}}
+\DoxyCodeLine{1192 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_BS\_TRIGGER\_MODE         ((uint8\_t)0x80)}}
+\DoxyCodeLine{1193 \textcolor{preprocessor}{\#define LIS3DSH\_FIFO\_BF\_TRIGGER\_MODE         ((uint8\_t)0xE0)}}
+\DoxyCodeLine{1213 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_ga39a50faf3ec718fd4782fd951e6db26b}{LIS3DSH\_Init}}(uint16\_t InitStruct);}
+\DoxyCodeLine{1214 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_ga9f6206ac458928caba2bf83120a71daf}{LIS3DSH\_DeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1215 uint8\_t \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_ga47e1a458eddb3143569fe0e995f0513f}{LIS3DSH\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1216 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_gaf1053e873f761ba33cdefd61ddba03eb}{LIS3DSH\_InterruptConfig}}(\mbox{\hyperlink{struct_l_i_s3_d_s_h___interrupt_config_type_def}{LIS3DSH\_InterruptConfigTypeDef}} *LIS3DSH\_IntConfigStruct);}
+\DoxyCodeLine{1217 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_ga0bf34901c622846b07db03299bb9a3a1}{LIS3DSH\_Click\_IntConfig}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1218 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_gaee0eec1d1444f4da48efeec019481270}{LIS3DSH\_ODR\_LowpowerCmd}}(uint8\_t ODR\_LowPowerMode);}
+\DoxyCodeLine{1219 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_gaae93269b63a9b48c433998121680ac81}{LIS3DSH\_DataRateCmd}}(uint8\_t DataRateValue);}
+\DoxyCodeLine{1220 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_gadd43f8eeb1cf176968daea8b60f19224}{LIS3DSH\_FullScaleCmd}}(uint8\_t FS\_value);}
+\DoxyCodeLine{1221 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_gaf404d817cf34093ac2cb46dcffcab4ed}{LIS3DSH\_RebootCmd}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1222 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s3_d_s_h___exported___functions_ga8e33fb97929654753950b3799ed9b5f5}{LIS3DSH\_ReadACC}}(int16\_t *pData);}
+\DoxyCodeLine{1223 }
+\DoxyCodeLine{1224 \textcolor{comment}{/* Accelerometer driver structure */}}
+\DoxyCodeLine{1225 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\_DrvTypeDef}} Lis3dshDrv;}
+\DoxyCodeLine{1226 }
+\DoxyCodeLine{1227 \textcolor{comment}{/* Accelerometer IO functions */}  }
+\DoxyCodeLine{1228 \textcolor{keywordtype}{void}    ACCELERO\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1229 \textcolor{keywordtype}{void}    ACCELERO\_IO\_ITConfig(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1230 \textcolor{keywordtype}{void}    ACCELERO\_IO\_Write(uint8\_t* pBuffer, uint8\_t WriteAddr, uint16\_t NumByteToWrite);}
+\DoxyCodeLine{1231 \textcolor{keywordtype}{void}    ACCELERO\_IO\_Read(uint8\_t* pBuffer, uint8\_t ReadAddr, uint16\_t NumByteToRead);}
+\DoxyCodeLine{1232 }
+\DoxyCodeLine{1233 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{1234 \}}
+\DoxyCodeLine{1235 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1236 }
+\DoxyCodeLine{1237 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_LIS3DSH\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1238 }
+\DoxyCodeLine{1255 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

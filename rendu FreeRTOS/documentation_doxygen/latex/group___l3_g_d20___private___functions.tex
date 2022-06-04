@@ -1,0 +1,281 @@
+\hypertarget{group___l3_g_d20___private___functions}{}\doxysection{L3\+GD20\+\_\+\+Private\+\_\+\+Functions}
+\label{group___l3_g_d20___private___functions}\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_ga5a10b60a0792acf699a453c30d32d0ca}{L3\+GD20\+\_\+\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set L3\+GD20 Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_gacf1c9cc25f77fd1a7a07c6b77c938214}{L3\+GD20\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em L3\+GD20 De-\/initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l3_g_d20___private___functions_ga43b1b3bd96148e3ac6ace37eb2771e09}{L3\+GD20\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read ID address of L3\+GD20. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_gab6f3c47bfc8bb79e1a8a888ea8400836}{L3\+GD20\+\_\+\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of L3\+GD20. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_gabefeeace5d270cca5c601d15091b5917}{L3\+GD20\+\_\+\+Low\+Power}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set L3\+GD20 in low-\/power mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_ga533b417edb447229edf00c93e76771d5}{L3\+GD20\+\_\+\+INT1\+Interrupt\+Config}} (uint16\+\_\+t Int1\+Config)
+\begin{DoxyCompactList}\small\item\em Set L3\+GD20 Interrupt INT1 configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_ga73b25a609baa8830b6cee82bcff192fd}{L3\+GD20\+\_\+\+Enable\+IT}} (uint8\+\_\+t Int\+Sel)
+\begin{DoxyCompactList}\small\item\em Enable INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_ga485319a1048bae6cf207f4ee4a23df0f}{L3\+GD20\+\_\+\+Disable\+IT}} (uint8\+\_\+t Int\+Sel)
+\begin{DoxyCompactList}\small\item\em Disable INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_ga33868677ad167482d66db18cfc4bf412}{L3\+GD20\+\_\+\+Filter\+Config}} (uint8\+\_\+t Filter\+Struct)
+\begin{DoxyCompactList}\small\item\em Set High Pass Filter Modality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_ga9845f29a2574d93eeb258c8db14aba3d}{L3\+GD20\+\_\+\+Filter\+Cmd}} (uint8\+\_\+t High\+Pass\+Filter\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable High Pass Filter. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l3_g_d20___private___functions_gac434618a7381e68e5966f1309ffeba8d}{L3\+GD20\+\_\+\+Get\+Data\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Get status for L3\+GD20 data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___private___functions_gadf5d9d3d6ac7848f144f8988da81a6e9}{L3\+GD20\+\_\+\+Read\+XYZAng\+Rate}} (float $\ast$pf\+Data)
+\begin{DoxyCompactList}\small\item\em Calculate the L3\+GD20 angular data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_gacf1c9cc25f77fd1a7a07c6b77c938214}\label{group___l3_g_d20___private___functions_gacf1c9cc25f77fd1a7a07c6b77c938214}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_DeInit@{L3GD20\_DeInit}}
+\index{L3GD20\_DeInit@{L3GD20\_DeInit}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_DeInit()}{L3GD20\_DeInit()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+L3\+GD20 De-\/initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_ga485319a1048bae6cf207f4ee4a23df0f}\label{group___l3_g_d20___private___functions_ga485319a1048bae6cf207f4ee4a23df0f}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_DisableIT@{L3GD20\_DisableIT}}
+\index{L3GD20\_DisableIT@{L3GD20\_DisableIT}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_DisableIT()}{L3GD20\_DisableIT()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Int\+Sel }\end{DoxyParamCaption})}
+
+
+
+Disable INT1 or INT2 interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Int\+Sel} & choice of INT1 or INT2 This parameter can be\+: \begin{DoxyItemize}
+\item L3\+GD20\+\_\+\+INT1 \item L3\+GD20\+\_\+\+INT2 ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_ga73b25a609baa8830b6cee82bcff192fd}\label{group___l3_g_d20___private___functions_ga73b25a609baa8830b6cee82bcff192fd}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_EnableIT@{L3GD20\_EnableIT}}
+\index{L3GD20\_EnableIT@{L3GD20\_EnableIT}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_EnableIT()}{L3GD20\_EnableIT()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Int\+Sel }\end{DoxyParamCaption})}
+
+
+
+Enable INT1 or INT2 interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Int\+Sel} & choice of INT1 or INT2 This parameter can be\+: \begin{DoxyItemize}
+\item L3\+GD20\+\_\+\+INT1 \item L3\+GD20\+\_\+\+INT2 ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_ga9845f29a2574d93eeb258c8db14aba3d}\label{group___l3_g_d20___private___functions_ga9845f29a2574d93eeb258c8db14aba3d}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_FilterCmd@{L3GD20\_FilterCmd}}
+\index{L3GD20\_FilterCmd@{L3GD20\_FilterCmd}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_FilterCmd()}{L3GD20\_FilterCmd()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Filter\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{High\+Pass\+Filter\+State }\end{DoxyParamCaption})}
+
+
+
+Enable or Disable High Pass Filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em High\+Pass\+Filter\+State} & new state of the High Pass Filter feature. This parameter can be\+: \begin{DoxyItemize}
+\item \+: L3\+GD20\+\_\+\+HIGHPASSFILTER\+\_\+\+DISABLE \item \+: L3\+GD20\+\_\+\+HIGHPASSFILTER\+\_\+\+ENABLE ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_ga33868677ad167482d66db18cfc4bf412}\label{group___l3_g_d20___private___functions_ga33868677ad167482d66db18cfc4bf412}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_FilterConfig@{L3GD20\_FilterConfig}}
+\index{L3GD20\_FilterConfig@{L3GD20\_FilterConfig}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_FilterConfig()}{L3GD20\_FilterConfig()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Filter\+Config (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Filter\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set High Pass Filter Modality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Filter\+Struct} & contains the configuration setting for the L3\+GD20. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_gac434618a7381e68e5966f1309ffeba8d}\label{group___l3_g_d20___private___functions_gac434618a7381e68e5966f1309ffeba8d}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_GetDataStatus@{L3GD20\_GetDataStatus}}
+\index{L3GD20\_GetDataStatus@{L3GD20\_GetDataStatus}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_GetDataStatus()}{L3GD20\_GetDataStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t L3\+GD20\+\_\+\+Get\+Data\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get status for L3\+GD20 data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Data} & status in a L3\+GD20 Data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_ga5a10b60a0792acf699a453c30d32d0ca}\label{group___l3_g_d20___private___functions_ga5a10b60a0792acf699a453c30d32d0ca}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_Init@{L3GD20\_Init}}
+\index{L3GD20\_Init@{L3GD20\_Init}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_Init()}{L3GD20\_Init()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set L3\+GD20 Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L3\+GD20\+\_\+\+Init\+Struct} & pointer to a L3\+GD20\+\_\+\+Init\+Type\+Def structure that contains the configuration setting for the L3\+GD20. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_ga533b417edb447229edf00c93e76771d5}\label{group___l3_g_d20___private___functions_ga533b417edb447229edf00c93e76771d5}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_INT1InterruptConfig@{L3GD20\_INT1InterruptConfig}}
+\index{L3GD20\_INT1InterruptConfig@{L3GD20\_INT1InterruptConfig}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_INT1InterruptConfig()}{L3GD20\_INT1InterruptConfig()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+INT1\+Interrupt\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Int1\+Config }\end{DoxyParamCaption})}
+
+
+
+Set L3\+GD20 Interrupt INT1 configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Int1\+Config} & the configuration setting for the L3\+GD20 Interrupt. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_gabefeeace5d270cca5c601d15091b5917}\label{group___l3_g_d20___private___functions_gabefeeace5d270cca5c601d15091b5917}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_LowPower@{L3GD20\_LowPower}}
+\index{L3GD20\_LowPower@{L3GD20\_LowPower}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_LowPower()}{L3GD20\_LowPower()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Low\+Power (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set L3\+GD20 in low-\/power mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+retval None \mbox{\Hypertarget{group___l3_g_d20___private___functions_ga43b1b3bd96148e3ac6ace37eb2771e09}\label{group___l3_g_d20___private___functions_ga43b1b3bd96148e3ac6ace37eb2771e09}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_ReadID@{L3GD20\_ReadID}}
+\index{L3GD20\_ReadID@{L3GD20\_ReadID}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_ReadID()}{L3GD20\_ReadID()}}
+{\footnotesize\ttfamily uint8\+\_\+t L3\+GD20\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read ID address of L3\+GD20. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em ID} & name \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_gadf5d9d3d6ac7848f144f8988da81a6e9}\label{group___l3_g_d20___private___functions_gadf5d9d3d6ac7848f144f8988da81a6e9}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_ReadXYZAngRate@{L3GD20\_ReadXYZAngRate}}
+\index{L3GD20\_ReadXYZAngRate@{L3GD20\_ReadXYZAngRate}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_ReadXYZAngRate()}{L3GD20\_ReadXYZAngRate()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Read\+XYZAng\+Rate (\begin{DoxyParamCaption}\item[{float $\ast$}]{pf\+Data }\end{DoxyParamCaption})}
+
+
+
+Calculate the L3\+GD20 angular data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pf\+Data} & Data out pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l3_g_d20___private___functions_gab6f3c47bfc8bb79e1a8a888ea8400836}\label{group___l3_g_d20___private___functions_gab6f3c47bfc8bb79e1a8a888ea8400836}} 
+\index{L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}!L3GD20\_RebootCmd@{L3GD20\_RebootCmd}}
+\index{L3GD20\_RebootCmd@{L3GD20\_RebootCmd}!L3GD20\_Private\_Functions@{L3GD20\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{L3GD20\_RebootCmd()}{L3GD20\_RebootCmd()}}
+{\footnotesize\ttfamily void L3\+GD20\+\_\+\+Reboot\+Cmd (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reboot memory content of L3\+GD20. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

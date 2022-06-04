@@ -1,0 +1,345 @@
+\hypertarget{group__ts3510___exported___functions}{}\doxysection{Ts3510\+\_\+\+Exported\+\_\+\+Functions}
+\label{group__ts3510___exported___functions}\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_ga73c1226046389de4ff75a2e908a18dd6}{ts3510\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em ts3510 Control functions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_ga47a4d9a5812d18d71542111c12d275ca}{ts3510\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the ts3510 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__ts3510___exported___functions_ga2efe70212fb686dd46ec2250954bfef9}{ts3510\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the ts3510 IO Expander device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_ga11e0c31073a5106868d486f857cb7fb6}{ts3510\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen Controller (Single point detection) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ts3510___exported___functions_ga34dccfd38359b0a5fdc57607c742267c}{ts3510\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touch detected or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_gab4f36dc3c8a0cbe843bdb44f9da6ed22}{ts3510\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_ga5fe7cfd4186184111114f8b298c3a7a3}{ts3510\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_ga6c8ad8d98d01976e227b45c346428531}{ts3510\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ts3510___exported___functions_ga64befc1365a5ecf06b9b226516243d3a}{ts3510\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_ga7e34d248f9576cbf2f2c18620ff2d124}{ts3510\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga20cd09e59bac7284d1342b6741733593}\label{group__ts3510___exported___functions_ga20cd09e59bac7284d1342b6741733593}} 
+void {\bfseries IOE\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_gace5ebb1b3b098cb036585c47842bf935}{IOE\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em IOE Delay. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ts3510___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}{IOE\+\_\+\+Read}} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em IOE Reads single data. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__ts3510___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}{IOE\+\_\+\+Read\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Reads multiple data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ts3510___exported___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}{IOE\+\_\+\+Write\+Multiple}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em IOE Writes multiple data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ts3510___exported___functions_gafdfa0ad9c6a5f08fc7ebc9c480e56104}\label{group__ts3510___exported___functions_gafdfa0ad9c6a5f08fc7ebc9c480e56104}} 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} {\bfseries ts3510\+\_\+ts\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__ts3510___exported___functions_gace5ebb1b3b098cb036585c47842bf935}\label{group__ts3510___exported___functions_gace5ebb1b3b098cb036585c47842bf935}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!IOE\_Delay@{IOE\_Delay}}
+\index{IOE\_Delay@{IOE\_Delay}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Delay()}{IOE\_Delay()}}
+{\footnotesize\ttfamily void IOE\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+IOE Delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & in ms \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ts3510___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}\label{group__ts3510___exported___functions_gad5545897cdcf52846d4e5125ca08ba02}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!IOE\_Read@{IOE\_Read}}
+\index{IOE\_Read@{IOE\_Read}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_Read()}{IOE\_Read()}}
+{\footnotesize\ttfamily uint8\+\_\+t IOE\+\_\+\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg }\end{DoxyParamCaption})}
+
+
+
+IOE Reads single data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & read data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}\label{group__ts3510___exported___functions_gaaf62da44c5f3ba524033cb3e34a434fc}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!IOE\_ReadMultiple@{IOE\_ReadMultiple}}
+\index{IOE\_ReadMultiple@{IOE\_ReadMultiple}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_ReadMultiple()}{IOE\_ReadMultiple()}}
+{\footnotesize\ttfamily uint16\+\_\+t IOE\+\_\+\+Read\+Multiple (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+IOE Reads multiple data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+{\em p\+Buffer} & pointer to data buffer \\
+\hline
+{\em Length} & length of the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if no problems to read multiple data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}\label{group__ts3510___exported___functions_ga31a8e4060c4df08a6ceecbd0443e4bce}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!IOE\_WriteMultiple@{IOE\_WriteMultiple}}
+\index{IOE\_WriteMultiple@{IOE\_WriteMultiple}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{IOE\_WriteMultiple()}{IOE\_WriteMultiple()}}
+{\footnotesize\ttfamily void IOE\+\_\+\+Write\+Multiple (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Addr,  }\item[{uint8\+\_\+t}]{Reg,  }\item[{uint8\+\_\+t $\ast$}]{p\+Buffer,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+IOE Writes multiple data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Addr} & I2C Address \\
+\hline
+{\em Reg} & Reg Address \\
+\hline
+{\em p\+Buffer} & pointer to data buffer \\
+\hline
+{\em Length} & length of the data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga73c1226046389de4ff75a2e908a18dd6}\label{group__ts3510___exported___functions_ga73c1226046389de4ff75a2e908a18dd6}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_Init@{ts3510\_Init}}
+\index{ts3510\_Init@{ts3510\_Init}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_Init()}{ts3510\_Init()}}
+{\footnotesize\ttfamily void ts3510\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+ts3510 Control functions 
+
+ts3510 Control functions
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga2efe70212fb686dd46ec2250954bfef9}\label{group__ts3510___exported___functions_ga2efe70212fb686dd46ec2250954bfef9}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_ReadID@{ts3510\_ReadID}}
+\index{ts3510\_ReadID@{ts3510\_ReadID}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_ReadID()}{ts3510\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t ts3510\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the ts3510 IO Expander device ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device ID (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga47a4d9a5812d18d71542111c12d275ca}\label{group__ts3510___exported___functions_ga47a4d9a5812d18d71542111c12d275ca}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_Reset@{ts3510\_Reset}}
+\index{ts3510\_Reset@{ts3510\_Reset}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_Reset()}{ts3510\_Reset()}}
+{\footnotesize\ttfamily void ts3510\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Reset the ts3510 by Software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga7e34d248f9576cbf2f2c18620ff2d124}\label{group__ts3510___exported___functions_ga7e34d248f9576cbf2f2c18620ff2d124}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_TS\_ClearIT@{ts3510\_TS\_ClearIT}}
+\index{ts3510\_TS\_ClearIT@{ts3510\_TS\_ClearIT}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_TS\_ClearIT()}{ts3510\_TS\_ClearIT()}}
+{\footnotesize\ttfamily void ts3510\+\_\+\+TS\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga34dccfd38359b0a5fdc57607c742267c}\label{group__ts3510___exported___functions_ga34dccfd38359b0a5fdc57607c742267c}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_TS\_DetectTouch@{ts3510\_TS\_DetectTouch}}
+\index{ts3510\_TS\_DetectTouch@{ts3510\_TS\_DetectTouch}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_TS\_DetectTouch()}{ts3510\_TS\_DetectTouch()}}
+{\footnotesize\ttfamily uint8\+\_\+t ts3510\+\_\+\+TS\+\_\+\+Detect\+Touch (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Return if there is touch detected or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Touch} & detected state. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga6c8ad8d98d01976e227b45c346428531}\label{group__ts3510___exported___functions_ga6c8ad8d98d01976e227b45c346428531}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_TS\_DisableIT@{ts3510\_TS\_DisableIT}}
+\index{ts3510\_TS\_DisableIT@{ts3510\_TS\_DisableIT}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_TS\_DisableIT()}{ts3510\_TS\_DisableIT()}}
+{\footnotesize\ttfamily void ts3510\+\_\+\+TS\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga5fe7cfd4186184111114f8b298c3a7a3}\label{group__ts3510___exported___functions_ga5fe7cfd4186184111114f8b298c3a7a3}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_TS\_EnableIT@{ts3510\_TS\_EnableIT}}
+\index{ts3510\_TS\_EnableIT@{ts3510\_TS\_EnableIT}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_TS\_EnableIT()}{ts3510\_TS\_EnableIT()}}
+{\footnotesize\ttfamily void ts3510\+\_\+\+TS\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_gab4f36dc3c8a0cbe843bdb44f9da6ed22}\label{group__ts3510___exported___functions_gab4f36dc3c8a0cbe843bdb44f9da6ed22}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_TS\_GetXY@{ts3510\_TS\_GetXY}}
+\index{ts3510\_TS\_GetXY@{ts3510\_TS\_GetXY}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_TS\_GetXY()}{ts3510\_TS\_GetXY()}}
+{\footnotesize\ttfamily void ts3510\+\_\+\+TS\+\_\+\+Get\+XY (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint16\+\_\+t $\ast$}]{X,  }\item[{uint16\+\_\+t $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Get the touch screen X and Y positions values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em X} & Pointer to X position value \\
+\hline
+{\em Y} & Pointer to Y position value ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga64befc1365a5ecf06b9b226516243d3a}\label{group__ts3510___exported___functions_ga64befc1365a5ecf06b9b226516243d3a}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_TS\_ITStatus@{ts3510\_TS\_ITStatus}}
+\index{ts3510\_TS\_ITStatus@{ts3510\_TS\_ITStatus}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_TS\_ITStatus()}{ts3510\_TS\_ITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t ts3510\+\_\+\+TS\+\_\+\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TS} & interrupts status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__ts3510___exported___functions_ga11e0c31073a5106868d486f857cb7fb6}\label{group__ts3510___exported___functions_ga11e0c31073a5106868d486f857cb7fb6}} 
+\index{Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}!ts3510\_TS\_Start@{ts3510\_TS\_Start}}
+\index{ts3510\_TS\_Start@{ts3510\_TS\_Start}!Ts3510\_Exported\_Functions@{Ts3510\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{ts3510\_TS\_Start()}{ts3510\_TS\_Start()}}
+{\footnotesize\ttfamily void ts3510\+\_\+\+TS\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configures the touch Screen Controller (Single point detection) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

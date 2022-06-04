@@ -1,0 +1,85 @@
+\hypertarget{group___o_v2640___private___functions}{}\doxysection{OV2640\+\_\+\+Private\+\_\+\+Functions}
+\label{group___o_v2640___private___functions}\index{OV2640\_Private\_Functions@{OV2640\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___o_v2640___private___functions_ga4f4e3d4382932ad47f2c30e2461a8355}{ov2640\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em Initializes the OV2640 CAMERA component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___o_v2640___private___functions_gaa4d731059fa3e32b4097520ed26971bd}{ov2640\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t feature, uint32\+\_\+t value, uint32\+\_\+t brightness\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Configures the OV2640 camera feature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___o_v2640___private___functions_ga9e355ae413c34af76e774adca3c9985e}{ov2640\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the OV2640 Camera identity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___o_v2640___private___functions_gaa4d731059fa3e32b4097520ed26971bd}\label{group___o_v2640___private___functions_gaa4d731059fa3e32b4097520ed26971bd}} 
+\index{OV2640\_Private\_Functions@{OV2640\_Private\_Functions}!ov2640\_Config@{ov2640\_Config}}
+\index{ov2640\_Config@{ov2640\_Config}!OV2640\_Private\_Functions@{OV2640\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ov2640\_Config()}{ov2640\_Config()}}
+{\footnotesize\ttfamily void ov2640\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{feature,  }\item[{uint32\+\_\+t}]{value,  }\item[{uint32\+\_\+t}]{brightness\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Configures the OV2640 camera feature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em feature} & Camera feature to be configured \\
+\hline
+{\em value} & Value to be configured \\
+\hline
+{\em brightness\+\_\+value} & Brightness value to be configured \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___o_v2640___private___functions_ga4f4e3d4382932ad47f2c30e2461a8355}\label{group___o_v2640___private___functions_ga4f4e3d4382932ad47f2c30e2461a8355}} 
+\index{OV2640\_Private\_Functions@{OV2640\_Private\_Functions}!ov2640\_Init@{ov2640\_Init}}
+\index{ov2640\_Init@{ov2640\_Init}!OV2640\_Private\_Functions@{OV2640\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ov2640\_Init()}{ov2640\_Init()}}
+{\footnotesize\ttfamily void ov2640\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint32\+\_\+t}]{resolution }\end{DoxyParamCaption})}
+
+
+
+Initializes the OV2640 CAMERA component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em resolution} & Camera resolution \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___o_v2640___private___functions_ga9e355ae413c34af76e774adca3c9985e}\label{group___o_v2640___private___functions_ga9e355ae413c34af76e774adca3c9985e}} 
+\index{OV2640\_Private\_Functions@{OV2640\_Private\_Functions}!ov2640\_ReadID@{ov2640\_ReadID}}
+\index{ov2640\_ReadID@{ov2640\_ReadID}!OV2640\_Private\_Functions@{OV2640\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ov2640\_ReadID()}{ov2640\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t ov2640\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the OV2640 Camera identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em the} & OV2640 ID \\
+\hline
+\end{DoxyRetVals}

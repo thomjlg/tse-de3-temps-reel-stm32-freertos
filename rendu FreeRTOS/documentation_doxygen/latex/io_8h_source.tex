@@ -1,0 +1,78 @@
+\hypertarget{io_8h_source}{}\doxysection{io.\+h}
+\label{io_8h_source}\index{Drivers/BSP/Components/Common/io.h@{Drivers/BSP/Components/Common/io.h}}
+\mbox{\hyperlink{io_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_IO\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_IO\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70   IO\_PIN\_RESET = 0,}
+\DoxyCodeLine{71   IO\_PIN\_SET}
+\DoxyCodeLine{72 \}\mbox{\hyperlink{group___i_o___exported___types_ga7cbb1ccba2efb11afab1152c15d9c4a8}{IO\_PinState}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76    IO\_MODE\_INPUT = 0,   \textcolor{comment}{/* input floating */}}
+\DoxyCodeLine{77    IO\_MODE\_OUTPUT,      \textcolor{comment}{/* output Push Pull */}}
+\DoxyCodeLine{78    IO\_MODE\_IT\_RISING\_EDGE,   \textcolor{comment}{/* float input -\/ irq detect on rising edge */}}
+\DoxyCodeLine{79    IO\_MODE\_IT\_FALLING\_EDGE,  \textcolor{comment}{/* float input -\/ irq detect on falling edge */}}
+\DoxyCodeLine{80    IO\_MODE\_IT\_LOW\_LEVEL,     \textcolor{comment}{/* float input -\/ irq detect on low level */}}
+\DoxyCodeLine{81    IO\_MODE\_IT\_HIGH\_LEVEL,    \textcolor{comment}{/* float input -\/ irq detect on high level */}}
+\DoxyCodeLine{82    \textcolor{comment}{/* following modes only available on MFX*/}}
+\DoxyCodeLine{83    IO\_MODE\_ANALOG,           \textcolor{comment}{/* analog mode */}}
+\DoxyCodeLine{84    IO\_MODE\_OFF,              \textcolor{comment}{/* when pin isn't used*/}}
+\DoxyCodeLine{85    IO\_MODE\_INPUT\_PU,         \textcolor{comment}{/* input with internal pull up resistor */}}
+\DoxyCodeLine{86    IO\_MODE\_INPUT\_PD,         \textcolor{comment}{/* input with internal pull down resistor */}}
+\DoxyCodeLine{87    IO\_MODE\_OUTPUT\_OD,          \textcolor{comment}{/* Open Drain output without internal resistor */}}
+\DoxyCodeLine{88    IO\_MODE\_OUTPUT\_OD\_PU,       \textcolor{comment}{/* Open Drain output with  internal pullup resistor */}}
+\DoxyCodeLine{89    IO\_MODE\_OUTPUT\_OD\_PD,       \textcolor{comment}{/* Open Drain output with  internal pulldown resistor */}}
+\DoxyCodeLine{90    IO\_MODE\_OUTPUT\_PP,          \textcolor{comment}{/* PushPull output without internal resistor */}}
+\DoxyCodeLine{91    IO\_MODE\_OUTPUT\_PP\_PU,       \textcolor{comment}{/* PushPull output with  internal pullup resistor */}}
+\DoxyCodeLine{92    IO\_MODE\_OUTPUT\_PP\_PD,       \textcolor{comment}{/* PushPull output with  internal pulldown resistor */}}
+\DoxyCodeLine{93    IO\_MODE\_IT\_RISING\_EDGE\_PU,   \textcolor{comment}{/* push up resistor input -\/ irq on rising edge  */}}
+\DoxyCodeLine{94    IO\_MODE\_IT\_RISING\_EDGE\_PD,   \textcolor{comment}{/* push dw resistor input -\/ irq on rising edge  */}}
+\DoxyCodeLine{95    IO\_MODE\_IT\_FALLING\_EDGE\_PU,  \textcolor{comment}{/* push up resistor input -\/ irq on falling edge */}}
+\DoxyCodeLine{96    IO\_MODE\_IT\_FALLING\_EDGE\_PD,  \textcolor{comment}{/* push dw resistor input -\/ irq on falling edge */}}
+\DoxyCodeLine{97    IO\_MODE\_IT\_LOW\_LEVEL\_PU,     \textcolor{comment}{/* push up resistor input -\/ irq detect on low level */}}
+\DoxyCodeLine{98    IO\_MODE\_IT\_LOW\_LEVEL\_PD,     \textcolor{comment}{/* push dw resistor input -\/ irq detect on low level */}}
+\DoxyCodeLine{99    IO\_MODE\_IT\_HIGH\_LEVEL\_PU,    \textcolor{comment}{/* push up resistor input -\/ irq detect on high level */}}
+\DoxyCodeLine{100    IO\_MODE\_IT\_HIGH\_LEVEL\_PD,    \textcolor{comment}{/* push dw resistor input -\/ irq detect on high level */}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \}IO\_ModeTypedef;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{108 \{  }
+\DoxyCodeLine{109   void       (*Init)(uint16\_t);}
+\DoxyCodeLine{110   uint16\_t   (*ReadID)(uint16\_t);}
+\DoxyCodeLine{111   void       (*Reset)(uint16\_t);}
+\DoxyCodeLine{112   }
+\DoxyCodeLine{113   void       (*Start)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{114   uint8\_t    (*Config)(uint16\_t, uint32\_t, IO\_ModeTypedef);}
+\DoxyCodeLine{115   void       (*WritePin)(uint16\_t, uint32\_t, uint8\_t);}
+\DoxyCodeLine{116   uint32\_t   (*ReadPin)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{117   }
+\DoxyCodeLine{118   void       (*EnableIT)(uint16\_t);}
+\DoxyCodeLine{119   void       (*DisableIT)(uint16\_t);}
+\DoxyCodeLine{120   uint32\_t    (*ITStatus)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{121   void       (*ClearIT)(uint16\_t, uint32\_t);}
+\DoxyCodeLine{122     }
+\DoxyCodeLine{123 \}\mbox{\hyperlink{struct_i_o___drv_type_def}{IO\_DrvTypeDef}};}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{145 \}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_IO\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

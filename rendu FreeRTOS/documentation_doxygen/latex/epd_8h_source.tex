@@ -1,0 +1,40 @@
+\hypertarget{epd_8h_source}{}\doxysection{epd.\+h}
+\label{epd_8h_source}\index{Drivers/BSP/Components/Common/epd.h@{Drivers/BSP/Components/Common/epd.h}}
+\mbox{\hyperlink{epd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_EPD\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_EPD\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{73 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75   void     (*Init)(void);}
+\DoxyCodeLine{76   void     (*WritePixel)(uint8\_t);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78   \textcolor{comment}{/* Optimized operation */}}
+\DoxyCodeLine{79   void     (*SetDisplayWindow)(uint16\_t, uint16\_t, uint16\_t, uint16\_t);}
+\DoxyCodeLine{80   void     (*RefreshDisplay)(void);}
+\DoxyCodeLine{81   void     (*CloseChargePump)(void);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83   uint16\_t (*GetEpdPixelWidth)(void);}
+\DoxyCodeLine{84   uint16\_t (*GetEpdPixelHeight)(void);}
+\DoxyCodeLine{85   void     (*DrawImage)(uint16\_t, uint16\_t, uint16\_t, uint16\_t, uint8\_t*);}
+\DoxyCodeLine{86 \}}
+\DoxyCodeLine{87 \mbox{\hyperlink{struct_e_p_d___drv_type_def}{EPD\_DrvTypeDef}};}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{110 \}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* EPD\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

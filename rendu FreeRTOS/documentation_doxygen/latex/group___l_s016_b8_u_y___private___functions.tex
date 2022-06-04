@@ -1,0 +1,411 @@
+\hypertarget{group___l_s016_b8_u_y___private___functions}{}\doxysection{LS016\+B8\+UY\+\_\+\+Private\+\_\+\+Functions}
+\label{group___l_s016_b8_u_y___private___functions}\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gac4450be5042c64be807c7b12bf92a3f4}{ls016b8uy\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the LS016\+B8\+UY LCD Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga18646621604ca3a2b5f08a984bdc1bfc}{ls016b8uy\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga766056013f51350782e2540fe6108caf}{ls016b8uy\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gac8aa329640b773f9f66b155057bfab27}{ls016b8uy\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga36dc9de467a4245daed7e14319417f57}{ls016b8uy\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Height. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gadd42077cff1097a6c1539dda3d95eeb1}{ls016b8uy\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LS016\+B8\+UY ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga2008896a3586252c8873666b5ea4a655}{ls016b8uy\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Set Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga12986596a5d5b466ced7ee668de668af}{ls016b8uy\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Write pixel. ~\newline
+ \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga5ffe75dce422a4ecb981505b599d5a77}{ls016b8uy\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Read pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gadc7e5ad7d59dc403980a2941d05bdaae}{ls016b8uy\+\_\+\+Write\+Reg}} (uint8\+\_\+t Command, uint8\+\_\+t $\ast$Parameters, uint8\+\_\+t Nb\+Parameters)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga06f10ba844e64c5edab2d2ea4a46ae98}{ls016b8uy\+\_\+\+Read\+Reg}} (uint8\+\_\+t Command)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga747a6665d219b3ed5675a88c83a39b02}{ls016b8uy\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga7df7ef6159e5652c1f3d80c326a94fdd}{ls016b8uy\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga07d5e69acf9c9ddcbe9de103fc2fceab}{ls016b8uy\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gad95e1aa51db08eca798f866b2e53d234}{ls016b8uy\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga26144b942876be52d22cf85d9b513e36}{ls016b8uy\+\_\+\+Draw\+RGBImage}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint8\+\_\+t $\ast$pdata)
+\begin{DoxyCompactList}\small\item\em Displays picture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga766056013f51350782e2540fe6108caf}\label{group___l_s016_b8_u_y___private___functions_ga766056013f51350782e2540fe6108caf}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_DisplayOff@{ls016b8uy\_DisplayOff}}
+\index{ls016b8uy\_DisplayOff@{ls016b8uy\_DisplayOff}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_DisplayOff()}{ls016b8uy\_DisplayOff()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Display\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga18646621604ca3a2b5f08a984bdc1bfc}\label{group___l_s016_b8_u_y___private___functions_ga18646621604ca3a2b5f08a984bdc1bfc}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_DisplayOn@{ls016b8uy\_DisplayOn}}
+\index{ls016b8uy\_DisplayOn@{ls016b8uy\_DisplayOn}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_DisplayOn()}{ls016b8uy\_DisplayOn()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Display\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_gad95e1aa51db08eca798f866b2e53d234}\label{group___l_s016_b8_u_y___private___functions_gad95e1aa51db08eca798f866b2e53d234}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_DrawBitmap@{ls016b8uy\_DrawBitmap}}
+\index{ls016b8uy\_DrawBitmap@{ls016b8uy\_DrawBitmap}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_DrawBitmap()}{ls016b8uy\_DrawBitmap()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t $\ast$}]{pbmp }\end{DoxyParamCaption})}
+
+
+
+Displays a bitmap picture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Bmp\+Address} & Bmp picture address. \\
+\hline
+{\em Xpos} & Bmp X position in the LCD \\
+\hline
+{\em Ypos} & Bmp Y position in the LCD ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga7df7ef6159e5652c1f3d80c326a94fdd}\label{group___l_s016_b8_u_y___private___functions_ga7df7ef6159e5652c1f3d80c326a94fdd}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_DrawHLine@{ls016b8uy\_DrawHLine}}
+\index{ls016b8uy\_DrawHLine@{ls016b8uy\_DrawHLine}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_DrawHLine()}{ls016b8uy\_DrawHLine()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Draw\+HLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draw vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color in RGB565 format \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the Line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga26144b942876be52d22cf85d9b513e36}\label{group___l_s016_b8_u_y___private___functions_ga26144b942876be52d22cf85d9b513e36}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_DrawRGBImage@{ls016b8uy\_DrawRGBImage}}
+\index{ls016b8uy\_DrawRGBImage@{ls016b8uy\_DrawRGBImage}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_DrawRGBImage()}{ls016b8uy\_DrawRGBImage()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Draw\+RGBImage (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Xsize,  }\item[{uint16\+\_\+t}]{Ysize,  }\item[{uint8\+\_\+t $\ast$}]{pdata }\end{DoxyParamCaption})}
+
+
+
+Displays picture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pdata} & picture address. \\
+\hline
+{\em Xpos} & Image X position in the LCD \\
+\hline
+{\em Ypos} & Image Y position in the LCD \\
+\hline
+{\em Xsize} & Image X size in the LCD \\
+\hline
+{\em Ysize} & Image Y size in the LCD \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga07d5e69acf9c9ddcbe9de103fc2fceab}\label{group___l_s016_b8_u_y___private___functions_ga07d5e69acf9c9ddcbe9de103fc2fceab}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_DrawVLine@{ls016b8uy\_DrawVLine}}
+\index{ls016b8uy\_DrawVLine@{ls016b8uy\_DrawVLine}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_DrawVLine()}{ls016b8uy\_DrawVLine()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Draw\+VLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draw vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color ~\newline
+ \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the Line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga36dc9de467a4245daed7e14319417f57}\label{group___l_s016_b8_u_y___private___functions_ga36dc9de467a4245daed7e14319417f57}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_GetLcdPixelHeight@{ls016b8uy\_GetLcdPixelHeight}}
+\index{ls016b8uy\_GetLcdPixelHeight@{ls016b8uy\_GetLcdPixelHeight}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_GetLcdPixelHeight()}{ls016b8uy\_GetLcdPixelHeight()}}
+{\footnotesize\ttfamily uint16\+\_\+t ls016b8uy\+\_\+\+Get\+Lcd\+Pixel\+Height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the LCD pixel Height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Height \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_gac8aa329640b773f9f66b155057bfab27}\label{group___l_s016_b8_u_y___private___functions_gac8aa329640b773f9f66b155057bfab27}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_GetLcdPixelWidth@{ls016b8uy\_GetLcdPixelWidth}}
+\index{ls016b8uy\_GetLcdPixelWidth@{ls016b8uy\_GetLcdPixelWidth}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_GetLcdPixelWidth()}{ls016b8uy\_GetLcdPixelWidth()}}
+{\footnotesize\ttfamily uint16\+\_\+t ls016b8uy\+\_\+\+Get\+Lcd\+Pixel\+Width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the LCD pixel Width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Width \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_gac4450be5042c64be807c7b12bf92a3f4}\label{group___l_s016_b8_u_y___private___functions_gac4450be5042c64be807c7b12bf92a3f4}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_Init@{ls016b8uy\_Init}}
+\index{ls016b8uy\_Init@{ls016b8uy\_Init}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_Init()}{ls016b8uy\_Init()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the LS016\+B8\+UY LCD Component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_gadd42077cff1097a6c1539dda3d95eeb1}\label{group___l_s016_b8_u_y___private___functions_gadd42077cff1097a6c1539dda3d95eeb1}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_ReadID@{ls016b8uy\_ReadID}}
+\index{ls016b8uy\_ReadID@{ls016b8uy\_ReadID}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_ReadID()}{ls016b8uy\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t ls016b8uy\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the LS016\+B8\+UY ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & LS016\+B8\+UY ID \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga5ffe75dce422a4ecb981505b599d5a77}\label{group___l_s016_b8_u_y___private___functions_ga5ffe75dce422a4ecb981505b599d5a77}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_ReadPixel@{ls016b8uy\_ReadPixel}}
+\index{ls016b8uy\_ReadPixel@{ls016b8uy\_ReadPixel}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_ReadPixel()}{ls016b8uy\_ReadPixel()}}
+{\footnotesize\ttfamily uint16\+\_\+t ls016b8uy\+\_\+\+Read\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Read pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & RGB pixel color in RGB565 format \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga06f10ba844e64c5edab2d2ea4a46ae98}\label{group___l_s016_b8_u_y___private___functions_ga06f10ba844e64c5edab2d2ea4a46ae98}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_ReadReg@{ls016b8uy\_ReadReg}}
+\index{ls016b8uy\_ReadReg@{ls016b8uy\_ReadReg}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_ReadReg()}{ls016b8uy\_ReadReg()}}
+{\footnotesize\ttfamily uint8\+\_\+t ls016b8uy\+\_\+\+Read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Command }\end{DoxyParamCaption})}
+
+
+
+Reads the selected LCD Register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Command} & command value (or register address as named in LS016\+B8\+UY doc). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Register} & Value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga2008896a3586252c8873666b5ea4a655}\label{group___l_s016_b8_u_y___private___functions_ga2008896a3586252c8873666b5ea4a655}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_SetCursor@{ls016b8uy\_SetCursor}}
+\index{ls016b8uy\_SetCursor@{ls016b8uy\_SetCursor}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_SetCursor()}{ls016b8uy\_SetCursor()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Set Cursor position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga747a6665d219b3ed5675a88c83a39b02}\label{group___l_s016_b8_u_y___private___functions_ga747a6665d219b3ed5675a88c83a39b02}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_SetDisplayWindow@{ls016b8uy\_SetDisplayWindow}}
+\index{ls016b8uy\_SetDisplayWindow@{ls016b8uy\_SetDisplayWindow}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_SetDisplayWindow()}{ls016b8uy\_SetDisplayWindow()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Set\+Display\+Window (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Sets a display window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X bottom left position. \\
+\hline
+{\em Ypos} & specifies the Y bottom left position. \\
+\hline
+{\em Height} & display window height. \\
+\hline
+{\em Width} & display window width. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_ga12986596a5d5b466ced7ee668de668af}\label{group___l_s016_b8_u_y___private___functions_ga12986596a5d5b466ced7ee668de668af}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_WritePixel@{ls016b8uy\_WritePixel}}
+\index{ls016b8uy\_WritePixel@{ls016b8uy\_WritePixel}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_WritePixel()}{ls016b8uy\_WritePixel()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Write\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{RGBCode }\end{DoxyParamCaption})}
+
+
+
+Write pixel. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em RGBCode} & the RGB pixel color in RGB565 format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_s016_b8_u_y___private___functions_gadc7e5ad7d59dc403980a2941d05bdaae}\label{group___l_s016_b8_u_y___private___functions_gadc7e5ad7d59dc403980a2941d05bdaae}} 
+\index{LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}!ls016b8uy\_WriteReg@{ls016b8uy\_WriteReg}}
+\index{ls016b8uy\_WriteReg@{ls016b8uy\_WriteReg}!LS016B8UY\_Private\_Functions@{LS016B8UY\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ls016b8uy\_WriteReg()}{ls016b8uy\_WriteReg()}}
+{\footnotesize\ttfamily void ls016b8uy\+\_\+\+Write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Command,  }\item[{uint8\+\_\+t $\ast$}]{Parameters,  }\item[{uint8\+\_\+t}]{Nb\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Writes to the selected LCD register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Command} & command value (or register address as named in LS016\+B8\+UY doc). \\
+\hline
+{\em Parameters} & pointer on parameters value (if command uses one or several parameters). \\
+\hline
+{\em Nb\+Parameters} & number of command parameters (0 if no parameter) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

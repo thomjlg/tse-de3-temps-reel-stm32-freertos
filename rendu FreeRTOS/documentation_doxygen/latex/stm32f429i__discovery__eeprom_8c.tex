@@ -1,0 +1,59 @@
+\hypertarget{stm32f429i__discovery__eeprom_8c}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery\+\_\+eeprom.c File Reference}
+\label{stm32f429i__discovery__eeprom_8c}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_eeprom.c@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_eeprom.c}}
+
+
+This file provides a set of functions needed to manage an I2C M24\+LR64 EEPROM memory. To be able to use this driver, the switch EE\+\_\+\+M24\+LR64 must be defined in your toolchain compiler preprocessor.  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+eeprom.\+h\char`\"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage an I2C M24\+LR64 EEPROM memory. To be able to use this driver, the switch EE\+\_\+\+M24\+LR64 must be defined in your toolchain compiler preprocessor. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\DoxyHorRuler{0}
+ Notes\+:
+\begin{DoxyItemize}
+\item This driver is intended for STM32\+F4xx families devices only.
+\item The I2C EEPROM memory (M24\+LR64) is available on separate daughter board ANT7-\/\+M24\+LR-\/A, which is not provided with the STM32\+F429I DISCOVERY board. To use this driver you have to connect the ANT7-\/\+M24\+LR-\/A to CN3 
+\end{DoxyItemize}\hypertarget{stm32f429i__discovery__eeprom_8c_autotoc_md1}{}\doxysubsection{connector of STM32\+F429\+I DISCOVERY board.}\label{stm32f429i__discovery__eeprom_8c_autotoc_md1}
+It implements a high level communication layer for read and write from/to this memory. The needed STM32\+F4xx hardware resources (I2C and GPIO) are defined in \mbox{\hyperlink{stm32f429i__discovery_8h}{stm32f429i\+\_\+discovery.\+h}} file, and the initialization is performed in EEPROM\+\_\+\+IO\+\_\+\+Init() function declared in \mbox{\hyperlink{stm32f429i__discovery_8c}{stm32f429i\+\_\+discovery.\+c}} file. You can easily tailor this driver to any other development board, by just adapting the defines for hardware resources and EEPROM\+\_\+\+IO\+\_\+\+Init() function.
+
+\begin{DoxyNote}{Note}
+In this driver, basic read and write functions (BSP\+\_\+\+EEPROM\+\_\+\+Read\+Buffer() and BSP\+\_\+\+EEPROM\+\_\+\+Write\+Page()) use DMA mode to perform the data transfer to/from EEPROM memory.
+
+Regarding BSP\+\_\+\+EEPROM\+\_\+\+Write\+Page(), it is a optimized function to perform small write (less than 1 page) BUT The number of bytes (combined to write start address) must not cross the EEPROM page boundary. This function can only write into the boundaries of an EEPROM page. This function doesn\textquotesingle{}t check on boundaries condition (in this driver the function BSP\+\_\+\+EEPROM\+\_\+\+Write\+Buffer() which calls BSP\+\_\+\+EEPROM\+\_\+\+Write\+Page() is responsible of checking on Page boundaries).
+\end{DoxyNote}
+\begin{DoxyVerb}+-----------------------------------------------------------------+
+|               Pin assignment for M24LR64 EEPROM                 |
++---------------------------------------+-----------+-------------+
+|  STM32F4xx I2C Pins                   |   EEPROM  |   Pin       |
++---------------------------------------+-----------+-------------+
+| .                                     |   E0(GND) |    1  (0V)  |
+| .                                     |   AC0     |    2        |
+| .                                     |   AC1     |    3        |
+| .                                     |   VSS     |    4  (0V)  |
+| SDA                                   |   SDA     |    5        |
+| SCL                                   |   SCL     |    6        |
+| .                                     |   E1(GND) |    7  (0V)  |
+| .                                     |   VDD     |    8 (3.3V) |
++---------------------------------------+-----------+-------------+
+\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

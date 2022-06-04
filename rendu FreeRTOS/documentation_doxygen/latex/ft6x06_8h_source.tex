@@ -1,0 +1,280 @@
+\hypertarget{ft6x06_8h_source}{}\doxysection{ft6x06.\+h}
+\label{ft6x06_8h_source}\index{Drivers/BSP/Components/ft6x06/ft6x06.h@{Drivers/BSP/Components/ft6x06/ft6x06.h}}
+\mbox{\hyperlink{ft6x06_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_FT6X06\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_FT6X06\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Set Multi-\/touch as non supported */}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#ifndef TS\_MULTI\_TOUCH\_SUPPORTED}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{  \#define TS\_MULTI\_TOUCH\_SUPPORTED 0}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{comment}{/* Set Auto-\/calibration as non supported */}  }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#ifndef TS\_AUTO\_CALIBRATION\_SUPPORTED}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{  \#define TS\_AUTO\_CALIBRATION\_SUPPORTED 0}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56   }
+\DoxyCodeLine{57 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include "{}../Common/ts.h"{}}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/* Macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{65 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67   uint8\_t i2cInitialized;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69   \textcolor{comment}{/* field holding the current number of simultaneous active touches */}}
+\DoxyCodeLine{70   uint8\_t currActiveTouchNb;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72   \textcolor{comment}{/* field holding the touch index currently managed */}}
+\DoxyCodeLine{73   uint8\_t currActiveTouchIdx;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \} \mbox{\hyperlink{structft6x06__handle___type_def}{ft6x06\_handle\_TypeDef}};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{89   \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{95   \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{101   \textcolor{comment}{/* Maximum border values of the touchscreen pad */}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define  FT\_6206\_MAX\_WIDTH              ((uint16\_t)800)     }\textcolor{comment}{/* Touchscreen pad max width   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define  FT\_6206\_MAX\_HEIGHT             ((uint16\_t)480)     }\textcolor{comment}{/* Touchscreen pad max height  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   \textcolor{comment}{/* Touchscreen pad max width and height values for FT6x36 Touch*/}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define  FT\_6206\_MAX\_WIDTH\_HEIGHT       ((uint16\_t)240)     }}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108   \textcolor{comment}{/* Possible values of driver functions return status */}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define FT6206\_STATUS\_OK                0}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define FT6206\_STATUS\_NOT\_OK            1}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   \textcolor{comment}{/* Possible values of global variable 'TS\_I2C\_Initialized' */}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define FT6206\_I2C\_NOT\_INITIALIZED      0}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define FT6206\_I2C\_INITIALIZED          1}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116   \textcolor{comment}{/* Max detectable simultaneous touches */}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define FT6206\_MAX\_DETECTABLE\_TOUCH     2}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{123   \textcolor{comment}{/* Current mode register of the FT6206 (R/W) */}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define FT6206\_DEV\_MODE\_REG             0x00}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126   \textcolor{comment}{/* Possible values of FT6206\_DEV\_MODE\_REG */}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define FT6206\_DEV\_MODE\_WORKING         0x00}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define FT6206\_DEV\_MODE\_FACTORY         0x04}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define FT6206\_DEV\_MODE\_MASK            0x7}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define FT6206\_DEV\_MODE\_SHIFT           4}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133   \textcolor{comment}{/* Gesture ID register */}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_REG              0x01}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   \textcolor{comment}{/* Possible values of FT6206\_GEST\_ID\_REG */}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_NO\_GESTURE       0x00}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_MOVE\_UP          0x10}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_MOVE\_RIGHT       0x14}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_MOVE\_DOWN        0x18}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_MOVE\_LEFT        0x1C}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_ZOOM\_IN          0x48}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define FT6206\_GEST\_ID\_ZOOM\_OUT         0x49}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145   \textcolor{comment}{/* Touch Data Status register : gives number of active touch points (0..2) */}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define FT6206\_TD\_STAT\_REG              0x02}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148   \textcolor{comment}{/* Values related to FT6206\_TD\_STAT\_REG */}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define FT6206\_TD\_STAT\_MASK             0x0F}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define FT6206\_TD\_STAT\_SHIFT            0x00}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152   \textcolor{comment}{/* Values Pn\_XH and Pn\_YH related */}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_EVT\_FLAG\_PRESS\_DOWN 0x00}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_EVT\_FLAG\_LIFT\_UP    0x01}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_EVT\_FLAG\_CONTACT    0x02}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_EVT\_FLAG\_NO\_EVENT   0x03}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_EVT\_FLAG\_SHIFT     6}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_EVT\_FLAG\_MASK      (3 << FT6206\_TOUCH\_EVT\_FLAG\_SHIFT)}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define FT6206\_MSB\_MASK                 0x0F}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define FT6206\_MSB\_SHIFT                0}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164   \textcolor{comment}{/* Values Pn\_XL and Pn\_YL related */}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define FT6206\_LSB\_MASK                 0xFF}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define FT6206\_LSB\_SHIFT                0}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define FT6206\_P1\_XH\_REG                0x03}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define FT6206\_P1\_XL\_REG                0x04}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define FT6206\_P1\_YH\_REG                0x05}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define FT6206\_P1\_YL\_REG                0x06}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173   \textcolor{comment}{/* Touch Pressure register value (R) */}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define FT6206\_P1\_WEIGHT\_REG            0x07}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176   \textcolor{comment}{/* Values Pn\_WEIGHT related  */}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_WEIGHT\_MASK        0xFF}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_WEIGHT\_SHIFT       0}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180   \textcolor{comment}{/* Touch area register */}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define FT6206\_P1\_MISC\_REG              0x08}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   \textcolor{comment}{/* Values related to FT6206\_Pn\_MISC\_REG */}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_AREA\_MASK         (0x04 << 4)}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define FT6206\_TOUCH\_AREA\_SHIFT        0x04}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define FT6206\_P2\_XH\_REG               0x09}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define FT6206\_P2\_XL\_REG               0x0A}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define FT6206\_P2\_YH\_REG               0x0B}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define FT6206\_P2\_YL\_REG               0x0C}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define FT6206\_P2\_WEIGHT\_REG           0x0D}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define FT6206\_P2\_MISC\_REG             0x0E}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \textcolor{comment}{/* Threshold for touch detection */}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define FT6206\_TH\_GROUP\_REG            0x80}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197   \textcolor{comment}{/* Values FT6206\_TH\_GROUP\_REG : threshold related  */}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define FT6206\_THRESHOLD\_MASK          0xFF}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define FT6206\_THRESHOLD\_SHIFT         0}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201   \textcolor{comment}{/* Filter function coefficients */}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define FT6206\_TH\_DIFF\_REG             0x85}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204   \textcolor{comment}{/* Control register */}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define FT6206\_CTRL\_REG                0x86}}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207   \textcolor{comment}{/* Values related to FT6206\_CTRL\_REG */}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209   \textcolor{comment}{/* Will keep the Active mode when there is no touching */}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define FT6206\_CTRL\_KEEP\_ACTIVE\_MODE    0x00}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212   \textcolor{comment}{/* Switching from Active mode to Monitor mode automatically when there is no touching */}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define FT6206\_CTRL\_KEEP\_AUTO\_SWITCH\_MONITOR\_MODE  0x01}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215   \textcolor{comment}{/* The time period of switching from Active mode to Monitor mode when there is no touching */}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define FT6206\_TIMEENTERMONITOR\_REG     0x87}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218   \textcolor{comment}{/* Report rate in Active mode */}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define FT6206\_PERIODACTIVE\_REG         0x88}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221   \textcolor{comment}{/* Report rate in Monitor mode */}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define FT6206\_PERIODMONITOR\_REG        0x89}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224   \textcolor{comment}{/* The value of the minimum allowed angle while Rotating gesture mode */}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define FT6206\_RADIAN\_VALUE\_REG         0x91}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227   \textcolor{comment}{/* Maximum offset while Moving Left and Moving Right gesture */}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define FT6206\_OFFSET\_LEFT\_RIGHT\_REG    0x92}}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230   \textcolor{comment}{/* Maximum offset while Moving Up and Moving Down gesture */}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define FT6206\_OFFSET\_UP\_DOWN\_REG       0x93}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233   \textcolor{comment}{/* Minimum distance while Moving Left and Moving Right gesture */}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define FT6206\_DISTANCE\_LEFT\_RIGHT\_REG  0x94}}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236   \textcolor{comment}{/* Minimum distance while Moving Up and Moving Down gesture */}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define FT6206\_DISTANCE\_UP\_DOWN\_REG     0x95}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239   \textcolor{comment}{/* Maximum distance while Zoom In and Zoom Out gesture */}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define FT6206\_DISTANCE\_ZOOM\_REG        0x96}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242   \textcolor{comment}{/* High 8-\/bit of LIB Version info */}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define FT6206\_LIB\_VER\_H\_REG            0xA1}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245   \textcolor{comment}{/* Low 8-\/bit of LIB Version info */}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define FT6206\_LIB\_VER\_L\_REG            0xA2}}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248   \textcolor{comment}{/* Chip Selecting */}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define FT6206\_CIPHER\_REG               0xA3}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251   \textcolor{comment}{/* Interrupt mode register (used when in interrupt mode) */}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#define FT6206\_GMODE\_REG                0xA4}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define FT6206\_G\_MODE\_INTERRUPT\_MASK    0x03}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define FT6206\_G\_MODE\_INTERRUPT\_SHIFT   0x00}}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257   \textcolor{comment}{/* Possible values of FT6206\_GMODE\_REG */}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define FT6206\_G\_MODE\_INTERRUPT\_POLLING 0x00}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define FT6206\_G\_MODE\_INTERRUPT\_TRIGGER 0x01}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261   \textcolor{comment}{/* Current power mode the FT6206 system is in (R) */}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define FT6206\_PWR\_MODE\_REG             0xA5}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264   \textcolor{comment}{/* FT6206 firmware version */}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define FT6206\_FIRMID\_REG               0xA6}}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267   \textcolor{comment}{/* FT6206 Chip identification register */}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define FT6206\_CHIP\_ID\_REG              0xA8}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270   \textcolor{comment}{/*  Possible values of FT6206\_CHIP\_ID\_REG */}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#define FT6206\_ID\_VALUE                 0x11}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#define FT6x36\_ID\_VALUE                 0xCD}}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274   \textcolor{comment}{/* Release code version */}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define FT6206\_RELEASE\_CODE\_ID\_REG      0xAF}}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{277   \textcolor{comment}{/* Current operating mode the FT6206 system is in (R) */}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define FT6206\_STATE\_REG                0xBC}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{284   \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{290   \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{307 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__ft6x06___exported___functions_gafe7ac293c9d9896c47f08cf8bc3443df}{ft6x06\_Init}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{314 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__ft6x06___exported___functions_gad2d626c5c5d733efd83833d52450dab1}{ft6x06\_Reset}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{322 uint16\_t \mbox{\hyperlink{group__ft6x06___exported___functions_ga714520adcf3d75394a2f08cf428d3c40}{ft6x06\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{329 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__ft6x06___exported___functions_ga0b3b8a00d8eaa2c7897faa510c6be8e6}{ft6x06\_TS\_Start}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{338 uint8\_t \mbox{\hyperlink{group__ft6x06___exported___functions_ga3e9239483436ee60bee91078004b446f}{ft6x06\_TS\_DetectTouch}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{339 }
+\DoxyCodeLine{349 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__ft6x06___exported___functions_ga9617cc523a8f1817698200a35b1bf45d}{ft6x06\_TS\_GetXY}}(uint16\_t DeviceAddr, uint16\_t *X, uint16\_t *Y);}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{357 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__ft6x06___exported___functions_ga55dc85a22e1cf328f4375a2399a1f552}{ft6x06\_TS\_EnableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{358 }
+\DoxyCodeLine{365 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__ft6x06___exported___functions_gac9a37ec0615a1d509fe23b155fb54645}{ft6x06\_TS\_DisableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{374 uint8\_t \mbox{\hyperlink{group__ft6x06___exported___functions_ga877eeda8f858e0c17aeefe412f1192cf}{ft6x06\_TS\_ITStatus}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{382 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__ft6x06___exported___functions_gac63b3b4e1b2ce96d72356b7ea1d8f1c8}{ft6x06\_TS\_ClearIT}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384 \textcolor{comment}{/**** NEW FEATURES enabled when Multi-\/touch support is enabled ****/}}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#if (TS\_MULTI\_TOUCH\_SUPPORTED == 1)}}
+\DoxyCodeLine{387 }
+\DoxyCodeLine{394 \textcolor{keywordtype}{void} ft6x06\_TS\_GetGestureID(uint16\_t DeviceAddr, uint32\_t * pGestureId);}
+\DoxyCodeLine{395 }
+\DoxyCodeLine{411 \textcolor{keywordtype}{void} ft6x06\_TS\_GetTouchInfo(uint16\_t   DeviceAddr,}
+\DoxyCodeLine{412                             uint32\_t   touchIdx,}
+\DoxyCodeLine{413                             uint32\_t * pWeight,}
+\DoxyCodeLine{414                             uint32\_t * pArea,}
+\DoxyCodeLine{415                             uint32\_t * pEvent);}
+\DoxyCodeLine{416 }
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TS\_MULTI\_TOUCH\_SUPPORTED == 1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{419 \textcolor{comment}{/* Imported TS IO functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{425 \textcolor{comment}{/* TouchScreen (TS) external IO functions */}}
+\DoxyCodeLine{426 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     TS\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{427 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     TS\_IO\_Write(uint8\_t Addr, uint8\_t Reg, uint8\_t Value);}
+\DoxyCodeLine{428 \textcolor{keyword}{extern} uint8\_t  TS\_IO\_Read(uint8\_t Addr, uint8\_t Reg);}
+\DoxyCodeLine{429 \textcolor{keyword}{extern} uint16\_t TS\_IO\_ReadMultiple(uint8\_t Addr, uint8\_t Reg, uint8\_t *Buffer, uint16\_t Length);}
+\DoxyCodeLine{430 \textcolor{keyword}{extern} \textcolor{keywordtype}{void}     TS\_IO\_Delay(uint32\_t Delay);}
+\DoxyCodeLine{431 }
+\DoxyCodeLine{436   \textcolor{comment}{/* Imported global variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{443 \textcolor{comment}{/* Touch screen driver structure */}}
+\DoxyCodeLine{444 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_t_s___drv_type_def}{TS\_DrvTypeDef}} ft6x06\_ts\_drv;}
+\DoxyCodeLine{445 }
+\DoxyCodeLine{450 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{451 \}}
+\DoxyCodeLine{452 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{453 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_FT6X06\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{454 }
+\DoxyCodeLine{455 }
+\DoxyCodeLine{471 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

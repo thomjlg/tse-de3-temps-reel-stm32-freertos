@@ -1,0 +1,101 @@
+\hypertarget{lcd__log_8c}{}\doxysection{Utilities/\+Log/lcd\+\_\+log.c File Reference}
+\label{lcd__log_8c}\index{Utilities/Log/lcd\_log.c@{Utilities/Log/lcd\_log.c}}
+
+
+This file provides all the LCD Log firmware functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lcd\+\_\+log.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries YWINDOW\+\_\+\+MIN}~4
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga2da17045c681d794945b5acfe9fdd322}{LCD\+\_\+\+LOG\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD Log module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_gaca8fd8b0c7b84bf9b368cb1c4be340f7}{LCD\+\_\+\+LOG\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the LCD Log module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga80ed4f7d120d91c986e1e998959bf256}{LCD\+\_\+\+LOG\+\_\+\+Set\+Header}} (uint8\+\_\+t $\ast$header)
+\begin{DoxyCompactList}\small\item\em Display the application header on the LCD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga2cd8b0736079015cc5a74b0b20512e1d}{LCD\+\_\+\+LOG\+\_\+\+Set\+Footer}} (uint8\+\_\+t $\ast$footer)
+\begin{DoxyCompactList}\small\item\em Display the application footer on the LCD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga1348f03c75f03c730eb0136b3e47fad1}{LCD\+\_\+\+LOG\+\_\+\+Clear\+Text\+Zone}} (void)
+\begin{DoxyCompactList}\small\item\em Clear the Text Zone. \end{DoxyCompactList}\item 
+{\bfseries if} (LCD\+\_\+\+Lock==DISABLE)
+\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga475900ffe4feaa5c1d1e36167454afbd}{LCD\+\_\+\+LOG\+\_\+\+Update\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Update the text area display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct___l_c_d___l_o_g__line}{LCD\+\_\+\+LOG\+\_\+line}} {\bfseries LCD\+\_\+\+Cache\+Buffer} \mbox{[}LCD\+\_\+\+CACHE\+\_\+\+DEPTH\mbox{]}
+\item 
+uint32\+\_\+t {\bfseries LCD\+\_\+\+Line\+Color}
+\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+Cache\+Buffer\+\_\+xptr}
+\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+Cache\+Buffer\+\_\+yptr\+\_\+top}
+\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+Cache\+Buffer\+\_\+yptr\+\_\+bottom}
+\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+Cache\+Buffer\+\_\+yptr\+\_\+top\+\_\+bak}
+\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+Cache\+Buffer\+\_\+yptr\+\_\+bottom\+\_\+bak}
+\item 
+Functional\+State {\bfseries LCD\+\_\+\+Cache\+Buffer\+\_\+yptr\+\_\+invert}
+\item 
+Functional\+State {\bfseries LCD\+\_\+\+Scroll\+Active}
+\item 
+Functional\+State {\bfseries LCD\+\_\+\+Lock}
+\item 
+Functional\+State {\bfseries LCD\+\_\+\+Scrolled}
+\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+Scroll\+Back\+Step}
+\item 
+\mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga8d24fb854179763c2becd7fdf1ab9e17}{LCD\+\_\+\+LOG\+\_\+\+PUTCHAR}}
+\begin{DoxyCompactList}\small\item\em Redirect the printf to the LCD. \end{DoxyCompactList}\item 
+uint32\+\_\+t {\bfseries idx}
+\item 
+return {\bfseries ch}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides all the LCD Log firmware functions. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18-\/November-\/2016 \begin{DoxyVerb}     The LCD Log module allows to automatically set a header and footer
+     on any application using the LCD display and allows to dump user,
+     debug and error messages by using the following macros: LCD_ErrLog(),
+     LCD_UsrLog() and LCD_DbgLog().
+
+     It supports also the scroll feature by embedding an internal software
+     cache for display. This feature allows to dump message sequentially
+     on the display even if the number of displayed lines is bigger than
+     the total number of line allowed by the display.
+\end{DoxyVerb}
+
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

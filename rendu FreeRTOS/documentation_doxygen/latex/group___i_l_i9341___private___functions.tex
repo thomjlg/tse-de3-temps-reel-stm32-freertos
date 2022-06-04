@@ -1,0 +1,211 @@
+\hypertarget{group___i_l_i9341___private___functions}{}\doxysection{ILI9341\+\_\+\+Private\+\_\+\+Functions}
+\label{group___i_l_i9341___private___functions}\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga9f53af6ab5b6427655c61ef71fa4a442}{ili9341\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Power on the LCD. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_gaf22c926ba633bcfa144bd68d1cc438d0}{ili9341\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_gac3489560fb954b6e4bf5ac24ef99988d}{ili9341\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga3c09dd822d1d76312b6143b8adcb00fa}{ili9341\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga7ca01b0c09af1a51ccbfb929e6ee1275}{ili9341\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCD\+\_\+\+Reg)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___private___functions_ga94c1249a02f21b0a1acd31e985b9cf50}{ili9341\+\_\+\+Write\+Data}} (uint16\+\_\+t Reg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes data to the selected LCD register. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_ga8a2a8f4eb728128a111362c7e552634f}{ili9341\+\_\+\+Read\+Data}} (uint16\+\_\+t Reg\+Value, uint8\+\_\+t Read\+Size)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_ga9c56b9515b050d26659353ecb6cf2a14}{ili9341\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get LCD PIXEL WIDTH. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___private___functions_ga67359a0ad0d4d272473ed43360306a28}{ili9341\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get LCD PIXEL HEIGHT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_ga3c09dd822d1d76312b6143b8adcb00fa}\label{group___i_l_i9341___private___functions_ga3c09dd822d1d76312b6143b8adcb00fa}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_DisplayOff@{ili9341\_DisplayOff}}
+\index{ili9341\_DisplayOff@{ili9341\_DisplayOff}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_DisplayOff()}{ili9341\_DisplayOff()}}
+{\footnotesize\ttfamily void ili9341\+\_\+\+Display\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_gac3489560fb954b6e4bf5ac24ef99988d}\label{group___i_l_i9341___private___functions_gac3489560fb954b6e4bf5ac24ef99988d}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_DisplayOn@{ili9341\_DisplayOn}}
+\index{ili9341\_DisplayOn@{ili9341\_DisplayOn}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_DisplayOn()}{ili9341\_DisplayOn()}}
+{\footnotesize\ttfamily void ili9341\+\_\+\+Display\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_ga67359a0ad0d4d272473ed43360306a28}\label{group___i_l_i9341___private___functions_ga67359a0ad0d4d272473ed43360306a28}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_GetLcdPixelHeight@{ili9341\_GetLcdPixelHeight}}
+\index{ili9341\_GetLcdPixelHeight@{ili9341\_GetLcdPixelHeight}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_GetLcdPixelHeight()}{ili9341\_GetLcdPixelHeight()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9341\+\_\+\+Get\+Lcd\+Pixel\+Height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get LCD PIXEL HEIGHT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em LCD} & PIXEL HEIGHT. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_ga9c56b9515b050d26659353ecb6cf2a14}\label{group___i_l_i9341___private___functions_ga9c56b9515b050d26659353ecb6cf2a14}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_GetLcdPixelWidth@{ili9341\_GetLcdPixelWidth}}
+\index{ili9341\_GetLcdPixelWidth@{ili9341\_GetLcdPixelWidth}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_GetLcdPixelWidth()}{ili9341\_GetLcdPixelWidth()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9341\+\_\+\+Get\+Lcd\+Pixel\+Width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get LCD PIXEL WIDTH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em LCD} & PIXEL WIDTH. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_ga9f53af6ab5b6427655c61ef71fa4a442}\label{group___i_l_i9341___private___functions_ga9f53af6ab5b6427655c61ef71fa4a442}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_Init@{ili9341\_Init}}
+\index{ili9341\_Init@{ili9341\_Init}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_Init()}{ili9341\_Init()}}
+{\footnotesize\ttfamily void ili9341\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Power on the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_ga8a2a8f4eb728128a111362c7e552634f}\label{group___i_l_i9341___private___functions_ga8a2a8f4eb728128a111362c7e552634f}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_ReadData@{ili9341\_ReadData}}
+\index{ili9341\_ReadData@{ili9341\_ReadData}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_ReadData()}{ili9341\_ReadData()}}
+{\footnotesize\ttfamily uint32\+\_\+t ili9341\+\_\+\+Read\+Data (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Reg\+Value,  }\item[{uint8\+\_\+t}]{Read\+Size }\end{DoxyParamCaption})}
+
+
+
+Reads the selected LCD Register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reg\+Value} & Address of the register to read \\
+\hline
+{\em Read\+Size} & Number of bytes to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em LCD} & Register Value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_gaf22c926ba633bcfa144bd68d1cc438d0}\label{group___i_l_i9341___private___functions_gaf22c926ba633bcfa144bd68d1cc438d0}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_ReadID@{ili9341\_ReadID}}
+\index{ili9341\_ReadID@{ili9341\_ReadID}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_ReadID()}{ili9341\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t ili9341\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em LCD} & Register Value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_ga94c1249a02f21b0a1acd31e985b9cf50}\label{group___i_l_i9341___private___functions_ga94c1249a02f21b0a1acd31e985b9cf50}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_WriteData@{ili9341\_WriteData}}
+\index{ili9341\_WriteData@{ili9341\_WriteData}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_WriteData()}{ili9341\_WriteData()}}
+{\footnotesize\ttfamily void ili9341\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Reg\+Value }\end{DoxyParamCaption})}
+
+
+
+Writes data to the selected LCD register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LCD\+\_\+\+Reg} & address of the selected register. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___i_l_i9341___private___functions_ga7ca01b0c09af1a51ccbfb929e6ee1275}\label{group___i_l_i9341___private___functions_ga7ca01b0c09af1a51ccbfb929e6ee1275}} 
+\index{ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}!ili9341\_WriteReg@{ili9341\_WriteReg}}
+\index{ili9341\_WriteReg@{ili9341\_WriteReg}!ILI9341\_Private\_Functions@{ILI9341\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{ili9341\_WriteReg()}{ili9341\_WriteReg()}}
+{\footnotesize\ttfamily void ili9341\+\_\+\+Write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{LCD\+\_\+\+Reg }\end{DoxyParamCaption})}
+
+
+
+Writes to the selected LCD register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LCD\+\_\+\+Reg} & address of the selected register. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,97 @@
+\hypertarget{camera_8h}{}\doxysection{Drivers/\+BSP/\+Components/\+Common/camera.h File Reference}
+\label{camera_8h}\index{Drivers/BSP/Components/Common/camera.h@{Drivers/BSP/Components/Common/camera.h}}
+
+
+This header file contains the common defines and functions prototypes for the camera driver. ~\newline
+  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\+\_\+\+Drv\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries CAMERA\+\_\+\+R160x120}~0x00   /$\ast$ QQVGA Resolution                     $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+R320x240}~0x01   /$\ast$ QVGA Resolution                      $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+R480x272}~0x02   /$\ast$ 480x272 Resolution                   $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+R640x480}~0x03   /$\ast$ VGA Resolution                       $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+CONTRAST\+\_\+\+BRIGHTNESS}~0x00   /$\ast$ Camera contrast brightness features  $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BLACK\+\_\+\+WHITE}~0x01   /$\ast$ Camera black white feature           $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+COLOR\+\_\+\+EFFECT}~0x03   /$\ast$ Camera color effect feature          $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL0}~0x00   /$\ast$ Brightness level -\/2         $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL1}~0x01   /$\ast$ Brightness level -\/1         $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL2}~0x02   /$\ast$ Brightness level 0          $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL3}~0x03   /$\ast$ Brightness level +1         $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BRIGHTNESS\+\_\+\+LEVEL4}~0x04   /$\ast$ Brightness level +2         $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+CONTRAST\+\_\+\+LEVEL0}~0x05   /$\ast$ Contrast level -\/2           $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+CONTRAST\+\_\+\+LEVEL1}~0x06   /$\ast$ Contrast level -\/1           $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+CONTRAST\+\_\+\+LEVEL2}~0x07   /$\ast$ Contrast level  0           $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+CONTRAST\+\_\+\+LEVEL3}~0x08   /$\ast$ Contrast level +1           $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+CONTRAST\+\_\+\+LEVEL4}~0x09   /$\ast$ Contrast level +2           $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+BW}~0x00   /$\ast$ Black and white effect      $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+NEGATIVE}~0x01   /$\ast$ Negative effect             $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+BW\+\_\+\+NEGATIVE}~0x02   /$\ast$ BW and Negative effect      $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+BLACK\+\_\+\+WHITE\+\_\+\+NORMAL}~0x03   /$\ast$ Normal effect               $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+NONE}~0x00   /$\ast$ No effects                  $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+BLUE}~0x01   /$\ast$ Blue effect                 $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+GREEN}~0x02   /$\ast$ Green effect                $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+RED}~0x03   /$\ast$ Red effect                  $\ast$/
+\item 
+\#define {\bfseries CAMERA\+\_\+\+COLOR\+\_\+\+EFFECT\+\_\+\+ANTIQUE}~0x04   /$\ast$ Antique effect              $\ast$/
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This header file contains the common defines and functions prototypes for the camera driver. ~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V4.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+21-\/July-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

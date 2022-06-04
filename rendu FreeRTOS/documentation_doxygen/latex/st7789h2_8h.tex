@@ -1,0 +1,167 @@
+\hypertarget{st7789h2_8h}{}\doxysection{Drivers/\+BSP/\+Components/st7789h2/st7789h2.h File Reference}
+\label{st7789h2_8h}\index{Drivers/BSP/Components/st7789h2/st7789h2.h@{Drivers/BSP/Components/st7789h2/st7789h2.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{st7789h2_8c}{st7789h2.\+c}} driver.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Common/lcd.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+ID}~0x85
+\begin{DoxyCompactList}\small\item\em ST7789\+H2 ID ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+WIDTH}~((uint16\+\_\+t)240)
+\begin{DoxyCompactList}\small\item\em ST7789\+H2 Size ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+HEIGHT}~((uint16\+\_\+t)240)
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+ORIENTATION\+\_\+\+PORTRAIT}~((uint32\+\_\+t)0x00) /$\ast$ Portrait orientation choice of LCD screen  $\ast$/
+\begin{DoxyCompactList}\small\item\em LCD\+\_\+\+Orientation\+Type\+Def Possible values of Display Orientation. \end{DoxyCompactList}\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+ORIENTATION\+\_\+\+LANDSCAPE}~((uint32\+\_\+t)0x01) /$\ast$ Landscape orientation choice of LCD screen $\ast$/
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+ORIENTATION\+\_\+\+LANDSCAPE\+\_\+\+ROT180}~((uint32\+\_\+t)0x02) /$\ast$ Landscape rotated 180° orientation choice of LCD screen $\ast$/
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+LCD\+\_\+\+ID}~0x04
+\begin{DoxyCompactList}\small\item\em ST7789\+H2 Registers ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+SLEEP\+\_\+\+IN}~0x10
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+SLEEP\+\_\+\+OUT}~0x11
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+PARTIAL\+\_\+\+DISPLAY}~0x12
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+DISPLAY\+\_\+\+INVERSION}~0x21
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+DISPLAY\+\_\+\+ON}~0x29
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+WRITE\+\_\+\+RAM}~0x2C
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+READ\+\_\+\+RAM}~0x2E
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+CASET}~0x2A
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+RASET}~0x2B
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+VSCRDEF}~0x33 /$\ast$ Vertical Scroll Definition $\ast$/
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+VSCSAD}~0x37 /$\ast$ Vertical Scroll Start Address of RAM $\ast$/
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+TEARING\+\_\+\+EFFECT}~0x35
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+NORMAL\+\_\+\+DISPLAY}~0x36
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+IDLE\+\_\+\+MODE\+\_\+\+OFF}~0x38
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+IDLE\+\_\+\+MODE\+\_\+\+ON}~0x39
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+COLOR\+\_\+\+MODE}~0x3A
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+PORCH\+\_\+\+CTRL}~0x\+B2
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+GATE\+\_\+\+CTRL}~0x\+B7
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+VCOM\+\_\+\+SET}~0x\+BB
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+DISPLAY\+\_\+\+OFF}~0x\+BD
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+LCM\+\_\+\+CTRL}~0x\+C0
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+VDV\+\_\+\+VRH\+\_\+\+EN}~0x\+C2
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+VDV\+\_\+\+SET}~0x\+C4
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+VCOMH\+\_\+\+OFFSET\+\_\+\+SET}~0x\+C5
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+FR\+\_\+\+CTRL}~0x\+C6
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+POWER\+\_\+\+CTRL}~0x\+D0
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+PV\+\_\+\+GAMMA\+\_\+\+CTRL}~0x\+E0
+\item 
+\#define {\bfseries ST7789\+H2\+\_\+\+NV\+\_\+\+GAMMA\+\_\+\+CTRL}~0x\+E1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga79b03c4d621768b2edf01fe0300779a1}{ST7789\+H2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the st7789h2 LCD Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga1bcf4ea47a4e1f8d3298b78727c5e5c2}{ST7789\+H2\+\_\+\+Set\+Orientation}} (uint32\+\_\+t orientation)
+\begin{DoxyCompactList}\small\item\em Set the Display Orientation. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga2bb4b27b8a1b997030f8ecf2b7efd824}{ST7789\+H2\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Get the st7789h2 ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga88e28d2b7833475c12420bbbc8071a36}{ST7789\+H2\+\_\+\+Write\+Reg}} (uint8\+\_\+t Command, uint8\+\_\+t $\ast$Parameters, uint8\+\_\+t Nb\+Parameters)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gaddd260d6608ed9f4817b691fad210de6}{ST7789\+H2\+\_\+\+Read\+Reg}} (uint8\+\_\+t Command)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gaafb6fbc09b3a6fb4a163c59eefed12a2}{ST7789\+H2\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga19a9f41ab437e6d0d0310b535f84a08c}{ST7789\+H2\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga9e240ee0a5131b4b1c99f9804a51055d}{ST7789\+H2\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Set Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gab0ada921c8c4886a56114035b4496edf}{ST7789\+H2\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Write pixel. ~\newline
+ \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gad35fbfe45d9c0a5740d65f2597af02c2}{ST7789\+H2\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Read pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga072637724e314afd2ff3400d81026e4d}{ST7789\+H2\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga1855278f79146c88b0d0bb7e3b44fe36}{ST7789\+H2\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga146ade032342938424edf997e79e9672}{ST7789\+H2\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_gad939fb4b0afad19759072b8932061ec7}{ST7789\+H2\+\_\+\+Draw\+RGBImage}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint8\+\_\+t $\ast$pdata)
+\begin{DoxyCompactList}\small\item\em Displays picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga5c3d3168b881708cdc4174500d24d190}{ST7789\+H2\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga4971d96cf2b39b046f234d6e5b380b07}{ST7789\+H2\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___exported___functions_ga10c728adb4ca43b08a29f45a61226014}{ST7789\+H2\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Height. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the LCD\+\_\+\+SPI interface. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Multiple\+Data} (uint16\+\_\+t $\ast$p\+Data, uint32\+\_\+t Size)
+\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Reg} (uint8\+\_\+t Reg)
+\begin{DoxyCompactList}\small\item\em Writes register address. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Data} (uint16\+\_\+t Reg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes register value. \end{DoxyCompactList}\item 
+uint16\+\_\+t {\bfseries LCD\+\_\+\+IO\+\_\+\+Read\+Data} (void)
+\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Delay} (uint32\+\_\+t delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} {\bfseries ST7789\+H2\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{st7789h2_8c}{st7789h2.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+29-\/December-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

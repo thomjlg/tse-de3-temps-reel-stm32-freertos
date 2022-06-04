@@ -1,0 +1,66 @@
+\hypertarget{lcd__log__conf__template_8h}{}\doxysection{Utilities/\+Log/lcd\+\_\+log\+\_\+conf\+\_\+template.h File Reference}
+\label{lcd__log__conf__template_8h}\index{Utilities/Log/lcd\_log\_conf\_template.h@{Utilities/Log/lcd\_log\_conf\_template.h}}
+
+
+lcd\+\_\+log configuration template file. This file should be copied to the application folder and modified as follows\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32xxx\+\_\+eval\+\_\+lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries LCD\+\_\+\+SCROLL\+\_\+\+ENABLED}~1
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+HEADER\+\_\+\+FONT}~Font16
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+FOOTER\+\_\+\+FONT}~Font12
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+TEXT\+\_\+\+FONT}~Font12
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+BACKGROUND\+\_\+\+COLOR}~LCD\+\_\+\+COLOR\+\_\+\+WHITE
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+TEXT\+\_\+\+COLOR}~LCD\+\_\+\+COLOR\+\_\+\+DARKBLUE
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+SOLID\+\_\+\+BACKGROUND\+\_\+\+COLOR}~\mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___constants_ga5647ec8a40b49d6662226601eb9eb452}{LCD\+\_\+\+COLOR\+\_\+\+BLUE}}
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+SOLID\+\_\+\+TEXT\+\_\+\+COLOR}~LCD\+\_\+\+COLOR\+\_\+\+WHITE
+\item 
+\#define {\bfseries CACHE\+\_\+\+SIZE}~100
+\item 
+\#define {\bfseries YWINDOW\+\_\+\+SIZE}~17
+\item 
+\#define {\bfseries LCD\+\_\+\+LOG\+\_\+\+PUTCHAR}~int fputc(int ch, FILE $\ast$f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+lcd\+\_\+log configuration template file. This file should be copied to the application folder and modified as follows\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18-\/November-\/2016
+\begin{DoxyItemize}
+\item Rename it to \textquotesingle{}lcd\+\_\+log\+\_\+conf.\+h\textquotesingle{}.
+\item Update the name of the LCD driver\textquotesingle{}s header file, depending on the EVAL board you are using, see line40 below (be default this ~\newline
+ file will generate compile error unless you do this modification).
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,189 @@
+\hypertarget{group___l_c_d___l_o_g___private___functions}{}\doxysection{LCD\+\_\+\+LOG\+\_\+\+Private\+\_\+\+Functions}
+\label{group___l_c_d___l_o_g___private___functions}\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga2da17045c681d794945b5acfe9fdd322}{LCD\+\_\+\+LOG\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD Log module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_gaca8fd8b0c7b84bf9b368cb1c4be340f7}{LCD\+\_\+\+LOG\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the LCD Log module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga80ed4f7d120d91c986e1e998959bf256}{LCD\+\_\+\+LOG\+\_\+\+Set\+Header}} (uint8\+\_\+t $\ast$header)
+\begin{DoxyCompactList}\small\item\em Display the application header on the LCD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga2cd8b0736079015cc5a74b0b20512e1d}{LCD\+\_\+\+LOG\+\_\+\+Set\+Footer}} (uint8\+\_\+t $\ast$footer)
+\begin{DoxyCompactList}\small\item\em Display the application footer on the LCD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga1348f03c75f03c730eb0136b3e47fad1}{LCD\+\_\+\+LOG\+\_\+\+Clear\+Text\+Zone}} (void)
+\begin{DoxyCompactList}\small\item\em Clear the Text Zone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_gab8a30f9a773837cffde28263863123ff}\label{group___l_c_d___l_o_g___private___functions_gab8a30f9a773837cffde28263863123ff}} 
+{\bfseries if} (LCD\+\_\+\+Lock==DISABLE)
+\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga475900ffe4feaa5c1d1e36167454afbd}{LCD\+\_\+\+LOG\+\_\+\+Update\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Update the text area display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___l_c_d___l_o_g___private___functions_ga8d24fb854179763c2becd7fdf1ab9e17}{LCD\+\_\+\+LOG\+\_\+\+PUTCHAR}}
+\begin{DoxyCompactList}\small\item\em Redirect the printf to the LCD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga1f658a7d21dc9b85b8009cedb0a1aef6}\label{group___l_c_d___l_o_g___private___functions_ga1f658a7d21dc9b85b8009cedb0a1aef6}} 
+uint32\+\_\+t {\bfseries idx}
+\item 
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga0523c05685d59544dca911cb6a3db77d}\label{group___l_c_d___l_o_g___private___functions_ga0523c05685d59544dca911cb6a3db77d}} 
+return {\bfseries ch}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga1348f03c75f03c730eb0136b3e47fad1}\label{group___l_c_d___l_o_g___private___functions_ga1348f03c75f03c730eb0136b3e47fad1}} 
+\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}!LCD\_LOG\_ClearTextZone@{LCD\_LOG\_ClearTextZone}}
+\index{LCD\_LOG\_ClearTextZone@{LCD\_LOG\_ClearTextZone}!LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_LOG\_ClearTextZone()}{LCD\_LOG\_ClearTextZone()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+LOG\+\_\+\+Clear\+Text\+Zone (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clear the Text Zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_gaca8fd8b0c7b84bf9b368cb1c4be340f7}\label{group___l_c_d___l_o_g___private___functions_gaca8fd8b0c7b84bf9b368cb1c4be340f7}} 
+\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}!LCD\_LOG\_DeInit@{LCD\_LOG\_DeInit}}
+\index{LCD\_LOG\_DeInit@{LCD\_LOG\_DeInit}!LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_LOG\_DeInit()}{LCD\_LOG\_DeInit()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+LOG\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De\+Initializes the LCD Log module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga2da17045c681d794945b5acfe9fdd322}\label{group___l_c_d___l_o_g___private___functions_ga2da17045c681d794945b5acfe9fdd322}} 
+\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}!LCD\_LOG\_Init@{LCD\_LOG\_Init}}
+\index{LCD\_LOG\_Init@{LCD\_LOG\_Init}!LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_LOG\_Init()}{LCD\_LOG\_Init()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+LOG\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the LCD Log module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga2cd8b0736079015cc5a74b0b20512e1d}\label{group___l_c_d___l_o_g___private___functions_ga2cd8b0736079015cc5a74b0b20512e1d}} 
+\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}!LCD\_LOG\_SetFooter@{LCD\_LOG\_SetFooter}}
+\index{LCD\_LOG\_SetFooter@{LCD\_LOG\_SetFooter}!LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_LOG\_SetFooter()}{LCD\_LOG\_SetFooter()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+LOG\+\_\+\+Set\+Footer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{footer }\end{DoxyParamCaption})}
+
+
+
+Display the application footer on the LCD screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em footer} & pointer to the string to be displayed \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga80ed4f7d120d91c986e1e998959bf256}\label{group___l_c_d___l_o_g___private___functions_ga80ed4f7d120d91c986e1e998959bf256}} 
+\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}!LCD\_LOG\_SetHeader@{LCD\_LOG\_SetHeader}}
+\index{LCD\_LOG\_SetHeader@{LCD\_LOG\_SetHeader}!LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_LOG\_SetHeader()}{LCD\_LOG\_SetHeader()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+LOG\+\_\+\+Set\+Header (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{header }\end{DoxyParamCaption})}
+
+
+
+Display the application header on the LCD screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em header} & pointer to the string to be displayed \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga475900ffe4feaa5c1d1e36167454afbd}\label{group___l_c_d___l_o_g___private___functions_ga475900ffe4feaa5c1d1e36167454afbd}} 
+\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}!LCD\_LOG\_UpdateDisplay@{LCD\_LOG\_UpdateDisplay}}
+\index{LCD\_LOG\_UpdateDisplay@{LCD\_LOG\_UpdateDisplay}!LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_LOG\_UpdateDisplay()}{LCD\_LOG\_UpdateDisplay()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+LOG\+\_\+\+Update\+Display (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Update the text area display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group___l_c_d___l_o_g___private___functions_ga8d24fb854179763c2becd7fdf1ab9e17}\label{group___l_c_d___l_o_g___private___functions_ga8d24fb854179763c2becd7fdf1ab9e17}} 
+\index{LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}!LCD\_LOG\_PUTCHAR@{LCD\_LOG\_PUTCHAR}}
+\index{LCD\_LOG\_PUTCHAR@{LCD\_LOG\_PUTCHAR}!LCD\_LOG\_Private\_Functions@{LCD\_LOG\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_LOG\_PUTCHAR}{LCD\_LOG\_PUTCHAR}}
+{\footnotesize\ttfamily LCD\+\_\+\+LOG\+\_\+\+PUTCHAR}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \mbox{\hyperlink{struct__t_font}{sFONT}} *cFont = \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8f0e25c8df95159043d070cd3d2af01b}{BSP\_LCD\_GetFont}}()}
+
+\end{DoxyCode}
+
+
+Redirect the printf to the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & character to be displayed \\
+\hline
+{\em f} & output file pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

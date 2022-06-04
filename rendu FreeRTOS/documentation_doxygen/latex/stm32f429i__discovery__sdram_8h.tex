@@ -1,0 +1,107 @@
+\hypertarget{stm32f429i__discovery__sdram_8h}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery\+\_\+sdram.h File Reference}
+\label{stm32f429i__discovery__sdram_8h}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_sdram.h@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_sdram.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{stm32f429i__discovery__sdram_8c}{stm32f429i\+\_\+discovery\+\_\+sdram.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SDRAM\+\_\+\+OK}~((uint8\+\_\+t)0x00)
+\begin{DoxyCompactList}\small\item\em SDRAM status structure definition. \end{DoxyCompactList}\item 
+\#define {\bfseries SDRAM\+\_\+\+ERROR}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+DEVICE\+\_\+\+ADDR}~((uint32\+\_\+t)0x\+D0000000)
+\begin{DoxyCompactList}\small\item\em FMC SDRAM Bank address. \end{DoxyCompactList}\item 
+\#define {\bfseries SDRAM\+\_\+\+DEVICE\+\_\+\+SIZE}~((uint32\+\_\+t)0x800000)  /$\ast$ SDRAM device size in Bytes $\ast$/
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MEMORY\+\_\+\+WIDTH}~FMC\+\_\+\+SDRAM\+\_\+\+MEM\+\_\+\+BUS\+\_\+\+WIDTH\+\_\+16
+\begin{DoxyCompactList}\small\item\em FMC SDRAM Memory Width. \end{DoxyCompactList}\item 
+\#define {\bfseries SDRAM\+\_\+\+CAS\+\_\+\+LATENCY}~FMC\+\_\+\+SDRAM\+\_\+\+CAS\+\_\+\+LATENCY\+\_\+3
+\begin{DoxyCompactList}\small\item\em FMC SDRAM CAS Latency. \end{DoxyCompactList}\item 
+\#define {\bfseries SDCLOCK\+\_\+\+PERIOD}~FMC\+\_\+\+SDRAM\+\_\+\+CLOCK\+\_\+\+PERIOD\+\_\+2    /$\ast$ Default configuration used with LCD $\ast$/
+\begin{DoxyCompactList}\small\item\em FMC SDRAM Memory clock period. \end{DoxyCompactList}\item 
+\#define {\bfseries SDRAM\+\_\+\+READBURST}~FMC\+\_\+\+SDRAM\+\_\+\+RBURST\+\_\+\+DISABLE    /$\ast$ Default configuration used with LCD $\ast$/
+\begin{DoxyCompactList}\small\item\em FMC SDRAM Memory Read Burst feature. \end{DoxyCompactList}\item 
+\#define {\bfseries REFRESH\+\_\+\+COUNT}~((uint32\+\_\+t)1386)   /$\ast$ SDRAM refresh counter $\ast$/
+\begin{DoxyCompactList}\small\item\em FMC SDRAM Bank Remap. \end{DoxyCompactList}\item 
+\#define {\bfseries SDRAM\+\_\+\+TIMEOUT}~((uint32\+\_\+t)0x\+FFFF)
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+DMAx\+\_\+\+CLK\+\_\+\+ENABLE}~\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+CLK\+\_\+\+ENABLE
+\item 
+\#define {\bfseries SDRAM\+\_\+\+DMAx\+\_\+\+CHANNEL}~\mbox{\hyperlink{group___d_m_a___channel__selection_gabd7de138931e93a90fc6c4eab5916bbe}{DMA\+\_\+\+CHANNEL\+\_\+0}}
+\item 
+\#define {\bfseries SDRAM\+\_\+\+DMAx\+\_\+\+STREAM}~DMA2\+\_\+\+Stream0
+\item 
+\#define {\bfseries SDRAM\+\_\+\+DMAx\+\_\+\+IRQn}~\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a1e5055722630fd4b12aff421964c2ebb}{DMA2\+\_\+\+Stream0\+\_\+\+IRQn}}
+\item 
+\#define {\bfseries SDRAM\+\_\+\+DMAx\+\_\+\+IRQHandler}~DMA2\+\_\+\+Stream0\+\_\+\+IRQHandler
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+BURST\+\_\+\+LENGTH\+\_\+1}~((uint16\+\_\+t)0x0000)
+\begin{DoxyCompactList}\small\item\em FMC SDRAM Mode definition register defines. \end{DoxyCompactList}\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+BURST\+\_\+\+LENGTH\+\_\+2}~((uint16\+\_\+t)0x0001)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+BURST\+\_\+\+LENGTH\+\_\+4}~((uint16\+\_\+t)0x0002)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+BURST\+\_\+\+LENGTH\+\_\+8}~((uint16\+\_\+t)0x0004)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+BURST\+\_\+\+TYPE\+\_\+\+SEQUENTIAL}~((uint16\+\_\+t)0x0000)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+BURST\+\_\+\+TYPE\+\_\+\+INTERLEAVED}~((uint16\+\_\+t)0x0008)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+CAS\+\_\+\+LATENCY\+\_\+2}~((uint16\+\_\+t)0x0020)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+CAS\+\_\+\+LATENCY\+\_\+3}~((uint16\+\_\+t)0x0030)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+OPERATING\+\_\+\+MODE\+\_\+\+STANDARD}~((uint16\+\_\+t)0x0000)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+WRITEBURST\+\_\+\+MODE\+\_\+\+PROGRAMMED}~((uint16\+\_\+t)0x0000)
+\item 
+\#define {\bfseries SDRAM\+\_\+\+MODEREG\+\_\+\+WRITEBURST\+\_\+\+MODE\+\_\+\+SINGLE}~((uint16\+\_\+t)0x0200)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t {\bfseries BSP\+\_\+\+SDRAM\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SDRAM device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gac8bdaf00734e741a8c7a79f255d8751f}{BSP\+\_\+\+SDRAM\+\_\+\+Initialization\+\_\+sequence}} (uint32\+\_\+t Refresh\+Count)
+\begin{DoxyCompactList}\small\item\em Programs the SDRAM device. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gaf5a58e9e8a87ca35ff51031cc6df81f9}{BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Reads an mount of data from the SDRAM memory in polling mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gae0d1b2d92c12aec8ade4bf00077111b3}{BSP\+\_\+\+SDRAM\+\_\+\+Read\+Data\+\_\+\+DMA}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Reads an mount of data from the SDRAM memory in DMA mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gaaa29379faee00c5c6b63458537d5be50}{BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Writes an mount of data to the SDRAM memory in polling mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_ga2b8d264ab912c422b25da4af9c9ea726}{BSP\+\_\+\+SDRAM\+\_\+\+Write\+Data\+\_\+\+DMA}} (uint32\+\_\+t uw\+Start\+Address, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t uw\+Data\+Size)
+\begin{DoxyCompactList}\small\item\em Writes an mount of data to the SDRAM memory in DMA mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_gaaba572903e8d423697b1a1c3fc914897}{BSP\+\_\+\+SDRAM\+\_\+\+Sendcmd}} (FMC\+\_\+\+SDRAM\+\_\+\+Command\+Type\+Def $\ast$Sdram\+Cmd)
+\begin{DoxyCompactList}\small\item\em Sends command to the SDRAM bank. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+SDRAM\+\_\+\+DMA\+\_\+\+IRQHandler} (void)
+\begin{DoxyCompactList}\small\item\em Handles SDRAM DMA transfer interrupt request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_ga02aac286aef85b5f5f67f4f32ba17f4a}{BSP\+\_\+\+SDRAM\+\_\+\+Msp\+Init}} (SDRAM\+\_\+\+Handle\+Type\+Def $\ast$hsdram, void $\ast$Params)
+\begin{DoxyCompactList}\small\item\em Initializes SDRAM MSP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___s_d_r_a_m___exported___functions_ga86b29a5e33c1e3fcc9b338f01b2ecf23}{BSP\+\_\+\+SDRAM\+\_\+\+Msp\+De\+Init}} (SDRAM\+\_\+\+Handle\+Type\+Def $\ast$hsdram, void $\ast$Params)
+\begin{DoxyCompactList}\small\item\em De\+Initializes SDRAM MSP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{stm32f429i__discovery__sdram_8c}{stm32f429i\+\_\+discovery\+\_\+sdram.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

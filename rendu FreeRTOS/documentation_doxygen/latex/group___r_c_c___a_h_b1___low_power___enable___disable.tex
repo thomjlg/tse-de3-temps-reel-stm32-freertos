@@ -1,0 +1,58 @@
+\hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable}{}\doxysection{AHB1 Peripheral Low Power Enable Disable}
+\label{group___r_c_c___a_h_b1___low_power___enable___disable}\index{AHB1 Peripheral Low Power Enable Disable@{AHB1 Peripheral Low Power Enable Disable}}
+
+
+Enable or disable the AHB1 peripheral clock during Low Power (Sleep) mode.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_gaff8820b47bd3764e7cded76b9368460b}\label{group___r_c_c___a_h_b1___low_power___enable___disable_gaff8820b47bd3764e7cded76b9368460b}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(RCC-\/$>$AHB1\+LPENR $\vert$= (RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOALPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga0e718efc965ab07752cd865c3f33551a}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga0e718efc965ab07752cd865c3f33551a}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(RCC-\/$>$AHB1\+LPENR $\vert$= (RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOBLPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_gac62505cc695d985fcf18ca1fd2f1a421}\label{group___r_c_c___a_h_b1___low_power___enable___disable_gac62505cc695d985fcf18ca1fd2f1a421}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(RCC-\/$>$AHB1\+LPENR $\vert$= (RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOCLPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga3e9419b44e83ed1e6951801c390a69ad}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga3e9419b44e83ed1e6951801c390a69ad}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(RCC-\/$>$AHB1\+LPENR $\vert$= (RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOHLPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga568e4d004285fe009bc4e5d33e13af61}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga568e4d004285fe009bc4e5d33e13af61}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(RCC-\/$>$AHB1\+LPENR $\vert$= (RCC\+\_\+\+AHB1\+LPENR\+\_\+\+DMA1\+LPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga16c048816a705de87bb5fd3ce4003a82}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga16c048816a705de87bb5fd3ce4003a82}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(RCC-\/$>$AHB1\+LPENR $\vert$= (RCC\+\_\+\+AHB1\+LPENR\+\_\+\+DMA2\+LPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_gad6753edbd9047eeac39ae4f234642942}\label{group___r_c_c___a_h_b1___low_power___enable___disable_gad6753edbd9047eeac39ae4f234642942}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(RCC-\/$>$AHB1\+LPENR \&= $\sim$(RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOALPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga0a20ad851a2ef9e1ccdbf280dcd1dc44}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga0a20ad851a2ef9e1ccdbf280dcd1dc44}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(RCC-\/$>$AHB1\+LPENR \&= $\sim$(RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOBLPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga293f9870ba631d23f8011bad12420f83}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga293f9870ba631d23f8011bad12420f83}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(RCC-\/$>$AHB1\+LPENR \&= $\sim$(RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOCLPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga3150a9552cca2ec7e0f00d799fc52adb}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga3150a9552cca2ec7e0f00d799fc52adb}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(RCC-\/$>$AHB1\+LPENR \&= $\sim$(RCC\+\_\+\+AHB1\+LPENR\+\_\+\+GPIOHLPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga8786d21490439ef0564edff087203245}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga8786d21490439ef0564edff087203245}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(RCC-\/$>$AHB1\+LPENR \&= $\sim$(RCC\+\_\+\+AHB1\+LPENR\+\_\+\+DMA1\+LPEN))
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_h_b1___low_power___enable___disable_ga6af5c50e1a578bcc17c9514c5ab976c9}\label{group___r_c_c___a_h_b1___low_power___enable___disable_ga6af5c50e1a578bcc17c9514c5ab976c9}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(RCC-\/$>$AHB1\+LPENR \&= $\sim$(RCC\+\_\+\+AHB1\+LPENR\+\_\+\+DMA2\+LPEN))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enable or disable the AHB1 peripheral clock during Low Power (Sleep) mode. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. 
+
+After wake-\/up from SLEEP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during SLEEP mode. 
+\end{DoxyNote}

@@ -1,0 +1,253 @@
+\hypertarget{group__exc7200___exported___functions}{}\doxysection{Exc7200\+\_\+\+Exported\+\_\+\+Functions}
+\label{group__exc7200___exported___functions}\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__exc7200___exported___functions_gabadb779916c9556b7d551f49adff9c91}{exc7200\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em exc7200 Control functions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__exc7200___exported___functions_gabb681a209a3b4c03250c048e40bca981}{exc7200\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the exc7200 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__exc7200___exported___functions_gab5040b4cd4242e8219b5c29467ce7355}{exc7200\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the exc7200 IO Expander device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__exc7200___exported___functions_ga0f25130dc8a630ab00f357393204a7fe}{exc7200\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen Controller (Single point detection) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__exc7200___exported___functions_ga72d3990d296645f98d70638a5db159be}{exc7200\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touch detected or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__exc7200___exported___functions_ga139dc7e18908726d0e2234af366b8ac5}{exc7200\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__exc7200___exported___functions_ga5fdea5c7b6cfb98e37b37925d449dd32}{exc7200\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__exc7200___exported___functions_gaece194c7667d5d766cda6d226d10b1f4}{exc7200\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__exc7200___exported___functions_ga1dc8fb39040cf4bc8983b6e28ff3bb4c}{exc7200\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__exc7200___exported___functions_ga5ef58a23db01fcd4ee2a20de0da54ed0}{exc7200\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga20cd09e59bac7284d1342b6741733593}\label{group__exc7200___exported___functions_ga20cd09e59bac7284d1342b6741733593}} 
+void {\bfseries IOE\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em IOE Low Level Initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga6708ed59dfbaf68fdc49cd915252c4ba}\label{group__exc7200___exported___functions_ga6708ed59dfbaf68fdc49cd915252c4ba}} 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} {\bfseries exc7200\+\_\+ts\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__exc7200___exported___functions_gabadb779916c9556b7d551f49adff9c91}\label{group__exc7200___exported___functions_gabadb779916c9556b7d551f49adff9c91}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_Init@{exc7200\_Init}}
+\index{exc7200\_Init@{exc7200\_Init}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_Init()}{exc7200\_Init()}}
+{\footnotesize\ttfamily void exc7200\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+exc7200 Control functions 
+
+exc7200 Control functions
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_gab5040b4cd4242e8219b5c29467ce7355}\label{group__exc7200___exported___functions_gab5040b4cd4242e8219b5c29467ce7355}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_ReadID@{exc7200\_ReadID}}
+\index{exc7200\_ReadID@{exc7200\_ReadID}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_ReadID()}{exc7200\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t exc7200\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Read the exc7200 IO Expander device ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device ID (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_gabb681a209a3b4c03250c048e40bca981}\label{group__exc7200___exported___functions_gabb681a209a3b4c03250c048e40bca981}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_Reset@{exc7200\_Reset}}
+\index{exc7200\_Reset@{exc7200\_Reset}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_Reset()}{exc7200\_Reset()}}
+{\footnotesize\ttfamily void exc7200\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Reset the exc7200 by Software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga5ef58a23db01fcd4ee2a20de0da54ed0}\label{group__exc7200___exported___functions_ga5ef58a23db01fcd4ee2a20de0da54ed0}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_TS\_ClearIT@{exc7200\_TS\_ClearIT}}
+\index{exc7200\_TS\_ClearIT@{exc7200\_TS\_ClearIT}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_TS\_ClearIT()}{exc7200\_TS\_ClearIT()}}
+{\footnotesize\ttfamily void exc7200\+\_\+\+TS\+\_\+\+Clear\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga72d3990d296645f98d70638a5db159be}\label{group__exc7200___exported___functions_ga72d3990d296645f98d70638a5db159be}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_TS\_DetectTouch@{exc7200\_TS\_DetectTouch}}
+\index{exc7200\_TS\_DetectTouch@{exc7200\_TS\_DetectTouch}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_TS\_DetectTouch()}{exc7200\_TS\_DetectTouch()}}
+{\footnotesize\ttfamily uint8\+\_\+t exc7200\+\_\+\+TS\+\_\+\+Detect\+Touch (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Return if there is touch detected or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Touch} & detected state. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_gaece194c7667d5d766cda6d226d10b1f4}\label{group__exc7200___exported___functions_gaece194c7667d5d766cda6d226d10b1f4}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_TS\_DisableIT@{exc7200\_TS\_DisableIT}}
+\index{exc7200\_TS\_DisableIT@{exc7200\_TS\_DisableIT}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_TS\_DisableIT()}{exc7200\_TS\_DisableIT()}}
+{\footnotesize\ttfamily void exc7200\+\_\+\+TS\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga5fdea5c7b6cfb98e37b37925d449dd32}\label{group__exc7200___exported___functions_ga5fdea5c7b6cfb98e37b37925d449dd32}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_TS\_EnableIT@{exc7200\_TS\_EnableIT}}
+\index{exc7200\_TS\_EnableIT@{exc7200\_TS\_EnableIT}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_TS\_EnableIT()}{exc7200\_TS\_EnableIT()}}
+{\footnotesize\ttfamily void exc7200\+\_\+\+TS\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga139dc7e18908726d0e2234af366b8ac5}\label{group__exc7200___exported___functions_ga139dc7e18908726d0e2234af366b8ac5}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_TS\_GetXY@{exc7200\_TS\_GetXY}}
+\index{exc7200\_TS\_GetXY@{exc7200\_TS\_GetXY}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_TS\_GetXY()}{exc7200\_TS\_GetXY()}}
+{\footnotesize\ttfamily void exc7200\+\_\+\+TS\+\_\+\+Get\+XY (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr,  }\item[{uint16\+\_\+t $\ast$}]{X,  }\item[{uint16\+\_\+t $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Get the touch screen X and Y positions values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+{\em X} & Pointer to X position value \\
+\hline
+{\em Y} & Pointer to Y position value ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga1dc8fb39040cf4bc8983b6e28ff3bb4c}\label{group__exc7200___exported___functions_ga1dc8fb39040cf4bc8983b6e28ff3bb4c}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_TS\_ITStatus@{exc7200\_TS\_ITStatus}}
+\index{exc7200\_TS\_ITStatus@{exc7200\_TS\_ITStatus}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_TS\_ITStatus()}{exc7200\_TS\_ITStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t exc7200\+\_\+\+TS\+\_\+\+ITStatus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configure the selected source to generate a global interrupt or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TS} & interrupts status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__exc7200___exported___functions_ga0f25130dc8a630ab00f357393204a7fe}\label{group__exc7200___exported___functions_ga0f25130dc8a630ab00f357393204a7fe}} 
+\index{Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}!exc7200\_TS\_Start@{exc7200\_TS\_Start}}
+\index{exc7200\_TS\_Start@{exc7200\_TS\_Start}!Exc7200\_Exported\_Functions@{Exc7200\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{exc7200\_TS\_Start()}{exc7200\_TS\_Start()}}
+{\footnotesize\ttfamily void exc7200\+\_\+\+TS\+\_\+\+Start (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Device\+Addr }\end{DoxyParamCaption})}
+
+
+
+Configures the touch Screen Controller (Single point detection) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Addr} & Device address on communication Bus. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}

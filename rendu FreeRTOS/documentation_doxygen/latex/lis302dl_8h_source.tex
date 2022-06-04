@@ -1,0 +1,551 @@
+\hypertarget{lis302dl_8h_source}{}\doxysection{lis302dl.\+h}
+\label{lis302dl_8h_source}\index{Drivers/BSP/Components/lis302dl/lis302dl.h@{Drivers/BSP/Components/lis302dl/lis302dl.h}}
+\mbox{\hyperlink{lis302dl_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_LIS302DL\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_LIS302DL\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/accelero.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{66 \textcolor{comment}{/* LIS302DL struct */}}
+\DoxyCodeLine{67 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69   uint8\_t Power\_Mode;                         \textcolor{comment}{/* Power-\/down/Active Mode */}}
+\DoxyCodeLine{70   uint8\_t Output\_DataRate;                    \textcolor{comment}{/* OUT data rate 100 Hz / 400 Hz */}}
+\DoxyCodeLine{71   uint8\_t Axes\_Enable;                        \textcolor{comment}{/* Axes enable */}}
+\DoxyCodeLine{72   uint8\_t Full\_Scale;                         \textcolor{comment}{/* Full scale */}}
+\DoxyCodeLine{73   uint8\_t Self\_Test;                          \textcolor{comment}{/* Self test */}}
+\DoxyCodeLine{74 \}\mbox{\hyperlink{struct_l_i_s302_d_l___init_type_def}{LIS302DL\_InitTypeDef}};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{comment}{/* Interrupt struct */}}
+\DoxyCodeLine{77 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{78 \{}
+\DoxyCodeLine{79   uint8\_t Latch\_Request;                      \textcolor{comment}{/* Latch interrupt request into CLICK\_SRC register*/}}
+\DoxyCodeLine{80   uint8\_t SingleClick\_Axes;                   \textcolor{comment}{/* Single Click Axes Interrupts */}}
+\DoxyCodeLine{81   uint8\_t DoubleClick\_Axes;                   \textcolor{comment}{/* Double Click Axes Interrupts */} }
+\DoxyCodeLine{82 \}\mbox{\hyperlink{struct_l_i_s302_d_l___interrupt_config_type_def}{LIS302DL\_InterruptConfigTypeDef}};  }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{/* High Pass Filter struct */}}
+\DoxyCodeLine{85 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87   uint8\_t HighPassFilter\_Data\_Selection;      \textcolor{comment}{/* Internal filter bypassed or data from internal filter send to output register*/}}
+\DoxyCodeLine{88   uint8\_t HighPassFilter\_CutOff\_Frequency;    \textcolor{comment}{/* High pass filter cut-\/off frequency */}}
+\DoxyCodeLine{89   uint8\_t HighPassFilter\_Interrupt;           \textcolor{comment}{/* High pass filter enabled for Freefall/WakeUp \#1 or \#2 */} }
+\DoxyCodeLine{90 \}\mbox{\hyperlink{struct_l_i_s302_d_l___filter_config_type_def}{LIS302DL\_FilterConfigTypeDef}};  }
+\DoxyCodeLine{91    }
+\DoxyCodeLine{100 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{101 \textcolor{comment}{/*************************** START REGISTER MAPPING  **************************/}}
+\DoxyCodeLine{102 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{105 \textcolor{comment}{*  WHO\_AM\_I Register: Device Identification Register}}
+\DoxyCodeLine{106 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{107 \textcolor{comment}{*  Default value: 0x3B}}
+\DoxyCodeLine{108 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define LIS302DL\_WHO\_AM\_I\_ADDR                  0x0F}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{112 \textcolor{comment}{*  CTRL\_REG1 Register: Control Register 1}}
+\DoxyCodeLine{113 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{114 \textcolor{comment}{*  Default value: 0x07}}
+\DoxyCodeLine{115 \textcolor{comment}{*  7 DR: Data Rate selection.}}
+\DoxyCodeLine{116 \textcolor{comment}{*        0 -\/ 100 Hz output data rate}}
+\DoxyCodeLine{117 \textcolor{comment}{*        1 -\/ 400 Hz output data rate}}
+\DoxyCodeLine{118 \textcolor{comment}{*  6 PD: Power Down control.}}
+\DoxyCodeLine{119 \textcolor{comment}{*        0 -\/ power down mode}}
+\DoxyCodeLine{120 \textcolor{comment}{*        1 -\/ active mode}}
+\DoxyCodeLine{121 \textcolor{comment}{*  5 FS: Full Scale selection.}}
+\DoxyCodeLine{122 \textcolor{comment}{*        0 -\/ Typical measurement range 2.3}}
+\DoxyCodeLine{123 \textcolor{comment}{*        1 -\/ Typical measurement range 9.2}}
+\DoxyCodeLine{124 \textcolor{comment}{*  4:3 STP-\/STM Self Test Enable:}}
+\DoxyCodeLine{125 \textcolor{comment}{*              STP |  STM |   mode}}
+\DoxyCodeLine{126 \textcolor{comment}{*            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{127 \textcolor{comment}{*               0  |  0   |   Normal mode}}
+\DoxyCodeLine{128 \textcolor{comment}{*               0  |  1   |   Self Test M}}
+\DoxyCodeLine{129 \textcolor{comment}{*               1  |  0   |   Self Test P}}
+\DoxyCodeLine{130 \textcolor{comment}{*  2 Zen: Z axis enable.}}
+\DoxyCodeLine{131 \textcolor{comment}{*         0 -\/ Z axis disabled}}
+\DoxyCodeLine{132 \textcolor{comment}{*         1-\/ Z axis enabled}}
+\DoxyCodeLine{133 \textcolor{comment}{*  1 Yen: Y axis enable.}}
+\DoxyCodeLine{134 \textcolor{comment}{*         0 -\/ Y axis disabled}}
+\DoxyCodeLine{135 \textcolor{comment}{*         1-\/ Y axis enabled}}
+\DoxyCodeLine{136 \textcolor{comment}{*  0 Xen: X axis enable.}}
+\DoxyCodeLine{137 \textcolor{comment}{*         0 -\/ X axis disabled}}
+\DoxyCodeLine{138 \textcolor{comment}{*         1-\/ X axis enabled}}
+\DoxyCodeLine{139 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define LIS302DL\_CTRL\_REG1\_ADDR                 0x20}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{143 \textcolor{comment}{*  CTRL\_REG2 Regsiter: Control Register 2}}
+\DoxyCodeLine{144 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{145 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{146 \textcolor{comment}{*  7 SIM: SPI Serial Interface Mode Selection. }}
+\DoxyCodeLine{147 \textcolor{comment}{*         0 -\/ 4 wire interface}}
+\DoxyCodeLine{148 \textcolor{comment}{*         1 -\/ 3 wire interface}}
+\DoxyCodeLine{149 \textcolor{comment}{*  6 BOOT: Reboot memory content}}
+\DoxyCodeLine{150 \textcolor{comment}{*          0 -\/ normal mode }}
+\DoxyCodeLine{151 \textcolor{comment}{*          1 -\/ reboot memory content}}
+\DoxyCodeLine{152 \textcolor{comment}{*  5 Reserved}}
+\DoxyCodeLine{153 \textcolor{comment}{*  4 FDS: Filtered data selection.}}
+\DoxyCodeLine{154 \textcolor{comment}{*         0 -\/ internal filter bypassed}}
+\DoxyCodeLine{155 \textcolor{comment}{*         1 -\/ data from internal filter sent to output register}}
+\DoxyCodeLine{156 \textcolor{comment}{*  3 HP FF\_WU2: High pass filter enabled for FreeFall/WakeUp\#2.}}
+\DoxyCodeLine{157 \textcolor{comment}{*               0 -\/ filter bypassed}}
+\DoxyCodeLine{158 \textcolor{comment}{*               1 -\/ filter enabled}}
+\DoxyCodeLine{159 \textcolor{comment}{*  2 HP FF\_WU1: High pass filter enabled for FreeFall/WakeUp\#1.}}
+\DoxyCodeLine{160 \textcolor{comment}{*               0 -\/ filter bypassed}}
+\DoxyCodeLine{161 \textcolor{comment}{*               1 -\/ filter enabled}}
+\DoxyCodeLine{162 \textcolor{comment}{*  1:0 HP coeff2-\/HP coeff1 High pass filter cut-\/off frequency (ft) configuration.}}
+\DoxyCodeLine{163 \textcolor{comment}{*                 ft= ODR[hz]/6*HP coeff}}
+\DoxyCodeLine{164 \textcolor{comment}{*            HP coeff2 | HP coeff1 |   HP coeff}}
+\DoxyCodeLine{165 \textcolor{comment}{*            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{166 \textcolor{comment}{*                 0     |     0     |   8}}
+\DoxyCodeLine{167 \textcolor{comment}{*                 0     |     1     |   16}}
+\DoxyCodeLine{168 \textcolor{comment}{*                 1     |     0     |   32}}
+\DoxyCodeLine{169 \textcolor{comment}{*                 1     |     1     |   64}}
+\DoxyCodeLine{170 \textcolor{comment}{*            HP coeff |  ft[hz]   |  ft[hz]   |}}
+\DoxyCodeLine{171 \textcolor{comment}{*                     |ODR 100Hz | ODR 400Hz  |}}
+\DoxyCodeLine{172 \textcolor{comment}{*            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{173 \textcolor{comment}{*              00     |    2      |     8     |}}
+\DoxyCodeLine{174 \textcolor{comment}{*              01     |    1      |     4     |}}
+\DoxyCodeLine{175 \textcolor{comment}{*              10     |    0.5    |     2     |}}
+\DoxyCodeLine{176 \textcolor{comment}{*              11     |    0.25   |     1     |}}
+\DoxyCodeLine{177 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define LIS302DL\_CTRL\_REG2\_ADDR              0x21}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{181 \textcolor{comment}{*  CTRL\_REG3 Register: Interrupt Control Register}}
+\DoxyCodeLine{182 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{183 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{184 \textcolor{comment}{*  7 IHL active: Interrupt active high/low.}}
+\DoxyCodeLine{185 \textcolor{comment}{*                0 -\/ active high}}
+\DoxyCodeLine{186 \textcolor{comment}{*                1 -\/ active low}}
+\DoxyCodeLine{187 \textcolor{comment}{*  6 PP\_OD: push-\/pull/open-\/drain.}}
+\DoxyCodeLine{188 \textcolor{comment}{*           0 -\/ push-\/pull}}
+\DoxyCodeLine{189 \textcolor{comment}{*           1 -\/ open-\/drain}}
+\DoxyCodeLine{190 \textcolor{comment}{*  5:3 I2\_CFG2 -\/ I2\_CFG0 Data signal on INT2 pad control bits}}
+\DoxyCodeLine{191 \textcolor{comment}{*  2:0 I1\_CFG2 -\/ I1\_CFG0 Data signal on INT1 pad control bits}}
+\DoxyCodeLine{192 \textcolor{comment}{*        I1(2)\_CFG2  |  I1(2)\_CFG1  |  I1(2)\_CFG0  | INT1(2) Pad}}
+\DoxyCodeLine{193 \textcolor{comment}{*        -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{194 \textcolor{comment}{*              0     |      0       |       0      | GND}}
+\DoxyCodeLine{195 \textcolor{comment}{*              0     |      0       |       1      | FreeFall/WakeUp\#1}}
+\DoxyCodeLine{196 \textcolor{comment}{*              0     |      1       |       0      | FreeFall/WakeUp\#2}}
+\DoxyCodeLine{197 \textcolor{comment}{*              0     |      1       |       1      | FreeFall/WakeUp\#1 or FreeFall/WakeUp\#2}}
+\DoxyCodeLine{198 \textcolor{comment}{*              1     |      0       |       0      | Data ready}}
+\DoxyCodeLine{199 \textcolor{comment}{*              1     |      1       |       1      | Click interrupt}}
+\DoxyCodeLine{200 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define LIS302DL\_CTRL\_REG3\_ADDR              0x22}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{204 \textcolor{comment}{*  HP\_FILTER\_RESET Register: Dummy register. Reading at this address zeroes }}
+\DoxyCodeLine{205 \textcolor{comment}{*  instantaneously the content of the internal high pass filter. If the high pass}}
+\DoxyCodeLine{206 \textcolor{comment}{*  filter is enabled all three axes are instantaneously set to 0g.}}
+\DoxyCodeLine{207 \textcolor{comment}{*  This allows to overcome the settling time of the high pass filter.}}
+\DoxyCodeLine{208 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{209 \textcolor{comment}{*  Default value: Dummy}}
+\DoxyCodeLine{210 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#define LIS302DL\_HP\_FILTER\_RESET\_REG\_ADDR     0x23}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{214 \textcolor{comment}{*  STATUS\_REG Register: Status Register}}
+\DoxyCodeLine{215 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{216 \textcolor{comment}{*  7 ZYXOR: X, Y and Z axis data overrun.}}
+\DoxyCodeLine{217 \textcolor{comment}{*           0: no overrun has occurred}}
+\DoxyCodeLine{218 \textcolor{comment}{*           1: new data has overwritten the previous one before it was read}}
+\DoxyCodeLine{219 \textcolor{comment}{*  6 ZOR: Z axis data overrun.}}
+\DoxyCodeLine{220 \textcolor{comment}{*         0: no overrun has occurred }}
+\DoxyCodeLine{221 \textcolor{comment}{*         1: new data for Z-\/axis has overwritten the previous one before it was read}}
+\DoxyCodeLine{222 \textcolor{comment}{*  5 yOR: y axis data overrun.}}
+\DoxyCodeLine{223 \textcolor{comment}{*         0: no overrun has occurred}}
+\DoxyCodeLine{224 \textcolor{comment}{*         1: new data for y-\/axis has overwritten the previous one before it was read}}
+\DoxyCodeLine{225 \textcolor{comment}{*  4 XOR: X axis data overrun.}}
+\DoxyCodeLine{226 \textcolor{comment}{*         0: no overrun has occurred}}
+\DoxyCodeLine{227 \textcolor{comment}{*         1: new data for X-\/axis has overwritten the previous one before it was read}}
+\DoxyCodeLine{228 \textcolor{comment}{*  3 ZYXDA: X, Y and Z axis new data available}}
+\DoxyCodeLine{229 \textcolor{comment}{*           0: a new set of data is not yet available}}
+\DoxyCodeLine{230 \textcolor{comment}{*           1: a new set of data is available}}
+\DoxyCodeLine{231 \textcolor{comment}{*  2 ZDA: Z axis new data available.}}
+\DoxyCodeLine{232 \textcolor{comment}{*         0: a new set of data is not yet available}}
+\DoxyCodeLine{233 \textcolor{comment}{*         1: a new data for Z axis is available}}
+\DoxyCodeLine{234 \textcolor{comment}{*  1 YDA: Y axis new data available}}
+\DoxyCodeLine{235 \textcolor{comment}{*         0: a new set of data is not yet available}}
+\DoxyCodeLine{236 \textcolor{comment}{*         1: a new data for Y axis is available}}
+\DoxyCodeLine{237 \textcolor{comment}{*  0 XDA: X axis new data available}}
+\DoxyCodeLine{238 \textcolor{comment}{*         0: a new set of data is not yet available}}
+\DoxyCodeLine{239 \textcolor{comment}{*         1: a new data for X axis is available}}
+\DoxyCodeLine{240 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#define LIS302DL\_STATUS\_REG\_ADDR             0x27}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{244 \textcolor{comment}{*  OUT\_X Register: X-\/axis output Data}}
+\DoxyCodeLine{245 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{246 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{247 \textcolor{comment}{*  7:0 XD7-\/XD0: X-\/axis output Data}}
+\DoxyCodeLine{248 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define LIS302DL\_OUT\_X\_ADDR                  0x29}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{252 \textcolor{comment}{*  OUT\_Y Register: Y-\/axis output Data}}
+\DoxyCodeLine{253 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{254 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{255 \textcolor{comment}{*  7:0 YD7-\/YD0: Y-\/axis output Data}}
+\DoxyCodeLine{256 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#define LIS302DL\_OUT\_Y\_ADDR                  0x2B}}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{260 \textcolor{comment}{*  OUT\_Z Register: Z-\/axis output Data}}
+\DoxyCodeLine{261 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{262 \textcolor{comment}{*  Default value: output}}
+\DoxyCodeLine{263 \textcolor{comment}{*  7:0 ZD7-\/ZD0: Z-\/axis output Data}}
+\DoxyCodeLine{264 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define LIS302DL\_OUT\_Z\_ADDR                  0x2D}}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{268 \textcolor{comment}{*  FF\_WW\_CFG\_1 Register: Configuration register for Interrupt 1 source.}}
+\DoxyCodeLine{269 \textcolor{comment}{*  Read write register}}
+\DoxyCodeLine{270 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{271 \textcolor{comment}{*  7 AOI: AND/OR combination of Interrupt events. }}
+\DoxyCodeLine{272 \textcolor{comment}{*         0: OR combination of interrupt events}}
+\DoxyCodeLine{273 \textcolor{comment}{*         1: AND combination of interrupt events }}
+\DoxyCodeLine{274 \textcolor{comment}{*  6 LIR: Latch/not latch interrupt request}}
+\DoxyCodeLine{275 \textcolor{comment}{*         0: interrupt request not latched}}
+\DoxyCodeLine{276 \textcolor{comment}{*         1: interrupt request latched}}
+\DoxyCodeLine{277 \textcolor{comment}{*  5 ZHIE: Enable interrupt generation on Z high event.}}
+\DoxyCodeLine{278 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{279 \textcolor{comment}{*          1: enable interrupt request on measured accel. value higher than preset threshold}}
+\DoxyCodeLine{280 \textcolor{comment}{*  4 ZLIE: Enable interrupt generation on Z low event.}}
+\DoxyCodeLine{281 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{282 \textcolor{comment}{*          1: enable interrupt request on measured accel. value lower than preset threshold}}
+\DoxyCodeLine{283 \textcolor{comment}{*  3 YHIE: Enable interrupt generation on Y high event.}}
+\DoxyCodeLine{284 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{285 \textcolor{comment}{*          1: enable interrupt request on measured accel. value higher than preset threshold}}
+\DoxyCodeLine{286 \textcolor{comment}{*  2 YLIE: Enable interrupt generation on Y low event. }}
+\DoxyCodeLine{287 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{288 \textcolor{comment}{*          1: enable interrupt request on measured accel. value lower than preset threshold}}
+\DoxyCodeLine{289 \textcolor{comment}{*  1 XHIE: Enable interrupt generation on X high event.}}
+\DoxyCodeLine{290 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{291 \textcolor{comment}{*          1: enable interrupt request on measured accel. value higher than preset threshold}}
+\DoxyCodeLine{292 \textcolor{comment}{*  0 XLIE: Enable interrupt generation on X low event.}}
+\DoxyCodeLine{293 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{294 \textcolor{comment}{*          1: enable interrupt request on measured accel. value lower than preset threshold}}
+\DoxyCodeLine{295 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_CFG1\_REG\_ADDR         0x30}}
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{299 \textcolor{comment}{*  FF\_WU\_SRC\_1 Register: Interrupt 1 source register.}}
+\DoxyCodeLine{300 \textcolor{comment}{*  Reading at this address clears FF\_WU\_SRC\_1 register and the FF, WU 1 interrupt}}
+\DoxyCodeLine{301 \textcolor{comment}{*  and allow the refreshment of data in the FF\_WU\_SRC\_1 register if the latched option}}
+\DoxyCodeLine{302 \textcolor{comment}{*  was chosen.}}
+\DoxyCodeLine{303 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{304 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{305 \textcolor{comment}{*  7 Reserved}}
+\DoxyCodeLine{306 \textcolor{comment}{*  6 IA: Interrupt active.}}
+\DoxyCodeLine{307 \textcolor{comment}{*        0: no interrupt has been generated}}
+\DoxyCodeLine{308 \textcolor{comment}{*        1: one or more interrupts have been generated}}
+\DoxyCodeLine{309 \textcolor{comment}{*  5 ZH: Z high. }}
+\DoxyCodeLine{310 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{311 \textcolor{comment}{*        1: ZH event has occurred }}
+\DoxyCodeLine{312 \textcolor{comment}{*  4 ZL: Z low.}}
+\DoxyCodeLine{313 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{314 \textcolor{comment}{*        1: ZL event has occurred}}
+\DoxyCodeLine{315 \textcolor{comment}{*  3 YH: Y high.}}
+\DoxyCodeLine{316 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{317 \textcolor{comment}{*        1: YH event has occurred }}
+\DoxyCodeLine{318 \textcolor{comment}{*  2 YL: Y low.}}
+\DoxyCodeLine{319 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{320 \textcolor{comment}{*        1: YL event has occurred}}
+\DoxyCodeLine{321 \textcolor{comment}{*  1 YH: X high.}}
+\DoxyCodeLine{322 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{323 \textcolor{comment}{*        1: XH event has occurred }}
+\DoxyCodeLine{324 \textcolor{comment}{*  0 YL: X low.}}
+\DoxyCodeLine{325 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{326 \textcolor{comment}{*        1: XL event has occurred}}
+\DoxyCodeLine{327 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_SRC1\_REG\_ADDR           0x31}}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{331 \textcolor{comment}{*  FF\_WU\_THS\_1 Register: Threshold register}}
+\DoxyCodeLine{332 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{333 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{334 \textcolor{comment}{*  7 DCRM: Reset mode selection.}}
+\DoxyCodeLine{335 \textcolor{comment}{*          0 -\/ counter resetted}}
+\DoxyCodeLine{336 \textcolor{comment}{*          1 -\/ counter decremented}}
+\DoxyCodeLine{337 \textcolor{comment}{*  6 THS6-\/THS0: Free-\/fall/wake-\/up threshold value.}}
+\DoxyCodeLine{338 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_THS1\_REG\_ADDR          0x32}}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{342 \textcolor{comment}{*  FF\_WU\_DURATION\_1 Register: duration Register}}
+\DoxyCodeLine{343 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{344 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{345 \textcolor{comment}{*  7:0 D7-\/D0 Duration value. (Duration steps and maximum values depend on the ODR chosen)}}
+\DoxyCodeLine{346 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_DURATION1\_REG\_ADDR     0x33}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{350 \textcolor{comment}{*  FF\_WW\_CFG\_2 Register: Configuration register for Interrupt 2 source.}}
+\DoxyCodeLine{351 \textcolor{comment}{*  Read write register}}
+\DoxyCodeLine{352 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{353 \textcolor{comment}{*  7 AOI: AND/OR combination of Interrupt events. }}
+\DoxyCodeLine{354 \textcolor{comment}{*         0: OR combination of interrupt events}}
+\DoxyCodeLine{355 \textcolor{comment}{*         1: AND combination of interrupt events }}
+\DoxyCodeLine{356 \textcolor{comment}{*  6 LIR: Latch/not latch interrupt request}}
+\DoxyCodeLine{357 \textcolor{comment}{*         0: interrupt request not latched}}
+\DoxyCodeLine{358 \textcolor{comment}{*         1: interrupt request latched}}
+\DoxyCodeLine{359 \textcolor{comment}{*  5 ZHIE: Enable interrupt generation on Z high event.}}
+\DoxyCodeLine{360 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{361 \textcolor{comment}{*          1: enable interrupt request on measured accel. value higher than preset threshold}}
+\DoxyCodeLine{362 \textcolor{comment}{*  4 ZLIE: Enable interrupt generation on Z low event.}}
+\DoxyCodeLine{363 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{364 \textcolor{comment}{*          1: enable interrupt request on measured accel. value lower than preset threshold}}
+\DoxyCodeLine{365 \textcolor{comment}{*  3 YHIE: Enable interrupt generation on Y high event.}}
+\DoxyCodeLine{366 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{367 \textcolor{comment}{*          1: enable interrupt request on measured accel. value higher than preset threshold}}
+\DoxyCodeLine{368 \textcolor{comment}{*  2 YLIE: Enable interrupt generation on Y low event. }}
+\DoxyCodeLine{369 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{370 \textcolor{comment}{*          1: enable interrupt request on measured accel. value lower than preset threshold}}
+\DoxyCodeLine{371 \textcolor{comment}{*  1 XHIE: Enable interrupt generation on X high event.}}
+\DoxyCodeLine{372 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{373 \textcolor{comment}{*          1: enable interrupt request on measured accel. value higher than preset threshold}}
+\DoxyCodeLine{374 \textcolor{comment}{*  0 XLIE: Enable interrupt generation on X low event.}}
+\DoxyCodeLine{375 \textcolor{comment}{*          0: disable interrupt request}}
+\DoxyCodeLine{376 \textcolor{comment}{*          1: enable interrupt request on measured accel. value lower than preset threshold}}
+\DoxyCodeLine{377 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{378 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_CFG2\_REG\_ADDR         0x34}}
+\DoxyCodeLine{379 }
+\DoxyCodeLine{380 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{381 \textcolor{comment}{*  FF\_WU\_SRC\_2 Register: Interrupt 2 source register.}}
+\DoxyCodeLine{382 \textcolor{comment}{*  Reading at this address clears FF\_WU\_SRC\_2 register and the FF, WU 2 interrupt}}
+\DoxyCodeLine{383 \textcolor{comment}{*  and allow the refreshment of data in the FF\_WU\_SRC\_2 register if the latched option}}
+\DoxyCodeLine{384 \textcolor{comment}{*  was chosen.}}
+\DoxyCodeLine{385 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{386 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{387 \textcolor{comment}{*  7 Reserved}}
+\DoxyCodeLine{388 \textcolor{comment}{*  6 IA: Interrupt active.}}
+\DoxyCodeLine{389 \textcolor{comment}{*        0: no interrupt has been generated}}
+\DoxyCodeLine{390 \textcolor{comment}{*        1: one or more interrupts have been generated}}
+\DoxyCodeLine{391 \textcolor{comment}{*  5 ZH: Z high. }}
+\DoxyCodeLine{392 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{393 \textcolor{comment}{*        1: ZH event has occurred }}
+\DoxyCodeLine{394 \textcolor{comment}{*  4 ZL: Z low.}}
+\DoxyCodeLine{395 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{396 \textcolor{comment}{*        1: ZL event has occurred}}
+\DoxyCodeLine{397 \textcolor{comment}{*  3 YH: Y high.}}
+\DoxyCodeLine{398 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{399 \textcolor{comment}{*        1: YH event has occurred }}
+\DoxyCodeLine{400 \textcolor{comment}{*  2 YL: Y low.}}
+\DoxyCodeLine{401 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{402 \textcolor{comment}{*        1: YL event has occurred}}
+\DoxyCodeLine{403 \textcolor{comment}{*  1 YH: X high.}}
+\DoxyCodeLine{404 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{405 \textcolor{comment}{*        1: XH event has occurred }}
+\DoxyCodeLine{406 \textcolor{comment}{*  0 YL: X low.}}
+\DoxyCodeLine{407 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{408 \textcolor{comment}{*        1: XL event has occurred}}
+\DoxyCodeLine{409 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_SRC2\_REG\_ADDR           0x35}}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{412 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{413 \textcolor{comment}{*  FF\_WU\_THS\_2 Register: Threshold register}}
+\DoxyCodeLine{414 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{415 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{416 \textcolor{comment}{*  7 DCRM: Reset mode selection.}}
+\DoxyCodeLine{417 \textcolor{comment}{*          0 -\/ counter resetted}}
+\DoxyCodeLine{418 \textcolor{comment}{*          1 -\/ counter decremented}}
+\DoxyCodeLine{419 \textcolor{comment}{*  6 THS6-\/THS0: Free-\/fall/wake-\/up threshold value.}}
+\DoxyCodeLine{420 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{421 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_THS2\_REG\_ADDR          0x36}}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{423 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{424 \textcolor{comment}{*  FF\_WU\_DURATION\_2 Register: duration Register}}
+\DoxyCodeLine{425 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{426 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{427 \textcolor{comment}{*  7:0 D7-\/D0 Duration value. (Duration steps and maximum values depend on the ODR chosen)}}
+\DoxyCodeLine{428 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{429 \textcolor{preprocessor}{\#define LIS302DL\_FF\_WU\_DURATION2\_REG\_ADDR     0x37}}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{432 \textcolor{comment}{*  CLICK\_CFG Register: click Register}}
+\DoxyCodeLine{433 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{434 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{435 \textcolor{comment}{*  7 Reserved}}
+\DoxyCodeLine{436 \textcolor{comment}{*  6 LIR: Latch Interrupt request.}}
+\DoxyCodeLine{437 \textcolor{comment}{*         0: interrupt request not latched}}
+\DoxyCodeLine{438 \textcolor{comment}{*         1: interrupt request latched}}
+\DoxyCodeLine{439 \textcolor{comment}{*  5 Double\_Z: Enable interrupt generation on double click event on Z axis.}}
+\DoxyCodeLine{440 \textcolor{comment}{*              0: disable interrupt request}}
+\DoxyCodeLine{441 \textcolor{comment}{*              1: enable interrupt request}}
+\DoxyCodeLine{442 \textcolor{comment}{*  4 Single\_Z: Enable interrupt generation on single click event on Z axis.}}
+\DoxyCodeLine{443 \textcolor{comment}{*              0: disable interrupt request}}
+\DoxyCodeLine{444 \textcolor{comment}{*              1: enable interrupt request}}
+\DoxyCodeLine{445 \textcolor{comment}{*  3 Double\_Y: Enable interrupt generation on double click event on Y axis.}}
+\DoxyCodeLine{446 \textcolor{comment}{*              0: disable interrupt request}}
+\DoxyCodeLine{447 \textcolor{comment}{*              1: enable interrupt request}}
+\DoxyCodeLine{448 \textcolor{comment}{*  2 Single\_Y: Enable interrupt generation on single click event on Y axis.}}
+\DoxyCodeLine{449 \textcolor{comment}{*              0: disable interrupt request}}
+\DoxyCodeLine{450 \textcolor{comment}{*              1: enable interrupt request}}
+\DoxyCodeLine{451 \textcolor{comment}{*  1 Double\_X: Enable interrupt generation on double click event on X axis.}}
+\DoxyCodeLine{452 \textcolor{comment}{*              0: disable interrupt request}}
+\DoxyCodeLine{453 \textcolor{comment}{*              1: enable interrupt request}}
+\DoxyCodeLine{454 \textcolor{comment}{*  0 Single\_y: Enable interrupt generation on single click event on X axis.}}
+\DoxyCodeLine{455 \textcolor{comment}{*              0: disable interrupt request}}
+\DoxyCodeLine{456 \textcolor{comment}{*              1: enable interrupt request}}
+\DoxyCodeLine{457 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{458 \textcolor{preprocessor}{\#define LIS302DL\_CLICK\_CFG\_REG\_ADDR     0x38}}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{461 \textcolor{comment}{*  CLICK\_SRC Register: click status Register}}
+\DoxyCodeLine{462 \textcolor{comment}{*  Read only register}}
+\DoxyCodeLine{463 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{464 \textcolor{comment}{*  7 Reserved}}
+\DoxyCodeLine{465 \textcolor{comment}{*  6 IA: Interrupt active.}}
+\DoxyCodeLine{466 \textcolor{comment}{*        0: no interrupt has been generated}}
+\DoxyCodeLine{467 \textcolor{comment}{*        1: one or more interrupts have been generated}}
+\DoxyCodeLine{468 \textcolor{comment}{*  5 Double\_Z: Double click on Z axis event.}}
+\DoxyCodeLine{469 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{470 \textcolor{comment}{*        1: Double Z event has occurred }}
+\DoxyCodeLine{471 \textcolor{comment}{*  4 Single\_Z: Z low.}}
+\DoxyCodeLine{472 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{473 \textcolor{comment}{*        1: Single Z event has occurred }}
+\DoxyCodeLine{474 \textcolor{comment}{*  3 Double\_Y: Y high.}}
+\DoxyCodeLine{475 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{476 \textcolor{comment}{*        1: Double Y event has occurred }}
+\DoxyCodeLine{477 \textcolor{comment}{*  2 Single\_Y: Y low.}}
+\DoxyCodeLine{478 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{479 \textcolor{comment}{*        1: Single Y event has occurred }}
+\DoxyCodeLine{480 \textcolor{comment}{*  1 Double\_X: X high.}}
+\DoxyCodeLine{481 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{482 \textcolor{comment}{*        1: Double X event has occurred }}
+\DoxyCodeLine{483 \textcolor{comment}{*  0 Single\_X: X low.}}
+\DoxyCodeLine{484 \textcolor{comment}{*        0: no interrupt}}
+\DoxyCodeLine{485 \textcolor{comment}{*        1: Single X event has occurred }}
+\DoxyCodeLine{486 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{487 \textcolor{preprocessor}{\#define LIS302DL\_CLICK\_SRC\_REG\_ADDR        0x39}}
+\DoxyCodeLine{488 }
+\DoxyCodeLine{489 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{490 \textcolor{comment}{*  CLICK\_THSY\_X Register: Click threshold Y and X register}}
+\DoxyCodeLine{491 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{492 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{493 \textcolor{comment}{*  7:4 THSy3-\/THSy0: Click threshold on Y axis, step 0.5g}}
+\DoxyCodeLine{494 \textcolor{comment}{*  3:0 THSx3-\/THSx0: Click threshold on X axis, step 0.5g}}
+\DoxyCodeLine{495 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{496 \textcolor{preprocessor}{\#define LIS302DL\_CLICK\_THSY\_X\_REG\_ADDR        0x3B}}
+\DoxyCodeLine{497 }
+\DoxyCodeLine{498 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{499 \textcolor{comment}{*  CLICK\_THSZ Register: Click threshold Z register}}
+\DoxyCodeLine{500 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{501 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{502 \textcolor{comment}{*  7:4 Reserved}}
+\DoxyCodeLine{503 \textcolor{comment}{*  3:0 THSz3-\/THSz0: Click threshold on Z axis, step 0.5g}}
+\DoxyCodeLine{504 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{\#define LIS302DL\_CLICK\_THSZ\_REG\_ADDR         0x3C}}
+\DoxyCodeLine{506 }
+\DoxyCodeLine{507 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{508 \textcolor{comment}{*  CLICK\_TimeLimit Register: Time Limit register}}
+\DoxyCodeLine{509 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{510 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{511 \textcolor{comment}{*  7:0 Dur7-\/Dur0: Time Limit value, step 0.5g}}
+\DoxyCodeLine{512 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{\#define LIS302DL\_CLICK\_TIMELIMIT\_REG\_ADDR        0x3D}}
+\DoxyCodeLine{514 }
+\DoxyCodeLine{515 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{516 \textcolor{comment}{*  CLICK\_Latency Register: Latency register}}
+\DoxyCodeLine{517 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{518 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{519 \textcolor{comment}{*  7:0 Lat7-\/Lat0: Latency value, step 1msec}}
+\DoxyCodeLine{520 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{521 \textcolor{preprocessor}{\#define LIS302DL\_CLICK\_LATENCY\_REG\_ADDR        0x3E}}
+\DoxyCodeLine{522 }
+\DoxyCodeLine{523 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{524 \textcolor{comment}{*  CLICK\_Window Register: Window register}}
+\DoxyCodeLine{525 \textcolor{comment}{*  Read Write register}}
+\DoxyCodeLine{526 \textcolor{comment}{*  Default value: 0x00}}
+\DoxyCodeLine{527 \textcolor{comment}{*  7:0 Win7-\/Win0: Window value, step 1msec}}
+\DoxyCodeLine{528 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define LIS302DL\_CLICK\_WINDOW\_REG\_ADDR        0x3F}}
+\DoxyCodeLine{530 }
+\DoxyCodeLine{531 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{532 \textcolor{comment}{/**************************** END REGISTER MAPPING  ***************************/}}
+\DoxyCodeLine{533 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{534 \textcolor{preprocessor}{\#define I\_AM\_LIS302DL                                     0x3B}}
+\DoxyCodeLine{535 }
+\DoxyCodeLine{536 \textcolor{preprocessor}{\#define LIS302DL\_SENSITIVITY\_2\_3G                         18  }\textcolor{comment}{/* 18 mg/digit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{537 \textcolor{preprocessor}{\#define LIS302DL\_SENSITIVITY\_9\_2G                         72  }\textcolor{comment}{/* 72 mg/digit*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{538 }
+\DoxyCodeLine{542 \textcolor{preprocessor}{\#define LIS302DL\_DATARATE\_100                             ((uint8\_t)0x00)}}
+\DoxyCodeLine{543 \textcolor{preprocessor}{\#define LIS302DL\_DATARATE\_400                             ((uint8\_t)0x80)}}
+\DoxyCodeLine{551 \textcolor{preprocessor}{\#define LIS302DL\_LOWPOWERMODE\_POWERDOWN                   ((uint8\_t)0x00)}}
+\DoxyCodeLine{552 \textcolor{preprocessor}{\#define LIS302DL\_LOWPOWERMODE\_ACTIVE                      ((uint8\_t)0x40)}}
+\DoxyCodeLine{560 \textcolor{preprocessor}{\#define LIS302DL\_FULLSCALE\_2\_3                            ((uint8\_t)0x00)}}
+\DoxyCodeLine{561 \textcolor{preprocessor}{\#define LIS302DL\_FULLSCALE\_9\_2                            ((uint8\_t)0x20)}}
+\DoxyCodeLine{569 \textcolor{preprocessor}{\#define LIS302DL\_SELFTEST\_NORMAL                          ((uint8\_t)0x00)}}
+\DoxyCodeLine{570 \textcolor{preprocessor}{\#define LIS302DL\_SELFTEST\_P                               ((uint8\_t)0x10)}}
+\DoxyCodeLine{571 \textcolor{preprocessor}{\#define LIS302DL\_SELFTEST\_M                               ((uint8\_t)0x08)}}
+\DoxyCodeLine{579 \textcolor{preprocessor}{\#define LIS302DL\_X\_ENABLE                                 ((uint8\_t)0x01)}}
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#define LIS302DL\_Y\_ENABLE                                 ((uint8\_t)0x02)}}
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#define LIS302DL\_Z\_ENABLE                                 ((uint8\_t)0x04)}}
+\DoxyCodeLine{582 \textcolor{preprocessor}{\#define LIS302DL\_XYZ\_ENABLE                               ((uint8\_t)0x07)}}
+\DoxyCodeLine{590 \textcolor{preprocessor}{\#define LIS302DL\_SERIALINTERFACE\_4WIRE                    ((uint8\_t)0x00)}}
+\DoxyCodeLine{591 \textcolor{preprocessor}{\#define LIS302DL\_SERIALINTERFACE\_3WIRE                    ((uint8\_t)0x80)}}
+\DoxyCodeLine{599 \textcolor{preprocessor}{\#define LIS302DL\_BOOT\_NORMALMODE                          ((uint8\_t)0x00)}}
+\DoxyCodeLine{600 \textcolor{preprocessor}{\#define LIS302DL\_BOOT\_REBOOTMEMORY                        ((uint8\_t)0x40)}}
+\DoxyCodeLine{608 \textcolor{preprocessor}{\#define LIS302DL\_FILTEREDDATASELECTION\_BYPASSED           ((uint8\_t)0x00)}}
+\DoxyCodeLine{609 \textcolor{preprocessor}{\#define LIS302DL\_FILTEREDDATASELECTION\_OUTPUTREGISTER     ((uint8\_t)0x20)}}
+\DoxyCodeLine{617 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTERINTERRUPT\_OFF              ((uint8\_t)0x00)}}
+\DoxyCodeLine{618 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTERINTERRUPT\_1                ((uint8\_t)0x04)}}
+\DoxyCodeLine{619 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTERINTERRUPT\_2                ((uint8\_t)0x08)}}
+\DoxyCodeLine{620 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTERINTERRUPT\_1\_2              ((uint8\_t)0x0C)}}
+\DoxyCodeLine{628 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTER\_LEVEL\_0                   ((uint8\_t)0x00)}}
+\DoxyCodeLine{629 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTER\_LEVEL\_1                   ((uint8\_t)0x01)}}
+\DoxyCodeLine{630 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTER\_LEVEL\_2                   ((uint8\_t)0x02)}}
+\DoxyCodeLine{631 \textcolor{preprocessor}{\#define LIS302DL\_HIGHPASSFILTER\_LEVEL\_3                   ((uint8\_t)0x03)}}
+\DoxyCodeLine{639 \textcolor{preprocessor}{\#define LIS302DL\_INTERRUPTREQUEST\_NOTLATCHED              ((uint8\_t)0x00)}}
+\DoxyCodeLine{640 \textcolor{preprocessor}{\#define LIS302DL\_INTERRUPTREQUEST\_LATCHED                 ((uint8\_t)0x40)}}
+\DoxyCodeLine{648 \textcolor{preprocessor}{\#define LIS302DL\_CLICKINTERRUPT\_XYZ\_DISABLE               ((uint8\_t)0x00)}}
+\DoxyCodeLine{649 \textcolor{preprocessor}{\#define LIS302DL\_CLICKINTERRUPT\_X\_ENABLE                  ((uint8\_t)0x01)}}
+\DoxyCodeLine{650 \textcolor{preprocessor}{\#define LIS302DL\_CLICKINTERRUPT\_Y\_ENABLE                  ((uint8\_t)0x04)}}
+\DoxyCodeLine{651 \textcolor{preprocessor}{\#define LIS302DL\_CLICKINTERRUPT\_Z\_ENABLE                  ((uint8\_t)0x10)}}
+\DoxyCodeLine{652 \textcolor{preprocessor}{\#define LIS302DL\_CLICKINTERRUPT\_XYZ\_ENABLE                ((uint8\_t)0x15)}}
+\DoxyCodeLine{660 \textcolor{preprocessor}{\#define LIS302DL\_DOUBLECLICKINTERRUPT\_XYZ\_DISABLE         ((uint8\_t)0x00)}}
+\DoxyCodeLine{661 \textcolor{preprocessor}{\#define LIS302DL\_DOUBLECLICKINTERRUPT\_X\_ENABLE            ((uint8\_t)0x02)}}
+\DoxyCodeLine{662 \textcolor{preprocessor}{\#define LIS302DL\_DOUBLECLICKINTERRUPT\_Y\_ENABLE            ((uint8\_t)0x08)}}
+\DoxyCodeLine{663 \textcolor{preprocessor}{\#define LIS302DL\_DOUBLECLICKINTERRUPT\_Z\_ENABLE            ((uint8\_t)0x20)}}
+\DoxyCodeLine{664 \textcolor{preprocessor}{\#define LIS302DL\_DOUBLECLICKINTERRUPT\_XYZ\_ENABLE          ((uint8\_t)0x2A)}}
+\DoxyCodeLine{676 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gab33f9dfb94fea1368094bd9e5ae305a7}{LIS302DL\_Init}}(uint16\_t InitStruct);}
+\DoxyCodeLine{677 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gad025fe40fee8e518b4c1f3c730719bec}{LIS302DL\_DeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{678 uint8\_t \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gad66ca1c16146bce7a25b1a0f2a7c5336}{LIS302DL\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{679 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gae1fed348eea54a73aa3c571573f54b5b}{LIS302DL\_FilterConfig}}(uint8\_t FilterStruct);}
+\DoxyCodeLine{680 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga0c6ea80d35be5abeb3bd1d06355481e8}{LIS302DL\_InterruptConfig}}(\mbox{\hyperlink{struct_l_i_s302_d_l___interrupt_config_type_def}{LIS302DL\_InterruptConfigTypeDef}} *LIS302DL\_IntConfigStruct);}
+\DoxyCodeLine{681 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga1e614ad06137c27a10e7ef6bfcd933ac}{LIS302DL\_Click\_IntConfig}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{682 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gabb1c78925d79459c2e4b5baf28da70d5}{LIS302DL\_Click\_IntClear}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{683 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga445e78cca4cd65f59e0ffaa3575db8ae}{LIS302DL\_LowpowerCmd}}(uint8\_t LowPowerMode);}
+\DoxyCodeLine{684 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_gadb44926aefe4fc8e6cdff256077c0bf4}{LIS302DL\_FullScaleCmd}}(uint8\_t FS\_value);}
+\DoxyCodeLine{685 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga8542910cb1e71d7031fab7a462c768bd}{LIS302DL\_DataRateCmd}}(uint8\_t DataRateValue);}
+\DoxyCodeLine{686 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga34234db89f7d653fea3085007d3d9e0e}{LIS302DL\_RebootCmd}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{687 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_i_s302_d_l___exported___functions_ga7c1ecf966ebe0f60069e06099c93cad5}{LIS302DL\_ReadACC}}(int16\_t *pData);}
+\DoxyCodeLine{688 }
+\DoxyCodeLine{689 \textcolor{comment}{/* Accelerometer driver structure */}}
+\DoxyCodeLine{690 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\_DrvTypeDef}} Lis302dlDrv;}
+\DoxyCodeLine{691 }
+\DoxyCodeLine{692 \textcolor{comment}{/* Accelerometer IO functions */}}
+\DoxyCodeLine{693 \textcolor{keywordtype}{void}    ACCELERO\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{694 \textcolor{keywordtype}{void}    ACCELERO\_IO\_ITConfig(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{695 \textcolor{keywordtype}{void}    ACCELERO\_IO\_Write(uint8\_t* pBuffer, uint8\_t WriteAddr, uint16\_t NumByteToWrite);}
+\DoxyCodeLine{696 \textcolor{keywordtype}{void}    ACCELERO\_IO\_Read(uint8\_t* pBuffer, uint8\_t ReadAddr, uint16\_t NumByteToRead);}
+\DoxyCodeLine{697 }
+\DoxyCodeLine{698 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{699 \}}
+\DoxyCodeLine{700 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{701 }
+\DoxyCodeLine{702 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_LIS302DL\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{703 }
+\DoxyCodeLine{720 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,945 @@
+\hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions}{}\doxysection{STM32\+F429I DISCOVERY LCD Private Functions}
+\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions}\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga5955111784d5c5a7b9a7492b30afd7cf}{BSP\+\_\+\+LCD\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gafbc7d2bdd56283a761e21998ddbf89e8}{BSP\+\_\+\+LCD\+\_\+\+Get\+XSize}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD X size. ~\newline
+ \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga77de959b7b712a5cb4a1c8515253a905}{BSP\+\_\+\+LCD\+\_\+\+Get\+YSize}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD Y size. ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga7a0f6bdfac93dc950e64581db16f61ba}{BSP\+\_\+\+LCD\+\_\+\+Layer\+Default\+Init}} (uint16\+\_\+t Layer\+Index, uint32\+\_\+t FB\+\_\+\+Address)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD layers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga1e62c9ab7d6185402e831ab6c7e6307e}{BSP\+\_\+\+LCD\+\_\+\+Select\+Layer}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em Selects the LCD Layer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2fcd0d9567ee86c448ed65689278f6f5}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Visible}} (uint32\+\_\+t Layer\+Index, Functional\+State state)
+\begin{DoxyCompactList}\small\item\em Sets a LCD Layer visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gac9c3b946bb03ab825306a9a48ee123da}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Visible\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, Functional\+State State)
+\begin{DoxyCompactList}\small\item\em Sets an LCD Layer visible without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaada127d31caacc3c2245524a9b403db7}{BSP\+\_\+\+LCD\+\_\+\+Set\+Transparency}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em Configures the Transparency. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga422bf84f008ab5e259459354a7dea779}{BSP\+\_\+\+LCD\+\_\+\+Set\+Transparency\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, uint8\+\_\+t Transparency)
+\begin{DoxyCompactList}\small\item\em Configures the transparency without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga0947392e8ac5a64cf810fb6c58fdcaa2}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Address}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t Address)
+\begin{DoxyCompactList}\small\item\em Sets a LCD layer frame buffer address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gafc42384bbed08690b13cc9ed62035508}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Address\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t Address)
+\begin{DoxyCompactList}\small\item\em Sets an LCD layer frame buffer address without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga57fcb4ebed22256672cee760add01de8}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Window}} (uint16\+\_\+t Layer\+Index, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets the Display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaa07e41d601e249c8d2c508b2944c3cfb}{BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Window\+\_\+\+No\+Reload}} (uint16\+\_\+t Layer\+Index, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets display window without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad056ed10c1e33a95a4d78b7f899e5e01}{BSP\+\_\+\+LCD\+\_\+\+Set\+Color\+Keying}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t RGBValue)
+\begin{DoxyCompactList}\small\item\em Configures and sets the color Keying. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga09005a2a087a2f7790fd444f97477d78}{BSP\+\_\+\+LCD\+\_\+\+Set\+Color\+Keying\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index, uint32\+\_\+t RGBValue)
+\begin{DoxyCompactList}\small\item\em Configures and sets the color keying without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad1cd9f1072b2d4d5e489143011cfffcc}{BSP\+\_\+\+LCD\+\_\+\+Reset\+Color\+Keying}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em Disables the color Keying. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9335343479b1e095c1a5817d9a6585c6}{BSP\+\_\+\+LCD\+\_\+\+Reset\+Color\+Keying\+\_\+\+No\+Reload}} (uint32\+\_\+t Layer\+Index)
+\begin{DoxyCompactList}\small\item\em Disables the color keying without reloading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gabf5c8e45b272d103e4eea7432002dc2c}{BSP\+\_\+\+LCD\+\_\+\+Relaod}} (uint32\+\_\+t Reload\+Type)
+\begin{DoxyCompactList}\small\item\em Disables the color keying without reloading. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga89b0d4a3af19d42df7396770972f23d8}{BSP\+\_\+\+LCD\+\_\+\+Get\+Text\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD Text color. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga5fe219c225b7db9a424ba7c54ae15cd5}{BSP\+\_\+\+LCD\+\_\+\+Get\+Back\+Color}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD Background color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga675c034d5e34eecdd9b821d29fc57905}{BSP\+\_\+\+LCD\+\_\+\+Set\+Text\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em Sets the Text color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga54560381fbf64e3f70a0c253c8b740e3}{BSP\+\_\+\+LCD\+\_\+\+Set\+Back\+Color}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em Sets the Background color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga66d4af4f0eb6563410f0ff942369ffc0}{BSP\+\_\+\+LCD\+\_\+\+Set\+Font}} (\mbox{\hyperlink{struct__t_font}{s\+FONT}} $\ast$p\+Fonts)
+\begin{DoxyCompactList}\small\item\em Sets the Text Font. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct__t_font}{s\+FONT}} $\ast$ \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8f0e25c8df95159043d070cd3d2af01b}{BSP\+\_\+\+LCD\+\_\+\+Get\+Font}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the Text Font. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaf524b8c43042bbc40348e88e28f4fbe8}{BSP\+\_\+\+LCD\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Reads Pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga508bafe763db5befc3c8c3ea0e40e9d5}{BSP\+\_\+\+LCD\+\_\+\+Clear}} (uint32\+\_\+t Color)
+\begin{DoxyCompactList}\small\item\em Clears the hole LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9d495a1983997618c113f11f3d600c05}{BSP\+\_\+\+LCD\+\_\+\+Clear\+String\+Line}} (uint32\+\_\+t Line)
+\begin{DoxyCompactList}\small\item\em Clears the selected line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8388f1a9dd9f46d0ed98942e5af68c84}{BSP\+\_\+\+LCD\+\_\+\+Display\+Char}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t Ascii)
+\begin{DoxyCompactList}\small\item\em Displays one character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad06a065ae88887f98d81046cdb3e8fc3}{BSP\+\_\+\+LCD\+\_\+\+Display\+String\+At}} (uint16\+\_\+t X, uint16\+\_\+t Y, uint8\+\_\+t $\ast$p\+Text, \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}{Text\+\_\+\+Align\+Mode\+Typdef}} mode)
+\begin{DoxyCompactList}\small\item\em Displays a maximum of 60 char on the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9c7c6b012bd14c2206135fd1136da7e0}{BSP\+\_\+\+LCD\+\_\+\+Display\+String\+At\+Line}} (uint16\+\_\+t Line, uint8\+\_\+t $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Displays a maximum of 20 char on the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2a28ebabf188e1dd208bcfebe28b48b4}{BSP\+\_\+\+LCD\+\_\+\+Draw\+HLine}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Displays an horizontal line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga7bd3b8d8dd28ef48c03fe31f1d6920d2}{BSP\+\_\+\+LCD\+\_\+\+Draw\+VLine}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Displays a vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga14c8ea16ad96418b0bcae6475b83b5c2}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Line}} (uint16\+\_\+t X1, uint16\+\_\+t Y1, uint16\+\_\+t X2, uint16\+\_\+t Y2)
+\begin{DoxyCompactList}\small\item\em Displays an uni-\/line (between two points). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga278d2524d94b30ed1d1b3cafd48a7d30}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Rect}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Displays a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga944dac20e80e4bb39f697b1d79ee5c88}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Circle}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Radius)
+\begin{DoxyCompactList}\small\item\em Displays a circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad5b57cb65d1733b16b75ade3ff613bec}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Polygon}} (\mbox{\hyperlink{struct_point}{p\+Point}} Points, uint16\+\_\+t Point\+Count)
+\begin{DoxyCompactList}\small\item\em Displays an poly-\/line (between many points). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga93de8990b2794426293de65e7166a781}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Ellipse}} (int Xpos, int Ypos, int XRadius, int YRadius)
+\begin{DoxyCompactList}\small\item\em Displays an Ellipse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2cfa6a5c911050467563569eebc74a1f}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Bitmap}} (uint32\+\_\+t X, uint32\+\_\+t Y, uint8\+\_\+t $\ast$p\+Bmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture loaded in the internal Flash (32 bpp). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga685f6469561442556dbb22f7057a54ef}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Rect}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Displays a full rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8e526424d1abb3364b50d920b3ee2bcf}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Circle}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Radius)
+\begin{DoxyCompactList}\small\item\em Displays a full circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaf24ee486acd14871a276a2f2fa0e71f4}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Triangle}} (uint16\+\_\+t X1, uint16\+\_\+t X2, uint16\+\_\+t X3, uint16\+\_\+t Y1, uint16\+\_\+t Y2, uint16\+\_\+t Y3)
+\begin{DoxyCompactList}\small\item\em Fill triangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaaa15c0355599580e563a09afd32d7f6f}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Polygon}} (\mbox{\hyperlink{struct_point}{p\+Point}} Points, uint16\+\_\+t Point\+Count)
+\begin{DoxyCompactList}\small\item\em Displays a full poly-\/line (between many points). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga4e95c2c6dafd026663a335c989e8732f}{BSP\+\_\+\+LCD\+\_\+\+Fill\+Ellipse}} (int Xpos, int Ypos, int XRadius, int YRadius)
+\begin{DoxyCompactList}\small\item\em Draw a full ellipse. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga13f49563bf69e54227b5f4eef9a08d4b}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga13f49563bf69e54227b5f4eef9a08d4b}} 
+void {\bfseries BSP\+\_\+\+LCD\+\_\+\+Display\+On} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8cf3da6f4c592b58ff5f6b7d6b789369}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8cf3da6f4c592b58ff5f6b7d6b789369}} 
+void {\bfseries BSP\+\_\+\+LCD\+\_\+\+Display\+Off} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaa1f301c72bb6df39c9a34cb9513c10e7}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaa1f301c72bb6df39c9a34cb9513c10e7}} 
+\+\_\+\+\_\+weak void {\bfseries BSP\+\_\+\+LCD\+\_\+\+Msp\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the LTDC MSP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gacb853f5225baf73d695d175ce25310a9}{BSP\+\_\+\+LCD\+\_\+\+Draw\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint32\+\_\+t RGB\+\_\+\+Code)
+\begin{DoxyCompactList}\small\item\em Writes Pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga508bafe763db5befc3c8c3ea0e40e9d5}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga508bafe763db5befc3c8c3ea0e40e9d5}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_Clear@{BSP\_LCD\_Clear}}
+\index{BSP\_LCD\_Clear@{BSP\_LCD\_Clear}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_Clear()}{BSP\_LCD\_Clear()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+Clears the hole LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Color} & the color of the background \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9d495a1983997618c113f11f3d600c05}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9d495a1983997618c113f11f3d600c05}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_ClearStringLine@{BSP\_LCD\_ClearStringLine}}
+\index{BSP\_LCD\_ClearStringLine@{BSP\_LCD\_ClearStringLine}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_ClearStringLine()}{BSP\_LCD\_ClearStringLine()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Clear\+String\+Line (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Line }\end{DoxyParamCaption})}
+
+
+
+Clears the selected line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Line} & the line to be cleared \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8388f1a9dd9f46d0ed98942e5af68c84}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8388f1a9dd9f46d0ed98942e5af68c84}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DisplayChar@{BSP\_LCD\_DisplayChar}}
+\index{BSP\_LCD\_DisplayChar@{BSP\_LCD\_DisplayChar}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DisplayChar()}{BSP\_LCD\_DisplayChar()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Display\+Char (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t}]{Ascii }\end{DoxyParamCaption})}
+
+
+
+Displays one character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & start column address \\
+\hline
+{\em Ypos} & the Line where to display the character shape \\
+\hline
+{\em Ascii} & character ascii code, must be between 0x20 and 0x7E \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad06a065ae88887f98d81046cdb3e8fc3}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad06a065ae88887f98d81046cdb3e8fc3}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DisplayStringAt@{BSP\_LCD\_DisplayStringAt}}
+\index{BSP\_LCD\_DisplayStringAt@{BSP\_LCD\_DisplayStringAt}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DisplayStringAt()}{BSP\_LCD\_DisplayStringAt()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Display\+String\+At (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X,  }\item[{uint16\+\_\+t}]{Y,  }\item[{uint8\+\_\+t $\ast$}]{p\+Text,  }\item[{\mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___exported___types_ga1e6147bff05b05c6b3472ca64ca0e7fb}{Text\+\_\+\+Align\+Mode\+Typdef}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Displays a maximum of 60 char on the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & pointer to x position (in pixel) \\
+\hline
+{\em Y} & pointer to y position (in pixel) ~\newline
+ \\
+\hline
+{\em p\+Text} & pointer to string to display on LCD \\
+\hline
+{\em mode} & The display mode This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item CENTER\+\_\+\+MODE \item RIGHT\+\_\+\+MODE \item LEFT\+\_\+\+MODE ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9c7c6b012bd14c2206135fd1136da7e0}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9c7c6b012bd14c2206135fd1136da7e0}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DisplayStringAtLine@{BSP\_LCD\_DisplayStringAtLine}}
+\index{BSP\_LCD\_DisplayStringAtLine@{BSP\_LCD\_DisplayStringAtLine}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DisplayStringAtLine()}{BSP\_LCD\_DisplayStringAtLine()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Display\+String\+At\+Line (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Line,  }\item[{uint8\+\_\+t $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Displays a maximum of 20 char on the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Line} & the Line where to display the character shape \\
+\hline
+{\em ptr} & pointer to string to display on LCD \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2cfa6a5c911050467563569eebc74a1f}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2cfa6a5c911050467563569eebc74a1f}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawBitmap@{BSP\_LCD\_DrawBitmap}}
+\index{BSP\_LCD\_DrawBitmap@{BSP\_LCD\_DrawBitmap}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawBitmap()}{BSP\_LCD\_DrawBitmap()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{X,  }\item[{uint32\+\_\+t}]{Y,  }\item[{uint8\+\_\+t $\ast$}]{p\+Bmp }\end{DoxyParamCaption})}
+
+
+
+Displays a bitmap picture loaded in the internal Flash (32 bpp). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & the bmp x position in the LCD \\
+\hline
+{\em Y} & the bmp Y position in the LCD \\
+\hline
+{\em p\+Bmp} & Bmp picture address in the internal Flash \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga944dac20e80e4bb39f697b1d79ee5c88}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga944dac20e80e4bb39f697b1d79ee5c88}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawCircle@{BSP\_LCD\_DrawCircle}}
+\index{BSP\_LCD\_DrawCircle@{BSP\_LCD\_DrawCircle}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawCircle()}{BSP\_LCD\_DrawCircle()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+Circle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Radius }\end{DoxyParamCaption})}
+
+
+
+Displays a circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em Radius} & the circle radius \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga93de8990b2794426293de65e7166a781}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga93de8990b2794426293de65e7166a781}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawEllipse@{BSP\_LCD\_DrawEllipse}}
+\index{BSP\_LCD\_DrawEllipse@{BSP\_LCD\_DrawEllipse}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawEllipse()}{BSP\_LCD\_DrawEllipse()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+Ellipse (\begin{DoxyParamCaption}\item[{int}]{Xpos,  }\item[{int}]{Ypos,  }\item[{int}]{XRadius,  }\item[{int}]{YRadius }\end{DoxyParamCaption})}
+
+
+
+Displays an Ellipse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em XRadius} & the X radius of ellipse \\
+\hline
+{\em YRadius} & the Y radius of ellipse \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2a28ebabf188e1dd208bcfebe28b48b4}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2a28ebabf188e1dd208bcfebe28b48b4}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawHLine@{BSP\_LCD\_DrawHLine}}
+\index{BSP\_LCD\_DrawHLine@{BSP\_LCD\_DrawHLine}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawHLine()}{BSP\_LCD\_DrawHLine()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+HLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Displays an horizontal line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em Length} & line length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga14c8ea16ad96418b0bcae6475b83b5c2}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga14c8ea16ad96418b0bcae6475b83b5c2}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawLine@{BSP\_LCD\_DrawLine}}
+\index{BSP\_LCD\_DrawLine@{BSP\_LCD\_DrawLine}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawLine()}{BSP\_LCD\_DrawLine()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+Line (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X1,  }\item[{uint16\+\_\+t}]{Y1,  }\item[{uint16\+\_\+t}]{X2,  }\item[{uint16\+\_\+t}]{Y2 }\end{DoxyParamCaption})}
+
+
+
+Displays an uni-\/line (between two points). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X1} & the point 1 X position \\
+\hline
+{\em Y1} & the point 1 Y position \\
+\hline
+{\em X2} & the point 2 X position \\
+\hline
+{\em Y2} & the point 2 Y position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gacb853f5225baf73d695d175ce25310a9}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gacb853f5225baf73d695d175ce25310a9}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawPixel@{BSP\_LCD\_DrawPixel}}
+\index{BSP\_LCD\_DrawPixel@{BSP\_LCD\_DrawPixel}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawPixel()}{BSP\_LCD\_DrawPixel()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint32\+\_\+t}]{RGB\+\_\+\+Code }\end{DoxyParamCaption})}
+
+
+
+Writes Pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em RGB\+\_\+\+Code} & the pixel color in ARGB mode (8-\/8-\/8-\/8) ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad5b57cb65d1733b16b75ade3ff613bec}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad5b57cb65d1733b16b75ade3ff613bec}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawPolygon@{BSP\_LCD\_DrawPolygon}}
+\index{BSP\_LCD\_DrawPolygon@{BSP\_LCD\_DrawPolygon}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawPolygon()}{BSP\_LCD\_DrawPolygon()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+Polygon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{p\+Point}}}]{Points,  }\item[{uint16\+\_\+t}]{Point\+Count }\end{DoxyParamCaption})}
+
+
+
+Displays an poly-\/line (between many points). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Points} & pointer to the points array \\
+\hline
+{\em Point\+Count} & Number of points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga278d2524d94b30ed1d1b3cafd48a7d30}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga278d2524d94b30ed1d1b3cafd48a7d30}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawRect@{BSP\_LCD\_DrawRect}}
+\index{BSP\_LCD\_DrawRect@{BSP\_LCD\_DrawRect}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawRect()}{BSP\_LCD\_DrawRect()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+Rect (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Displays a rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em Height} & display rectangle height \\
+\hline
+{\em Width} & display rectangle width \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga7bd3b8d8dd28ef48c03fe31f1d6920d2}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga7bd3b8d8dd28ef48c03fe31f1d6920d2}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_DrawVLine@{BSP\_LCD\_DrawVLine}}
+\index{BSP\_LCD\_DrawVLine@{BSP\_LCD\_DrawVLine}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_DrawVLine()}{BSP\_LCD\_DrawVLine()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Draw\+VLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Displays a vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em Length} & line length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8e526424d1abb3364b50d920b3ee2bcf}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8e526424d1abb3364b50d920b3ee2bcf}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_FillCircle@{BSP\_LCD\_FillCircle}}
+\index{BSP\_LCD\_FillCircle@{BSP\_LCD\_FillCircle}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_FillCircle()}{BSP\_LCD\_FillCircle()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Fill\+Circle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Radius }\end{DoxyParamCaption})}
+
+
+
+Displays a full circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em Radius} & the circle radius \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga4e95c2c6dafd026663a335c989e8732f}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga4e95c2c6dafd026663a335c989e8732f}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_FillEllipse@{BSP\_LCD\_FillEllipse}}
+\index{BSP\_LCD\_FillEllipse@{BSP\_LCD\_FillEllipse}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_FillEllipse()}{BSP\_LCD\_FillEllipse()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Fill\+Ellipse (\begin{DoxyParamCaption}\item[{int}]{Xpos,  }\item[{int}]{Ypos,  }\item[{int}]{XRadius,  }\item[{int}]{YRadius }\end{DoxyParamCaption})}
+
+
+
+Draw a full ellipse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em XRadius} & X radius of ellipse \\
+\hline
+{\em YRadius} & Y radius of ellipse. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaaa15c0355599580e563a09afd32d7f6f}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaaa15c0355599580e563a09afd32d7f6f}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_FillPolygon@{BSP\_LCD\_FillPolygon}}
+\index{BSP\_LCD\_FillPolygon@{BSP\_LCD\_FillPolygon}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_FillPolygon()}{BSP\_LCD\_FillPolygon()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Fill\+Polygon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{p\+Point}}}]{Points,  }\item[{uint16\+\_\+t}]{Point\+Count }\end{DoxyParamCaption})}
+
+
+
+Displays a full poly-\/line (between many points). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Points} & pointer to the points array \\
+\hline
+{\em Point\+Count} & Number of points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga685f6469561442556dbb22f7057a54ef}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga685f6469561442556dbb22f7057a54ef}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_FillRect@{BSP\_LCD\_FillRect}}
+\index{BSP\_LCD\_FillRect@{BSP\_LCD\_FillRect}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_FillRect()}{BSP\_LCD\_FillRect()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Fill\+Rect (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Displays a full rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+{\em Height} & rectangle height \\
+\hline
+{\em Width} & rectangle width \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaf24ee486acd14871a276a2f2fa0e71f4}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaf24ee486acd14871a276a2f2fa0e71f4}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_FillTriangle@{BSP\_LCD\_FillTriangle}}
+\index{BSP\_LCD\_FillTriangle@{BSP\_LCD\_FillTriangle}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_FillTriangle()}{BSP\_LCD\_FillTriangle()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Fill\+Triangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X1,  }\item[{uint16\+\_\+t}]{X2,  }\item[{uint16\+\_\+t}]{X3,  }\item[{uint16\+\_\+t}]{Y1,  }\item[{uint16\+\_\+t}]{Y2,  }\item[{uint16\+\_\+t}]{Y3 }\end{DoxyParamCaption})}
+
+
+
+Fill triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X1} & the point 1 x position \\
+\hline
+{\em Y1} & the point 1 y position \\
+\hline
+{\em X2} & the point 2 x position \\
+\hline
+{\em Y2} & the point 2 y position \\
+\hline
+{\em X3} & the point 3 x position \\
+\hline
+{\em Y3} & the point 3 y position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga5fe219c225b7db9a424ba7c54ae15cd5}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga5fe219c225b7db9a424ba7c54ae15cd5}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_GetBackColor@{BSP\_LCD\_GetBackColor}}
+\index{BSP\_LCD\_GetBackColor@{BSP\_LCD\_GetBackColor}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_GetBackColor()}{BSP\_LCD\_GetBackColor()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+LCD\+\_\+\+Get\+Back\+Color (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the LCD Background color. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Background} & color ~\newline
+ \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8f0e25c8df95159043d070cd3d2af01b}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga8f0e25c8df95159043d070cd3d2af01b}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_GetFont@{BSP\_LCD\_GetFont}}
+\index{BSP\_LCD\_GetFont@{BSP\_LCD\_GetFont}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_GetFont()}{BSP\_LCD\_GetFont()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct__t_font}{s\+FONT}} $\ast$ BSP\+\_\+\+LCD\+\_\+\+Get\+Font (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the Text Font. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Layer} & font \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga89b0d4a3af19d42df7396770972f23d8}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga89b0d4a3af19d42df7396770972f23d8}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_GetTextColor@{BSP\_LCD\_GetTextColor}}
+\index{BSP\_LCD\_GetTextColor@{BSP\_LCD\_GetTextColor}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_GetTextColor()}{BSP\_LCD\_GetTextColor()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+LCD\+\_\+\+Get\+Text\+Color (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the LCD Text color. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Text} & color \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gafbc7d2bdd56283a761e21998ddbf89e8}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gafbc7d2bdd56283a761e21998ddbf89e8}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_GetXSize@{BSP\_LCD\_GetXSize}}
+\index{BSP\_LCD\_GetXSize@{BSP\_LCD\_GetXSize}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_GetXSize()}{BSP\_LCD\_GetXSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+LCD\+\_\+\+Get\+XSize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the LCD X size. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & used LCD X size \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga77de959b7b712a5cb4a1c8515253a905}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga77de959b7b712a5cb4a1c8515253a905}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_GetYSize@{BSP\_LCD\_GetYSize}}
+\index{BSP\_LCD\_GetYSize@{BSP\_LCD\_GetYSize}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_GetYSize()}{BSP\_LCD\_GetYSize()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+LCD\+\_\+\+Get\+YSize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the LCD Y size. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & used LCD Y size \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga5955111784d5c5a7b9a7492b30afd7cf}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga5955111784d5c5a7b9a7492b30afd7cf}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_Init@{BSP\_LCD\_Init}}
+\index{BSP\_LCD\_Init@{BSP\_LCD\_Init}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_Init()}{BSP\_LCD\_Init()}}
+{\footnotesize\ttfamily uint8\+\_\+t BSP\+\_\+\+LCD\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the LCD. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em LCD} & state \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga7a0f6bdfac93dc950e64581db16f61ba}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga7a0f6bdfac93dc950e64581db16f61ba}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_LayerDefaultInit@{BSP\_LCD\_LayerDefaultInit}}
+\index{BSP\_LCD\_LayerDefaultInit@{BSP\_LCD\_LayerDefaultInit}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_LayerDefaultInit()}{BSP\_LCD\_LayerDefaultInit()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Layer\+Default\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{FB\+\_\+\+Address }\end{DoxyParamCaption})}
+
+
+
+Initializes the LCD layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & the layer foreground or background. \\
+\hline
+{\em FB\+\_\+\+Address} & the layer frame buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaf524b8c43042bbc40348e88e28f4fbe8}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaf524b8c43042bbc40348e88e28f4fbe8}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_ReadPixel@{BSP\_LCD\_ReadPixel}}
+\index{BSP\_LCD\_ReadPixel@{BSP\_LCD\_ReadPixel}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_ReadPixel()}{BSP\_LCD\_ReadPixel()}}
+{\footnotesize\ttfamily uint32\+\_\+t BSP\+\_\+\+LCD\+\_\+\+Read\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Reads Pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & the X position \\
+\hline
+{\em Ypos} & the Y position \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em RGB} & pixel color \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gabf5c8e45b272d103e4eea7432002dc2c}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gabf5c8e45b272d103e4eea7432002dc2c}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_Relaod@{BSP\_LCD\_Relaod}}
+\index{BSP\_LCD\_Relaod@{BSP\_LCD\_Relaod}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_Relaod()}{BSP\_LCD\_Relaod()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Relaod (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Reload\+Type }\end{DoxyParamCaption})}
+
+
+
+Disables the color keying without reloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reload\+Type} & can be one of the following values
+\begin{DoxyItemize}
+\item LCD\+\_\+\+RELOAD\+\_\+\+IMMEDIATE
+\item LCD\+\_\+\+RELOAD\+\_\+\+VERTICAL\+\_\+\+BLANKING 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad1cd9f1072b2d4d5e489143011cfffcc}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad1cd9f1072b2d4d5e489143011cfffcc}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_ResetColorKeying@{BSP\_LCD\_ResetColorKeying}}
+\index{BSP\_LCD\_ResetColorKeying@{BSP\_LCD\_ResetColorKeying}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_ResetColorKeying()}{BSP\_LCD\_ResetColorKeying()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Reset\+Color\+Keying (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index }\end{DoxyParamCaption})}
+
+
+
+Disables the color Keying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & the Layer foreground or background \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9335343479b1e095c1a5817d9a6585c6}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga9335343479b1e095c1a5817d9a6585c6}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_ResetColorKeying\_NoReload@{BSP\_LCD\_ResetColorKeying\_NoReload}}
+\index{BSP\_LCD\_ResetColorKeying\_NoReload@{BSP\_LCD\_ResetColorKeying\_NoReload}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_ResetColorKeying\_NoReload()}{BSP\_LCD\_ResetColorKeying\_NoReload()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Reset\+Color\+Keying\+\_\+\+No\+Reload (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index }\end{DoxyParamCaption})}
+
+
+
+Disables the color keying without reloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & Layer foreground or background \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga1e62c9ab7d6185402e831ab6c7e6307e}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga1e62c9ab7d6185402e831ab6c7e6307e}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SelectLayer@{BSP\_LCD\_SelectLayer}}
+\index{BSP\_LCD\_SelectLayer@{BSP\_LCD\_SelectLayer}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SelectLayer()}{BSP\_LCD\_SelectLayer()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Select\+Layer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index }\end{DoxyParamCaption})}
+
+
+
+Selects the LCD Layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & the Layer foreground or background. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga54560381fbf64e3f70a0c253c8b740e3}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga54560381fbf64e3f70a0c253c8b740e3}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetBackColor@{BSP\_LCD\_SetBackColor}}
+\index{BSP\_LCD\_SetBackColor@{BSP\_LCD\_SetBackColor}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetBackColor()}{BSP\_LCD\_SetBackColor()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Back\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+Sets the Background color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Color} & the layer Background color code ARGB(8-\/8-\/8-\/8) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad056ed10c1e33a95a4d78b7f899e5e01}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gad056ed10c1e33a95a4d78b7f899e5e01}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetColorKeying@{BSP\_LCD\_SetColorKeying}}
+\index{BSP\_LCD\_SetColorKeying@{BSP\_LCD\_SetColorKeying}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetColorKeying()}{BSP\_LCD\_SetColorKeying()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Color\+Keying (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{RGBValue }\end{DoxyParamCaption})}
+
+
+
+Configures and sets the color Keying. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & the Layer foreground or background \\
+\hline
+{\em RGBValue} & the Color reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga09005a2a087a2f7790fd444f97477d78}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga09005a2a087a2f7790fd444f97477d78}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetColorKeying\_NoReload@{BSP\_LCD\_SetColorKeying\_NoReload}}
+\index{BSP\_LCD\_SetColorKeying\_NoReload@{BSP\_LCD\_SetColorKeying\_NoReload}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetColorKeying\_NoReload()}{BSP\_LCD\_SetColorKeying\_NoReload()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Color\+Keying\+\_\+\+No\+Reload (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{RGBValue }\end{DoxyParamCaption})}
+
+
+
+Configures and sets the color keying without reloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & Layer foreground or background \\
+\hline
+{\em RGBValue} & Color reference \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga66d4af4f0eb6563410f0ff942369ffc0}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga66d4af4f0eb6563410f0ff942369ffc0}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetFont@{BSP\_LCD\_SetFont}}
+\index{BSP\_LCD\_SetFont@{BSP\_LCD\_SetFont}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetFont()}{BSP\_LCD\_SetFont()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Font (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct__t_font}{s\+FONT}} $\ast$}]{p\+Fonts }\end{DoxyParamCaption})}
+
+
+
+Sets the Text Font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Fonts} & the layer font to be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga0947392e8ac5a64cf810fb6c58fdcaa2}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga0947392e8ac5a64cf810fb6c58fdcaa2}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetLayerAddress@{BSP\_LCD\_SetLayerAddress}}
+\index{BSP\_LCD\_SetLayerAddress@{BSP\_LCD\_SetLayerAddress}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetLayerAddress()}{BSP\_LCD\_SetLayerAddress()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{Address }\end{DoxyParamCaption})}
+
+
+
+Sets a LCD layer frame buffer address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & specifies the Layer foreground or background \\
+\hline
+{\em Address} & new LCD frame buffer value ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gafc42384bbed08690b13cc9ed62035508}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gafc42384bbed08690b13cc9ed62035508}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetLayerAddress\_NoReload@{BSP\_LCD\_SetLayerAddress\_NoReload}}
+\index{BSP\_LCD\_SetLayerAddress\_NoReload@{BSP\_LCD\_SetLayerAddress\_NoReload}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetLayerAddress\_NoReload()}{BSP\_LCD\_SetLayerAddress\_NoReload()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Address\+\_\+\+No\+Reload (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint32\+\_\+t}]{Address }\end{DoxyParamCaption})}
+
+
+
+Sets an LCD layer frame buffer address without reloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & Layer foreground or background \\
+\hline
+{\em Address} & New LCD frame buffer value ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2fcd0d9567ee86c448ed65689278f6f5}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga2fcd0d9567ee86c448ed65689278f6f5}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetLayerVisible@{BSP\_LCD\_SetLayerVisible}}
+\index{BSP\_LCD\_SetLayerVisible@{BSP\_LCD\_SetLayerVisible}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetLayerVisible()}{BSP\_LCD\_SetLayerVisible()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Visible (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{Functional\+State}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets a LCD Layer visible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & the visible Layer. \\
+\hline
+{\em state} & new state of the specified layer. This parameter can be\+: ENABLE or DISABLE. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gac9c3b946bb03ab825306a9a48ee123da}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gac9c3b946bb03ab825306a9a48ee123da}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetLayerVisible\_NoReload@{BSP\_LCD\_SetLayerVisible\_NoReload}}
+\index{BSP\_LCD\_SetLayerVisible\_NoReload@{BSP\_LCD\_SetLayerVisible\_NoReload}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetLayerVisible\_NoReload()}{BSP\_LCD\_SetLayerVisible\_NoReload()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Visible\+\_\+\+No\+Reload (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{Functional\+State}]{State }\end{DoxyParamCaption})}
+
+
+
+Sets an LCD Layer visible without reloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & Visible Layer \\
+\hline
+{\em State} & New state of the specified layer This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item ENABLE \item DISABLE \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga57fcb4ebed22256672cee760add01de8}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga57fcb4ebed22256672cee760add01de8}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetLayerWindow@{BSP\_LCD\_SetLayerWindow}}
+\index{BSP\_LCD\_SetLayerWindow@{BSP\_LCD\_SetLayerWindow}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetLayerWindow()}{BSP\_LCD\_SetLayerWindow()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Window (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Layer\+Index,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Sets the Display window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & layer index \\
+\hline
+{\em Xpos} & LCD X position \\
+\hline
+{\em Ypos} & LCD Y position \\
+\hline
+{\em Width} & LCD window width \\
+\hline
+{\em Height} & LCD window height ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaa07e41d601e249c8d2c508b2944c3cfb}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaa07e41d601e249c8d2c508b2944c3cfb}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetLayerWindow\_NoReload@{BSP\_LCD\_SetLayerWindow\_NoReload}}
+\index{BSP\_LCD\_SetLayerWindow\_NoReload@{BSP\_LCD\_SetLayerWindow\_NoReload}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetLayerWindow\_NoReload()}{BSP\_LCD\_SetLayerWindow\_NoReload()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Layer\+Window\+\_\+\+No\+Reload (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Layer\+Index,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Sets display window without reloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & Layer index \\
+\hline
+{\em Xpos} & LCD X position \\
+\hline
+{\em Ypos} & LCD Y position \\
+\hline
+{\em Width} & LCD window width \\
+\hline
+{\em Height} & LCD window height ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga675c034d5e34eecdd9b821d29fc57905}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga675c034d5e34eecdd9b821d29fc57905}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetTextColor@{BSP\_LCD\_SetTextColor}}
+\index{BSP\_LCD\_SetTextColor@{BSP\_LCD\_SetTextColor}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetTextColor()}{BSP\_LCD\_SetTextColor()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Text\+Color (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Color }\end{DoxyParamCaption})}
+
+
+
+Sets the Text color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Color} & the Text color code ARGB(8-\/8-\/8-\/8) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaada127d31caacc3c2245524a9b403db7}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_gaada127d31caacc3c2245524a9b403db7}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetTransparency@{BSP\_LCD\_SetTransparency}}
+\index{BSP\_LCD\_SetTransparency@{BSP\_LCD\_SetTransparency}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetTransparency()}{BSP\_LCD\_SetTransparency()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Transparency (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint8\+\_\+t}]{Transparency }\end{DoxyParamCaption})}
+
+
+
+Configures the Transparency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & the Layer foreground or background. \\
+\hline
+{\em Transparency} & the Transparency, This parameter must range from 0x00 to 0x\+FF. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga422bf84f008ab5e259459354a7dea779}\label{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_c_d___private___functions_ga422bf84f008ab5e259459354a7dea779}} 
+\index{STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}!BSP\_LCD\_SetTransparency\_NoReload@{BSP\_LCD\_SetTransparency\_NoReload}}
+\index{BSP\_LCD\_SetTransparency\_NoReload@{BSP\_LCD\_SetTransparency\_NoReload}!STM32F429I DISCOVERY LCD Private Functions@{STM32F429I DISCOVERY LCD Private Functions}}
+\doxysubsubsection{\texorpdfstring{BSP\_LCD\_SetTransparency\_NoReload()}{BSP\_LCD\_SetTransparency\_NoReload()}}
+{\footnotesize\ttfamily void BSP\+\_\+\+LCD\+\_\+\+Set\+Transparency\+\_\+\+No\+Reload (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Layer\+Index,  }\item[{uint8\+\_\+t}]{Transparency }\end{DoxyParamCaption})}
+
+
+
+Configures the transparency without reloading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Layer\+Index} & Layer foreground or background. \\
+\hline
+{\em Transparency} & Transparency This parameter must be a number between Min\+\_\+\+Data = 0x00 and Max\+\_\+\+Data = 0x\+FF \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

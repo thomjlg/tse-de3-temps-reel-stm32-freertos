@@ -1,0 +1,345 @@
+\hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions}{}\doxysection{ADAFRUIT\+\_\+\+SPI\+\_\+\+LCD\+\_\+\+Exported\+\_\+\+Functions}
+\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions}\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga61c27397b8896665126e6275349afc9d}{st7735\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the ST7735 LCD Component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gad4fc76057ae9dc949889ed30a38baa15}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gad4fc76057ae9dc949889ed30a38baa15}} 
+uint16\+\_\+t {\bfseries st7735\+\_\+\+Read\+ID} (void)
+\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga11f384ec5794a2e3ba2ed40d33248c98}{st7735\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga465ce5514c62c49a77be9c156ab5c56e}{st7735\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga73daff348d93e7cfe665cbee3f415186}{st7735\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Sets Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga7b96512c4fa885f9ad0c4873e9999b2a}{st7735\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Writes pixel. ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga8be4e6fdac7ae4d1f300d515efbbcb95}{st7735\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCDReg, uint8\+\_\+t LCDReg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gae6c784b692f106a1bd6dd8e2ef1d9926}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gae6c784b692f106a1bd6dd8e2ef1d9926}} 
+uint8\+\_\+t {\bfseries st7735\+\_\+\+Read\+Reg} (uint8\+\_\+t LCDReg)
+\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga6e774267d4d8bf517b3ff0e383342ea3}{st7735\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gacb8d75e41d9b4a1d539040df211c6247}{st7735\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draws horizontal line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gae268609486ae0404017a43a62300850a}{st7735\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draws vertical line. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaefe86718c82713c7c15a5ae6f8ed4214}{st7735\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gad918a3ad4e088a957e4e86a3f766b12f}{st7735\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD pixel Height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaeb135ea157d424b976ae241157080e98}{st7735\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture loaded in the internal Flash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaccf0a45e037a886f9b1a849bedd63735}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaccf0a45e037a886f9b1a849bedd63735}} 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the LCD\+\_\+\+SPI interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga40c2e7cc24f8a8aac530d5ff1b813ce6}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga40c2e7cc24f8a8aac530d5ff1b813ce6}} 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Multiple\+Data} (uint8\+\_\+t $\ast$p\+Data, uint32\+\_\+t Size)
+\item 
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga435f47c3f7c327325ea17f71fae7cebc}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga435f47c3f7c327325ea17f71fae7cebc}} 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Reg} (uint8\+\_\+t Reg)
+\begin{DoxyCompactList}\small\item\em Writes register address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga0b45e37ff42910b44d218393ed479e12}{LCD\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Wait for loop in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga91895d6cd41ef0df5e00494592f8b081}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga91895d6cd41ef0df5e00494592f8b081}} 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} {\bfseries st7735\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga0b45e37ff42910b44d218393ed479e12}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga0b45e37ff42910b44d218393ed479e12}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!LCD\_Delay@{LCD\_Delay}}
+\index{LCD\_Delay@{LCD\_Delay}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{LCD\_Delay()}{LCD\_Delay()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+Wait for loop in ms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & in ms. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga465ce5514c62c49a77be9c156ab5c56e}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga465ce5514c62c49a77be9c156ab5c56e}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_DisplayOff@{st7735\_DisplayOff}}
+\index{st7735\_DisplayOff@{st7735\_DisplayOff}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_DisplayOff()}{st7735\_DisplayOff()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Display\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga11f384ec5794a2e3ba2ed40d33248c98}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga11f384ec5794a2e3ba2ed40d33248c98}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_DisplayOn@{st7735\_DisplayOn}}
+\index{st7735\_DisplayOn@{st7735\_DisplayOn}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_DisplayOn()}{st7735\_DisplayOn()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Display\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaeb135ea157d424b976ae241157080e98}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaeb135ea157d424b976ae241157080e98}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_DrawBitmap@{st7735\_DrawBitmap}}
+\index{st7735\_DrawBitmap@{st7735\_DrawBitmap}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_DrawBitmap()}{st7735\_DrawBitmap()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t $\ast$}]{pbmp }\end{DoxyParamCaption})}
+
+
+
+Displays a bitmap picture loaded in the internal Flash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Bmp\+Address} & Bmp picture address in the internal Flash. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gacb8d75e41d9b4a1d539040df211c6247}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gacb8d75e41d9b4a1d539040df211c6247}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_DrawHLine@{st7735\_DrawHLine}}
+\index{st7735\_DrawHLine@{st7735\_DrawHLine}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_DrawHLine()}{st7735\_DrawHLine()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Draw\+HLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draws horizontal line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color ~\newline
+ \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gae268609486ae0404017a43a62300850a}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gae268609486ae0404017a43a62300850a}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_DrawVLine@{st7735\_DrawVLine}}
+\index{st7735\_DrawVLine@{st7735\_DrawVLine}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_DrawVLine()}{st7735\_DrawVLine()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Draw\+VLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draws vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color ~\newline
+ \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gad918a3ad4e088a957e4e86a3f766b12f}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gad918a3ad4e088a957e4e86a3f766b12f}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_GetLcdPixelHeight@{st7735\_GetLcdPixelHeight}}
+\index{st7735\_GetLcdPixelHeight@{st7735\_GetLcdPixelHeight}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_GetLcdPixelHeight()}{st7735\_GetLcdPixelHeight()}}
+{\footnotesize\ttfamily uint16\+\_\+t st7735\+\_\+\+Get\+Lcd\+Pixel\+Height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the LCD pixel Height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Height \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaefe86718c82713c7c15a5ae6f8ed4214}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaefe86718c82713c7c15a5ae6f8ed4214}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_GetLcdPixelWidth@{st7735\_GetLcdPixelWidth}}
+\index{st7735\_GetLcdPixelWidth@{st7735\_GetLcdPixelWidth}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_GetLcdPixelWidth()}{st7735\_GetLcdPixelWidth()}}
+{\footnotesize\ttfamily uint16\+\_\+t st7735\+\_\+\+Get\+Lcd\+Pixel\+Width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the LCD pixel Width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Width \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga61c27397b8896665126e6275349afc9d}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga61c27397b8896665126e6275349afc9d}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_Init@{st7735\_Init}}
+\index{st7735\_Init@{st7735\_Init}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_Init()}{st7735\_Init()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the ST7735 LCD Component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga73daff348d93e7cfe665cbee3f415186}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga73daff348d93e7cfe665cbee3f415186}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_SetCursor@{st7735\_SetCursor}}
+\index{st7735\_SetCursor@{st7735\_SetCursor}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_SetCursor()}{st7735\_SetCursor()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Sets Cursor position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga6e774267d4d8bf517b3ff0e383342ea3}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga6e774267d4d8bf517b3ff0e383342ea3}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_SetDisplayWindow@{st7735\_SetDisplayWindow}}
+\index{st7735\_SetDisplayWindow@{st7735\_SetDisplayWindow}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_SetDisplayWindow()}{st7735\_SetDisplayWindow()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Set\+Display\+Window (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Sets a display window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X bottom left position. \\
+\hline
+{\em Ypos} & specifies the Y bottom left position. \\
+\hline
+{\em Height} & display window height. \\
+\hline
+{\em Width} & display window width. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga7b96512c4fa885f9ad0c4873e9999b2a}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga7b96512c4fa885f9ad0c4873e9999b2a}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_WritePixel@{st7735\_WritePixel}}
+\index{st7735\_WritePixel@{st7735\_WritePixel}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_WritePixel()}{st7735\_WritePixel()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Write\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{RGBCode }\end{DoxyParamCaption})}
+
+
+
+Writes pixel. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em RGBCode} & the RGB pixel color \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga8be4e6fdac7ae4d1f300d515efbbcb95}\label{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga8be4e6fdac7ae4d1f300d515efbbcb95}} 
+\index{ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}!st7735\_WriteReg@{st7735\_WriteReg}}
+\index{st7735\_WriteReg@{st7735\_WriteReg}!ADAFRUIT\_SPI\_LCD\_Exported\_Functions@{ADAFRUIT\_SPI\_LCD\_Exported\_Functions}}
+\doxysubsubsection{\texorpdfstring{st7735\_WriteReg()}{st7735\_WriteReg()}}
+{\footnotesize\ttfamily void st7735\+\_\+\+Write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{LCDReg,  }\item[{uint8\+\_\+t}]{LCDReg\+Value }\end{DoxyParamCaption})}
+
+
+
+Writes to the selected LCD register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LCDReg} & Address of the selected register. \\
+\hline
+{\em LCDReg\+Value} & value to write to the selected register. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

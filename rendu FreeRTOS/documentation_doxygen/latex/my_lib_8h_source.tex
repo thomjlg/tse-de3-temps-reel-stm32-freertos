@@ -1,0 +1,38 @@
+\hypertarget{my_lib_8h_source}{}\doxysection{my\+Lib.\+h}
+\label{my_lib_8h_source}\index{Core/Inc/myLib.h@{Core/Inc/myLib.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * myLib.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Feb 1, 2021}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: florentgoutailler}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef INC\_MYLIB\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define INC\_MYLIB\_H\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keywordtype}{void} I2C\_Scan(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{12 \textcolor{keywordtype}{void} Init(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*);}
+\DoxyCodeLine{13 \textcolor{keywordtype}{void} Init\_BMP280(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*);}
+\DoxyCodeLine{14 \textcolor{keywordtype}{void} MeasureT(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{15 \textcolor{keywordtype}{void} MeasureT\_BMP280(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{long} \textcolor{keywordtype}{signed} \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{16 uint8\_t MeasureP(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{long} \textcolor{keywordtype}{signed} \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{17 \textcolor{keywordtype}{void} MeasureA(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{18 \textcolor{keywordtype}{void} MeasureG(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{19 \textcolor{keywordtype}{void} MeasureM(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{20 \textcolor{keywordtype}{void} NoiseG(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{21 \textcolor{keywordtype}{void} Average(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} CalibG(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} CalibM(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} Roll(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{25 \textcolor{keywordtype}{void} Pitch(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{26 \textcolor{keywordtype}{void} Yaw(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} Yaw2(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*,\textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{28 \textcolor{comment}{//void ComplementaryFilter(I2C\_HandleTypeDef*,double*,double*);}}
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} GUI(\textcolor{keywordtype}{double},\textcolor{keywordtype}{double},\textcolor{keywordtype}{double},\textcolor{keywordtype}{double},\textcolor{keywordtype}{double});}
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} GUI2(\textcolor{keywordtype}{double});}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* INC\_MYLIB\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

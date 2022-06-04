@@ -1,0 +1,63 @@
+\hypertarget{s5k5cag_8h_source}{}\doxysection{s5k5cag.\+h}
+\label{s5k5cag_8h_source}\index{Drivers/BSP/Components/s5k5cag/s5k5cag.h@{Drivers/BSP/Components/s5k5cag/s5k5cag.h}}
+\mbox{\hyperlink{s5k5cag_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_S5K5CAG\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_S5K5CAG\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/camera.h"{}}}
+\DoxyCodeLine{49    }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define  S5K5CAG\_ID                      ((uint16\_t)0x05CA)}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define S5K5CAG\_INFO\_CHIPID1             ((uint16\_t)0x0040)}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define S5K5CAG\_INFO\_CHIPID2             ((uint16\_t)0x0042)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define S5K5CAG\_INFO\_SVNVERSION          ((uint16\_t)0x0048)}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define S5K5CAG\_INFO\_DATE                ((uint16\_t)0x004E)}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define S5K5CAG\_BRIGHTNESS\_LEVEL0        ((uint16\_t)0xFF00)  }\textcolor{comment}{/* Brightness level -\/2         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define S5K5CAG\_BRIGHTNESS\_LEVEL1        ((uint16\_t)0xFFC0)  }\textcolor{comment}{/* Brightness level -\/1         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define S5K5CAG\_BRIGHTNESS\_LEVEL2        ((uint16\_t)0x0000)  }\textcolor{comment}{/* Brightness level 0          */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define S5K5CAG\_BRIGHTNESS\_LEVEL3        ((uint16\_t)0x0050)  }\textcolor{comment}{/* Brightness level +1         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define S5K5CAG\_BRIGHTNESS\_LEVEL4        ((uint16\_t)0x0080)  }\textcolor{comment}{/* Brightness level +2         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define S5K5CAG\_BLACK\_WHITE\_BW           ((uint16\_t)0x0001)  }\textcolor{comment}{/* Black and white effect      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define S5K5CAG\_BLACK\_WHITE\_NEGATIVE     ((uint16\_t)0x0003)  }\textcolor{comment}{/* Negative effect             */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define S5K5CAG\_BLACK\_WHITE\_BW\_NEGATIVE  ((uint16\_t)0x0002)  }\textcolor{comment}{/* BW and Negative effect      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define S5K5CAG\_BLACK\_WHITE\_NORMAL       ((uint16\_t)0x0000)  }\textcolor{comment}{/* Normal effect               */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define S5K5CAG\_CONTRAST\_LEVEL0          ((uint16\_t)0xFF80)  }\textcolor{comment}{/* Contrast level -\/2           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define S5K5CAG\_CONTRAST\_LEVEL1          ((uint16\_t)0xFFC0)  }\textcolor{comment}{/* Contrast level -\/1           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define S5K5CAG\_CONTRAST\_LEVEL2          ((uint16\_t)0x0000)  }\textcolor{comment}{/* Contrast level 0            */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define S5K5CAG\_CONTRAST\_LEVEL3          ((uint16\_t)0x0050)  }\textcolor{comment}{/* Contrast level -\/1           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define S5K5CAG\_CONTRAST\_LEVEL4          ((uint16\_t)0x0080)  }\textcolor{comment}{/* Contrast level -\/2           */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define S5K5CAG\_COLOR\_EFFECT\_NONE        ((uint16\_t)0x0000)  }\textcolor{comment}{/* No color effect             */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define S5K5CAG\_COLOR\_EFFECT\_ANTIQUE     ((uint16\_t)0x0004)  }\textcolor{comment}{/* Antique effect              */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define S5K5CAG\_COLOR\_EFFECT\_BLUE        ((uint16\_t)0x0001)  }\textcolor{comment}{/* Blue effect                 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define S5K5CAG\_COLOR\_EFFECT\_GREEN       ((uint16\_t)0x0002)  }\textcolor{comment}{/* Green effect                */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define S5K5CAG\_COLOR\_EFFECT\_RED         ((uint16\_t)0x0003)  }\textcolor{comment}{/* Red effect                  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{117 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_ga22ad9c0eccce35104808245ab8cb6c1e}{s5k5cag\_Init}}(uint16\_t DeviceAddr, uint32\_t resolution);}
+\DoxyCodeLine{118 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_gaf46514f154f85f55bc422d624a129985}{s5k5cag\_Config}}(uint16\_t DeviceAddr, uint32\_t feature, uint32\_t value, uint32\_t BR\_value);}
+\DoxyCodeLine{119 uint16\_t \mbox{\hyperlink{group___s5_k5_c_a_g___exported___functions_gaefde94c4f6f1d5c09c12f381fe5ee090}{s5k5cag\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{keywordtype}{void}     CAMERA\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{122 \textcolor{keywordtype}{void}     CAMERA\_IO\_Write(uint8\_t addr, uint16\_t reg, uint16\_t value);}
+\DoxyCodeLine{123 uint16\_t CAMERA\_IO\_Read(uint8\_t addr, uint16\_t reg);}
+\DoxyCodeLine{124 \textcolor{keywordtype}{void}     CAMERA\_Delay(uint32\_t delay);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{comment}{/* CAMERA driver structure */}}
+\DoxyCodeLine{127 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_c_a_m_e_r_a___drv_type_def}{CAMERA\_DrvTypeDef}}   s5k5cag\_drv;}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{132 \}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_S5K5CAG\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{148 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

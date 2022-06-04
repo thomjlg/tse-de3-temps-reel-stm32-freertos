@@ -1,0 +1,262 @@
+\hypertarget{ili9341_8h}{}\doxysection{Drivers/\+BSP/\+Components/ili9341/ili9341.h File Reference}
+\label{ili9341_8h}\index{Drivers/BSP/Components/ili9341/ili9341.h@{Drivers/BSP/Components/ili9341/ili9341.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{ili9341_8c}{ili9341.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/lcd.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries ILI9341\+\_\+\+ID}~0x9341
+\begin{DoxyCompactList}\small\item\em ILI9341 chip IDs ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ILI9341\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+WIDTH}~((uint16\+\_\+t)240)
+\begin{DoxyCompactList}\small\item\em ILI9341 Size ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ILI9341\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+HEIGHT}~((uint16\+\_\+t)320)
+\item 
+\#define {\bfseries ILI9341\+\_\+\+HSYNC}~((uint32\+\_\+t)9)   /$\ast$ Horizontal synchronization $\ast$/
+\begin{DoxyCompactList}\small\item\em ILI9341 Timing ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ILI9341\+\_\+\+HBP}~((uint32\+\_\+t)29)    /$\ast$ Horizontal back porch      $\ast$/
+\item 
+\#define {\bfseries ILI9341\+\_\+\+HFP}~((uint32\+\_\+t)2)    /$\ast$ Horizontal front porch     $\ast$/
+\item 
+\#define {\bfseries ILI9341\+\_\+\+VSYNC}~((uint32\+\_\+t)1)   /$\ast$ Vertical synchronization   $\ast$/
+\item 
+\#define {\bfseries ILI9341\+\_\+\+VBP}~((uint32\+\_\+t)3)    /$\ast$ Vertical back porch        $\ast$/
+\item 
+\#define {\bfseries ILI9341\+\_\+\+VFP}~((uint32\+\_\+t)2)    /$\ast$ Vertical front porch       $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+SWRESET}~0x01   /$\ast$ Software Reset $\ast$/
+\begin{DoxyCompactList}\small\item\em ILI9341 Registers ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+DISPLAY\+\_\+\+ID}~0x04   /$\ast$ Read display identification information $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDST}~0x09   /$\ast$ Read Display Status $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDPM}~0x0A   /$\ast$ Read Display Power Mode $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDMADCTL}~0x0B   /$\ast$ Read Display MADCTL $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDCOLMOD}~0x0C   /$\ast$ Read Display Pixel Format $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDIM}~0x0D   /$\ast$ Read Display Image Format $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDSM}~0x0E   /$\ast$ Read Display Signal Mode $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDSDR}~0x0F   /$\ast$ Read Display Self-\/Diagnostic Result $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+SPLIN}~0x10   /$\ast$ Enter Sleep Mode $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+SLEEP\+\_\+\+OUT}~0x11   /$\ast$ Sleep out register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+PTLON}~0x12   /$\ast$ Partial Mode ON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+NORMAL\+\_\+\+MODE\+\_\+\+ON}~0x13   /$\ast$ Normal Display Mode ON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DINVOFF}~0x20   /$\ast$ Display Inversion OFF $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DINVON}~0x21   /$\ast$ Display Inversion ON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+GAMMA}~0x26   /$\ast$ Gamma register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DISPLAY\+\_\+\+OFF}~0x28   /$\ast$ Display off register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DISPLAY\+\_\+\+ON}~0x29   /$\ast$ Display on register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+COLUMN\+\_\+\+ADDR}~0x2A   /$\ast$ Colomn address register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+PAGE\+\_\+\+ADDR}~0x2B   /$\ast$ Page address register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+GRAM}~0x2C   /$\ast$ GRAM register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RGBSET}~0x2D   /$\ast$ Color SET $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RAMRD}~0x2E   /$\ast$ Memory Read $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+PLTAR}~0x30   /$\ast$ Partial Area $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+VSCRDEF}~0x33   /$\ast$ Vertical Scrolling Definition $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+TEOFF}~0x34   /$\ast$ Tearing Effect Line OFF $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+TEON}~0x35   /$\ast$ Tearing Effect Line ON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+MAC}~0x36   /$\ast$ Memory Access Control register$\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+VSCRSADD}~0x37   /$\ast$ Vertical Scrolling Start Address $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+IDMOFF}~0x38   /$\ast$ Idle Mode OFF $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+IDMON}~0x39   /$\ast$ Idle Mode ON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+PIXEL\+\_\+\+FORMAT}~0x3A   /$\ast$ Pixel Format register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+WRITE\+\_\+\+MEM\+\_\+\+CONTINUE}~0x3C   /$\ast$ Write Memory Continue $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+MEM\+\_\+\+CONTINUE}~0x3E   /$\ast$ Read Memory Continue $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+SET\+\_\+\+TEAR\+\_\+\+SCANLINE}~0x44   /$\ast$ Set Tear Scanline $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+GET\+\_\+\+SCANLINE}~0x45   /$\ast$ Get Scanline $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+WDB}~0x51   /$\ast$ Write Brightness Display register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDDISBV}~0x52   /$\ast$ Read Display Brightness $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+WCD}~0x53   /$\ast$ Write Control Display register$\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDCTRLD}~0x54   /$\ast$ Read CTRL Display $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+WRCABC}~0x55   /$\ast$ Write Content Adaptive Brightness Control $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDCABC}~0x56   /$\ast$ Read Content Adaptive Brightness Control $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+WRITE\+\_\+\+CABC}~0x5E   /$\ast$ Write CABC Minimum Brightness $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+CABC}~0x5F   /$\ast$ Read CABC Minimum Brightness $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+ID1}~0x\+DA   /$\ast$ Read ID1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+ID2}~0x\+DB   /$\ast$ Read ID2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+ID3}~0x\+DC   /$\ast$ Read ID3 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RGB\+\_\+\+INTERFACE}~0x\+B0   /$\ast$ RGB Interface Signal Control $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+FRMCTR1}~0x\+B1   /$\ast$ Frame Rate Control (In Normal Mode) $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+FRMCTR2}~0x\+B2   /$\ast$ Frame Rate Control (In Idle Mode) $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+FRMCTR3}~0x\+B3   /$\ast$ Frame Rate Control (In Partial Mode) $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+INVTR}~0x\+B4   /$\ast$ Display Inversion Control $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BPC}~0x\+B5   /$\ast$ Blanking Porch Control register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DFC}~0x\+B6   /$\ast$ Display Function Control register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+ETMOD}~0x\+B7   /$\ast$ Entry Mode Set $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKLIGHT1}~0x\+B8   /$\ast$ Backlight Control 1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKLIGHT2}~0x\+B9   /$\ast$ Backlight Control 2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKLIGHT3}~0x\+BA   /$\ast$ Backlight Control 3 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKLIGHT4}~0x\+BB   /$\ast$ Backlight Control 4 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKLIGHT5}~0x\+BC   /$\ast$ Backlight Control 5 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKLIGHT7}~0x\+BE   /$\ast$ Backlight Control 7 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+BACKLIGHT8}~0x\+BF   /$\ast$ Backlight Control 8 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+POWER1}~0x\+C0   /$\ast$ Power Control 1 register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+POWER2}~0x\+C1   /$\ast$ Power Control 2 register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+VCOM1}~0x\+C5   /$\ast$ VCOM Control 1 register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+VCOM2}~0x\+C7   /$\ast$ VCOM Control 2 register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+NVMWR}~0x\+D0   /$\ast$ NV Memory Write $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+NVMPKEY}~0x\+D1   /$\ast$ NV Memory Protection Key $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+RDNVM}~0x\+D2   /$\ast$ NV Memory Status Read $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+ID4}~0x\+D3   /$\ast$ Read ID4 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+PGAMMA}~0x\+E0   /$\ast$ Positive Gamma Correction register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+NGAMMA}~0x\+E1   /$\ast$ Negative Gamma Correction register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DGAMCTRL1}~0x\+E2   /$\ast$ Digital Gamma Control 1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DGAMCTRL2}~0x\+E3   /$\ast$ Digital Gamma Control 2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+INTERFACE}~0x\+F6   /$\ast$ Interface control register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+POWERA}~0x\+CB   /$\ast$ Power control A register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+POWERB}~0x\+CF   /$\ast$ Power control B register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DTCA}~0x\+E8   /$\ast$ Driver timing control A $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+DTCB}~0x\+EA   /$\ast$ Driver timing control B $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+POWER\+\_\+\+SEQ}~0x\+ED   /$\ast$ Power on sequence register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+3\+GAMMA\+\_\+\+EN}~0x\+F2   /$\ast$ 3 Gamma enable register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+PRC}~0x\+F7   /$\ast$ Pump ratio control register $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+READ\+\_\+\+ID4\+\_\+\+SIZE}~3      /$\ast$ Size of Read ID4 $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga9f53af6ab5b6427655c61ef71fa4a442}{ili9341\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Power on the LCD. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___exported___functions_gaf22c926ba633bcfa144bd68d1cc438d0}{ili9341\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga7ca01b0c09af1a51ccbfb929e6ee1275}{ili9341\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCD\+\_\+\+Reg)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga94c1249a02f21b0a1acd31e985b9cf50}{ili9341\+\_\+\+Write\+Data}} (uint16\+\_\+t Reg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes data to the selected LCD register. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga8a2a8f4eb728128a111362c7e552634f}{ili9341\+\_\+\+Read\+Data}} (uint16\+\_\+t Reg\+Value, uint8\+\_\+t Read\+Size)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___exported___functions_gac3489560fb954b6e4bf5ac24ef99988d}{ili9341\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga3c09dd822d1d76312b6143b8adcb00fa}{ili9341\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga9c56b9515b050d26659353ecb6cf2a14}{ili9341\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get LCD PIXEL WIDTH. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga67359a0ad0d4d272473ed43360306a28}{ili9341\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get LCD PIXEL HEIGHT. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the LCD\+\_\+\+SPI interface. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Data} (uint16\+\_\+t Reg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes register value. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Reg} (uint8\+\_\+t Reg)
+\begin{DoxyCompactList}\small\item\em Writes register address. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga10fd152b0ec2326173d80e922d8635fc}{LCD\+\_\+\+IO\+\_\+\+Read\+Data}} (uint16\+\_\+t Reg\+Value, uint8\+\_\+t Read\+Size)
+\begin{DoxyCompactList}\small\item\em Reads register value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga0b45e37ff42910b44d218393ed479e12}{LCD\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Wait for loop in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} {\bfseries ili9341\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{ili9341_8c}{ili9341.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02-\/December-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

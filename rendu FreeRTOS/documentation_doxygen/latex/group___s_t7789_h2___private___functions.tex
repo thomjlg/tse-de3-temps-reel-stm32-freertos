@@ -1,0 +1,434 @@
+\hypertarget{group___s_t7789_h2___private___functions}{}\doxysection{ST7789\+H2 Private Functions}
+\label{group___s_t7789_h2___private___functions}\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga79b03c4d621768b2edf01fe0300779a1}{ST7789\+H2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the st7789h2 LCD Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga1bcf4ea47a4e1f8d3298b78727c5e5c2}{ST7789\+H2\+\_\+\+Set\+Orientation}} (uint32\+\_\+t orientation)
+\begin{DoxyCompactList}\small\item\em Set the Display Orientation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_gaafb6fbc09b3a6fb4a163c59eefed12a2}{ST7789\+H2\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga19a9f41ab437e6d0d0310b535f84a08c}{ST7789\+H2\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga4971d96cf2b39b046f234d6e5b380b07}{ST7789\+H2\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga10c728adb4ca43b08a29f45a61226014}{ST7789\+H2\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Height. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga2bb4b27b8a1b997030f8ecf2b7efd824}{ST7789\+H2\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Get the st7789h2 ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga9e240ee0a5131b4b1c99f9804a51055d}{ST7789\+H2\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Set Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_gab0ada921c8c4886a56114035b4496edf}{ST7789\+H2\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Write pixel. ~\newline
+ \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___private___functions_gad35fbfe45d9c0a5740d65f2597af02c2}{ST7789\+H2\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Read pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga88e28d2b7833475c12420bbbc8071a36}{ST7789\+H2\+\_\+\+Write\+Reg}} (uint8\+\_\+t Command, uint8\+\_\+t $\ast$Parameters, uint8\+\_\+t Nb\+Parameters)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t7789_h2___private___functions_gaddd260d6608ed9f4817b691fad210de6}{ST7789\+H2\+\_\+\+Read\+Reg}} (uint8\+\_\+t Command)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga5c3d3168b881708cdc4174500d24d190}{ST7789\+H2\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga072637724e314afd2ff3400d81026e4d}{ST7789\+H2\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga1855278f79146c88b0d0bb7e3b44fe36}{ST7789\+H2\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_ga146ade032342938424edf997e79e9672}{ST7789\+H2\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7789_h2___private___functions_gad939fb4b0afad19759072b8932061ec7}{ST7789\+H2\+\_\+\+Draw\+RGBImage}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint8\+\_\+t $\ast$pdata)
+\begin{DoxyCompactList}\small\item\em Displays picture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga19a9f41ab437e6d0d0310b535f84a08c}\label{group___s_t7789_h2___private___functions_ga19a9f41ab437e6d0d0310b535f84a08c}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_DisplayOff@{ST7789H2\_DisplayOff}}
+\index{ST7789H2\_DisplayOff@{ST7789H2\_DisplayOff}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_DisplayOff()}{ST7789H2\_DisplayOff()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Display\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_gaafb6fbc09b3a6fb4a163c59eefed12a2}\label{group___s_t7789_h2___private___functions_gaafb6fbc09b3a6fb4a163c59eefed12a2}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_DisplayOn@{ST7789H2\_DisplayOn}}
+\index{ST7789H2\_DisplayOn@{ST7789H2\_DisplayOn}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_DisplayOn()}{ST7789H2\_DisplayOn()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Display\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables the Display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga146ade032342938424edf997e79e9672}\label{group___s_t7789_h2___private___functions_ga146ade032342938424edf997e79e9672}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_DrawBitmap@{ST7789H2\_DrawBitmap}}
+\index{ST7789H2\_DrawBitmap@{ST7789H2\_DrawBitmap}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_DrawBitmap()}{ST7789H2\_DrawBitmap()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint8\+\_\+t $\ast$}]{pbmp }\end{DoxyParamCaption})}
+
+
+
+Displays a bitmap picture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Bmp\+Address} & Bmp picture address. \\
+\hline
+{\em Xpos} & Bmp X position in the LCD \\
+\hline
+{\em Ypos} & Bmp Y position in the LCD ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga072637724e314afd2ff3400d81026e4d}\label{group___s_t7789_h2___private___functions_ga072637724e314afd2ff3400d81026e4d}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_DrawHLine@{ST7789H2\_DrawHLine}}
+\index{ST7789H2\_DrawHLine@{ST7789H2\_DrawHLine}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_DrawHLine()}{ST7789H2\_DrawHLine()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Draw\+HLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draw vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color in RGB565 format \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the Line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_gad939fb4b0afad19759072b8932061ec7}\label{group___s_t7789_h2___private___functions_gad939fb4b0afad19759072b8932061ec7}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_DrawRGBImage@{ST7789H2\_DrawRGBImage}}
+\index{ST7789H2\_DrawRGBImage@{ST7789H2\_DrawRGBImage}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_DrawRGBImage()}{ST7789H2\_DrawRGBImage()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Draw\+RGBImage (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Xsize,  }\item[{uint16\+\_\+t}]{Ysize,  }\item[{uint8\+\_\+t $\ast$}]{pdata }\end{DoxyParamCaption})}
+
+
+
+Displays picture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pdata} & picture address. \\
+\hline
+{\em Xpos} & Image X position in the LCD \\
+\hline
+{\em Ypos} & Image Y position in the LCD \\
+\hline
+{\em Xsize} & Image X size in the LCD \\
+\hline
+{\em Ysize} & Image Y size in the LCD \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga1855278f79146c88b0d0bb7e3b44fe36}\label{group___s_t7789_h2___private___functions_ga1855278f79146c88b0d0bb7e3b44fe36}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_DrawVLine@{ST7789H2\_DrawVLine}}
+\index{ST7789H2\_DrawVLine@{ST7789H2\_DrawVLine}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_DrawVLine()}{ST7789H2\_DrawVLine()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Draw\+VLine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{RGBCode,  }\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Length }\end{DoxyParamCaption})}
+
+
+
+Draw vertical line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGBCode} & Specifies the RGB color ~\newline
+ \\
+\hline
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em Length} & specifies the Line length. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga10c728adb4ca43b08a29f45a61226014}\label{group___s_t7789_h2___private___functions_ga10c728adb4ca43b08a29f45a61226014}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_GetLcdPixelHeight@{ST7789H2\_GetLcdPixelHeight}}
+\index{ST7789H2\_GetLcdPixelHeight@{ST7789H2\_GetLcdPixelHeight}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_GetLcdPixelHeight()}{ST7789H2\_GetLcdPixelHeight()}}
+{\footnotesize\ttfamily uint16\+\_\+t ST7789\+H2\+\_\+\+Get\+Lcd\+Pixel\+Height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the LCD pixel Height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Height \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga4971d96cf2b39b046f234d6e5b380b07}\label{group___s_t7789_h2___private___functions_ga4971d96cf2b39b046f234d6e5b380b07}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_GetLcdPixelWidth@{ST7789H2\_GetLcdPixelWidth}}
+\index{ST7789H2\_GetLcdPixelWidth@{ST7789H2\_GetLcdPixelWidth}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_GetLcdPixelWidth()}{ST7789H2\_GetLcdPixelWidth()}}
+{\footnotesize\ttfamily uint16\+\_\+t ST7789\+H2\+\_\+\+Get\+Lcd\+Pixel\+Width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the LCD pixel Width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Lcd Pixel Width \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga79b03c4d621768b2edf01fe0300779a1}\label{group___s_t7789_h2___private___functions_ga79b03c4d621768b2edf01fe0300779a1}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_Init@{ST7789H2\_Init}}
+\index{ST7789H2\_Init@{ST7789H2\_Init}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_Init()}{ST7789H2\_Init()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the st7789h2 LCD Component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga2bb4b27b8a1b997030f8ecf2b7efd824}\label{group___s_t7789_h2___private___functions_ga2bb4b27b8a1b997030f8ecf2b7efd824}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_ReadID@{ST7789H2\_ReadID}}
+\index{ST7789H2\_ReadID@{ST7789H2\_ReadID}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_ReadID()}{ST7789H2\_ReadID()}}
+{\footnotesize\ttfamily uint16\+\_\+t ST7789\+H2\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the st7789h2 ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & st7789h2 ID \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_gad35fbfe45d9c0a5740d65f2597af02c2}\label{group___s_t7789_h2___private___functions_gad35fbfe45d9c0a5740d65f2597af02c2}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_ReadPixel@{ST7789H2\_ReadPixel}}
+\index{ST7789H2\_ReadPixel@{ST7789H2\_ReadPixel}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_ReadPixel()}{ST7789H2\_ReadPixel()}}
+{\footnotesize\ttfamily uint16\+\_\+t ST7789\+H2\+\_\+\+Read\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Read pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & RGB pixel color in RGB565 format \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_gaddd260d6608ed9f4817b691fad210de6}\label{group___s_t7789_h2___private___functions_gaddd260d6608ed9f4817b691fad210de6}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_ReadReg@{ST7789H2\_ReadReg}}
+\index{ST7789H2\_ReadReg@{ST7789H2\_ReadReg}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_ReadReg()}{ST7789H2\_ReadReg()}}
+{\footnotesize\ttfamily uint8\+\_\+t ST7789\+H2\+\_\+\+Read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Command }\end{DoxyParamCaption})}
+
+
+
+Reads the selected LCD Register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Command} & command value (or register address as named in st7789h2 doc). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Register} & Value. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga9e240ee0a5131b4b1c99f9804a51055d}\label{group___s_t7789_h2___private___functions_ga9e240ee0a5131b4b1c99f9804a51055d}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_SetCursor@{ST7789H2\_SetCursor}}
+\index{ST7789H2\_SetCursor@{ST7789H2\_SetCursor}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_SetCursor()}{ST7789H2\_SetCursor()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos }\end{DoxyParamCaption})}
+
+
+
+Set Cursor position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga5c3d3168b881708cdc4174500d24d190}\label{group___s_t7789_h2___private___functions_ga5c3d3168b881708cdc4174500d24d190}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_SetDisplayWindow@{ST7789H2\_SetDisplayWindow}}
+\index{ST7789H2\_SetDisplayWindow@{ST7789H2\_SetDisplayWindow}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_SetDisplayWindow()}{ST7789H2\_SetDisplayWindow()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Set\+Display\+Window (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{Width,  }\item[{uint16\+\_\+t}]{Height }\end{DoxyParamCaption})}
+
+
+
+Sets a display window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X bottom left position. \\
+\hline
+{\em Ypos} & specifies the Y bottom left position. \\
+\hline
+{\em Height} & display window height. \\
+\hline
+{\em Width} & display window width. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga1bcf4ea47a4e1f8d3298b78727c5e5c2}\label{group___s_t7789_h2___private___functions_ga1bcf4ea47a4e1f8d3298b78727c5e5c2}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_SetOrientation@{ST7789H2\_SetOrientation}}
+\index{ST7789H2\_SetOrientation@{ST7789H2\_SetOrientation}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_SetOrientation()}{ST7789H2\_SetOrientation()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Set\+Orientation (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Set the Display Orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & ST7789\+H2\+\_\+\+ORIENTATION\+\_\+\+PORTRAIT, ST7789\+H2\+\_\+\+ORIENTATION\+\_\+\+LANDSCAPE or ST7789\+H2\+\_\+\+ORIENTATION\+\_\+\+LANDSCAPE\+\_\+\+ROT180 ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_gab0ada921c8c4886a56114035b4496edf}\label{group___s_t7789_h2___private___functions_gab0ada921c8c4886a56114035b4496edf}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_WritePixel@{ST7789H2\_WritePixel}}
+\index{ST7789H2\_WritePixel@{ST7789H2\_WritePixel}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_WritePixel()}{ST7789H2\_WritePixel()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Write\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Xpos,  }\item[{uint16\+\_\+t}]{Ypos,  }\item[{uint16\+\_\+t}]{RGBCode }\end{DoxyParamCaption})}
+
+
+
+Write pixel. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Xpos} & specifies the X position. \\
+\hline
+{\em Ypos} & specifies the Y position. \\
+\hline
+{\em RGBCode} & the RGB pixel color in RGB565 format \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___s_t7789_h2___private___functions_ga88e28d2b7833475c12420bbbc8071a36}\label{group___s_t7789_h2___private___functions_ga88e28d2b7833475c12420bbbc8071a36}} 
+\index{ST7789H2 Private Functions@{ST7789H2 Private Functions}!ST7789H2\_WriteReg@{ST7789H2\_WriteReg}}
+\index{ST7789H2\_WriteReg@{ST7789H2\_WriteReg}!ST7789H2 Private Functions@{ST7789H2 Private Functions}}
+\doxysubsubsection{\texorpdfstring{ST7789H2\_WriteReg()}{ST7789H2\_WriteReg()}}
+{\footnotesize\ttfamily void ST7789\+H2\+\_\+\+Write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Command,  }\item[{uint8\+\_\+t $\ast$}]{Parameters,  }\item[{uint8\+\_\+t}]{Nb\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Writes to the selected LCD register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Command} & command value (or register address as named in st7789h2 doc). \\
+\hline
+{\em Parameters} & pointer on parameters value (if command uses one or several parameters). \\
+\hline
+{\em Nb\+Parameters} & number of command parameters (0 if no parameter) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

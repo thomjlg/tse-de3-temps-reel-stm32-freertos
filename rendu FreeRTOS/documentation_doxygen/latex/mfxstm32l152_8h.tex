@@ -1,0 +1,531 @@
+\hypertarget{mfxstm32l152_8h}{}\doxysection{Drivers/\+BSP/\+Components/mfxstm32l152/mfxstm32l152.h File Reference}
+\label{mfxstm32l152_8h}\index{Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.h@{Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{mfxstm32l152_8c}{mfxstm32l152.\+c}} IO expander driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/ts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Common/io.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Common/idd.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_d_d__dbg_type_def}{IDD\+\_\+dbg\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___constants_ga4a737520601cd9769114f6be710c9d90}{MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+ID}}~((uint8\+\_\+t)0x00)
+\begin{DoxyCompactList}\small\item\em MFX COMMON defines. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+FW\+\_\+\+VERSION\+\_\+\+MSB}~((uint8\+\_\+t)0x01)
+\begin{DoxyCompactList}\small\item\em Register address\+: chip FW\+\_\+\+VERSION (R) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+FW\+\_\+\+VERSION\+\_\+\+LSB}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+SYS\+\_\+\+CTRL}~((uint8\+\_\+t)0x40)
+\begin{DoxyCompactList}\small\item\em Register address\+: System Control Register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+VDD\+\_\+\+REF\+\_\+\+MSB}~((uint8\+\_\+t)0x06)
+\begin{DoxyCompactList}\small\item\em Register address\+: Vdd monitoring (R) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+VDD\+\_\+\+REF\+\_\+\+LSB}~((uint8\+\_\+t)0x07)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+ERROR\+\_\+\+SRC}~((uint8\+\_\+t)0x03)
+\begin{DoxyCompactList}\small\item\em Register address\+: Error source. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+ERROR\+\_\+\+MSG}~((uint8\+\_\+t)0x04)
+\begin{DoxyCompactList}\small\item\em Register address\+: Error Message. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+MFX\+\_\+\+IRQ\+\_\+\+OUT}~((uint8\+\_\+t)0x41)
+\begin{DoxyCompactList}\small\item\em Reg Addr IRQs\+: to config the pin that informs Main MCU that MFX events appear. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+SRC\+\_\+\+EN}~((uint8\+\_\+t)0x42)
+\begin{DoxyCompactList}\small\item\em Reg Addr IRQs\+: to select the events which activate the MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+OUT signal. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+PENDING}~((uint8\+\_\+t)0x08)
+\begin{DoxyCompactList}\small\item\em Reg Addr IRQs\+: the Main MCU must read the IRQ\+\_\+\+PENDING register to know the interrupt reason. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+ACK}~((uint8\+\_\+t)0x44)
+\begin{DoxyCompactList}\small\item\em Reg Addr IRQs\+: the Main MCU must acknowledge it thanks to a writing access to the IRQ\+\_\+\+ACK register. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+ID\+\_\+1}~((uint8\+\_\+t)0x7B)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+ID choices. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+ID\+\_\+2}~((uint8\+\_\+t)0x79)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+SWRST}~((uint8\+\_\+t)0x80)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+SYS\+\_\+\+CTRL choices. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+STANDBY}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+ALTERNATE\+\_\+\+GPIO\+\_\+\+EN}~((uint8\+\_\+t)0x08) /$\ast$ by the way if IDD and TS are enabled they take automatically the AF pins$\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+EN}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+EN}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+EN}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+ERROR\+\_\+\+SRC}~((uint8\+\_\+t)0x04)  /$\ast$ Error raised by Idd $\ast$/
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+ERROR\+\_\+\+SRC choices. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+ERROR\+\_\+\+SRC}~((uint8\+\_\+t)0x02)  /$\ast$ Error raised by Touch Screen $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+ERROR\+\_\+\+SRC}~((uint8\+\_\+t)0x01)  /$\ast$ Error raised by Gpio $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+OPENDRAIN}~((uint8\+\_\+t)0x00)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+MFX\+\_\+\+IRQ\+\_\+\+OUT choices. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+PUSHPULL}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+POLARITY\+\_\+\+LOW}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+OUT\+\_\+\+PIN\+\_\+\+POLARITY\+\_\+\+HIGH}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+OVF}~((uint8\+\_\+t)0x80)  /$\ast$ Touch\+Screen FIFO Overflow irq$\ast$/
+\begin{DoxyCompactList}\small\item\em REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+SRC\+\_\+\+EN, REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+PENDING \& REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+ACK choices. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+FULL}~((uint8\+\_\+t)0x40)  /$\ast$ Touch\+Screen FIFO Full irq$\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+TH}~((uint8\+\_\+t)0x20)  /$\ast$ Touch\+Screen FIFO threshold triggered irq$\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+NE}~((uint8\+\_\+t)0x10)  /$\ast$ Touch\+Screen FIFO Not Empty irq$\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+DET}~((uint8\+\_\+t)0x08)  /$\ast$ Touch\+Screen Detect irq$\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+ERROR}~((uint8\+\_\+t)0x04)  /$\ast$ Error message from MFXSTM32\+L152 firmware irq $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+IDD}~((uint8\+\_\+t)0x02)  /$\ast$ IDD function irq $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPIO}~((uint8\+\_\+t)0x01)  /$\ast$ General GPIO irq (only for SRC\+\_\+\+EN and PENDING) $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+ALL}~((uint8\+\_\+t)0x\+FF)  /$\ast$ All global interrupts          $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS}~(MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+DET $\vert$ MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+NE $\vert$  MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+TH $\vert$ MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+FULL $\vert$ \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___constants_ga85fb49fd3275c81574704d29b975239c}{MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+TS\+\_\+\+OVF}} )
+\item 
+\#define \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___constants_gac845cd034f6fda67ce7f722be41eed47}{MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+DIR1}}~((uint8\+\_\+t)0x60)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em GPIO\+: 24 programmable input/output called MFXSTM32\+L152\+\_\+\+GPIO\mbox{[}23\+:0\mbox{]} are provided. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+DIR2}~((uint8\+\_\+t)0x61)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+DIR3}~((uint8\+\_\+t)0x62)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+TYPE1}~((uint8\+\_\+t)0x64)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em Reg addr\+: GPIO TYPE (R/W)\+: If GPIO in output\+: (0) output push pull, (1) output open drain. If GPIO in input\+: (0) input without pull resistor, (1) input with pull resistor. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+TYPE2}~((uint8\+\_\+t)0x65)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+TYPE3}~((uint8\+\_\+t)0x66)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+PUPD1}~((uint8\+\_\+t)0x68)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em Reg addr\+: GPIO PULL\+\_\+\+UP\+\_\+\+PULL\+\_\+\+DOWN (R/W)\+: discussion open with Jean Claude. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+PUPD2}~((uint8\+\_\+t)0x69)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+PUPD3}~((uint8\+\_\+t)0x6A)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPO\+\_\+\+SET1}~((uint8\+\_\+t)0x6C)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em Reg addr\+: GPIO SET (W)\+: When GPIO is in output mode, write (1) puts the corresponding GPO in High level. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPO\+\_\+\+SET2}~((uint8\+\_\+t)0x6D)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPO\+\_\+\+SET3}~((uint8\+\_\+t)0x6E)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPO\+\_\+\+CLR1}~((uint8\+\_\+t)0x70)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em Reg addr\+: GPIO CLEAR (W)\+: When GPIO is in output mode, write (1) puts the corresponding GPO in Low level. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPO\+\_\+\+CLR2}~((uint8\+\_\+t)0x71)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPO\+\_\+\+CLR3}~((uint8\+\_\+t)0x72)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+STATE1}~((uint8\+\_\+t)0x10)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em Reg addr\+: GPIO STATE (R)\+: Give state of the GPIO pin. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+STATE2}~((uint8\+\_\+t)0x11)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+GPIO\+\_\+\+STATE3}~((uint8\+\_\+t)0x12)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___constants_ga4dfd93397ab3210157e9fb7a019a2683}{MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+SRC1}}~((uint8\+\_\+t)0x48)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em GPIO IRQ\+\_\+\+GPIs. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+SRC2}~((uint8\+\_\+t)0x49)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+SRC3}~((uint8\+\_\+t)0x4A)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+EVT1}~((uint8\+\_\+t)0x4C)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em GPIO IRQ\+\_\+\+GPI\+\_\+\+EVT1/2/3 (R/W)\+: Irq generated on level (0) or edge (1). \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+EVT2}~((uint8\+\_\+t)0x4D)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+EVT3}~((uint8\+\_\+t)0x4E)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+TYPE1}~((uint8\+\_\+t)0x50)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em GPIO IRQ\+\_\+\+GPI\+\_\+\+TYPE1/2/3 (R/W)\+: Irq generated on (0) \+: Low level or Falling edge. (1) \+: High level or Rising edge. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+TYPE2}~((uint8\+\_\+t)0x51)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+TYPE3}~((uint8\+\_\+t)0x52)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+PENDING1}~((uint8\+\_\+t)0x0C)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em GPIO IRQ\+\_\+\+GPI\+\_\+\+PENDING1/2/3 (R)\+: irq occurs. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+PENDING2}~((uint8\+\_\+t)0x0D)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+PENDING3}~((uint8\+\_\+t)0x0E)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+ACK1}~((uint8\+\_\+t)0x54)  /$\ast$ gpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\begin{DoxyCompactList}\small\item\em GPIO IRQ\+\_\+\+GPI\+\_\+\+ACK1/2/3 (W)\+: Write (1) to acknowledge IRQ event. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+ACK2}~((uint8\+\_\+t)0x55)  /$\ast$ gpio \mbox{[}8\+:15\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+ACK3}~((uint8\+\_\+t)0x56)  /$\ast$ agpio \mbox{[}0\+:7\mbox{]} $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+0}~((uint32\+\_\+t)0x0001)
+\begin{DoxyCompactList}\small\item\em GPIO\+: IO Pins definition. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+1}~((uint32\+\_\+t)0x0002)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+2}~((uint32\+\_\+t)0x0004)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+3}~((uint32\+\_\+t)0x0008)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+4}~((uint32\+\_\+t)0x0010)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+5}~((uint32\+\_\+t)0x0020)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+6}~((uint32\+\_\+t)0x0040)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+7}~((uint32\+\_\+t)0x0080)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+8}~((uint32\+\_\+t)0x0100)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+9}~((uint32\+\_\+t)0x0200)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+10}~((uint32\+\_\+t)0x0400)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+11}~((uint32\+\_\+t)0x0800)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+12}~((uint32\+\_\+t)0x1000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+13}~((uint32\+\_\+t)0x2000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+14}~((uint32\+\_\+t)0x4000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+15}~((uint32\+\_\+t)0x8000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+16}~((uint32\+\_\+t)0x010000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+17}~((uint32\+\_\+t)0x020000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+18}~((uint32\+\_\+t)0x040000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+19}~((uint32\+\_\+t)0x080000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+20}~((uint32\+\_\+t)0x100000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+21}~((uint32\+\_\+t)0x200000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+22}~((uint32\+\_\+t)0x400000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+23}~((uint32\+\_\+t)0x800000)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+0}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+16
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+1}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+17
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+2}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+18
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+3}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+19
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+4}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+20
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+5}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+21
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+6}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+22
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+AGPIO\+\_\+\+PIN\+\_\+7}~MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PIN\+\_\+23
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PINS\+\_\+\+ALL}~((uint32\+\_\+t)0x\+FFFFFF)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+DIR\+\_\+\+IN}~((uint8\+\_\+t)0x0)
+\begin{DoxyCompactList}\small\item\em GPIO\+: constant. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+DIR\+\_\+\+OUT}~((uint8\+\_\+t)0x1)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+EVT\+\_\+\+LEVEL}~((uint8\+\_\+t)0x0)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+EVT\+\_\+\+EDGE}~((uint8\+\_\+t)0x1)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+TYPE\+\_\+\+LLFE}~((uint8\+\_\+t)0x0)  /$\ast$ Low Level Falling Edge $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IRQ\+\_\+\+GPI\+\_\+\+TYPE\+\_\+\+HLRE}~((uint8\+\_\+t)0x1)  /$\ast$High Level Raising Edge $\ast$/
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPI\+\_\+\+WITHOUT\+\_\+\+PULL\+\_\+\+RESISTOR}~((uint8\+\_\+t)0x0)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPI\+\_\+\+WITH\+\_\+\+PULL\+\_\+\+RESISTOR}~((uint8\+\_\+t)0x1)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPO\+\_\+\+PUSH\+\_\+\+PULL}~((uint8\+\_\+t)0x0)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPO\+\_\+\+OPEN\+\_\+\+DRAIN}~((uint8\+\_\+t)0x1)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PULL\+\_\+\+DOWN}~((uint8\+\_\+t)0x0)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+GPIO\+\_\+\+PULL\+\_\+\+UP}~((uint8\+\_\+t)0x1)
+\item 
+\#define \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___constants_gaec79021c6d0fd9343db622bd85d7dd92}{MFXSTM32\+L152\+\_\+\+TS\+\_\+\+SETTLING}}~((uint8\+\_\+t)0x\+A0)
+\begin{DoxyCompactList}\small\item\em TOUCH SCREEN Registers. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+TOUCH\+\_\+\+DET\+\_\+\+DELAY}~((uint8\+\_\+t)0x\+A1)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+AVE}~((uint8\+\_\+t)0x\+A2)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+TRACK}~((uint8\+\_\+t)0x\+A3)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+FIFO\+\_\+\+TH}~((uint8\+\_\+t)0x\+A4)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+FIFO\+\_\+\+STA}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+FIFO\+\_\+\+LEVEL}~((uint8\+\_\+t)0x21)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+XY\+\_\+\+DATA}~((uint8\+\_\+t)0x24)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+CTRL\+\_\+\+STATUS}~((uint8\+\_\+t)0x08)
+\begin{DoxyCompactList}\small\item\em TS registers masks. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+TS\+\_\+\+CLEAR\+\_\+\+FIFO}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+CTRL}~((uint8\+\_\+t)0x80)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd control register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+PRE\+\_\+\+DELAY}~((uint8\+\_\+t)0x81)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd pre delay register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT0\+\_\+\+MSB}~((uint8\+\_\+t)0x82)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd Shunt registers (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT0\+\_\+\+LSB}~((uint8\+\_\+t)0x83)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT1\+\_\+\+MSB}~((uint8\+\_\+t)0x84)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT1\+\_\+\+LSB}~((uint8\+\_\+t)0x85)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT2\+\_\+\+MSB}~((uint8\+\_\+t)0x86)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT2\+\_\+\+LSB}~((uint8\+\_\+t)0x87)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT3\+\_\+\+MSB}~((uint8\+\_\+t)0x88)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT3\+\_\+\+LSB}~((uint8\+\_\+t)0x89)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT4\+\_\+\+MSB}~((uint8\+\_\+t)0x8A)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT4\+\_\+\+LSB}~((uint8\+\_\+t)0x8B)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+GAIN\+\_\+\+MSB}~((uint8\+\_\+t)0x8C)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd ampli gain register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+GAIN\+\_\+\+LSB}~((uint8\+\_\+t)0x8D)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+VDD\+\_\+\+MIN\+\_\+\+MSB}~((uint8\+\_\+t)0x8E)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd VDD min register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+VDD\+\_\+\+MIN\+\_\+\+LSB}~((uint8\+\_\+t)0x8F)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+VALUE\+\_\+\+MSB}~((uint8\+\_\+t)0x14)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd value register (R) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+VALUE\+\_\+\+MID}~((uint8\+\_\+t)0x15)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+VALUE\+\_\+\+LSB}~((uint8\+\_\+t)0x16)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+CAL\+\_\+\+OFFSET\+\_\+\+MSB}~((uint8\+\_\+t)0x18)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd calibration offset register (R) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+CAL\+\_\+\+OFFSET\+\_\+\+LSB}~((uint8\+\_\+t)0x19)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNT\+\_\+\+USED}~((uint8\+\_\+t)0x1A)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd shunt used offset register (R) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SH0\+\_\+\+STABILIZATION}~((uint8\+\_\+t)0x90)
+\begin{DoxyCompactList}\small\item\em Register address\+: shunt stabilisation delay registers (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SH1\+\_\+\+STABILIZATION}~((uint8\+\_\+t)0x91)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SH2\+\_\+\+STABILIZATION}~((uint8\+\_\+t)0x92)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SH3\+\_\+\+STABILIZATION}~((uint8\+\_\+t)0x93)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SH4\+\_\+\+STABILIZATION}~((uint8\+\_\+t)0x94)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+NBR\+\_\+\+OF\+\_\+\+MEAS}~((uint8\+\_\+t)0x96)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd number of measurements register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+MEAS\+\_\+\+DELTA\+\_\+\+DELAY}~((uint8\+\_\+t)0x97)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd delta delay between 2 measurements register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IDD\+\_\+\+SHUNTS\+\_\+\+ON\+\_\+\+BOARD}~((uint8\+\_\+t)0x98)
+\begin{DoxyCompactList}\small\item\em Register address\+: Idd number of shunt on board register (R/W) \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+CTRL\+\_\+\+REQ}~((uint8\+\_\+t)0x01)
+\begin{DoxyCompactList}\small\item\em IDD control register masks. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+CTRL\+\_\+\+SHUNT\+\_\+\+NB}~((uint8\+\_\+t)0x0E)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+CTRL\+\_\+\+VREF\+\_\+\+DIS}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+CTRL\+\_\+\+CAL\+\_\+\+DIS}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+SHUNT\+\_\+\+NB\+\_\+1}~((uint8\+\_\+t) 0x01)
+\begin{DoxyCompactList}\small\item\em IDD Shunt Number. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+SHUNT\+\_\+\+NB\+\_\+2}~((uint8\+\_\+t) 0x02)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+SHUNT\+\_\+\+NB\+\_\+3}~((uint8\+\_\+t) 0x03)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+SHUNT\+\_\+\+NB\+\_\+4}~((uint8\+\_\+t) 0x04)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+SHUNT\+\_\+\+NB\+\_\+5}~((uint8\+\_\+t) 0x05)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+VREF\+\_\+\+AUTO\+\_\+\+MEASUREMENT\+\_\+\+ENABLE}~((uint8\+\_\+t) 0x00)
+\begin{DoxyCompactList}\small\item\em Vref Measurement. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+VREF\+\_\+\+AUTO\+\_\+\+MEASUREMENT\+\_\+\+DISABLE}~((uint8\+\_\+t) 0x70)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+AUTO\+\_\+\+CALIBRATION\+\_\+\+ENABLE}~((uint8\+\_\+t) 0x00)
+\begin{DoxyCompactList}\small\item\em IDD Calibration. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+AUTO\+\_\+\+CALIBRATION\+\_\+\+DISABLE}~((uint8\+\_\+t) 0x80)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+PREDELAY\+\_\+\+UNIT}~((uint8\+\_\+t) 0x80)
+\begin{DoxyCompactList}\small\item\em IDD Pre\+Delay masks. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+PREDELAY\+\_\+\+VALUE}~((uint8\+\_\+t) 0x7F)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+PREDELAY\+\_\+0\+\_\+5\+\_\+\+MS}~((uint8\+\_\+t) 0x00)
+\begin{DoxyCompactList}\small\item\em IDD Pre\+Delay unit. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+PREDELAY\+\_\+20\+\_\+\+MS}~((uint8\+\_\+t) 0x80)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+DELTADELAY\+\_\+\+UNIT}~((uint8\+\_\+t) 0x80)
+\begin{DoxyCompactList}\small\item\em IDD Delta Delay masks. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+DELTADELAY\+\_\+\+VALUE}~((uint8\+\_\+t) 0x7F)
+\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+DELTADELAY\+\_\+0\+\_\+5\+\_\+\+MS}~((uint8\+\_\+t) 0x00)
+\begin{DoxyCompactList}\small\item\em IDD Delta Delay unit. \end{DoxyCompactList}\item 
+\#define {\bfseries MFXSTM32\+L152\+\_\+\+IDD\+\_\+\+DELTADELAY\+\_\+20\+\_\+\+MS}~((uint8\+\_\+t) 0x80)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga525fbfe19575da71fd6041447e0e88c2}{mfxstm32l152\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152 Control functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga8ec4549b6719a15bcfd3a1444d35bfc3}{mfxstm32l152\+\_\+\+De\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em De\+Initialize the mfxstm32l152 and unconfigure the needed hardware resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga247f71e5f9bf1f72f1fa61da16fd8257}{mfxstm32l152\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Reset the mfxstm32l152 by Software. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga5898eb7b6c9055f9b49d0ef229c7ae31}{mfxstm32l152\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the MFXSTM32\+L152 IO Expander device ID. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga433ddd2452d8651e0864faf5812e015f}{mfxstm32l152\+\_\+\+Read\+Fw\+Version}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the MFXSTM32\+L152 device firmware version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gab75943cd3afccb7265937dbe539fbf6a}{mfxstm32l152\+\_\+\+Low\+Power}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Put mfxstm32l152 Device in Low Power standby mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaec837b686eb2cbe600b497a23f5a6044}{mfxstm32l152\+\_\+\+Wake\+Up}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Wake\+Up mfxstm32l152 from standby mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga2c044cc76865cdde5ddd54692019cf69}{mfxstm32l152\+\_\+\+Enable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Enable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga6166a6e8cf485bc44f601595a6c3cfe8}{mfxstm32l152\+\_\+\+Disable\+ITSource}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Disable the interrupt mode for the selected IT source. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gae4cc7464b17a55c211bf8326ebae493e}{mfxstm32l152\+\_\+\+Global\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Returns the selected Global interrupt source pending bit value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gab4cea459b91b04fac04b1d24aa4896e2}{mfxstm32l152\+\_\+\+Clear\+Global\+IT}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Clear the selected Global interrupt pending bit(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gae6add7ca850468cf2aacf7655bb3eee7}{mfxstm32l152\+\_\+\+Set\+Irq\+Out\+Pin\+Polarity}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Polarity)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Polarity of IRQ\+\_\+\+OUT\+\_\+\+PIN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gac82b572d0a78ac3f80915398cd45c594}{mfxstm32l152\+\_\+\+Set\+Irq\+Out\+Pin\+Type}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Type)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Type of IRQ\+\_\+\+OUT\+\_\+\+PIN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga91f7be0b99f1ab6953284146d69d2d11}{mfxstm32l152\+\_\+\+IO\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152 IO functionalities functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga500bc17877baa128a8de08abc9638343}{mfxstm32l152\+\_\+\+IO\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, IO\+\_\+\+Mode\+Typedef IO\+\_\+\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga6c5c6a5781be15e8c6e8161e89367111}{mfxstm32l152\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em When GPIO is in output mode, puts the corresponding GPO in High (1) or Low (0) level. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga155b7aff488b8e5cbea967987c691d8d}{mfxstm32l152\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Return the state of the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaffdc8f05d123db28f86a91985e426687}{mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the global IO interrupt source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga94b7f0383fbf2da34991e62bd9804422}{mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the global IO interrupt source. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga498c1ab9235ce7bd07e2674f57072bd6}{mfxstm32l152\+\_\+\+IO\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Check the status of the selected IO interrupt pending bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga637fddd3454b48f27db0484f8831cfe2}{mfxstm32l152\+\_\+\+IO\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Clear the selected IO interrupt pending bit(s). It clear automatically also the general MFXSTM32\+L152\+\_\+\+REG\+\_\+\+ADR\+\_\+\+IRQ\+\_\+\+PENDING. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gae4283dcc919e306ef39c6cea11eb55b2}{mfxstm32l152\+\_\+\+IO\+\_\+\+Init\+Pin}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Direction)
+\begin{DoxyCompactList}\small\item\em Initialize the selected IO pin direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga18bb2a6789595ace1bbc45fb48b40f6f}{mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+AF}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable the AF for a\+GPIO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga82c0a6c46aba013f5eabeeb29327cbe6}{mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+AF}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Disable the AF for a\+GPIO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga8ba47456428aaf264ba8ed8134d7de7b}{mfxstm32l152\+\_\+\+IO\+\_\+\+Set\+Irq\+Type\+Mode}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Type)
+\begin{DoxyCompactList}\small\item\em Configure the Edge for which a transition is detectable for the selected pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga95cf3e3c0a1722123610ef2a1c201b92}{mfxstm32l152\+\_\+\+IO\+\_\+\+Set\+Irq\+Evt\+Mode}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin, uint8\+\_\+t Evt)
+\begin{DoxyCompactList}\small\item\em Set the global interrupt Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga268d9ea28decd06d2c33f74073812521}{mfxstm32l152\+\_\+\+IO\+\_\+\+Enable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Enable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga4d47f023dc68021dc0cd77d2110f091f}{mfxstm32l152\+\_\+\+IO\+\_\+\+Disable\+Pin\+IT}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t IO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Disable interrupt mode for the selected IO pin(s). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga1f311d23036ffeb40b5f7d1889c73ab6}{mfxstm32l152\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152 Touch screen functionalities functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga726c59f85e53f6737927055e135a03f7}{mfxstm32l152\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touch detected or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaba9c65eca11cceea87fb0c47578147bf}{mfxstm32l152\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaba38e23391f8685b395aff1129e532de}{mfxstm32l152\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaa78ac90676c880fdff3bbbd0ce7f3565}{mfxstm32l152\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gab71fdfbf6e3f308290a7a95468e84ddc}{mfxstm32l152\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga40f7d6f7af32bac4699fba8acbbc9e6a}{mfxstm32l152\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the selected source to generate a global interrupt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga00b09319e7428ee5389bcdaed8e06397}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152 IDD current measurement functionalities functions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga5292153e66fcc3d2cb155e1ab5be765d}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Config}} (uint16\+\_\+t Device\+Addr, \mbox{\hyperlink{struct_i_d_d___config_type_def}{IDD\+\_\+\+Config\+Type\+Def}} Mfx\+Idd\+Config)
+\begin{DoxyCompactList}\small\item\em Configures the IDD current measurement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gabb510fb13e21eba41d255e8600bfc1d6}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Config\+Shunt\+Nb\+Limit}} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Shunt\+Nb\+Limit)
+\begin{DoxyCompactList}\small\item\em This function allows to modify number of shunt used for a measurement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga8c920b5f255b095c96896eb26c6e5039}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+Value}} (uint16\+\_\+t Device\+Addr, uint32\+\_\+t $\ast$Read\+Value)
+\begin{DoxyCompactList}\small\item\em Get Idd current value. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga68309036e6346514d97f2d662526c571}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+Shunt\+Used}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Get Last shunt used for measurement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga65ca645a8d1a4180675560099ae51531}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure mfx to enable Idd interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga852c4eaf9f8b8946e897fa414d258f39}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Clear Idd global interrupt. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga409a5778007807ef66b40acac7d24db2}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Get\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em get Idd interrupt status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga7b2791d0ace86653c6319ac91fa26204}{mfxstm32l152\+\_\+\+IDD\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em disable Idd interrupt \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga68d8340ffc8efe2975379cb5651a52e0}{mfxstm32l152\+\_\+\+Error\+\_\+\+Read\+Src}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em MFXSTM32\+L152 Error management functions. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga7fe6bf98367e42f5423311857145b1b4}{mfxstm32l152\+\_\+\+Error\+\_\+\+Read\+Msg}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read Error Message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga47d33708ef596df83031b58bb544b54e}{mfxstm32l152\+\_\+\+Error\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Enable Error global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gabb9cfbd9b00d94e1c8c75e7384ff40ea}{mfxstm32l152\+\_\+\+Error\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Clear Error global interrupt. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga9e95f3f4f8128306351dd3edaea04d21}{mfxstm32l152\+\_\+\+Error\+\_\+\+Get\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em get Error interrupt status \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga1fbfab805e88c9892efc656590c02973}{mfxstm32l152\+\_\+\+Error\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em disable Error interrupt \end{DoxyCompactList}\item 
+uint8\+\_\+t {\bfseries mfxstm32l152\+\_\+\+Read\+Reg} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Reg\+Addr)
+\begin{DoxyCompactList}\small\item\em FOR DEBUG ONLY. \end{DoxyCompactList}\item 
+void {\bfseries mfxstm32l152\+\_\+\+Write\+Reg} (uint16\+\_\+t Device\+Addr, uint8\+\_\+t Reg\+Addr, uint8\+\_\+t Value)
+\item 
+void {\bfseries MFX\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em iobus prototypes (they should be defined in common/stm32\+\_\+iobus.\+h) \end{DoxyCompactList}\item 
+void {\bfseries MFX\+\_\+\+IO\+\_\+\+De\+Init} (void)
+\item 
+void {\bfseries MFX\+\_\+\+IO\+\_\+\+ITConfig} (void)
+\item 
+void {\bfseries MFX\+\_\+\+IO\+\_\+\+Enable\+Wakeup\+Pin} (void)
+\item 
+void {\bfseries MFX\+\_\+\+IO\+\_\+\+Wakeup} (void)
+\item 
+void {\bfseries MFX\+\_\+\+IO\+\_\+\+Delay} (uint32\+\_\+t delay)
+\item 
+void {\bfseries MFX\+\_\+\+IO\+\_\+\+Write} (uint16\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+uint8\+\_\+t {\bfseries MFX\+\_\+\+IO\+\_\+\+Read} (uint16\+\_\+t addr, uint8\+\_\+t reg)
+\item 
+uint16\+\_\+t {\bfseries MFX\+\_\+\+IO\+\_\+\+Read\+Multiple} (uint16\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t $\ast$buffer, uint16\+\_\+t length)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} {\bfseries mfxstm32l152\+\_\+ts\+\_\+drv}
+\item 
+\mbox{\hyperlink{struct_i_o___drv_type_def}{IO\+\_\+\+Drv\+Type\+Def}} {\bfseries mfxstm32l152\+\_\+io\+\_\+drv}
+\item 
+\mbox{\hyperlink{struct_i_d_d___drv_type_def}{IDD\+\_\+\+Drv\+Type\+Def}} {\bfseries mfxstm32l152\+\_\+idd\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{mfxstm32l152_8c}{mfxstm32l152.\+c}} IO expander driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/June-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

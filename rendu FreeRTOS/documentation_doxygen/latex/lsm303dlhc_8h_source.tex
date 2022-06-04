@@ -1,0 +1,239 @@
+\hypertarget{lsm303dlhc_8h_source}{}\doxysection{lsm303dlhc.\+h}
+\label{lsm303dlhc_8h_source}\index{Drivers/BSP/Components/lsm303dlhc/lsm303dlhc.h@{Drivers/BSP/Components/lsm303dlhc/lsm303dlhc.h}}
+\mbox{\hyperlink{lsm303dlhc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_LSM303DLHC\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_LSM303DLHC\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}../Common/accelero.h"{}}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{69 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{70 \textcolor{comment}{/*************************** START REGISTER MAPPING  **************************/}}
+\DoxyCodeLine{71 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{72 \textcolor{comment}{/* Exported constant IO -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define ACC\_I2C\_ADDRESS                      0x32}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define MAG\_I2C\_ADDRESS                      0x3C}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{comment}{/* Acceleration Registers */}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define LSM303DLHC\_WHO\_AM\_I\_ADDR             0x0F  }\textcolor{comment}{/* device identification register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define LSM303DLHC\_CTRL\_REG1\_A               0x20  }\textcolor{comment}{/* Control register 1 acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define LSM303DLHC\_CTRL\_REG2\_A               0x21  }\textcolor{comment}{/* Control register 2 acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LSM303DLHC\_CTRL\_REG3\_A               0x22  }\textcolor{comment}{/* Control register 3 acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define LSM303DLHC\_CTRL\_REG4\_A               0x23  }\textcolor{comment}{/* Control register 4 acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define LSM303DLHC\_CTRL\_REG5\_A               0x24  }\textcolor{comment}{/* Control register 5 acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define LSM303DLHC\_CTRL\_REG6\_A               0x25  }\textcolor{comment}{/* Control register 6 acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define LSM303DLHC\_REFERENCE\_A               0x26  }\textcolor{comment}{/* Reference register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define LSM303DLHC\_STATUS\_REG\_A              0x27  }\textcolor{comment}{/* Status register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_X\_L\_A                 0x28  }\textcolor{comment}{/* Output Register X acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_X\_H\_A                 0x29  }\textcolor{comment}{/* Output Register X acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Y\_L\_A                 0x2A  }\textcolor{comment}{/* Output Register Y acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Y\_H\_A                 0x2B  }\textcolor{comment}{/* Output Register Y acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Z\_L\_A                 0x2C  }\textcolor{comment}{/* Output Register Z acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Z\_H\_A                 0x2D  }\textcolor{comment}{/* Output Register Z acceleration */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define LSM303DLHC\_FIFO\_CTRL\_REG\_A           0x2E  }\textcolor{comment}{/* Fifo control Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define LSM303DLHC\_FIFO\_SRC\_REG\_A            0x2F  }\textcolor{comment}{/* Fifo src Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1\_CFG\_A                0x30  }\textcolor{comment}{/* Interrupt 1 configuration Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1\_SOURCE\_A             0x31  }\textcolor{comment}{/* Interrupt 1 source Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1\_THS\_A                0x32  }\textcolor{comment}{/* Interrupt 1 Threshold register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1\_DURATION\_A           0x33  }\textcolor{comment}{/* Interrupt 1 DURATION register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define LSM303DLHC\_INT2\_CFG\_A                0x34  }\textcolor{comment}{/* Interrupt 2 configuration Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define LSM303DLHC\_INT2\_SOURCE\_A             0x35  }\textcolor{comment}{/* Interrupt 2 source Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define LSM303DLHC\_INT2\_THS\_A                0x36  }\textcolor{comment}{/* Interrupt 2 Threshold register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define LSM303DLHC\_INT2\_DURATION\_A           0x37  }\textcolor{comment}{/* Interrupt 2 DURATION register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define LSM303DLHC\_CLICK\_CFG\_A               0x38  }\textcolor{comment}{/* Click configuration Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define LSM303DLHC\_CLICK\_SOURCE\_A            0x39  }\textcolor{comment}{/* Click 2 source Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define LSM303DLHC\_CLICK\_THS\_A               0x3A  }\textcolor{comment}{/* Click 2 Threshold register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define LSM303DLHC\_TIME\_LIMIT\_A              0x3B  }\textcolor{comment}{/* Time Limit Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define LSM303DLHC\_TIME\_LATENCY\_A            0x3C  }\textcolor{comment}{/* Time Latency Register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define LSM303DLHC\_TIME\_WINDOW\_A             0x3D  }\textcolor{comment}{/* Time window register acceleration */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{comment}{/* Magnetic field Registers */}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define LSM303DLHC\_CRA\_REG\_M                 0x00  }\textcolor{comment}{/* Control register A magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define LSM303DLHC\_CRB\_REG\_M                 0x01  }\textcolor{comment}{/* Control register B magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define LSM303DLHC\_MR\_REG\_M                  0x02  }\textcolor{comment}{/* Control register MR magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_X\_H\_M                 0x03  }\textcolor{comment}{/* Output Register X magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_X\_L\_M                 0x04  }\textcolor{comment}{/* Output Register X magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Z\_H\_M                 0x05  }\textcolor{comment}{/* Output Register Z magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Z\_L\_M                 0x06  }\textcolor{comment}{/* Output Register Z magnetic field */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Y\_H\_M                 0x07  }\textcolor{comment}{/* Output Register Y magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define LSM303DLHC\_OUT\_Y\_L\_M                 0x08  }\textcolor{comment}{/* Output Register Y magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define LSM303DLHC\_SR\_REG\_M                  0x09  }\textcolor{comment}{/* Status Register magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define LSM303DLHC\_IRA\_REG\_M                 0x0A  }\textcolor{comment}{/* IRA Register magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define LSM303DLHC\_IRB\_REG\_M                 0x0B  }\textcolor{comment}{/* IRB Register magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define LSM303DLHC\_IRC\_REG\_M                 0x0C  }\textcolor{comment}{/* IRC Register magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define LSM303DLHC\_TEMP\_OUT\_H\_M              0x31  }\textcolor{comment}{/* Temperature Register magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define LSM303DLHC\_TEMP\_OUT\_L\_M              0x32  }\textcolor{comment}{/* Temperature Register magnetic field */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{133 \textcolor{comment}{/**************************** END REGISTER MAPPING  ***************************/}}
+\DoxyCodeLine{134 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define I\_AM\_LMS303DLHC                   ((uint8\_t)0x33)}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define LSM303DLHC\_NORMAL\_MODE            ((uint8\_t)0x00)}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define LSM303DLHC\_LOWPOWER\_MODE          ((uint8\_t)0x08)}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_1\_HZ                ((uint8\_t)0x10)  }}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_10\_HZ               ((uint8\_t)0x20)  }}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_25\_HZ               ((uint8\_t)0x30)  }}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_50\_HZ               ((uint8\_t)0x40)  }}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_100\_HZ              ((uint8\_t)0x50)  }}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_200\_HZ              ((uint8\_t)0x60)  }}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_400\_HZ              ((uint8\_t)0x70)  }}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_1620\_HZ\_LP          ((uint8\_t)0x80)  }}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_1344\_HZ             ((uint8\_t)0x90)  }}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define LSM303DLHC\_X\_ENABLE                ((uint8\_t)0x01)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define LSM303DLHC\_Y\_ENABLE                ((uint8\_t)0x02)}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define LSM303DLHC\_Z\_ENABLE                ((uint8\_t)0x04)}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define LSM303DLHC\_AXES\_ENABLE             ((uint8\_t)0x07)}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define LSM303DLHC\_AXES\_DISABLE            ((uint8\_t)0x00)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define LSM303DLHC\_HR\_ENABLE               ((uint8\_t)0x08)}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define LSM303DLHC\_HR\_DISABLE              ((uint8\_t)0x00)}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define LSM303DLHC\_FULLSCALE\_2G            ((uint8\_t)0x00)  }}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define LSM303DLHC\_FULLSCALE\_4G            ((uint8\_t)0x10)  }}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define LSM303DLHC\_FULLSCALE\_8G            ((uint8\_t)0x20)  }}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define LSM303DLHC\_FULLSCALE\_16G           ((uint8\_t)0x30)  }}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define LSM303DLHC\_ACC\_SENSITIVITY\_2G     ((uint8\_t)1)  }}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define LSM303DLHC\_ACC\_SENSITIVITY\_4G     ((uint8\_t)2)  }}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define LSM303DLHC\_ACC\_SENSITIVITY\_8G     ((uint8\_t)4)  }}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define LSM303DLHC\_ACC\_SENSITIVITY\_16G    ((uint8\_t)12) }}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define LSM303DLHC\_BlockUpdate\_Continous   ((uint8\_t)0x00) }}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define LSM303DLHC\_BlockUpdate\_Single      ((uint8\_t)0x80) }}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define LSM303DLHC\_BLE\_LSB                 ((uint8\_t)0x00) }}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define LSM303DLHC\_BLE\_MSB                 ((uint8\_t)0x40) }}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define LSM303DLHC\_BOOT\_NORMALMODE         ((uint8\_t)0x00)}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define LSM303DLHC\_BOOT\_REBOOTMEMORY       ((uint8\_t)0x80)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define LSM303DLHC\_HPM\_NORMAL\_MODE\_RES     ((uint8\_t)0x00)}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define LSM303DLHC\_HPM\_REF\_SIGNAL          ((uint8\_t)0x40)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define LSM303DLHC\_HPM\_NORMAL\_MODE         ((uint8\_t)0x80)}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define LSM303DLHC\_HPM\_AUTORESET\_INT       ((uint8\_t)0xC0)}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define LSM303DLHC\_HPFCF\_8                 ((uint8\_t)0x00)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define LSM303DLHC\_HPFCF\_16                ((uint8\_t)0x10)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define LSM303DLHC\_HPFCF\_32                ((uint8\_t)0x20)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define LSM303DLHC\_HPFCF\_64                ((uint8\_t)0x30)}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define LSM303DLHC\_HIGHPASSFILTER\_DISABLE  ((uint8\_t)0x00)}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define LSM303DLHC\_HIGHPASSFILTER\_ENABLE   ((uint8\_t)0x08)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define LSM303DLHC\_HPF\_CLICK\_DISABLE       ((uint8\_t)0x00)}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define LSM303DLHC\_HPF\_CLICK\_ENABLE        ((uint8\_t)0x04)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define LSM303DLHC\_HPF\_AOI1\_DISABLE        ((uint8\_t)0x00)}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define LSM303DLHC\_HPF\_AOI1\_ENABLE         ((uint8\_t)0x01)}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define LSM303DLHC\_HPF\_AOI2\_DISABLE        ((uint8\_t)0x00)}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#define LSM303DLHC\_HPF\_AOI2\_ENABLE         ((uint8\_t)0x02)}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define LSM303DLHC\_IT1\_CLICK               ((uint8\_t)0x80)}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define LSM303DLHC\_IT1\_AOI1                ((uint8\_t)0x40)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define LSM303DLHC\_IT1\_AOI2                ((uint8\_t)0x20)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define LSM303DLHC\_IT1\_DRY1                ((uint8\_t)0x10)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define LSM303DLHC\_IT1\_DRY2                ((uint8\_t)0x08)}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#define LSM303DLHC\_IT1\_WTM                 ((uint8\_t)0x04)}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#define LSM303DLHC\_IT1\_OVERRUN             ((uint8\_t)0x02)}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#define LSM303DLHC\_IT2\_CLICK               ((uint8\_t)0x80)}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define LSM303DLHC\_IT2\_INT1                ((uint8\_t)0x40)}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define LSM303DLHC\_IT2\_INT2                ((uint8\_t)0x20)}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#define LSM303DLHC\_IT2\_BOOT                ((uint8\_t)0x10)}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define LSM303DLHC\_IT2\_ACT                 ((uint8\_t)0x08)}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{\#define LSM303DLHC\_IT2\_HLACTIVE            ((uint8\_t)0x02)}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define LSM303DLHC\_OR\_COMBINATION          ((uint8\_t)0x00)  }}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define LSM303DLHC\_AND\_COMBINATION         ((uint8\_t)0x80)  }}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define LSM303DLHC\_MOV\_RECOGNITION         ((uint8\_t)0x40)  }}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#define LSM303DLHC\_POS\_RECOGNITION         ((uint8\_t)0xC0)  }}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define LSM303DLHC\_Z\_HIGH                  ((uint8\_t)0x20)  }}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define LSM303DLHC\_Z\_LOW                   ((uint8\_t)0x10)  }}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define LSM303DLHC\_Y\_HIGH                  ((uint8\_t)0x08)  }}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define LSM303DLHC\_Y\_LOW                   ((uint8\_t)0x04)  }}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define LSM303DLHC\_X\_HIGH                  ((uint8\_t)0x02)  }}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define LSM303DLHC\_X\_LOW                   ((uint8\_t)0x01)  }}
+\DoxyCodeLine{345 \textcolor{preprocessor}{\#define LSM303DLHC\_Z\_DOUBLE\_CLICK          ((uint8\_t)0x20)  }}
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#define LSM303DLHC\_Z\_SINGLE\_CLICK          ((uint8\_t)0x10)  }}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#define LSM303DLHC\_Y\_DOUBLE\_CLICK          ((uint8\_t)0x08)  }}
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#define LSM303DLHC\_Y\_SINGLE\_CLICK          ((uint8\_t)0x04)  }}
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define LSM303DLHC\_X\_DOUBLE\_CLICK          ((uint8\_t)0x02)  }}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define LSM303DLHC\_X\_SINGLE\_CLICK          ((uint8\_t)0x01)  }}
+\DoxyCodeLine{358 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1INTERRUPT\_DISABLE   ((uint8\_t)0x00)}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1INTERRUPT\_ENABLE    ((uint8\_t)0x80)}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1INTERRUPT\_LOW\_EDGE  ((uint8\_t)0x20)}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define LSM303DLHC\_INT1INTERRUPT\_HIGH\_EDGE ((uint8\_t)0x00)}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_0\_75\_HZ              ((uint8\_t) 0x00)  }}
+\DoxyCodeLine{377 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_1\_5\_HZ               ((uint8\_t) 0x04)  }}
+\DoxyCodeLine{378 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_3\_0\_HZ               ((uint8\_t) 0x08)  }}
+\DoxyCodeLine{379 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_7\_5\_HZ               ((uint8\_t) 0x0C)  }}
+\DoxyCodeLine{380 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_15\_HZ                ((uint8\_t) 0x10)  }}
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_30\_HZ                ((uint8\_t) 0x14)  }}
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_75\_HZ                ((uint8\_t) 0x18)  }}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#define LSM303DLHC\_ODR\_220\_HZ               ((uint8\_t) 0x1C)  }}
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#define  LSM303DLHC\_FS\_1\_3\_GA               ((uint8\_t) 0x20)  }}
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define  LSM303DLHC\_FS\_1\_9\_GA               ((uint8\_t) 0x40)  }}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#define  LSM303DLHC\_FS\_2\_5\_GA               ((uint8\_t) 0x60)  }}
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#define  LSM303DLHC\_FS\_4\_0\_GA               ((uint8\_t) 0x80)  }}
+\DoxyCodeLine{395 \textcolor{preprocessor}{\#define  LSM303DLHC\_FS\_4\_7\_GA               ((uint8\_t) 0xA0)  }}
+\DoxyCodeLine{396 \textcolor{preprocessor}{\#define  LSM303DLHC\_FS\_5\_6\_GA               ((uint8\_t) 0xC0)  }}
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#define  LSM303DLHC\_FS\_8\_1\_GA               ((uint8\_t) 0xE0)  }}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_XY\_1\_3Ga     1100  }}
+\DoxyCodeLine{407 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_XY\_1\_9Ga     855   }}
+\DoxyCodeLine{408 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_XY\_2\_5Ga     670   }}
+\DoxyCodeLine{409 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_XY\_4Ga       450   }}
+\DoxyCodeLine{410 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_XY\_4\_7Ga     400   }}
+\DoxyCodeLine{411 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_XY\_5\_6Ga     330   }}
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_XY\_8\_1Ga     230   }}
+\DoxyCodeLine{413 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_Z\_1\_3Ga      980   }}
+\DoxyCodeLine{414 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_Z\_1\_9Ga      760   }}
+\DoxyCodeLine{415 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_Z\_2\_5Ga      600   }}
+\DoxyCodeLine{416 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_Z\_4Ga        400   }}
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_Z\_4\_7Ga      355   }}
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_Z\_5\_6Ga      295   }}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#define LSM303DLHC\_M\_SENSITIVITY\_Z\_8\_1Ga      205   }}
+\DoxyCodeLine{427 \textcolor{preprocessor}{\#define LSM303DLHC\_CONTINUOS\_CONVERSION      ((uint8\_t) 0x00)   }}
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#define LSM303DLHC\_SINGLE\_CONVERSION         ((uint8\_t) 0x01)   }}
+\DoxyCodeLine{429 \textcolor{preprocessor}{\#define LSM303DLHC\_SLEEP                     ((uint8\_t) 0x02)   }}
+\DoxyCodeLine{437 \textcolor{preprocessor}{\#define LSM303DLHC\_TEMPSENSOR\_ENABLE         ((uint8\_t) 0x80)   }}
+\DoxyCodeLine{438 \textcolor{preprocessor}{\#define LSM303DLHC\_TEMPSENSOR\_DISABLE        ((uint8\_t) 0x00)   }}
+\DoxyCodeLine{446 \textcolor{comment}{/* ACC functions */}}
+\DoxyCodeLine{447 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gadb5d7b7ad8a49f81e8127a4a9e929d1b}{LSM303DLHC\_AccInit}}(uint16\_t InitStruct);}
+\DoxyCodeLine{448 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga9ba93fab3683286b6c5f2dcc3753fac4}{LSM303DLHC\_AccDeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{449 uint8\_t \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga2f52cf87dda0dc94110cec78ea86290b}{LSM303DLHC\_AccReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{450 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga0f0d2b0ecc181ff2b13a6702a4f5ce78}{LSM303DLHC\_AccRebootCmd}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{451 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gad0e47974f46c7349dbf14d97b31b73ae}{LSM303DLHC\_AccFilterConfig}}(uint8\_t FilterStruct);}
+\DoxyCodeLine{452 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gaf5b88b344967a356fc0331363958bb52}{LSM303DLHC\_AccFilterCmd}}(uint8\_t HighPassFilterState);}
+\DoxyCodeLine{453 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga92493f59ac96b55ab50b5bb1b8381f05}{LSM303DLHC\_AccReadXYZ}}(int16\_t* pData);}
+\DoxyCodeLine{454 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga205af9af3b60979cd15830294dece641}{LSM303DLHC\_AccFilterClickCmd}}(uint8\_t HighPassFilterClickState);}
+\DoxyCodeLine{455 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga3c1418e60efa20676474f3c5aef02dc2}{LSM303DLHC\_AccIT1Enable}}(uint8\_t LSM303DLHC\_IT);}
+\DoxyCodeLine{456 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga4f0364990e29afc218519f149cc0a172}{LSM303DLHC\_AccIT1Disable}}(uint8\_t LSM303DLHC\_IT);}
+\DoxyCodeLine{457 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gac295264a325f8dca177c78ec1b55f805}{LSM303DLHC\_AccIT2Enable}}(uint8\_t LSM303DLHC\_IT);}
+\DoxyCodeLine{458 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga05c851c88bdee43afdfeb2c7644300d7}{LSM303DLHC\_AccIT2Disable}}(uint8\_t LSM303DLHC\_IT);}
+\DoxyCodeLine{459 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_gaf87f4b26ef5c974f25716d5db700ad69}{LSM303DLHC\_AccINT1InterruptEnable}}(uint8\_t ITCombination, uint8\_t ITAxes);}
+\DoxyCodeLine{460 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga48d144c0c2acec85c5fe431d99abe53e}{LSM303DLHC\_AccINT1InterruptDisable}}(uint8\_t ITCombination, uint8\_t ITAxes);}
+\DoxyCodeLine{461 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga78a2ac98179587e0448dd73fc9679800}{LSM303DLHC\_AccINT2InterruptEnable}}(uint8\_t ITCombination, uint8\_t ITAxes);}
+\DoxyCodeLine{462 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga3e93711f84e156006105f7f2045628cc}{LSM303DLHC\_AccINT2InterruptDisable}}(uint8\_t ITCombination, uint8\_t ITAxes);}
+\DoxyCodeLine{463 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga04e2e850e426f774936a493344593916}{LSM303DLHC\_AccClickITEnable}}(uint8\_t ITClick);}
+\DoxyCodeLine{464 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga73c390b150fb1d11577f771113441db1}{LSM303DLHC\_AccClickITDisable}}(uint8\_t ITClick);}
+\DoxyCodeLine{465 \textcolor{keywordtype}{void}    \mbox{\hyperlink{group___l_s_m303_d_l_h_c___exported___functions_ga203cd77b3cc9ab2486f422381afa5a65}{LSM303DLHC\_AccZClickITConfig}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{467 \textcolor{comment}{/* COMPASS / ACCELERO IO functions */}}
+\DoxyCodeLine{468 \textcolor{keywordtype}{void}    COMPASSACCELERO\_IO\_Init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{469 \textcolor{keywordtype}{void}    COMPASSACCELERO\_IO\_ITConfig(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{470 \textcolor{keywordtype}{void}    COMPASSACCELERO\_IO\_Write(uint16\_t DeviceAddr, uint8\_t RegisterAddr, uint8\_t Value);}
+\DoxyCodeLine{471 uint8\_t COMPASSACCELERO\_IO\_Read(uint16\_t DeviceAddr, uint8\_t RegisterAddr);}
+\DoxyCodeLine{472 }
+\DoxyCodeLine{473 \textcolor{comment}{/* ACC driver structure */}}
+\DoxyCodeLine{474 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_a_c_c_e_l_e_r_o___drv_type_def}{ACCELERO\_DrvTypeDef}} Lsm303dlhcDrv;}
+\DoxyCodeLine{475 }
+\DoxyCodeLine{492 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{493 \}}
+\DoxyCodeLine{494 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{496 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_LSM303DLHC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{497 }
+\DoxyCodeLine{498 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/} }
+
+\end{DoxyCode}

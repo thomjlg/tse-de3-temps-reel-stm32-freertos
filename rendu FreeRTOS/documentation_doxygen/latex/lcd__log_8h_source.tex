@@ -1,0 +1,61 @@
+\hypertarget{lcd__log_8h_source}{}\doxysection{lcd\+\_\+log.\+h}
+\label{lcd__log_8h_source}\index{Utilities/Log/lcd\_log.h@{Utilities/Log/lcd\_log.h}}
+\mbox{\hyperlink{lcd__log_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef  \_\_LCD\_LOG\_H\_\_}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define  \_\_LCD\_LOG\_H\_\_}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include "{}lcd\_log\_conf.h"{}}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#if (LCD\_SCROLL\_ENABLED == 1)}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{ \#define     LCD\_CACHE\_DEPTH     (YWINDOW\_SIZE + CACHE\_SIZE)}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{ \#define     LCD\_CACHE\_DEPTH     YWINDOW\_SIZE}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{84 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct___l_c_d___l_o_g__line}{\_LCD\_LOG\_line}}}
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86   uint8\_t  line[128];}
+\DoxyCodeLine{87   uint32\_t color;}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \}\mbox{\hyperlink{struct___l_c_d___l_o_g__line}{LCD\_LOG\_line}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define  LCD\_ErrLog(...)    do \{ \(\backslash\)}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{                                 LCD\_LineColor = LCD\_COLOR\_RED;\(\backslash\)}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{                                 printf("{}ERROR: "{}}) ;\(\backslash\)}
+\DoxyCodeLine{101                                  printf(\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{102                                  LCD\_LineColor = LCD\_LOG\_DEFAULT\_COLOR;\(\backslash\)}
+\DoxyCodeLine{103                                \}while (0)}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define  LCD\_UsrLog(...)    do \{ \(\backslash\)}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{                                 LCD\_LineColor = LCD\_LOG\_TEXT\_COLOR;\(\backslash\)}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{                                 printf(\_\_VA\_ARGS\_\_);\(\backslash\)}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{                               \} while (0)}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define  LCD\_DbgLog(...)    do \{ \(\backslash\)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{                                 LCD\_LineColor = LCD\_COLOR\_CYAN;\(\backslash\)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{                                 printf(\_\_VA\_ARGS\_\_);\(\backslash\)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{                                 LCD\_LineColor = LCD\_LOG\_DEFAULT\_COLOR;\(\backslash\)}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{                               \}while (0)}}
+\DoxyCodeLine{123 \textcolor{keyword}{extern} uint32\_t LCD\_LineColor;}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{132 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga2da17045c681d794945b5acfe9fdd322}{LCD\_LOG\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{133 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_gaca8fd8b0c7b84bf9b368cb1c4be340f7}{LCD\_LOG\_DeInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{134 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga65b3e24669b7309e829cc6c31bc46352}{LCD\_LOG\_SetHeader}}(uint8\_t *Title);}
+\DoxyCodeLine{135 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga08fef0078385cfa1fb9e623ee479ec38}{LCD\_LOG\_SetFooter}}(uint8\_t *Status);}
+\DoxyCodeLine{136 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga1348f03c75f03c730eb0136b3e47fad1}{LCD\_LOG\_ClearTextZone}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{137 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga475900ffe4feaa5c1d1e36167454afbd}{LCD\_LOG\_UpdateDisplay}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#if (LCD\_SCROLL\_ENABLED == 1)}}
+\DoxyCodeLine{140  ErrorStatus LCD\_LOG\_ScrollBack(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{141  ErrorStatus LCD\_LOG\_ScrollForward(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_LCD\_LOG\_H\_\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{170 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

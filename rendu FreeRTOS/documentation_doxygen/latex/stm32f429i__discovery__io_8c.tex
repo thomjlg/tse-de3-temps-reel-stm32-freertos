@@ -1,0 +1,46 @@
+\hypertarget{stm32f429i__discovery__io_8c}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery\+\_\+io.c File Reference}
+\label{stm32f429i__discovery__io_8c}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_io.c@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_io.c}}
+
+
+This file provides a set of functions needed to manage the STMPE811 IO Expander device mounted on STM32\+F429\+I-\/\+Discovery Kit.  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+io.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gae4e304c8bb916593090032174df20eab}{BSP\+\_\+\+IO\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes and configures the IO functionalities and configures all necessary hardware resources (GPIOs, clocks..). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga18f9350f5b8881e14dd1468ecd0ee884}{BSP\+\_\+\+IO\+\_\+\+ITGet\+Status}} (uint16\+\_\+t Io\+Pin)
+\begin{DoxyCompactList}\small\item\em Gets the selected pins IT status. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+IO\+\_\+\+ITClear} (void)
+\begin{DoxyCompactList}\small\item\em Clears all the IO IT pending bits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gacb4773c9efcce643d6d7702101065355}{BSP\+\_\+\+IO\+\_\+\+Config\+Pin}} (uint16\+\_\+t Io\+Pin, IO\+\_\+\+Mode\+Typedef Io\+Mode)
+\begin{DoxyCompactList}\small\item\em Configures the IO pin(s) according to IO mode structure value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga8e0b2bdf134de3065fac7dfd22a48b59}{BSP\+\_\+\+IO\+\_\+\+Write\+Pin}} (uint16\+\_\+t Io\+Pin, uint8\+\_\+t Pin\+State)
+\begin{DoxyCompactList}\small\item\em Sets the selected pins state. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_gade7ee45f1b155cf537bd165f14eb7c2e}{BSP\+\_\+\+IO\+\_\+\+Read\+Pin}} (uint16\+\_\+t Io\+Pin)
+\begin{DoxyCompactList}\small\item\em Gets the selected pins current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___i_o___private___functions_ga6f07e2f71c698142eadcf5d3b538472a}{BSP\+\_\+\+IO\+\_\+\+Toggle\+Pin}} (uint16\+\_\+t Io\+Pin)
+\begin{DoxyCompactList}\small\item\em Toggles the selected pins state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage the STMPE811 IO Expander device mounted on STM32\+F429\+I-\/\+Discovery Kit. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

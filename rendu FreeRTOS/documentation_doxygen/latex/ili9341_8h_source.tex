@@ -1,0 +1,159 @@
+\hypertarget{ili9341_8h_source}{}\doxysection{ili9341.\+h}
+\label{ili9341_8h_source}\index{Drivers/BSP/Components/ili9341/ili9341.h@{Drivers/BSP/Components/ili9341/ili9341.h}}
+\mbox{\hyperlink{ili9341_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_ILI9341\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_ILI9341\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/lcd.h"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define ILI9341\_ID                  0x9341}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define  ILI9341\_LCD\_PIXEL\_WIDTH    ((uint16\_t)240)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define  ILI9341\_LCD\_PIXEL\_HEIGHT   ((uint16\_t)320)}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{87 \textcolor{comment}{/* Timing configuration  (Typical configuration from ILI9341 datasheet)}}
+\DoxyCodeLine{88 \textcolor{comment}{  HSYNC=10 (9+1)}}
+\DoxyCodeLine{89 \textcolor{comment}{  HBP=20 (29-\/10+1)}}
+\DoxyCodeLine{90 \textcolor{comment}{  ActiveW=240 (269-\/20-\/10+1)}}
+\DoxyCodeLine{91 \textcolor{comment}{  HFP=10 (279-\/240-\/20-\/10+1)}}
+\DoxyCodeLine{92 \textcolor{comment}{}}
+\DoxyCodeLine{93 \textcolor{comment}{  VSYNC=2 (1+1)}}
+\DoxyCodeLine{94 \textcolor{comment}{  VBP=2 (3-\/2+1)}}
+\DoxyCodeLine{95 \textcolor{comment}{  ActiveH=320 (323-\/2-\/2+1)}}
+\DoxyCodeLine{96 \textcolor{comment}{  VFP=4 (327-\/320-\/2-\/2+1)}}
+\DoxyCodeLine{97 \textcolor{comment}{*/}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define  ILI9341\_HSYNC            ((uint32\_t)9)   }\textcolor{comment}{/* Horizontal synchronization */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define  ILI9341\_HBP              ((uint32\_t)29)    }\textcolor{comment}{/* Horizontal back porch      */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define  ILI9341\_HFP              ((uint32\_t)2)    }\textcolor{comment}{/* Horizontal front porch     */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define  ILI9341\_VSYNC            ((uint32\_t)1)   }\textcolor{comment}{/* Vertical synchronization   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define  ILI9341\_VBP              ((uint32\_t)3)    }\textcolor{comment}{/* Vertical back porch        */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define  ILI9341\_VFP              ((uint32\_t)2)    }\textcolor{comment}{/* Vertical front porch       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{109 \textcolor{comment}{/* Level 1 Commands */}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define LCD\_SWRESET             0x01   }\textcolor{comment}{/* Software Reset */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define LCD\_READ\_DISPLAY\_ID     0x04   }\textcolor{comment}{/* Read display identification information */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define LCD\_RDDST               0x09   }\textcolor{comment}{/* Read Display Status */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define LCD\_RDDPM               0x0A   }\textcolor{comment}{/* Read Display Power Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define LCD\_RDDMADCTL           0x0B   }\textcolor{comment}{/* Read Display MADCTL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define LCD\_RDDCOLMOD           0x0C   }\textcolor{comment}{/* Read Display Pixel Format */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define LCD\_RDDIM               0x0D   }\textcolor{comment}{/* Read Display Image Format */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define LCD\_RDDSM               0x0E   }\textcolor{comment}{/* Read Display Signal Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define LCD\_RDDSDR              0x0F   }\textcolor{comment}{/* Read Display Self-\/Diagnostic Result */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define LCD\_SPLIN               0x10   }\textcolor{comment}{/* Enter Sleep Mode */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define LCD\_SLEEP\_OUT           0x11   }\textcolor{comment}{/* Sleep out register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define LCD\_PTLON               0x12   }\textcolor{comment}{/* Partial Mode ON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define LCD\_NORMAL\_MODE\_ON      0x13   }\textcolor{comment}{/* Normal Display Mode ON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define LCD\_DINVOFF             0x20   }\textcolor{comment}{/* Display Inversion OFF */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define LCD\_DINVON              0x21   }\textcolor{comment}{/* Display Inversion ON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define LCD\_GAMMA               0x26   }\textcolor{comment}{/* Gamma register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define LCD\_DISPLAY\_OFF         0x28   }\textcolor{comment}{/* Display off register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define LCD\_DISPLAY\_ON          0x29   }\textcolor{comment}{/* Display on register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define LCD\_COLUMN\_ADDR         0x2A   }\textcolor{comment}{/* Colomn address register */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define LCD\_PAGE\_ADDR           0x2B   }\textcolor{comment}{/* Page address register */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define LCD\_GRAM                0x2C   }\textcolor{comment}{/* GRAM register */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define LCD\_RGBSET              0x2D   }\textcolor{comment}{/* Color SET */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define LCD\_RAMRD               0x2E   }\textcolor{comment}{/* Memory Read */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define LCD\_PLTAR               0x30   }\textcolor{comment}{/* Partial Area */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define LCD\_VSCRDEF             0x33   }\textcolor{comment}{/* Vertical Scrolling Definition */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define LCD\_TEOFF               0x34   }\textcolor{comment}{/* Tearing Effect Line OFF */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define LCD\_TEON                0x35   }\textcolor{comment}{/* Tearing Effect Line ON */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define LCD\_MAC                 0x36   }\textcolor{comment}{/* Memory Access Control register*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define LCD\_VSCRSADD            0x37   }\textcolor{comment}{/* Vertical Scrolling Start Address */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define LCD\_IDMOFF              0x38   }\textcolor{comment}{/* Idle Mode OFF */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define LCD\_IDMON               0x39   }\textcolor{comment}{/* Idle Mode ON */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define LCD\_PIXEL\_FORMAT        0x3A   }\textcolor{comment}{/* Pixel Format register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define LCD\_WRITE\_MEM\_CONTINUE  0x3C   }\textcolor{comment}{/* Write Memory Continue */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define LCD\_READ\_MEM\_CONTINUE   0x3E   }\textcolor{comment}{/* Read Memory Continue */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define LCD\_SET\_TEAR\_SCANLINE   0x44   }\textcolor{comment}{/* Set Tear Scanline */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define LCD\_GET\_SCANLINE        0x45   }\textcolor{comment}{/* Get Scanline */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define LCD\_WDB                 0x51   }\textcolor{comment}{/* Write Brightness Display register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define LCD\_RDDISBV             0x52   }\textcolor{comment}{/* Read Display Brightness */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define LCD\_WCD                 0x53   }\textcolor{comment}{/* Write Control Display register*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define LCD\_RDCTRLD             0x54   }\textcolor{comment}{/* Read CTRL Display */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define LCD\_WRCABC              0x55   }\textcolor{comment}{/* Write Content Adaptive Brightness Control */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define LCD\_RDCABC              0x56   }\textcolor{comment}{/* Read Content Adaptive Brightness Control */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define LCD\_WRITE\_CABC          0x5E   }\textcolor{comment}{/* Write CABC Minimum Brightness */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define LCD\_READ\_CABC           0x5F   }\textcolor{comment}{/* Read CABC Minimum Brightness */}\textcolor{preprocessor}{   }}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define LCD\_READ\_ID1            0xDA   }\textcolor{comment}{/* Read ID1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define LCD\_READ\_ID2            0xDB   }\textcolor{comment}{/* Read ID2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define LCD\_READ\_ID3            0xDC   }\textcolor{comment}{/* Read ID3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 \textcolor{comment}{/* Level 2 Commands */}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define LCD\_RGB\_INTERFACE       0xB0   }\textcolor{comment}{/* RGB Interface Signal Control */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define LCD\_FRMCTR1             0xB1   }\textcolor{comment}{/* Frame Rate Control (In Normal Mode) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define LCD\_FRMCTR2             0xB2   }\textcolor{comment}{/* Frame Rate Control (In Idle Mode) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define LCD\_FRMCTR3             0xB3   }\textcolor{comment}{/* Frame Rate Control (In Partial Mode) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define LCD\_INVTR               0xB4   }\textcolor{comment}{/* Display Inversion Control */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define LCD\_BPC                 0xB5   }\textcolor{comment}{/* Blanking Porch Control register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define LCD\_DFC                 0xB6   }\textcolor{comment}{/* Display Function Control register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define LCD\_ETMOD               0xB7   }\textcolor{comment}{/* Entry Mode Set */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define LCD\_BACKLIGHT1          0xB8   }\textcolor{comment}{/* Backlight Control 1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define LCD\_BACKLIGHT2          0xB9   }\textcolor{comment}{/* Backlight Control 2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define LCD\_BACKLIGHT3          0xBA   }\textcolor{comment}{/* Backlight Control 3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define LCD\_BACKLIGHT4          0xBB   }\textcolor{comment}{/* Backlight Control 4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define LCD\_BACKLIGHT5          0xBC   }\textcolor{comment}{/* Backlight Control 5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define LCD\_BACKLIGHT7          0xBE   }\textcolor{comment}{/* Backlight Control 7 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define LCD\_BACKLIGHT8          0xBF   }\textcolor{comment}{/* Backlight Control 8 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define LCD\_POWER1              0xC0   }\textcolor{comment}{/* Power Control 1 register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define LCD\_POWER2              0xC1   }\textcolor{comment}{/* Power Control 2 register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define LCD\_VCOM1               0xC5   }\textcolor{comment}{/* VCOM Control 1 register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define LCD\_VCOM2               0xC7   }\textcolor{comment}{/* VCOM Control 2 register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define LCD\_NVMWR               0xD0   }\textcolor{comment}{/* NV Memory Write */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define LCD\_NVMPKEY             0xD1   }\textcolor{comment}{/* NV Memory Protection Key */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define LCD\_RDNVM               0xD2   }\textcolor{comment}{/* NV Memory Status Read */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define LCD\_READ\_ID4            0xD3   }\textcolor{comment}{/* Read ID4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define LCD\_PGAMMA              0xE0   }\textcolor{comment}{/* Positive Gamma Correction register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define LCD\_NGAMMA              0xE1   }\textcolor{comment}{/* Negative Gamma Correction register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define LCD\_DGAMCTRL1           0xE2   }\textcolor{comment}{/* Digital Gamma Control 1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define LCD\_DGAMCTRL2           0xE3   }\textcolor{comment}{/* Digital Gamma Control 2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define LCD\_INTERFACE           0xF6   }\textcolor{comment}{/* Interface control register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{comment}{/* Extend register commands */}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define LCD\_POWERA               0xCB   }\textcolor{comment}{/* Power control A register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define LCD\_POWERB               0xCF   }\textcolor{comment}{/* Power control B register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define LCD\_DTCA                 0xE8   }\textcolor{comment}{/* Driver timing control A */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define LCD\_DTCB                 0xEA   }\textcolor{comment}{/* Driver timing control B */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define LCD\_POWER\_SEQ            0xED   }\textcolor{comment}{/* Power on sequence register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define LCD\_3GAMMA\_EN            0xF2   }\textcolor{comment}{/* 3 Gamma enable register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define LCD\_PRC                  0xF7   }\textcolor{comment}{/* Pump ratio control register */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 \textcolor{comment}{/* Size of read registers */}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define LCD\_READ\_ID4\_SIZE        3      }\textcolor{comment}{/* Size of Read ID4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{207 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga9f53af6ab5b6427655c61ef71fa4a442}{ili9341\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{208 uint16\_t \mbox{\hyperlink{group___i_l_i9341___exported___functions_gaf22c926ba633bcfa144bd68d1cc438d0}{ili9341\_ReadID}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{209 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga7ca01b0c09af1a51ccbfb929e6ee1275}{ili9341\_WriteReg}}(uint8\_t LCD\_Reg);}
+\DoxyCodeLine{210 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga94c1249a02f21b0a1acd31e985b9cf50}{ili9341\_WriteData}}(uint16\_t RegValue);}
+\DoxyCodeLine{211 uint32\_t \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga8a2a8f4eb728128a111362c7e552634f}{ili9341\_ReadData}}(uint16\_t RegValue, uint8\_t ReadSize);}
+\DoxyCodeLine{212 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_gac3489560fb954b6e4bf5ac24ef99988d}{ili9341\_DisplayOn}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{213 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga3c09dd822d1d76312b6143b8adcb00fa}{ili9341\_DisplayOff}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{214 uint16\_t \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga9c56b9515b050d26659353ecb6cf2a14}{ili9341\_GetLcdPixelWidth}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{215 uint16\_t \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga67359a0ad0d4d272473ed43360306a28}{ili9341\_GetLcdPixelHeight}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217 \textcolor{comment}{/* LCD driver structure */}}
+\DoxyCodeLine{218 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\_DrvTypeDef}}   ili9341\_drv;}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 \textcolor{comment}{/* LCD IO functions */}}
+\DoxyCodeLine{221 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_gaccf0a45e037a886f9b1a849bedd63735}{LCD\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{222 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_gaae6ab499c7ca32f026708cbfb5153c97}{LCD\_IO\_WriteData}}(uint16\_t RegValue);}
+\DoxyCodeLine{223 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___i_l_i9341___exported___functions_ga435f47c3f7c327325ea17f71fae7cebc}{LCD\_IO\_WriteReg}}(uint8\_t Reg);}
+\DoxyCodeLine{224 uint32\_t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga10fd152b0ec2326173d80e922d8635fc}{LCD\_IO\_ReadData}}(uint16\_t RegValue, uint8\_t ReadSize);}
+\DoxyCodeLine{225 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga0b45e37ff42910b44d218393ed479e12}{LCD\_Delay}} (uint32\_t delay);}
+\DoxyCodeLine{226       }
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{228 \}}
+\DoxyCodeLine{229 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_ILI9341\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{249 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

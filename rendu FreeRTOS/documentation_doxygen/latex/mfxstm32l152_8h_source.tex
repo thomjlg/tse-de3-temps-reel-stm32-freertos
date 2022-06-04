@@ -1,0 +1,373 @@
+\hypertarget{mfxstm32l152_8h_source}{}\doxysection{mfxstm32l152.\+h}
+\label{mfxstm32l152_8h_source}\index{Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.h@{Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.h}}
+\mbox{\hyperlink{mfxstm32l152_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef \_\_MFXSTM32L152\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define \_\_MFXSTM32L152\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{44  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif   }}
+\DoxyCodeLine{46    }
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}../Common/ts.h"{}}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}../Common/io.h"{}}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include "{}../Common/idd.h"{}}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{64 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{69 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71   uint8\_t SYS\_CTRL;}
+\DoxyCodeLine{72   uint8\_t ERROR\_SRC;}
+\DoxyCodeLine{73   uint8\_t ERROR\_MSG;}
+\DoxyCodeLine{74   uint8\_t IRQ\_OUT;}
+\DoxyCodeLine{75   uint8\_t IRQ\_SRC\_EN;}
+\DoxyCodeLine{76   uint8\_t IRQ\_PENDING;}
+\DoxyCodeLine{77   uint8\_t IDD\_CTRL;}
+\DoxyCodeLine{78   uint8\_t IDD\_PRE\_DELAY;}
+\DoxyCodeLine{79   uint8\_t IDD\_SHUNT0\_MSB;}
+\DoxyCodeLine{80   uint8\_t IDD\_SHUNT0\_LSB;}
+\DoxyCodeLine{81   uint8\_t IDD\_SHUNT1\_MSB;}
+\DoxyCodeLine{82   uint8\_t IDD\_SHUNT1\_LSB;}
+\DoxyCodeLine{83   uint8\_t IDD\_SHUNT2\_MSB;}
+\DoxyCodeLine{84   uint8\_t IDD\_SHUNT2\_LSB;}
+\DoxyCodeLine{85   uint8\_t IDD\_SHUNT3\_MSB;}
+\DoxyCodeLine{86   uint8\_t IDD\_SHUNT3\_LSB;}
+\DoxyCodeLine{87   uint8\_t IDD\_SHUNT4\_MSB;}
+\DoxyCodeLine{88   uint8\_t IDD\_SHUNT4\_LSB;}
+\DoxyCodeLine{89   uint8\_t IDD\_GAIN\_MSB;}
+\DoxyCodeLine{90   uint8\_t IDD\_GAIN\_LSB;}
+\DoxyCodeLine{91   uint8\_t IDD\_VDD\_MIN\_MSB;}
+\DoxyCodeLine{92   uint8\_t IDD\_VDD\_MIN\_LSB;}
+\DoxyCodeLine{93   uint8\_t IDD\_VALUE\_MSB;}
+\DoxyCodeLine{94   uint8\_t IDD\_VALUE\_MID;}
+\DoxyCodeLine{95   uint8\_t IDD\_VALUE\_LSB;}
+\DoxyCodeLine{96   uint8\_t IDD\_CAL\_OFFSET\_MSB;}
+\DoxyCodeLine{97   uint8\_t IDD\_CAL\_OFFSET\_LSB;}
+\DoxyCodeLine{98   uint8\_t IDD\_SHUNT\_USED;}
+\DoxyCodeLine{99 \}\mbox{\hyperlink{struct_i_d_d__dbg_type_def}{IDD\_dbgTypeDef}};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{106   }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_ID                 ((uint8\_t)0x00)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_FW\_VERSION\_MSB     ((uint8\_t)0x01)}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_FW\_VERSION\_LSB     ((uint8\_t)0x00)}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_SYS\_CTRL           ((uint8\_t)0x40)}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_VDD\_REF\_MSB        ((uint8\_t)0x06)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_VDD\_REF\_LSB        ((uint8\_t)0x07)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_ERROR\_SRC          ((uint8\_t)0x03)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_ERROR\_MSG          ((uint8\_t)0x04)}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_MFX\_IRQ\_OUT        ((uint8\_t)0x41)}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_SRC\_EN         ((uint8\_t)0x42)}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_PENDING        ((uint8\_t)0x08)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_ACK            ((uint8\_t)0x44)}}
+\DoxyCodeLine{158    }
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define MFXSTM32L152\_ID\_1                    ((uint8\_t)0x7B)}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define MFXSTM32L152\_ID\_2                    ((uint8\_t)0x79)}}
+\DoxyCodeLine{164    }
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define MFXSTM32L152\_SWRST                    ((uint8\_t)0x80)}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define MFXSTM32L152\_STANDBY                  ((uint8\_t)0x40)}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define MFXSTM32L152\_ALTERNATE\_GPIO\_EN        ((uint8\_t)0x08) }\textcolor{comment}{/* by the way if IDD and TS are enabled they take automatically the AF pins*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_EN                   ((uint8\_t)0x04)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_EN                    ((uint8\_t)0x02)}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_EN                  ((uint8\_t)0x01)}}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_ERROR\_SRC             ((uint8\_t)0x04)  }\textcolor{comment}{/* Error raised by Idd */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_ERROR\_SRC              ((uint8\_t)0x02)  }\textcolor{comment}{/* Error raised by Touch Screen */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_ERROR\_SRC            ((uint8\_t)0x01)  }\textcolor{comment}{/* Error raised by Gpio */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define MFXSTM32L152\_OUT\_PIN\_TYPE\_OPENDRAIN   ((uint8\_t)0x00)}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define MFXSTM32L152\_OUT\_PIN\_TYPE\_PUSHPULL    ((uint8\_t)0x01)}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define MFXSTM32L152\_OUT\_PIN\_POLARITY\_LOW     ((uint8\_t)0x00)}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define MFXSTM32L152\_OUT\_PIN\_POLARITY\_HIGH    ((uint8\_t)0x02)}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_TS\_OVF               ((uint8\_t)0x80)  }\textcolor{comment}{/* TouchScreen FIFO Overflow irq*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_TS\_FULL              ((uint8\_t)0x40)  }\textcolor{comment}{/* TouchScreen FIFO Full irq*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_TS\_TH                ((uint8\_t)0x20)  }\textcolor{comment}{/* TouchScreen FIFO threshold triggered irq*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_TS\_NE                ((uint8\_t)0x10)  }\textcolor{comment}{/* TouchScreen FIFO Not Empty irq*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_TS\_DET               ((uint8\_t)0x08)  }\textcolor{comment}{/* TouchScreen Detect irq*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_ERROR                ((uint8\_t)0x04)  }\textcolor{comment}{/* Error message from MFXSTM32L152 firmware irq */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_IDD                  ((uint8\_t)0x02)  }\textcolor{comment}{/* IDD function irq */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_GPIO                 ((uint8\_t)0x01)  }\textcolor{comment}{/* General GPIO irq (only for SRC\_EN and PENDING) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_ALL                  ((uint8\_t)0xFF)  }\textcolor{comment}{/* All global interrupts          */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_TS                  (MFXSTM32L152\_IRQ\_TS\_DET | MFXSTM32L152\_IRQ\_TS\_NE |  MFXSTM32L152\_IRQ\_TS\_TH | MFXSTM32L152\_IRQ\_TS\_FULL | MFXSTM32L152\_IRQ\_TS\_OVF ) }}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204    }
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_DIR1          ((uint8\_t)0x60)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_DIR2          ((uint8\_t)0x61)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_DIR3          ((uint8\_t)0x62)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_TYPE1         ((uint8\_t)0x64)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_TYPE2         ((uint8\_t)0x65)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_TYPE3         ((uint8\_t)0x66)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_PUPD1         ((uint8\_t)0x68)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_PUPD2         ((uint8\_t)0x69)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_PUPD3         ((uint8\_t)0x6A)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPO\_SET1           ((uint8\_t)0x6C)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPO\_SET2           ((uint8\_t)0x6D)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPO\_SET3           ((uint8\_t)0x6E)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPO\_CLR1           ((uint8\_t)0x70)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPO\_CLR2           ((uint8\_t)0x71)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPO\_CLR3           ((uint8\_t)0x72)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_STATE1         ((uint8\_t)0x10)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_STATE2         ((uint8\_t)0x11)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_GPIO\_STATE3         ((uint8\_t)0x12)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{250 \textcolor{comment}{/* GPIOs can INDIVIDUALLY generate interruption to the Main MCU thanks to the MFXSTM32L152\_IRQ\_OUT signal */}}
+\DoxyCodeLine{251 \textcolor{comment}{/* the general MFXSTM32L152\_IRQ\_GPIO\_SRC\_EN shall be enabled too          */}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_SRC1       ((uint8\_t)0x48)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_SRC2       ((uint8\_t)0x49)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_SRC3       ((uint8\_t)0x4A)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_EVT1       ((uint8\_t)0x4C)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_EVT2       ((uint8\_t)0x4D)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_EVT3       ((uint8\_t)0x4E)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_TYPE1      ((uint8\_t)0x50)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_TYPE2      ((uint8\_t)0x51)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_TYPE3      ((uint8\_t)0x52)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_PENDING1   ((uint8\_t)0x0C)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_PENDING2   ((uint8\_t)0x0D)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_PENDING3   ((uint8\_t)0x0E)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_ACK1       ((uint8\_t)0x54)  }\textcolor{comment}{/* gpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_ACK2       ((uint8\_t)0x55)  }\textcolor{comment}{/* gpio [8:15] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IRQ\_GPI\_ACK3       ((uint8\_t)0x56)  }\textcolor{comment}{/* agpio [0:7] */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283    }
+\DoxyCodeLine{287 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_0                  ((uint32\_t)0x0001)}}
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_1                  ((uint32\_t)0x0002)}}
+\DoxyCodeLine{289 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_2                  ((uint32\_t)0x0004)}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_3                  ((uint32\_t)0x0008)}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_4                  ((uint32\_t)0x0010)}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_5                  ((uint32\_t)0x0020)}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_6                  ((uint32\_t)0x0040)}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_7                  ((uint32\_t)0x0080)}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_8                  ((uint32\_t)0x0100) }}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_9                  ((uint32\_t)0x0200) }}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_10                 ((uint32\_t)0x0400) }}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_11                 ((uint32\_t)0x0800)}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_12                 ((uint32\_t)0x1000) }}
+\DoxyCodeLine{301 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_13                 ((uint32\_t)0x2000) }}
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_14                 ((uint32\_t)0x4000) }}
+\DoxyCodeLine{303 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_15                 ((uint32\_t)0x8000) }}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_16               ((uint32\_t)0x010000)}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_17               ((uint32\_t)0x020000)}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_18               ((uint32\_t)0x040000)}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_19               ((uint32\_t)0x080000)}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_20               ((uint32\_t)0x100000)}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_21               ((uint32\_t)0x200000)}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_22               ((uint32\_t)0x400000)}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PIN\_23               ((uint32\_t)0x800000)}}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_0               MFXSTM32L152\_GPIO\_PIN\_16}}
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_1               MFXSTM32L152\_GPIO\_PIN\_17}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_2               MFXSTM32L152\_GPIO\_PIN\_18}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_3               MFXSTM32L152\_GPIO\_PIN\_19}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_4               MFXSTM32L152\_GPIO\_PIN\_20}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_5               MFXSTM32L152\_GPIO\_PIN\_21}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_6               MFXSTM32L152\_GPIO\_PIN\_22}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define MFXSTM32L152\_AGPIO\_PIN\_7               MFXSTM32L152\_GPIO\_PIN\_23}}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PINS\_ALL             ((uint32\_t)0xFFFFFF)}}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_DIR\_IN                ((uint8\_t)0x0)  }}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_DIR\_OUT               ((uint8\_t)0x1)  }}
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_GPI\_EVT\_LEVEL          ((uint8\_t)0x0)  }}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_GPI\_EVT\_EDGE           ((uint8\_t)0x1)  }}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_GPI\_TYPE\_LLFE          ((uint8\_t)0x0)  }\textcolor{comment}{/* Low Level Falling Edge */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define MFXSTM32L152\_IRQ\_GPI\_TYPE\_HLRE          ((uint8\_t)0x1)  }\textcolor{comment}{/*High Level Raising Edge */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPI\_WITHOUT\_PULL\_RESISTOR  ((uint8\_t)0x0)  }}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPI\_WITH\_PULL\_RESISTOR     ((uint8\_t)0x1)  }}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPO\_PUSH\_PULL              ((uint8\_t)0x0)  }}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPO\_OPEN\_DRAIN             ((uint8\_t)0x1)  }}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PULL\_DOWN             ((uint8\_t)0x0)  }}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#define MFXSTM32L152\_GPIO\_PULL\_UP               ((uint8\_t)0x1)   }}
+\DoxyCodeLine{340    }
+\DoxyCodeLine{341    }
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_SETTLING            ((uint8\_t)0xA0)}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_TOUCH\_DET\_DELAY     ((uint8\_t)0xA1)}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_AVE                 ((uint8\_t)0xA2)}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_TRACK               ((uint8\_t)0xA3)}}
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_FIFO\_TH             ((uint8\_t)0xA4)}}
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_FIFO\_STA            ((uint8\_t)0x20)}}
+\DoxyCodeLine{355 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_FIFO\_LEVEL          ((uint8\_t)0x21)}}
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_XY\_DATA             ((uint8\_t)0x24)}}
+\DoxyCodeLine{357 }
+\DoxyCodeLine{361 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_CTRL\_STATUS         ((uint8\_t)0x08)}}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#define MFXSTM32L152\_TS\_CLEAR\_FIFO          ((uint8\_t)0x80)}}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{364 }
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_CTRL           ((uint8\_t)0x80)}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{373 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_PRE\_DELAY      ((uint8\_t)0x81)}}
+\DoxyCodeLine{374 }
+\DoxyCodeLine{378 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT0\_MSB     ((uint8\_t)0x82)}}
+\DoxyCodeLine{379 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT0\_LSB     ((uint8\_t)0x83)}}
+\DoxyCodeLine{380 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT1\_MSB     ((uint8\_t)0x84)}}
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT1\_LSB     ((uint8\_t)0x85)}}
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT2\_MSB     ((uint8\_t)0x86)}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT2\_LSB     ((uint8\_t)0x87)}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT3\_MSB     ((uint8\_t)0x88)}}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT3\_LSB     ((uint8\_t)0x89)}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT4\_MSB     ((uint8\_t)0x8A)}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT4\_LSB     ((uint8\_t)0x8B)}}
+\DoxyCodeLine{388 }
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_GAIN\_MSB       ((uint8\_t)0x8C)}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_GAIN\_LSB       ((uint8\_t)0x8D)}}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{398 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_VDD\_MIN\_MSB    ((uint8\_t)0x8E)}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_VDD\_MIN\_LSB    ((uint8\_t)0x8F)}}
+\DoxyCodeLine{400 }
+\DoxyCodeLine{404 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_VALUE\_MSB      ((uint8\_t)0x14)}}
+\DoxyCodeLine{405 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_VALUE\_MID      ((uint8\_t)0x15)}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_VALUE\_LSB      ((uint8\_t)0x16)}}
+\DoxyCodeLine{407 }
+\DoxyCodeLine{411 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_CAL\_OFFSET\_MSB ((uint8\_t)0x18)}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_CAL\_OFFSET\_LSB ((uint8\_t)0x19)}}
+\DoxyCodeLine{413 }
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNT\_USED     ((uint8\_t)0x1A)}}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{422 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SH0\_STABILIZATION  ((uint8\_t)0x90)}}
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SH1\_STABILIZATION  ((uint8\_t)0x91)}}
+\DoxyCodeLine{424 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SH2\_STABILIZATION  ((uint8\_t)0x92)}}
+\DoxyCodeLine{425 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SH3\_STABILIZATION  ((uint8\_t)0x93)}}
+\DoxyCodeLine{426 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SH4\_STABILIZATION  ((uint8\_t)0x94)}}
+\DoxyCodeLine{427 }
+\DoxyCodeLine{431 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_NBR\_OF\_MEAS    ((uint8\_t)0x96)}}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_MEAS\_DELTA\_DELAY  ((uint8\_t)0x97)}}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{441 \textcolor{preprocessor}{\#define MFXSTM32L152\_REG\_ADR\_IDD\_SHUNTS\_ON\_BOARD  ((uint8\_t)0x98)}}
+\DoxyCodeLine{442 }
+\DoxyCodeLine{443  }
+\DoxyCodeLine{444 }
+\DoxyCodeLine{451 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_CTRL\_REQ                       ((uint8\_t)0x01)}}
+\DoxyCodeLine{452 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_CTRL\_SHUNT\_NB                  ((uint8\_t)0x0E)}}
+\DoxyCodeLine{453 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_CTRL\_VREF\_DIS                  ((uint8\_t)0x40)}}
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_CTRL\_CAL\_DIS                   ((uint8\_t)0x80)}}
+\DoxyCodeLine{455 }
+\DoxyCodeLine{459 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_SHUNT\_NB\_1                     ((uint8\_t) 0x01)}}
+\DoxyCodeLine{460 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_SHUNT\_NB\_2                     ((uint8\_t) 0x02)}}
+\DoxyCodeLine{461 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_SHUNT\_NB\_3                     ((uint8\_t) 0x03)}}
+\DoxyCodeLine{462 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_SHUNT\_NB\_4                     ((uint8\_t) 0x04)}}
+\DoxyCodeLine{463 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_SHUNT\_NB\_5                     ((uint8\_t) 0x05)}}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{468 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_VREF\_AUTO\_MEASUREMENT\_ENABLE   ((uint8\_t) 0x00)}}
+\DoxyCodeLine{469 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_VREF\_AUTO\_MEASUREMENT\_DISABLE  ((uint8\_t) 0x70)}}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_AUTO\_CALIBRATION\_ENABLE        ((uint8\_t) 0x00)}}
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_AUTO\_CALIBRATION\_DISABLE       ((uint8\_t) 0x80)}}
+\DoxyCodeLine{486 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_PREDELAY\_UNIT                  ((uint8\_t) 0x80)}}
+\DoxyCodeLine{487 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_PREDELAY\_VALUE                 ((uint8\_t) 0x7F)}}
+\DoxyCodeLine{488 }
+\DoxyCodeLine{489 }
+\DoxyCodeLine{493 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_PREDELAY\_0\_5\_MS                ((uint8\_t) 0x00)}}
+\DoxyCodeLine{494 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_PREDELAY\_20\_MS                 ((uint8\_t) 0x80)}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_DELTADELAY\_UNIT                ((uint8\_t) 0x80)}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_DELTADELAY\_VALUE               ((uint8\_t) 0x7F)}}
+\DoxyCodeLine{507 }
+\DoxyCodeLine{508 }
+\DoxyCodeLine{512 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_DELTADELAY\_0\_5\_MS              ((uint8\_t) 0x00)}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{\#define MFXSTM32L152\_IDD\_DELTADELAY\_20\_MS               ((uint8\_t) 0x80)}}
+\DoxyCodeLine{514 }
+\DoxyCodeLine{515 }
+\DoxyCodeLine{525 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{526    }
+\DoxyCodeLine{535 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{536   }
+\DoxyCodeLine{544 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga525fbfe19575da71fd6041447e0e88c2}{mfxstm32l152\_Init}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{545 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga8ec4549b6719a15bcfd3a1444d35bfc3}{mfxstm32l152\_DeInit}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{546 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga247f71e5f9bf1f72f1fa61da16fd8257}{mfxstm32l152\_Reset}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{547 uint16\_t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga5898eb7b6c9055f9b49d0ef229c7ae31}{mfxstm32l152\_ReadID}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{548 uint16\_t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga433ddd2452d8651e0864faf5812e015f}{mfxstm32l152\_ReadFwVersion}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{549 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gab75943cd3afccb7265937dbe539fbf6a}{mfxstm32l152\_LowPower}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{550 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaec837b686eb2cbe600b497a23f5a6044}{mfxstm32l152\_WakeUp}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{551 }
+\DoxyCodeLine{552 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga2c044cc76865cdde5ddd54692019cf69}{mfxstm32l152\_EnableITSource}}(uint16\_t DeviceAddr, uint8\_t Source);}
+\DoxyCodeLine{553 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga6166a6e8cf485bc44f601595a6c3cfe8}{mfxstm32l152\_DisableITSource}}(uint16\_t DeviceAddr, uint8\_t Source);}
+\DoxyCodeLine{554 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gae4cc7464b17a55c211bf8326ebae493e}{mfxstm32l152\_GlobalITStatus}}(uint16\_t DeviceAddr, uint8\_t Source);}
+\DoxyCodeLine{555 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gab4cea459b91b04fac04b1d24aa4896e2}{mfxstm32l152\_ClearGlobalIT}}(uint16\_t DeviceAddr, uint8\_t Source);}
+\DoxyCodeLine{556 }
+\DoxyCodeLine{557 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gae6add7ca850468cf2aacf7655bb3eee7}{mfxstm32l152\_SetIrqOutPinPolarity}}(uint16\_t DeviceAddr, uint8\_t Polarity);}
+\DoxyCodeLine{558 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gac82b572d0a78ac3f80915398cd45c594}{mfxstm32l152\_SetIrqOutPinType}}(uint16\_t DeviceAddr, uint8\_t Type);}
+\DoxyCodeLine{559 }
+\DoxyCodeLine{560 }
+\DoxyCodeLine{564 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga91f7be0b99f1ab6953284146d69d2d11}{mfxstm32l152\_IO\_Start}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{565 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga500bc17877baa128a8de08abc9638343}{mfxstm32l152\_IO\_Config}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, IO\_ModeTypedef IO\_Mode);}
+\DoxyCodeLine{566 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga6c5c6a5781be15e8c6e8161e89367111}{mfxstm32l152\_IO\_WritePin}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, uint8\_t PinState);}
+\DoxyCodeLine{567 uint32\_t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga155b7aff488b8e5cbea967987c691d8d}{mfxstm32l152\_IO\_ReadPin}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{568 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaffdc8f05d123db28f86a91985e426687}{mfxstm32l152\_IO\_EnableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{569 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga94b7f0383fbf2da34991e62bd9804422}{mfxstm32l152\_IO\_DisableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{570 uint32\_t \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga498c1ab9235ce7bd07e2674f57072bd6}{mfxstm32l152\_IO\_ITStatus}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{571 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga637fddd3454b48f27db0484f8831cfe2}{mfxstm32l152\_IO\_ClearIT}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{572 }
+\DoxyCodeLine{573 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gae4283dcc919e306ef39c6cea11eb55b2}{mfxstm32l152\_IO\_InitPin}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, uint8\_t Direction);}
+\DoxyCodeLine{574 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga18bb2a6789595ace1bbc45fb48b40f6f}{mfxstm32l152\_IO\_EnableAF}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{575 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga82c0a6c46aba013f5eabeeb29327cbe6}{mfxstm32l152\_IO\_DisableAF}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{576 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga8ba47456428aaf264ba8ed8134d7de7b}{mfxstm32l152\_IO\_SetIrqTypeMode}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, uint8\_t Type);}
+\DoxyCodeLine{577 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga95cf3e3c0a1722123610ef2a1c201b92}{mfxstm32l152\_IO\_SetIrqEvtMode}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin, uint8\_t Evt);}
+\DoxyCodeLine{578 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga268d9ea28decd06d2c33f74073812521}{mfxstm32l152\_IO\_EnablePinIT}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{579 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga4d47f023dc68021dc0cd77d2110f091f}{mfxstm32l152\_IO\_DisablePinIT}}(uint16\_t DeviceAddr, uint32\_t IO\_Pin);}
+\DoxyCodeLine{580 }
+\DoxyCodeLine{584 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga1f311d23036ffeb40b5f7d1889c73ab6}{mfxstm32l152\_TS\_Start}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{585 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga726c59f85e53f6737927055e135a03f7}{mfxstm32l152\_TS\_DetectTouch}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{586 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaba9c65eca11cceea87fb0c47578147bf}{mfxstm32l152\_TS\_GetXY}}(uint16\_t DeviceAddr, uint16\_t *X, uint16\_t *Y);}
+\DoxyCodeLine{587 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaba38e23391f8685b395aff1129e532de}{mfxstm32l152\_TS\_EnableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{588 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gaa78ac90676c880fdff3bbbd0ce7f3565}{mfxstm32l152\_TS\_DisableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{589 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gab71fdfbf6e3f308290a7a95468e84ddc}{mfxstm32l152\_TS\_ITStatus}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{590 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga40f7d6f7af32bac4699fba8acbbc9e6a}{mfxstm32l152\_TS\_ClearIT}} (uint16\_t DeviceAddr);}
+\DoxyCodeLine{591 }
+\DoxyCodeLine{595 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga00b09319e7428ee5389bcdaed8e06397}{mfxstm32l152\_IDD\_Start}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{596 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga5292153e66fcc3d2cb155e1ab5be765d}{mfxstm32l152\_IDD\_Config}}(uint16\_t DeviceAddr, \mbox{\hyperlink{struct_i_d_d___config_type_def}{IDD\_ConfigTypeDef}} MfxIddConfig);}
+\DoxyCodeLine{597 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gabb510fb13e21eba41d255e8600bfc1d6}{mfxstm32l152\_IDD\_ConfigShuntNbLimit}}(uint16\_t DeviceAddr, uint8\_t ShuntNbLimit);}
+\DoxyCodeLine{598 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga8c920b5f255b095c96896eb26c6e5039}{mfxstm32l152\_IDD\_GetValue}}(uint16\_t DeviceAddr, uint32\_t *ReadValue);}
+\DoxyCodeLine{599 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga68309036e6346514d97f2d662526c571}{mfxstm32l152\_IDD\_GetShuntUsed}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{600 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga65ca645a8d1a4180675560099ae51531}{mfxstm32l152\_IDD\_EnableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{601 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga852c4eaf9f8b8946e897fa414d258f39}{mfxstm32l152\_IDD\_ClearIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{602 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga409a5778007807ef66b40acac7d24db2}{mfxstm32l152\_IDD\_GetITStatus}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{603 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga7b2791d0ace86653c6319ac91fa26204}{mfxstm32l152\_IDD\_DisableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{604 }
+\DoxyCodeLine{608 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga68d8340ffc8efe2975379cb5651a52e0}{mfxstm32l152\_Error\_ReadSrc}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{609 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga7fe6bf98367e42f5423311857145b1b4}{mfxstm32l152\_Error\_ReadMsg}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{610 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga47d33708ef596df83031b58bb544b54e}{mfxstm32l152\_Error\_EnableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{611 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gabb9cfbd9b00d94e1c8c75e7384ff40ea}{mfxstm32l152\_Error\_ClearIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{612 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga9e95f3f4f8128306351dd3edaea04d21}{mfxstm32l152\_Error\_GetITStatus}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{613 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga1fbfab805e88c9892efc656590c02973}{mfxstm32l152\_Error\_DisableIT}}(uint16\_t DeviceAddr);}
+\DoxyCodeLine{614 }
+\DoxyCodeLine{615 uint8\_t  \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_gada1e05c6a4169a8bf6ca495e911524ed}{mfxstm32l152\_ReadReg}}(uint16\_t DeviceAddr, uint8\_t RegAddr);}
+\DoxyCodeLine{616 \textcolor{keywordtype}{void}     mfxstm32l152\_WriteReg(uint16\_t DeviceAddr, uint8\_t RegAddr, uint8\_t Value);}
+\DoxyCodeLine{617 }
+\DoxyCodeLine{618 }
+\DoxyCodeLine{619 }
+\DoxyCodeLine{623 \textcolor{keywordtype}{void}     \mbox{\hyperlink{group___m_f_x_s_t_m32_l152___exported___functions_ga5eaff903d77bd7350edf06a64c7373ac}{MFX\_IO\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{624 \textcolor{keywordtype}{void}     MFX\_IO\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{625 \textcolor{keywordtype}{void}     MFX\_IO\_ITConfig (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{626 \textcolor{keywordtype}{void}     MFX\_IO\_EnableWakeupPin(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{627 \textcolor{keywordtype}{void}     MFX\_IO\_Wakeup(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{628 \textcolor{keywordtype}{void}     MFX\_IO\_Delay(uint32\_t delay);}
+\DoxyCodeLine{629 \textcolor{keywordtype}{void}     MFX\_IO\_Write(uint16\_t addr, uint8\_t reg, uint8\_t value);}
+\DoxyCodeLine{630 uint8\_t  MFX\_IO\_Read(uint16\_t addr, uint8\_t reg);}
+\DoxyCodeLine{631 uint16\_t MFX\_IO\_ReadMultiple(uint16\_t addr, uint8\_t reg, uint8\_t *buffer, uint16\_t length);}
+\DoxyCodeLine{632 }
+\DoxyCodeLine{637 \textcolor{comment}{/* Touch screen driver structure */}}
+\DoxyCodeLine{638 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_t_s___drv_type_def}{TS\_DrvTypeDef}} mfxstm32l152\_ts\_drv;}
+\DoxyCodeLine{639 }
+\DoxyCodeLine{640 \textcolor{comment}{/* IO driver structure */}}
+\DoxyCodeLine{641 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_i_o___drv_type_def}{IO\_DrvTypeDef}} mfxstm32l152\_io\_drv;}
+\DoxyCodeLine{642 }
+\DoxyCodeLine{643 \textcolor{comment}{/* IDD driver structure */}}
+\DoxyCodeLine{644 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_i_d_d___drv_type_def}{IDD\_DrvTypeDef}} mfxstm32l152\_idd\_drv;}
+\DoxyCodeLine{645 }
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{648 \}}
+\DoxyCodeLine{649 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{650 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MFXSTM32L152\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{651 }
+\DoxyCodeLine{652 }
+\DoxyCodeLine{668 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

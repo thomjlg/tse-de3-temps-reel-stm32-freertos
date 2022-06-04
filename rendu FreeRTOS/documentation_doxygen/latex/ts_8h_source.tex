@@ -1,0 +1,38 @@
+\hypertarget{ts_8h_source}{}\doxysection{ts.\+h}
+\label{ts_8h_source}\index{Drivers/BSP/Components/Common/ts.h@{Drivers/BSP/Components/Common/ts.h}}
+\mbox{\hyperlink{ts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_TS\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_TS\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <stdint.h>} }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{69 \{  }
+\DoxyCodeLine{70   void       (*Init)(uint16\_t);}
+\DoxyCodeLine{71   uint16\_t   (*ReadID)(uint16\_t);}
+\DoxyCodeLine{72   void       (*Reset)(uint16\_t);}
+\DoxyCodeLine{73   void       (*Start)(uint16\_t);}
+\DoxyCodeLine{74   uint8\_t    (*DetectTouch)(uint16\_t);}
+\DoxyCodeLine{75   void       (*GetXY)(uint16\_t, uint16\_t*, uint16\_t*);}
+\DoxyCodeLine{76   void       (*EnableIT)(uint16\_t);}
+\DoxyCodeLine{77   void       (*ClearIT)(uint16\_t);}
+\DoxyCodeLine{78   uint8\_t    (*GetITStatus)(uint16\_t);}
+\DoxyCodeLine{79   void       (*DisableIT)(uint16\_t);}
+\DoxyCodeLine{80 \}\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\_DrvTypeDef}};}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{102 \}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_TS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

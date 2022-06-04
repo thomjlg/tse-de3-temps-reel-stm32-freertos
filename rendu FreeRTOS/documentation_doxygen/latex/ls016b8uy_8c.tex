@@ -1,0 +1,81 @@
+\hypertarget{ls016b8uy_8c}{}\doxysection{Drivers/\+BSP/\+Components/ls016b8uy/ls016b8uy.c File Reference}
+\label{ls016b8uy_8c}\index{Drivers/BSP/Components/ls016b8uy/ls016b8uy.c@{Drivers/BSP/Components/ls016b8uy/ls016b8uy.c}}
+
+
+This file includes the LCD driver for LS016\+B8\+UY LCD.  
+
+
+{\ttfamily \#include \char`\"{}ls016b8uy.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_s016_b8_u_y___rgb888}{LS016\+B8\+UY\+\_\+\+Rgb888}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gac4450be5042c64be807c7b12bf92a3f4}{ls016b8uy\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the LS016\+B8\+UY LCD Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga18646621604ca3a2b5f08a984bdc1bfc}{ls016b8uy\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga766056013f51350782e2540fe6108caf}{ls016b8uy\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gac8aa329640b773f9f66b155057bfab27}{ls016b8uy\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga36dc9de467a4245daed7e14319417f57}{ls016b8uy\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LCD pixel Height. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gadd42077cff1097a6c1539dda3d95eeb1}{ls016b8uy\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Get the LS016\+B8\+UY ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga2008896a3586252c8873666b5ea4a655}{ls016b8uy\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Set Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga12986596a5d5b466ced7ee668de668af}{ls016b8uy\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Write pixel. ~\newline
+ \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga5ffe75dce422a4ecb981505b599d5a77}{ls016b8uy\+\_\+\+Read\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Read pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gadc7e5ad7d59dc403980a2941d05bdaae}{ls016b8uy\+\_\+\+Write\+Reg}} (uint8\+\_\+t Command, uint8\+\_\+t $\ast$Parameters, uint8\+\_\+t Nb\+Parameters)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga06f10ba844e64c5edab2d2ea4a46ae98}{ls016b8uy\+\_\+\+Read\+Reg}} (uint8\+\_\+t Command)
+\begin{DoxyCompactList}\small\item\em Reads the selected LCD Register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga747a6665d219b3ed5675a88c83a39b02}{ls016b8uy\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga7df7ef6159e5652c1f3d80c326a94fdd}{ls016b8uy\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga07d5e69acf9c9ddcbe9de103fc2fceab}{ls016b8uy\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draw vertical line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_gad95e1aa51db08eca798f866b2e53d234}{ls016b8uy\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_s016_b8_u_y___private___functions_ga26144b942876be52d22cf85d9b513e36}{ls016b8uy\+\_\+\+Draw\+RGBImage}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Xsize, uint16\+\_\+t Ysize, uint8\+\_\+t $\ast$pdata)
+\begin{DoxyCompactList}\small\item\em Displays picture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___l_s016_b8_u_y___private___variables_gae554095a58a567b9a47419b261d80e03}{ls016b8uy\+\_\+drv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file includes the LCD driver for LS016\+B8\+UY LCD. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+22-\/April-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,238 @@
+\hypertarget{l3gd20_8h}{}\doxysection{Drivers/\+BSP/\+Components/l3gd20/l3gd20.h File Reference}
+\label{l3gd20_8h}\index{Drivers/BSP/Components/l3gd20/l3gd20.h@{Drivers/BSP/Components/l3gd20/l3gd20.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{l3gd20_8c}{l3gd20.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/gyro.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+WHO\+\_\+\+AM\+\_\+\+I\+\_\+\+ADDR}~0x0F  /$\ast$ device identification register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+CTRL\+\_\+\+REG1\+\_\+\+ADDR}~0x20  /$\ast$ Control register 1 $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+CTRL\+\_\+\+REG2\+\_\+\+ADDR}~0x21  /$\ast$ Control register 2 $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+CTRL\+\_\+\+REG3\+\_\+\+ADDR}~0x22  /$\ast$ Control register 3 $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+CTRL\+\_\+\+REG4\+\_\+\+ADDR}~0x23  /$\ast$ Control register 4 $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+CTRL\+\_\+\+REG5\+\_\+\+ADDR}~0x24  /$\ast$ Control register 5 $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+REFERENCE\+\_\+\+REG\+\_\+\+ADDR}~0x25  /$\ast$ Reference register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUT\+\_\+\+TEMP\+\_\+\+ADDR}~0x26  /$\ast$ Out temp register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+STATUS\+\_\+\+REG\+\_\+\+ADDR}~0x27  /$\ast$ Status register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+\+ADDR}~0x28  /$\ast$ Output Register X $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+\+ADDR}~0x29  /$\ast$ Output Register X $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+\+ADDR}~0x2A  /$\ast$ Output Register Y $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+\+ADDR}~0x2B  /$\ast$ Output Register Y $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+\+ADDR}~0x2C  /$\ast$ Output Register Z $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+\+ADDR}~0x2D  /$\ast$ Output Register Z $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+FIFO\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+ADDR}~0x2E  /$\ast$ Fifo control Register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+FIFO\+\_\+\+SRC\+\_\+\+REG\+\_\+\+ADDR}~0x2F  /$\ast$ Fifo src Register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+CFG\+\_\+\+ADDR}~0x30  /$\ast$ Interrupt 1 configuration Register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+SRC\+\_\+\+ADDR}~0x31  /$\ast$ Interrupt 1 source Register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+TSH\+\_\+\+XH\+\_\+\+ADDR}~0x32  /$\ast$ Interrupt 1 Threshold X register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+TSH\+\_\+\+XL\+\_\+\+ADDR}~0x33  /$\ast$ Interrupt 1 Threshold X register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+TSH\+\_\+\+YH\+\_\+\+ADDR}~0x34  /$\ast$ Interrupt 1 Threshold Y register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+TSH\+\_\+\+YL\+\_\+\+ADDR}~0x35  /$\ast$ Interrupt 1 Threshold Y register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+TSH\+\_\+\+ZH\+\_\+\+ADDR}~0x36  /$\ast$ Interrupt 1 Threshold Z register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+TSH\+\_\+\+ZL\+\_\+\+ADDR}~0x37  /$\ast$ Interrupt 1 Threshold Z register $\ast$/
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+\_\+\+DURATION\+\_\+\+ADDR}~0x38  /$\ast$ Interrupt 1 DURATION register $\ast$/
+\item 
+\#define {\bfseries I\+\_\+\+AM\+\_\+\+L3\+GD20}~((uint8\+\_\+t)0x\+D4)
+\item 
+\#define {\bfseries I\+\_\+\+AM\+\_\+\+L3\+GD20\+\_\+\+TR}~((uint8\+\_\+t)0x\+D5)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+MODE\+\_\+\+POWERDOWN}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+MODE\+\_\+\+ACTIVE}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUTPUT\+\_\+\+DATARATE\+\_\+1}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUTPUT\+\_\+\+DATARATE\+\_\+2}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUTPUT\+\_\+\+DATARATE\+\_\+3}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+OUTPUT\+\_\+\+DATARATE\+\_\+4}~((uint8\+\_\+t)0x\+C0)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+X\+\_\+\+ENABLE}~((uint8\+\_\+t)0x02)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+Y\+\_\+\+ENABLE}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+Z\+\_\+\+ENABLE}~((uint8\+\_\+t)0x04)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+AXES\+\_\+\+ENABLE}~((uint8\+\_\+t)0x07)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+AXES\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BANDWIDTH\+\_\+1}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BANDWIDTH\+\_\+2}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BANDWIDTH\+\_\+3}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BANDWIDTH\+\_\+4}~((uint8\+\_\+t)0x30)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+FULLSCALE\+\_\+250}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+FULLSCALE\+\_\+500}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+FULLSCALE\+\_\+2000}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+FULLSCALE\+\_\+\+SELECTION}~((uint8\+\_\+t)0x30)
+\item 
+\#define \mbox{\hyperlink{group___full___scale___sensitivity_gad04d650ef054c3ca8ae97fc2bc76ad6a}{L3\+GD20\+\_\+\+SENSITIVITY\+\_\+250\+DPS}}~((float)8.\+75f)
+\item 
+\#define \mbox{\hyperlink{group___full___scale___sensitivity_ga0cc98819071e64e24ae28167b68bd363}{L3\+GD20\+\_\+\+SENSITIVITY\+\_\+500\+DPS}}~((float)17.\+50f)
+\item 
+\#define \mbox{\hyperlink{group___full___scale___sensitivity_ga8193e6b584f5fc1a6def7c9d4b69dee7}{L3\+GD20\+\_\+\+SENSITIVITY\+\_\+2000\+DPS}}~((float)70.\+00f)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+Block\+Data\+Update\+\_\+\+Continous}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+Block\+Data\+Update\+\_\+\+Single}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BLE\+\_\+\+LSB}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BLE\+\_\+\+MSB}~((uint8\+\_\+t)0x40)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HIGHPASSFILTER\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HIGHPASSFILTER\+\_\+\+ENABLE}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT2}~((uint8\+\_\+t)0x01)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+INTERRUPT\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+INTERRUPT\+\_\+\+ENABLE}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT2\+INTERRUPT\+\_\+\+DISABLE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT2\+INTERRUPT\+\_\+\+ENABLE}~((uint8\+\_\+t)0x08)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+INTERRUPT\+\_\+\+LOW\+\_\+\+EDGE}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+INT1\+INTERRUPT\+\_\+\+HIGH\+\_\+\+EDGE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BOOT\+\_\+\+NORMALMODE}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+BOOT\+\_\+\+REBOOTMEMORY}~((uint8\+\_\+t)0x80)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPM\+\_\+\+NORMAL\+\_\+\+MODE\+\_\+\+RES}~((uint8\+\_\+t)0x00)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPM\+\_\+\+REF\+\_\+\+SIGNAL}~((uint8\+\_\+t)0x10)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPM\+\_\+\+NORMAL\+\_\+\+MODE}~((uint8\+\_\+t)0x20)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPM\+\_\+\+AUTORESET\+\_\+\+INT}~((uint8\+\_\+t)0x30)
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+0}~0x00
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+1}~0x01
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+2}~0x02
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+3}~0x03
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+4}~0x04
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+5}~0x05
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+6}~0x06
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+7}~0x07
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+8}~0x08
+\item 
+\#define {\bfseries L3\+GD20\+\_\+\+HPFCF\+\_\+9}~0x09
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga5a10b60a0792acf699a453c30d32d0ca}{L3\+GD20\+\_\+\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set L3\+GD20 Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_gacf1c9cc25f77fd1a7a07c6b77c938214}{L3\+GD20\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em L3\+GD20 De-\/initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_gabefeeace5d270cca5c601d15091b5917}{L3\+GD20\+\_\+\+Low\+Power}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set L3\+GD20 in low-\/power mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga43b1b3bd96148e3ac6ace37eb2771e09}{L3\+GD20\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read ID address of L3\+GD20. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_gab6f3c47bfc8bb79e1a8a888ea8400836}{L3\+GD20\+\_\+\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of L3\+GD20. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga533b417edb447229edf00c93e76771d5}{L3\+GD20\+\_\+\+INT1\+Interrupt\+Config}} (uint16\+\_\+t Int1\+Config)
+\begin{DoxyCompactList}\small\item\em Set L3\+GD20 Interrupt INT1 configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga73b25a609baa8830b6cee82bcff192fd}{L3\+GD20\+\_\+\+Enable\+IT}} (uint8\+\_\+t Int\+Sel)
+\begin{DoxyCompactList}\small\item\em Enable INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga485319a1048bae6cf207f4ee4a23df0f}{L3\+GD20\+\_\+\+Disable\+IT}} (uint8\+\_\+t Int\+Sel)
+\begin{DoxyCompactList}\small\item\em Disable INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga33868677ad167482d66db18cfc4bf412}{L3\+GD20\+\_\+\+Filter\+Config}} (uint8\+\_\+t Filter\+Struct)
+\begin{DoxyCompactList}\small\item\em Set High Pass Filter Modality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_ga9845f29a2574d93eeb258c8db14aba3d}{L3\+GD20\+\_\+\+Filter\+Cmd}} (uint8\+\_\+t High\+Pass\+Filter\+State)
+\begin{DoxyCompactList}\small\item\em Enable or Disable High Pass Filter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l3_g_d20___exported___functions_gadf5d9d3d6ac7848f144f8988da81a6e9}{L3\+GD20\+\_\+\+Read\+XYZAng\+Rate}} (float $\ast$pf\+Data)
+\begin{DoxyCompactList}\small\item\em Calculate the L3\+GD20 angular data. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l3_g_d20___exported___functions_gac434618a7381e68e5966f1309ffeba8d}{L3\+GD20\+\_\+\+Get\+Data\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Get status for L3\+GD20 data. \end{DoxyCompactList}\item 
+void {\bfseries GYRO\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the Gyroscope SPI interface. \end{DoxyCompactList}\item 
+void {\bfseries GYRO\+\_\+\+IO\+\_\+\+De\+Init} (void)
+\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_ga91f7211b833b9428166a7b4389fdba2e}{GYRO\+\_\+\+IO\+\_\+\+Write}} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Write\+Addr, uint16\+\_\+t Num\+Byte\+To\+Write)
+\begin{DoxyCompactList}\small\item\em Writes one byte to the Gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___l_o_w___l_e_v_e_l___private___functions_gae80f89593d6107eaf24fd82e38d75f85}{GYRO\+\_\+\+IO\+\_\+\+Read}} (uint8\+\_\+t $\ast$p\+Buffer, uint8\+\_\+t Read\+Addr, uint16\+\_\+t Num\+Byte\+To\+Read)
+\begin{DoxyCompactList}\small\item\em Reads a block of data from the Gyroscope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_g_y_r_o___drv_type_def}{GYRO\+\_\+\+Drv\+Type\+Def}} {\bfseries L3gd20\+Drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{l3gd20_8c}{l3gd20.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V2.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+26-\/June-\/2015
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2015 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

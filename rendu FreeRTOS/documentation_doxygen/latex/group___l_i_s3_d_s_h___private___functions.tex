@@ -1,0 +1,237 @@
+\hypertarget{group___l_i_s3_d_s_h___private___functions}{}\doxysection{LIS3\+DSH\+\_\+\+Private\+\_\+\+Functions}
+\label{group___l_i_s3_d_s_h___private___functions}\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga39a50faf3ec718fd4782fd951e6db26b}{LIS3\+DSH\+\_\+\+Init}} (uint16\+\_\+t Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS3\+DSH Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga9f6206ac458928caba2bf83120a71daf}{LIS3\+DSH\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em LIS3\+DSH De-\/\+Initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga47e1a458eddb3143569fe0e995f0513f}{LIS3\+DSH\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read LIS3\+DSH device ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaf1053e873f761ba33cdefd61ddba03eb}{LIS3\+DSH\+\_\+\+Interrupt\+Config}} (\mbox{\hyperlink{struct_l_i_s3_d_s_h___interrupt_config_type_def}{LIS3\+DSH\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$LIS3\+DSH\+\_\+\+Int\+Config\+Struct)
+\begin{DoxyCompactList}\small\item\em Set LIS3\+DSH Interrupt configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga0bf34901c622846b07db03299bb9a3a1}{LIS3\+DSH\+\_\+\+Click\+\_\+\+Int\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Set LIS3\+DSH for click detection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaee0eec1d1444f4da48efeec019481270}{LIS3\+DSH\+\_\+\+ODR\+\_\+\+Lowpower\+Cmd}} (uint8\+\_\+t ODR\+\_\+\+Low\+Power\+Mode)
+\begin{DoxyCompactList}\small\item\em Change the lowpower mode for LIS3\+DSH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaae93269b63a9b48c433998121680ac81}{LIS3\+DSH\+\_\+\+Data\+Rate\+Cmd}} (uint8\+\_\+t Data\+Rate\+Value)
+\begin{DoxyCompactList}\small\item\em Data Rate command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gadd43f8eeb1cf176968daea8b60f19224}{LIS3\+DSH\+\_\+\+Full\+Scale\+Cmd}} (uint8\+\_\+t FS\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Change the Full Scale of LIS3\+DSH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_gaf404d817cf34093ac2cb46dcffcab4ed}{LIS3\+DSH\+\_\+\+Reboot\+Cmd}} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of LIS3\+DSH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_i_s3_d_s_h___private___functions_ga8e33fb97929654753950b3799ed9b5f5}{LIS3\+DSH\+\_\+\+Read\+ACC}} (int16\+\_\+t $\ast$p\+Data)
+\begin{DoxyCompactList}\small\item\em Read LIS3\+DSH output register, and calculate the acceleration ACC\mbox{[}mg\mbox{]}=SENSITIVITY$\ast$ (out\+\_\+h$\ast$256+out\+\_\+l)/16 (12 bit representation). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_ga0bf34901c622846b07db03299bb9a3a1}\label{group___l_i_s3_d_s_h___private___functions_ga0bf34901c622846b07db03299bb9a3a1}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_Click\_IntConfig@{LIS3DSH\_Click\_IntConfig}}
+\index{LIS3DSH\_Click\_IntConfig@{LIS3DSH\_Click\_IntConfig}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_Click\_IntConfig()}{LIS3DSH\_Click\_IntConfig()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+Click\+\_\+\+Int\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set LIS3\+DSH for click detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_gaae93269b63a9b48c433998121680ac81}\label{group___l_i_s3_d_s_h___private___functions_gaae93269b63a9b48c433998121680ac81}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_DataRateCmd@{LIS3DSH\_DataRateCmd}}
+\index{LIS3DSH\_DataRateCmd@{LIS3DSH\_DataRateCmd}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_DataRateCmd()}{LIS3DSH\_DataRateCmd()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+Data\+Rate\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Data\+Rate\+Value }\end{DoxyParamCaption})}
+
+
+
+Data Rate command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data\+Rate\+Value} & Data rate value. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item LIS3\+DSH\+\_\+\+DATARATE\+\_\+3\+\_\+125\+: 3.\+125 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+6\+\_\+25\+: 6.\+25 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+12\+\_\+5\+: 12.\+5 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+25\+: 25 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+50\+: 50 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+100\+: 100 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+400\+: 400 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+800\+: 800 Hz output data rate \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+1600\+: 1600 Hz output data rate \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_ga9f6206ac458928caba2bf83120a71daf}\label{group___l_i_s3_d_s_h___private___functions_ga9f6206ac458928caba2bf83120a71daf}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_DeInit@{LIS3DSH\_DeInit}}
+\index{LIS3DSH\_DeInit@{LIS3DSH\_DeInit}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_DeInit()}{LIS3DSH\_DeInit()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+LIS3\+DSH De-\/\+Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_gadd43f8eeb1cf176968daea8b60f19224}\label{group___l_i_s3_d_s_h___private___functions_gadd43f8eeb1cf176968daea8b60f19224}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_FullScaleCmd@{LIS3DSH\_FullScaleCmd}}
+\index{LIS3DSH\_FullScaleCmd@{LIS3DSH\_FullScaleCmd}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_FullScaleCmd()}{LIS3DSH\_FullScaleCmd()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+Full\+Scale\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{FS\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Change the Full Scale of LIS3\+DSH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FS\+\_\+value} & new full scale value. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item LIS3\+DSH\+\_\+\+FULLSCALE\+\_\+2\+: +-\/2g \item LIS3\+DSH\+\_\+\+FULLSCALE\+\_\+4\+: +-\/4g \item LIS3\+DSH\+\_\+\+FULLSCALE\+\_\+6\+: +-\/6g \item LIS3\+DSH\+\_\+\+FULLSCALE\+\_\+8\+: +-\/8g \item LIS3\+DSH\+\_\+\+FULLSCALE\+\_\+16\+: +-\/16g \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_ga39a50faf3ec718fd4782fd951e6db26b}\label{group___l_i_s3_d_s_h___private___functions_ga39a50faf3ec718fd4782fd951e6db26b}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_Init@{LIS3DSH\_Init}}
+\index{LIS3DSH\_Init@{LIS3DSH\_Init}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_Init()}{LIS3DSH\_Init()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set LIS3\+DSH Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Init\+Struct} & contains mask of different init parameters \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_gaf1053e873f761ba33cdefd61ddba03eb}\label{group___l_i_s3_d_s_h___private___functions_gaf1053e873f761ba33cdefd61ddba03eb}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_InterruptConfig@{LIS3DSH\_InterruptConfig}}
+\index{LIS3DSH\_InterruptConfig@{LIS3DSH\_InterruptConfig}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_InterruptConfig()}{LIS3DSH\_InterruptConfig()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+Interrupt\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_i_s3_d_s_h___interrupt_config_type_def}{LIS3\+DSH\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$}]{LIS3\+DSH\+\_\+\+Int\+Config\+Struct }\end{DoxyParamCaption})}
+
+
+
+Set LIS3\+DSH Interrupt configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LIS3\+DSH\+\_\+\+Interrupt\+Config\+\_\+\+Type\+Def} & pointer to a LIS3\+DSH\+\_\+\+Interrupt\+Config\+\_\+\+Type\+Def structure that contains the configuration setting for the LIS3\+DSH Interrupt. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_gaee0eec1d1444f4da48efeec019481270}\label{group___l_i_s3_d_s_h___private___functions_gaee0eec1d1444f4da48efeec019481270}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_ODR\_LowpowerCmd@{LIS3DSH\_ODR\_LowpowerCmd}}
+\index{LIS3DSH\_ODR\_LowpowerCmd@{LIS3DSH\_ODR\_LowpowerCmd}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_ODR\_LowpowerCmd()}{LIS3DSH\_ODR\_LowpowerCmd()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+ODR\+\_\+\+Lowpower\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ODR\+\_\+\+Low\+Power\+Mode }\end{DoxyParamCaption})}
+
+
+
+Change the lowpower mode for LIS3\+DSH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Low\+Power\+Mode} & new state for the lowpower mode. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item LIS3\+DSH\+\_\+\+DATARATE\+\_\+\+POWERDOWN\+: Power down mode \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+3\+\_\+125\+: Normal mode. ODR\+: 3.\+125 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+6\+\_\+25\+: Normal mode. ODR\+: 6.\+25 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+12\+\_\+5\+: Normal mode. ODR\+: 12.\+5 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+25\+: Normal mode. ODR\+: 25 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+50\+: Normal mode. ODR\+: 50 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+100\+: Normal mode. ODR\+: 100 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+400\+: Normal mode. ODR\+: 400 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+800\+: Normal mode. ODR\+: 800 Hz \item LIS3\+DSH\+\_\+\+DATARATE\+\_\+1600\+: Normal mode. ODR\+: 1600 Hz \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_ga8e33fb97929654753950b3799ed9b5f5}\label{group___l_i_s3_d_s_h___private___functions_ga8e33fb97929654753950b3799ed9b5f5}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_ReadACC@{LIS3DSH\_ReadACC}}
+\index{LIS3DSH\_ReadACC@{LIS3DSH\_ReadACC}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_ReadACC()}{LIS3DSH\_ReadACC()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+Read\+ACC (\begin{DoxyParamCaption}\item[{int16\+\_\+t $\ast$}]{p\+Data }\end{DoxyParamCaption})}
+
+
+
+Read LIS3\+DSH output register, and calculate the acceleration ACC\mbox{[}mg\mbox{]}=SENSITIVITY$\ast$ (out\+\_\+h$\ast$256+out\+\_\+l)/16 (12 bit representation). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & on floating buffer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_ga47e1a458eddb3143569fe0e995f0513f}\label{group___l_i_s3_d_s_h___private___functions_ga47e1a458eddb3143569fe0e995f0513f}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_ReadID@{LIS3DSH\_ReadID}}
+\index{LIS3DSH\_ReadID@{LIS3DSH\_ReadID}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_ReadID()}{LIS3DSH\_ReadID()}}
+{\footnotesize\ttfamily uint8\+\_\+t LIS3\+DSH\+\_\+\+Read\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read LIS3\+DSH device ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & Device ID (two bytes). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___l_i_s3_d_s_h___private___functions_gaf404d817cf34093ac2cb46dcffcab4ed}\label{group___l_i_s3_d_s_h___private___functions_gaf404d817cf34093ac2cb46dcffcab4ed}} 
+\index{LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}!LIS3DSH\_RebootCmd@{LIS3DSH\_RebootCmd}}
+\index{LIS3DSH\_RebootCmd@{LIS3DSH\_RebootCmd}!LIS3DSH\_Private\_Functions@{LIS3DSH\_Private\_Functions}}
+\doxysubsubsection{\texorpdfstring{LIS3DSH\_RebootCmd()}{LIS3DSH\_RebootCmd()}}
+{\footnotesize\ttfamily void LIS3\+DSH\+\_\+\+Reboot\+Cmd (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reboot memory content of LIS3\+DSH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

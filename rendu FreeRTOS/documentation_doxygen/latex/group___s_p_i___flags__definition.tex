@@ -1,0 +1,46 @@
+\hypertarget{group___s_p_i___flags__definition}{}\doxysection{SPI Flags Definition}
+\label{group___s_p_i___flags__definition}\index{SPI Flags Definition@{SPI Flags Definition}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_p_i___flags__definition_ga7bd627ae57160a2f0aad1736194b5999}\label{group___s_p_i___flags__definition_ga7bd627ae57160a2f0aad1736194b5999}} 
+\#define {\bfseries SPI\+\_\+\+FLAG\+\_\+\+RXNE}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga40e14de547aa06864abcd4b0422d8b48}{SPI\+\_\+\+SR\+\_\+\+RXNE}}   /$\ast$ SPI status flag\+: Rx buffer not empty flag       $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_p_i___flags__definition_gaf84a1e6af2739a6be58e1b23d9e6b914}\label{group___s_p_i___flags__definition_gaf84a1e6af2739a6be58e1b23d9e6b914}} 
+\#define {\bfseries SPI\+\_\+\+FLAG\+\_\+\+TXE}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5bd5d21816947fcb25ccae7d3bf8eb2c}{SPI\+\_\+\+SR\+\_\+\+TXE}}    /$\ast$ SPI status flag\+: Tx buffer empty flag           $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_p_i___flags__definition_gaf19c77ee876a3598d616ac07d136fc46}\label{group___s_p_i___flags__definition_gaf19c77ee876a3598d616ac07d136fc46}} 
+\#define {\bfseries SPI\+\_\+\+FLAG\+\_\+\+BSY}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa3498df67729ae048dc5f315ef7c16bf}{SPI\+\_\+\+SR\+\_\+\+BSY}}    /$\ast$ SPI status flag\+: Busy flag                      $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_p_i___flags__definition_ga30fb6af50e1f3c61cb9de76b0101c889}\label{group___s_p_i___flags__definition_ga30fb6af50e1f3c61cb9de76b0101c889}} 
+\#define {\bfseries SPI\+\_\+\+FLAG\+\_\+\+CRCERR}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga69e543fa9584fd636032a3ee735f750b}{SPI\+\_\+\+SR\+\_\+\+CRCERR}} /$\ast$ SPI Error flag\+: CRC error flag                  $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_p_i___flags__definition_gac7d3525ab98cc18f02270a4dba685897}\label{group___s_p_i___flags__definition_gac7d3525ab98cc18f02270a4dba685897}} 
+\#define {\bfseries SPI\+\_\+\+FLAG\+\_\+\+MODF}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gabaa043349833dc7b8138969c64f63adf}{SPI\+\_\+\+SR\+\_\+\+MODF}}   /$\ast$ SPI Error flag\+: Mode fault flag                 $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_p_i___flags__definition_gab45264da2296c75495a7437a045513ea}\label{group___s_p_i___flags__definition_gab45264da2296c75495a7437a045513ea}} 
+\#define {\bfseries SPI\+\_\+\+FLAG\+\_\+\+OVR}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa8d902302c5eb81ce4a57029de281232}{SPI\+\_\+\+SR\+\_\+\+OVR}}    /$\ast$ SPI Error flag\+: Overrun flag                    $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_p_i___flags__definition_ga27dd114d8adc70f1439c054289f9313a}\label{group___s_p_i___flags__definition_ga27dd114d8adc70f1439c054289f9313a}} 
+\#define {\bfseries SPI\+\_\+\+FLAG\+\_\+\+FRE}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gace2c7cac9431231663af42e6f5aabce6}{SPI\+\_\+\+SR\+\_\+\+FRE}}    /$\ast$ SPI Error flag\+: TI mode frame format error flag $\ast$/
+\item 
+\#define \mbox{\hyperlink{group___s_p_i___flags__definition_ga1b2ed6861d967c5bc45a7e7c9101d33c}{SPI\+\_\+\+FLAG\+\_\+\+MASK}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_p_i___flags__definition_ga1b2ed6861d967c5bc45a7e7c9101d33c}\label{group___s_p_i___flags__definition_ga1b2ed6861d967c5bc45a7e7c9101d33c}} 
+\index{SPI Flags Definition@{SPI Flags Definition}!SPI\_FLAG\_MASK@{SPI\_FLAG\_MASK}}
+\index{SPI\_FLAG\_MASK@{SPI\_FLAG\_MASK}!SPI Flags Definition@{SPI Flags Definition}}
+\doxysubsubsection{\texorpdfstring{SPI\_FLAG\_MASK}{SPI\_FLAG\_MASK}}
+{\footnotesize\ttfamily \#define SPI\+\_\+\+FLAG\+\_\+\+MASK}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga40e14de547aa06864abcd4b0422d8b48}{SPI\_SR\_RXNE}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5bd5d21816947fcb25ccae7d3bf8eb2c}{SPI\_SR\_TXE}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa3498df67729ae048dc5f315ef7c16bf}{SPI\_SR\_BSY}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga69e543fa9584fd636032a3ee735f750b}{SPI\_SR\_CRCERR}}\(\backslash\)}
+\DoxyCodeLine{                                         | \mbox{\hyperlink{group___peripheral___registers___bits___definition_gabaa043349833dc7b8138969c64f63adf}{SPI\_SR\_MODF}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa8d902302c5eb81ce4a57029de281232}{SPI\_SR\_OVR}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace2c7cac9431231663af42e6f5aabce6}{SPI\_SR\_FRE}})}
+
+\end{DoxyCode}

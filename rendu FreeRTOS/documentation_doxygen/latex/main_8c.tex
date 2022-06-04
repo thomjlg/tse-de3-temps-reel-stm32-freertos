@@ -1,0 +1,188 @@
+\hypertarget{main_8c}{}\doxysection{Core/\+Src/main.c File Reference}
+\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmsis\+\_\+os.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dma2d.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ltdc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fmc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}taskdef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}my\+Lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_ad447997edfc2e718718b56f986c94a88}\label{main_8c_ad447997edfc2e718718b56f986c94a88}} 
+\#define {\bfseries LCD\+\_\+\+B\+\_\+\+TELECOM}~0x\+FF065784
+\item 
+\mbox{\Hypertarget{main_8c_a4af9cb02b992550e356caa14264970a6}\label{main_8c_a4af9cb02b992550e356caa14264970a6}} 
+\#define {\bfseries LCD\+\_\+\+G\+\_\+\+TELECOM}~0x\+FF81\+B835
+\item 
+\mbox{\Hypertarget{main_8c_ac401a1d028b323298cb718023142bbe5}\label{main_8c_ac401a1d028b323298cb718023142bbe5}} 
+\#define {\bfseries LCD\+\_\+\+R\+\_\+\+TELECOM}~0x\+FF813\+C2F
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_abade755e13d07c10889ae83143656158}{MX\+\_\+\+FREERTOS\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a59e0579e7122a292acd5881d09382b7e}\label{main_8c_a59e0579e7122a292acd5881d09382b7e}} 
+void {\bfseries RTOS\+\_\+\+App\+Configure\+Timer\+For\+Runtime\+Stats} (void)
+\item 
+\mbox{\Hypertarget{main_8c_aa43f8146f3770310c4109c92941559b3}\label{main_8c_aa43f8146f3770310c4109c92941559b3}} 
+uint32\+\_\+t {\bfseries RTOS\+\_\+\+App\+Get\+Runtime\+Counter\+Value\+From\+ISR} (void)
+\item 
+\mbox{\Hypertarget{main_8c_abc513dd972081ae765b6949a62872eb7}\label{main_8c_abc513dd972081ae765b6949a62872eb7}} 
+int {\bfseries \+\_\+\+\_\+io\+\_\+putchar} (int ch)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} $\ast$htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a5f2bcabfdb9764f80bffe853e7d4d0fb}\label{main_8c_a5f2bcabfdb9764f80bffe853e7d4d0fb}} 
+char {\bfseries I2\+C\+\_\+add} \mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a3dc446f7c434fc73b84e73ec3e7cf412}\label{main_8c_a3dc446f7c434fc73b84e73ec3e7cf412}} 
+uint8\+\_\+t {\bfseries I2\+CBuf} \mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a364884a9a19dacff392c837bbbc71535}\label{main_8c_a364884a9a19dacff392c837bbbc71535}} 
+double {\bfseries acc} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a0e5db80bc090e28f88d9f604bd73c59d}\label{main_8c_a0e5db80bc090e28f88d9f604bd73c59d}} 
+double {\bfseries normA} =0
+\item 
+\mbox{\Hypertarget{main_8c_a745f67fdc801b70648bb0e34ad831cb8}\label{main_8c_a745f67fdc801b70648bb0e34ad831cb8}} 
+double {\bfseries gyro} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_aa26c7059e2682bda019342aa49f1fced}\label{main_8c_aa26c7059e2682bda019342aa49f1fced}} 
+double {\bfseries biasg} \mbox{[}3\mbox{]} =\{0,0,0\}
+\item 
+\mbox{\Hypertarget{main_8c_ae64b09788e52ad7e29a073e742d6382a}\label{main_8c_ae64b09788e52ad7e29a073e742d6382a}} 
+double {\bfseries mag} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a446212d978f0d2c02e77bbdff710e6a5}\label{main_8c_a446212d978f0d2c02e77bbdff710e6a5}} 
+double {\bfseries bias} \mbox{[}3\mbox{]} =\{0,0,0\}
+\item 
+\mbox{\Hypertarget{main_8c_a42dee663288fdf95a0b6915fb7c9a822}\label{main_8c_a42dee663288fdf95a0b6915fb7c9a822}} 
+double {\bfseries scale} \mbox{[}3\mbox{]} =\{1,1,1\}
+\item 
+\mbox{\Hypertarget{main_8c_a5bdf678094a4ecaad63e4d4e248361c0}\label{main_8c_a5bdf678094a4ecaad63e4d4e248361c0}} 
+double {\bfseries normM} =0
+\item 
+\mbox{\Hypertarget{main_8c_ac94a6e5794c2d7b59588b14025cfba20}\label{main_8c_ac94a6e5794c2d7b59588b14025cfba20}} 
+double {\bfseries T}
+\item 
+\mbox{\Hypertarget{main_8c_ab87472a43e8f3beda6a2967d7bfb3b44}\label{main_8c_ab87472a43e8f3beda6a2967d7bfb3b44}} 
+int32\+\_\+t {\bfseries Tfine}
+\item 
+\mbox{\Hypertarget{main_8c_a8019aa9167c19c810aefa4cd5c0b0ab5}\label{main_8c_a8019aa9167c19c810aefa4cd5c0b0ab5}} 
+double {\bfseries P}
+\item 
+\mbox{\Hypertarget{main_8c_a23ba2e6ca2a29a378ff41256eb46da1c}\label{main_8c_a23ba2e6ca2a29a378ff41256eb46da1c}} 
+uint32\+\_\+t {\bfseries RTOS\+\_\+\+Run\+Time\+Counter}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under Ultimate Liberty license SLA0044, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: www.\+st.\+com/\+SLA0044 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_abade755e13d07c10889ae83143656158}\label{main_8c_abade755e13d07c10889ae83143656158}} 
+\index{main.c@{main.c}!MX\_FREERTOS\_Init@{MX\_FREERTOS\_Init}}
+\index{MX\_FREERTOS\_Init@{MX\_FREERTOS\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_FREERTOS\_Init()}{MX\_FREERTOS\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+FREERTOS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the \mbox{\hyperlink{struct_r_c_c___osc_init_type_def}{RCC\+\_\+\+Osc\+Init\+Type\+Def}} structure.
+
+Activate the Over-\/\+Drive mode
+
+Initializes the CPU, AHB and APB buses clocks

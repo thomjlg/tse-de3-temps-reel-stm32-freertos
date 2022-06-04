@@ -1,0 +1,232 @@
+\hypertarget{st7735_8h}{}\doxysection{Drivers/\+BSP/\+Components/st7735/st7735.h File Reference}
+\label{st7735_8h}\index{Drivers/BSP/Components/st7735/st7735.h@{Drivers/BSP/Components/st7735/st7735.h}}
+
+
+This file contains all the functions prototypes for the \mbox{\hyperlink{st7735_8c}{st7735.\+c}} driver.  
+
+
+{\ttfamily \#include \char`\"{}../\+Common/lcd.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries ST7735\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+WIDTH}~((uint16\+\_\+t)128)
+\begin{DoxyCompactList}\small\item\em ST7735 Size ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries ST7735\+\_\+\+LCD\+\_\+\+PIXEL\+\_\+\+HEIGHT}~((uint16\+\_\+t)160)
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+0}~0x00 /$\ast$ No Operation\+: NOP $\ast$/
+\begin{DoxyCompactList}\small\item\em ST7735 Registers ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+1}~0x01 /$\ast$ Software reset\+: SWRESET $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+4}~0x04 /$\ast$ Read Display ID\+: RDDID $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+9}~0x09 /$\ast$ Read Display Statu\+: RDDST $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+10}~0x0A /$\ast$ Read Display Power\+: RDDPM $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+11}~0x0B /$\ast$ Read Display\+: RDDMADCTL $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+12}~0x0C /$\ast$ Read Display Pixel\+: RDDCOLMOD $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+13}~0x0D /$\ast$ Read Display Image\+: RDDIM $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+14}~0x0E /$\ast$ Read Display Signal\+: RDDSM $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+16}~0x10 /$\ast$ Sleep in \& booster off\+: SLPIN $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+17}~0x11 /$\ast$ Sleep out \& booster on\+: SLPOUT $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+18}~0x12 /$\ast$ Partial mode on\+: PTLON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+19}~0x13 /$\ast$ Partial off (Normal)\+: NORON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+32}~0x20 /$\ast$ Display inversion off\+: INVOFF $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+33}~0x21 /$\ast$ Display inversion on\+: INVON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+38}~0x26 /$\ast$ Gamma curve select\+: GAMSET $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+40}~0x28 /$\ast$ Display off\+: DISPOFF $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+41}~0x29 /$\ast$ Display on\+: DISPON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+42}~0x2A /$\ast$ Column address set\+: CASET $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+43}~0x2B /$\ast$ Row address set\+: RASET $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+44}~0x2C /$\ast$ Memory write\+: RAMWR $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+45}~0x2D /$\ast$ LUT for 4k,65k,262k color\+: RGBSET $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+46}~0x2E /$\ast$ Memory read\+: RAMRD$\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+48}~0x30 /$\ast$ Partial start/end address set\+: PTLAR $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+52}~0x34 /$\ast$ Tearing effect line off\+: TEOFF $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+53}~0x35 /$\ast$ Tearing effect mode set \& on\+: TEON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+54}~0x36 /$\ast$ Memory data access control\+: MADCTL $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+56}~0x38 /$\ast$ Idle mode off\+: IDMOFF $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+57}~0x39 /$\ast$ Idle mode on\+: IDMON $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+58}~0x3A /$\ast$ Interface pixel format\+: COLMOD $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+177}~0x\+B1 /$\ast$ In normal mode (Full colors)\+: FRMCTR1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+178}~0x\+B2 /$\ast$ In Idle mode (8-\/colors)\+: FRMCTR2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+179}~0x\+B3 /$\ast$ In partial mode + Full colors\+: FRMCTR3 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+180}~0x\+B4 /$\ast$ Display inversion control\+: INVCTR $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+192}~0x\+C0 /$\ast$ Power control setting\+: PWCTR1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+193}~0x\+C1 /$\ast$ Power control setting\+: PWCTR2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+194}~0x\+C2 /$\ast$ In normal mode (Full colors)\+: PWCTR3 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+195}~0x\+C3 /$\ast$ In Idle mode (8-\/colors)\+: PWCTR4 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+196}~0x\+C4 /$\ast$ In partial mode + Full colors\+: PWCTR5 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+197}~0x\+C5 /$\ast$ VCOM control 1\+: VMCTR1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+199}~0x\+C7 /$\ast$ Set VCOM offset control\+: VMOFCTR $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+209}~0x\+D1 /$\ast$ Set LCM version code\+: WRID2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+210}~0x\+D2 /$\ast$ Customer Project code\+: WRID3 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+217}~0x\+D9 /$\ast$ NVM control status\+: NVCTR1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+218}~0x\+DA /$\ast$ Read ID1\+: RDID1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+219}~0x\+DB /$\ast$ Read ID2\+: RDID2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+220}~0x\+DC /$\ast$ Read ID3\+: RDID3 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+222}~0x\+DE /$\ast$ NVM Read Command\+: NVCTR2 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+223}~0x\+DF /$\ast$ NVM Write Command\+: NVCTR3 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+224}~0x\+E0 /$\ast$ Set Gamma adjustment (+ polarity)\+: GAMCTRP1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+REG\+\_\+225}~0x\+E1 /$\ast$ Set Gamma adjustment (-\/ polarity)\+: GAMCTRN1 $\ast$/
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+0}~LINE(0)
+\begin{DoxyCompactList}\small\item\em LCD Lines depending on the chosen fonts. ~\newline
+ \end{DoxyCompactList}\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+1}~LINE(1)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+2}~LINE(2)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+3}~LINE(3)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+4}~LINE(4)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+5}~LINE(5)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+6}~LINE(6)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+7}~LINE(7)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+8}~LINE(8)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+9}~LINE(9)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+10}~LINE(10)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+11}~LINE(11)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+12}~LINE(12)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+13}~LINE(13)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+14}~LINE(14)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+15}~LINE(15)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+16}~LINE(16)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+17}~LINE(17)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+18}~LINE(18)
+\item 
+\#define {\bfseries LCD\+\_\+\+LINE\+\_\+19}~LINE(19)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga61c27397b8896665126e6275349afc9d}{st7735\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the ST7735 LCD Component. \end{DoxyCompactList}\item 
+uint16\+\_\+t {\bfseries st7735\+\_\+\+Read\+ID} (void)
+\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga11f384ec5794a2e3ba2ed40d33248c98}{st7735\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga465ce5514c62c49a77be9c156ab5c56e}{st7735\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga73daff348d93e7cfe665cbee3f415186}{st7735\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Sets Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga7b96512c4fa885f9ad0c4873e9999b2a}{st7735\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Writes pixel. ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga8be4e6fdac7ae4d1f300d515efbbcb95}{st7735\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCDReg, uint8\+\_\+t LCDReg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+uint8\+\_\+t {\bfseries st7735\+\_\+\+Read\+Reg} (uint8\+\_\+t LCDReg)
+\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga6e774267d4d8bf517b3ff0e383342ea3}{st7735\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gacb8d75e41d9b4a1d539040df211c6247}{st7735\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draws horizontal line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gae268609486ae0404017a43a62300850a}{st7735\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draws vertical line. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaefe86718c82713c7c15a5ae6f8ed4214}{st7735\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gad918a3ad4e088a957e4e86a3f766b12f}{st7735\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD pixel Height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_gaeb135ea157d424b976ae241157080e98}{st7735\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture loaded in the internal Flash. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Configures the LCD\+\_\+\+SPI interface. \end{DoxyCompactList}\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Multiple\+Data} (uint8\+\_\+t $\ast$p\+Data, uint32\+\_\+t Size)
+\item 
+void {\bfseries LCD\+\_\+\+IO\+\_\+\+Write\+Reg} (uint8\+\_\+t Reg)
+\begin{DoxyCompactList}\small\item\em Writes register address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___a_d_a_f_r_u_i_t___s_p_i___l_c_d___exported___functions_ga0b45e37ff42910b44d218393ed479e12}{LCD\+\_\+\+Delay}} (uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Wait for loop in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} {\bfseries st7735\+\_\+drv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the \mbox{\hyperlink{st7735_8c}{st7735.\+c}} driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/November-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

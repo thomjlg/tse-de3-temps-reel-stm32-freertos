@@ -1,0 +1,76 @@
+\hypertarget{lcd__log_8h}{}\doxysection{Utilities/\+Log/lcd\+\_\+log.h File Reference}
+\label{lcd__log_8h}\index{Utilities/Log/lcd\_log.h@{Utilities/Log/lcd\_log.h}}
+
+
+header for the \mbox{\hyperlink{lcd__log_8c}{lcd\+\_\+log.\+c}} file  
+
+
+{\ttfamily \#include \char`\"{}lcd\+\_\+log\+\_\+conf.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___l_c_d___l_o_g__line}{\+\_\+\+LCD\+\_\+\+LOG\+\_\+line}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries LCD\+\_\+\+CACHE\+\_\+\+DEPTH}~YWINDOW\+\_\+\+SIZE
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___l_o_g___exported___macros_ga8018dfe1941054a1edcdb88776e1e6ae}{LCD\+\_\+\+Err\+Log}}(...)
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___l_o_g___exported___macros_gac7a6458eceafe11e4f6633415e1163fd}{LCD\+\_\+\+Usr\+Log}}(...)
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___l_o_g___exported___macros_ga1e2a4dd0809ad39606d39a07a63f065b}{LCD\+\_\+\+Dbg\+Log}}(...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___l_c_d___l_o_g__line}{\+\_\+\+LCD\+\_\+\+LOG\+\_\+line}} {\bfseries LCD\+\_\+\+LOG\+\_\+line}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga2da17045c681d794945b5acfe9fdd322}{LCD\+\_\+\+LOG\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD Log module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_gaca8fd8b0c7b84bf9b368cb1c4be340f7}{LCD\+\_\+\+LOG\+\_\+\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the LCD Log module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga65b3e24669b7309e829cc6c31bc46352}{LCD\+\_\+\+LOG\+\_\+\+Set\+Header}} (uint8\+\_\+t $\ast$Title)
+\begin{DoxyCompactList}\small\item\em Display the application header on the LCD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga08fef0078385cfa1fb9e623ee479ec38}{LCD\+\_\+\+LOG\+\_\+\+Set\+Footer}} (uint8\+\_\+t $\ast$Status)
+\begin{DoxyCompactList}\small\item\em Display the application footer on the LCD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga1348f03c75f03c730eb0136b3e47fad1}{LCD\+\_\+\+LOG\+\_\+\+Clear\+Text\+Zone}} (void)
+\begin{DoxyCompactList}\small\item\em Clear the Text Zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___l_o_g___exported___functions_prototype_ga475900ffe4feaa5c1d1e36167454afbd}{LCD\+\_\+\+LOG\+\_\+\+Update\+Display}} (void)
+\begin{DoxyCompactList}\small\item\em Update the text area display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t {\bfseries LCD\+\_\+\+Line\+Color}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+header for the \mbox{\hyperlink{lcd__log_8c}{lcd\+\_\+log.\+c}} file 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18-\/November-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

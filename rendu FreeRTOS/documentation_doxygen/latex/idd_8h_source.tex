@@ -1,0 +1,71 @@
+\hypertarget{idd_8h_source}{}\doxysection{idd.\+h}
+\label{idd_8h_source}\index{Drivers/BSP/Components/Common/idd.h@{Drivers/BSP/Components/Common/idd.h}}
+\mbox{\hyperlink{idd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_IDD\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_IDD\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a9f80320a163c3bf30adb5bfedab630eb}{AmpliGain}};       }
+\DoxyCodeLine{72   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_ab8be289c857a9fd08e7b058ac4174827}{VddMin}};          }
+\DoxyCodeLine{74   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_aa34e5411fd0a09b51e019d8b706c2170}{Shunt0Value}};     }
+\DoxyCodeLine{76   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a36aa64c07ff5d3d37f703a0d977b53e3}{Shunt1Value}};     }
+\DoxyCodeLine{78   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_ada820119db7065530e3d66c25bddbc7f}{Shunt2Value}};     }
+\DoxyCodeLine{80   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a5bb7a0800a4ffc293931e1a531d482d7}{Shunt3Value}};     }
+\DoxyCodeLine{82   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a87a279d449b0418b768bb4b91a4a7d29}{Shunt4Value}};     }
+\DoxyCodeLine{84   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a405c6ae47dd27e18d788ef9b551d6931}{Shunt0StabDelay}}; }
+\DoxyCodeLine{86   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a04572568f9e503cf1747902e9c04a3d6}{Shunt1StabDelay}}; }
+\DoxyCodeLine{88   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_ad2b1133c5169ec0c790e128c8d0c101f}{Shunt2StabDelay}}; }
+\DoxyCodeLine{90   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_aacc864b007578f02e704974dd61cfc33}{Shunt3StabDelay}}; }
+\DoxyCodeLine{92   uint16\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a28668102b93f090d1e9bf22bcbc79ffa}{Shunt4StabDelay}}; }
+\DoxyCodeLine{94   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a7c4e8a1aa0ff08399b5f170ccc127bd8}{ShuntNbOnBoard}};   }
+\DoxyCodeLine{96   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a2ea34c87cf390b036f1c4f083f131d36}{ShuntNbUsed}};      }
+\DoxyCodeLine{98   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a51011093bc91e6348d030254c61f5614}{VrefMeasurement}};  }
+\DoxyCodeLine{100   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a946b811e6bdf8b033c9308ea79909610}{Calibration}};      }
+\DoxyCodeLine{102   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_abc6a7704d3bda641bd27adbbc57ce0ca}{PreDelayUnit}};     }
+\DoxyCodeLine{104   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a657cd233d4b7e79a0a022816d4bd3b34}{PreDelayValue}};    }
+\DoxyCodeLine{106   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_af9b602ce27142e679ca329e97da60781}{MeasureNb}};        }
+\DoxyCodeLine{108   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a911b84562d806d387e838b147e288c9e}{DeltaDelayUnit}};   }
+\DoxyCodeLine{110   uint8\_t \mbox{\hyperlink{struct_i_d_d___config_type_def_a24c4a0fb2ca03a736340dcd231384c6a}{DeltaDelayValue}};  }
+\DoxyCodeLine{112 \}\mbox{\hyperlink{struct_i_d_d___config_type_def}{IDD\_ConfigTypeDef}};}
+\DoxyCodeLine{120 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{121 \{}
+\DoxyCodeLine{122   void       (*Init)(uint16\_t);}
+\DoxyCodeLine{123   void       (*DeInit)(uint16\_t);}
+\DoxyCodeLine{124   uint16\_t   (*ReadID)(uint16\_t);}
+\DoxyCodeLine{125   void       (*Reset)(uint16\_t);}
+\DoxyCodeLine{126   void       (*LowPower)(uint16\_t);}
+\DoxyCodeLine{127   void       (*WakeUp)(uint16\_t);}
+\DoxyCodeLine{128   void       (*Start)(uint16\_t);}
+\DoxyCodeLine{129   void       (*Config)(uint16\_t,\mbox{\hyperlink{struct_i_d_d___config_type_def}{IDD\_ConfigTypeDef}});}
+\DoxyCodeLine{130   void       (*GetValue)(uint16\_t, uint32\_t *);}
+\DoxyCodeLine{131   void       (*EnableIT)(uint16\_t);}
+\DoxyCodeLine{132   void       (*ClearIT)(uint16\_t);}
+\DoxyCodeLine{133   uint8\_t    (*GetITStatus)(uint16\_t);}
+\DoxyCodeLine{134   void       (*DisableIT)(uint16\_t);}
+\DoxyCodeLine{135   void       (*ErrorEnableIT)(uint16\_t);}
+\DoxyCodeLine{136   void       (*ErrorClearIT)(uint16\_t);}
+\DoxyCodeLine{137   uint8\_t    (*ErrorGetITStatus)(uint16\_t);}
+\DoxyCodeLine{138   void       (*ErrorDisableIT)(uint16\_t);}
+\DoxyCodeLine{139   uint8\_t    (*ErrorGetSrc)(uint16\_t);}
+\DoxyCodeLine{140   uint8\_t    (*ErrorGetCode)(uint16\_t);}
+\DoxyCodeLine{141 \}\mbox{\hyperlink{struct_i_d_d___drv_type_def}{IDD\_DrvTypeDef}};}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{163 \}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_IDD\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

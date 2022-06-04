@@ -1,0 +1,46 @@
+\hypertarget{stm32f429i__discovery__gyroscope_8c}{}\doxysection{Drivers/\+BSP/\+STM32\+F429\+I-\/\+Discovery/stm32f429i\+\_\+discovery\+\_\+gyroscope.c File Reference}
+\label{stm32f429i__discovery__gyroscope_8c}\index{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_gyroscope.c@{Drivers/BSP/STM32F429I-\/Discovery/stm32f429i\_discovery\_gyroscope.c}}
+
+
+This file provides a set of functions needed to manage the MEMS gyroscope available on STM32\+F429\+I-\/\+Discovery Kit.  
+
+
+{\ttfamily \#include \char`\"{}stm32f429i\+\_\+discovery\+\_\+gyroscope.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1bae84f8c5b00b9831738929bbb468c3}{BSP\+\_\+\+GYRO\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Set Gyroscope Initialization. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga540e8d9406a92a3c70e55adb15a7a57b}{BSP\+\_\+\+GYRO\+\_\+\+Read\+ID}} (void)
+\begin{DoxyCompactList}\small\item\em Read ID of Gyroscope component. \end{DoxyCompactList}\item 
+void {\bfseries BSP\+\_\+\+GYRO\+\_\+\+Reset} (void)
+\begin{DoxyCompactList}\small\item\em Reboot memory content of Gyroscope. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1769691d7719a45032a1bb2eed5e6a59}{BSP\+\_\+\+GYRO\+\_\+\+ITConfig}} (\mbox{\hyperlink{struct_g_y_r_o___interrupt_config_type_def}{GYRO\+\_\+\+Interrupt\+Config\+Type\+Def}} $\ast$p\+Int\+Config)
+\begin{DoxyCompactList}\small\item\em Configures INT1 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_gaba9a68c9c3a6b38527487fe7c7946558}{BSP\+\_\+\+GYRO\+\_\+\+Enable\+IT}} (uint8\+\_\+t Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Enables INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga1da85d0c8bfc8eeedcaa93fe2e7c2a95}{BSP\+\_\+\+GYRO\+\_\+\+Disable\+IT}} (uint8\+\_\+t Int\+Pin)
+\begin{DoxyCompactList}\small\item\em Disables INT1 or INT2 interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f429_i___d_i_s_c_o_v_e_r_y___g_y_r_o_s_c_o_p_e___private___functions_ga2b8498c5824e766e1a48dc107562b7de}{BSP\+\_\+\+GYRO\+\_\+\+Get\+XYZ}} (float $\ast$pf\+Data)
+\begin{DoxyCompactList}\small\item\em Gets XYZ angular acceleration/. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage the MEMS gyroscope available on STM32\+F429\+I-\/\+Discovery Kit. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2017 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

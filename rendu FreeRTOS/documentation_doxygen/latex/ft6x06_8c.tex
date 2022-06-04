@@ -1,0 +1,70 @@
+\hypertarget{ft6x06_8c}{}\doxysection{Drivers/\+BSP/\+Components/ft6x06/ft6x06.c File Reference}
+\label{ft6x06_8c}\index{Drivers/BSP/Components/ft6x06/ft6x06.c@{Drivers/BSP/Components/ft6x06/ft6x06.c}}
+
+
+This file provides a set of functions needed to manage the FT6\+X06 IO Expander devices.  
+
+
+{\ttfamily \#include \char`\"{}ft6x06.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FT6x06\+\_\+\+MAX\+\_\+\+INSTANCE}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ft6x06___private___functions_gafe7ac293c9d9896c47f08cf8bc3443df}{ft6x06\+\_\+\+Init}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Initialize the ft6x06 communication bus from MCU to FT6206 \+: ie I2C channel initialization (if required). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___private___functions_gad2d626c5c5d733efd83833d52450dab1}{ft6x06\+\_\+\+Reset}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Software Reset the ft6x06. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__ft6x06___private___functions_ga714520adcf3d75394a2f08cf428d3c40}{ft6x06\+\_\+\+Read\+ID}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Read the ft6x06 device ID, pre initialize I2C in case of need to be able to read the FT6206 device ID, and verify this is a FT6206. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___private___functions_ga0b3b8a00d8eaa2c7897faa510c6be8e6}{ft6x06\+\_\+\+TS\+\_\+\+Start}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configures the touch Screen IC device to start detecting touches It goes through an internal calibration process (Hw calibration sequence of the touch screen). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ft6x06___private___functions_ga3e9239483436ee60bee91078004b446f}{ft6x06\+\_\+\+TS\+\_\+\+Detect\+Touch}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Return if there is touches detected or not. Try to detect new touches and forget the old ones (reset internal global variables). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___private___functions_ga9617cc523a8f1817698200a35b1bf45d}{ft6x06\+\_\+\+TS\+\_\+\+Get\+XY}} (uint16\+\_\+t Device\+Addr, uint16\+\_\+t $\ast$X, uint16\+\_\+t $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Get the touch screen X and Y positions values Manage multi touch thanks to touch Index global variable \textquotesingle{}ft6x06\+\_\+handle.\+curr\+Active\+Touch\+Idx\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___private___functions_ga55dc85a22e1cf328f4375a2399a1f552}{ft6x06\+\_\+\+TS\+\_\+\+Enable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the FT6206 device to generate IT on given INT pin connected to MCU as EXTI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___private___functions_gac9a37ec0615a1d509fe23b155fb54645}{ft6x06\+\_\+\+TS\+\_\+\+Disable\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Configure the FT6206 device to stop generating IT on the given INT pin connected to MCU as EXTI. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ft6x06___private___functions_ga877eeda8f858e0c17aeefe412f1192cf}{ft6x06\+\_\+\+TS\+\_\+\+ITStatus}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Get IT status from FT6206 interrupt status registers Should be called Following an EXTI coming to the MCU to know the detailed reason of the interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ft6x06___private___functions_gac63b3b4e1b2ce96d72356b7ea1d8f1c8}{ft6x06\+\_\+\+TS\+\_\+\+Clear\+IT}} (uint16\+\_\+t Device\+Addr)
+\begin{DoxyCompactList}\small\item\em Clear IT status in FT6206 interrupt status clear registers Should be called Following an EXTI coming to the MCU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_s___drv_type_def}{TS\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___f_t6_x06___private___variables_ga4dde8a2c2c406d0eb3e52f947a462e2e}{ft6x06\+\_\+ts\+\_\+drv}}
+\item 
+uint8\+\_\+t {\bfseries ft6x06} \mbox{[}FT6x06\+\_\+\+MAX\+\_\+\+INSTANCE\mbox{]} = \{0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides a set of functions needed to manage the FT6\+X06 IO Expander devices. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

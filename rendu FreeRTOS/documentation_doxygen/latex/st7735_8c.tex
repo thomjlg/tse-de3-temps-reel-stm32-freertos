@@ -1,0 +1,68 @@
+\hypertarget{st7735_8c}{}\doxysection{Drivers/\+BSP/\+Components/st7735/st7735.c File Reference}
+\label{st7735_8c}\index{Drivers/BSP/Components/st7735/st7735.c@{Drivers/BSP/Components/st7735/st7735.c}}
+
+
+This file includes the driver for ST7735 LCD mounted on the Adafruit 1.\+8"{} TFT LCD shield (reference ID 802).  
+
+
+{\ttfamily \#include \char`\"{}st7735.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_ga61c27397b8896665126e6275349afc9d}{st7735\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the ST7735 LCD Component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_ga11f384ec5794a2e3ba2ed40d33248c98}{st7735\+\_\+\+Display\+On}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_ga465ce5514c62c49a77be9c156ab5c56e}{st7735\+\_\+\+Display\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em Disables the Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_ga73daff348d93e7cfe665cbee3f415186}{st7735\+\_\+\+Set\+Cursor}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos)
+\begin{DoxyCompactList}\small\item\em Sets Cursor position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_ga7b96512c4fa885f9ad0c4873e9999b2a}{st7735\+\_\+\+Write\+Pixel}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t RGBCode)
+\begin{DoxyCompactList}\small\item\em Writes pixel. ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_ga8be4e6fdac7ae4d1f300d515efbbcb95}{st7735\+\_\+\+Write\+Reg}} (uint8\+\_\+t LCDReg, uint8\+\_\+t LCDReg\+Value)
+\begin{DoxyCompactList}\small\item\em Writes to the selected LCD register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_ga6e774267d4d8bf517b3ff0e383342ea3}{st7735\+\_\+\+Set\+Display\+Window}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Width, uint16\+\_\+t Height)
+\begin{DoxyCompactList}\small\item\em Sets a display window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_gacb8d75e41d9b4a1d539040df211c6247}{st7735\+\_\+\+Draw\+HLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draws horizontal line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_gae268609486ae0404017a43a62300850a}{st7735\+\_\+\+Draw\+VLine}} (uint16\+\_\+t RGBCode, uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint16\+\_\+t Length)
+\begin{DoxyCompactList}\small\item\em Draws vertical line. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7735___private___functions_gaefe86718c82713c7c15a5ae6f8ed4214}{st7735\+\_\+\+Get\+Lcd\+Pixel\+Width}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD pixel Width. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_t7735___private___functions_gad918a3ad4e088a957e4e86a3f766b12f}{st7735\+\_\+\+Get\+Lcd\+Pixel\+Height}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the LCD pixel Height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t7735___private___functions_gaeb135ea157d424b976ae241157080e98}{st7735\+\_\+\+Draw\+Bitmap}} (uint16\+\_\+t Xpos, uint16\+\_\+t Ypos, uint8\+\_\+t $\ast$pbmp)
+\begin{DoxyCompactList}\small\item\em Displays a bitmap picture loaded in the internal Flash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d___drv_type_def}{LCD\+\_\+\+Drv\+Type\+Def}} \mbox{\hyperlink{group___s_t7735___private___variables_ga91895d6cd41ef0df5e00494592f8b081}{st7735\+\_\+drv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file includes the driver for ST7735 LCD mounted on the Adafruit 1.\+8"{} TFT LCD shield (reference ID 802). 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24-\/November-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
